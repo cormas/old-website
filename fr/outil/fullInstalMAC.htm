@@ -1,0 +1,204 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Telecharger et installer Cormas2004</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="../outil/haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+    <!--#include virtual="../outil/sommair.inc" -->
+    <td width="*" valign="top" bgcolor="#FFFFFF"> <p>&nbsp; 
+      <h1>Installation compl&egrave;te de Cormas2004 <i><img src="../../images/outil/mac_logo2.gif" width="69" height="31"></i><i><br>
+        </i><i>Version de<i> D&eacute;cembre, 2006</i></i></h1>
+      <p>&nbsp;</p>
+      <p>Cette page explique la proc&eacute;dure compl&egrave;te d'installation 
+        de Cormas. Si vous avez d&eacute;j&agrave; installer une version de Cormas 
+        sur VW7, faite une simple <a href="upgradeCormas.htm">mise &agrave; jour 
+        de votre version</a>. </p>
+      <p>La proc&eacute;dure se d&eacute;roule en 2 temps : il faut installer 
+        VisualWorks, le langage de programmation d&eacute;livr&eacute; gratuitement 
+        par Cincom puis Cormas. Malheureusement, il nous est <em>l&eacute;galement</em> 
+        pas possible de fournir une version tout-en-un comprenant VW et Cormas.</p>
+      <h2>Premi&egrave;re &eacute;tape: installation de VisualWorks</h2>
+      <h5>T&eacute;l&eacute;charger VisualWorks 7.4</h5>
+      <p>Tout d'abord, vous devez t&eacute;l&eacute;charger la version non-commercial 
+        de VisualWorks 7 sur le site web de Cincom. Vous trouverez tous ces fichiers 
+        ici (l&eacute;galement, nous ne pouvons les d&eacute;livrer nous-m&ecirc;mes): 
+        <a href="http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks" target="_blank">http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks</a></p>
+      <p>Vous pouvez installer VisualWorks &agrave; partir de fichiers individuels 
+        (individual files) ou par un installer (Net Installer), mais malheureusement 
+        cette deuxi&egrave;me solution ne fonctionne pas pour le moment... Nous 
+        d&eacute;crivons donc ici la proc&eacute;dure pour installer VW &agrave; 
+        partir des fichiers individuels.<br>
+        Vous devez t&eacute;l&eacute;charger :</p>
+      <ul>
+        <li>le fichier correspondant &agrave; votre syst&egrave;me d'exploitatoin 
+          : Virtual Machine for Mac OSX (step 1). Il y a 2 possibilit&eacute;s 
+          : 
+          <ul>
+            <li>le fichier classique : Virtual Machine for Mac OS X (le plus facile), 
+              ou</li>
+            <li> le fichier &quot;Virtual Machine based on X11&quot; (dans ce 
+              cas vous devez avoir install&eacute; X11 auparavant. L'installation 
+              est l&eacute;g&egrave;rement plus compliqu&eacute;e, mais VW tourne 
+              un peu plus rapidement) <br>
+            </li>
+          </ul>
+        </li>
+        <li>Le fichier &quot;Base VisualWorks parcels and virtual image&quot; 
+          du step 2 : BaseVisualWorks.tar (115.8 Mo, c'est le fichier principal).<br>
+          Il est automatiquement d&eacute;zipp&eacute; en &quot;BaseVisualWorks 
+          Folder&quot; <br>
+        </li>
+        <li>Un ensemble de composants optionels. Plus particuli&egrave;rement 
+          : 
+          <ul>
+            <li>Database Connect </li>
+            <li> DLL &amp; C Connect </li>
+            <li>Internationalization</li>
+          </ul>
+        </li>
+      </ul>
+      <h5>Installer et param&egrave;trer VisualWorks 7.4</h5>
+      <ul>
+        <li>Le fichier BaseVisualWorks.tar est automatiquement d&eacute;zipp&eacute; 
+          : 
+          <ul>
+            <li>&quot;BaseVisualWorks Folder&quot; :<br>
+              <br>
+              <img src="../../images/outil/MAC/BaseVWfolder.jpg" width="816" height="418"><br>
+            </li>
+            <li> Renommer ce r&eacute;pertoire &quot;VW7.4&quot; et d&eacute;placer 
+              le dans le r&eacute;pertoire &quot;Applications&quot;. <br>
+            </li>
+          </ul>
+        </li>
+        <li>D&eacute;zipper le fichier VM-MacOSX.tar. 
+          <ul>
+            <li> Un r&eacute;pertoire &quot;bin&quot; est cr&eacute;&eacute; :<br>
+              <br>
+              <img src="../../images/outil/MAC/downloadVisual.jpg" width="800" height="196"><br>
+            </li>
+            <li>D&eacute;placer le contenu de &quot;bin&quot; (cad &quot;macx&quot;) 
+              dans Applications/VW7.4/bin/</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Seconde &eacute;tape: installation de Cormas2004</h2>
+      <h5>T&eacute;l&eacute;charger Cormas</h5>
+      <ul>
+        <li>Tout d'abord, vous devez t&eacute;l&eacute;charger le fichier <a href="../../logiciel/cormas2004/installCormas.zip">installCormas.zip</a> 
+          (8 Mo),</li>
+        <li>normallement, le fichier installCormas.zip est automatiquement d&eacute;zipp&eacute; 
+          en un r&eacute;pertoire /cormas/ (si non, d&eacute;zipper le)</li>
+        <li> d&eacute;placer ce r&eacute;pertoire &laquo;cormas&raquo; dans Applications/VW7.4/. 
+        </li>
+        <li>finallement, vous devriez avoir l'architecture suivante :<br>
+          <br>
+          <img src="../../images/outil/MAC/finallyFolder.jpg" width="583" height="283"> 
+        </li>
+      </ul>
+      <h5>Lancer VisualWorks</h5>
+      <ul>
+        <li>Aller dans le r&eacute;pertoire cormas (Applications/VW7.4/cormas/) 
+          et selectionner le fichier <i>Cormas2004.im</i></li>
+        <li>click&nbsp;droit et choisisser &quot;Ouvrir avec ... Autre...&quot;<br>
+          <br>
+          <img src="../../images/outil/MAC/openWith.jpg" width="665" height="279"><br>
+          <br>
+          <br>
+        </li>
+        <li>Naviguer alors pour choisir le fichier d'association : Applications/VW7.4/bin/macx/<strong>visual</strong> 
+          : <br>
+          <br>
+          <img src="../../images/outil/MAC/chooseAppli.jpg" width="854" height="466"></li>
+      </ul>
+      <p>&nbsp;</p>
+      <h5>Ouvrir Cormas</h5>
+      <ul>
+        <li>Lorsque VW7 est ouvert, v&eacute;rifier que le chemin est correct 
+          : 
+          <ul>
+            <li>dans la fen&ecirc;tre de &quot;VisualWorks Launcher&quot;, clicker 
+              sur le 3i&egrave;me bouton <img src="../../images/outil/MAC/settings.Button.gif" width="26" height="25"> 
+              (&quot;Edit the system options&quot;) puis s&eacute;lectionner l'onglet 
+              &quot;System&quot; <br>
+            </li>
+            <li>Le chemin (VisualWorks home directory) doit &ecirc;tre : /Applications/VW7.4/<br>
+              <br>
+              <img src="../../images/outil/MAC/settings.jpg" width="600" height="442"><br>
+              (Sinon alors changer ce chemin et faire &quot;Apply&quot;. Puis 
+              sauver votre image VW) <br>
+              <br>
+            </li>
+          </ul>
+        </li>
+        <li>Dans le menu principal de VisualWorks, s&eacute;lectionner : </li>
+      </ul>
+      <blockquote> 
+        <p align="left"><i>Tools --&gt; Cormas --&gt; Cormas</i> <i>Fran&ccedil;ais<br>
+          </i></p>
+        <p align="left">Si, lorsque vous ouvrez un mod&egrave;le, l'explorateur 
+          de fichier ne fonctionne pas, vous devez &eacute;crire le nom du fichier 
+          (et son chemin) que vous voulez ouvrir <i>:<br>
+          <img src="../../images/outil/MAC/path.gif" width="400" height="107"> 
+          </i></p>
+        <p align="left">Ce bug a &eacute;t&eacute; corrig&eacute; par VW7.4. Si 
+          vous avez d&eacute;j&agrave; install&eacute; VW7.4 mais que ce probl&egrave;me 
+          apparait encore, r&eacute;-install&eacute; Cormas:</p>
+        <ul>
+          <li>copier le fichier visual.im, depuis le r&eacute;pertoire VW7.4/image/ 
+            vers VW7.4/cormas,</li>
+          <li>charger la parcel Cormas (la proc&eacute;dure est d&eacute;crite 
+            <a href="parcelCormas-old.htm">ici</a>),</li>
+          <li>sauver votre nouvelle image : cormas.im</li>
+        </ul>
+      </blockquote>
+      <h2>Tester vos mod&eacute;les</h2>
+      <p>Essayer de <a href="usingECEC.htm">manipuler le mod&egrave;le ECEC</a> 
+        en suivant les instructions pas &agrave; pas.</p>
+      <p>Nous vous invitons &agrave; essayer les <a href="outguid.htm">didactitiels</a> 
+      </p>
+      <p>Vous pouvez aussi tester d'autres mod&egrave;les comme <a href="../applica/tse.htm">TSE</a>, 
+        <a href="../applica/plotsrental.htm">PlotsRental</a>, <a href="../../en/applica/jlb.htm">JLB</a> 
+        ou <a href="../applica/conway.htm">Conway</a>.</p>
+      <p>Un <a href="../../en/outil/buglist.htm">tableau des bugs et des ajouts</a> 
+        est mis &agrave; jour r&eacute;guli&egrave;rement. </p>
+      <h2>Forum Cormas</h2>
+      <p>Nous vous invitons &eacute;galement &agrave; <a href="../reseaux/forumCormas.htm" target="_blank">rejoindre</a> 
+        la liste Cormas@cirad.fr.</p>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_en.inc" --> <p> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+    <div align="right" class="texte"></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title> PlotsRental: location de parcelles entre agents communicants</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+  <td width="*" valign="top" bgcolor="#FFFFFF"> 
+   <p>&nbsp;
+   
+      <h1>PlotsRental</h1>
+      <h2>Remembrement par appels d'offres de locations de parcelles</h2>
+      <p>Fran&ccedil;ois Bousquet, Cirad ; Christophe Le Page, Cirad</p>
+      <img src="/images/applica/plotsrental1.gif" width="196" height="206" align="right" vspace="10" hspace="10" alt="Interface de ForPast"> 
+      <p>Ce mod&egrave;le illustre les principes des agents communicants de Cormas. 
+        Les agents communicants ont une bo&icirc;te aux lettres et utilisent un 
+        canal de communication pour d&eacute;livrer des messages dans les bo&icirc;tes 
+        aux lettres des agents faisant partie de leur r&eacute;seau d'accointance. 
+      </p>
+      Dans cet exercice, 10 agents &quot;fermier&quot; sont situ&eacute;s al&eacute;atoirement 
+      sur une grille spatiale de 10 x 10 cellules repr&eacute;sentant des parcelles 
+      agricoles. Chaque fermier se voit initialement attribuer al&eacute;atoirement 
+      10 parcelles. Il estime la rentabilit&eacute; d'une parcelle selon son &eacute;loignement 
+      et base son offre sur ce seul crit&egrave;re. Quatre fa&ccedil;ons d'organiser 
+      un march&eacute; de locations des parcelles sont impl&eacute;ment&eacute;es. 
+      <p><img src="/images/applica/plotsrental1c.gif" width="195" height="169" align="left">Un 
+        premier sc&eacute;nario met en oeuvre un m&eacute;canisme d'ench&egrave;res 
+        centralis&eacute; reposant sur un protocol de communication de type r&eacute;seau 
+        contractuel. Un agent commissaire priseur propose &agrave; la location 
+        toutes les parcelles &agrave; tous les fermiers. Ceux-ci lui ayant renvoy&eacute; 
+        leurs propositions, le commissaire priseur s&eacute;lectionne la meilleure 
+        offre pour chaque parcelle et finalise le contrat de location avec son 
+        exp&eacute;diteur. Le r&eacute;sultat de cette premi&egrave;re version 
+        est un remembrement &quot;parfait&quot;: toute parcelle est syst&eacute;matiquement 
+        lou&eacute;e &agrave; l'agent fermier le plus proche. </p>
+      <p>Les trois autres sc&eacute;narios simulent un fonctionnement d&eacute;centralis&eacute;: 
+        les &eacute;changes d'offres de location ne passent plus par l'interm&eacute;diaire 
+        d'un agent commissaire priseur, mais s'effectuent de gr&eacute; &agrave; 
+        gr&eacute; entre agents fermiers. Dans un premier cas, tous les agents 
+        se connaissent. Chacun propose ses parcelles &agrave; tous les autres. 
+        Puis chacun s&eacute;lectionne la meilleure offre pour chacune de ses 
+        parcelles et finalise les contrats de locations. On retrouve le m&ecirc;me 
+        r&eacute;sultat que celui obtenu avec la version centralis&eacute;e: En 
+        l'absence d'asym&eacute;trie de l'information, la solution optimale est 
+        atteinte.</p>
+      <p><img src="../../images/applica/plotsrental2.gif" width="196" height="206" align="left"><img src="/images/applica/plotsrental2c.gif" width="195" height="169" align="right">La 
+        seconde version distribu&eacute;e (troisi&egrave;me sc&eacute;nario) met 
+        en sc&egrave;ne deux groupes de 5 fermiers al&eacute;atoirement constitu&eacute;s 
+        que l'on visualise sur l'observateur des communications &agrave; droite 
+        (groupe 1: agents 1;5;6;9;8 et groupe 2: agents 7;3;4;10;2). Le fait de 
+        diviser par 2 la taille du r&eacute;seau d'accointances des agents introduit 
+        une asym&eacute;trie de l'information que l'on peut qualifier de sociale. 
+        Cette asym&eacute;trie induit une solution non-optimale, comme le montre 
+        la grille spatiale &agrave; gauche. Par exemple le fermier 2 (bleu marine) 
+        et le fermier 1 (noir) n'ayant pas communiqu&eacute;, leur domaine se 
+        chevauche. </p>
+      <p>Un dernier sc&eacute;nario accentue cette asym&eacute;trie de l'information 
+        en simulant un mode de communication asynchrone entre les membres de chacun 
+        des groupes: d&egrave;s qu'un fermier re&ccedil;oit une offre int&eacute;ressante, 
+        il finalise le contrat de location sans attendre d'avoir re&ccedil;u toutes 
+        les offres. Dans cette version avec asym&eacute;trie sociale et temporelle, 
+        le remembrement est encore moins optimis&eacute;. </p>
+      <p>&nbsp;</p>
+      <ul>
+        <li>Download the model (<a href="/logiciel/PlotsRental.zip">zipfile</a>, 
+          7Ko. Cormas2002) </li>
+        <li>For more information, <a href="mailto:lepage@cirad.fr">contact the 
+          authors</a>.</li>
+      </ul>
+      <p>&nbsp;</p>
+   <!--#include virtual="/include/copyright_fr.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

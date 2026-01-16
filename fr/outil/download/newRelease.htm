@@ -1,0 +1,194 @@
+<html>
+
+
+
+<head>
+
+
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+
+
+<title>Nouvelle version de Cormas</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+<style type="text/css">
+
+<!--
+
+.style1 {
+	color: #FF0000;
+	font-weight: normal;
+}
+
+-->
+
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif','/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+
+
+<!--#include virtual="haut.inc" -->
+
+
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+
+
+<tr>
+
+
+
+    <!--#include virtual="sommair.inc" -->
+
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+
+      <h1><br>
+
+        Cormas 2012 (version Beta)<br>
+
+        <br>
+
+      </h1>
+
+      <div>
+        <h2>Pr&eacute;sentation</h2>
+        <p>Il s'agit encore d'une version b&eacute;ta qui a &eacute;t&eacute; d&eacute;j&agrave; test&eacute;e, mais qui devra certainement &ecirc;tre encore am&eacute;lior&eacute;e avant de devenir la version officielle (pr&eacute;vue pour la prochaine &eacute;cole d'&eacute;t&eacute;). Les grandes modifications portent sur le coeur de Cormas qui propose une architecture MVC (qui s&eacute;pare le Mod&egrave;le de ses Vues et de la mani&egrave;re de le Contr&ocirc;ler). Les d&eacute;veloppements que nous avons men&eacute;s, s'orientent vers deux directions : 1) permettre la mise au point de simulations interactives, et 2) faciliter la conception et l'impl&eacute;mentation collective de mod&egrave;les.   </p>
+        <ul>
+          <li>Pour le 1er point, il s'agit d'interagir plus facilement avec les entit&eacute;s d'une simulation (les d&eacute;placer manuellement, leur envoyer des messages, les pister, zoomer sur des parties de l'espace,...), afin de participer, seul ou &agrave; plusieurs, sur le d&eacute;roulement d'un sc&eacute;nario.   </li>
+          <li>Pour le 2i&egrave;me point, nous cherchons &agrave; faciliter l'impl&eacute;mentation d'un SMA. Il s'agit de simplifier la mani&egrave;re de cr&eacute;er des classes, des attributs et leurs valeurs, mais aussi de permettre de dessiner des diagrammes d'activit&eacute; simples qui soient directement interpr&eacute;t&eacute;s par Cormas. Il ne s'agit pas de s'abstraire du codage d'un mod&egrave;le, mais de pouvoir agencer graphiquement des briques d'action entre elles pour produire une nouvelle r&egrave;gle de comportement d'un agent. L'&eacute;diteur de diagramme permet de concevoir de nouvelles activit&eacute;s directement executable par Cormas. </li>
+        </ul>
+        <p>Des progr&egrave;s restent encore &agrave; faire dans ces 2 directions. Il  s'agit des premiers pas.<br>
+        Plusieurs autres modifications ont &eacute;t&eacute; faites, comme la mise au  point d'un module d'analyse de sensibilit&eacute; ou la cr&eacute;ation de nouvelles entit&eacute;s  (r&eacute;seaux, arcs et noeuds). N&eacute;anmoins, les mod&egrave;les con&ccedil;us sous les anciennes  versions devraient &ecirc;tre compatibles avec ce nouveau Cormas. Nous reprendrons  progressivement les didacticiels pour expliquer la mani&egrave;re de concevoir des SMA  avec Cormas.<br>
+          Donc, si vous voulez tester cette nouvelle version, vous &egrave;tes les  bienvenus !        Envoyer 
+
+          vos retours sur le <a href="http://cormas.cirad.fr/fr/reseaux/form/forumCormas.php">forum</a> cormas@cirad.fr en indiquant dans le sujet 
+
+        de votre message [beta2012]. </p>
+        <div>
+          <h2>Installation</h2>
+        </div>
+        <h3>Installer VisualWorks</h3>
+        <p>Cormas a &eacute;t&eacute; d&eacute;velopp&eacute; avec la version 
+
+          <b><span class="style1"></span></b>7.6 non-commerciale de VisualWorks&reg; 
+
+        (<em>Cincom Systems</em>), qui doit donc &ecirc;tre install&eacute;e sur 
+
+        votre machine. A la condition de vous engager &agrave; ne pas utiliser 
+
+        Cormas &agrave; des fins commerciales, vous pouvez directement t&eacute;l&eacute;charger 
+
+        l'environnement de programmation <b><a href="../../../logiciel/vw7.6/vw7.6nc._PC-MAC.zip" target="_blank">vw7.6nc</a></b> 
+
+        (version Windows + Mac OS X) depuis le site de Cormas. Il est conseill&eacute; de d&eacute;zipper l'archive 
+
+        directement sous la racine du disque dur principal de votre ordinateur 
+
+        pour minimiser les probl&egrave;mes de configuration r&eacute;calcitrante 
+
+        qui peuvent survenir avec certains syst&egrave;mes d'exploitation. </p>
+      </div>
+
+      <h3>Installer Cormas      </h3>
+      <div> 
+
+        <h5>Concerver l'ancienne version de Cormas</h5>
+        <p>Si une ancienne version de Cormas est d&eacute;j&agrave; install&eacute; sur votre 
+          
+          machine, vous pouvez garder cette version. Changez simplement le nom du r&eacute;pertoire 'Cormas' en 'Cormas_Old' (ou autre nom).</p>
+        <h5>Installer  Cormas2012 pour la premi&egrave;re fois    </h5>
+        <p>T&eacute;l&eacute;charger la derni&egrave;re 
+          
+          version de Cormas (<a href="../../../logiciel/cormas2012_Full.zip"><strong>cormas2012_Full.zip</strong></a>, 13 Mo) qui date de <span class="style1"><b>septembre 2012</b></span>. 
+          
+          D&eacute;zipper l'archive dans le r&eacute;pertoire VW7.6nc. Le sous-r&eacute;pertoire
+          
+        'cormas' est cr&eacute;&eacute;. Il contient d&eacute;j&agrave; le fichier <em><strong>cormas.im</strong></em> (les instructions en anglais sont d&eacute;taill&eacute;es<a href="/lpdf/installCormas2012.pdf" target="_blank"> ici</a>). Copiez vos mod&egrave;les dans le sous-r&eacute;pertoire <span class="style1">VW7.6nc/cormas/Models/</span>.</p>
+        <h5>Mettre &agrave; jour Cormas2012</h5>
+        <p>Si Cormas2012 est d&eacute;j&agrave; install&eacute;, faire une simple une mise &agrave; jour en d&eacute;zippant  l'archive <a href="../../../logiciel/cormas2012.zip"><strong>cormas2012.zip</strong></a> (1,6 Mo) dans  le r&eacute;pertoire <span class="style1">VW7.6nc/cormas/</span>. Ouvrir  <em><strong>cormas.im</strong></em> et s&eacute;lectionner le menu '?' et 'Update Cormas'.      </p>
+      </div>
+
+      <div>
+        <h3>Remerciements</h3>
+      </div>
+
+      <div>Merci aux premiers b&eacute;ta-testeurs qui ont essuy&eacute; les pl&acirc;tres  (Rapha&egrave;le, Chlo&eacute;, Herm&egrave;s, Olivier et tous ceux de la premi&egrave;re session de  l'&eacute;cole d'&eacute;t&eacute;) !</div>
+
+      <!--#include virtual="/include/copyright_fr.inc" -->
+
+    </td>
+
+
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+
+
+    <div align="right" class="texte"></div>
+
+
+
+    </td>
+
+
+
+  </tr>
+
+
+
+</table>
+
+
+
+</body>
+
+
+
+</html>
+
+
+

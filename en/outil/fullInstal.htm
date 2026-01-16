@@ -1,0 +1,162 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Dowloading Cormas2004</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="../outil/haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+    <!--#include virtual="../outil/sommair.inc" -->
+    <td width="*" valign="top" bgcolor="#FFFFFF"> <p>&nbsp; 
+      <h1>How to install Cormas2004 on <img src="../../images/outil/logo-windows.gif" width="135" height="33"><i><br>
+        Version : <em>December</em>, 2006</i></h1>
+      <p>&nbsp;</p>
+      <p>Here is explained the full installation procedure for the new version 
+        of Cormas. If you already have installed Cormas2004 and VisualWorks, you 
+        just need to <a href="upgradeCormas.htm">upgrade it</a>.</p>
+      <p>The procedure takes place in 2 phases: it is necessary to install VisualWorks 
+        (the programming language freely available on Cincom web site) then Cormas. 
+        Unfortunately , we can not provide a full-In-One including VW and Cormas 
+        for <em>legal</em> reasons.</p>
+      <h2>First step: installing VisualWorks 7</h2>
+      <h5>Downloading VisualWorks 7.4</h5>
+      <p>Firstly, you have to download the non-commercial version of VisualWorks 
+        7.4 on the web site of Cincom. You should more particularly download :</p>
+      <ul>
+        <li>A virtual machine corresponding to the operating system of your computer, 
+          for instance <i>VM-Windows.tar.gz</i> for Windows (&quot;VisualWorks 
+          -- Step 1: Virtual Machine&quot;)</li>
+        <li>the main archive file:<i> BaseVisualWorks.tar.gz</i> (&quot;VisualWorks 
+          -- Step 2&quot;) and</li>
+        <li>optional components (called &quot;Add-ons&quot; and &quot;Goodies&quot;) 
+          : 
+          <ul>
+            <li>COM Connect, (for Windows users)</li>
+            <li>DLL &amp; C Connect </li>
+            <li>Database Connect</li>
+            <li>and Cincom Goodies</li>
+          </ul>
+        </li>
+      </ul>
+      <p>You will find these files here (Legally we are not allowed to provide 
+        them) : <a href="http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks" target="_blank">http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks</a></p>
+      <h5>Installing and setting-up VisualWorks 7.4</h5>
+      <ul>
+        <li>Create a directory for VisualWorks: Disk:\VW7.4 (&quot;Disk&quot; 
+          is the name of your hard disk, for instance D)</li>
+        <li>Unzip the downloaded archives in this directory Disk:\VW7.4\</li>
+      </ul>
+      <h2>Second step: installing Cormas2004 </h2>
+      <h5>Dowloading Cormas</h5>
+      <p>Dowload the file <a href="../../logiciel/cormas2004/installCormas.zip">installCormas.zip</a>, 
+        then unzip it in the directory Disk:\VW7\. A &laquo;cormas&raquo; subdirectory 
+        is created, and you should then have the following architecture :</p>
+      <ul>
+        <li>Disk:\VW7.4\ 
+          <ul>
+            <li>bin 
+              <ul>
+                <li>win</li>
+              </ul>
+            </li>
+            <li>cormas 
+              <ul>
+                <li>Kernel</li>
+                <li>Messages</li>
+                <li>Models</li>
+                <li>DataBase</li>
+              </ul>
+            </li>
+            <li>goodies 
+              <ul>
+                <li>other</li>
+                <li>park</li>
+              </ul>
+            </li>
+            <li>image</li>
+            <li>...etc...</li>
+          </ul>
+        </li>
+      </ul>
+      <h5>Launching VisualWorks</h5>
+      <ul>
+        <li>Go in the cormas directory (Disk:\VW7\cormas) and select the file 
+          <i>Cormas2004.im</i></li>
+        <li>&laquo;&nbsp;shift - rigth click&nbsp;&raquo; and choose OPEN WITH</li>
+        <li>Navigate to locate the file Disk:\VW7.3\bin\win\Visual.exe and associate 
+          it to <i>.im</i> files.</li>
+      </ul>
+      <h5>Openning Cormas</h5>
+      <p> When VW7.3 is opened, in the main menu of the VisualWorks Launcher, 
+        select : </p>
+      <blockquote> 
+        <p align="left"><i>Tools --&gt; Cormas --&gt; Cormas</i> <i>English<br>
+          <img src="../../images/outil/openCormas.gif" width="499" height="337" align="right"></i></p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <br>
+        Cormas interface is then open :<br>
+        <img src="../../images/outil/cormasInterface.jpg" width="413" height="107" align="top"></blockquote>
+      <h2>Testing your own Cormas models</h2>
+      <p>You can <a href="usingECEC.htm">test an existing model</a>, called ECEC.</p>
+        <p>You can try the <a href="../../pdf/CormasTutorial2.pdf">tutorials</a> 
+        or run your own Cormas models you have built with previous versions of 
+        Cormas by importing them into Cormas2004 : </p>
+      <ul>
+        <li>Copy the whole model subdirectory from Disk:\VW3\cormas\models\ to 
+          Disk:\VW7.4\cormas\models\</li>
+        <li>In the main menu of Cormas, select<br>
+          File --&gt; Import <br>
+          The previous version of your model will be renamed with a &quot;2001&quot; 
+          suffix: <i>XXX2001.st</i>.</li>
+      </ul>
+      <p>You can also test some other models like <a href="../applica/tse.htm">TSE</a>, 
+        <a href="../applica/plotsrental.htm">PlotsRental</a>, <a href="../../en/applica/jlb.htm">JLB</a> 
+        or<a href="../applica/conway.htm">Conway</a>.</p>
+      <p>A <a href="../../en/outil/buglist.htm">table for bugs and add-ons</a> 
+        is updated on a regular basis. </p>
+      <h2>Cormas Forum</h2>
+      <p>We invite you to <a href="../reseaux/forumCormas.htm">join</a> the Cormas 
+        forum (Cormas@cirad.fr).</p>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_en.inc" --> <p> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+    <div align="right" class="texte"></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

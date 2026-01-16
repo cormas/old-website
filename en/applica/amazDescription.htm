@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Amaz</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+  <!--#include virtual="sommair.inc" --> 
+
+    <td valign="middle" bgcolor="#FFFFFF"> 
+
+      <p>&nbsp; 
+
+      <h1>Amaz</h1>
+      <h5> - <a href="amaz.htm">Back to Amaz main page</a> -Model Description - <a href="amazResults.htm">go to Results</a></h5>
+      <h2>Model description</h2>
+      <p><em>First entry by the land tenure and the land use</em></p>
+      <p> In the  Amazon, few farms are exclusively dedicated to livestock. Although the pasture  productivity is good during the first 2-3 years, a farmer prefers, in most  cases, grow a subsistence production on fresh slashed and burnt plots: it  ensures food security and the income will cover the implementation cost of the  pasture. Even for ranching, farming subsistence is the initial step before the  pasture. Furthermore, the most practiced technique to recover an old pasture is  to turn it into food crops during one or two seasons, thus providing  complementary animal fodder. Finally, the contraction of forest plots in older  properties, as well as the application of environmental law oblige some farmers  to reduce deforestation by intensifying their land use with a crop - pasture  cycle. They also seek to expand their farm by buying new fields in order to  remain under the legal threshold of deforestation. </p>
+      <p><em>Second entry by the workforce</em></p>
+      <p> The  availability of the family labor is a key element of success or failure of the  settlement on the front. Ludovino (2002) shows that a family of 3-4 workers (a  couple with two teenagers) has more chance to succeed that a couple with two  young children. A disease or an accident that invalidates a person for several  weeks has more impact for a family with few workers. In addition, some  activities (slash, movement of the herd, harvest...) require two or three  persons. Finally, the sale of a portion of its workforce facilitates family  life. Thus, successful settlements on the pioneer fronts are often due to large  families.</p>
+      <p align="center"><img src="amaz/systemic.jpg" alt="systemic diagram" width="534" height="305" align="middle"></p>
+      <p>&nbsp;</p>
+      <h3>Structure of the model </h3>
+      <p><em>Amaz</em> is structured in two parts corresponding to the  previous paragraphs. The Land package represents the spatial organization of the  land. Situated along a side road, a lot of colonization of 100 ha is divided  into 400 m2 plots. Each plot is assigned with a soil type, a slope  and a land cover: forest, fallow, annual or tree crop, perennial or pasture. </p>
+      <p align="center"><img src="amaz/layers.jpg" alt="spatial layers" width="762" height="368"></p>
+      <p>The herd is  distributed on the pastures with a mean value of one livestock unit per hectare  (for the basic version without intensification). Each cover has technical and  economical attributes, its own dynamics, several requirements linked to its  manpower needs and farm inputs, and a production value. Each season, it  generates a production, which is immediately converted into cash at harvest  time. But without maintenance, productivity decreases until disappearing. </p>
+      <p>An agent (a  family of <em>N</em> members) has two main features:  his labor-force and his money. He uses his family labor to achieve the  agriculture works on the farm or to sell it as external manpower. This labor-force  corresponds to an amount of available working days that decreases with the  performed tasks. This quantity is reset to its maximum at the beginning of the  year<em>.</em> If he receives money at the harvest time, he spends a part of  it for the family consumption, for all farming operating costs including the purchase  of cows and for temporary labor employment.</p>
+      <p>A family is  associated with a strategy that consists in performing farm activities oriented  towards agricultural preferences. The strategies of the model are <em>Breeder, perennial Planter, Grower</em> and <em>Diversified.</em> For example, by choosing to be Grower or Breeder,  a family cultivates his land <em>favoring</em> his specialty. But this choice does not necessarily mean to neglect the other crops  already present on the farm. Each year,  the agent starts by performing its essential activities; afterward he does the  activities related to its priority. Thus, even if his strategy is Planter, an  agent begins cultivate a few parcels of annual crops for his food security and performs  its basic rancher tasks (minimum management of the herd and the pastures). The  rest of his labor force is then dedicated to his perennial crops. <strong></strong></p>
+      <p><a href="amaz/ClassesGeral.jpg" target="_new"><u>Main class diagram (click to enlarge)</u> <img src="amaz/ClassesGeral-small.jpg" alt="class diagram" width="251" height="188" border="1" align="top"></a></p>
+      <h3>Dynamics</h3>
+      <h4>Scheduling </h4>
+      <p><a href="amaz/sequence.jpg" target="_blank"> Sequence diagram (click to enlarge) <img src="amaz/sequence.jpg" alt="" width="242" height="183" border="1" align="top"></a></p>
+      <p>The following <a href="amaz/Cobertura Vegetal.jpg" target="_new">state-transition diagram</a> shows all the different covers that are designed in the  model and the different ways they evolve and change, through transitions. The  red transitions correspond to human activities (cutting, planting...). </p>
+      <p><a href="amaz/Cobertura Vegetal.jpg">State Transition diagram of land cover (click to enlarge)</a> <a href="amaz/Cobertura Vegetal.jpg" target="_new"><img src="amaz/Cobertura Vegetal-small.jpg" alt="" width="175" height="190" border="1" align="top"></a></p>
+      <p><strong><em>Scenario 0</em></strong>: The following activity diagram presents the organization of Scenario 0. (click on sub-activities to get a focus on them)</p>
+      <p><img src="amaz/scenario_0.jpg" alt="scenario 0" width="417" height="434" border="0" usemap="#Map"></p>
+      <p><strong><em>Scenario 1</em></strong>: The following activity diagram presents the organization of Scenario 1. (click on sub-activities to get a focus on them)</p>
+<img src="amaz/scenario_1.jpg" alt="scenario 1" width="536" height="679" border="0" usemap="#MapMap">
+      <map name="MapMap"><area shape="rect" coords="28,595,364,636" href="#balanco"><area shape="rect" coords="18,540,372,581" href="#pecuarPriorit"><area shape="rect" coords="197,435,385,464" href="#perenBasic"><area shape="rect" coords="26,392,214,421" href="#perenBasic"><area shape="rect" coords="47,438,193,463" href="#pecuarBasic"><area shape="rect" coords="221,389,367,414" href="#pecuarBasic">
+        <area shape="rect" coords="100,316,308,347" href="#segAlimentar">
+      </map>
+      <h3>Behaviours of the agents</h3>
+      <h4>Essential activities <img src="amaz/essential.jpg" alt="" width="222" height="39"></h4>
+      <p>Activity  diagram of the Food Security: <a name="segAlimentar"></a></p>
+      <p><img src="amaz/seguranceAlimentar.jpg" alt="" width="669" height="584"></p>
+      <p>Essential basic activities for the maintenance of livestock and pastures: <a name="pecuarBasic"></a></p>
+      <p><img src="amaz/pecuariaBasica.jpg" alt="Diag Actividade Pecuaria basica" width="910" height="635"></p>
+      <p>Essential basic activities for the maintenance of perennial crops (cacau): <a name="perenBasic"></a></p>
+      <p><img src="amaz/perenaBasica.jpg" alt="activity diagram perenial basic" width="794" height="512"></p>
+      <h4>Activities of the priorities <img src="amaz/priority.jpg" alt="" width="222" height="39"></h4>
+      <p>Activity diagram of the grower priority:</p>
+      <p><img src="amaz/growerPriority.jpg" alt="activity diagram of the grower priority" width="563" height="585"></p>
+      <p>Activity diagram of the breeder priority: <a name="pecuarPriorit"></a></p>
+      <p><img src="amaz/prioridadePecuaria.jpg" alt="activity diagram of the Breeder priority" width="729" height="623"></p>
+      <p>Activity diagram of the tree crop priority: <a name="perennPriorit"></a></p>
+      <p><img src="amaz/prioridadePerennial.jpg" alt="activity diag. of the perennial priority" width="1166" height="598"></p>
+      <h4>Balance</h4>
+      <p>Activity diagram of the annual balance: <a name="balanco"></a></p>
+      <p><img src="amaz/balanco.jpg" alt="balan&ccedil;o" width="764" height="634"></p>
+      <p>All the<a href="amazParameters.htm"> parameters and their values</a> are available.</p>
+      <hr>
+      <p>&nbsp;</p>
+      <h4> - <a href="amaz.htm">Back to Amaz main page</a> -Model Description - <a href="amazResults.htm"><strong>Go to Results</strong></a></h4>
+      <p>&nbsp;</p>
+      <h3>Software</h3>
+      <p>You can <a href="/logiciels/Amaz.zip" target="_blank">download</a> the Cormas model source code (Cormas 2012).</p>
+      <p>A quite similar<a href="../../pdf/relatorio-iLPF.pdf"> report in portugues</a> is available.</p>
+      <p>For more information, <a href="mailto:bommel@cirad.fr">contact 
+        
+        the corresponding author</a></p>
+      <p></p>
+
+    <!--#include virtual="/include/copyright_fr.inc" --> </td>
+
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+   <div align="right" class="texte"></div>
+
+  </td>
+
+ </tr>
+
+</table>
+
+<map name="Map"><area shape="rect" coords="196,220,384,249" href="#perenBasic"><area shape="rect" coords="49,221,195,246" href="#pecuarBasic">
+  <area shape="rect" coords="99,100,307,131" href="#segAlimentar">
+  <area shape="rect" coords="220,174,366,199" href="#pecuarBasic">
+  <area shape="rect" coords="32,179,214,202" href="#perenBasic">
+  <area shape="rect" coords="23,274,400,314" href="#pecuarPriorit">
+  <area shape="rect" coords="25,330,397,371" href="#balanco">
+</map>
+</body>
+
+</html>
+

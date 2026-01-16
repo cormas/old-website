@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>MagmaS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" --> 
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr> <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>MagmaS</h1>
+      <h2>Coupling a hybrid dynamical system with a multi-agent system to model 
+        animal wastes management in Reunion island</h2>
+      <p>Manuel Martin, Eric Piquet, Christophe Le Page, Fran&ccedil;ois Guerrin 
+        (Cirad)</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><b><i>MagmaS</i></b> is a simulation framework aiming at 
+        helping animal wastes management at the farmer communities level and at 
+        minimising the environmental impact of animal production activities. It 
+        is made of two models</p>
+      <p><b><i><img src="/images/applica/magmas1.gif" align="right" width="550"></i></b> 
+      </p>
+      <ul>
+        <li>A hybrid dynamical system called <i><b>Magma</b></i> (Guerrin 2000a,b) 
+          standing for the internal dynamics of a set of individual farming systems 
+          (waste production and usel at the farm level)</li>
+      </ul>
+      <ul>
+        <li>The coupling is achieved by using the Windows DLL communication facility</li>
+      </ul>
+      <ul>
+        <li>An agent-based model called <i><b>Mens</b></i> representing the different 
+          ways the farmers (i.e. Magma instances) can transfer wastes from one 
+          to one another. </li>
+      </ul>
+      <p>&nbsp;</p>
+      <p>The use of Magma is justified by the acknowledged adequacy of hybrid 
+        dynamical system models to farming systems and the use of Mens by the 
+        adequacy of multi-agents systems to model interacting agents. </p>
+      <p>Mens works at the collective level, since it models information and organic 
+        matter (OM) exchanges among the farmers. Conversely, Magma works at the 
+        individual level since it models OM management at the farm level: production 
+        by possibly various animal production units, spreading on crops, possible 
+        transformation into other kinds of OM (e.g. compost) and potentially hazardous 
+        flows towards the environment as a result of stock overflowing or unlawful 
+        spreading. </p>
+      <p>Linking Magma (implemented with the Vensim software ) and Mens (implemented 
+        with the Cormas software ) within MagmaS was done using the Vensin interactive 
+        simulation facility (called "gaming") procedures: at each time step Magma 
+        simulates the farm internal stocks dynamics during one day resulting in 
+        OM surplus or OM deficit (to meet crop fertilisation requirements). Every 
+        seven time steps (e.g. every week), Mens is then used to simulate OM transactions, 
+        which depends on the supply/demand balance of OM of each farmer previously 
+        simulated with Magma. When transactions are closed, simulation enters 
+        next time step, and the results of transactions simulated by Mens (import 
+        or export of MO) are used as inputs by Magma. </p>
+      <p>For more information, <a href="mailto:manuel.martin@cirad.fr">contact 
+        the author</a>.</p>
+      <h2>References</h2>
+      <p>Guerrin, F. (2000a). Simulation of actions to help animal wastes management 
+        atthe farm level. In: MCPL'2000, IFAC / IFIP / IEEE 2nd Conf. on Management 
+        and Control of Production and Logistics. Grenoble (F), 5-8 July 2000, 
+        CD Rom : Session R6, P135. </p>
+      <p>Guerrin,F. (2000b). Magma : a model to help animal manure management 
+        at the farm level. In: Agricontrol'2000, Int. Conf. On Modelling and Control 
+        in Agriculture, Horticulture and Post-Harvest Processing. Wageningen (NL), 
+        10-12 July 2000, p.159-164. </p>
+      <p>Piquet, E. et Le Page C. (2001). Couplage des logiciels VisualWorks etVensim 
+        sous Windows : DDE ou DLL ? Rapport Cirad TERA n° 18/01, June 2001, 14 
+        pages. </p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+      <div align="right" class="texte"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

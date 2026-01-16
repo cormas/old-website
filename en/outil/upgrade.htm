@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title> Upgrading Cormas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+    <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>Upgrading Cormas</h1>
+      <p>&nbsp;</p>
+      <h2>Key-points to migrate your model from a previous version to the 2001 
+        version. </h2>
+      <ol>
+        <li>Run your model under the previous version of Cormas and when everything 
+          is working fine, export it. </li>
+        <li>Rename the "<i>kernel</i>", "<i>messages</i>" and "<i>models</i>" 
+          subdirectories of Cormas as "<i>kernel-old</i>", "<i>messages-old</i>" 
+          and "<i>models-old</i>". It is safe to keep a copy of your previous 
+          Cormas version ! This step is to avoid the overwritting of your previous 
+          Cormas version by doing step 3. </li>
+        <li>Download the new Cormas version : unzip the new "<i>kernel</i>" and 
+          "<i>messages</i>" subdirectory under the Cormas directory. ("<i>Use 
+          folder names</i>" should be checked in WinZip to ensure the creation 
+          of the subdirectories structure during the extraction). </li>
+        <li> Start to build the cormas2001 image from a copy of visual.im (in 
+          the "<i>image</i>" subdirectory of VW3) that you put into the Cormas 
+          subdirectory, and follow the install process as described in the manual. 
+          Once the installation process is completed, save your image as cormas2001.im 
+        </li>
+        <li>Test the new version by importing the model "<i>Pursuit</i>". 
+          <ul>
+            <li>Create a new &quot;models&quot; subdirectory under the Cormas 
+              directory. </li>
+            <li>Download the zip containing the model from the <a href="/en/applica/pursuit.htm">Pursuit 
+              application web page</a>.</li>
+            <li>Unzip it. </li>
+            <li>Import the model in Cormas</li>
+          </ul>
+        </li>
+        <li>Make a copy of your own Cormas model (let's assume it is named "<i>aaa</i>"): 
+          copy the whole directory "<i>aaa</i>" located in "<i>models-old</i>" 
+          into the directory "<i>models</i>". If it exists, rename "<i>cartes</i>" 
+          as "maps". </li>
+        <li>Check if the names of the Cormas generic entities are correct. Open 
+          a SystemBrowser and have a look at the category "<i>CormasKernel-Entities</i>". 
+          You'll see the new names. Edit your <i>aaa.st</i> (the one belonging 
+          to the "<i>models</i>" subdirectory !) in any editor and look at the 
+          definition of entities (Find "<i>subclass:</i>"), verify that the names 
+          of the Cormas generic entities are the right names. </li>
+        <ul>
+          <li><i>Agent_Communication_Location</i> -> <i>AgentCommLocation</i> 
+          </li>
+          <li>Agent_Communication -> AgentComm </li>
+          <li>Agent_Location -> AgentLocation ...</li>
+        </ul>
+        <li>You can also try to find and replace "<i>self random</i>" by "<i>Cormas 
+          random</i>". Then save the file <i>aaa.st</i> </li>
+        <li>Try to import your model into the new Cormas. </li>
+        <li>Then, you will have to rename some protocols. </li>
+        <ul>
+          <li>For each of the vizualized entity of your model, you should rename 
+            the protocol previously called '<i>pdv</i>' (for "points de vue") 
+            as '<i>pov</i>' (for "points of view")... </li>
+          <li>For the model class (button <i>Prepare and Schedule</i>), you should 
+            rename the protocol previously called '<i>controle</i>' as '<i>control</i>' 
+          </li>
+        </ul>
+        <li>With the Cormas 2001 version, a unique value is automatically assigned 
+          to the "<i>id</i>" attribute of every newly created instance of agent 
+          (social entity). The process is based on a classVariableNames called 
+          "<i>CurrentId</i>" and three methods from the "<i>id</i>" protocol. 
+          With the 2001 Cormas version, the addition of the classVariableNames 
+          "<i>CurrentId</i>" and of the "<i>id</i>" protocol is automatically 
+          done when you create a new agent in your model. Here, for every social 
+          entity of your model, you have to add the classVariableNames "<i>CurrentId</i>" 
+          and the whole protocol "<i>id</i>" by yourself, with a SystemBrowser... 
+          Take "<i>Pusuit_Prey</i>" as a model and do not hesitate to use <ctrl-c> 
+          <crtl-v>&lt;Ctrl-C&gt; &lt;Ctrl-V&gt;... </li>
+        <li>In the "<i>init</i>" methods of your model (<i>Prepare and Schedule</i> 
+          button), the general stuff to be systematically written is now really 
+          simple. Basically you need "<i>initCells</i>", "<i>initAgents</i>" and 
+          "<i>initCharts</i>". Take again "<i>Pursuit</i>" as a model. 
+          <ul>
+            <li>"<i>initCells</i>" is an upper level method used to retrieve the 
+              collection of elementary spatial entities from the spatial grid, 
+              to store this collection into the corresponding attribute of your 
+              model (<i>thePursuit_Cells</i> for instance) , and to send the "<i>init</i>" 
+              message to each cell. Note that "<i>initAndCleanSpatialGrid</i>" 
+              is not used anymore. </li>
+            <li>"<i>initAgents</i>" is the method where you create your agents. 
+              You need to create a "<i>initAgents</i>" method specific to your 
+              model. The first instruction should be "<i>super initAgents</i>", 
+              to reset the "<i>CurrentId</i>" counter of all the social entities 
+              to zero. When a new agent is created, it has to receive the message 
+              "<i>init</i>", otherwise this will induce an error. If you have 
+              a "<i>init</i>" method defined at the level of your agent, you have 
+              to insert a "<i>super init</i>" as the first instruction of this 
+              method, to call the "<i>initId</i>" method defined at an upper level. 
+              Once again, take "<i>Pursuit</i>" and "<i>Pursuit_Prey</i>" as a 
+              model. </li>
+            <li> "<i>initCharts</i>" reset the defined charts. But this is the 
+              purpose of the next section... </li>
+          </ul>
+        </li>
+        <li>With the Cormas 2001 version, the charts are not defined exactly in 
+          the same way. Have a look at the Cormas User's Guide. Now you should 
+          add "<i>self initCharts</i>" in the "<i>init</i>" methods of your model 
+          and "<i>self updateCharts: t</i>" at the end of the "<i>control</i>" 
+          methods of your model. This single instruction should replace all the 
+          instructions previously used to calculate the values to be plotted for 
+          each charts. Now these calculations are made in a specific method: with 
+          Cormas2001, when you create a new chart, you are requested to give its 
+          name (for instance "<i>nbPreys</i>") but also to complete a method ("<i>nbPreysData</i>") 
+          that returns the data to be plotted over time. As for step 10, here, 
+          you will need to do it by yourself from a SystemBrowser... Take once 
+          again "<i>Pursuit</i>" as a model, for instance have a look within the 
+          "<i>graphiques</i>" protocol at the three methods used to plot the number 
+          of preys over time.</li>
+        <li>Export then import your model to force a complete initialization. 
+        </li>
+        <li>Test it !!! </li>
+      </ol>
+      <!--#include virtual="/include/copyright_en.inc" --> </td>
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+    <div align="right" class="texte"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

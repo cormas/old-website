@@ -1,0 +1,109 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>What's new</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+    <!--#include virtual="sommair.inc" --> 
+
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+
+      <p>&nbsp;</p>
+
+      <h1>The Cormas2004 new features </h1>
+
+      <h2>Cormas</h2>
+      <p>Cormas 2004 contains :</p>
+      <ul>
+        <li>A Collector that automatically collects the new entities creating 
+          during the simulation runtime. These new entities are stored by the 
+          Collector and added to theXXXs at the end of each time step. The useless 
+          entities (dead ou destroyed) are also removed at this moment. This version 
+          is compatible with your old models (in that case, the collector do nothing 
+          and your model is working like previously).<br>
+          To use the Collector, you must call the method 
+          <ul>
+            <li>&quot;newEntity: aClass&quot; (ex: self newEntity: <font color="#009966">Restrained</font>) 
+              or</li>
+            <li>&quot;newAndCollect: aCollector&quot; (ex: <font color="#009966">Restrained</font> 
+              newAndCollect: self collector). <br>
+            </li>
+          </ul>
+        </li>
+        <li> A tool to easily add some comments on your model. This tool pops 
+          up when you create a new model, but you can also open it with <em>Help 
+          -&gt; change comments</em>)<br>
+        </li>
+        <li>Possibility to save heavy analysis in Excel: as soon as there is more 
+          than 256 columns, data are transposed in lines in Excel. <br>
+        </li>
+        <li> When you ask for a super class (ex: self allEntities: Animal), you 
+          get all the instances, even those from subclasses (thePreys + thePredators). 
+          <br>
+        </li>
+        <li>A <em>updateCormas</em> menu, reloading a new parcel (cormas.pcl to 
+          be saved in the Cormas directory). <br>
+        </li>
+        <li>You can take snapshots or movies of the Cormas grid. This option requires 
+          <a href="http://www.apple.com/fr/quicktime/products/">QuickTime</a> 
+          and a DLL file (<a href="../../logiciel/cormas2004/JunWinQT.dll">JunWinQT.dll</a>) 
+          to be saved in Disk:\VW7.3\bin\win directory.</li>
+      </ul>
+      <h2>VisualWorks 7.4</h2>
+      <p>The Cormas2004 version works with the most recent version of VisualWorks: 
+        <b>7.4.1</b>. <br>
+        The new advantages of this version are consequently present in Cormas2004.</p>
+      <h2>Documentation</h2>
+
+      <p>Two new tutorials are <a href="outguid.htm">available</a>.</p>
+
+      <p>A User's guide will be available soon, describing architecture of Cormas 
+
+        and explaining the main classes and methods.<br>
+
+      </p>
+
+      <h2>Installing Cormas2004</h2>
+
+      <p>If you never install Cormas on VW7, go on the <a href="fullInstal.htm">page 
+
+        of complete installation</a>.</p>
+
+      <p>If you have already install a previous version of Cormas2003 or 2004 
+        on VW7, just <a href="upgradeCormas.htm">upgrade to the current version</a>.</p>
+      <!--#include virtual="/include/copyright_en.inc" --> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+    <div align="right" class="texte"></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

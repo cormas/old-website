@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>Gammanym</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>Gammanym</h1>
+      <h2 align="right">Diffusion and Social Networks<br>
+        a Multi-Agent System/Network Theory coupled approach</h2>
+      <p align="right">Nazmun N. Ratna (APSEG, ANU, Australia), Anne Dray, Pascal 
+        Perez, David Newth</p>
+      <h2 align="left">Context </h2>
+      <p align="left">Coleman et. al. study on adoption of a new drug by doctors 
+        is the premier one to focus on social networks as a prime component in 
+        the diffusion process. This very well documented study from the late 1950s 
+        tried to demonstrate that the new drug is diffused through a snowball 
+        or chain reaction process. Far from discarding the influence of individual 
+        characteristics or the external role played by the pharmaceutical industry, 
+        the authors argue that innovators, in this context, are socially well 
+        connected and that late adopters are relatively isolated. The main limitation 
+        of the study recognized by the authors is coming from the limited analytical 
+        tools available at that time. The authors had to study separately influences 
+        from individual characteristics, media of communication, and social networks. 
+        The latter was assessed through pair-analysis without any possibility 
+        to handle the network structure as a whole entity. </p>
+      <h2 align="left">Modelling Framework </h2>
+      <p align="left">Gammanym, an agent-based model, is built with Cormas, according 
+        to the information coming from the original study. The medical community 
+        is portrayed in a 8x8 spatial grid. The model includes 100 individual 
+        doctors located in different types of practices: Private (alone in office), 
+        Centre (shared office with two colleagues) and Clinic (working with four 
+        colleagues). The doctors may attend local hospitals or medical conferences 
+        and exchange information about the new drugs with colleagues. Each doctor 
+        is eventually part of a friendship network. The pharmaceutical laboratory 
+        can influence the doctors by sending them detail men, flyers, or medical 
+        journals. Each doctor makes his decision about adopting the drug according 
+        to the number of external influences he has received. Depending on the 
+        set of initial conditions, the adoption curves displayed in the original 
+        study can be replicated. Furthermore, at each time step, matrices of interactions 
+        are exported and analysed from a Network Theory viewpoint. Global characteristics 
+        of the different networks are inferred and are used to define critical 
+        structures enhancing the chain reaction processes. </p>
+      <h2 align="left">Adoption process </h2>
+      <p align="left">Doctors' decisions to adopt a new drug involve interdependent 
+        local interactions among different entities. Based on a theory of five 
+        cognitive stages of adoption (Coleman, Katz and Menzel, 1966; Van den 
+        Bulte and Lilien, 1999), we specify their adoption thresholds or readiness 
+        as a step four process. Readiness is decremented when they receive an 
+        alert from different sources. At each time step, discussions with friends 
+        and colleagues, as well as information from the lab, generates an alert. 
+        Discussions with other doctors, either friends or colleagues at practices, 
+        conferences, or hospitals generate an alert when the mean adoption rate 
+        is 0.50 or above. Doctors' readiness is gradually reduced with alerts 
+        from all the aforementioned sources. When the readiness reaches zero, 
+        doctors adopt the new drug. </p>
+      <h2 align="left">Simulation</h2>
+      <p align="left">Depending on three sets of initial conditions, cumulative 
+        diffusion curves, representing the total number of adopted doctors at 
+        each time step are markedly different. As several random functions are 
+        included in the algorithm, each scenario is repeated for 100 times in 
+        order to estimate output's variability. The three scenarios are specified 
+        to evaluate the degree of influences by different factors in the diffusion 
+        process: i. Baseline Scenario with one innovator (seed), one detailman 
+        and one journal; ii. Heavy Media Scenario with different degrees of external 
+        influence, by varying the number of detailman (5) and number of journals 
+        (4); and iii. Integration Scenario without any external influence. </p>
+      <p align="left">Network variables, like clustering coefficient, degree distribution 
+        and average shortest path length are calculated to evaluate how and to 
+        what extent, network structure influences the diffusion process. All of 
+        above indicate that social networks depicted in Gammanym are random graphs. 
+        The analysis of network topology reveals that initially the system consisted 
+        of a number of disconnected components and quickly saturates after 7-10 
+        time steps to form a giant clusters. </p>
+      <p align="left">Analysis on evolution of uptake suggests that under heavy 
+        media scenario the average size of clusters with agents who have adopted 
+        rise much faster than those of the other two scenario. Gammanym therefore 
+        shows that though media do not influence the network structure, the speed 
+        of diffusion is largely determined by the extent of media influence. </p>
+      <h2 align="left">References </h2>
+      <ul>
+        <li>Coleman, J. S., Katz, E. and Menzel, H. (1966). Medical Innovation: 
+          A Diffusion Study, Inidianapolis, The Bobbs-Merril Company, Inc. </li>
+        <li>Van den Bulte, C. and Lilien, G. (1999). A Two-Stage Model of Innovation 
+          Adoption with Partial Observability: Model Development and Application. 
+          Pennsylvania, Institute for the Study of Business Markets, The Pennsylvania 
+          State University: 1-44. </li>
+      </ul>
+      <p><a href="/logiciel/Gammanym.zip" target="_blank">Download</a> the Cormas 
+        model source code and the model documentation (as a set of UML diagrams). 
+      </p>
+      <p>For more information, <a href="mailto:nazmun.ratna@anu.edu.au">contact 
+        the author.</a></p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

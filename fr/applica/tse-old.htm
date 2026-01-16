@@ -1,0 +1,85 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>Test Spatial Entities: dynamiques d'agr&eacute;gation avec Cormas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>TSE</h1>
+      <h2>Test des entit&eacute;s spatiales agr&eacute;gatives de Cormas</h2>
+      <p>Christophe Le Page, Cirad</p>
+      <img src="/images/applica/csefr.gif" width="316" height="304" align="right" vspace="10" hspace="10" alt="Interface de ForPast"> 
+      <p>Ce mod&egrave;le illustre les principes d'utilisation des entit&eacute;s 
+        spatiales agr&eacute;gatives de Cormas. Dans l'arbre d'h&eacute;ritage 
+        des entit&eacute;s spatiales g&eacute;n&eacute;riques de Cormas, l'entit&eacute; 
+        spatiale compos&eacute;e &quot;SpatialEntity_Set&quot; se sp&eacute;cialise 
+        en :</p>
+      <ul>
+        <li>&quot;SpatialEntity_Aggregate&quot;, dont les composants respectent 
+          une contrainte de contigu&iuml;t&eacute;</li>
+      </ul>
+      <ul>
+        <li>&quot;SpatialEntity_Set_notConnex&quot;, dont les composants peuvent 
+          &ecirc;tre disjoints.</li>
+      </ul>
+      <p>Les op&eacute;rations d'agr&eacute;gation-d&eacute;sagr&eacute;gation 
+        sont r&eacute;alis&eacute;es &agrave; partir des deux attributs &quot;components&quot; 
+        (une collection d'entit&eacute;s spatiales de niveau hi&eacute;rarchique 
+        inf&eacute;rieur) et &quot;theCSE&quot; (un registre d'appartenance &agrave; 
+        des entit&eacute;s spatiales de niveaux sup&eacute;rieurs). </p>
+      <p>Le mod&egrave;le TSE permet de tester deux fa&ccedil;ons de cr&eacute;er 
+        des agr&eacute;gats avec Cormas. </p>
+      <p>La premi&egrave;re consiste &agrave; d&eacute;finir les composantes comme 
+        des ensembles de cellules contig&uuml;es partageant une m&ecirc;me condition. 
+        On commence par charger une grille de 50*50 cellules de type &quot;TSE_Cell&quot; 
+        dont l'attribut &quot;context&quot; est soit #forest (condition d'agr&eacute;gation), 
+        soit #empty. La cr&eacute;ation des entit&eacute;s spatiales compos&eacute;es 
+        &quot;TSE_Aggregate&quot; est soumise &agrave; une contrainte suppl&eacute;mentaire 
+        sur le nombre minimum (fix&eacute; &agrave; 25) de composants contig&uuml;s 
+        v&eacute;rifiant la condition d'agr&eacute;gation. Faire co-exister dans 
+        le m&ecirc;me mod&egrave;le des entit&eacute;s spatiales d&eacute;finies 
+        &agrave; diff&eacute;rents niveaux offre une grande souplesse pour &eacute;crire 
+        les m&eacute;thodes de dynamique de la v&eacute;g&eacute;tation. Certains 
+        processus seront plus facilement d&eacute;crits au niveau cellulaire, 
+        d'autres au niveau agr&eacute;g&eacute;. Ainsi, dans cet exemple th&eacute;orique 
+        simpliste, chaque cellule a une probabilit&eacute; fix&eacute;e (tr&egrave;s 
+        faible) de changer de contexte. Une dynamique d'expansion par la lisi&egrave;re 
+        est &eacute;crite (au niveau agr&eacute;g&eacute;) de la fa&ccedil;on 
+        suivante: un certain nombre (correspondant au centi&egrave;me du total 
+        des cellules composants l'entit&eacute; foresti&egrave;re) de cellules 
+        en lisi&egrave;re vont &ecirc;tre int&eacute;gr&eacute;es &agrave; la 
+        for&ecirc;t. Dans le but de garder une certaine compacit&eacute; aux entit&eacute;s 
+        foresti&egrave;res, on choisit en priorit&eacute; les cellules de la lisi&egrave;re 
+        qui sont entour&eacute;es du plus grand nombre de cellules d&eacute;j&agrave; 
+        agr&eacute;g&eacute;es. </p>
+      <p>La seconde consiste &agrave; partir de 10 cellules &quot;graines&quot;, 
+        et &agrave; cr&eacute;er autant d'agr&eacute;gats initialement constitu&eacute;s 
+        d'un seul composant: une graine. Le processus it&eacute;ratif de construction 
+        des agr&eacute;gats repose sur l'int&eacute;gration, parmi les cellules 
+        en lisi&egrave;re, de toutes celles qui n'appartiennent pas encore &agrave; 
+        un autre agr&eacute;gat. </p>
+      <p>&nbsp;</p>
+      <ul>
+        <li>T&eacute;l&eacute;charger le mod&egrave;le (<a href="/logiciel/TSE.zip">zipfile</a>, 
+          6Ko) </li>
+        <li>Pour plus d'information, <a href="mailto:lepage@cirad.fr">contacter 
+          l'auteur</a>.</li>
+      </ul>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title> Modélisation des dynamiques spatiales par SIG et SMA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+  <td width="*" valign="top" bgcolor="#FFFFFF"> 
+   <p>
+  
+      <h1>SpatioDyn </h1>
+      <h2>Mod&eacute;lisation des dynamiques spatiales par SIG et SMA</h2>
+      <p>Muriel Bonin</p>
+  
+      <img src="/images/applica/spatiodyn1.gif" width="231" height="187" align="right" vspace="10" hspace="10" alt="Interface de SpatioDyn"> 
+      <p>Notre travail porte sur la mod&eacute;lisation des dynamiques spatiales 
+        et est appliqu&eacute; au Massif du Tanargue (Monts d'Ard&egrave;che, 
+        France). Il se situe dans la continuit&eacute; de travaux ant&eacute;rieurs 
+        qui envisagent l'espace dans les SMA, non pas comme une grille de cellules, 
+        mais comme un ensemble d'entit&eacute;s spatiales en interaction (voir 
+        l'<a href="http://www.cybergeo.presse.fr/modelis/bousquet/bousquet.htm" target="_blank">article 
+        de Bousquet et Gautier</a>, &quot;Comparaison de deux approches de modelisation 
+        des dynamiques spatiales par simulation multi-agents : les approches 'spatiale' 
+        et 'acteurs' &quot;).</p>
+   <p>Afin d'int&eacute;grer l'organisation de l'espace dans la mod&eacute;lisation, 
+    nous utilisons un mod&egrave;le graphique dont les composants &eacute;l&eacute;mentaires 
+    sont les entit&eacute;s spatiales du SMA et sont dot&eacute;s de propri&eacute;t&eacute;s 
+    d'agents.</p>
+   <h2>D&eacute;prise agricole et usages de l'espace</h2>
+   <p>La probl&eacute;matique de recherche porte sur les recompositions agricoles 
+    et les conflits ou compl&eacute;mentarit&eacute;s avec les autres usages 
+    de l'espace (tourisme, sylviculture, chasse, observation-protection du 
+    milieu naturel, usage r&eacute;sidentiel). Par rapport &agrave; cette 
+    question g&eacute;n&eacute;rale, la mod&eacute;lisation permet de guider 
+    le g&eacute;ographe dans l'analyse des donn&eacute;es et la formalisation. 
+    La simulation implique un raisonnement sur les fonctionnements et les 
+    dynamiques du syst&egrave;me spatial.</p>
+   <p>La question sp&eacute;cifique porte sur la mise en place d'un sch&eacute;ma 
+    de gestion de l'espace afin d'enrayer les impacts de la d&eacute;prise 
+    agricole et de rendre compatibles diff&eacute;rents usages de l'espace. 
+    L'objectif de la mod&eacute;lisation et de la simulation est de construire 
+    un support de discussion avec les acteurs &agrave; propos du fonctionnement, 
+    des &eacute;volutions souhait&eacute;es du syst&egrave;me et de l'impact 
+    spatial d'actions. </p>
+   <h2>Du terrain au mod&egrave;le graphique</h2>
+   <p>Deux types de donn&eacute;es de terrain sont utilis&eacute;s.</p>
+   <p>Les donn&eacute;es du " pôle froid " sont recueillies selon un protocole 
+    d'observation des dynamiques d'occupation du sol (s&eacute;rie de couches 
+    d'occupation du sol, 1950-1969-1979-1991, construites &agrave; partir 
+    de photographies a&eacute;riennes &agrave; l'aide de SIG). Elles fournissent 
+    des informations fiables et quantifiables.</p>
+   <p>Les donn&eacute;es du " pôle chaud " sont des donn&eacute;es plus subjectives 
+    concernant les souhaits des acteurs locaux sur le devenir de leur territoire. 
+    Elles ont &eacute;t&eacute; recueillies dans le cadre de la mise en place 
+    du Sch&eacute;ma d'Am&eacute;nagement du Massif du Tanargue. Elles permettent 
+    de s&eacute;lectionner les actions dont on simulera l'impact spatial et 
+    de caract&eacute;riser les &eacute;tats souhait&eacute;s du territoire.</p>
+   <p>La formalisation s'est faite &agrave; l'aide d'un mod&egrave;le graphique 
+    (voir figure suivante).</p>
+      <p align="center"><img src="/images/applica/spatiodyn.gif" width="417" height="303" alt="Le mod&egrave;le grahpique et ses entit&eacute;s &eacute;l&eacute;mentaires"></p>
+      <p align="center">Figure 1. Le mod&egrave;le graphique et ses entit&eacute;s 
+        &eacute;l&eacute;mentaires. Chacun des noms indiqu&eacute;s renvoie &agrave; 
+        un composant &eacute;l&eacute;mentaire qui correspond &agrave; une entit&eacute; 
+        spatiale du SMA.</p>
+   <p>Chacun des composants du mod&egrave;le graphique est caract&eacute;ris&eacute; 
+    par un &eacute;tat, par une dynamique et par les actions envisag&eacute;es 
+    et les &eacute;tats souhait&eacute;s par les acteurs. Chacun est impl&eacute;ment&eacute; 
+    dans Cormas en tant qu'entit&eacute; spatiale dot&eacute;e d'attributs 
+    et m&eacute;thodes d'&eacute;volution.</p>
+   <h2>Quelles simulations ?</h2>
+   <p>Dans un premier temps, le passage entre deux cas extr&ecirc;mes est mod&eacute;lis&eacute;. 
+    L'&eacute;tat initial (EI) est l'&eacute;tat du mod&egrave;le au moment 
+    du " boom d&eacute;mographique ", où l'utilisation de l'espace est maximale. 
+    L'&eacute;tat final pessimiste (EFP) correspond &agrave; l'&eacute;tat 
+    obtenu sous l'hypoth&egrave;se d'un abandon total de l'espace (voir figure 
+    suivante). Au cours du passage de EI vers EFP, les dynamiques naturelles 
+    l'emportent sur l'impact des actions humaines : par colonisation de la 
+    v&eacute;g&eacute;tation naturelle, les feuillus gagnent sur les landes 
+    et les landes ouvertes deviennent des landes ferm&eacute;es.</p>
+      <p align="center"><img src="/images/applica/spatiodyn2.gif" width="297" height="149" alt="Etat initial et &eacute;tat final pessimiste"></p>
+   <p align="center">Figure 2. Etat initial et &eacute;tat final pessimiste.</p>
+   <p>Ensuite, nous d&eacute;finissons un ensemble de r&eacute;f&eacute;rentiels 
+    qui repr&eacute;sentent l'impact de processus &eacute;l&eacute;mentaires 
+    &agrave; partir de l'&eacute;tat actuel (EA). EA est construit grâce aux 
+    structures spatiales identifi&eacute;es par photo-interpr&eacute;tation 
+    sur la base d'une matrice cadastrale avec la photographie la plus r&eacute;cente 
+    et le diagnostic de territoire &eacute;labor&eacute; par les gestionnaires 
+    de l'espace et les acteurs locaux. La liste des processus identifi&eacute;s 
+    par le th&eacute;maticien, concernant les dynamiques naturelles et les 
+    infl&eacute;chissements li&eacute;s aux actions humaines, permet de d&eacute;finir 
+    ces r&eacute;f&eacute;rentiels (voir figure suivante).</p>
+      <div align="center"><img src="/images/applica/spatiodyn4.gif" width="504" height="452" alt="Trois types de simulations"> 
+      </div>
+      <p align="center">Figure 3. Les trois types de simulations</p>
+   <p>&nbsp;</p>
+   <p>Par exemple, une multiplication de r&eacute;sidences secondaires sans 
+    r&egrave;glement d'urbanisme se traduit par un mitage de l'espace : l'entit&eacute; 
+    spatiale " r&eacute;sidence secondaire " se multiplie et s'implante al&eacute;atoirement 
+    sur les diff&eacute;rentes entit&eacute;s spatiales du versant. Dans un 
+    autre exemple, la fermeture du milieu est li&eacute;e &agrave; la baisse 
+    de la pression pastorale (l'instance "UnFeuillus" du versant se dilate 
+    alors que l'instance de "UneLande" se r&eacute;tracte, "UneLande" passe 
+    de l'&eacute;tat lande ouverte &agrave; lande ferm&eacute;e et change 
+    de couleur). Les impacts de la mise en place d'actions concernent par 
+    exemple le frein au d&eacute;veloppement des r&eacute;sineux par une r&eacute;glementation 
+    de boisement, le frein au mitage de l'espace par d&eacute;limitation des 
+    zones urbanisables dans un Plan d'Occupation des Sols, la r&eacute;-ouverture 
+    du milieu grâce au soutien &agrave; l'&eacute;levage, l'entretien des 
+    terrasses et des anciens canaux d'irrigation suite &agrave; l'attribution 
+    de primes, etc.</p>
+   <p>Ces r&eacute;f&eacute;rentiels sont impl&eacute;ment&eacute;s dans le 
+    SMA. Ils sont combin&eacute;s afin d'aboutir &agrave; l'impl&eacute;mentation 
+    du passage de EA &agrave; ES (&eacute;tat souhait&eacute;). ES est la 
+    traduction informatique des objectifs fix&eacute;s par les animateurs 
+    suite aux r&eacute;unions communales et th&eacute;matiques aupr&egrave;s 
+    des acteurs locaux. Les m&eacute;thodes de passage de EA &agrave; ES sont 
+    des combinaisons entre les dynamiques naturelles et les actions engag&eacute;es 
+    par les gestionnaires de l'espace (voir figure 3).</p>
+   <p>L'objectif de la simulation est de r&eacute;pondre &agrave; la question 
+    : quelles actions mettre en place pour passer de EA &agrave; ES ?</p>
+   <p>Pour en savoir plus, <a href="mailto:muriel.bonin@cirad.fr">contactez 
+    l'auteur</a>.</p>
+   <!--#include virtual="/include/copyright_fr.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

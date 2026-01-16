@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>SimDrug</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>SimDrug <br>
+        Exploring the complexity of the heroin drug use in Melbourne (Australia)</h1>
+      <h1><font size="3">A. Dray and P. Perez</font></h1>
+      <h2>Background</h2>
+      <p>SimDrug is a multi-agent system model, built with Cormas, as part of 
+        the <a href="http://www.turningpoint.org.au/research/dm_proj/res_dm_proj.htm" target="_blank">Drug 
+        Policy Modeling Project</a>, led by Turning Point, a specialist alcohol 
+        and drug organization based in Melbourne. The project aims at addressing 
+        a demand for new integrative approaches to support policy makers and practitioners 
+        who implement illicit drug policy in Australia.</p>
+      <p>SimDrug focuses on the representation of dynamic relationships between 
+        law enforcement, treatment, harm reduction and prevention. Its design 
+        is based upon a real case-study: the heroin 'drought' that struck the 
+        illicit drug market in Melbourne in 2000. The supply of heroin in Melbourne 
+        suffered a dramatic decline between late 2000 and early 2001, after a 
+        strong increase in heroin use and related harms in the late 1990s. This 
+        change in heroin supply led to a substantial decrease in overdoses. Field 
+        experts argue that the drought was actually shadowed by a dramatic increase 
+        in psycho stimulants, resulting in a fairly constant number of injecting 
+        drug. On the other hand, the heroin drought is held up by the Australian 
+        Government as an example of law enforcement (seizure, syndicates dismantlement) 
+        having a significant impact on the supply of drugs. </p>
+      <h2>Model description</h2>
+      <p><b><img src="../../images/applica/simDrugSpatialGrid.jpeg" width="384" height="384" align="right">Time 
+        scale<br>
+        </b>One time step is equivalent to a 24h-day in reality as injecting behaviors 
+        need accurate time scale. Each simulation is run over a 5-year period 
+        (1998 - 2002 dataset) to allow the model to be able to consistently reproduce 
+        pre-drought, crisis, and post-drought dynamics of the system.</p>
+      <p><b>Spatial environment</b><br>
+        SimDrug works on an archetypal representation of Melbourne based on a 
+        regular 50*50 square mesh, each cell representing a street block. Five 
+        suburbs (defined as an aggregation of neighboring cells) are created with 
+        different sizes and shapes, regardless of realistic features. Two special 
+        cells represent the Police Station and the Treatment Center. </p>
+      <p><b>Social entities</b><br>
+        SimDrug includes different types of social agents: 3000 users, 150 dealers, 
+        10 wholesalers, 10 constables, and 10 outreach workers. Figures are based 
+        on a 1:10 scale of the reality.</p>
+      <p><b>Model dynamics</b><br>
+        Each time step encompasses the following stages: </p>
+      <ol>
+        <li>The population of agents, based on the changes triggered during the 
+          previous time step is updated. All detainees are retrieved from the 
+          system and new users, dealers and wholesalers are created accordingly.</li>
+        <li>Wholesalers and dealers interact towards drug supply. Wholesalers 
+          are given the opportunity to refill their supply once a month while 
+          dealers can visit their wholesaler as soon as their drug stock is sold 
+          out. </li>
+        <li>Outreach workers interact with users in order to decrease their readiness 
+          for treatment and convince them to enter into treatment.</li>
+        <li>Users interact with their environment and other agents. They start 
+          by assessing their need looking at their available cash and drug and 
+          decide whether they need to commit a crime. They, then, find their usual 
+          dealer (or alternatively a new dealer) and buy some drug. They use it 
+          at once and might declare an overdose. </li>
+        <li>The Treatment Center manages new users entering treatments and on-going 
+          treated users reaching the end of their treatment duration. </li>
+        <li>Street blocks risk and conductivity are updated and the new suburbs' 
+          protest values are calculated accordingly. </li>
+        <li>The police station adapts its strategy by reallocating constables 
+          on the grid and eventually performing successful crackdowns. </li>
+      </ol>
+      <h2>Model code and documentation</h2>
+      <p>The Cormas model -including the smalltalk code, a set of UML diagrams 
+        and a description of the variables- is available <a href="/logiciel/SimDrug.zip" target="_blank">here</a>.</p>
+      <h2>Reference</h2>
+      <p> Perez, P. and Dray, A. 2005. Monograph No. 11: SimDrug: Exploring the 
+        complexity of heroin use in Melbourne. DPMP Monograph Series. Fitzroy: 
+        Turning Point Alcohol and Drug Centre. <a href="/pdf/simDrug.pdf" target="_blank"><img src="/images/renvoi.gif" width="14" height="14" border="0"></a></p>
+      <p>For more information, <a href="mailto:anne.dray@anu.edu.au">contact the 
+        corresponding author</a></p>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

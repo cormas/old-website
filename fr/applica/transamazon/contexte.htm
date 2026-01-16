@@ -1,0 +1,276 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>TransAmazon</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="/fr/applica/haut.inc" --> 
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+  <tr> <!--#include virtual="/fr/applica/sommair.inc" --> 
+
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+
+      <p>&nbsp; 
+
+      <h1>TransAmazon</h1>
+
+      <h2>Modélisation des dynamiques socio-environnementales d’un front pionnier 
+        de la Transamazonienne (BR-230)</h2>
+
+      <p>Pierre BOMMEL (Cirad), Thierry BONAUDO (AgroParisTech), Jonas Bastos 
+        DA VEIGA (Embrapa-CPATU), Jean-Fran&ccedil;ois TOURRAND (Cirad), </p>
+
+      <h3>LE CONTEXTE AMAZONIEN </h3>
+      <h5>"Donner à une terre sans homme, des hommes sans terre"<br>
+        "coloniser pour ne pas abandonner" <br>
+        " coloniser par la patte du bœuf" </h5>
+      <h5>Slogans gouvernementaux des années 60-70 pour la colonisation de l'Amazonie 
+      </h5>
+      <p>Le contexte amazonien n'est pas simple. Il est le fruit d'une histoire 
+        mouvementée, souvent douloureuse, sous l'emprise de politiques volontaristes 
+        de colonisation. </p>
+      <p>En 1988, suite à l'assassinat de Chico Mendes, leader <a href="#seringueiro">seringueiro</a>, 
+        l'Amazonie est devenue le symbole mondial de la lutte pour la préservation 
+        de l'environnement. Car, selon l'INPE (Instituto Nacional de Pesquisas 
+        Espaciais), l'Amazonie brésilienne (6,7 millions de kilomètres carrés, 
+        7 fois la superficie de la France) perd pratiquement 24.000 km² de forêt 
+        tropicale chaque année et 15% du massif a été détruit ces dernières décennies. 
+        Parmi les raisons de cette déforestation, on pense souvent de l'autre 
+        côté de l'Atlantique qu'elle est liée aux "madereiros" qui en exploitent 
+        le bois de façon non certifiée. Certes, la production non gérée de bois 
+        est effectivement une cause de déforestation, mais elle n'en est pas la 
+        principale. L'élevage est un facteur bien plus important. Car avec l'augmentation 
+        des exportations de viande bovine vers les marchés européens notamment, 
+        le nombre de têtes de bétail en Amazonie brésilienne a doublé au cours 
+        des dix dernières années. Or ce bétail a besoin d'espace et la plus grande 
+        forêt tropicale du monde cède progressivement du terrain en faveur de 
+        nouveaux pâturages [Tourrand et al., 1999 et 2002], [Ferreira, 2001]. 
+        Aujourd'hui le Brésil possède le plus grand cheptel du monde et il est 
+        devenu en quelques années le leader des exportations mondiales de viande 
+        de bœuf. L'Amazonie y joue un rôle <a href="#majeur">majeur</a>, ce qui 
+        fait dire à [Kaimowitz et al., 2004] que cette région a rejoint la "<a href="#hamburger%20connexion">Hamburger 
+        Connection</a>" . </p>
+      <p>A partir des années 50, une politique volontariste a été engagée pour 
+        occuper l'espace amazonien. Cette volonté était commandée par trois objectifs. 
+        Le premier consistait à sécuriser les frontières disputées par les pays 
+        voisins mais aussi à affirmer la souveraineté du Brésil sur ce massif 
+        forestier considéré par certains environnementalistes comme un bien mondial 
+        de l'humanité. La seconde motivation était de tirer profit de cette réserve 
+        en ressources minières et de développer l'extractivisme. Le troisième 
+        objectif était de profiter de cette espace pour éviter une réforme agraire 
+        au Nordeste et au Sud du pays. Ainsi, sous l'impulsion de décisions politiques 
+        diverses (de Kubitschek à Lula, en passant par la dictature militaire 
+        1964-1985), cet espace a été volontairement colonisé grâce à la construction 
+        d'un réseau routier et de diverses incitations foncières et financières 
+        pour y attirer des investisseurs et des milliers de <a href="#incra">colons</a>. 
+        L'installation de ces petits fermiers le long des axes de pénétration 
+        a entraîné l'avancée de la frontière agricole, appelée front pionnier. 
+        Considéré comme le principal facteur de déforestation, l'élevage extensif 
+        est responsable de plus de 50% de la déforestation et l'agriculture itinérante 
+        sur brûlis représente 30 à 35% des surfaces déforestées [Bonaudo, 2005]. 
+      </p>
+      <p>Ces familles paysannes, issues des migrations en provenance du Sud, du 
+        Sud-est et du Nordeste du Brésil, ont eu accès à la terre soit en bénéficiant 
+        d'un lot attribué par l'état, soit en achetant un terrain. Auparavant 
+        ces familles étaient souvent employées dans des exploitations sans jamais 
+        avoir possédé de terre avant de migrer en Amazonie : </p>
+      <p><i>"J'ai aimé être ici car c'est ici qu'on a trouvé une petite terre. 
+        Là-bas on habitait sur la terre des autres, allant par ici en allant par-là". 
+        Dona Maria, citée par [Negreiros Alves, 2004] </i></p>
+      <p>Car les problèmes environnementaux ne doivent pas cacher les difficultés 
+        sociales et individuelles de ces petits paysans soumis à la dureté du 
+        climat, à l'isolation, aux aléas du marché et aux maladies, sans parler 
+        des relations avec les fazendeiros ou celles avec les scieries clandestines. 
+      </p>
+      <p><i>"L'émergence de nombreux conflits entre les grands exploitants agricoles 
+        et les sans-terres, les titulaires de titre de propriété et les indiens, 
+        les indiens et les chercheurs d'or ou les grandes entreprises qui se disputent 
+        un même espace ou une même richesse minière. L'Amazonie est devenue la 
+        scène d'une véritable foire d'empoigne où les conflits se règlent par 
+        des assassinats ou des exécutions sommaires." [Negreiros Alves, 2004] 
+        </i></p>
+      <p>De plus, les systèmes de production mis en place ne sont pas toujours 
+        compétitifs et font face à des contraintes écologiques de plus en plus 
+        fortes (érosion des sols, <a href="#cycle%20eau">changement climatique</a>, 
+        perte de biodiversité, etc.). Enfin, sur de nombreux fronts pionniers, 
+        on assiste à une concentration foncière qui écarte une partie de la population 
+        des bénéfices liés à l'usage de la forêt. Malgré de nombreuses ressources, 
+        on constate une augmentation de la pauvreté, de la précarité de toute 
+        une frange de la population et des dégradations environnementales irréversibles 
+        [Nepstad et al., 2002]. </p>
+      <p>Aujourd'hui, sous les pressions nationales et internationales, le développement 
+        de la région se voudrait durable, écologiquement, économiquement et socialement. 
+        Mais, avec une très faible valorisation de la forêt sur pied, l'agriculture 
+        extensive reste la principale source de revenue et le rythme de déforestation 
+        ne ralentit pas. D'ailleurs la forêt est toujours considérée comme une 
+        simple réserve d'espace à transformer pour favoriser le développement 
+        économique [Poccard-Chapuis, 2004]. </p>
+      <p>Pourtant, les grandes directives politiques pour coloniser l'Amazonie 
+        se sont progressivement estompées au profit de réglementations pour la 
+        préservation de l'environnement. Mais ce changement de politique laisse 
+        les colons dans une position inconfortable : </p>
+      <p><i>"Quando chegaram os cientistas disseram que devíamos desmatar perto 
+        do igarapé para eliminar a malaria e a febre amarela, mas não tinha nem 
+        malaria nem febre nessa regia. E agora nos chamam de bandidos da Amazônia" 
+        . Senhor Cirilo, petit exploitant de cacao interviewé à Uruará.</i> </p>
+      <p>Beaucoup de ces colons se sentent accusés par l'opinion internationale 
+        qui les considère comme les responsables des dommages écologiques. Ils 
+        sont souvent irrités par les critiques à leur égard et réagissent parfois 
+        violemment aux interventions de l'Ibama . A tel point qu'il est mal vu 
+        voire dangereux de s'afficher comme environnementaliste en Amazonie, surtout 
+        si l'on est étranger ! Aujourd'hui, suite à la suspension des programmes 
+        de colonisation, des courants politiques s'affrontent au sein même du 
+        gouvernement fédéral. Les uns approuvent des actions incitatives pour 
+        continuer le développement économique (programme Avança Brasil) quand 
+        d'autres soutiennent des réglementations pour la protection de l'environnement. 
+        Mais proposer des lois exclusivement environnementales en ignorant les 
+        conditions de vie des petits producteurs entraînera certainement l'exclusion 
+        d'une partie de la population qui ira alimenter les favelas et conduira 
+        à un durcissement des conflits sociaux sans résoudre les problèmes de 
+        déforestation. Au contraire, réfléchir sur l'amélioration des conditions 
+        de vie, sur l'éducation, sur des technologies agricoles plus adaptées 
+        au milieu et sur la mise en place de marchés de produits forestiers non 
+        ligneux ou de bois certifiés, apparaît être une solution plus adaptée 
+        pour favoriser de nouveaux modes de gestion des ressources naturelles. 
+        Il est donc nécessaire et urgent de trouver des alternatives qui concilieraient 
+        la conservation et les besoins des populations locales. </p>
+
+      <p><a href="../transamazon.htm">Revenir &agrave; la page initiale</a> - 
+        Chapitre suivant : Localisastion du site d'&eacute;tude</p>
+      <hr>
+      <p><a name="seringueiro"></a>Les seringueiros sont les travailleurs qui 
+        extraient la sève des hévéas pour produire du caoutchouc. Lors de nombreux 
+        combats syndicaux pour la défense de la forêt amazonienne, Chico Mendes 
+        a préconisé que soient crées des réserves forestières, gérées par les 
+        communautés traditionnelles pour favoriser une production durable. Il 
+        est devenu le porte parole des défenseurs de la forêt, des seringueiros 
+        et des Amérindiens, face au lobby des propriétaires terriens et des grands 
+        fazendeiros. Il est mort assassiné par l'un d'eux le 22 décembre 1988 
+        à Xapurí.</p>
+      <p> <a name="majeur"></a>Aujourd'hui, l'Amazonie compte plus de 57 millions 
+        de bovins (1/3 du cheptel brésilien). De plus, avec un taux de croissance 
+        annuelle de plus de 10,5%, depuis 1990, l'Amazonie est en passe de devenir 
+        le premier bassin d'élevage du monde [Tourrand et al., 1999].</p>
+      <p><a name="hamburger connexion"></a>Norman Myers a utilisé l'expression 
+        "Hamburger Connection" pour décrire un phénomène similaire en Amérique 
+        centrale dans les années 80. A cette époque, les exportations de viande 
+        de cette région alimentaient les chaînes de fast-food aux Etats-Unis et 
+        contribuaient au processus de déforestation.</p>
+      <p><a name="incra"></a>L'INCRA (Institut National de Colonisation et de 
+        Réforme Agraire), créé en 1970, était en charge de la réforme agraire 
+        et de la promotion de la colonisation. L'INCRA avait pour mission de construire 
+        les routes, d'établir le cadastre, de distribuer les terres et d'assurer 
+        l'assistance technique aux producteurs</p>
+      <p><a name="cycle eau"></a>L'Amazonie est une des régions la plus humide 
+        au monde. Or l'humidité des régions tropicales constitue la première source 
+        de redistribution de chaleur pour la Terre. En effet, lorsqu'il pleut, 
+        l'eau passe de l'état gazeux à l'état liquide pour s'évaporer de nouveau. 
+        Ces processus accumulent ou libèrent de la chaleur. Aussi, une grande 
+        partie de l'humidité de l'atmosphère de l'Amazonie provient de la vapeur 
+        d'eau recyclée par évapotranspiration par la forêt elle-même. Or, si le 
+        déboisement ne semble pas modifier le cumul moyen des pluies, il changerait 
+        significativement la distribution et le cycle des précipitations par son 
+        influence sur la quantité de chaleur dégagée. Par ailleurs, [Andreae et 
+        al., 2004] montrent que la pollution causée par les brûlis de bois diminuerait 
+        la quantité de pluie mais aussi la couverture nuageuse. Ces phénomènes 
+        pourraient également avoir une incidence sur le climat continental [Malhi 
+        et al., 2008].</p>
+
+      <h2>Références </h2>
+
+      <p>- [Andreae et al., 2004] Andreae M. O., Rosenfeld D., Artaxo P., Costa 
+        A. A., Frank G. P., Longo K. M. & Silva-Dias M. A. F., 2004. Smoking Rain 
+        Clouds over the Amazon. Science 27 February 2004: Vol. 303. no. 5662, 
+        pp. 1337 - 1342 DOI: 10.1126/science.1092779 </p>
+      <p>- [Bonaudo et al., 2005] Bonaudo T., Bommel P. et Tourrand J.F., 2005. 
+        Modelling the Pioneers Fronts of the transamazon highway region. In: SMAGET, 
+        Multi-Agent Modelling for Environmental Management. Bourg St Maurice - 
+        France. 21- 25 march 2005. </p>
+      <p>- [Bonaudo, 2005] Bonaudo T., 2005. La gestion environnementale sur un 
+        front pionnier amazonien. Thèse de doctorat de l'Institut National d'Agronomie 
+        de Paris-Grignon et Centre de développement durable de l'Université de 
+        Brasilia, 370 p </p>
+      <p>- [Bonté, 2007] Bonté B., 2007. L'anticipation dans les systèmes multi-agents 
+        destinés à la modélisation de phénomènes sociaux complexes. Application 
+        à la modélisation des fronts pionniers amazoniens. Mémoire de stage de 
+        Master II " Intelligence Artificielle et Décision ", Université Pierre 
+        et Marie Curie Paris 6. </p>
+      <p>- [Ferreira, 2001] Ferreira L.A., 2001. Le rôle de l'élevage bovin dans 
+        la viabilité agro-écologique et socio-économique des systèmes de production 
+        agricoles familiaux en Amazonie brésilienne - le cas d'Uruará (Pará, Brésil). 
+        Paris, INA-PG: 188. </p>
+      <p>- [Kaimowitz & Angelsen, 1998] Kaimowitz D. and Angelsen A., 1998. Economic 
+        models of tropical deforestation. a review. Revue du CIFOR, Center for 
+        International Forestry Research, Bogor, Indonesia. pp. 153. </p>
+      <p>- [Kaimowitz et al., 2004] Kaimowitz D., Mertens B., Wunder S. and Pacheco 
+        P., 2004. Hamburger Connection Fuels Amazon Destruction. Cattle ranching 
+        and deforestation in Brazil's Amazon. Center for International Forestry 
+        Research (CIFOR), Bogor, Indonesia. </p>
+      <p>- [Negreiros Alves, 2004] Negreiros Alves A.M., 2004. Dynamique et reproduction 
+        sociale de l'agriculture familiale des fronts pionniers d'Amazonie brésilienne. 
+        Exemple du paysannat de la Transamazonienne associant élevage laitier 
+        et agriculture. EHESS, DEA en Recherches Comparatives sur le Développement, 
+        25 octobre 2004. </p>
+      <p>- [Malhi et al., 2008] Malhi Y., Timmons J.R., Betts R.A., Killeen T.J.,Li 
+        W., Nobre C.A., 2008. Climate Change, Deforestation, and the Fate of the 
+        Amazon. Science 11 January 2008: Vol. 319. no. 5860, pp. 169 - 172 DOI: 
+        10.1126/science.1146961. Antérieurement publié dans Science Express le 
+        29 Novembre 2007 </p>
+      <p>- [Nepstad et al., 2002] Nepstad D., Mc. Grath D., Alencar A., Barros 
+        A. C., Carvalho G., Santilli M., del C. Vera Diaz M., 2002. Frontier Governance 
+        in Amazonia. Science 295: 629-631. </p>
+      <p>- [Poccard-Chapuis, 2004] Poccard-Chapuis R., 2004. Les réseaux de la 
+        conquête. Filière bovine et structuration de l'espace sur les fronts pionniers 
+        d'Amazonie orientale brésilienne. Thèse de doctorat en Géographie, Université 
+        de Paris X. </p>
+      <p>- [Poccard et al. 2005] Poccard-Chapuis R., Thales M., Venturieri A., 
+        Piketty M.G., Mertens B., Bastos da Veiga J. et Tourrand J.F., 2005. La 
+        filière viande : un levier pour contrôler les dynamiques pionnières en 
+        Amazonie brésilienne ? Cahiers Agricultures vol. 14, n° 1, janvier 2005 
+      </p>
+      <p>- [Tourrand et al., 1999] Tourrand, J.F.; Veiga, J.B.; Ferreira, L.A.; 
+        Ludovino, R.M.R.; Poccard-Chapuis, R.; Simão Neto, M. Cattle ranching 
+        expansion and land use change in the Brazilian eastern Amazon. In: Conference 
+        On Patterns and Processes of Land Use and Forest Change In The Amazon, 
+        Gainesville, FL, USA: University of Florida, 1999. p.15. </p>
+      <p>- [Tourrand et al., 2002] Tourrand JF, Piketty MG, Oliveira JRD, et al. 
+        Élevage bovin, déforestation et développement régional : le cas du Sud 
+        du Para, Amazonie Brésilienne. Bois et Forêts des Tropiques 2002 ; 280 
+        : 5-16. </p>
+      <p>- [Veiga et al., 2004] Veiga J.B., Tourrand J.F., Piketty M.G., Poccard-Chapuis 
+        Alves A.M., Thales M.C. 2004. Expansão e trajetórias da pecuária na Amazônia: 
+        Estado do Pará. Editora da Universidade de Brasília, Brasil, v.1. p.161 
+      </p>
+
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+      <div align="right" class="texte"> </div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

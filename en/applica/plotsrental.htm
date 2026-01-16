@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title> Plots rental by communicating agents</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; </p>
+      <h1>PlotsRental</h1>
+      <h2>Land regrouping process by plots rental</h2>
+      <p>Fran&ccedil;ois Bousquet, Cirad ; Christophe Le Page, Cirad</p>
+      <img src="/images/applica/plotsrental1.gif" width="196" height="206" align="right" vspace="10" hspace="10" alt="Interface de ForPast"> 
+      <p>This model demonstrates the principles of Cormas communicating agents. 
+        Communicating agents have a mailbox and use a communicating channel to 
+        deliver messages in the mailboxes of the other agents belonging to their 
+        social network.</p>
+      In this exercice, 10 &quot;farmer&quot; agents are randomly located on a 
+      10 x 10 spatial grid, each cell standing for a plot of land. Each farmer 
+      receives initially 10 plots, randomly chosen. He estimates the productivity 
+      of a plot according to its distance. The calculation on his potential income 
+      is based on this single criteria. Four ways of organizing the rentals of 
+      the plots have been implemented. 
+      <p><img src="/images/applica/plotsrental1c.gif" width="195" height="169" align="left">The 
+        first scenario is a bidding process that relies on a centralized contract 
+        net protocol. An auctioneer offers all plots to all farmers. These farmers 
+        having sent back proposals, the auctioneer selects the best one for each 
+        plot and finalizes the rental contract with the sender of the best proposal. 
+        The result of this first version of the model is a &quot;perfect&quot; 
+        land regrouping process, in the sense that any plot is systematically 
+        rent to the closest farmer. </p>
+      <p>The three other scenarios are simulating a decentralized functionning: 
+        the exchanges of rental proposals do not go through the auctioneer anymore. 
+        It's rather a kind of mutual agreement that the farmers are looking for. 
+        In a first case, all the farmers know each others. Each one proposes his 
+        plots to the others. Then each one selects the best proposal for each 
+        of his plots, and finalizes the rental contracts. The result is the same 
+        than for the first scenario: as the information is symetric, the optimal 
+        solution is reached.</p>
+      <p><img src="../../images/applica/plotsrental2.gif" width="196" height="206" align="left"><img src="/images/applica/plotsrental2c.gif" width="195" height="169" align="right">The 
+        second distributed version (third scenario) introduces two groups of five 
+        farmers, randomly made. These 2 groups are shown on the window that enable 
+        the observation of the communication (right picture): group 1 with agents 
+        1;5;6;9;8 and group 2 with agents 7;3;4;10;2. Now that each agent only 
+        knows half of the whole population, a kind a social asymetric of information 
+        is introduced. This feature leads to a non-optimal solution, as can be 
+        seen on the left picture: famer 2 (deep blue) and farmer 1 (black) have 
+        not communicated, therefore their domain are overlapping. </p>
+      <p>A last scenario emphasizes this asymetric of information, by assuming 
+        an asynchronous way of communication between the members of each group: 
+        as soon as a farmer receives an interesting proposal, he immediatly finalizes 
+        the contract without waiting for any other proposal. In this version with 
+        social and temporal asymetric of information, the land regrouping process 
+        is even less optimized. </p>
+      <p>&nbsp;</p>
+      <ul>
+        <li>Download the model (<a href="/logiciel/PlotsRental.zip">zipfile</a>, 
+          7Ko. Cormas2002) </li>
+        <li>For more information, <a href="mailto:green@cirad.fr">contact the 
+          authors</a>.</li>
+      </ul>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_en.inc" --> </td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

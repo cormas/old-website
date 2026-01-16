@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>Test Spatial Entities: aggregative dynamics with Cormas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>TSE</h1>
+      <h2>Test of Cormas aggregative spatial entities</h2>
+      <p>Christophe Le Page, Cirad</p>
+      <img src="/images/applica/cseeng.gif" width="322" height="308" align="right" vspace="10" hspace="10" alt="Interface de ForPast"> 
+      <p>This model introduces the functionning principles of Cormas aggregative 
+        spatial entities. In the inheritage tree of the Cormas generic spatial 
+        entities, the compound spatial entity &quot;SpatialEntity_Set&quot; is 
+        specialized in :</p>
+      <ul>
+        <li>&quot;SpatialEntity_Aggregate&quot;, whose components should be contiguous</li>
+      </ul>
+      <ul>
+        <li>&quot;SpatialEntity_Set_notConnex&quot;, whose components may not 
+          be contiguous.</li>
+      </ul>
+      <p>The operations of aggregation-disintegration are based on the two attributes 
+        &quot;components&quot; (a collection of lower level spatial entities) 
+        and &quot;theCSE&quot; (a register of belonging to higer level spatial 
+        entities). </p>
+      <p>The TSE model is a didactic model that allows to test two different ways 
+        to create spatial aggregates with Cormas. </p>
+      <p>In the first one, the components are defined as sets of contiguous cells 
+        sharing a same condition. The first step is to load a spatial grid made 
+        of 50*50 cells (instances of the &quot;TSE_Cell&quot; class) from a file. 
+        Each cell has either #tree (aggregation condition) or #empty as value 
+        of its &quot;context&quot; attribute. The effective instanciations from 
+        the compound spatial entity &quot;TSE_Aggregate&quot; are submitted to 
+        an additional constraint about a minimum number (set to 25) of contiguous 
+        components verifying the aggregation condition. To let co-exist in the 
+        same model several spatial entities defined at different levels gives 
+        a great flexibility to write the dynamics of the model. Some of the processes 
+        are more easily described at the cellular level, as for some others, the 
+        aggregated level is more suitable. In this didactic and simplistic example, 
+        each cell has a fixed (very low) probability to switch its &quot;context&quot; 
+        attribute value. At the level of the aggregates, a spreading process from 
+        the edges is written like this: a given number (corresponding to the hundredth 
+        of the total number of components of the forestry entity) of cells at 
+        the outside edge are going to be aggregated to the forest. In order to 
+        keep a high compacity to the forestry entities, a priority is given to 
+        the cells that are surrounded by the highest number of already aggregated 
+        cells. </p>
+      <p>In the second one, 10 &quot;seed&quot; cells are randomly chosen in the 
+        50*50 spatial grid. 10 aggregates are intialized with one of these seeds 
+        as a single component. The iterative building process of the aggregates 
+        relies on the integration, among the cells belonging to the outside edge 
+        of each aggregate, of all the one that do not yet belong to another aggregate. 
+      </p>
+      <p>&nbsp;</p>
+      <ul>
+        <li>Download the model (<a href="/logiciel/tse.zip">zipfile</a>, 6Ko) 
+        </li>
+        <li>For more information, <a href="mailto:lepage@cirad.fr">contact the 
+          author</a>.</li>
+      </ul>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

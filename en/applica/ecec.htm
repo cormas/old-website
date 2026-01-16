@@ -1,0 +1,354 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>ECEC</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+  <!--#include virtual="sommair.inc" -->
+
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+
+      <p>&nbsp;</p>
+
+      <h1>ECEC</h1>
+
+      <h2>Environmental Feedback and the Evolution of Cooperation</h2>
+
+      <p><img src="../../images/applica/ecec-1.gif" width="318" height="347" align="right">The 
+
+        model, presented here, is a re-implementation of the Pepper and Smuts' 
+
+        model :</p>
+
+      <ul>
+
+        <li>Pepper, J.W. and B.B. Smuts. 2000. &quot;The evolution of cooperation 
+
+          in an ecological context: an agent-based model&quot;. Pp. 45-76 in T.A. 
+
+          Kohler and G.J. Gumerman, eds. Dynamics of human and primate societies: 
+
+          agent-based modeling of social and spatial processes. Oxford University 
+
+          Press, Oxford.</li>
+
+        <li>Pepper, J.W. and B.B. Smuts. 2002. &quot;Assortment through Environmental 
+
+          Feedback&quot;. American Naturalist, 160: 205-213</li>
+
+      </ul>
+
+      <p>The model consists of a two dimensional grid, wrapped in both axes to 
+
+        avoid edge effects, containing two kinds of agents: plants and foragers. 
+
+        The main idea is the study of the survival of two populations of agents 
+
+        that depends on the spatial configuration. </p>
+
+      <p>&nbsp;</p>
+
+      <h4>Dynamics of the plants</h4>
+
+      <p>To control the distribution of plants as an experimental variable, plants 
+
+        are created only at the start of a run, and do not move, die, or reproduce. 
+
+        A plant&#146;s only &#147;behaviors&#148; is to grow and be eaten, while 
+
+        foragers move about seeking and eating plants, reproducing, and dying.</p>
+
+      <p>Plants have a fixed location in a given grid cell, and vary only in their 
+
+        size, which represents the amount of food energy available to foragers. 
+
+        At the start of a run each plant&#146;s initial size is set to a uniform 
+
+        random number between zero and a fixed maximum. At each time step this 
+
+        energy level increases according to a logistic growth curve.</p>
+
+      <p>At the start of a run each initial forager is endowed with an energy 
+
+        level chosen as a uniform random number between zero and the fertility 
+
+        threshold, and placed on a randomly chosen cell containing a plant.</p>
+
+      <h4>Dynamics of the foragers</h4>
+
+      <p><img src="../../images/applica/ecec-2.gif" width="321" height="323" align="left">At 
+
+        the start of a run each initial forager is endowed with an energy level 
+
+        chosen as a uniform random number between zero and the fertility threshold, 
+
+        and placed on a randomly chosen cell containing a plant. A forager feeds 
+
+        on the plant in its current cell if there is one. It increases its own 
+
+        energy store by the same amount it reduces the plant&#146;s.</p>
+
+      <p>Foragers are of two types that differes in their feeding behavior. When 
+
+        &#147;restrained&#148; foragers eat, they take only 50% of the plant&#146;s 
+
+        energy. In contrast, &#147;unrestrained&#148; foragers eat 99% of the 
+
+        plant. This parameter is less than 100% so that plants can continue to 
+
+        grow after being fed on, rather than being permanently destroyed.</p>
+
+      <h5>Rules for Foragers&#146; Movements</h5>
+
+      <p>Foragers examine their current and eight adjacent cells, and from those 
+
+        not occupied by another forager, choose the cell containing the plant 
+
+        with the most energy (with ties broken randomly). </p>
+
+      <p>If the chosen cell would yield enough food to meet their metabolic cost 
+
+        for one time step they move there. (This fixed metabolic cost per time 
+
+        step is the same for all foragers.) If not, they move instead to a randomly 
+
+        chosen adjacent cell not occupied by another forager. </p>
+
+      <p>This movement rule leads to the emigration of foragers from depleted 
+
+        patches, and simulates the behavior of individuals exploiting local food 
+
+        sources while they last, but migrating rather than starving in an inadequate 
+
+        food patch. </p>
+
+      <h5>Other Biological Functions of Foragers</h5>
+
+      <p>Foragers also loose energy each time step as a fixed metabolic cost, 
+
+        regardless of whether or not they move. If their energy store reachs zero 
+
+        they die, but they do not have maximum life spans. </p>
+
+      <p>If a forager&#146;s energy level reachs an upper fertility threshold 
+
+        it reproduces asexually, creating an offspring with the same heritable 
+
+        traits as itself (e.g., feeding strategy). At the same time the parent&#146;s 
+
+        energy store is reduced by the offspring&#146;s initial energy. Newborn 
+
+        offspring occupy the cell nearest to their parent that is not already 
+
+        occupied by a forager. </p>
+
+      <h2><br>
+
+        <img src="../../images/applica/ecec-UML.gif" width="740" height="500" align="bottom"><br>
+
+        Analysis</h2>
+
+      <p>50 simulations has been runned on the same initial spatial environment 
+
+        (homogeneousEnv), with the initial parameters values :</p>
+
+      <h2><img src="../../images/applica/ecec-3.gif" width="537" height="251"></h2>
+
+      <table width="100%" border="0">
+
+        <tr> 
+
+          <td height="272"> 
+
+            <div align="center"><img src="../../images/applica/ecec-4.gif" width="385" height="277" align="left">Global 
+
+              plant energy level fluctuations simulated on 200 time steps (1 curve 
+
+              per simulation)</div>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><img src="../../images/applica/ecec-5.gif" width="396" height="285" align="left">Global 
+
+              &quot;restrained&quot; population size fluctuations simulated on 
+
+              200 time steps (1 curve per simulation)</div>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><img src="../../images/applica/ecec-6.gif" width="400" height="279" align="left">Global 
+
+              &quot;unrestrained&quot; population size fluctuations simulated 
+
+              on 200 time steps (1 curve per simulation)</div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <p>This analysis shows that &quot;unrestrained&quot; populations of foragers 
+
+        survive with some fluctuations according to the capacity of the environment, 
+
+        while the &quot;retrained&quot; populations colapse. But, in some cases, 
+
+        the &quot;restrained&quot; population may survive. With the Cormas analysis 
+
+        module, it is now possible to record the value of the random seed (Sim22 
+
+        (seed=3230785234493) = the red curves), and to run a new simulation with 
+
+        this value to observe and analyse this specific simulation. This can be 
+
+        done by adding a line in the &quot;init&quot; method of the model :</p>
+
+      <pre>homogeneousEnv
+
+  <font color="#00CC33">Cormas</font> randomSeed: 3230785234493.<br>	self spaceModel loadEnvironmentFromFile: 'random.env' withPov: #povFood2C.<br>	super initCells.<br>	self initForagers.</pre>
+
+      <table width="100%" border="0">
+
+        <tr>
+
+          <td>
+
+            <div align="center"><img src="../../images/applica/ecec-7.gif" width="388" height="411" align="left">Global 
+
+              plant energy level fluctuations simulated on 1000 time steps with 
+
+              the seed value set to 3230785234493</div>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td><img src="../../images/applica/ecec-8.gif" width="605" height="337" align="left">Global 
+
+            plant energy level fluctuations simulated on 1000 time steps with 
+
+            the seed value set to 3230785234493</td>
+
+        </tr>
+
+        <tr>
+
+          <td><img src="../../images/applica/ecec-9.gif" width="605" height="337" align="left">Global 
+
+            &quot;restrained&quot; and &quot;unrestrained&quot; populations sizes 
+
+            fluctuations simulated on 1000 time steps with the seed value set 
+
+            to 3230785234493</td>
+
+        </tr>
+
+      </table>
+
+      <p>&nbsp;</p>
+
+      <h2>References </h2>
+
+      <ul>
+
+        <li> For more details about this model, look at the following paper: 
+
+          <ul>
+
+            <li>Pepper, J.W. and B.B. Smuts. 2000. The evolution of cooperation 
+
+              in an ecological context: an agent-based model. Pp. 45-76 in T.A. 
+
+              Kohler and G.J. Gumerman, eds. Dynamics of human and primate societies: 
+
+              agent-based modeling of social and spatial processes. Oxford University 
+
+              Press, Oxford. (download the <a href="http://www.santafe.edu/%7Ejpepper/papers/%20Pepper&Smuts2000.pdf">PDF</a> 
+
+              at Santa Fe Institut)</li>
+
+            <li>Pepper, J.W. and B.B. Smuts. 2002. Assortment through Environmental 
+
+              Feedback. American Naturalist, 160: 205-213<br>
+
+            </li>
+
+          </ul>
+
+        </li>
+
+      </ul>
+
+      <ul>
+        
+        <li>The  Cormas tutorial <a href="../../pdf/Tutorial ECEC-Cormas2.pdf">(Tutorial ECEC-Cormas2.pdf</a>) 
+          is based on the ECEC model. In this tutorial, the user will build the 
+          model from scratch. He will also learn how to conduct a sensitivity 
+          analysis and the different ways to save the results of a simulation. 
+          If you have any question about it, <a href="mailto:bommel@cirad.fr">contact 
+            the authors</a>. </li>
+      </ul>
+      <ul>
+        <li>ECEC is now available for Cormas new version (July 2012): <a href="../../logiciel/ECEC.zip">ECEC.zip</a></li>
+      </ul>
+      <ul>
+        <li>Download the <a href="../../logiciel/maps.zip">3 maps</a> to initialize the simulation (unzip maps.zip  into Models/ECEC/ in order to get the following hierarchy: Cormas/Models/ECEC/maps).</li>
+      </ul>
+      <p>&nbsp;</p>
+      <ul>
+        <li>This replication of ECEC model is also presented on Open ABM: <a href="http://www.openabm.org/model/2492/version/1/view">http://www.openabm.org/model/2492/version/1/view</a></li>
+      </ul>
+
+      <!--#include virtual="/include/copyright_en.inc" -->
+
+    </td>
+
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+   <div align="right" class="texte"></div>
+
+  </td>
+
+ </tr>
+
+</table>
+
+</body>
+
+</html>
+

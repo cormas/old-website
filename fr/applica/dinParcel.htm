@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+
+  <title>Dinamica Parcelas</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!--#include virtual="/include/script.inc" -->
+
+
+  <link rel="stylesheet" href="/css/cormas.css" -="">
+</head>
+
+<body topmargin="0" leftmargin="0" border="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#ffffff" marginheight="0" marginwidth="0">
+
+<!--#include virtual="haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+
+  <!--#include virtual="sommair.inc" --> 
+  <td bgcolor="#ffffff" valign="top" width="*"> 
+   
+      <p>&nbsp;
+   
+      </p>
+      <h2>Dynamiques d'utilisation des terres de la Pampa</h2>
+
+      <h3><span style="" lang="PT-BR">Auteurs :</span></h3>
+
+      <table style="text-align: left; width: 923px; height: 240px;" border="0" cellpadding="2" cellspacing="2">
+
+        <tbody>
+
+          <tr>
+
+            <td>
+            <p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial; color: black;" lang="ES">Arbeletche, Pedro - Facultad de
+Agronom&iacute;a - Paysand&uacute;, Uruguay.&nbsp;<a href="mailto:arbe19@fagro.edu.uy">arbe19@fagro.edu.uy</a><u1:p></u1:p></span><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span></p>
+
+            <p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial; color: black;" lang="ES">Corral, Jorge -&nbsp; Facultad de
+Ingenier&iacute;a, Montevideo, Uruguay.&nbsp;<a href="mailto:jcorral@adinet.com.uy">jcorral@adinet.com.uy</a><u1:p></u1:p></span><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span></p>
+
+            <p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial; color: black;" lang="ES">Burges, Julio C&eacute;sar - INTA-EEA
+Balcarce, Argentina.&nbsp;<a href="mailto:jcburges@balcarce.inta.gov.ar">jcburges@balcarce.inta.gov.ar</a><u1:p></u1:p></span><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span></p>
+
+            <p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial; color: black;" lang="ES">Morales, Hermes - Instituto Plan Agropecuario
+&ndash; Uruguay.&nbsp;<a href="mailto:paisanohermes@hotmail.com">paisanohermes@hotmail.com</a><u1:p></u1:p></span><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span></p>
+
+            <p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial; color: black;" lang="ES">Continanza, Guadalupe - INTA-EEA Balcarce,
+Argentina.&nbsp;<a href="mailto:guadacontinanza@yahoo.com.ar">guadacontinanza@yahoo.com.ar</a><u1:p></u1:p></span><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span></p>
+
+            <p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial; color: black;" lang="ES">Couderc, Jorge - INTA-EEA Bordenave-
+Argentina.&nbsp;</span><b><span style="font-size: 10pt; font-family: Arial; color: blue;" lang="ES"><a href="mailto:jorgecouderc@s8.coopenet.com.ar"><strong><span style="font-weight: normal;">jorgecouderc@s8.coopenet.com.ar</span></strong></a><u1:p></u1:p></span></b><b><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span></b></p>
+
+            <p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial; color: black;" lang="ES">Courdin, Virginia - Facultad de
+Agronom&iacute;a - Paysand&uacute;, Uruguay.&nbsp;<a href="mailto:vcourdin@fagro.edu.uy">vcourdin@fagro.edu.uy</a><u1:p></u1:p></span><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span></p>
+
+            <span style="color: blue;" lang="PT-BR"></span><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span><span style="font-size: 10pt; font-family: Arial; color: black;" lang="ES">Bommel, Pierre &ndash; CIRAD Universidad de
+Brasilia<u1:p></u1:p></span><span style="font-family: &quot;Arial Unicode MS&quot;; color: blue;" lang="PT-BR"><o:p></o:p></span> <a href="mailto:bommel@cirad.fr"><span style="font-size: 10pt; font-family: Arial;" lang="PT-BR">bommel@cirad.fr</span></a></td>
+
+            <td><img style="width: 301px; height: 226px;" alt="" src="dinParcel/28-11-07_Pigue.jpg"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      <br>
+
+      <p>Ce mod&egrave;le est d&eacute;velopp&eacute; dans
+le cadre du projet <a href="http://www2.clermont.inra.fr/TSE/Intranetadd/addaccueil.htm">ADD
+Trans</a>. Il est le fruit de plusieurs r&eacute;unions de
+travail et est le r&eacute;sultat de l'&eacute;volution de
+plusieurs versions, m&ecirc;me s'il reste encore
+inachev&eacute;. <comment title="[if gte vml 1]&gt;&lt;v:shapetype id=&quot;_x0000_t75&quot; coordsize=&quot;21600,21600&quot; o:spt=&quot;75&quot; o:preferrelative=&quot;t&quot; path=&quot;m@4@5l@4@11@9@11@9@5xe&quot; filled=&quot;f&quot; stroked=&quot;f&quot;&gt; &lt;v:stroke joinstyle=&quot;miter&quot;/&gt; &lt;v:formulas&gt; &lt;v:f eqn=&quot;if lineDrawn pixelLineWidth 0&quot;/&gt; &lt;v:f eqn=&quot;sum @0 1 0&quot;/&gt; &lt;v:f eqn=&quot;sum 0 0 @1&quot;/&gt; &lt;v:f eqn=&quot;prod @2 1 2&quot;/&gt; &lt;v:f eqn=&quot;prod @3 21600 pixelWidth&quot;/&gt; &lt;v:f eqn=&quot;prod @3 21600 pixelHeight&quot;/&gt; &lt;v:f eqn=&quot;sum @0 0 1&quot;/&gt; &lt;v:f eqn=&quot;prod @6 1 2&quot;/&gt; &lt;v:f eqn=&quot;prod @7 21600 pixelWidth&quot;/&gt; &lt;v:f eqn=&quot;sum @8 21600 0&quot;/&gt; &lt;v:f eqn=&quot;prod @7 21600 pixelHeight&quot;/&gt; &lt;v:f eqn=&quot;sum @10 21600 0&quot;/&gt; &lt;/v:formulas&gt; &lt;v:path o:extrusionok=&quot;f&quot; gradientshapeok=&quot;t&quot; o:connecttype=&quot;rect&quot;/&gt; &lt;o:lock v:ext=&quot;edit&quot; aspectratio=&quot;t&quot;/&gt; &lt;/v:shapetype&gt;&lt;v:shape id=&quot;_x0000_i1025&quot; type=&quot;#_x0000_t75&quot; style='width:184.5pt; height:138.75pt'&gt; &lt;v:imagedata src=&quot;./dinamicaParcelas_fichiers/image001.jpg&quot; o:title=&quot;28-11-07_Pigue&quot;/&gt; &lt;/v:shape&gt;&lt;![endif]" xmlns="http://disruptive-innovations.com/zoo/nvu"><img src="chrome://editor/content/images/tag-comment.gif"><comment title="[if gte vml 1]&gt;&lt;v:shapetype id=&quot;_x0000_t75&quot; coordsize=&quot;21600,21600&quot; o:spt=&quot;75&quot; o:preferrelative=&quot;t&quot; path=&quot;m@4@5l@4@11@9@11@9@5xe&quot; filled=&quot;f&quot; stroked=&quot;f&quot;&gt; &lt;v:stroke joinstyle=&quot;miter&quot;/&gt; &lt;v:formulas&gt; &lt;v:f eqn=&quot;if lineDrawn pixelLineWidth 0&quot;/&gt; &lt;v:f eqn=&quot;sum @0 1 0&quot;/&gt; &lt;v:f eqn=&quot;sum 0 0 @1&quot;/&gt; &lt;v:f eqn=&quot;prod @2 1 2&quot;/&gt; &lt;v:f eqn=&quot;prod @3 21600 pixelWidth&quot;/&gt; &lt;v:f eqn=&quot;prod @3 21600 pixelHeight&quot;/&gt; &lt;v:f eqn=&quot;sum @0 0 1&quot;/&gt; &lt;v:f eqn=&quot;prod @6 1 2&quot;/&gt; &lt;v:f eqn=&quot;prod @7 21600 pixelWidth&quot;/&gt; &lt;v:f eqn=&quot;sum @8 21600 0&quot;/&gt; &lt;v:f eqn=&quot;prod @7 21600 pixelHeight&quot;/&gt; &lt;v:f eqn=&quot;sum @10 21600 0&quot;/&gt; &lt;/v:formulas&gt; &lt;v:path o:extrusionok=&quot;f&quot; gradientshapeok=&quot;t&quot; o:connecttype=&quot;rect&quot;/&gt; &lt;o:lock v:ext=&quot;edit&quot; aspectratio=&quot;t&quot;/&gt; &lt;/v:shapetype&gt;&lt;v:shape id=&quot;_x0000_i1025&quot; type=&quot;#_x0000_t75&quot; style='width:184.5pt; height:138.75pt'&gt; &lt;v:imagedata src=&quot;./dinamicaParcelas_fichiers/image001.jpg&quot; o:title=&quot;28-11-07_Pigue&quot;/&gt; &lt;/v:shape&gt;&lt;![endif]" xmlns="http://disruptive-innovations.com/zoo/nvu"><img src="chrome://editor/content/images/tag-comment.gif"><!--[if gte vml 1]><v:shapetype
+id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+<v:stroke joinstyle="miter"/>
+<v:formulas>
+<v:f eqn="if lineDrawn pixelLineWidth 0"/>
+<v:f eqn="sum @0 1 0"/>
+<v:f eqn="sum 0 0 @1"/>
+<v:f eqn="prod @2 1 2"/>
+<v:f eqn="prod @3 21600 pixelWidth"/>
+<v:f eqn="prod @3 21600 pixelHeight"/>
+<v:f eqn="sum @0 0 1"/>
+<v:f eqn="prod @6 1 2"/>
+<v:f eqn="prod @7 21600 pixelWidth"/>
+<v:f eqn="sum @8 21600 0"/>
+<v:f eqn="prod @7 21600 pixelHeight"/>
+<v:f eqn="sum @10 21600 0"/>
+</v:formulas>
+<v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+<o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:184.5pt;
+height:138.75pt'>
+<v:imagedata src="./dinamicaParcelas_fichiers/image001.jpg" o:title="28-11-07_Pigue"/>
+</v:shape><![endif]--></comment></comment><comment title="[if !vml]" xmlns="http://disruptive-innovations.com/zoo/nvu"><img src="chrome://editor/content/images/tag-comment.gif"><comment title="[if !vml]" xmlns="http://disruptive-innovations.com/zoo/nvu"><img src="chrome://editor/content/images/tag-comment.gif"><!--[if !vml]--></comment></comment><comment title="[endif]" xmlns="http://disruptive-innovations.com/zoo/nvu"><img src="chrome://editor/content/images/tag-comment.gif"><comment title="[endif]" xmlns="http://disruptive-innovations.com/zoo/nvu"><img src="chrome://editor/content/images/tag-comment.gif"><!--[endif]--></comment></comment></p>
+
+      <p>Ce mod&egrave;le illustre des dynamiques
+crois&eacute;es d'utilisation de la terre (culture du soja ou
+&eacute;levage) et dans le m&ecirc;me temps de la location et
+de l'achat de parcelles fonci&egrave;res. L'objectif a
+&eacute;t&eacute; de formaliser des connaissances sur ces
+aspects et de comprendre les relations entre les producteurs
+traditionnels et l'apparition dans ce secteur de nouveaux utilisateurs
+repr&eacute;sentants les int&eacute;r&ecirc;ts de fonds de
+pension. La strat&eacute;gie de ces derniers consiste &agrave;
+louer les terres pour produire du soja de fa&ccedil;on intensive et
+pas forc&eacute;ment durable. Mais si les producteurs traditionnels
+(petits, moyens et grands) ont un penchant historique pour
+l'&eacute;levage extensif, ils ne sont pas insensibles pour autant
+&agrave; des pratiques plus rentables.</p>
+
+      <h3>Description du mod&egrave;le</h3>
+
+Le diagramme de classes ci-dessous (en espagnol) pr&eacute;sente
+les principales entit&eacute;s du mod&egrave;le. La partie de
+droite regroupe les parcelles et leurs couvertures. Les parcelles (100
+ha) peuvent &ecirc;tre lou&eacute;es ou vendues (valeur fixe de
+3000 pesos/ha). Lorsqu'elles sont inexploit&eacute;es, elles sont
+en jach&egrave;re; l'exploitation consiste alors &agrave;
+choisir entre l'&eacute;levage (Ganado) ou le soja. Chaque culture
+a un co&ucirc;t et un prix qui &eacute;voluent en fonction du
+march&eacute;. La partie gauche pr&eacute;sente les agents du
+mod&egrave;le, les producteurs qui se divisent en deux types :
+l'entreprise (fonds de pension) et les producteurs plus traditionnels.
+Seuls ces derniers poss&egrave;dent la terre : relation
+&rdquo;tien&rdquo; due&ntilde;o &lt;-&gt;
+propiedad. En fonction de la taille de chaque
+propri&eacute;t&eacute;, on subdivise les producteurs familiaux
+en petits (chicos), moyens (medianos) et grands
+propri&eacute;taires (grandes). Ce sont &eacute;galement les
+seuls agents qui peuvent vendre et acheter la terre car ce n'est pas la
+strat&eacute;gie de l'entreprise. Par contre n'importe quel agent
+peut utiliser la terre pour produire : il g&egrave;re alors son
+exploitation (relation &rdquo;maneja&rdquo;, usuario
+&lt;-&gt; explotacion) en produisant du soja ou de
+l'&eacute;levage selon ses pr&eacute;f&eacute;rences.
+L'entreprise (Empresarial) choisit syst&eacute;matiquement
+d'implanter du soja pour lequel elle poss&egrave;de une technologie
+plus avanc&eacute;e qui lui procure une productivit&eacute; de
+30% sup&eacute;rieure.<br>
+
+      <img style="width: 922px; height: 342px;" alt="diagClass" src="dinParcel/diagClass.jpg"><br>
+
+      <p>Le diagramme d'activit&eacute; suivant d&eacute;crit
+l'ensemble des activit&eacute;s qu'un producteur peut
+ex&eacute;cuter pendant une ann&eacute;e. Ce diagramme est
+subdivis&eacute; en trois parties&nbsp; </p>
+
+      <ul>
+        <li><span style="font-family: Symbol;"><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span>La
+partie gauche (<span style="background-color: rgb(255, 153, 0);">activit&eacute;s
+oranges</span>) correspond au cas o&ugrave; le producteur
+s'en sort : ses gains lui permettent de couvrir plus du double de ses
+co&ucirc;ts de production plus sa consommation. Il peut alors
+retirer de la location des parcelles lorsque cette activit&eacute;
+est moins rentable que de produire, et il peut m&ecirc;me acheter
+de la terre s'il en a les moins.</li>
+        <li><span style="font-family: Symbol;"></span>La
+partie droite (<span style="background-color: rgb(51, 204, 255);">activit&eacute;s
+bleues</span>) correspond au cas contraire o&ugrave; les
+gains du producteur ne sont pas suffisamment
+&eacute;lev&eacute;s. Pour essayer de s'en sortir, il essaie
+d'abord de louer ses parcelles et s'il n'y arrive pas, il en vendra.
+Dans le pire des cas, s'il ne lui reste plus de terre, il est exclus du
+syst&egrave;me.</li>
+        <li><span style="font-family: Symbol;"><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span>La
+partie centrale (<span style="background-color: rgb(51, 255, 51);">activit&eacute;s
+vertes</span>) correspond au cas interm&eacute;diaire,
+lorsque les gains sont juste convenables pour couvrir tous ses frais
+annuels. En fonction du march&eacute;, il choisit alors de louer
+certaines parcelles ou de produire. Dans les deux cas, il effectuera
+des changements de production ou de location jusqu'&agrave; sa
+pr&eacute;disposition &agrave; changer (25%).</li>
+      </ul>
+
+      <img style="width: 834px; height: 533px;" alt="Activity_Diagram__stepProdutor" src="dinParcel/Activity_Diagram__stepProdutor2.jpg"><br>
+
+      <p>Les activit&eacute;s de l'entreprise sont beaucoup plus
+simples. Chaque ann&eacute;e, elle produit du soja sur les terres
+qu'elle loue. Elle r&eacute;cup&egrave;re des parcelles
+&agrave; louer lors des activit&eacute;s des producteurs
+(m&eacute;thodes &rdquo;dar en alquiler&rdquo; du
+producteur), mais elle n'est pas proactive pour cette
+d&eacute;marche; elle peut juste refuser de louer si les gains
+esp&eacute;r&eacute;s du soja sont inf&eacute;rieurs au
+loyer et rendre des parcelles dans ce cas. Par contre, selon les
+sc&eacute;narios test&eacute;s, elle peut d&eacute;terminer
+le march&eacute; de la location.</p>
+
+      <p>Le d&eacute;roulement annuel d'un pas de temps est
+d&eacute;crit par le diagramme de s&eacute;quence suivant :</p>
+
+      <p><img style="width: 502px; height: 391px;" alt="step" src="dinParcel/annualStep-FR.jpg"></p>
+
+      <h3>Quelques r&eacute;sultats</h3>
+
+      <table style="text-align: left; width: 597px; height: 386px;" border="0" cellpadding="2" cellspacing="2">
+
+        <tbody>
+
+          <tr>
+
+            <td><img style="width: 214px; height: 374px;" alt="initial Grid" src="dinParcel/image009.jpg"></td>
+
+            <td>
+            <div style="margin-left: 40px;">Le simulateur est
+initialis&eacute; sur un espace de 50 x 25 parcelles identiques,
+dont une petite partie n'est pas encore occup&eacute;e. 8 grands
+producteurs disposent chacun d'une propri&eacute;t&eacute; de
+60 parcelles; 36 producteurs moyens sont cr&eacute;&eacute;s
+avec chacun 15 parcelles, et 56 petits producteurs avec 2 parcelles. Au
+total, xx parcelles sont attribu&eacute;es et 1250 &ndash; x
+restent inoccup&eacute;es.</div>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      <br>
+
+      <h4>Sc&eacute;nario A : </h4>
+
+Un premier sc&eacute;nario met en &oelig;uvre un
+m&eacute;canisme al&eacute;atoire de fluctuation des prix<span style="">&nbsp; </span>du soja et de la viande
+(bas&eacute;s sur une s&eacute;rie de 6 ann&eacute;es). Les
+tarifs de la location suivent celui du soja : 35 % du prix du soja avec
+un d&eacute;calage d'un an (init_MercadoPreciosAleatorios).
+      <p><img style="width: 493px; height: 289px;" alt="" src="dinParcel/image009.gif"></p>
+
+      <p><img style="width: 548px; height: 289px;" alt="" src="dinParcel/image011.gif"></p>
+
+      <p><img style="width: 494px; height: 290px;" alt="" src="dinParcel/image013.gif"></p>
+
+      <h4>Sc&eacute;nario B : </h4>
+
+      <p>Tous les prix du
+march&eacute; fluctuent r&eacute;guli&egrave;rement. Les
+tarifs de la
+location suivent celui du soja de l'ann&eacute;e
+pr&eacute;c&eacute;dente (init_MercadoSinus). Le
+march&eacute; fluctue
+selon l'&eacute;quation suivante :&nbsp;</p>
+
+      <img style="width: 423px; height: 48px;" alt="Gains/ha(t) = (gainsMax &ndash; gainsMin)/2 x (1 + sin(2.&pi;/N . (t + &phi;)))" src="dinParcel/equation.gif"><br>
+
+avec :
+      <table style="text-align: left; width: 507px; height: 88px;" border="0" cellpadding="2" cellspacing="2">
+
+        <tbody>
+
+          <tr>
+
+            <td style="text-align: center;"></td>
+
+            <td style="text-align: center;"><span style="" lang="PT-BR">GainsMin</span></td>
+
+            <td style="text-align: center;"><span style="" lang="PT-BR">GainsMax</span></td>
+
+            <td style="text-align: center;"><span style="" lang="PT-BR">P&eacute;riode N</span></td>
+
+            <td style="text-align: center;"><span style="" lang="EN-US">Phase </span>&phi;</td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: center;"><span style="" lang="EN-US">Soja</span></td>
+
+            <td style="text-align: center;"><span style="" lang="EN-US">48760</span></td>
+
+            <td style="text-align: center;"><span style="" lang="EN-US">79580</span></td>
+
+            <td style="text-align: center;"><span style="" lang="EN-US">12</span></td>
+
+            <td style="text-align: center;">0</td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: center;"><span style="" lang="EN-US">Elevage</span></td>
+
+            <td style="text-align: center;"><span style="" lang="EN-US">17670</span></td>
+
+            <td style="text-align: center;"><span style="" lang="EN-US">28396</span></td>
+
+            <td style="text-align: center;">28</td>
+
+            <td style="text-align: center;">0</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      <img style="width: 494px; height: 290px;" alt="" src="dinParcel/image015.gif"><br>
+
+      <img style="width: 549px; height: 290px;" alt="" src="dinParcel/image017.gif"><br>
+
+      <img style="width: 495px; height: 291px;" alt="" src="dinParcel/image019.gif"><br>
+
+      <h4>Sc&eacute;nario C : </h4>
+
+Le prix du soja augmente : il suit une sinuso&iuml;de croissante de
++1$ par an. L'entreprise fixe les tarifs de la location &agrave; 1
+$ de plus que le prix de la meilleure couverture
+(init_MercadoPreciosAumentendo)
+      <table style="text-align: left; width: 815px; height: 597px;" border="0" cellpadding="2" cellspacing="2">
+
+        <tbody>
+
+          <tr>
+
+            <td><img style="width: 496px; height: 292px;" alt="" src="dinParcel/image023.gif"><br>
+
+            <img style="width: 497px; height: 293px;" alt="" src="dinParcel/image025.gif"></td>
+
+            <td><img style="width: 270px; height: 384px;" alt="" src="dinParcel/grid.gif"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      <br>
+
+      <img style="width: 713px; height: 292px;" alt="" src="dinParcel/image027.gif"><br>
+
+      <h4>Sc&eacute;nario D : </h4>
+
+Augmentation lin&eacute;aire du prix du soja. L'entreprise fixe les
+tarifs de la location. (init_ MercadoPreciosAumentendoLinear)<br>
+
+      <p><img style="width: 497px; height: 293px;" alt="" src="dinParcel/image030.gif"></p>
+
+      <p><img style="width: 498px; height: 294px;" alt="" src="dinParcel/image032.gif"></p>
+
+      <p><img style="width: 676px; height: 376px;" alt="" src="dinParcel/image034.gif"></p>
+
+      <h4>Analyse de sensibilit&eacute; :&nbsp;</h4>
+
+      <p>Evolution du nombre de familles (et de leurs types) en
+fonction du taux d'imposition annuel (Bas&eacute; sur
+sc&eacute;nario A).&nbsp;L'impot annuel d&eacute;pend de la
+taille de la propri&eacute;t&eacute; =
+taillePropri&eacute;t&eacute; x tauxImposition.</p>
+
+      <p><img style="width: 493px; height: 289px;" alt="" src="dinParcel/image036.gif"></p>
+
+      <p>&nbsp; </p>
+
+      <ul>
+        <li><span style="" lang="EN-US">Download
+the model (</span><a href="file:///C:/temp/Pierre/web/..%5Clogiciel%5CDinamicaParcelariaPigue.zip"><span style="" lang="EN-US">zipfile</span></a><span style="" lang="EN-US">, 7Ko), download the UML
+diagrams (<a href="file:///C:/temp/Pierre/web/dinParcel/Pigue.xml.zip">Pigue.xml.zip</a>,
+MagicDraw)</span></li>
+        <li><span style="" lang="EN-US">For more
+information, </span><a href="mailto:bommel@cirad.fr"><span style="" lang="EN-US">contact the authors</span></a><span style="" lang="EN-US">.&nbsp;</span></li>
+      </ul>
+<!--#include virtual="/include/copyright_fr.inc" -->
+	</td>
+
+  <td bgcolor="#ffffff" valign="top" width="15"> 
+   
+      <div class="texte" align="right"></div>
+
+  </td>
+
+ </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>

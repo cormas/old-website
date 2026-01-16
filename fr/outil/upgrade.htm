@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>Mise &agrave; jour de Cormas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+    <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>Mise &agrave; jour de Cormas</h1>
+      <p>&nbsp;</p>
+      <h2>Principaux points pour mettre &agrave; jour Cormas avec la version 2001. 
+      </h2>
+      <ol>
+        <li>Faire tourner son mod&egrave;le avec la version de Cormas pr&eacute;c&eacute;demment 
+          install&eacute;e, s'assurer que tout est ok, puis exporter son mod&egrave;le. 
+        </li>
+        <li>Renommer les sous-r&eacute;pertoires de Cormas "<i>kernel</i>", "<i>messages</i>" 
+          et "<i>models</i>" s'ils existent sur votre disque dur en "<i>kernel-old</i>", 
+          "<i>messages-old</i>" et "<i>models-old</i>". Il est plus s&ucirc;r 
+          de garder une copie de l'ancienne version ! Cette &eacute;tape doit 
+          permettre d'&eacute;viter d'&eacute;craser l'ancienne version en cherchant 
+          &agrave; installer la nouvelle (cf. &eacute;tape 3). </li>
+        <li>T&eacute;l&eacute;charger la nouvelle version de Cormas: d&eacute;zipper 
+          les nouveaux sous-r&eacute;pertoires "<i>kernel</i>" et "<i>messages</i>" 
+          qui constituent l'archive zip <i>cormas2001.zip</i> sous le r&eacute;pertoire 
+          Cormas. ("<i>Use folder names</i>" doit &ecirc;tre coch&eacute; dans 
+          WinZip afin que la structure des sous-r&eacute;pertoires soit cr&eacute;&eacute;e 
+          au cours de l'extraction). </li>
+        <li> Contruire une image cormas2001 &agrave; partir d'une copie du fichier 
+          <i>visual.im</i> (qui se trouve dans le sous-r&eacute;pertoire <i>image</i> 
+          de Vw3) que vous devez placer dans le r&eacute;pertoire Cormas. Suivre 
+          la proc&eacute;dure d'installation de Cormas d&eacute;crite dans le 
+          manuel, puis sauver l'image sous le nom <i>cormas2001.im</i> </li>
+        <li>Tester cette nouvelle version en important le mod&egrave;le "<i>Pursuit</i>". 
+          <ul>
+            <li>Cr&eacute;er, si besoin est, un sous-r&eacute;pertoire &quot;<i>models</i>&quot; 
+              sous le r&eacute;pertoire Cormas. </li>
+            <li>T&eacute;l&eacute;charger l'archive contenant le mod&egrave;le 
+              depuis la <a href="/fr/applica/pursuit.htm">page web d&eacute;crivant 
+              cette application</a>.</li>
+            <li>D&eacute;zipper cette archive dans le sous-r&eacute;pertoire &quot;<i>models</i>&quot;. 
+            </li>
+            <li>Importer le mod&egrave;le dans Cormas et le tester.</li>
+          </ul>
+        </li>
+        <li>Faire une copie de son mod&egrave;le Cormas (supposons qu'il s'appelle 
+          "<i>aaa</i>"): copier tout le r&eacute;pertoire "<i>aaa</i>" situ&eacute; 
+          dans "<i>models-old</i>" dans le r&eacute;pertoire "<i>models</i>". 
+          S'il existe un sous-r&eacute;pertoire "<i>cartes</i>", le renommer "<i>maps</i>". 
+        </li>
+        <li>V&eacute;rifier que les noms des entit&eacute;s g&eacute;n&eacute;riques 
+          de Cormas sont &agrave; jour. Ouvrir un SystemBrowser et se positionner 
+          dans la cat&eacute;gorie "<i>CormasKernel-Entities</i>" pour voir les 
+          noms utilis&eacute;s dans la version 2001. Editer le fichier <i>aaa.st</i> 
+          (celui que vous venez de copier dans le r&eacute;pertoire "<i>models</i>" 
+          !) dans un &eacute;diteur de texte quelconque et v&eacute;rifier les 
+          instructions de d&eacute;claration des entit&eacute;s de votre mod&egrave;le. 
+          Pour trouver les lignes concern&eacute;es, faire Editer -&gt; Rechercher 
+          -&gt; subclass:. V&eacute;rifier alors que le nom de la classe g&eacute;n&eacute;rique 
+          de Cormas est le bon. Faire si besoin est les substitutions suivantes: 
+        </li>
+        <ul>
+          <li><i>Agent_Communication_Location</i> -> <i>AgentCommLocation</i> 
+          </li>
+          <li>Agent_Communication -> AgentComm </li>
+          <li>Agent_Location -> AgentLocation</li>
+        </ul>
+        <li>V&eacute;rifier l'existence du texte &quot;<i>self random</i>", qu'il 
+          faut remplacer syst&eacute;matiquement par "<i>Cormas random</i>". Sauver 
+          alors le fichier <i>aaa.st</i> </li>
+        <li>Essayer d'importer votre mod&egrave;le depuis Cormas. Le nom <i>aaa</i> 
+          doit appara&icirc;tre dans la liste des mod&egrave;les susceptibles 
+          d'&ecirc;tre import&eacute;s. </li>
+        <li>Il faut ensuite renommer quelques protocoles. </li>
+        <ul>
+          <li>Pour chacune des entit&eacute;s ayant des points de vue, il faut 
+            renommer le protocole pr&eacute;c&eacute;demment appel&eacute; '<i>pdv</i>' 
+            (pour "points de vue") en '<i>pov</i>' (pour "points of view")... 
+          </li>
+          <li>Pour la classe du mod&egrave;le (accessible en cliquant sur le bouton 
+            <i>Pr&eacute;parer et contr&ocirc;ler</i>), il faut renommer le protocole 
+            pr&eacute;c&eacute;demment appel&eacute; '<i>controle</i>' en '<i>control</i>'. 
+          </li>
+        </ul>
+        <li>Avec la version 2001 de Cormas 2001, une valeur unique est automatiquement 
+          assign&eacute;e &agrave; l'attribut "<i>id</i>" de chaque instance d'agent 
+          (entit&eacute; sociale) nouvellement cr&eacute;&eacute;e. Ce processus 
+          est bas&eacute; sur une variable d'instance de classe appel&eacute;e 
+          "<i>CurrentId</i>" et sur trois m&eacute;thodes regroup&eacute;es dans 
+          le protocole "<i>id</i>". Avec la version 2001 de Cormas, cette variable 
+          d'instance de classe et ce protocole sont automatiquement cr&eacute;&eacute;s 
+          lors de la d&eacute;finition d'un nouvel agent au moyen de l'interface 
+          de Cormas. Ici, pour chacun des agents de votre mod&egrave;le, il va 
+          falloir les rajouter manuellement &agrave; partir d'un SystemBrowser... 
+          Prendre exemple sur "<i>Pusuit_Prey</i>" et ne pas h&eacute;siter &agrave; 
+          user du <ctrl-c> <crtl-v>&lt;Ctrl-C&gt; &lt;Ctrl-V&gt;... </li>
+        <li>Dans les m&eacute;thodes du protocole "<i>init</i>" de votre mod&egrave;le 
+          (bouton <i>Pr&eacute;parer et contr&ocirc;ler</i>), les instructions 
+          g&eacute;n&eacute;rales d'initialisation sont d&eacute;sormais tr&egrave;s 
+          simples. Les trois instructions de base sont "<i>initCells</i>", "<i>initAgents</i>" 
+          et "<i>initCharts</i>". Prendre &agrave; nouveau &quot;<i>Pursuit</i>" 
+          comme exemple. 
+          <ul>
+            <li>"<i>initCells</i>", d&eacute;fini au niveau de la classe g&eacute;n&eacute;rique 
+              &quot;<i>Cormas_Model</i>&quot;, est utilis&eacute; pour r&eacute;cup&eacute;rer 
+              la collection d'entit&eacute;s spatiales &eacute;l&eacute;mentaires 
+              cr&eacute;&eacute;es &agrave; partir de la grille spatiale, stocker 
+              cette collection dans l'attribut correspondant du mod&egrave;le 
+              (<i>thePursuit_Cells</i> par exemple), et qussi pour envoyer le 
+              message "<i>init</i>" &agrave; chaque de ces entit&eacute;s spatiales 
+              &eacute;l&eacute;mentaires. Noter que "<i>initAndCleanSpatialGrid</i>" 
+              n'est plus utilis&eacute;. </li>
+            <li>"<i>initAgents</i>" est la m&eacute;thode dans laquelle vous devez 
+              cr&eacute;er vos agents. Il faut donc &eacute;crire une m&eacute;thode 
+              &quot;initAgents&quot; sp&eacute;cifique &agrave; votre mod&egrave;le. 
+              La premi&egrave;re instruction de cette m&eacute;thode doit &ecirc;tre 
+              "<i>super initAgents</i>", afin de remettre &agrave; z&eacute;ro 
+              le compteur d'identifiants &quot;<i>CurrentId</i>" pour toutes les 
+              classes d'agents du mod&egrave;le. Lorsqu'une nouvelle instance 
+              d'agent est cr&eacute;&eacute;e, on doit syst&eacute;matiquement 
+              lui envoyer le message "<i>init</i>", sous peine de d&eacute;clencher 
+              une erreur. Si votre classe d'agent poss&egrave;de d&eacute;j&agrave; 
+              une m&eacute;thode &quot;<i>init</i>", vous devez y rajouter l'instruction 
+              "<i>super init</i>", afin de d&eacute;clencher l'ex&eacute;cution 
+              de la m&eacute;thode g&eacute;n&eacute;rique &quot;<i>initId</i>" 
+              qui se charge de d&eacute;livrer la valeur courante pour son identifiant. 
+            </li>
+            <li> "<i>initCharts</i>" initialise les graphiques qui ont &eacute;t&eacute; 
+              d&eacute;finis. Voir le point suivant... </li>
+          </ul>
+        </li>
+        <li>Avec la version 2001 de Cormas, les graphiques ne sont plus g&eacute;r&eacute;s 
+          exactement de la m&ecirc;me mani&egrave;re. Le manuel d&eacute;crit 
+          les changements qui sont intervenus. Pour la mise &agrave; jour des 
+          valeurs qui seront dessin&eacute;es sur vos graphiques, vous devez d&eacute;sormais 
+          simplement ajouter l'instruction "<i>self initCharts</i>" dans les m&eacute;thodes 
+          "<i>init</i>" de votre mod&egrave;le et "<i>self updateCharts: t</i>" 
+          dans les m&eacute;thodes du protocole "<i>control</i>". Les instructions 
+          relatives au calcul des valeurs suivies au cours du temps par les graphiques 
+          sont &agrave; entrer dans une m&eacute;thode propre &agrave; chaque 
+          graphique. Avec la nouvelle version de Cormas, d&egrave;s que le nom 
+          d'un nouveau graphique est saisi, une fen&ecirc;tre d'&eacute;dition 
+          de code appara&icirc;t, et c'est &agrave; ce moment-l&agrave; que l'on 
+          &eacute;crit l'instruction correspondante, dans une m&eacute;thode dont 
+          le nom est compos&eacute; &agrave; partir du nom du graphique auquel 
+          on accole &quot;<i>Data</i>&quot; (cf. par exemple "<i>nbPreys</i>" 
+          et "<i>nbPreysData</i>"). Ici comme pour le point 10, vous allez devoir 
+          faire ces ajustements manuellement &agrave; partir d'un SystemBrowser... 
+        </li>
+        <li>Exporter puis importer votre mod&egrave;le pour forcer une initialisation 
+          compl&egrave;te. </li>
+        <li>Tester le !!!</li>
+      </ol>
+      <!--#include virtual="/include/copyright_en.inc" --> </td>
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+    <div align="right" class="texte"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

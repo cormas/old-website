@@ -1,0 +1,126 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Utiliser ECEC</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="../outil/haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+    <!--#include virtual="../outil/sommair.inc" -->
+    <td width="*" valign="top" bgcolor="#FFFFFF"> <p>&nbsp; 
+      <h1>Utiliser le mod&egrave;le ECEC</h1>
+      <p>Cette page explique la proc&eacute;dure compl&egrave;te d'utilisation 
+        d'un mod&egrave;le simple sur Cormas. </p>
+      <p>Une <a href="../../en/applica/ecec.htm" target="_parent">page decrivant 
+        le mod&egrave;le</a> est disponible.</p>
+      <h3>Lancer Cormas</h3>
+      <p>Dans le menu principal de VW, aller dans 'Tools' -&gt; Cormas -&gt; Cormas 
+        Fran&ccedil;ais (ou English)</p>
+      <p><img src="../../images/outil/ecec/openCormas.PNG" width="586" height="336"></p>
+      <p>La fen&ecirc;tre principale de Cormas s'ouvre :</p>
+      <p><img src="../../images/outil/ecec/cormas.PNG" width="412" height="127"></p>
+      <h3>Charger le mod&egrave;le ECEC</h3>
+      <p>S&eacute;lectionner 'Fichier' -&gt; 'Charger...' -&gt; 'Charger depuis 
+        une parcel'</p>
+      <p><img src="../../images/outil/ecec/loadParcel.PNG" width="417" height="197"></p>
+      <p>Dans la nouvelle fen&ecirc;tre, choisir ECEC :</p>
+      <p><img src="../../images/outil/ecec/loadParcel-ECEC.PNG" width="209" height="230"></p>
+      <p>puis s&eacute;lectionner le fichier ECEC.pcl :</p>
+      <p><img src="../../images/outil/ecec/loadParcel-ECEC2.PNG" width="563" height="412"></p>
+      <p>Le mod&egrave;le se charge alors sur Cormas :</p>
+      <p><img src="../../images/outil/ecec/cormas-Ecec.PNG" width="412" height="127"></p>
+      <h3>Simuler et observer le mod&egrave;le </h3>
+      <h5>Cr&eacute;er un sc&eacute;nario</h5>
+      <p>Dans le menu Simulation, s&eacute;lectionner 'Simulation Interface' :</p>
+      <p><img src="../../images/outil/ecec/openSim.PNG" width="415" height="131"></p>
+      <p>La fen&ecirc;tre 'Simulation s'ouvre. Inscrire '500' dans la case &quot;Steps&quot; 
+        pour lancer une simulation de 500 pas de temps.</p>
+      <p><img src="../../images/outil/ecec/simInterface.PNG" width="412" height="107"></p>
+      <p>Avant de lancer la simulation, il faut initialiser un sc&eacute;nario.Cliquer 
+        sur le bouton 'Initialize', une nouvelle fen&ecirc;tre s'ouvre permettant 
+        de choisir la m&eacute;thode d'initialisation (ici, la m&eacute;thode 
+        homogeneousEnv&quot;) et une m&eacute;thode de contr&ocirc;le (&quot;step:&quot;).</p>
+      <p><img src="../../images/outil/ecec/scenarioInterf.PNG" width="597" height="627"></p>
+      <p>Pour que Cormas enregistre les valeurs des sondes, s&eacute;lectionner 
+        les (pour plusieurs s&eacute;lections, utiliser le bouton Ctrl ou Majuscule 
+        en cliquant avec la souris).</p>
+      <h5>Observer la grille spatiale</h5>
+      <p>Pour ouvrir une grille spatiale, s&eacute;lectionner le menu 'Visualisation' 
+        -&gt; 'Space' :</p>
+      <p><img src="../../images/outil/ecec/openGrid.PNG" width="414" height="236"></p>
+      <p>La grille spatiale s'ouvre :</p>
+      <p>Aucun point de vue n'est normalement afficher. Pour afficher le point 
+        de vue &quot;niveau d'&eacute;nergie&quot; des cellules, cliquer avec 
+        le bouton droit sur la grille et s&eacute;lectionner 'Plant' -&gt; 'povFood'</p>
+      <p><img src="../../images/outil/ecec/grid.PNG" width="385" height="402"></p>
+      <p>Pour afficher les agents, cliquer avec le bouton droit et s&eacute;lectionner 
+        'Forager' -&gt; 'pov' :</p>
+      <p><img src="../../images/outil/ecec/grid2.PNG" width="389" height="389"></p>
+      <p>Pour observer les sondes, s&eacute;lectionner 'Visualisation' -&gt; 'Probes' 
+        dans la fen&ecirc;tre principale de Cormas.</p>
+      <p><img src="../../images/outil/ecec/openProbes.PNG" width="648" height="234"></p>
+      <p>Une nouvelle fen&ecirc;tre s'ouvre. Vous pouvez voir les sondes globales 
+        : </p>
+      <p><img src="../../images/outil/ecec/probes.PNG" width="604" height="337"></p>
+      <p>Pour observer les sondes individuelles, il y a deux possibilit&eacute;s 
+        :</p>
+      <ul>
+        <li>Aller dans 'Level' -&gt; 'RestrainedForager' :<br>
+          <br>
+          <img src="../../images/outil/ecec/indivProbe.PNG" width="605" height="334"><br>
+          <br>
+          Puis cliqer sur 'energy' et s&eacute;lectionner les num&eacute;ros des 
+          agents que l'on souhaite observer :<br>
+          <img src="../../images/outil/ecec/indivProbe2.PNG" width="605" height="337"><br>
+        </li>
+        <li>Ou bien, sur la grille spatiale, rep&eacute;rer un agent &agrave; 
+          observer, puis cliquer dessus en maintenant les touches 'Ctrl', 'Shift' 
+          (majuscule) appuy&eacute;es :<br>
+          <br>
+          <img src="../../images/outil/ecec/indivProbe3.PNG" width="625" height="423"> 
+        </li>
+      </ul>
+      <h2>Tester vos mod&eacute;les</h2>
+      <p>Nous vous invitons &agrave; essayer les <a href="outguid.htm">didactitiels</a> 
+      </p>
+      <p>Vous pouvez aussi tester d'autres mod&egrave;les comme <a href="../applica/tse.htm">TSE</a>, 
+        <a href="../applica/plotsrental.htm">PlotsRental</a>, <a href="../../en/applica/jlb.htm">JLB</a> 
+        ou <a href="../applica/conway.htm">Conway</a>.</p>
+      <h2>Forum Cormas</h2>
+      <p>Nous vous invitons &eacute;galement &agrave; <a href="../reseaux/forumCormas.htm" target="_blank">rejoindre</a> 
+        la liste Cormas@cirad.fr.</p>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_en.inc" --> <p> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+    <div align="right" class="texte"></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

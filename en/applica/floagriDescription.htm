@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>FloAgri</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+  <td width="*" align="left" valign="middle" bgcolor="#FFFFFF"> 
+   <p>&nbsp;
+   
+      <h1>FloAgri, description of the model </h1>
+      <p><strong>Bommel, P., Sist, P., Piketty, M-G., Bendahan,  A. B. </strong></p>
+      <p><a href="floagri.htm">Back to the introduction page of the model.</a></p>
+      <h2>P<a>urpose of the model</a></h2>
+      <p>The model  seeks to evaluate the strict compliance of the environmental  law and also the long-term effects of two alternative land use activities implemented  by farmers in the Amazon, and promoted by the Floagri project. These land uses  are the <em>permanent field of annual  crop</em> (PFAC) based on conservation agriculture systems (no-tillage) and the <em>forest management</em> (FM) of the forests legal reserve (LR). Here, we only consider <em>subcontracted FM</em>: the farmer does not extract the timber himself,  but he subcontracts the logging operations to a harvesting company.</p>
+      <p>The model outputs  allow us to compare the economic performance and environmental impacts of smallholders&rsquo;  practices and to test the influences of PFAC and FM as additional activities. We  did not use sophisticated agent approaches (such as BDI architecture<a href="#_ftn2" name="_ftnref2" title=""> </a>) but a heuristic household decision making  structure based on observations on the field, interviews  with famers and  expert descriptions of rural practices. </p>
+      <h2><a>The overall methodological approach</a></h2>
+      <p>The main principle of our  modeling approach is to compare various production activities starting from the  same initial conditions. Considering that small-scale farmers in the Amazon are  mainly focused on livestock production, each agent adopts a cattle breeding as  main production strategy and a set of specific additional activities.</p>
+      <p>From each initial state, identical for each agent, six simulations are run in parallel according  to a supplementary specific activity that the agent has to perform (<a href="#table1">Table 1</a>). The  first scenario (<em>StandStrat</em>) corresponds  to the business as usual breeder strategy, for which the agent invests mainly  in livestock without preserving his LR. Thus it is considered as the control  scenario. When a FM activity is included (<em>FmStrat</em>),  the agent has to delimit and protect a part of the forest in his landholding from  which he  can extract and sell timber while respecting some regeneration rules. The PFAC strategy (<em>PfacStrat)</em> imposes the agent to cultivate 4 ha of PFAC. The <em>Fm+Pfac</em> strategy aggregates the two previous ones: the agent has to cultivate PFAC and to manage his forest, in addition to its basic breeder activities. The last two scenarios  simulate a strict compliance to environmental law: the agents do not touch their  Legal Reserve (LR), then agent <em>StandLR</em> performs his breeder standard activities on his authorized surface, when agent <em>PfacLR</em> is also obliged to cultivate 4 ha of PFAC.</p>
+      <h5><em><a name="table1"></a>Table 1: Description of the six scenarios to assess the economic and  ecological viability</em></h5>
+      <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="187"><p align="center"><a><strong>Initial Conditions</strong></a></p></td>
+          <td width="93"><p align="center"><strong>Strategy</strong></p></td>
+          <td width="92"><p align="center"><strong>LR compliance</strong></p></td>
+          <td width="294"><p align="center"><strong>Specific activities</strong></p></td>
+        </tr>
+        <tr>
+          <td width="187" rowspan="6"><p align="left">- Same    family structure <br>
+            (ex: 3    adults + 3 children) <br>
+            - Same    initial cash <br>
+            - Same    farm size <br>
+            - Same    initial land cover <br>
+            - Same    soil types </p></td>
+          <td width="93" rowspan="6"><p align="center">Breeder </p></td>
+          <td width="92" valign="top"><p align="center"><em>No</em></p></td>
+          <td width="294" valign="top"><p><strong><em> StandStrat</em></strong>: standard activities </p></td>
+        </tr>
+        <tr>
+          <td width="92" valign="top"><p align="center">Yes </p></td>
+          <td width="294" valign="top"><p><strong><em>FmStrat</em></strong>: StandStrat + FM </p></td>
+        </tr>
+        <tr>
+          <td width="92" valign="top"><p align="center"><em>No</em></p></td>
+          <td width="294" valign="top"><p><strong><em>PfacStrat</em></strong>: StandStrat + PFAC </p></td>
+        </tr>
+        <tr>
+          <td width="92" valign="top"><p align="center">Yes </p></td>
+          <td width="294" valign="top"><p><strong><em>Fm+Pfac</em></strong>: <em>FmStrat</em> + <em>PfacStrat</em></p></td>
+        </tr>
+        <tr>
+          <td width="92" valign="top"><p align="center">Yes </p></td>
+          <td width="294" valign="top"><p><strong><em>StandLR</em></strong>: <em>StandStrat</em> + LR compliance </p></td>
+        </tr>
+        <tr>
+          <td width="92" valign="top"><p align="center">Yes </p></td>
+          <td width="294" valign="top"><p><strong><em>PfacLR</em></strong>: <em>PfacStrat</em> +&nbsp; LR compliance </p></td>
+        </tr>
+      </table>
+      <p>At the beginning of a  simulation, the six agents are strictly identical. They differ only in their strategy. Because the principle is to compare  the economic income between the agents according to the scenarios, they cannot change their strategy during simulation and they do not interact. </p>
+      <h2>Model description</h2>
+      <p>The focus of our analysis is  to better understand and assess the feasibility of each new activity with  respect to the control scenario in terms of family labor management,  availability of land and economic profitability. These three elements are  schematized in the following flow diagram:</p>
+      <p><img src="floagri/floagri-1.png" width="626" height="394" alt="flow diagram"></p>
+      <h5><em>Fig. 1: Systemic diagram presenting the cash and workforce flows</em></h5>
+      <p>According to its structure, a family is  endowed by a given quantity of labor (i.e. a given number of available working  days per season). As any activity requires time, the  stock of available working days decreases when achieving agricultural  activities. Thus, an agent is constrained by his labor endowment.  The agent is also constrained by the access to and disposal of financial  resources. Thus, to manage his farm, the agent owns two limited and  interchangeable stocks: when he lacks labor force, he can recruit  temporary workers if he has financial  resources, and conversely,  when he needs money, he can sell a part of  his available workforce as outside laborer days (without exceeding 90 days/season/worker).  Available financial resources are systematically actualized according to the  financial results of the preceding period.</p>
+      <h3>Model structure</h3>
+      <p> The main elements of  the model are grouped in two packages. The first contains the structure  of the farm and  the dynamics of  its vegetation, and the second  package contains the family, its labor force, financial resources and  farming activities.<br>
+        A family is composed of  children (0 to 4) and workers  (2 to 4) with a landholding that extends over 100 ha. Each  plot (1 ha) is covered by forests, fallow, annual crops or pasture. Annual crops (rice or corn) can be cultivated in a traditional way or using  PFAC techniques. An unmaintained crop or pasture degrades progressively with  abandon duration until it reaches a  threshold where it  becomes a fallow. </p>
+      <p><img src="floagri/classDiag.png" width="657" height="704" alt="class diagram"></p>
+      <h5><em>Fig. 2: UML class diagram of the Floagri model</em></h5>
+      <p> The model technical and economic parameters (e.g. unitary prices and  costs, labor demand by activity, yield) have been set by looking at data from field  surveys (Barbosa et al. 2008), experts knowledge and by comparing findings from  other studies (Vosti 2002; de Reynal 1995). The PFAC parameters have been obtained from data generated by the  FloAgri project. &nbsp; </p>
+      <h5><em>Table 1: Prices and costs associated to the vegetation. Note that the prices are in Brazilian Real (BRL or R$). Exchange rate is  about 1 R$ = &frac12; USD.</em><br>
+      <img src="floagri/dataFloagri.png" width="657" height="356" alt="data"></h5>
+      <h3>Model dynamic</h3>
+      <p>The simulations are run for 40 years. As  the Amazon climate is clearly divided in rainy and dry seasons, the simulations  are scheduled by an annual time step divided in two sub-steps with distinct seasonal farming practices. At  the end of the year, each agent performs an annual balance to level the  accounts and make specific purchases.</p>
+      <p><img src="floagri/seq.gif" width="490" height="507" alt="sequence diagram"></p>
+      <h5><em>Fig. 3: Main sequence diagram of the scheduler divided in 3 sub-steps</em> <a name="seq"></a></h5>
+      <p>At each season, the land cover evolves naturally  then the agent performs his seasonal activities as a sequence of phases: spends  money for the semester consumption; works on his land to produce agricultural  goods, harvests and sells the production. </p>
+      <h4>Vegetation dynamics</h4>
+      <p>Each hectare of land cover evolves  naturally with age and may change. For example, an abandoned crop encroaches gradually (ie. its abandonment level increases at each season) then, beyond a threshold, turns  fallow. After 30 years, a fallow turns young forest,  which needs more 30 years to get harvestable trees (3 trees/ha). An unmaintained crop or pasture produces less than a maintained  crop (15% drops per abandonment level):</p>
+      <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>actual  production = optimal production </em><em>&times; neglected  factor</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<a name="eq1"></a>eq.  1)</p>
+      <p>where: <em>optimal production =  production/ha done by the model data </em></p>
+      <p>and: <em>neglected factor = (1 &ndash;  degradation loss factor) ^abandon level = (1&ndash;0.15) ^abandon level</em></p>
+The way a plot changes its cover depends also on  smallholder&rsquo;s actions. On any plot, the smallholder can suppress a cover and  implant a new crop. To counteract  the natural degradation of the crops,  pastures and cattle, some activities are required in order to maintain their productivity. The following  diagram shows all the vegetation types and the different ways (by natural  transitions or by smallholder&rsquo;s actions) through which a land cover changes  its state.
+<p><img src="floagri/state.jpg" width="590" height="483" alt="state transition diagram"></p>
+<h5><strong><em>Fig. 4: State-transition diagram</em></strong><em> of the cover</em></h5>
+<p>The cattle  dynamics is very similar to the vegetation dynamics: when it is adult, a cow  produces a quantity of meat per year, depending on the pasture quality and on  its level of maintenance (eq. 1).  In actual terms, this production matches a gain of  body weight and the birth of a calf. But  the model aggregates this production as a quantity of meat harvested and sold  by the farmer. If the herd is neglected, it produces less and less, and finally  dies. Because all the cattle production (i.e. the calves) is sold, the farmer  has to buy new cows during the annual balance stage, so to increase the cattle  size.</p>
+<h4>Farmer  activities</h4>
+<p>After having consumed (cost: individual  consumption &times; family size), the smallholder performs his seasonal agricultural  activities. Breeding is a preferred direction towards where the agent  wants to invest, but he dedicates  also a part of his labor force to annual crops. For  example in dry season, if the family has needs (cash lower than  twice his consume), the smallholder cultivates annual crops for self-consumption (half hectare per family member).  At the end of the season, he harvests all its mature crops (crop implanted this  season are not yet ready). Since the family finances  are one of the models functioning,  the harvest production is immediately  converted into cash (<a href="#eq1">actual production</a> &times; crop price) even for the self-consumption production (the agent has to buy his  own food).<br>
+  As part of his agricultural activities, after this self-subsistence phase, the smallholder spends time and money to upkeep with the pastures  and cattle. Then with the remaining cash and manpower, he performs an expansion  loop during which he slashes and burns some forest plots to implant annual  crops. New pastures will be implanted after the annual crop harvest, at the  following wet season. The loop expansion is constrained by forest or fallow  availability, by possibility to expand in case of constraint scenarios (FmStrat,  Fm+Pfac, StandLR, PfacLR) and by the availability of family resources. <br>
+  At the end of a season, all  the remaining work force is sold (max 90 days/worker). Here it should be noted that the sale of manpower may be  unrealistic: in case of comfortable savings, smallholders do not behave on this  way but rather seek to improve their standard of living.  Nonetheless, because we wanted to compare  the efficiency of each strategy on the same basis, we removed this option and the  sale of extra manpower was kept for all the agents without taking into account any  limit of savings. </p>
+<h5>Farmer activities in dry season</h5>
+<p>After having consumed (cost = individual  consumption x family size), the farmer performs its seasonal agricultural  activities. The following activity diagram presents his behavior in dry season.</p>
+<p><img src="floagri/act1.png" width="433" height="483" alt="activity dry season"></p>
+<h5><em>Fig. 5: Activity diagram of a farmer in dry season. Painted activities are for agriculture. Bold  elements are for PFAC and Forest management. Activities in italics are for cover changes.</em></h5>
+<p>Even if it is a  breeder, the agent doesn&rsquo;t dedicate his labor force only to cattle breeding as  shown by the diagram. It is rather a preferred direction  towards where the  farmer wants to  invest in his expansion loop. But, if he has family needs (cash lower than  twice his consume), he cultivates annual crops for self-consumption (half hectare per family member).  At the end of the season, he harvests all its mature crops (crop implanted this  season are not yet ready). </p>
+<h5>Farmer activities in wet season</h5>
+As described by the <a href="#seq"> sequence diagram</a>, the vegetation evolves at the beginning of  the next season. For example, the annual crops sown at the former season are now mature. Then, after having  consumed, the farmer performs its wet season activities  by harvesting his mature  annual crops sown previously during the  expansion loop or  for self-subsistence. Then,  he implants its pastures on harvested crops. Thus, if he still  has enough resources, he maintains his  pastures, his cattle  and his cocoa trees. After what he  harvests all his mature crops (including pasture and cattle) and sells a part  of his work force if he has needs.
+<p><img src="floagri/act2.png" width="429" height="461" alt="activity wet season"></p>
+<h5><em>Fig. 6: Activity diagram of a farmer in wet season</em></h5>
+<h5>Farmer specific activity: FM on Legal  Reserve (FmStrat and Fm+Pfac)</h5>
+<p>The FM supplementary activity  imposes the agent to protect a part of the LR (80%). But  while performing the FM scenario, he is authorized to extract and sell timber (3 trees /ha or 16 m3/ha) that is sold as certified trees (54 R$/m3, when  uncertified price is 27 R$/m3)<a href="#_ftn1" name="_ftnref1" title=""> </a>. A company subcontracts this activity and the charges are already deduced from the sale price. After having  cut down the matured trees of 1/3 of the LR, the forest  is protected during the next 30 years. Of course, the protected area  must remain forest, but the farmer is authorized to  slash and burn the forests located outside  the LR to implant crops (in that case,  timber is also consider as certified wood). Agents that do not perform FM sell  their trees as uncertified wood (half the price). </p>
+<h5>Farmer specific activity: permanent field  of annual crop (PfacStrat, Fm+Pfac and PfacLR)</h5>
+<p>The supplementary activity PFAC  imposes the agent to cultivate 4 ha of permanent crops. Normally, PFAC allows recovering encroached pastures by using no-till techniques. But if  there is no degraded pasture around the house (500 m), the agent looks for an  old pasture still producing, closed to the house.<br>
+  In order to remain homogeneous with the  other crop management, the modeled activities of PFAC consist  in implanting, up keeping and harvesting the permanent crops.  In reality, a farmer harvests his PFAC main crop (&frac12; ha of rice and &frac12; ha of  corn) at the end of the wet season and then sows a legume cover crop to control  soil erosion and weeds, to increase organic matter and water in the soil, and to  fixe nitrogen. So, both crops are productive. In the model, we consider one  harvest per season which production and price aggregate both crops (main and  cover crop) into one (production: 1 425 kg/ha/season).<br>
+  To maintain the PFAC, the farmer has to buy  fertilizer (357 R$/ha), urea (80 R$/ha) and herbicides (310 R$/ha), considering  that the seeds have been stocked from previous harvest. Thus, the agent spends  an average of 373.5 R$/ha/season for keeping up the PFAC. To implant it, the agent  buys limestone (420 R$/ha) and phosphate (400 R$/ha), plus the maintenance  products (1&nbsp;193.50 R$/ha).<br>
+  The PFAC has a time life of 4 years. During  its last season, the cover vegetation sown is pasture that will  be productive at the next season.<br>
+  PFAC has been recognized to be a great  advantage by the farmers during interviews. They explained that they earn in  comfort by working near their home. This aspect is however not taken into  account into the model.</p>
+<h2>Simulations and <a href="floagriResults.htm">main results</a></h2>
+<hr>
+<p><a href="floagri.htm">Back to the introduction page of the model.</a></p>
+
+<!--#include virtual="/include/copyright_fr.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Amaz</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+  <!--#include virtual="sommair.inc" --> 
+
+    <td width="*" valign="baseline" bgcolor="#FFFFFF"> 
+
+      <p>&nbsp; 
+
+      <h1>Amaz</h1>
+      <h2>Comparing different strategies of land use and 
+        their  consequences in terms of <br>
+        Environmental Services in the Amazon </h2>
+      <table width="944" border="0">
+        <tr>
+          <td width="428" height="339" valign="top"><img src="amaz/photo.jpg" alt="" width="438" height="337"></td>
+          <td width="506"><ul>
+              <li>Pierre BOMMEL (Cirad - PUC-Rio),</li>
+              <li>Ren&eacute; POCCARD (Cirad - Embrapa CPATU),</li>
+              <li>Amaury BENDAHAN (Embrapa-Roraima),</li>
+              <li>Emilie COUDEL (Cirad - Embrapa CPATU)</li>
+          </ul></td>
+        </tr>
+      </table>
+      <h2><strong>Purpose of the Model</strong></h2>
+      <p><em>Amaz</em> is an Agent-Based Model (ABM) which objective  is to assess scenarios associated with the  Crop-Livestock-Forest integration in the Amazon. The different scenarios allow comparing  different strategies of land use and the consequences in terms of Environmental  Services. The indicators of comparison aim at weigh up the different ways to: <br>
+        - Reduce  the environmental impacts of agricultural activities; <br>
+        - Preserve  riparian forests and legal reserves; <br>
+        - Restore  degraded areas, creating conditions for new production and decreasing the need  for deforestation of new areas; <br>
+      - Creating  jobs, income, and better conditions to family farms. </p>
+      <p>Designed to  operate at the farm level, the goal of <em>Amaz</em> is to evaluate the consequences of  various forms of land use. From a given initial state, the producers apply  their agricultural practices, leading to different forms of landscape. <br>
+      Focused on  the practices (&ldquo;business as usual&rdquo; and new practices designed in the project),  we compare various land use strategies.      </p>
+      <h2>What  scenarios?</h2>
+      <p>        We define  four scenarios to be compared: </p>
+      <ol>
+        <li>        Business  as usual </li>
+        <li>        Respect  the law </li>
+        <li>Maximize  the provision of environmental services </li>
+        <li>Maximize  the production by intensification. </li>
+      </ol>
+      <p>        These  scenarios are compared by applying for each one, four land use strategies  corresponding to four types of actors. Each type prefers a management pattern  as follows: </p>
+      <ol>
+        <li>Prioritize livestock </li>
+        <li>Prioritize perennial crops </li>
+        <li>Prioritize agriculture</li>
+        <li>Diversified (annual  rotations on priorities: year 1 = tree crop farmer, year 2 = grower,  year 3 = breeder, etc.).</li>
+      </ol>
+      <p>A scenario  is designed as a set of modules inserted into basic activities and that will  affect the practices. These <strong><em>modules</em></strong> are: </p>
+      <ol>
+        <li>Conservation agriculture (no tillage) </li>
+        <li>Intensification  of livestock (a. Pasture and/or b. Pasture and herd) </li>
+        <li>Sustainable forest management </li>
+        <li>Avoided  deforestation (even if not below the clearing rate authorized) </li>
+        <li>Agro-forestry </li>
+        <li>Set-aside land (bare fallow for soil regeneration) </li>
+        <li>Stop the  use of fire to clean the pasture. </li>
+        <li>Accelerated recovery of environmental liability </li>
+        <li>sylvo-pastoralism </li>
+      </ol>
+      <p><strong><em>Scenarios 0</em></strong> are a set of &quot;control&quot;  scenarios. For those, there is neither legal restriction, nor payment for  Environmental Services. </p>
+      <p><strong><em>Scenarios 1,</em></strong> &quot;Respect the law&quot;  Modules 6 and 7 </p>
+      <p>Calculation  of environmental liabilities and creating a recovery plan (30 years to recover  the liability) based on the module 6 (bare fallow) when above the limit of the  legal reserve (LR) and when the area of permanent protection (APP, defined by  IBAMA, the Brazilian Institute of the Environment). If below the limit, the  agent can deforest without exceeding 50% of deforestation, and without clearing  the APPs. <br>
+        Implementation  of module 7: the agent stops the use of fire to clear its pastures, but it  authorized to slash and burn out of the legal reserve. </p>
+      <strong><em>Scenarios  2:</em> &quot;Maximize the provision of environmental  services&quot; </strong>Module 2 3, 4, 5, 7 and 8. (Not yet implemented)
+      <p><strong><em>Scenarios 3:</em></strong> <strong>&quot;Maximize the intensification  of production.&quot;</strong> Modules 1, 2, 5 and 7 (Not yet implemented)</p>
+      <h5>(As the diagrams have been designed with brazilians colleagues, they are in portuguese)</h5>
+      <p><img src="amaz/combinaison.jpg" alt="" width="738" height="443"></p>
+      <h2>Principle of simulation </h2>
+      <p>The  principle of <em>Amaz</em>  is crossing two dynamics: the natural evolution of the  vegetation (and soil) over time, and the activities of the producer managing  its farm. Thus, depending on the initial state and the producer practices, the  system evolves in a direction that can be measured by ecological and economic  indicators. For example, we measure the area of forest or its fragmentation,  the biodiversity and the biomass (Carbon), but also the family's income, the  number of days worked out, amount of hired labor, ...
+</p>
+      <p><img src="amaz/trajectories.jpg" alt="" width="917" height="488"> </p>
+      <h2>Model description</h2>
+      <p>Visit the <a href="amazDescription.htm">description page</a> to get a  full description of <em>Amaz</em>.      </p>
+      <h2>First results      </h2>
+      <p>Visit the <a href="amazResults.htm">Results' page</a> to see the main results of <em>Amaz</em>.</p>
+      <hr>
+      <h3>Software</h3>
+
+      <p>You can <a href="/logiciels/Amaz.zip" target="_blank">download</a> 
+
+        the Cormas model source code.</p>
+      <p>A quite similar<a href="../../pdf/relatorio-iLPF.pdf"> report in portugues</a> is available.</p>
+      <p>For more information, <a href="mailto:bommel@cirad.fr">contact 
+
+        the corresponding author</a></p>
+
+      <p>&nbsp;</p>
+
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+   <div align="right" class="texte"></div>
+
+  </td>
+
+ </tr>
+
+</table>
+
+</body>
+
+</html>
+

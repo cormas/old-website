@@ -1,0 +1,170 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>Alamo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+  <td width="*" valign="top" bgcolor="#FFFFFF"> 
+   <p>&nbsp;
+   
+      <h1>Alamo</h1>
+      <h2>Agricultural Landscape Modelling</h2>
+      <p>A. Hofstetter, R. Lifran, Inra ; P. Bommel, Cirad</p>
+      <h4>Objectifs</h4>
+      <p> Le but de ce mod&egrave;le est de comprendre comment les politiques 
+        publiques, notamment agricoles et foresti&egrave;res, peuvent agir sur 
+        la transformation des paysages. Il s&#8217;agit plus pr&eacute;cis&eacute;ment 
+        de caract&eacute;riser la dynamique &agrave; long terme d&#8217;un syst&egrave;me 
+        agro-sylvo-pastoral dans un contexte de mutation d&eacute;mographique, 
+        et d&#8217;&eacute;valuer &agrave; quel moment de sa dynamique les politiques 
+        publiques peuvent avoir le plus d&#8217;impact. Le contexte de la mod&eacute;lisation 
+        est celui des Grands Causses au Sud du Massif central, caract&eacute;ris&eacute; 
+        par une forte d&eacute;population et une progression de la for&ecirc;t 
+        et des broussailles. Depuis quarante ans cette zone a &eacute;t&eacute; 
+        l&#8217;objet de nombreuses recherches, et plusieurs mod&egrave;les avec 
+        des objectifs diff&eacute;rents ont d&eacute;j&agrave; &eacute;t&eacute; 
+        r&eacute;alis&eacute;s. Certains d&#8217;entre eux sont pr&eacute;sent&eacute;s 
+        ici (<a href="forpast.htm">Forpast</a>, Saint-Georges, <a href="mejan.htm">Mejan</a>).</p>
+      <h4>Contexte et probl&eacute;matique</h4>
+      <p> La perspective retenue dans ALAMO est celle de la r&eacute;silience 
+        du syst&egrave;me &eacute;cologique et social. L&#8217;&eacute;tat initial 
+        du paysage, faiblement et in&eacute;galement bois&eacute;, caract&eacute;ristique 
+        des paysages du Causse &agrave; la fin du XIX&deg; si&egrave;cle, constitue 
+        un &eacute;quilibre instable, et tout d&eacute;s&eacute;quilibre introduit 
+        par un choc sur la population, ou sur la productivit&eacute; du travail, 
+        lance un processus cumulatif de boisement et d&#8217;enfrichement, qu&#8217;il 
+        sera tr&egrave;s difficile de contrer ult&eacute;rieurement. Le syst&egrave;me 
+        tend alors vers un &eacute;quilibre plus stable, ou &eacute;tat absorbant, 
+        domin&eacute; globalement par les friches et les bois, et localement par 
+        un &eacute;quilibre entre terres labourables et boisements. La transition 
+        &eacute;cologique et paysag&egrave;re, d&#8217;un c&ocirc;t&eacute;, et 
+        la transition d&eacute;mographique d&#8217;un autre c&ocirc;t&eacute;, 
+        sont &eacute;videmment en interaction, mais il n&#8217;est pas ais&eacute; 
+        de saisir les voies de cette interaction sans s&#8217;aider de la mod&eacute;lisation. 
+        En effet, la population consomme du bois pour ses besoins domestiques, 
+        et cela sur les parcelles les plus bois&eacute;es, et sur les parcelles 
+        collectives. La diminution de population affecte donc la pr&eacute;l&egrave;vement 
+        global de biomasse de plusieurs mani&egrave;res, par abandon de l&#8217;exploitation 
+        de parcelles ou de hameaux entiers, d&#8217;une part, et par la modification 
+        des pr&eacute;l&egrave;vements par les animaux (l&#8217;effectif d&#8217;ovins 
+        &eacute;tant globalement constant, c&#8216;est donc la modification de 
+        la gestion du p&acirc;turage qui est en cause). C&#8217;est bien dans 
+        cette perspective longue qu&#8217;il convient d&#8217;inscrire l&#8217;&eacute;tude 
+        de l&#8217;impact des politiques publiques, si l&#8217;on veut englober 
+        &agrave; la fois les dynamiques longues, les variables retard&eacute;es, 
+        et les processus d&#8217;adaptation &agrave; moyen terme. </p>
+      <h4>Le mod&egrave;le</h4>
+      <h5>L&#8217;organisation spatiale du mod&egrave;le SMA</h5>
+      <p> Le mod&egrave;le d&#8217;organisation spatiale qui sous-tend la dynamique 
+        du paysage comporte trois niveaux principaux : celui des parcelles, celui 
+        des lieux-dits, et celui du Causse dans son ensemble. Au niveau du lieu-dit, 
+        c&#8217;est un mode aur&eacute;olaire d&#8217;organisation de l&#8217;espace 
+        qui pr&eacute;domine, alors qu&#8217;au niveau du Causse dans son ensemble, 
+        c&#8217;est une organisation alv&eacute;olaire qui caract&eacute;rise 
+        l&#8217;organisation du paysage, chaque lieu-dit ayant son organisation 
+        propre, et ne d&eacute;bordant que rarement sur ses voisins. Cette combinaison 
+        d&#8217;un mode aur&eacute;olaire et d&#8217;un mode alv&eacute;olaire 
+        constitue un fait stylis&eacute; important pour nous aider &agrave; concevoir 
+        la dynamique du paysage, et la mod&eacute;liser.</p>
+      <table width="75%" border="0">
+        <tr> 
+          <td height="206"><img src="../../images/applica/alamo1.jpg" width="288" height="204"></td>
+          <td><img src="../../images/applica/alamo2.jpg" width="243" height="167"></td>
+        </tr>
+        <tr> 
+          <td height="30" colspan="2"><div align="center">M&eacute;thode de structuration 
+              de l&#8217;espace par Polygones de Thiessen</div></td>
+        </tr>
+      </table>
+      <h5>Les dynamiques et leurs interactions</h5>
+      <p> La v&eacute;g&eacute;tation &eacute;volue sous l&#8217;influence de 
+        plusieurs processus : la croissance naturelle de la v&eacute;g&eacute;tation, 
+        et sa diffusion &agrave; travers le paysage (processus de percolation), 
+        les pr&eacute;l&egrave;vements de biomasse effectu&eacute;s d&#8217;une 
+        part par les troupeaux, et d&#8217;autre part pour les besoins domestiques 
+        de chauffage et de construction, les plantations foresti&egrave;res, et 
+        les d&eacute;friches. Quand la biomasse augmente sur une parcelle, sa 
+        partie ligneuse augmente aussi, interdisant ainsi progressivement le p&acirc;turage. 
+        La croissance de la biomasse peut &ecirc;tre d&eacute;compos&eacute;e 
+        en croissance sur place et croissance provenant de la diffusion.</p>
+      <p>A partir d&#8217;une distribution spatiale initiale dans les lieux-dits, 
+        nous avons fait l&#8217;hypoth&egrave;se que la population pouvait &ecirc;tre 
+        d&eacute;compos&eacute;e en une partie p&eacute;renne et une partie non 
+        p&eacute;renne, qui dispara&icirc;t progressivement quand les individus 
+        arrivent &agrave; un &acirc;ge donn&eacute;. La population consomme du 
+        bois pour ses propres besoins, et de la biomasse pour les besoins des 
+        troupeaux. La typologie des &eacute;levages &eacute;labor&eacute;e par 
+        les agronomes de l&#8217;&eacute;quipe nous a permis d&#8217;affecter 
+        &agrave; chaque &eacute;leveur un coefficient d&#8217;impact sur la v&eacute;g&eacute;tation.</p>
+      <p>La dynamique de la population implique des m&eacute;canismes d&#8217;adaptation 
+        et de r&eacute;allocation des ressources. Nous avons utilis&eacute; pour 
+        &ccedil;a un &laquo; march&eacute; des moutons &raquo; qui r&eacute;alloue 
+        &agrave; chaque &eacute;tape les animaux selon l&#8217;&eacute;quilibre 
+        besoins/disponibilit&eacute;s de chaque &eacute;leveur ; et un processus 
+        de r&eacute;allocation des terres, g&eacute;r&eacute; au niveau de chaque 
+        lieu-dit.</p>
+      <h5>Initialisation et couplage avec le SIG</h5>
+      <p> Deux raisons nous ont conduits &agrave; choisir une grille spatiale 
+        irr&eacute;guli&egrave;re, en fait le fond cadastral des communes de la 
+        zone d&#8217;&eacute;tude : la premi&egrave;re est li&eacute;e &agrave; 
+        l&#8217;importance du travail empirique pr&eacute;alable sur la propri&eacute;t&eacute; 
+        et ses transformations, et la seconde est la contrainte de communication 
+        des r&eacute;sultats aux acteurs locaux. Par ailleurs, la mod&eacute;lisation 
+        du processus &eacute;cologique de diffusion de la v&eacute;g&eacute;tation 
+        implique l&#8217;utilisation d&#8217;un concept de voisinage physique, 
+        correspondant au rayon de dispersion des graines du pin sylvestre. Pour 
+        cela, nous avons utilis&eacute; les fonctionnalit&eacute;s du SIG, et 
+        import&eacute; les r&eacute;sultats dans le SMA.</p>
+      <table width="87%" border="0">
+        <tr>
+          <td height="189">Vue d'ensemble : diagramme de classe du mod&egrave;le 
+            Alamo (cliquer sur l'image pour l'agrandir)</td>
+          <td><a href="../../images/applica/alamo3.gif" target="_blank"><img src="../../images/applica/alamo3-small.jpg" width="170" height="187" border="1"></a></td>
+        </tr>
+      </table>
+      <h4>Simulations et r&eacute;sultats</h4>
+      <p> En pr&eacute;sence d&#8217;une grande complexit&eacute; dans les dynamiques, 
+        nous avons choisi de tester dans un premier temps le comportement du mod&egrave;le 
+        fond&eacute; sur des hypoth&egrave;ses g&eacute;n&eacute;rales tr&egrave;s 
+        simples, appel&eacute;es sc&eacute;narios. Les r&eacute;sultats obtenus 
+        nous permettent d&#8217;ores et d&eacute;j&agrave; de disposer de points 
+        de rep&egrave;res pour organiser des investigations plus fines, fond&eacute;es 
+        sur la mod&eacute;lisation plus pr&eacute;cise des comportements individuels. 
+        Il appara&icirc;t en particulier que la nature des dynamiques en cause, 
+        les conditions initiales et les param&egrave;tres du mod&egrave;le imposent 
+        &agrave; la dynamique globale du paysage des trajectoires dont les politiques 
+        publiques ont du mal &agrave; s&#8217;affranchir. Plus pr&eacute;cis&eacute;ment, 
+        il est clair que les dynamiques de population p&egrave;sent tr&egrave;s 
+        lourd dans la d&eacute;finition de ces trajectoires. Ce r&eacute;sultat 
+        nous donne une indication forte pour la poursuite de la recherche, et 
+        met d&#8217;embl&eacute;e l&#8217;accent sur l&#8217;importance des politiques 
+        d&#8217;am&eacute;nagement du territoire.</p>
+      <p align="center"><img src="../../images/applica/alamo4.jpg" width="432" height="247"></p>
+      <p> <br>
+        Lifran, R., A. Hofstetter, &amp; P. Bommel (2003). Politiques publiques 
+        et dynamique des paysages: analyse de leurs rapports par un mod&egrave;le 
+        multi-agents spatialis&eacute;s. Politiques publiques et dynamiques de 
+        spaysages au sud du Massif central. R. Lifran. Montpellier, INRA, UMR 
+        LAMETA: 110-164.</p>
+      <p> Lifran, R., Editeur (2003). Politiques publiques et dynamiques de spaysages 
+        au sud du Massif central. Montpellier, INRA , UMR LAMETA: 168.<br>
+      </p>
+      <p>Pour en savoir plus, <a href="mailto:lifran@ensam.inra.fr">contactez 
+        l'auteur</a>.</p>
+   <!--#include virtual="/include/copyright_fr.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

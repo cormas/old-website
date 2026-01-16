@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title> Sinuse model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp;
+      <p>
+      <h1>Sinuse</h1>
+      <p>&nbsp;</p>
+      <h2>A tool to explore distributed interactions between a water table and 
+        its users</h2>
+      <p>Sarah Feuillette, Ird.<img src="/images/applica/sinuse1.jpg" width="236" height="330" align="right" vspace="10" hspace="10" alt="Un pompage en Tunisie"></p>
+      <p>The Sinuse model (Simulation of interactions between water table and 
+        water users) is designed to explore the ways of managing the demands made 
+        on an over-exploited water table: it should allow the definition of engines 
+        of system dynamics and of testing the effectiveness of different types 
+        of interventions, all while taking into account their social impact, key 
+        to their ultimate acceptance by the users. Sinuse has been developed for 
+        the case study of the Kairouan water table in Central Tunisia, over-exploited 
+        for the past twenty years, mainly by private wells (see following figure, 
+        showing evolution of the average water table level between years 1969 
+        and 1999).</p>
+      <p align="center"><img src="/images/applica/sinuse1.gif" width="240" height="118" name="NiveauNappe"></p>
+      <p>Individual strategies and interactions between agriculturists have been 
+        determined on the basis of surveys whose results have led us to the following 
+        hypothesis: all the agriculturists of the Kairouan plain have the same 
+        overall aim of acquiring or extending irrigation to alleviate their climate's 
+        aridity. The strategies used towards this aim depend on their plots, families, 
+        economics, access to resources, and neighbors' situations: a plot or group 
+        of neighboring plots should be large enough to make the well cost-effective. 
+        Since the water table is homogenous as to depth and structure, the access 
+        and extraction cost depend on the location over the water table and, finally, 
+        the presence of working wells in the neighborhood is an indicator of the 
+        accessibility of the water table and a social stimulant (whereas a disused 
+        well acts as a disincentive). This imitation process is reflected in the 
+        spatial dynamics of the appearance of wells.</p>
+      <p>The zone under study extends to about 25,000 hectares. The Sinuse model 
+        represents a simplified and reduced plan of the system under study (approximately 
+        10% of the system under study) while respecting, as far as possible, the 
+        proportions of the main parameters. It attempts to find a coherence between 
+        phenomena observed on the field and to be able to validate the model to 
+        some extent. The time step of interactions is the year, divided into two 
+        seasons.</p>
+      <p>The Sinuse model consists of three types of entities (see the following 
+        figure): ·</p>
+      <ul>
+        <li>Social entities, the Users, who represent the farmers of the area, 
+          all endowed with rules of action that mainly depend on their family, 
+          economic, plot, and water-access situations. </li>
+        <li>Spatial entities more or less aggregated, such as the zones of the 
+          water table that communicate between themselves, the plots whose cropping 
+          system and irrigation changes with the seasons, the irrigation perimeters 
+          that distribute water at a fixed tariff and with a given distribution 
+          efficiency to the plots that form part of it. </li>
+        <li>Passive (and fixed) entities such as wells, which appear and disappear 
+          during the simulation (construction and abandoning), can be deepened, 
+          be functional or non-functional, can irrigate several plots depending 
+          on their capacity, and whose construction and extraction price depends 
+          on the depth of water. </li>
+      </ul>
+      <p>The following figure shows the interactions represented by the Sinuse 
+        model..</p>
+      <p align="center"><img src="/images/applica/sinuse2.gif" width="471" height="163" name="Modele" alt="Interactions repr&eacute;sent&eacute;es par Sinuse"></p>
+      <p>The users make basic exchanges and crop-planting and harvesting decisions. 
+        The irrigation of plots results in a sampling at the level of water points 
+        which transmit information to the water-table zone they belong to. These 
+        react by lowering themselves and the resulting piezometric gradient leads 
+        to transfers of volume between zones. Each Zone of the water table communicates 
+        its new depth to plots which may lead to deepening of wells (on the condition 
+        of non-indebtedness). The results of each agricultural season is calculated 
+        and, at year end, depending on his budget, his savings, and his situation, 
+        the agriculturist can consider construction of a well, if necessary in 
+        association with a neighbor, or by buying or selling a plot.</p>
+      <p>Wells can also be constructed according to several types of procedures 
+        (on a small or large plot, in association with a neighbor or not,…) to 
+        which the users do not assign the same preference. In case of poverty, 
+        a user could be forced to sell a plot.</p>
+      <p>The following figure shows the simplified running of a time step. Each 
+        class is shown by a dotted vertical line; the activation of objects of 
+        the class is shown by a rectangle on the life line. The objects communicate 
+        by exchanging messages represented by horizontal arrows, pointing from 
+        transmitter to the receiver.</p>
+      <p align="center"><img src="/images/applica/sinuse3.gif" width="445" height="306" alt="Sch&eacute;ma UML de Sinuse"></p>
+      <p>The display of the appearance of wells is made possible by the graphical 
+        interface of the model (see following figure).</p>
+      <p align="center"><img src="/images/applica/sinuse4.gif" width="378" height="212" alt="Interface graphique de Sinuse"></p>
+      <p>The progression of wells (new wells in red) takes place more by densification 
+        of zones that are already occupied rather than by new ones in "pioneering" 
+        zones: in 7 successive time steps, the construction of wells in the virgin 
+        zone took place only in the second time step. Wells are historically concentrated 
+        in zones that are not deep (growing depth gradient from right to left). 
+        The rate of appearance of wells decreases with time because of spatial 
+        constraints and the lowering of the water table.</p>
+      <p>For more information, <a href="mailto:sarah.feuillette@bondy.ird.fr">contact 
+        the author</a>. </p>
+      <!--#include virtual="/include/copyright_en.inc" --> </td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

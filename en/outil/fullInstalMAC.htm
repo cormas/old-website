@@ -1,0 +1,223 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Dowloading Cormas2004 on MAC</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="../outil/haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+    <!--#include virtual="../outil/sommair.inc" -->
+    <td width="*" valign="top" bgcolor="#FFFFFF"> <p>&nbsp; 
+      <h1>How to install Cormas2004 on <i><img src="../../images/outil/mac_logo2.gif" width="69" height="31"></i><i><br>
+        Version : <em>December</em>, 2006</i></h1>
+      <p>&nbsp;</p>
+      <p>Here is explained the full installation procedure for the new version 
+        of Cormas. If you have already installed Cormas2004 and VisualWorks 7, 
+        you just need to <a href="upgradeCormas.htm">upgrade it</a>.</p>
+      <p>The procedure takes place in 2 phases: it is necessary to install VisualWorks 
+        (the programming language freely available on Cincom web site) then Cormas. 
+        Unfortunately , we can not provide a full-In-One including VW and Cormas 
+        for <em>legal</em> reasons.</p>
+      <h2>First step: installing VisualWorks 7</h2>
+      <h5>Download VisualWorks 7.4</h5>
+      <p>Firstly, you have to download the non-commercial version of VisualWorks 
+        7.4 on the web site of Cincom. You will find these files here (Legally 
+        we are not allowed to provide them) : <a href="http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks" target="_blank">http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks</a><br>
+        <br>
+        You have the possibility to install VW from individual files or through 
+        a &quot;Net Installer&quot; but unfortunately the &quot;Net Installer&quot; 
+        doesn't seem to work for the moment ... <br>
+        (By using the Net Installer option, you will download a file (VWInstallerMacOSX.dmg). 
+        It should be simpler).<br>
+        So, we propose you to choose the individual files. You should download 
+        : </p>
+      <ul>
+        <li>the Virtual Machine for Mac OSX (step 1) 
+          <ul>
+            <li>a standard Virtual Machine for Mac OS X (easiest), or </li>
+            <li> a Virtual Machine based on X11 (for that you must have installed 
+              X11, previously. The installation is a little more complicated, 
+              but VW runs a little faster) <br>
+            </li>
+          </ul>
+        </li>
+        <li>the Base VisualWorks parcels and virtual image (platform independent) 
+          from step 2 : BaseVisualWorks.tar (115.8 Mo, the main archive file).<br>
+          It is automatically unzip as &quot;BaseVisualWorks Folder&quot; <br>
+        </li>
+        <li>a set of optional components. You should more particularly download 
+          : 
+          <ul>
+            <li>Database Connect </li>
+            <li> DLL &amp; C Connect </li>
+            <li>Internationalization</li>
+          </ul>
+        </li>
+      </ul>
+      <h5>Installing and setting-up VisualWorks 7.4</h5>
+      <ul>
+        <li>The BaseVisualWorks.tar is automatically unzipped as 
+          <ul>
+            <li>&quot;BaseVisualWorks Folder&quot; :<br>
+              <br>
+              <img src="../../images/outil/MAC/BaseVWfolder.jpg" width="816" height="418"><br>
+            </li>
+            <li> Rename this folder as VW7.4 and move it into the Applications 
+              folder. <br>
+            </li>
+          </ul>
+        </li>
+        <li>Unzip the VM-MacOSX.tar file. <br>
+          <ul>
+            <li> A &quot;bin&quot; folder is created. <br>
+              <br>
+              <img src="../../images/outil/MAC/downloadVisual.jpg" width="800" height="196"><br>
+            </li>
+            <li>Move the content of &quot;bin&quot; folder (ie &quot;macx&quot;) 
+              into Applications/VW7.4/bin/</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Second step: installing Cormas2004 </h2>
+      <h5>Dowloading Cormas</h5>
+      <ul>
+        <li>Dowload the file <a href="../../logiciel/cormas2004/installCormas.zip">installCormas.zip</a></li>
+        <li>normally, the installCormas.zip is automatically unzipped as /cormas/ 
+          directory (if not, unzip it) </li>
+        <li> move the &laquo;cormas&raquo; directory into Applications/VW7.4/ 
+          directory. </li>
+        <li>finally, you should then have the following architecture :<br>
+          <br>
+          <img src="../../images/outil/MAC/finallyFolder.jpg" width="583" height="283"> 
+        </li>
+      </ul>
+      <h5>Launching VisualWorks</h5>
+      <ul>
+        <li>Go in the cormas directory (Applications/VW7.4/cormas/) and select 
+          the file <i>Cormas2004.im</i></li>
+        <li>&laquo;&nbsp;shift - rigth click&nbsp;&raquo; and choose &quot;OTHER...&quot;<br>
+          <br>
+          <img src="../../images/outil/MAC/openWith.jpg" width="665" height="279"><br>
+          <br>
+          <br>
+        </li>
+        <li>Navigate to locate the file Applications/VW7.4/bin/macx/visual and 
+          associate it to <i>.im</i> files<br>
+          <br>
+          <img src="../../images/outil/MAC/chooseAppli.jpg" width="854" height="466"> 
+        </li>
+      </ul>
+      <h5>Openning Cormas</h5>
+      <ul>
+        <li> When VW7.4 is opened, check that the path is set properly : 
+          <ul>
+            <li>click on the third button <img src="../../images/outil/MAC/settings.Button.gif" width="26" height="25"> 
+              (&quot;Edit the system options&quot;) and select the &quot;System&quot; 
+              item <br>
+            </li>
+            <li>The VisualWorks home directory should be : /Applications/VW7.4/<br>
+              <br>
+              <img src="../../images/outil/MAC/settings.jpg" width="600" height="442"><br>
+              (If not, change it and &quot;Apply&quot;. Then save your image of 
+              VW) <br>
+              <br>
+            </li>
+          </ul>
+        </li>
+        <li>In the main menu of the VisualWorks Launcher, select : </li>
+      </ul>
+      <blockquote>
+        <p align="left"><i>Tools --&gt; Cormas --&gt; Cormas</i> <i>English<br>
+          </i></p>
+        <p align="left">VW7.3 trouble : the file explorer doesn't work. You have 
+          to write the name of the model<br>
+          (and its path) you want to open<i> :<br>
+          <img src="../../images/outil/MAC/path.gif" width="400" height="107"> 
+          </i></p>
+        <p align="left">This bug has been fixed by VW7.4. If you already have 
+          installed VW7.4 but if you still have this problem, please re-install 
+          cormas :</p>
+        <ul>
+          <li>copy the visual.im file, from VW7.4/image/ to VW7.4/cormas directory</li>
+          <li>load the Cormas parcel as it is describe <a href="parcelCormas-old.htm">here</a>,</li>
+          <li>save you new image as cormas.im</li>
+        </ul>
+        <h2>Testing your own Cormas models</h2>
+        <p>You can <a href="usingECEC.htm">test an existing model</a>, called 
+          ECEC.</p>
+        <p>You can try the <a href="../../pdf/CormasTutorial2.pdf">tutorials</a> 
+          or run your own Cormas models you have built with previous versions 
+          of Cormas.</p>
+        <p>You can also test some other models like <a href="../applica/tse.htm">TSE</a>, 
+          <a href="../applica/plotsrental.htm">PlotsRental</a>, <a href="../../en/applica/jlb.htm">JLB</a> 
+          or <a href="../applica/conway.htm">Conway</a>.</p>
+        <h2>Cormas Forum</h2>
+        <p>We invite you to <a href="../reseaux/forumCormas.htm">join</a> the 
+          Cormas forum (Cormas@cirad.fr).</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <br>
+        Cormas interface is then open :<br>
+        <img src="../../images/outil/cormasInterface.jpg" width="413" height="107" align="top"></blockquote>
+      <h2>Testing your own Cormas models</h2>
+      <p>You can try the <a href="../../pdf/CormasTutorial2.pdf">tutorials</a> 
+        or run your own Cormas models you have built with previous versions of 
+        Cormas by importing them into Cormas2004 : </p>
+      <ul>
+        <li>Copy the whole model subdirectory from Disk:\VW3\cormas\models\ to 
+          Disk:\VW7.2\cormas\models\</li>
+        <li>In the main menu of Cormas, select<br>
+          File --&gt; Import <br>
+          The previous version of your model will be renamed with a &quot;2001&quot; 
+          suffix: <i>XXX2001.st</i>.</li>
+      </ul>
+      <p>You can also test some other models like <a href="../applica/tse.htm">TSE</a>, 
+        <a href="../applica/plotsrental.htm">PlotsRental</a>, <a href="../../en/applica/jlb.htm">JLB</a> 
+        or<a href="../applica/conway.htm">Conway</a>.</p>
+      <p>A <a href="../../en/outil/buglist.htm">table for bugs and add-ons</a> 
+        is updated on a regular basis. </p>
+      <h2>Cormas Forum</h2>
+      <p>We invite you to <a href="../reseaux/forumCormas.htm">join</a> the Cormas 
+        forum (Cormas@cirad.fr).</p>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_en.inc" --> <p> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+    <div align="right" class="texte"></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

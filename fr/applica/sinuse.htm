@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title> Interactions entre une nappe d'eau et ses usagers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+  <td width="*" valign="top" bgcolor="#FFFFFF"> 
+   <p>&nbsp;
+   
+      <h1> Sinuse</h1>
+      <h1>&nbsp;</h1>
+      <h2>Un outil d'exploration des interactions distribu&eacute;es entre 
+       une nappe d'eau et ses usagers</h2>
+      <p>Sarah Feuillette, Ird.</p>
+    
+      <img src="/images/applica/sinuse1.jpg" width="214" height="315" align="right" vspace="10" hspace="10" alt="Un pompage en Tunisie"> 
+      <p>&nbsp;</p>
+      <p>Le mod&egrave;le Sinuse (simulation des interactions entre nappe et usages 
+        de l'eau) est destin&eacute; &agrave; explorer des voies de gestion de 
+        la demande sur une nappe d'eau surexploit&eacute;e : il doit permettre 
+        de rep&eacute;rer les moteurs de la dynamique du syst&egrave;me, et de 
+        tester l'efficacit&eacute; de plusieurs types d'intervention, en tenant 
+        compte de leur impact social, clef de leur acceptabilit&eacute; par les 
+        usagers. Il a &eacute;t&eacute; d&eacute;velopp&eacute; sur le cas d'&eacute;tude 
+        de la nappe de Kairouan, en Tunisie centrale, surexploit&eacute;e depuis 
+        une vingtaine d'ann&eacute;es, majoritairement par des puits priv&eacute;s 
+        (voir figure suivante). </p>
+   <p align="center"><img src="/images/applica/sinuse1.gif" width="240" height="118" name="NiveauNappe"></p>
+   <p> Les strat&eacute;gies individuelles et les interactions entre agriculteurs 
+    ont &eacute;t&eacute; d&eacute;termin&eacute;es sur la base d'enqu&ecirc;tes dont les r&eacute;sultats ont conduit 
+    &agrave; l'hypoth&egrave;se suivante : tous les agriculteurs de la plaine de Kairouan 
+    ont un m&ecirc;me objectif global d'acquisition ou d'extension de l'irrigation 
+    pour pallier l'aridit&eacute; du climat. Les strat&eacute;gies mises en œuvre dans ce 
+    but d&eacute;pendent de leurs conditions parcellaires, familiales, &eacute;conomiques, 
+    d'acc&egrave;s &agrave; la ressource et de voisinage : une parcelle ou un regroupement 
+    de parcelles adjacentes doit &ecirc;tre de taille suffisante pour rentabiliser 
+    le puits, la nappe &eacute;tant h&eacute;t&eacute;rog&egrave;ne sur le plan de la profondeur et de 
+    la structure, l'acc&egrave;s et le coût d'extraction d&eacute;pendent de la localisation 
+    sur la nappe et enfin la pr&eacute;sence de puits fonctionnels dans le voisinage 
+    est un indicateur d'accessibilit&eacute; &agrave; la nappe et un stimulant social (au 
+    contraire la pr&eacute;sence de puits abandonn&eacute; est dissuasive). Ce processus 
+    d'imitation ressort dans la dynamique spatiale d'apparition des puits.</p>
+      <p> La zone d'&eacute;tude s'&eacute;tend sur environ 25 000 hectares. Le 
+        mod&egrave;le Sinuse repr&eacute;sente un sch&eacute;ma tr&egrave;s simplifi&eacute; 
+        et r&eacute;duit du syst&egrave;me &eacute;tudi&eacute; (environ 10 % 
+        en surface du syst&egrave;me &eacute;tudi&eacute;), tout en respectant 
+        les proportions des param&egrave;tres essentiels dans la mesure du possible, 
+        afin de retrouver la coh&eacute;rence des ph&eacute;nom&egrave;nes observ&eacute;s 
+        sur le terrain et de pouvoir valider le mod&egrave;le dans une certaine 
+        mesure. Le pas de temps des interactions repr&eacute;sent&eacute;es est 
+        l'ann&eacute;e, d&eacute;coup&eacute;e en deux saisons.</p>
+      <p> Le mod&egrave;le Sinuse comporte trois types d'entit&eacute;s (voir 
+        figure suivante) :</p>
+   <ul>
+    <li>des entit&eacute;s sociales, les exploitants, qui repr&eacute;sentent 
+     les agriculteurs du terrain, tous dou&eacute;s de r&egrave;gles d'action 
+     qui d&eacute;pendent essentiellement de leurs conditions familiales, 
+     &eacute;conomiques, parcellaires et d'acc&egrave;s &agrave; l'eau ;</li>
+    <li>des entit&eacute;s spatiales plus ou moins agr&eacute;g&eacute;es, comme des zones de nappe 
+     qui communiquent entre elles, des parcelles dont l'assolement et l'irrigation 
+     &eacute;volue au fil des saisons, des p&eacute;rim&egrave;tres d'irrigation qui distribuent 
+     de l'eau &agrave; un tarif donn&eacute; et avec une efficience de distribution donn&eacute;e 
+     &agrave; aux parcelles qui le composent ;</li>
+    <li>des entit&eacute;s passives (et situ&eacute;es) comme les puits, qui apparaissent 
+     et disparaissent au cours de la simulation (construction et abandon), 
+     peuvent &ecirc;tre approfondis, fonctionnels ou non fonctionnels, peuvent 
+     irriguer plusieurs parcelles selon leur capacit&eacute;, et dont le prix de 
+     construction et d'extraction d&eacute;pend de la profondeur de l'eau. </li>
+   </ul>
+      <p>La figure suivante r&eacute;sume les interactions repr&eacute;sent&eacute;es 
+        dans le mod&egrave;le Sinuse.</p>
+      <p align="center"><img src="/images/applica/sinuse2.gif" width="471" height="163" name="Modele" alt="Interactions repr&eacute;sent&eacute;es par Sinuse"></p>
+   <p> Les exploitants proc&egrave;dent &agrave; des &eacute;changes fonciers 
+    et des d&eacute;cisions d'assolement. L'irrigation des parcelles entraîne 
+    un pr&eacute;l&egrave;vement au niveau des points d'eau qui transmettent 
+    l'information &agrave; la zone de la nappe &agrave; laquelle ils sont 
+    rattach&eacute;s. Celle-ci r&eacute;agit en s'abaissant, et le gradient 
+    pi&eacute;zom&eacute;trique r&eacute;sultant entraîne des transferts de 
+    volume entre zones. Chaque zone de la nappe communique sa nouvelle profondeur 
+    aux parcelles ce qui peut donner lieu &agrave; un approfondissement des 
+    puits (sous r&eacute;serve de non endettement). Les r&eacute;sultats de 
+    chaque campagne agricole sont calcul&eacute;s et en fin d'ann&eacute;e, 
+    selon sa tr&eacute;sorerie, son &eacute;pargne et sa situation, l'agriculteur 
+    peut envisager la construction d'un puits, si besoin en s'associant avec 
+    un voisin, ou d'acheter ou de vendre une parcelle.</p>
+   <p>Les puits peuvent &ecirc;tre construits selon plusieurs types de proc&eacute;dure 
+    (sur une petite ou une grande parcelle, en association avec un voisin 
+    ou non...) auxquelles les exploitants ne pr&ecirc;tent pas la m&ecirc;me pr&eacute;f&eacute;rence. 
+    En cas d'&eacute;pargne tr&egrave;s d&eacute;ficitaire, un exploitant peut &ecirc;tre amen&eacute; &agrave; vendre 
+    une parcelle.</p>
+   <p> La figure suivante montre le d&eacute;roulement simplifi&eacute; d'un pas de temps. 
+    Chaque classe est figur&eacute;e par une ligne verticale en pointill&eacute;s ; l'activation 
+    des objets de la classe est mat&eacute;rialis&eacute;e par un rectangle sur sa ligne 
+    de vie. Les objets communiquent en &eacute;changeant des messages repr&eacute;sent&eacute;s 
+    au moyen de fl&egrave;ches horizontales, orient&eacute;es de l'&eacute;metteur du message vers 
+    le destinataire. </p>
+      <p align="center"><img src="/images/applica/sinuse3.gif" width="445" height="306" alt="Sch&eacute;ma UML de Sinuse"></p>
+   <p>La visualisation de l'apparition des puits permise par l'interface graphique 
+    du mod&egrave;le (voir figure suivante).</p>
+      <p align="center"><img src="/images/applica/sinuse4.gif" width="378" height="212" alt="Interface graphique de Sinuse"></p>
+   <p> La progression des puits (nouveaux puits en rouge) se fait plus par 
+    densification de zones d&eacute;j&agrave; occup&eacute;es que par colonisation de zones pionni&egrave;res 
+    : sur 7 pas de temps successifs la construction d'un puits en zone "vierge" 
+    n'a lieu qu'au second pas de temps. Les puits sont historiquement concentr&eacute;s 
+    dans les zones peu profondes (gradient croissant des profondeurs de droite 
+    &agrave; gauche). Le rythme d'apparition des puits d&eacute;croît avec le temps, du 
+    fait des contraintes spatiales et de l'abaissement de la nappe.</p>
+   <p>Pour en savoir plus, <a href="mailto:sarah.feuillette@bondy.ird.fr">contactez 
+    l'auteur</a>.</p>
+   <!--#include virtual="/include/copyright_fr.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

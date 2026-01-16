@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>Dilemme du Prisonnier Spatialis&eacute;</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" -->
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp;</p>
+      <h1>Dilemme du Prisonnier spatialis&eacute;</h1>
+      <h2>&nbsp;</h2>
+      <img src="../../images/applica/dpsMovie.gif" width="206" height="219" align="right"> 
+      <p>Une cellule repr&eacute;sente un joueur en situation de &quot;dilemme 
+        du prisonnier&quot;, qui est une des situations les plus connues de la 
+        th&eacute;orie des jeux. Les gains des diff&eacute;rentes situations possibles 
+        sont tels que d'un point de vue individualiste, il vaut mieux trahir (quelle 
+        que soit la strat&eacute;gie de l'opposant, le meilleur gain individuel 
+        correspond &agrave; la strat&eacute;gie &quot;trahir&quot;), alors que 
+        d'un point de vue collectif, il vaut mieux coop&eacute;rer (la somme des 
+        deux gains individuels est maximale pour le couple de strat&eacute;gie 
+        &quot;coop&eacute;rer&quot; vs &quot;coop&eacute;rer&quot;).</p>
+      <p></p>
+      <p>La matrice des gains est tr&egrave;s exactement la suivante</p>
+      <table width="57%" border="1">
+        <tr> 
+          <td width="32%">&nbsp;</td>
+          <td width="35%"> 
+            <div align="center">Coop&eacute;ration</div>
+          </td>
+          <td width="33%"> 
+            <div align="center">Trahison</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="32%"> 
+            <div align="center">Coop&eacute;ration</div>
+          </td>
+          <td width="35%"> 
+            <div align="center">100; 100</div>
+          </td>
+          <td width="33%"> 
+            <div align="center">0; 185</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="32%"> 
+            <div align="center">Trahison</div>
+          </td>
+          <td width="35%"> 
+            <div align="center">185; 0</div>
+          </td>
+          <td width="33%"> 
+            <div align="center">0; 0</div>
+          </td>
+        </tr>
+      </table>
+      <p>Le voisinage est de type Moore (8 voisins) et les fronti&egrave;res sont 
+        &quot;ouvertes&quot; (espace toro&iuml;dal). A chaque pas de temps, la 
+        strat&eacute;gie des joueurs &eacute;tant donn&eacute;e, chaque joueur 
+        ex&eacute;cute 9 parties: avec ses 8 voisins et &eacute;galement avec 
+        lui-m&ecirc;me. Il obtient alors un gain total qu'il compare aux gains 
+        totaux des joueurs avec lesquels il a interagit. Si l'un d'entre eux a 
+        obtenu un meilleur r&eacute;sultat global, alors la strat&eacute;gie de 
+        celui-ci est adopt&eacute;e pour le pas de temps suivant. Dans un tel 
+        contexte, laquelle des deux strat&eacute;gies va l'emporter ???... L'animation 
+        ci-contre repr&eacute;sente l'intrusion d'un tra&icirc;tre dans un monde 
+        de coop&eacute;rants... La grille est de dimension 101x101 et le tra&icirc;tre 
+        est initialement positionn&eacute; au centre de la grille. Les traitres 
+        stables apparaissent en rouge, ou en jaune pour d'anciens coop&eacute;rants 
+        qui viennent de se mette &agrave; trahir. Les coop&eacute;rants stables 
+        apparaissent en bleu, ou en vert pour d'anciens tra&icirc;tres qui viennent 
+        de se mettre &agrave; coop&eacute;rer. <br>
+      </p>
+      <ul>
+        <li> Pour plus de d&eacute;tails &agrave; propos de cet automate, se reporter 
+          &agrave; l'article suivant: Nowak, M.A. et May, R.M. 1992. Evolutionary 
+          games and spatial chaos. Nature, 359: 826-829.<br>
+          <br>
+        </li>
+      </ul>
+      <ul>
+        <li>T&eacute;l&eacute;charger le mod&egrave;le Cormas (<a href="/logiciel/dps.zip">zipfile</a>, 
+          3Ko). Pour toute question &agrave; ce sujet, <a href="mailto:green@cirad.fr">contacter 
+          les auteurs</a>.</li>
+      </ul>
+      <!--#include virtual="/include/copyright_en.inc" -->
+    </td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

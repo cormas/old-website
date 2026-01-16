@@ -1,0 +1,256 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>iLPF</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="/fr/applica/haut.inc" --> 
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+  <tr> <!--#include virtual="/fr/applica/sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>Modelo iLPF: integra&ccedil;&atilde;o Lavoura-Pecu&aacute;ria-Floresta 
+      </h1>
+      <h2>Diferentes estratégias de utilização do solo com a integração Lavoura-Pecuária-Floresta 
+        e as conseqüências em termos de Serviços Ambientais na Amazonia.</h2>
+      <table width="79%" border="0">
+        <tr> 
+          <td> 
+            <ul>
+              <li>Pierre BOMMEL (Cirad - PUC-Rio), </li>
+              <li>Ren&eacute; POCCARD (Cirad - Embrapa CPATU), </li>
+              <li>Amaury BENDAHAN (Embrapa-Roraima),</li>
+              <li>Emilie COUDEL (Cirad - Embrapa CPATU)</li>
+            </ul>
+          </td>
+          <td>&nbsp;</td>
+          <td><b><img src="transamazon/amazonie.jpg" width="426" height="320" align="top"></b></td>
+        </tr>
+      </table>
+      <hr>
+      <p><font face="Courier New, Courier, mono"><b><font color="#FF0000">P&aacute;gina 
+        em constru&ccedil;&atilde;o</font></b></font></p>
+      <hr>
+      <h3>Objetivo do Modelo </h3>
+      <p>O modelo iLPF tem como objetivo a avaliação de cenários ligados à integração 
+        Lavoura-Pecuária-Floresta na Amazonia. Os diversos cenários permitirão 
+        comparar diferentes estratégias de utilização do solo e as conseqüências 
+        em termos de Serviços Ambientais. Os indicadores de comparação devem permitir 
+        avaliar: </p>
+      <ul>
+        <li>Diminuir impactos ambientais das atividades agrícolas; </li>
+        <li>Preservar reservas florestais e matas ciliares; </li>
+        <li>Recuperar áreas degradadas, criando condições propícias para a produção 
+          e diminuindo a necessidade de desmatamentos de novas áreas; </li>
+        <li>Gerar empregos, renda e melhores condições ao produtor rural. </li>
+      </ul>
+      <h3>Quais cenários? </h3>
+      <p>Definimos 4 cenários: </p>
+      <ol>
+        <li>Business as usual </li>
+        <li>Respeitar a lei </li>
+        <li>Maximizar a prestação de serviços ambientais</li>
+        <li>Maximizar a intensificação da produção. </li>
+      </ol>
+      <p>Estes cenários são comparados aplicando-os em 4 estratégias de uso do 
+        solo correspondente a quatro tipos de atores. Cada atore-tipo prefere 
+        um padrão de gestão do seu estabelecimento de forma seguinte: </p>
+      <ol>
+        <li>Priorizar a pecuária </li>
+        <li>Priorizar as culturas perenes </li>
+        <li>Priorizar a agricultura </li>
+        <li>Priorizar a diversificação </li>
+      </ol>
+      <p>Um cenário é concebido como um conjunto de módulos inseridos nas atividades 
+        básicas e assim vão alterar as práticas. Estes módulos são: </p>
+      <ol>
+        <li>A agricultura de conservação (plantio direto) I</li>
+        <li>ntensificação da pecuária (a. pasto - b. pasto e rebanho) </li>
+        <li>Manejo florestal sustentável </li>
+        <li>Desmatamento evitado (apesar de não desmatar mesmo abaixo do permitido) 
+        </li>
+        <li>Sistema agro-florestal </li>
+        <li>Descanso em pousio (Regeneração) </li>
+        <li>Parar o uso do fogo para limpeza do pasto. </li>
+        <li>Recuperação acelerada do passivo ambiental </li>
+        <li>Silvopastoril </li>
+      </ol>
+      <p>Os cenários 0 correspondem aos cenários de "controlo". Não há restrição 
+        legal, nem remuneração por Serviço Ambiental. </p>
+      <h5>Os cenários 1: "Respeitar a lei". Módulos 6 e 7 </h5>
+      <p>Cálculo do Passivo ambiental e criação de um plano de recuperação (30 
+        anos para recuperar o passivo) com base no módulo 6 (descanso), se acima 
+        do limite da reserva legal e das APPs. Se abaixo do limiar, o agente não 
+        exceda os 50% do desmatamento, sem derrubar nas APPs, claro. Implementação 
+        do módulo 7 (parar o uso do fogo no pasto), mas ele pode queimar e derrubar 
+        fora da reserva legal. </p>
+      <h5>Os cenários 2: "Maximizar a prestação de serviços ambientais." Módulos 
+        2, 3, 4, 5, 7 e 8</h5>
+      <p>Com base no módulo 5 (silvicultura). Cada ano, </p>
+      <ul>
+        <li>Implantar e proteger as árvores em AAR / 2 (Area Anual a Reflorestar) 
+          das APPs desmatadas e ARR / 2 pixels não-florestais. </li>
+        <li>Desenvolver a silvicultura (Módulo 5) além dos 50%, com árvores em 
+          pastagem </li>
+        <li>Obter o passivo ambiental em carácter prioritário (módulo 8) </li>
+        <li>Manejo Florestal Sustentável (Módulo 3) na RL </li>
+        <li>Para o desmatamento evitado (Módulo 4) </li>
+        <li>Intensificação do manejo das pastagens (módulo 2a) </li>
+        <li>Implementação do Módulo 7 (parar o uso do fogo no pasto). </li>
+      </ul>
+      <p>Proibido de derrubar e queimar, mesmo se passivo ambiental é positivo. 
+        Receber uma compensação por serviços ambientais. </p>
+      <h5>Os cenários 3: "Maximizar a intensificação da produção". Módulos 1, 
+        2, 5 e 7 </h5>
+      <p>Intensificar a prioridade ficando dentro da lei. </p>
+      <p>Introdução de novas práticas: </p>
+      <ul>
+        <li>Se a estratégia pecuarista, a intensificação da produção pecuária 
+          (criação de parcelas menores e melhor mantida, silvopastoril, recuperação 
+          de pastagens degradadas pela agricultura de conservação (plantio direto) 
+          em dois anos). </li>
+        <li>Se a estratégia é Diversificada: - Agricultura = Agricultura de conservação 
+          unicamente (4 anos) - Pecuária (idem estratégia pecuarista) - Nenhuma 
+          mudança para as culturas perenes. </li>
+      </ul>
+      <p>Além disso, sendo que a estrutura familiar tem um papel importante na 
+        viabilidade económica, as simulações são repetidas à partir de inicializações 
+        com uma família pequena e com uma família maior. </p>
+      <p>Finalmente, a estrutura da vegetação do estabelecimento no início também 
+        influencia os resultados. É por isso que para uma mesma família, uma mesma 
+        estratégia e um cenário determinado, as simulações são aplicadas a um 
+        estabelecimento inicialmente em floresta e a um estabelecimento parcialmente 
+        desmatado. </p>
+      <p>Para todas estas razões, o modelo é analisado através do cruzamento de 
+        todos os factores, tais como a figura seguinte resume: </p>
+      <p><img src="iLPF/combinacao.jpg" width="664" height="417"></p>
+      <p><font size="2"><i>Processo de analise do modelo</i></font></p>
+      <h3>Descrição do modelo</h3>
+      <p>O SMA ilPF é constituído por dois módulos:. </p>
+      <p> - O <i><b>módulo fundiário</b></i> representa a organização espacial. 
+        Situado ao longo de uma estrada vicinal, o lote de colonização de 100 
+        ha é dividido em parcelas de 400 m2. A cada parcela atribui-se um tipo 
+        de solo, uma declividade e uma cobertura vegetal: floresta, capoeira ou 
+        cultura de subsistência, perene ou forrageira. </p>
+      <p>O rebanho é distribuído em pastos com uma carga media de uma cabeça/há, 
+        na versão básica sem intensificação. Cada cobertura possui atributos técnico-econômicos, 
+        sua própria dinâmica, suas exigências em termos de mão-de-obra e de insumos 
+        e uma produção. Cada estação, ele gera uma produção, que é imediatamente 
+        convertida em dinheiro no momento da colheita. Mas sem manutenção, sua 
+        produtividade diminui e ele acaba desaparecendo. Esse módulo espacializado 
+        calcula a produção de cada cobertura e faz com que evoluam naturalmente: 
+        sem produtor, uma paisagem evolui progressivamente em direção à floresta. 
+        O diagrama de estado-transição (ilustração 3) mostra todas diferentes 
+        coberturas que existem no modelo e as maneiras de trocar de uma cobertura 
+        para outra, a traves das transições. As transições vermelhas correspondem 
+        às atividades humanas (deruba, plantio,...). </p>
+      <p><img src="iLPF/etatTransition.jpg" width="912" height="801"></p>
+      <p><i><font size="2">Diagrama de Estado-Transição da cobertura vegetal</font></i></p>
+      <p>O segundo <i><b>módulo</b></i> representa a <i><b>família</b></i>. Um 
+        agente (uma família de n membros) dispõe de dois recursos: sua mão-de-obra 
+        ativa, que ele utiliza para seus trabalhos ou que ele vende afora, e seu 
+        dinheiro, que ele recupera no momento das colheitas ou da venda de sua 
+        mão-de-obra. Ele gasta esse dinheiro para o consumo da família, os custos 
+        ligados aos trabalhos, a contratação ocasional de força de trabalho e 
+        a compra de vacas. Sua mão-de-obra equivale a uma quantidade de jornadas 
+        de trabalho disponível que diminui com as tarefas realizadas. Essa quantidade 
+        é atualizada no início de cada estação (Ilustração 5).</p>
+      <p><img src="iLPF/produtor.jpg" width="490" height="420"></p>
+      <p><font size="1"><i><font size="2">diagrama sistêmico de um produtor</font></i></font></p>
+      <h3>Alguns resultados </h3>
+      <p>O modelo foi implantado na plataforma Cormas, mas todos os cenários ainda 
+        não foram finalizados. Hoje os cenários 0 "Business as usual" e 1 "Respeitar 
+        a lei" são implementados e estamos elaborando os cenários 2 e 3. Também 
+        temos que analisar os primeiros resultados para continuar verificar o 
+        bom funcionamento do SMA. Um código de cor foi associado para cada tipo 
+        de cobertura (Ilustração 9). Os resultados seguintes são obtidos a partir 
+        de simulações utilizando uma propriedade de 100 ha já parcialmente desmatada 
+        e com uma família de 5 membros cujo 3 activos. O cash inicial é de 1000 
+        R$ por pessoa. </p>
+      <p><img src="iLPF/legende.jpg" width="547" height="400"></p>
+      <h5>Resultados cen&aacute;rio 0</h5>
+      <p>Impactos sobre o desmatamento:</p>
+      <p><img src="iLPF/florestaCen0.jpg" width="561" height="294"></p>
+      <p>Exemplo de simula&ccedil;&otilde;es (pecuarista e diversificado):</p>
+      <table width="32%" border="0">
+        <tr>
+          <td width="22%"> 
+            <div align="center">Pecuarista</div>
+          </td>
+          <td width="78%">
+            <div align="center">Diversificado</div>
+          </td>
+        </tr>
+        <tr>
+          <td width="22%"><img src="iLPF/pecuarista-cen-0_complet.gif" width="130" height="615"></td>
+          <td width="78%">
+            <div align="center"><img src="iLPF/divers-cen-0_complet.gif" width="130" height="615"></div>
+          </td>
+        </tr>
+      </table>
+      <p>Din&aacute;micas das rendas:</p>
+      <p><img src="iLPF/renda-cen0.jpg" width="620" height="352"></p>
+      <h5>Resultados cen&aacute;rio 1</h5>
+      <h5></h5>
+      <p>Impactos sobre o desmatamento:</p>
+      <p><img src="iLPF/florestaCen1.jpg" width="561" height="294"></p>
+      <p>Exemplo de simula&ccedil;&otilde;es (pecuarista e diversificado):</p>
+      <table width="32%" border="0">
+        <tr> 
+          <td width="22%"> 
+            <div align="center">Pecuarista</div>
+          </td>
+          <td width="78%"> 
+            <div align="center">Diversificado</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="22%"><img src="iLPF/pecuarista-cen-1_complet.gif" width="130" height="615"></td>
+          <td width="78%"> 
+            <div align="center"><img src="iLPF/divers-cen-1_complet.gif" width="130" height="615"></div>
+          </td>
+        </tr>
+      </table>
+      <p>Din&aacute;micas das rendas:</p>
+      <p><img src="iLPF/renda-cen1.jpg" width="619" height="350"></p>
+      <p>Assim o respeito estrito da lei pode permitir a conservação da floresta 
+        e a recuperação do passivo ambiental, mas o custo social é uma perda extrema 
+        de renda familiar. </p>
+      <p>Para mais informa&ccedil;&atilde;o, <a href="mailto:bommel@cirad.fr">contactar 
+        os autores</a>. </p>
+      <h2>&nbsp;</h2>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+      <div align="right" class="texte"> </div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<map name="Diagramme de package">
+  <area shape="rect" coords="275,45,461,258">
+</map>
+</body>
+
+</html>
+

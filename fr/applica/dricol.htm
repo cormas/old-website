@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Emergence de conventions sur les ressources commuunes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+    <td width="*" align="right" valign="bottom" bordercolor="#000000" bgcolor="#FFFFFF"> 
+      <p>&nbsp;
+   
+      <h1>Dricol</h1>
+      <h2>Emergence de conventions sur les ressources communes</h2>
+      <p>Bruno Locatelli, Cirad ; Olivier Th&eacute;baud, Ifremer.</p>
+      <img src="/images/applica/dricol.gif" width="294" height="289" align="right" vspace="10" hspace="10" alt="Interface de Dricol"> 
+      <p align="justify">Dans un article intitulé "Spontaneous order", Sugden 
+        (1989) analyse comment des règles collectives d'accès à une ressource 
+        naturelle peuvent évoluer et se maintenir sans effort collectif explicite 
+        ou sans intervention extérieure.</p> <p align="justify">D'après Sugden, 
+        le problème des règles d'accès se rapproche d'un jeu de coordination. 
+        Comme dans le cas de la théorie des jeux, il est difficile de prévoir 
+        l'évolution du système car le comportement des agents n'est pas seulement 
+        guidé par la rationalité économique.</p>
+      <p align="justify">Comme exemple, il cite le cas de conventions de partage 
+        de ressources sur une côte du Yorkshire en Angleterre. Sur cette côte, 
+        les habitants collectent le bois apporté par les marées. Une des conventions 
+        de collecte a retenu notre attention : lorsqu'une personne ramasse du 
+        bois, elle constitue un tas dont elle marque la propriété par un pierre. 
+        Cette convention peut être examinée d'un point de vue économique : comme 
+        elle permet d'éviter une perte de temps à surveiller le bois, elle augmente 
+        l'efficacité de la collecte par rapport à une situation de libre accès. 
+        La question est de savoir comment cette convention est apparue.</p>
+      <p align="justify">Sugden s'intéresse à son apparition sans faire appel 
+        à l'hypothèse d'un agent extérieur, capable d'imposer une règle. Les questions 
+        induites sont les suivantes : comment une convention change-t-elle ? (c'est 
+        à dire : comment une majorité de gens se met-elle à suivre une nouvelle 
+        règle ?) Quels sont les processus qui permettent à la règle de s'auto-renforcer 
+        et qui conduisent à son adoption collective ? Sugden étudie différents 
+        éléments qui peuvent aider à répondre à ces questions.</p>
+      <p align="justify">A partir de cet article, nous avons développé un modèle 
+        multi-agents, à l'aide de la plate-forme Cormas. La grille spatiale représente 
+        une plage où sont situés des morceaux de bois. Des agents observent leur 
+        environnement, se déplacent, collectent le bois et le rassemblent en tas. 
+        Dans un premier modèle simple, il n'y a pas de règles de respect des tas 
+        de bois. Les agents parcourent la grille, ramassent du bois sur la plage 
+        et constituent des tas que les autres viennent piller.</p>
+      <p align="justify">Le modèle peut être utilisé pour analyser l'émergence 
+        d'une règle collective. Deux hypothèses ont conduit à des simulations.</p>
+      <p align="justify">La première est appelée la "<b>pression des pairs</b>". 
+        Lorsqu'un agent a dépassé un seuil de bois entassé, il devient respectueux 
+        de la propriété. Il va non seulement respecter les tas des autres agents 
+        mais aussi imposer ce respect : si un agent se trouve dans son rayon de 
+        visibilité, il l'empêche de piller les tas. Si le tas d'un agent respectueux 
+        est pillé et passe en dessous du seuil, il redeviendra irrespectueux. 
+        Dans ce cas, un équilibre est trouvé lorsque tous les agents sont respectueux 
+        de la propriété. Le délai dépend évidemment du seuil, de la quantité de 
+        bois et du nombre d'agents.</p>
+      <p align="justify">L'autre hypothèse est l'<b>imitation</b>. Au début de 
+        la simulation, les individus sont aléatoirement respectueux ou non de 
+        la propriété. Si un individu respectueux de la propriété se trouve entouré 
+        d'une majorité de non-respectueux (dans son rayon de visibilité), il va 
+        changer son comportement, et vice-versa. Dans ce cas, on note une grande 
+        instabilité du nombre d'agents respectueux. Ce chiffre oscille largement 
+        pendant toute la simulation jusqu'à ce que l'un des deux comportements 
+        l'emporte. La disposition initiale des tas a une grande influence : si 
+        les tas sont rapprochés, les agents seront plus souvent proches les uns 
+        des autres et les changements de comportements seront plus fréquents.</p>
+      <p align="justify">Ce travail a permis de mettre en évidence l'intérêt des 
+        SMA pour traiter des problèmes d'émergence de conventions, qui sont difficilement 
+        abordables avec des modélisations économiques classiques. En particulier, 
+        les SMA permettent de faire interagir des agents hétérogènes et d'observer 
+        l'évolution individuelle ou collective. </p>
+      <h2 align="justify">Repr&eacute;sentation UML</h2>
+      <p align="justify">Ce mod&egrave;le a &eacute;t&eacute; repris et design&eacute; 
+        en UML lors d'une session de formation. Voici les r&eacute;sultats:</p>
+      <p align="left">Diagramme de classe (phase d'analyse), <em>cliquer pour 
+        agrandir <a href="../../images/applica/Dricol/DricolClassDiag-Analysis.jpg" target="_blank"><img src="../../images/applica/Dricol/DricolClassDiag-Analysis_t.jpg" width="150" height="150" border="1" align="top"></a></em></p>
+      <p align="center">&nbsp;</p>
+      <p align="left">Diagramme de classe (phase de design), <em>cliquer pour 
+        agrandir <a href="../../images/applica/Dricol/DricolClassDiag-Design.jpg" target="_blank"><img src="../../images/applica/Dricol/DricolClassDiag-Design_t.jpg" width="150" height="150" border="1" align="top"></a></em></p>
+      <p align="center">&nbsp;</p>
+      <p align="left">Diagramme de classe (phase d'impl&eacute;mentation), <em>cliquer 
+        pour agrandir <a href="../../images/applica/Dricol/DricolClassDiag-Implementation.jpg" target="_blank"><img src="../../images/applica/Dricol/DricolClassDiag-Implementation_t.jpg" width="150" height="150" border="1" align="top"></a></em></p>
+      <p align="left">Diagramme d'&eacute;tat transition des changement d'attitude 
+        :</p>
+      <p align="left"><img src="../../images/applica/Dricol/etat-transition.jpg" width="474" height="151"></p>
+      <p align="left">Diagramme d'activit&eacute; pour l'activit&eacute; &quot;bouger&quot; 
+        : <a href="../../images/applica/Dricol/activity.jpg" target="_blank"><img src="../../images/applica/Dricol/activity_t.jpg" width="220" height="237" border="1" align="top"></a></p>
+      <p align="left">&nbsp; </p>
+      <h2 align="left">R&eacute;f&eacute;rence</h2>
+      <p align="left">Sugden, R. (1989). Spontaneous order. <i>Journal of economic 
+        perspectives</i>, 3 (4): 85-97.</p>
+      <p align="left">Lisez l'article complet sur <a href="http://jasss.soc.surrey.ac.uk/4/2/3.html">JASSS</a>.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left">Vous pouvez t&eacute;l&eacute;charger le <a href="/logiciel/dricol.zip">mod&egrave;le</a> 
+        (zip, 4 ko).</p>
+      <p align="left">Pour en savoir plus, contactez <a href="mailto:bruno.locatelli@wanadoo.fr">Bruno 
+        Locatelli</a> ou <a href="mailto:Olivier.Thebaud@ifremer.fr">Olivier Th&eacute;baud</a> 
+        (or P. Bommel or C. Le Page).</p>
+   <!--#include virtual="/include/copyright_fr.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

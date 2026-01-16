@@ -1,0 +1,194 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>Bugs list</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+    <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <p> 
+      <h1> Bugs and add-on of Cormas2002 - beta</h1>
+      <h2>&nbsp;</h2>
+      <p>The next array describes the bugs list and defaults of Cormas2002 - beta. 
+        Some of them have been corrected; their are also presented with a file.st 
+        that can be downloaded and integrated in Cormas by the &quot;File in&quot; 
+        method . Further explanations can be <a href="file_in.htm">found here</a>. 
+      </p>
+      <p>On the web site, the beta version of Cormas always includes the last 
+        modifications. </p>
+      <h2>Bugs</h2>
+      <div align="center"> 
+        <table width="100%" border="1">
+          <tr bgcolor="#FF6633"> 
+            <td width="85"> 
+              <div align="center"><font color="#000000"><b>Date</b></font></div>
+            </td>
+            <td width="423" nowrap> 
+              <div align="center"><font color="#000000"><b>explanations</b></font></div>
+            </td>
+            <td width="90"> 
+              <div align="center"><font color="#000000"><b>Author</b></font></div>
+            </td>
+            <td width="152"> 
+              <div align="center"><font color="#000000"><b>correction</b></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td width="85">06, june 2002</td>
+            <td width="423" nowrap>lengend problem</td>
+            <td width="90">Pierre</td>
+            <td width="152"><a href="../../logiciel/bug/Legend.st">Legend.st</a> 
+              <a href="../../logiciel/bug/SpaceInterface-updatePov.st">SpaceInterface-updatePov.st 
+              </a></td>
+          </tr>
+          <tr> 
+            <td width="85">06, june 2002</td>
+            <td width="423" nowrap>filename problem</td>
+            <td width="90">Pierre</td>
+            <td width="152"><a href="../../logiciel/bug/CormasModel-data.st">CormasModel-data.st</a></td>
+          </tr>
+          <tr> 
+            <td width="85">07, june 2002</td>
+            <td width="423" nowrap>Conversion problem</td>
+            <td width="90">Pierre</td>
+            <td width="152"><a href="../../logiciel/bug/Converter2001To2002%20class-convertSTFileTo2002.st">Converter2001To2002 
+              class-convertSTFileTo2002.st</a></td>
+          </tr>
+          <tr> 
+            <td width="85">12, june 2002</td>
+            <td width="423" nowrap> 
+              <p>Concern the old &quot;run: t times: n&quot; method... a primitive 
+                failed ! Now it's work but &quot;run: t times: n&quot; is deprecated</p>
+            </td>
+            <td width="90"> Jeljer Hoekstra</td>
+            <td width="152"><a href="../../logiciel/bug/Cormas-run.st">Cormas-run.st</a></td>
+          </tr>
+          <tr> 
+            <td width="85">12, june 2002</td>
+            <td width="423" nowrap>An omission...</td>
+            <td width="90">Christophe</td>
+            <td width="152"><a href="../../logiciel/bug/CormasModel-creategroupsfrom.st">CormasModel-creategroupsfrom.st</a></td>
+          </tr>
+          <tr> 
+            <td width="85">13, june 2002</td>
+            <td width="423" nowrap>Aggregates and partitions. To test with <a href="../applica/tse.htm">TSE</a></td>
+            <td width="90">Pierre</td>
+            <td width="152"><a href="../../logiciel/bug/SpaceModel.st">SpaceModel.st</a></td>
+          </tr>
+          <tr> 
+            <td width="85">13, june 2002</td>
+            <td width="423" nowrap>A problem with SpaceModel</td>
+            <td width="90">Pierre</td>
+            <td width="152"><a href="../../logiciel/bug/SpatialEntity.st">SpatialEntity.st</a><br>
+              <a href="../../logiciel/bug/Cormas-initSimulation.st">Cormas-initSimulation.st 
+              </a><br>
+              <a href="../../logiciel/bug/CormasModel-init.st">CormasModel-init.st 
+              </a><br>
+              <a href="../../logiciel/bug/SpaceModel-createAggregatefrom.st">SpaceModel-createAggregatefrom.st</a> 
+            </td>
+          </tr>
+          <tr> 
+            <td width="85">13, june 2002</td>
+            <td width="423" nowrap>Reinit a model during Nsimul without opened 
+              grid </td>
+            <td width="90">Pierre</td>
+            <td width="152"><a href="../../logiciel/bug/SpaceModel-resetSpatialEntity.st">SpaceModel-resetSpatialEntity.st</a></td>
+          </tr>
+          <tr>
+            <td width="85">17, june 2002</td>
+            <td width="423" nowrap>Removing &quot;view&quot; attribut from spatialEntity</td>
+            <td width="90">Pierre</td>
+            <td width="152"><a href="../../logiciel/bug/CormasModel-init.st">CormasModel-init.st</a><br>
+              <a href="../../logiciel/bug/SpatialEntity.st">SpatialEntity.st </a><br>
+              <a href="../../logiciel/bug/SpatialEntityElement-private_grid.st">SpatialEntityElement-private_grid.st</a> 
+            </td>
+          </tr>
+        </table>
+        <h2 align="left">Add-On</h2>
+        <h2></h2>
+        <div align="center"> 
+          <table width="100%" border="1">
+            <tr bgcolor="#FF6633"> 
+              <td width="82"> 
+                <div align="center"><font color="#000000"><b>Date</b></font></div>
+              </td>
+              <td width="380" nowrap> 
+                <div align="center"><font color="#000000"><b>explanations</b></font></div>
+              </td>
+              <td width="75"> 
+                <div align="center"><font color="#000000"><b>Author</b></font></div>
+              </td>
+              <td width="213"> 
+                <div align="center"><font color="#000000"><b>correction</b></font></div>
+              </td>
+            </tr>
+            <tr> 
+              <td width="82">07, june 2002</td>
+              <td width="380" nowrap>Control conversion from Cormas 2001 to 2002</td>
+              <td width="75">Pierre</td>
+              <td width="213"><a href="../../logiciel/bug/Cormas-importModel.st">Cormas-importModel.st</a></td>
+            </tr>
+            <tr> 
+              <td width="82">13, june 2002</td>
+              <td width="380" nowrap>Cormas version</td>
+              <td width="75">Pierre</td>
+              <td width="213"><a href="../../logiciel/bug/Cormas.st">Cormas.st</a></td>
+            </tr>
+            <tr> 
+              <td width="82">13, june 2002</td>
+              <td width="380" nowrap>Cursor on WAIT for import2001</td>
+              <td width="75">Pierre</td>
+              <td width="213"> 
+                <p><a href="../../logiciel/bug/Cormas-convertFrom2001To2002.st">Cormas-convertFrom2001To2002.st</a><br>
+                  <a href="../../logiciel/bug/Converter2001To2002%20class-convertTo2002.st">Converter2001To2002 
+                  class-convertTo2002.st</a></p>
+              </td>
+            </tr>
+            <tr> 
+              <td width="82">13, june 2002</td>
+              <td width="380" nowrap>Export ASC files (Import is already define)</td>
+              <td width="75">Fran&ccedil;ois</td>
+              <td width="213"><a href="../../logiciel/bug/SpaceInterface-saveASC.st">SpaceInterface-saveASC.st 
+                </a><br>
+                <a href="../../logiciel/bug/MenuSpaceInterfaces.st">MenuSpaceInterfaces.st</a><br>
+                <a href="../../logiciel/bug/SpaceModel-saveAttributesASCfileParameters.st">SpaceModel-saveAttributesASCfileParameters.st 
+                </a></td>
+            </tr>
+            <tr> 
+              <td width="82" height="40">28, june 2002</td>
+              <td width="380" nowrap height="40">Game facilities</td>
+              <td width="75" height="40">Christophe</td>
+              <td width="213" height="40"> 
+                <p><a href="../../logiciel/bug/CormasModelGame.st">CormasModelGame.s</a>t<br>
+                  <a href="../../logiciel/bug/CormasModelGameInterface.st">CormasModelGameInterface.st 
+                  </a></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="82" height="40">&nbsp;</td>
+              <td width="380" nowrap height="40">&nbsp;</td>
+              <td width="75" height="40">&nbsp;</td>
+              <td width="213" height="40">&nbsp;</td>
+            </tr>
+          </table>
+        <p>&nbsp;</p></div>
+      <!--#include virtual="/include/copyright_en.inc" -->
+      </div>
+      <h1>&nbsp;</h1>
+      
+    </td>
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+    <div align="right" class="texte"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

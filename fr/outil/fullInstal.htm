@@ -1,0 +1,163 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Telecharger et installer Cormas2004</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="../outil/haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+    <!--#include virtual="../outil/sommair.inc" -->
+    <td width="*" valign="top" bgcolor="#FFFFFF"> <p>&nbsp; 
+      <h1>Installation compl&egrave;te de Cormas2004 <img src="../../images/outil/logo-windows.gif" width="135" height="33"><i><br>
+        </i><i>Version de<i> D&eacute;cembre, 2006</i></i></h1>
+      <p>&nbsp;</p>
+      <p>Cette page explique la proc&eacute;dure compl&egrave;te d'installation 
+        de Cormas. Si vous avez d&eacute;j&agrave; installer une version de Cormas 
+        sur VW7, faite une simple <a href="upgradeCormas.htm">mise &agrave; jour 
+        de votre version</a>. </p>
+      <p>La proc&eacute;dure se d&eacute;roule en 2 temps : il faut installer 
+        VisualWorks, le langage de programmation d&eacute;livr&eacute; gratuitement 
+        par Cincom puis Cormas. Malheureusement, il nous est <em>l&eacute;galement</em> 
+        pas possible de fournir une version tout-en-un comprenant VW et Cormas.</p>
+      <h2>Premi&egrave;re &eacute;tape: installation de VW7</h2>
+      <h2></h2>
+      <h5>T&eacute;l&eacute;charger VisualWorks 7.4</h5>
+      <p>Tout d'abord, vous devez t&eacute;l&eacute;charger la version non-commercial 
+        de VisualWorks 7 sur le site web de Cincom et plus pr&eacute;cis&eacute;ment 
+        :</p>
+      <ul>
+        <li>le fichier correspondant &agrave; votre syst&egrave;me d'exploitatoin, 
+          par exemple <i>VM-Windows.tar.gz</i> pour Windows (chapitre &quot;VisualWorks 
+          -- Step 1: Virtual Machine&quot;)</li>
+        <li>le fichier de base :<i> BaseVisualWorks.tar.gz</i> (chapitre &quot;VisualWorks 
+          -- Step 2&quot;) et </li>
+        <li>des composants additionels (appel&eacute;s &quot;Add-ons&quot; et 
+          &quot;Goodies&quot;): 
+          <ul>
+            <li>COM Connect (pour Windows)</li>
+            <li>DLL &amp; C Connect </li>
+            <li>Database Connect</li>
+            <li>et Cincom Goodies</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Vous trouverez tous ces fichiers ici (l&eacute;galement, nous ne pouvons 
+        les d&eacute;livrer nous-m&ecirc;mes): <a href="http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks" target="_blank">http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks</a></p>
+      <h5>Installer et param&egrave;trer VisualWorks 7.4</h5>
+      <ul>
+        <li>Cr&eacute;er un r&eacute;pertoire pour VisualWorks sur votre disque; 
+          par exemple : D:\VW7.4</li>
+        <li>D&eacute;zipper tous ces fichiers (<i>.tar.gz</i>) dans le r&eacute;pertoire 
+          Disk:\VW7.4\</li>
+      </ul>
+      <h2>Seconde &eacute;tape: installation de Cormas2004</h2>
+      <h5>T&eacute;l&eacute;charger Cormas</h5>
+      <p>Tout d'abord, vous devez t&eacute;l&eacute;charger le fichier <a href="../../logiciel/cormas2004/installCormas.zip">installCormas.zip</a> 
+        (8 Mo), puis le d&eacute;zipper dans le r&eacute;pertoire Disk:\VW7.4\ 
+        ( le r&eacute;pertoire &laquo;cormas&raquo; est cr&eacute;&eacute;). Vous 
+        devez alors obtenir l'architecture suivante :</p>
+      <ul>
+        <li>Disk:\VW7.4\ 
+          <ul>
+            <li>bin 
+              <ul>
+                <li>win</li>
+              </ul>
+            </li>
+            <li>cormas 
+              <ul>
+                <li>Kernel</li>
+                <li>Messages</li>
+                <li>Models</li>
+                <li>DataBase</li>
+              </ul>
+            </li>
+            <li>goodies 
+              <ul>
+                <li>other</li>
+                <li>park</li>
+              </ul>
+            </li>
+            <li>image </li>
+            <li>...etc...</li>
+          </ul>
+        </li>
+      </ul>
+      <h5>Lancer VisualWorks</h5>
+      <ul>
+        <li>Aller dans le r&eacute;pertoire cormas (\VW7.4\cormas) et s&eacute;lectionner 
+          le fichier <i>Cormas2004.im</i></li>
+        <li>&laquo;&nbsp;shift - bouton droit&nbsp;&raquo; , s&eacute;lectionner 
+          OUVRIR AVEC</li>
+        <li>Associer le fichier Disk:\VW7.4\bin\win\Visual.exe</li>
+      </ul>
+      <h5>Ouvrir Cormas</h5>
+      <p> Lorsque VW7 est ouvert, dans le menu du VisualWorks Launcher, s&eacute;lectionner 
+        : </p>
+      <blockquote> 
+        <p align="left"><i>Tools --&gt; Cormas --&gt; Cormas</i> <i>Francais</i><i><img src="../../images/outil/openCormas.gif" width="499" height="337" align="right"></i></p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">L'interface Cormas s'ouvre :</p>
+      </blockquote>
+      <p align="center"><img src="../../images/outil/cormasInterface.jpg" width="413" height="107" align="top"></p>
+      <p>Si vous souhaitez prendre des photos de la grille ou faire des films, 
+        cette option n&eacute;cessite d'avoir installer <a href="http://www.apple.com/fr/quicktime/products/" target="_blank">QuickTime. 
+        </a>Il faut &eacute;galement un fichier DLL (<a href="../../logiciel/cormas2004/JunWinQT.dll">JunWinQT.dll</a>) 
+        &agrave; sauver dans Disk:\VW7.4\bin\win</p>
+      <h2>Tester vos mod&eacute;les</h2>
+      <p>Essayer de <a href="usingECEC.htm">manipuler le mod&egrave;le ECEC</a> 
+        en suivant les instructions pas &agrave; pas.</p>
+      <p>Nous vous invitons &agrave; essayer les <a href="outguid.htm">didactitiels</a> 
+      </p>
+      <p>Vous pouvez aussi tester d'autres mod&egrave;les comme <a href="../applica/tse.htm">TSE</a>, 
+        <a href="../applica/plotsrental.htm">PlotsRental</a>, <a href="../../en/applica/jlb.htm">JLB</a> 
+        ou <a href="../applica/conway.htm">Conway</a>.</p>
+      <p>Un <a href="../../en/outil/buglist.htm">tableau des bugs et des ajouts</a> 
+        est mis &agrave; jour r&eacute;guli&egrave;rement. </p>
+      <h2>Forum Cormas</h2>
+      <p>Nous vous invitons &eacute;galement &agrave; <a href="../reseaux/forumCormas.htm" target="_blank">rejoindre</a> 
+        la liste Cormas@cirad.fr.</p>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_en.inc" --> <p> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+    <div align="right" class="texte"></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

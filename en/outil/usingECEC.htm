@@ -1,0 +1,119 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Using ECEC</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="../outil/haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+    <!--#include virtual="../outil/sommair.inc" -->
+    <td width="*" valign="top" bgcolor="#FFFFFF"> <p>&nbsp; 
+      <h1>Using the ECEC model</h1>
+      <p>This page how to use a simple model with Cormas. You may visite the <a href="../applica/ecec.htm">page 
+        describing the model</a>.</p>
+      <h3>Launching Cormas</h3>
+      <p>In the main menu of VW, select 'Tools' -&gt; Cormas -&gt; Cormas English</p>
+      <p><img src="../../images/outil/ecec/openCormas.PNG" width="586" height="336"></p>
+      <p>The main Cormas windows will pop up :</p>
+      <p><img src="../../images/outil/ecec/cormas.PNG" width="412" height="127"></p>
+      <h3>Loading the ECEC model</h3>
+      <p>Select 'File' -&gt; 'Load...' -&gt; 'Load from parcel'</p>
+      <p><img src="../../images/outil/ecec/loadParcel.PNG" width="417" height="197"></p>
+      <p>In the new window, choose ECEC :</p>
+      <p><img src="../../images/outil/ecec/loadParcel-ECEC.PNG" width="209" height="230"></p>
+      <p>then select the ECEC.pcl file :</p>
+      <p><img src="../../images/outil/ecec/loadParcel-ECEC2.PNG" width="563" height="412"></p>
+      <p>The model is then loaded onto Cormas :</p>
+      <p><img src="../../images/outil/ecec/cormas-Ecec.PNG" width="412" height="127"></p>
+      <h3>Running and observing the model</h3>
+      <h5>Creating a scenario</h5>
+      <p>From the Simulation menu of Cormas, select 'Simulation Interface' :</p>
+      <p><img src="../../images/outil/ecec/openSim.PNG" width="415" height="131"></p>
+      <p>The Simulation window pops up. Write '500' into the &quot;Steps&quot; 
+        field to set the duration of the simulation.</p>
+      <p><img src="../../images/outil/ecec/simInterface.PNG" width="412" height="107"></p>
+      <p>Before to launch a simulation, you have to initialize a scenario.Click 
+        on 'Initialize' button, then a new window pops up that allows to choose 
+        an 'init' method (here, &quot;homogeneousEnv&quot;) and a 'control' method 
+        (&quot;step:&quot;).</p>
+      <p><img src="../../images/outil/ecec/scenarioInterf.PNG" width="597" height="627"></p>
+      <p>In order to store the probes' values, select the probes (for several 
+        selections, use Ctrl ou Shift button while clicking).</p>
+      <h5>Observing the spatial grid</h5>
+      <p>To open a spatial grid, select 'Visualisation' -&gt; 'Space' :</p>
+      <p><img src="../../images/outil/ecec/openGrid.PNG" width="414" height="236"></p>
+      <p>then the spatial grid will pop up. Normaly, there is no point of view 
+        to be displayed. To diplay an energy level 's point of view, right click 
+        on the grid and select 'Plant' -&gt; 'povFood' :</p>
+      <p><img src="../../images/outil/ecec/grid.PNG" width="385" height="402"></p>
+      <p>To display the agents, right click on the grid and select 'Forager' -&gt; 
+        'pov' :</p>
+      <p><img src="../../images/outil/ecec/grid2.PNG" width="389" height="389"></p>
+      <p>To see the probes, select 'Visualisation' -&gt; 'Probes' into the Comas 
+        window.</p>
+      <p><img src="../../images/outil/ecec/openProbes.PNG" width="648" height="234"></p>
+      <p>Then you can see the global probes of the model : </p>
+      <p><img src="../../images/outil/ecec/probes.PNG" width="604" height="337"></p>
+      <p>To see individual probes, there are two possibilities :</p>
+      <ul>
+        <li>select 'Levels' -&gt; 'RestrainedForager' :<br>
+          <br>
+          <img src="../../images/outil/ecec/indivProbe.PNG" width="605" height="334"><br>
+          <br>
+          then click on 'energy' and select the agents' ID you want to display 
+          :<br>
+          <img src="../../images/outil/ecec/indivProbe2.PNG" width="605" height="337"><br>
+        </li>
+        <li>Or, on the spatial grid, choose an agent you want to observe and click 
+          on it with 'Ctrl', 'Shift' :<br>
+          <br>
+          <img src="../../images/outil/ecec/indivProbe3.PNG" width="625" height="423"> 
+        </li>
+      </ul>
+      <h2>&nbsp;</h2>
+      <blockquote>
+<h2>Testing your own Cormas models</h2>
+        <p>You can try the <a href="../../pdf/CormasTutorial2.pdf">tutorials</a> 
+          or run your own Cormas models you have built with previous versions 
+          of Cormas.</p>
+        <p>You can also test some other models like <a href="../applica/tse.htm">TSE</a>, 
+          <a href="../applica/plotsrental.htm">PlotsRental</a>, <a href="../../en/applica/jlb.htm">JLB</a> 
+          or <a href="../applica/conway.htm">Conway</a>.</p>
+        <h2>Cormas Forum</h2>
+        <p>We invite you to <a href="../reseaux/forumCormas.htm">join</a> the 
+          Cormas forum (Cormas@cirad.fr).</p>
+      </blockquote>
+      <!--#include virtual="/include/copyright_en.inc" --> <p> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+    <div align="right" class="texte"></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

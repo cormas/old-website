@@ -1,0 +1,410 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>TransAmazon</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="/fr/applica/haut.inc" --> 
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+  <tr> <!--#include virtual="/fr/applica/sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>TransAmazon</h1>
+      <h2>Modélisation des dynamiques socio-environnementales d’un front pionnier 
+        de la Transamazonienne (BR-230)</h2>
+      <table width="79%" border="0">
+        <tr> 
+          <td> 
+            <ul>
+              <li>Pierre BOMMEL (Cirad), </li>
+              <li>Thierry BONAUDO (AgroParisTech), </li>
+              <li>Jonas Bastos DA VEIGA (Embrapa-CPATU), </li>
+              <li>Jean-Fran&ccedil;ois TOURRAND (Cirad)</li>
+            </ul>
+          </td>
+          <td>&nbsp;</td>
+          <td><b><img src="transamazon/amazonie.jpg" width="426" height="320" align="top"></b></td>
+        </tr>
+      </table>
+      <hr>
+      <p>Page en construction. Voir une <a href="transamazon/TransAmazon.pdf"><b>&eacute;bauche 
+        au format PDF</b></a><b>.</b></p>
+      <hr>
+      <h3>LE CONTEXTE AMAZONIEN </h3>
+      <h5 align="right">"Donner à une terre sans homme, des hommes sans terre"<br>
+      </h5>
+      <p>Le contexte amazonien n'est pas simple. Il est le fruit d'une histoire 
+        mouvementée, souvent douloureuse, sous l'emprise de politiques volontaristes 
+        de colonisation. (voir <a href="transamazon/contexte.htm"><b>la suite...</b></a>)</p>
+      <h3>LOCALISATION DU SITE D'ETUDE </h3>
+      <p>Il s'agit d'un front pionnier situé dans la commune d'Uruará (état du 
+        Pará) sur la Transamazonienne (BR 364) (voir la suite...)</p>
+      <h3>OBJECTIFS DU MODELE </h3>
+      <p></p>
+      <h4>La question de recherche </h4>
+      <p>Ce panorama de la situation ne sert qu'à introduire le contexte dans 
+        lequel ce travail de modélisation s'inscrit. Il est évidemment trop limité 
+        et la lecture des ouvrages cités pr&eacute;c&eacute;demment permettra 
+        de mieux comprendre la situation générale de ces fronts pionniers. </p>
+      <p>Le premier objectif du modèle est de formaliser et de synthétiser 15 
+        ans de connaissances sur les dynamiques pionnières à Uruará. En effet, 
+        un matériel très conséquent est disponible sur ce municipe tel que des 
+        SIG, des cartes de télédétection, de nombreuses monographies, thèses, 
+        base de données, etc. Ce travail de modélisation vise donc à obtenir une 
+        vision plus synthétique des dynamiques rurales. De plus, la modélisation 
+        a également pour objectif de mieux comprendre les activités humaines pour 
+        les intégrer dans les dynamiques conduisant à la déforestation. Grâce 
+        à la représentation des processus spatiaux et sociaux, le modèle cherche 
+        alors à retracer les dynamiques passées et à anticiper les évolutions 
+        possibles des fronts pionniers. Mais, contrairement à la plupart des modèles 
+        sur l'Amazonie qui abordent le problème de la déforestation au niveau 
+        du bassin amazonien, le modèle TransAmazon se focalise sur les petits 
+        exploitants, principaux acteurs de la déforestation, et les interactions 
+        entre les agriculteurs et l’environnement. Plus particulièrement, il s'agit 
+        de comprendre </p>
+      <ul>
+        <li>Comment les producteurs utilisent la terre ? </li>
+        <li>Quelles sont les points clés qui influencent les dynamiques d'utilisation 
+          du sol ? </li>
+      </ul>
+      <p>Il s'agit ici de se concentrer sur les petits colons, arrivés dans ce 
+        municipe au début des années 70, pour mieux comprendre leurs besoins (alimentaires, 
+        santé, argent, main d'œuvre, éducation, etc.), leurs stratégies de production 
+        et leurs interactions afin de retracer leurs itinéraires agricoles. Ainsi, 
+        en prenant en compte les nécessités des acteurs, le modèle cherche à tester 
+        des scénarios prospectifs en produisant des informations originales pour 
+        l’élaboration de politiques publiques. Plus particulièrement, les questions 
+        portent sur les sujets de développement suivants : </p>
+      <ul>
+        <li>Comment contrôler l’avancée des fronts pionniers ? </li>
+        <li>Comment concilier les aspirations des populations locales et la conservation 
+          d’espaces forestiers suffisamment grands pour maintenir la biodiversité 
+          naturelle ? </li>
+        <li>Quelles gestions des ressources naturelles seraient en mesure de concurrencer 
+          le système coupe-brûlis-pâturage ? </li>
+        <li>Quels systèmes pourraient rendre plus intéressante la poursuite de 
+          l’exploitation sur les aires déjà déforestées plutôt que de défricher 
+          de nouvelles parcelles forestières ? </li>
+        <li>Comment intégrer des modes de gestion durable des ressources naturelles 
+          dans les paysages de front pionnier et dans la construction régionale 
+          ? </li>
+        <li>Quelles sont les mesures et les politiques les plus appropriées pour 
+          parvenir à ces fins (mesures incitatives ou répressives, politiques 
+          d'accès au crédit, programmes de santé et d'éducation, ...) ? </li>
+        <li>En quoi le savoir et le savoir-faire de l’agriculture traditionnelle 
+          peut-il servir l’agriculture pionnière ? </li>
+      </ul>
+      <p>Si au départ, le projet cherchait à traiter l'ensemble de ces sujets, 
+        il est clair que dans un premier temps, il a fallu réduire l'éventail 
+        des objectifs. Or l'identification d'une question de recherche pour un 
+        modèle n'est pas triviale. A la lecture des divers objectifs énoncés ici, 
+        on comprend qu'il était nécessaire de passer par une première phase descriptive 
+        ("formaliser et de synthétiser 15 ans de connaissances") pour se concentrer 
+        ensuite sur les activités agricoles des producteurs. Nous verrons par 
+        la suite comment la question de recherche à évoluer, aboutissant à de 
+        nouvelles version du modèle. </p>
+      <h4>Autres modèles et avantages de la modélisation multi-agent</h4>
+      <h3>DESCRIPTION DU MODELE</h3>
+      <p>La conception du modèle TransAmazon a commencé en 2004 et a été suivie 
+        de périodes de travail et d'arrêt. Aujourd'hui, plusieurs versions ont 
+        été réalisées. L'équipe de concepteurs est constituée de Jean-François 
+        Tourrand (Cirad), Thierry Bonaudo (AgroParisTech) et Pierre Bommel (Cirad). 
+        TransAmazon est donc un modèle d'experts dans le sens où il n'a pas été 
+        conçu selon une démarche de modélisation participative telle que présentée 
+        par certaines expériences ComMod. </p>
+      <h4>Délimitations </h4>
+      <p> Uruará est déjà une petite ville au sein d'un espace deux fois plus 
+        grand que le Lot-et-Garonne. Le municipe compte aujourd'hui 35.000 habitants. 
+        La carte ci-dessous montre le découpage foncier de la commune. La route 
+        transamazonienne la traverse d'Est en Ouest et tous les 5 km partent perpendiculairement 
+        à cet axe deux vicinales, vers le Sud et vers le Nord. La carte laisse 
+        apparaître des zones de chevauchements, en particulier entre la réserve 
+        indienne et des lots de 100 ha occupés par les petits producteurs, mais 
+        aussi au niveau des projets d'assentamentos (lotissements destinés à accueillir 
+        des familles de sans-terres). </p>
+      <table width="75%" border="0">
+        <tr> 
+          <td width="4%">&nbsp;</td>
+          <td width="60%"><img src="transamazon/uruara.gif" width="429" height="371"></td>
+          <td width="36%"><i>Carte foncière d'Uruará, d'après [Bonaudo, 2005].</i></td>
+        </tr>
+      </table>
+      <p>Sur la base d'une structure initiale (lots de 100 ha), dessinée à l'origine 
+        par l'INCRA (cf. figure suivante), on constate donc des zones de chevauchements, 
+        sources de tensions. De plus, même si les grandes scieries ne figurent 
+        pas sur la carte, il est courant de voir apparaître des conflits avec 
+        les madereiros qui entrent parfois dans les propriétés et les réserves 
+        pour y extraire des arbres. Comme l'explique [Negreiros Alves, 2004], 
+        des tensions diverses pour l'accès à la terre et aux ressources surviennent 
+        régulièrement, sans parler des jeux de pouvoir et d'influences, ni du 
+        rôle des églises. Bref, comme pour la plupart des systèmes socio-environnementaux, 
+        il s'agit d'une zone sensible et complexe. On nous a parfois reproché 
+        de ne pas prendre en compte ces différents aspects dans le modèle et surtout 
+        de ne pas tenir compte des Indiens. </p>
+      <p>Les objectifs du modèle nous servent à mieux délimiter ses dimensions, 
+        tant spatiales que sociales. En se référant à ces objectifs initiaux, 
+        on comprend que la cause des Indiens n'est pas à prendre en compte ici, 
+        ni les jeux de pouvoir, ni le poids des églises, ni même les actions des 
+        madereiros. En effet, la première cause de déforestation en Amazonie est 
+        essentiellement liée à l'action de l'agriculture. A Uruará, les fronts 
+        pionniers de déforestation progressent essentiellement sous l'action des 
+        petits producteurs. Le modèle doit donc s'attacher à décrire uniquement 
+        les activités de ces colons sur l'espace. La figure suivante montre une 
+        photo satellite de la couverture végétale à Uruará où la zone déforestée 
+        forme ce qu'on appelle une arête de poisson. Cette structure particulière 
+        est liée à la configuration du réseau routier : tous les 5 km ont été 
+        tracées des routes vicinales (traversão en portugais). Certaines peuvent 
+        atteindre quelques centaines de kilomètres. Le modèle se limitent alors 
+        à décrire la structure et les dynamiques de ces vicinales, divisées en 
+        lots simples sur lesquelles habitent et évoluent les familles des petits 
+        producteurs. </p>
+      <table width="79%" border="0">
+        <tr> 
+          <td width="4%">&nbsp;</td>
+          <td width="56%"><img src="transamazon/uruara_Google.gif" width="600" height="238"></td>
+          <td width="40%"> <i>Uruará vu d'en haut. A gauche, photo satellite (source 
+            Google Earth) montrant la structure particulière en arête de poisson. 
+            A droite, schéma de la zone présentant le réseau routier et la configuration 
+            des lots.</i></td>
+        </tr>
+      </table>
+      <h4>Description de la structure</h4>
+      <p>Les diagrammes issus des phases de conception ont été retravaillés en 
+        les épurant au maximum pour les présentés ici. Au final, le modèle présente 
+        une structure "relativement" simple, composée de trois parties : l'espace, 
+        le couvert végétal et les familles : </p>
+      <table width="75%" border="0">
+        <tr> 
+          <td width="4%">&nbsp;</td>
+          <td width="63%"><img src="transamazon/diagPackage.gif" width="462" height="378"></td>
+          <td width="33%"><i>Diagramme de package montrant la structure générale 
+            de TransAmazon.</i></td>
+        </tr>
+      </table>
+      <p>L'espace - La couverture - L'agent.</p>
+      <h4>Description des dynamiques </h4>
+      <h5>Choix du pas de temps</h5>
+      <h5>Dynamique de la végétation</h5>
+      <h5>Dynamiques des acteurs</h5>
+      <h3>PREMIERS RESULTATS</h3>
+      <h4>Exemple d'une simulation</h4>
+      <h4> Analyse de sensibilité</h4>
+      <h4>7) DISCUSSION </h4>
+      <p>En prenant le partie de se concentrer sur les acteurs, nous cherchons 
+        à comprendre les principes de base qui sont à l'origine de la déforestation. 
+        Comparer à d'autres approches de type télédétection ou modèles macroscopiques, 
+        la modélisation SMA oblige à un contact plus étroit avec le terrain. Cela 
+        conduit à prendre en considération les difficultés des acteurs et ainsi 
+        à mieux comprendre les mécanismes à l'œuvre. Mais le risque de cette approche 
+        réside dans la possibilité de se perdre dans la complexité des relations 
+        humaines. En travaillant avec deux spécialistes du domaine, la phase de 
+        conception a duré un trimestre. On peut penser que ce prologue était excessif, 
+        mais sur un sujet si complexe, cette phase était indispensable pour bien 
+        définir les objectifs, cerner les limites du modèle et s'accorder sur 
+        son contenu. Pour éviter la réalisation d'une usine à gaz et pour toujours 
+        garder un contrôle sur l'interprétation des résultats, il a fallu s'accorder 
+        sur les éléments à enlever parmi la quantité d'information accumulée sur 
+        ce terrain. Le résultat n'est pas un modèle simple, mais sur un tel sujet 
+        il était facile de faire bien plus compliqué ! Dans un tel contexte, une 
+        démarche KIDS aurait utilisé toutes ces informations. Elle aurait par 
+        exemple intégré dans son modèle la typologie de L. Ferreira [2001] sans 
+        se poser plus de question. A l'opposé, une approche KISS condense les 
+        informations en recherchant les mécanismes de base. La force de la simulation 
+        multi-agent est alors de retrouver une forme de complexité par le déroulement 
+        du temps. </p>
+      <p>Néanmoins, ce modèle reste encore un peu descriptif. Non pas que le comportement 
+        des agents soit "câblé" (complètement prédéterminé). Mais ils manquent 
+        de plus de souplesse, d'une certaine forme d'autonomie pour s'adapter 
+        à des modifications de leur système. Par exemple, afin de tester les effets 
+        d'une politique d'indemnisation à la préservation de la forêt, le modèle, 
+        tel que présenté ici, ne permet pas de voir apparaître des modifications 
+        de comportements quelle que soit la hauteur de l'indemnisation. Il est 
+        pourtant facile d'augmenter le revenu lié à la forêt. Mais les agents 
+        n'ont pas d'autres alternatives que de continuer à planter ou élever. 
+        Il a donc fallu rajouter artificiellement une nouvelle stratégie :&quot;<i>Conversationniste</i>&quot;. 
+        Les activités saisonnières de celle-ci se limitent à implanter une culture 
+        annuelle sur une jachère pour l'alimentation de la famille, et à entretenir 
+        les cultures déjà en place. On peut alors tester ce type de politique 
+        publique en augmentant le revenu issu de la forêt . </p>
+      <p>Ainsi, l'ajout de la stratégie <i>Conversationniste</i> entraîne une 
+        nouvelle version du modèle, mais aussi un glissement de ses objectifs 
+        : à partir de la question initiale de comprendre "Comment les producteurs 
+        utilisent la terre ?", nous sommes passés à "Quelles sont les mesures 
+        et les politiques les plus appropriées pour parvenir à des modes de gestion 
+        durable ?". Mais les changements de stratégie tels qu'ils sont conçus 
+        jusqu'à présent, semblent encore fragiles : les agents prennent leur décision 
+        sur la base d'un calcul hasardeux qui intègre les résultats de leurs stratégies 
+        antérieures et sur la meilleure stratégie parmi leurs voisins (cf. <b>Figure 
+        15</b>). C'est une solution intéressante mais qui ne laisse pas la place 
+        à des innovations même si elles sont bien plus avantageuses. Les agents 
+        ne possèdent pas la capacité d'anticiper. Par ailleurs, nous avons cherché 
+        à mieux prendre en compte les productions futures. En effet, les agents 
+        "découvrent" que le cacao produit au bout de 3 ans alors que c'est une 
+        évidence pour tous les producteurs. En semant aujourd'hui, on espère en 
+        récolter les fruits dans le futur. Cette faculté d'anticipation qui nous 
+        est si familière, est difficile à retranscrire chez les agents. Une autre 
+        version a donc été développée qui modifie fortement la manière de changer 
+        de stratégie [Bonté, 2007]. L'agent est devenu "anticipatif" : il ne prend 
+        plus sa décision sur son bilan passé, mais il explore ses futurs possibles 
+        en testant les stratégies à sa disposition. En d'autres termes, il explore 
+        un arbre de décisions dont chaque feuille est le résultat d'une succession 
+        imaginaire de stratégies. Il choisit alors l'itinéraire qui lui paraît 
+        le plus rentable (cf. "simulation dans la simulation" en annexe). Sur 
+        cette base, une nouvelle version est en cours de développement qui cherche 
+        à donner plus de souplesse encore dans les possibilités d'adaptation des 
+        agents et éviter ainsi des ajouts ad-hoc à chaque nouvelle mesure incitative 
+        que l'on voudrait tester. En effet, les stratégies actuelles apparaissent 
+        comme des déroulements un peu mécaniques des activités des agents. Elles 
+        ne proposent que 2 ou 3 alternatives d'utilisation de la terre. Issues 
+        de nombreux entretiens et enquêtes, elles sont cohérentes avec nos observations 
+        (voir <b>calendrier des activités</b>). Néanmoins, elles sont trop rigides 
+        pour tester des alternatives d'assolement. Dans cette nouvelle version, 
+        les stratégies préétablies ont donc été supprimées. L'agent connaît maintenant 
+        un certain nombre d'activités élémentaires qu'il peut effectuer sur sa 
+        terre (défricher, implanter et entretenir des cultures, etc.). Il anticipe 
+        ses futurs en imaginant diverses combinaisons d'activités. L'arbre de 
+        décisions qu'il explore correspondant ainsi à un ensemble d'itinéraires 
+        d'assolement . Il choisit alors celui qui lui paraît le plus rentable 
+        ou le moins risqué. De cette manière, il construit dynamiquement sa stratégie. 
+        En basant les choix décisionnels sur la gestion du risque, on espère retrouver 
+        les stratégies prédéfinies, mais aussi de nouveaux itinéraires plus efficaces. 
+        Avec ce procédé, on aura encore fait un pas vers la généricité. Dans le 
+        même temps, la question de recherche a évolué : le focus se situe désormais 
+        sur les difficultés des producteurs. Car il s'avère que les questions 
+        du risque et de la sécurité alimentaire sont des problèmes fondamentaux 
+        pour les colons . En conséquence, TransAmazon a changé progressivement 
+        d'état : de modèle descriptif présentant des comportements stéréotypés 
+        pour montrer des scénarios prédéfinis, il devient un modèle plus explicatif 
+        pour lequel la gestion du risque prend une dimension jusqu'à lors sous-estimée. 
+        A présent, il devient un modèle adaptatif susceptible de tester des scénarios. 
+        En quelques sortes, il a amélioré sa valeur informative. Simultanément, 
+        la question de recherche s'est déplacée pour mieux cibler les difficultés 
+        des producteurs. Or les façons dont ils y répondent, affectent l'environnement. 
+      </p>
+      <h3>PERSPECTIVES </h3>
+      <p>Outre les évolutions en cours précédemment décrites, nous étudions une 
+        autre utilisation de TransAmazon. Dans ce cas, l'objectif n'est plus d'étudier 
+        un modèle SMA en analysant uniquement ses résultats, mais de participer 
+        activement au déroulement de la simulation. Il s'agit donc de concevoir 
+        un nouvel outil de simulation participative de type jeu-vidéo avec lequel 
+        l'utilisateur joue en agissant directement sur l'évolution de la simulation 
+        [Guyot, 2006]. L'objectif de VisãoFamiliar (TransAmazon-Interactif), est 
+        de disposer d'un outil de dialogue permettant de tester, avec les producteurs, 
+        des alternatives possibles pour la gestion de leur exploitation. Sur la 
+        base de la structure du modèle TransAmazon, il s'agit de remplacer les 
+        agents et leurs stratégies par des avatars (agents contrôlés par des humains 
+        qui les représentent dans le système virtuel). Dans une simulation hybride 
+        de ce type, les dynamiques naturelles de croissance végétale, d'appauvrissement 
+        des sols ou les précipitations sont prises en charge par le simulateur 
+        qui calcule également les conséquences des actions du joueur. Celui-ci 
+        dispose d'un ensemble d'activités qu'il peut mobiliser à tout moment pour 
+        générer son itinéraire d'assolement mais aussi pour construire d'autres 
+        trajectoires familiales. Il peut aussi choisir parmi les indicateurs à 
+        disposition, ceux qu'il souhaite suivre au cours du temps. Grâce à la 
+        possibilité de "remonter le temps", il peut revenir sur certaines décisions 
+        pour tester d'autres alternatives. Car toutes les actions sont enregistrées. 
+        On peut donc retourner à n'importe quel moment de la simulation pour expérimenter 
+        de nouvelles pistes. Les sauvegardes permettent aussi de comparer des 
+        trajectoires et de faire expliciter les raisons des choix décisionnels 
+        des participants pour les discuter. Cette démarche s'inscrit dans le cadre 
+        de projets de développement qui visent la mise en place de systèmes de 
+        production et de gestion durable des ressources naturelles et agricoles. 
+        En particulier, nous avons testé en grandeur réelle des possibilités de 
+        récupération des aires agricoles dégradées. Les résultats sont très enthousiasmants 
+        : les fermiers qui se sont prêtés à ces expérimentations, ont vu leur 
+        production augmenter alors que dans le même temps, ils n'ont pas déforesté. 
+        De plus, ces nouvelles techniques (le semis direct) sont peu coûteuses 
+        et offrent un confort de travail très apprécié. Avec VisãoFamiliar, nous 
+        espérons ainsi contribuer à une diffusion de ces pratiques agricoles. 
+        Enfin, une version multi-joueur permettra de faire participer un groupe 
+        de producteurs cherchant à s'organiser pour gérer collectivement des aires 
+        forestières pour la production durable de bois. </p>
+      <h3> <b>CONCLUSION</b></h3>
+      <p>Les différentes versions de TransAmazon s'inscrivent donc dans le cadre 
+        plus général de projets de développement. Elles ont pour objectif de mieux 
+        comprendre les motivations des producteurs sur la manière "traditionnelle" 
+        de cultiver leurs terres. Plutôt que de proposer une représentation macroscopique 
+        des grandes tendances en cours, il nous a semblé plus important de comprendre 
+        ce qui pousse les petits colons des fronts pionniers à produire d'une 
+        manière non-durable. Car les mécanismes actuels de production conduisent 
+        finalement à la déforestation. TransAmazon permet donc de décrire ces 
+        dynamiques en cours. Il permet aussi d'élaborer des scénarios prospectifs 
+        sur les évolutions possibles des fronts pionniers en fonction des nécessités 
+        des acteurs. En modifiant légèrement sa structure, on peut alors tester 
+        quelques politiques publiques. Par ailleurs, les différentes versions 
+        montrent une évolution des questions de recherche qui ciblent davantage 
+        les motivations des producteurs. En partant de raisonnements exclusivement 
+        économiques, la question de la gestion du risque s'est progressivement 
+        imposée comme un élément essentiel qui motive les activités de production. 
+        On a montré en particulier que les risques liés à la production de cacao, 
+        pourtant nettement moins nuisible à l'environnement, empêchent les petits 
+        colons à s'investir dans cette voie. En partant d'une représentation plutôt 
+        descriptive, le processus de modélisation a conduit à une succession de 
+        versions du modèle, qui devient plus explicatif, jusqu'à devenir un modèle 
+        adaptatif. Dans le même temps, ce cheminement a permis d'en améliorer 
+        la valeur informative. La prise en considération des difficultés des colons 
+        nous amène également à développer un outil original d'accompagnement pour 
+        imaginer avec eux des alternatives de production. En testant en parallèle 
+        des expérimentations sur le terrain, nous espérons ainsi mettre en place 
+        d'autres manières de gérer les lots. Ces alternatives seront, espérons-le, 
+        plus durables pour l'environnement mais aussi plus économiquement viables 
+        et socialement plus équitables. Déjà les premières solutions envisagées 
+        ont montré des résultats enthousiasmants. A tel point que les enfants 
+        des producteurs pensent maintenant à rester sur la terre de leurs parents.</p>
+      <p>&nbsp; </p>
+      <p>Pour en savoir plus, <a href="mailto:bommel@cirad.fr">contactez les auteurs</a>. 
+      </p>
+      <p>T&eacute;l&eacute;charger le mod&egrave;le (<a href="transamazon/TransAmazon.zip">zip</a>)</p>
+      <h2>Références </h2>
+      <p>[Bonaudo et al., 2005] Bonaudo T., Bommel P. et Tourrand J.F., 2005. 
+        Modelling the Pioneers Fronts of the transamazon highway region. In: SMAGET, 
+        Multi-Agent Modelling for Environmental Management. Bourg St Maurice - 
+        France. 21- 25 march 2005.</p>
+      <p>[Bonaudo, 2005] Bonaudo T., 2005. La gestion environnementale sur un 
+        front pionnier amazonien. Thèse de doctorat de l'Institut National d'Agronomie 
+        de Paris-Grignon et Centre de développement durable de l'Université de 
+        Brasilia, 370 p</p>
+      <p>[Bonté, 2007] Bonté B., 2007. L'anticipation dans les systèmes multi-agents 
+        destinés à la modélisation de phénomènes sociaux complexes. Application 
+        à la modélisation des fronts pionniers amazoniens. Mémoire de stage de 
+        Master II " Intelligence Artificielle et Décision ", Université Pierre 
+        et Marie Curie Paris 6.</p>
+      <p>[Ferreira, 2001] Ferreira L.A., 2001. Le rôle de l'élevage bovin dans 
+        la viabilité agro-écologique et socio-économique des systèmes de production 
+        agricoles familiaux en Amazonie brésilienne - le cas d'Uruará (Pará, Brésil). 
+        Paris, INA-PG: 188. </p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+      <div align="right" class="texte"> </div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<map name="Diagramme de package">
+  <area shape="rect" coords="275,45,461,258">
+</map>
+</body>
+
+</html>
+

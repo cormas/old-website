@@ -1,0 +1,398 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title> AWARE</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+  <!--#include virtual="sommair.inc" -->
+
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+
+      <p> 
+
+      <h1><img src="../../images/applica/awareLogo.jpg" width="135" height="101"></h1>
+
+      <h1>AWARE: Analyses de bassins versants par des SMA pour le d&eacute;veloppement 
+
+        environnementale et &eacute;conomique durable</h1>
+
+      <p>S. Farolfi (coordonnateur) - S. Perret - L. Erasmus - P. Bommel</p>
+
+      <h2>Contexte</h2>
+
+      <p>Depuis 1994, le gouvernement sud africain &agrave; commencer de profondes 
+
+        r&eacute;formes pour lutter contre la pauvret&eacute; rurale et les in&eacute;galit&eacute;s 
+
+        sociales h&eacute;rit&eacute;es du r&eacute;gime de l&#146;apartheid. 
+
+        Parmis ces reformes, il a adopt&eacute; une nouvelle loi sur l&#146;eau 
+
+        qui promeut<br>
+
+      </p>
+
+      <ul>
+
+        <li>la soutenabilit&eacute; environnementale, </li>
+
+        <li>l&#146;&eacute;quit&eacute; sociale et </li>
+
+        <li>l&#146;efficacit&eacute; &eacute;conomique,</li>
+
+        <li>par la d&eacute;centralisation de la gestion de l&#146;eau (institutions 
+
+          locales et r&eacute;gionales)<br>
+
+        </li>
+
+      </ul>
+
+      <p>La loi national sur l'eau en Afrique du Sud promeut la gestion de ressource 
+
+        int&eacute;gr&eacute;e et d&eacute;centralis&eacute;e par la mise en place 
+
+        de<br>
+
+        nouvelles institutions. L'objectif principal de la Strat&eacute;gie de 
+
+        Ressource Nationale de l'Eau (NWRS) est de correspondre et &eacute;quilibrer 
+
+        la<br>
+
+        demande en eau avec l'alimentation en eau, selon le caract&egrave;re durable, 
+
+        l'&eacute;quit&eacute; sociale et des objectifs d'efficacit&eacute; &eacute;conomique.</p>
+
+      <p>La mise en oeuvre de cette loi et ses &agrave;-c&ocirc;t&eacute;s (NWRS 
+
+        : Strat&eacute;gie de Ressource Nationale sur l'Eau) soul&egrave;ve de 
+
+        nombreuses questions d&#146;ordre social et &eacute;conomique dans un 
+
+        contexte </p>
+
+      <ul>
+
+        <li>de p&eacute;nurie d&#146;eau, </li>
+
+        <li>de la profusion d'utilisateurs et d&#146;usages, </li>
+
+        <li>d&#146;in&eacute;galit&eacute;s de l&#146;infrastructure pour l&#146;approvisionnement 
+
+          en eau.</li>
+
+      </ul>
+
+      <p>Dans ce contexte, il est &agrave; croire qu&#146;une des principales 
+
+        t&acirc;ches des agences et comit&eacute;s de gestion de bassins hydrologiques 
+
+        (CMA et CMC : Catchment Management Agency/Commitee) sera de r&eacute;guler 
+
+        et de contr&ocirc;ler la demande en eau.</p>
+
+      <p>L&#146;approche qui a &eacute;t&eacute; d&eacute;cid&eacute;e repose 
+
+        sur l&#146;<b><i>allocation de permis</i></b> d&#146;usage de l&#146;eau. 
+
+        Ce proc&eacute;d&eacute; soul&egrave;ve de nombreuses questions telles 
+
+      </p>
+
+      <ul>
+
+        <li>Quelles priorit&eacute;s accorder entre les diff&eacute;rents usages 
+
+          et usagers ?</li>
+
+        <li>Quand et comment les permis doivent &ecirc;tre r&eacute;vis&eacute;s 
+
+          ?</li>
+
+        <li>Quel peut &ecirc;tre l&#146;impact de strat&eacute;gies d&#146;allocation 
+
+          de permis ?</li>
+
+      </ul>
+
+      <p>Pour essayer de r&eacute;pondre &agrave; ces questions, nous avons construit 
+
+        plusieurs mod&egrave;les en collaboration avec des chercheurs de l'Universit&eacute; 
+
+        de Pr&eacute;toria, du Cirad et des fonctionnaires du minist&egrave;re 
+
+        des Eaux et des For&ecirc;ts d&#146;Afrique du Sud (DWAF), dont le mod&egrave;le 
+
+        multi-agent AWARE.</p>
+
+      <h2>Pr&eacute;sentation de AWARE</h2>
+
+      <p>AWARE est un mod&egrave;le multi-agent construit sur Cormas pour examiner 
+
+        l'efficacit&eacute; &eacute;conomique, le caract&egrave;re de durabilit&eacute; 
+
+        environnemental et l'&eacute;quit&eacute; sociale de certaines des strat&eacute;gies 
+
+        potentielles de gestion d'eau que les CMC pourraient employer. Bien que 
+
+        les processus r&eacute;els se d&eacute;velopperont progressivement, les 
+
+        objectifs d'AWARE consistent &agrave; examiner des situations dans lesquelles, 
+
+        une fois &eacute;tablies, les CMA et les CMC d&eacute;livreront les permis 
+
+        d&#146;usage de l&#146;eau. AWARE est donc un outil orient&eacute; simulation 
+
+        prospective.</p>
+
+      <p> Les agents de ce syst&egrave;me sont les CMA et les utilisateurs (secteurs 
+
+        d'utilisation d'eau). Ces derniers sont les communaut&eacute;s, les conseils 
+
+        d'irrigation, les agences de sylviculture, les industries et les mines.</p>
+
+      <p>A cause de pr&eacute;sence des principaux secteurs d'utilisation d'eau 
+
+        et &agrave; cause de la disponibilit&eacute; de donn&eacute;es, nous avons 
+
+        choisi comme secteur d'&eacute;tude, Steelpoort, le sous-bassin hydrographique 
+
+        du fleuve Olifants.</p>
+
+      <p> La r&eacute;partition des diff&eacute;rents secteurs provient de donn&eacute;es 
+
+        issues d'un syst&egrave;me d'information g&eacute;ographique (SIG). L'&eacute;coulement 
+
+        annuelle moyen a &eacute;t&eacute; utilis&eacute; pour calculer le volume 
+
+        total d'eau disponible par les CMC. Il inclut l'eau pour les usages domestiques 
+
+        (besoins vitaux de base) et l'eau essentielle pour la conservation des 
+
+        &eacute;cosyst&egrave;mes (la r&eacute;serve &eacute;cologique).</p>
+
+      <h5>Attribution des permis</h5>
+
+      <p> Des quantit&eacute;s annuelles d'eau sont <i>potentiellement</i> allou&eacute;es 
+
+        par le CMA tous les 5 ans. Lorsque les permis doivent &ecirc;tre attribu&eacute;s, 
+
+        les <br>
+
+        utilisateurs (communaut&eacute;s urbaines et rurales, conseils d'irrigation, 
+
+        grands fermiers, agences de sylviculture, industries et mines) envoient 
+
+        leur demande annuelle en eau au CMA. Si le volume total d'eau demand&eacute; 
+
+        n'ex&egrave;de pas l'eau effectivement disponible, chaque utilisateur 
+
+        recevra alors un permis pour la quantit&eacute; d'eau qu'il a demand&eacute;e. 
+
+        Dans le cas contraire, le CMA attribue les permis selon une de cinq strat&eacute;gies 
+
+        d&eacute;crites ci-dessous :</p>
+
+      <ol>
+
+        <li> Aucune priorisation. Chaque utilisateur re&ccedil;oit un permis pour 
+
+          une quantit&eacute; d'eau proportionnelle &agrave; la quantit&eacute; 
+
+          qu'il a demand&eacute;. Ce pourcentage est le m&ecirc;me pour tous les 
+
+          utilisateurs et d&eacute;pend de la ressource disponible totale, &agrave; 
+
+          l'exclusion de la r&eacute;serve &eacute;cologique.<br>
+
+          <img src="../../images/applica/awareFormule1.jpg" width="607" height="56"><br>
+
+          <font size="1">paw = Eau Potentiellement disponible (Potential Available 
+
+          Water).</font><br>
+
+        </li>
+
+        <li>Strat&eacute;gie sociale. Les premiers permis sont d&eacute;livr&eacute;s 
+
+          en priorit&eacute; aux communaut&eacute;s urbaines et rurales. Le reste 
+
+          de l'eau disponible est allou&eacute;e aux autres utilisateurs proportionnellement 
+
+          &agrave; leur demande. La demande de la r&eacute;serve &eacute;cologique 
+
+          est retranch&eacute;e avant le processus d'attribution des permis.</li>
+
+        <li>Strat&eacute;gie rurale. Les premiers permis sont d&eacute;livr&eacute;s 
+
+          en priorit&eacute; aux communaut&eacute;s rurales. Ensuite, ils sont 
+
+          d&eacute;livr&eacute;s en priorit&eacute; aux petits cultivateurs et 
+
+          auxgrands irrigants. Apr&egrave;s ces trois cat&eacute;gories d'utilisateurs, 
+
+          le restant d'eau est partag&eacute; entre les autres secteurs proportionnellement 
+
+          &agrave; leur demande. La demande de la r&eacute;serve &eacute;cologique 
+
+          est retranch&eacute;e avant le processus d'attribution des permis.</li>
+
+        <li>Strat&eacute;gie &eacute;cologique-&eacute;conomique. Les premiers 
+
+          permis sont d&eacute;livr&eacute;s en priorit&eacute; aux mines et aux 
+
+          industries. Le reste de l'eau disponible est allou&eacute;e aux autres 
+
+          utilisateurs proportionnellement &agrave; leur demande. La demande de 
+
+          la r&eacute;serve &eacute;cologique est retranch&eacute;e avant le processus 
+
+          d'attribution des permis.</li>
+
+        <li>Strat&eacute;gie &eacute;conomique. De nouveau, les mines et des industries 
+
+          sont prioritaires pour l'attribution des permis d'eau. Le reste de l'eau 
+
+          disponible est allou&eacute;e aux autres utilisateurs proportionnellement 
+
+          &agrave; leur demande. S'il reste encore de l'eau disponible, un permis 
+
+          est attribu&eacute; &agrave; la r&eacute;serve &eacute;cologique.</li>
+
+      </ol>
+
+      <p><img src="../../images/applica/awareFormule.jpg" width="699" height="84"><br>
+
+        <font size="1">paw = Eau Potentiellement disponible (Potential Available 
+
+        Water).</font></p>
+
+      <p>Le tarif des permis est calcul&eacute; en fonction du type d'utilisateur 
+
+        et en fonction des unit&eacute;s d'eau pour lesquelles ils ont re&ccedil;u 
+
+        un quota. Ces parts sont employ&eacute;es pour calculer le revenu annuel 
+
+        du CMA. Le revenu du CMA est donc ind&eacute;pendant de la quantit&eacute; 
+
+        r&eacute;elle d'eau re&ccedil;ue par les utilisateurs. En d'autres termes, 
+
+        on ne paie pas la quantit&eacute; d'eau utilis&eacute;e, mais un permis 
+
+        pour un quota. <br>
+
+        Tous les cinq ans, les permis d'utilisation de l'eau sont r&eacute;attribu&eacute;s. 
+
+      </p>
+
+      <h5>Allocation de l'eau</h5>
+
+      <p>Le pas de temps du mod&egrave;le est l'ann&eacute;e. Pour calculer le 
+
+        volume annuel d'eau r&eacute;ellement disponible chaque ann&eacute;e, 
+
+        une fluctuation p&eacute;riodique et al&eacute;atoire a &eacute;t&eacute; 
+
+        ajout&eacute;e &agrave; l'&eacute;coulement annuel moyen. </p>
+
+      <p>Si une ann&eacute;e donn&eacute;e, la quantit&eacute; d'eau disponible 
+
+        est sup&eacute;rieure ou &eacute;gale &agrave; la somme des quotas d&eacute;livr&eacute;s 
+
+        par le CMA, chaque utilisateur re&ccedil;oit un volume d'eau en accord 
+
+        avec sa licence. Dans le cas contraire, chaque utilisateur re&ccedil;oit 
+
+        une quantit&eacute; d'eau en proportionnelle &agrave; son permis. </p>
+
+      <p> Chaque utilisateur fait une &eacute;valuation annuelle de la quantit&eacute; 
+
+        d'eau qu'il re&ccedil;oit. Si cette part n'est pas satisfaisante, une 
+
+        plainte de manque d'eau est envoy&eacute;e au CMA.</p>
+
+      <h2>Conclusion</h2>
+
+      <p> AWARE permet d'examiner les cons&eacute;quences &eacute;conomiques, 
+
+        environnementales et sociales de strat&eacute;gies que le CMA peut<br>
+
+        mettre en oeuvre dans l'attribution de permis pour l'allocation de l'eau. 
+
+        Le mod&egrave;le peut &ecirc;tre employ&eacute; pour comparer des strat&eacute;gies 
+
+        diff&eacute;rentes en termes d'efficacit&eacute; &eacute;conomique, de 
+
+        caract&egrave;re de durabilit&eacute; environnemental et d'&eacute;quit&eacute; 
+
+        sociale. </p>
+
+      <p>Etant un mod&egrave;le individu-centr&eacute;, AWARE permet d'&eacute;lucider 
+
+        des r&eacute;sultats globaux r&eacute;sultant de comportements individuels 
+
+        qui &eacute;tudi&eacute;s isol&eacute;ment semblent &eacute;vidents. </p>
+
+      <p> AWARE peut seulement &ecirc;tre appliqu&eacute; aux situations pour 
+
+        lesquelles il a &eacute;t&eacute; construit &agrave; l'origine. Autrement 
+
+        dit le mod&egrave;le<br>
+
+        ne peut pas &ecirc;tre employ&eacute; pour examiner l'efficacit&eacute; 
+
+        des strat&eacute;gies de gestion du CMA sous l'effet de sc&eacute;narios 
+
+        de croissances ou de d&eacute;croissances &eacute;conomiques ou sous l'effet 
+
+        de sc&eacute;narios sociaux comme l'impact du sida sur la demande d'eau 
+
+        puisque ces facteurs n'ont pas &eacute;t&eacute; incorpor&eacute;s dans 
+
+        le mod&egrave;le.</p>
+
+      <p> Pour en savoir plus, vous pouvez visiter le site web du <a href="http://www.ceepa.co.za/cma.html">CeePA 
+
+        web</a> (The Centre for Environmental Economics and Policy in Africa) 
+
+        ou <a href="mailto:sfarolfi@postino.up.ac.za">contacter l'auteur</a>.</p>
+
+      <!--#include virtual="/include/copyright_fr.inc" -->
+
+    </td>
+
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+   <div align="right" class="texte"></div>
+
+  </td>
+
+ </tr>
+
+</table>
+
+</body>
+
+</html>
+

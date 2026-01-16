@@ -1,0 +1,997 @@
+<html>
+
+<head>
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+<title>Amaz</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+<!--#include virtual="haut.inc" -->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+<tr>
+
+  <!--#include virtual="sommair.inc" --> 
+
+    <td valign="baseline" bgcolor="#FFFFFF"> 
+
+      <p>&nbsp; 
+
+      <h1>Amaz</h1>
+      <p>- <a href="amazDescription.htm">Back to </a><a href="amazDescription.htm">Model Description</a></p>
+      <p>All the scenarios have not yet been finalized.      </p>
+      <h2>Model Parameters</h2>
+      <p>Attributes of the Agent, Credit and land:</p>
+      <table border="1" cellpadding="0" cellspacing="0">
+        <col width="132">
+        <col width="296">
+        <col width="90">
+        <tr>
+          <td width="1" align="center"><strong>Class</strong></td>
+          <td width="296" align="center"><strong>Attribute</strong></td>
+          <td width="90" align="center"><strong>Value</strong></td>
+        </tr>
+        <tr>
+          <td width="1">Familia</td>
+          <td>membros</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td width="1">Familia</td>
+          <td>trabalhadores</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td width="1">Familia</td>
+          <td>taxaDesfrute</td>
+          <td>0.1</td>
+        </tr>
+        <tr>
+          <td width="1">Familia</td>
+          <td>maxHaPastoFogo</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td width="1">Familia</td>
+          <td>recuperacaoDegradacaoPorLimpezaBoa</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td width="1">Familia</td>
+          <td>recuperacaoDegradacaoPorLimpezaLeve</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td width="1">Pessoa</td>
+          <td>diasUteisPorMes</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td width="1">Pessoa</td>
+          <td>cashInicial</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td width="1">Pessoa</td>
+          <td>diaria</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td width="1">Pessoa</td>
+          <td>consumoAnual</td>
+          <td>1200</td>
+        </tr>
+        <tr>
+          <td width="1">Linha</td>
+          <td>area</td>
+          <td>0.04</td>
+        </tr>
+        <tr>
+          <td width="1">Lote</td>
+          <td>criterioDeReservaLegal</td>
+          <td>0.5</td>
+        </tr>
+        <tr>
+          <td width="1">Terra</td>
+          <td>indiceRecuperacaoPotencial</td>
+          <td>0.1</td>
+        </tr>
+        <tr>
+          <td width="1">Terra</td>
+          <td>diminuicaoPotencialPeloFogo</td>
+          <td>0.1</td>
+        </tr>
+        <tr>
+          <td width="1">Terra</td>
+          <td>diminuicaoPotencialPelaSobrecarga</td>
+          <td>0.1</td>
+        </tr>
+        <tr>
+          <td width="1">PlanoRecuperacao</td>
+          <td>duracao</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td width="1">CaixaArvore</td>
+          <td>duracao</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td width="1">CaixaArvore</td>
+          <td>taxaPreempcao</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td width="1">CaixaBovino</td>
+          <td>duracao</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td width="1">CaixaBovino</td>
+          <td>taxaPreempcao</td>
+          <td>0.05</td>
+        </tr>
+        <tr>
+          <td width="1">CreditoComun</td>
+          <td>taxa</td>
+          <td>0.08</td>
+        </tr>
+        <tr>
+          <td width="1">CreditoComun</td>
+          <td>saldo</td>
+          <td>10000</td>
+        </tr>
+        <tr>
+          <td width="1">CreditoComun</td>
+          <td>duracao</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td width="1">CreditoComun</td>
+          <td>taxaPreempcao</td>
+          <td>0.05</td>
+        </tr>
+        <tr>
+          <td width="1">CreditoReflorestamento</td>
+          <td>taxa</td>
+          <td>0.08</td>
+        </tr>
+        <tr>
+          <td width="1">CreditoReflorestamento</td>
+          <td>saldo</td>
+          <td>10000</td>
+        </tr>
+        <tr>
+          <td width="1">CreditoReflorestamento</td>
+          <td>duracao</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td width="1">CreditoReflorestamento</td>
+          <td>taxaPreempcao</td>
+          <td>0.05</td>
+        </tr>
+      </table>
+      <p>Attributes of the vegetation. </p>
+      <p>Each attribute starting with <em><strong>mesXX</strong></em> is an array containing the necessary working days distributed on the 12 months of the year.</p>
+      <p>Attributes name ending with <strong><em>CQ</em></strong> are for With Fire (Com Queimada), and with <em><strong>SQ</strong></em> are for Without Fire (Sem Queimada). Example: custoSuprimirCQ = suppress cost With Fire and custoSuprimirSQ = suppress cost Without Fire.</p>
+      <table border="1" cellpadding="0" cellspacing="0">
+        <col width="194">
+        <col width="296">
+        <col width="230">
+        <tr>
+          <td width="194" align="center"><strong>Class</strong></td>
+          <td width="296" align="center"><strong>Attribute</strong></td>
+          <td width="230" align="center"><strong>Value</strong></td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaConservada</td>
+          <td>madeiraDeLeiPorHa</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaConservada</td>
+          <td>valorMadeira</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaConservada</td>
+          <td>custoSuprimirCQ</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaConservada</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 15 0    0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaConservada</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 30 0 0    0 10 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaConservada</td>
+          <td>custoSuprimirSQ</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaDegradada</td>
+          <td>madeiraDeLeiPorHa</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaDegradada</td>
+          <td>valorMadeira</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaDegradada</td>
+          <td>custoSuprimirCQ</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaDegradada</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 15 0    0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaDegradada</td>
+          <td>tempoRegeneracao</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaDegradada</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 30 0 0    0 10 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaDegradada</td>
+          <td>custoSuprimirSQ</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaIntermediaria</td>
+          <td>madeiraDeLeiPorHa</td>
+          <td>0.4</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaIntermediaria</td>
+          <td>valorMadeira</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaIntermediaria</td>
+          <td>custoSuprimirCQ</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaIntermediaria</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 15 0    0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaIntermediaria</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 30 0 0    0 10 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaIntermediaria</td>
+          <td>custoSuprimirSQ</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaSecundaria</td>
+          <td>custoSuprimirCQ</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaSecundaria</td>
+          <td>idadeTransicao</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaSecundaria</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    2 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaSecundaria</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 30 0 0    0 10 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#339933">FlorestaSecundaria</td>
+          <td>custoSuprimirSQ</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Capoeira</td>
+          <td>custoSuprimirCQ</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Capoeira</td>
+          <td>idadeTransicao</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Capoeira</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    2 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Capoeira</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 15 0 0    0 10 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Capoeira</td>
+          <td>custoSuprimirSQ</td>
+          <td>1200</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Juquira</td>
+          <td>custoSuprimirCQ</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Juquira</td>
+          <td>idadeTransicao</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Juquira</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    2 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Juquira</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 8 0 0 0    2 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Juquira</td>
+          <td>custoSuprimirSQ</td>
+          <td>600</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Macega</td>
+          <td>custoSuprimirCQ</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Macega</td>
+          <td>idadeTransicao</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Macega</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    2 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Macega</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 4 0 0 0    2 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#00FFFF">Macega</td>
+          <td>custoSuprimirSQ</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesPrepararSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    0 2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoCercar</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesManutencaoSQ</td>
+          <td>#(0 0 0 0 0 0 0 0.25    0.25 0.25 0.25 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesCercar</td>
+          <td>#(0 0 0 0 0 0 0.1 0.1    0.1 0.1 0.1 0.1)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoPlantarCQ</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>diasManutencaoCercas</td>
+          <td>0.6</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoPrepararSQ</td>
+          <td>440</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>limiteDegradacao</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>capacidadeCarga</td>
+          <td>1.4</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesPlantarCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    0 2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoManutencaoSQ</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesManutencaoCQ</td>
+          <td>#(0 0 0 0 0 0 0 0.25    0.25 0.25 0.25 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesPrepararCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    2 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    1 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoPrepararCQ</td>
+          <td>370</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesPlantarSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    0 2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    0 0.2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoManutencaoCQ</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoSuprimirSQ</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoManutencaoCercas</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">PastoLimpo</td>
+          <td>custoPlantarSQ</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>mesManutencaoSQ</td>
+          <td>#(0 0 0 0 0 0 0 0.25    0.25 0.25 0.25 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>mesCercar</td>
+          <td>#(0 0 0 0 0 0 0.1 0.1    0.1 0.1 0.1 0.1)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>diasManutencaoCercas</td>
+          <td>0.6</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>limiteDegradacao</td>
+          <td>66</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>capacidadeCarga</td>
+          <td>0.9</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>custoManutencaoSQ</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>mesManutencaoCQ</td>
+          <td>#(0 0 0 0 0 0 0 0.25    0.25 0.25 0.25 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    1 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    0 0.2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>custoSuprimirSQ</td>
+          <td>150</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCFF33">PastoMedio</td>
+          <td>custoManutencaoCercas</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>mesManutencaoSQ</td>
+          <td>#(0 0 0 0 0 0 0 0.25    0.25 0.25 0.25 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>mesCercar</td>
+          <td>#(0 0 0 0 0 0 0.1 0.1    0.1 0.1 0.1 0.1)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>diasManutencaoCercas</td>
+          <td>0.6</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>limiteDegradacao</td>
+          <td>130</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>capacidadeCarga</td>
+          <td>0.5</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>custoManutencaoSQ</td>
+          <td>120</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>mesManutencaoCQ</td>
+          <td>#(0 0 0 0 0 0 0 0.25    0.25 0.25 0.25 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    1 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    0 0.2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>custoSuprimirSQ</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td bgcolor="#99FF00">PastoSujo</td>
+          <td>custoManutencaoCercas</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>custoManutencaoUA_intensivo</td>
+          <td>140</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>custoManutencaoUA_basico</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>diasManuten&ccedil;aoDoCorralPorUA</td>
+          <td>0.2</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>taxaCrescimentoMedia</td>
+          <td>0.2</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>custoManutencaoUA_bom</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>mesManutencaoPor100UA_basico</td>
+          <td>#(4 4 4 4 6 4 4 4 4 4    6 4)</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>mesManutencaoPor100UA_intensivo</td>
+          <td>#(8 8 8 8 12 8 8 8 8    8 12 8)</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>custoManuten&ccedil;aoDoCorralPorUA</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>precoUA</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>Rebanho</td>
+          <td>mesManutencaoPor100UA_bom</td>
+          <td>#(5 5 5 5 6 5 5 5 5 5    6 5)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>mesColhetaSQ</td>
+          <td>#(0 0 0 5 0 0 0 0 0 0    0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>mesManutencaoSQ</td>
+          <td>#(2 2 1 0 0 0 0 0 0 0    0 2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>precoPorKg</td>
+          <td>0.7</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>custoPrepararSQ</td>
+          <td>920</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>idadeTransicao</td>
+          <td>0.9</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>custoManutencaoSQ</td>
+          <td>1100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>producaoPorHa</td>
+          <td>3500</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>mesPrepararSQ</td>
+          <td>#(0 0 0 0 0 0 3 0 0 0    0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCC00">RocaSemQueima</td>
+          <td>custoPlantarSQ</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>precoPorKg</td>
+          <td>0.7</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>custoPlantarCQ</td>
+          <td>170</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>custoColhetaSQ</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>custoPrepararSQ</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>idadeTransicao</td>
+          <td>0.9</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>mesPlantarCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    3 1)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>mesColhetaCQ</td>
+          <td>#(0 0 0 5 0 0 0 0 0 0    0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>mesManutencaoCQ</td>
+          <td>#(2 2 1 0 0 0 0 0 0 0    0 2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>mesPrepararCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 1 0    0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>custoColhetaCQ</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>producaoPorHa</td>
+          <td>3500</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>custoPrepararCQ</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>mesPlantarSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    3 1)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>custoManutencaoCQ</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC66">RocaTradicionalComPasto</td>
+          <td>proximaCobertura</td>
+          <td>PastoLimpo</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>precoPorKg</td>
+          <td>0.7</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>custoPlantarCQ</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>custoColhetaSQ</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>custoPrepararSQ</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>idadeTransicao</td>
+          <td>0.9</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>mesPlantarCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    3 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>mesColhetaCQ</td>
+          <td>#(0 0 0 5 0 0 0 0 0 0    0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>mesManutencaoCQ</td>
+          <td>#(2 2 1 0 0 0 0 0 0 0    0 2)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>mesPrepararCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 1 0    0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>custoColhetaCQ</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>producaoPorHa</td>
+          <td>3500</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>custoPrepararCQ</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>mesPlantarSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    3 1)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF9900">RocaTradicionalSemPasto</td>
+          <td>custoManutencaoCQ</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>idadeProducao</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesColhetaSQ</td>
+          <td>#(0 0 0 0 10 0 0 0 0    0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesManutencaoSQ</td>
+          <td>#(10 10 10 5 0 0 0 10    0 0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>precoPorKg</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoSuprimirCQ</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoPlantarCQ</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoColhetaSQ</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoPrepararSQ</td>
+          <td>920</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>idadeTransicao</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesPlantarCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    6 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesColhetaCQ</td>
+          <td>#(0 0 0 0 10 0 0 0 0    0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesManutencaoCQ</td>
+          <td>#(10 10 10 5 0 0 0 10    0 0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoManutencaoSQ</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesSuprimirSQ</td>
+          <td>#(0 0 0 0 0 0 0 15 0    0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesPrepararCQ</td>
+          <td>#(0 0 0 0 0 0 0 0 10    0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoColhetaCQ</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>producaoPorHa</td>
+          <td>1200</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoPrepararCQ</td>
+          <td>600</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesPlantarSQ</td>
+          <td>#(0 0 0 0 0 0 0 0 0 0    6 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesSuprimirCQ</td>
+          <td>#(0 0 0 0 0 0 0 15 0    0 0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoManutencaoCQ</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoSuprimirSQ</td>
+          <td>1200</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>mesPrepararSQ</td>
+          <td>#(0 0 0 0 0 0 3 0 0 0    0 0)</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FF0000">SAF</td>
+          <td>custoPlantarSQ</td>
+          <td>500</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <hr>
+      <h4> - <a href="amazDescription.htm">Back to </a><a href="amazDescription.htm">Model Description</a></h4>
+      <p>&nbsp;</p>
+      <h3>Software</h3>
+      <p>You can <a href="/logiciels/Amaz.zip" target="_blank">download</a> the Cormas model source code (Cormas 2012).</p>
+      <p>A quite similar<a href="../../pdf/relatorio-iLPF.pdf"> report in portugues</a> is available.</p>
+      <p>For more information, <a href="mailto:bommel@cirad.fr">contact 
+        
+        the corresponding author</a></p>
+
+    <!--#include virtual="/include/copyright_fr.inc" --> </td>
+
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+   <div align="right" class="texte"></div>
+
+  </td>
+
+ </tr>
+
+</table>
+
+</body>
+
+</html>
+

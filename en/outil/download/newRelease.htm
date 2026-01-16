@@ -1,0 +1,148 @@
+<html>
+
+
+
+<head>
+
+
+
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+
+
+
+<title>Cormas new release</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+
+
+
+
+<!--#include virtual="/include/script.inc" -->
+
+
+
+<link rel="stylesheet" href="/css/cormas.css" -->
+
+<style type="text/css">
+
+<!--
+
+.style1 {
+	color: #FF0000;
+	font-weight: normal;
+}
+
+-->
+
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+</head>
+
+
+
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+
+
+
+<!--#include virtual="haut.inc" -->
+
+
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+
+
+<tr>
+
+
+
+    <!--#include virtual="sommair.inc" -->
+
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+
+      <h1><br>
+
+        Cormas 2012 (Beta version)<br>
+
+        <br>
+
+      </h1>
+
+      <div>
+        <h2>Overview</h2>
+        <p>This is still a beta version that has already been tested, but  will certainly be further improved before becoming the official version  (scheduled for the next summer school).<br>
+          The major changes concern the Cormas kernel, based on a MVC  architecture (Model independent of his Views and of the way to Control it). The  design has been oriented in two directions: 1) to enable the development of  interactive simulations, and 2) to facilitate the collective design and  implementation of models.</p>
+        <ul>
+          <li>For the first point, the goal is to interact more easily  with the entities of a simulation (to move them manually, send them messages,  track them, &quot;zoom in&quot; on parts of space, ...) in order to  participate, alone or with others, on&nbsp;the run of a scenario.</li>
+          <li>For the 2nd point, we seek to facilitate the  implementation of an ABM. This is to simplify how to create new classes and to  specify attributes and their values. But it is also possible to draw simple  activitiy diagrams that are directly interpreted by Cormas.&nbsp;The goal is  not to avoid coding a model, but to organize plug-and-play activity nodes  (software blocks that were previously coded by the modeler) in order to graphically  design the behavior's rule of an agent. This diagram editor allows the creation  of new activities that are interpreted &ldquo;on the fly&rdquo; by Cormas. </li>
+        </ul>
+        <p>Some progress are still needed in both directions. These are the  first steps.</p>
+        <p>Several other changes were done, such as the development of a  sensitivity analysis module or the creation of new entities (networks, nodes  and arcs). Nevertheless, the models developed under the older Cormas versions  should be compatible with this new Cormas. Gradually, we will revise the  tutorials explaining how to design ABMs with Cormas.</p>
+        <p>So, if you want to test this new version, you're welcome! You can send  your feedback on the <a href="http://cormas.cirad.fr/en/reseaux/form/forumCormas.php">forum</a> (cormas@cirad.fr) indicating in the subject of your message [beta2012].</p>
+        <div>
+          <h2><span id="result_box5" lang="en">Installation</span></h2>
+        </div>
+        <h5>Install VW7.6nc</h5>
+        <p>Cormas has been developped for the <b><span class="style1"></span></b>7.6 non-commerciale version of VisualWorks&reg; 
+          
+          (<em>Cincom Systems</em>). VW must be  installed on your computer. <span id="result_box" lang="en">On the condition that you agree not to use Cormas for commercial purposes, you can directly<a href="../../../logiciel/vw7.6/vw7.6nc._PC-MAC.zip"> <b>download vw7.6nc</b></a> (version for Windows and for Mac os X) from Cormas site. It is recommended to unzip the archive directly under the <span class="style1">root</span> of your hard drive  to minimize configuration problems that may arise with recalcitrant  OS.</span></p>
+        <h5>Keep your old version of Cormas</h5>
+        <p><span id="result_box6" lang="en">If an older version of Cormas is already installed on your computer, you can keep this version. Just change the directory name 'cormas' to 'cormas_Old' (or whatever).</span></p>
+        <h5><span id="result_box7" lang="en">Install Cormas2012</span> for the first time</h5>
+        <p>Download the latest version of Cormas (<a href="../../../logiciel/cormas2012_Full.zip"><strong>cormas2012_Full.zip</strong></a>, 13 MB)  of  <span class="style1"><b>September 2012</b></span>. Unzip the package into the directory VW7.6nc. The subdirectory 'cormas' is created. It already contains the<em><strong> cormas.im</strong></em> file (instructions in English are detailed <a href="/lpdf/installCormas2012.pdf">here</a>). Copy your models in the subdirectory <span class="style1">VW7.6nc/cormas/Models/</span>.</p>
+        <h5><span lang="en">          Update Cormas2012</span></h5>
+        <p>          If Cormas2012 is already installed, do a simple update by unzipping the  <a href="../../../logiciel/cormas2012.zip"><strong>cormas2012.zip</strong></a> (1.6 MB) in <span class="style1">VW7.6nc/cormas/</span> directory. Open <em><strong>cormas.im</strong></em> and select the menu: '?' and 'Update Cormas'.</p>
+      </div>
+      <div> </div>
+
+      <div>
+        <h3>Acknowledgements</h3>
+      </div>
+
+      <div>Thank's to the first beta testers who faced the teething  problems (Rapha&egrave;le, Chlo&eacute;, Herm&egrave;s, Olivier and everyone of the 2011 ABMS summer  school)!</div>
+
+      <!--#include virtual="/include/copyright_fr.inc" -->
+
+    </td>
+
+
+
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+
+
+
+    <div align="right" class="texte"></div>
+
+
+
+    </td>
+
+
+
+  </tr>
+
+
+
+</table>
+
+
+
+</body>
+
+
+
+</html>
+
+
+

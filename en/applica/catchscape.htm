@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>CatchScape</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+  <td width="*" valign="top" bgcolor="#FFFFFF"> 
+ <p>&nbsp;</p><p>&nbsp;</p>
+      <h1>CatchScape. </h1>
+      <h1>Conflicts over water in Northern Thailand. </h1>
+      <p>An individual based viewpoint about catchment scale issues. </p>
+      <p>Nicolas Becu (ENGREF), Pascal Perez (CIRAD), Andrew Walker (ANU) </p>
+      <p align="left"><img src="../../images/applica/scape1.jpg" width="291" height="190" align="right">In 
+        April 1998, an extraordinary event took place in Northern Thailand. Five 
+        thousands lowland Thai farmers from the district of Chom Thong occupied 
+        and blocked one of the district's main roads. They were demanding the 
+        forced relocation of almost 20,000 hill-tribe villagers whom they accused 
+        to cause widespread environmental damage: deforestation, forest fires 
+        and streamflow drying. This event was the first sign of a global emerging 
+        conflict between lowland and upland farmers of Northern Thailand about 
+        natural resources management [Scoccimarro et al., 1999]. On one hand, 
+        upland settlers are accused of reducing streamflow, through deforestation, 
+        and, on the other hand, lowland farmers are increasing their demand over 
+        water. Moreover, the conflict is emphasized by ethnical differences between 
+        upland and lowland people. Regarding the complexity of the existing interactions, 
+        solutions may only arise from local negotiation. But stakeholders need 
+        descriptive, integrative and anticipating tools in order to share a common 
+        view and to reach a sound consensus. </p>
+      <h2 align="left"><img src="../../images/applica/scape2.jpg" width="373" height="280" align="left">Towards 
+        a fully integrative model</h2>
+      <p align="left"> In order to focus on social interactions and resources 
+        management, we have first defined the farmers as cognitive agents (Farmer) 
+        and then, the other elements that compose the farmer's environment: the 
+        crops (Crop), the river (River), the irrigation canal (Canal) and the 
+        village (Village) have been created as reactive entities. The Farmer has 
+        to manage four main resources and their interactions: water, labor, cash 
+        and land. The catchment has been schematically represented in order to 
+        sketch the different levels of organization of the relevant spatial units. 
+        First, the Land Units combine soil texture, soil depth and land slope. 
+        The second spatial representation concerns Land Use: Paddy, Upland and 
+        Forest. the Paddy zone is an irrigated area composed of a multitude of 
+        bounded terraces on which farmers mainly crop rice during the wet season. 
+        The Upland zone is constituted with rainfed plots spread all over the 
+        hillsides and cropped either with rice, soybean or vegetables. Forest, 
+        mainly used for gathering and religious ceremony, is described as a sempervirens 
+        sole type cover. </p>
+      <h2 align="left">Model description </h2>
+      <p align="left"><img src="../../images/applica/scape3.jpg" width="140" height="168" align="left">The 
+        unit cell (Plot) that composes the modelling grid (44*45), corresponds 
+        to a 2-rai farm plot (1 rai = 0.16 ha), which is the average size encountered 
+        in the Mae Uam catchment. Farmers are characterized by their family size 
+        and labor force. they can initially own upland and/or paddy plots according 
+        to their status. A paddy Plot belongs to a Canal. There are six Canals 
+        in the system, organized by pair and grouped into two irrigated schemes. 
+        A cognitive agent, called Manager, manages the weir controlling a Canal. 
+        The irrigated schemes belong to one zone each (Village) corresponding 
+        to the upstream and downstream groups of actual villages. The biophysical 
+        dynamics are simulated through a distributed water balance model and a 
+        hydraulic model [Perez et al., 2001]. First, Farmers choose the most profitable 
+        crop <img src="../../images/applica/scape4.jpg" width="297" height="308" align="right">according 
+        to their constraints in cash, labor force and water availability. Except 
+        for rice during the wet season, the Crop choice is based on a simplified 
+        Linear Programming model taking into account seasonal farming costs, water 
+        and labor requirements.This initial Crop choice may be modified if the 
+        growth duration doesn't reasonably fit within seasonal boundaries. The 
+        planting date is delayed as long as Farmer's cash and labor force can't 
+        match the land preparation and planting requirements. Rice cultivation 
+        is mostly motivated by food security strategies. Thus, within the model, 
+        Farmers are forced to plant rice at the beginning of the rainy season 
+        as long as their yield expectation doesn't reach their family needs, cash 
+        and labor resources permitting. At the beginning of the dry season, Farmers 
+        have to decide whether they allocate part of their labor force to off-farm 
+        activities or not. Finally, Farmers have to make decisions about land 
+        dynamics. Three opportunities are offered to the cognitive agents. First, 
+        Farmers can buy available Plots. Then, they can decide to install irrigation 
+        on rainfed Plots (located in the uplands), in order to farm them during 
+        the dry season. At last, Farmers can convert forest Plots into upland 
+        Plots. Paired Canals enter into an irrigation rotation as soon as the 
+        downstream canal faces water shortage. The upstream Manager is forced 
+        to accept the rotation but may stop it if the River's streamflow comes 
+        back to normal. Negotiations may involve Managers from different groups 
+        of paired Canals and, eventually, from different Villages. In this case, 
+        downstream Managers still send requests to the upstream ones but the later 
+        are not forced to respond positively. </p>
+      <h2 align="left">Preliminary results </h2>
+      <p align="left">Each scenario has been run over a 10-years period, corresponding 
+        to the existing climate data set . As several random functions are included 
+        in the algorithm, the scenarios have been repeated 20 times in order to 
+        estimate the outputs variability. The user can visualize the spatial and 
+        social dynamics during simulations according to different viewpoints (Cropping 
+        pattern, soil water balance, irrigation canal depletion, individual cash, 
+        conditions of negotiation…). At the end of the simulation, a set of indicators 
+        can be edited through evolution charts or export files [Bousquet et al., 
+        1999]. In the basic scenario, social inequity has dramatically increased 
+        in the catchment at the end of the 10-year period. Approximately 10% of 
+        the Farmers enjoy a positive cash position (Rich) and gradually increase 
+        their wealth. Some of them are rich enough to invest into upland irrigation 
+        (15 cases). Meanwhile, 40% of the Farmers (Poor) enter a permanent and 
+        worsening deficit position. The remaining 50% hardly maintain their economic 
+        buoyancy. Even if Farmers initially entitled with only 2 upland Plots 
+        partly feed the Poor category, the irrigated Plot location along the Canal 
+        largely contributes to its owner economic achievements. For example, during 
+        the dry season, the upstream Canal (C1) can secure enough water to irrigated 
+        approximately 65% of its Plots. But the downstream Canal (C6) can hardly 
+        support 20% of the connected Plots. In this case, as Farmers were endowed 
+        with the ability to learn from previous failures, gradually, the number 
+        of attempts to crop during the dry season decreases. </p>
+      <h2 align="left">References </h2>
+      <p align="left">Bousquet, F., O. Barreteau, C. Le Page, C. Mullon and J. 
+        Weber, An environmental modelling approach. The use of multi-agent simulations, 
+        In Advances in environmental and ecological modelling, (Eds, Blasco, F. 
+        and A. Weill), Elsevier, pp. 113-122, 1999.</p>
+      <p align="left"> Perez, P., N. Ardlie, P. Kuneepong, C. Dietrich, W.S. Merritt, 
+        CATCHCROP: Modeling crop yield and water demand for Integrated Catchment 
+        Assessment in Northern Thailand, Submitted to Environmental Modelling 
+        and Software, 2001. Scoccimarro, M., A. </p>
+      <p align="left">Walker, C. Dietrich, Schreider, A.J. Jakeman, H. Ross, A 
+        Framework fir Integrated Catchment Assessment in Northern Thailand, Environmental 
+        Modelling & Software 14, 567-577, 1999. </p> 
+      <p>For more information, contact the authors. <a href="mailto:nicolas_becu@yahoo.com">N. 
+        Becu</a>, <a href="mailto:pascal.perez@cirad.fr">P. Perez</a></p>
+   <!--#include virtual="/include/copyright_en.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

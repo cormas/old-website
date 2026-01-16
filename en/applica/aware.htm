@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>AWARE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+  <td width="*" valign="top" bgcolor="#FFFFFF"> 
+ <p>&nbsp;</p><p>&nbsp;</p>
+      <h1>AWARE</h1>
+      <h2 align="right"><img src="../../images/applica/awareLogo.jpg" width="135" height="101"></h2>
+      <h2>Agent-based Watershed Analyses for Resource and Economic Sustainability</h2>
+      <p>S. Farolfi (coordinator) - S. Perret - L. Erasmus - P. Bommel</p>
+      <p>The National Water Act of South Africa promotes integrated and decentralised 
+        water resource management as well as the set-up of new institutions. The 
+        main objective of the National Water Resource Strategy (NWRS) is to match 
+        and balance water demand with water supply, according to sustainability, 
+        equity and efficiency objectives.</p>
+      <p>The implementation of the Act and its' related NWRS face many social 
+        questions and economic uncertainties, owing to a context of water scarcity, 
+        profusion of users and uses, backlogs and inequalities in infrastructure 
+        and water supply. In this context it is believed that one of the key tasks 
+        that is incumbent upon Catchment Management Agencies and Committees (CMAs 
+        - CMCs) is to regulate and control water demand.</p>
+      <p>The approach set up for this purpose is the allocation of water use authorisations 
+        to users for which a licensing process is necessary. This a process raises 
+        a number of questions as to how to prioritise licensing between different 
+        use and users, when and how should the licenses be revised and what might 
+        be the impact of certain licensing strategies.</p>
+      <p>AWARE is a multi-agent systems model constructed in Cormas &copy; to 
+        investigate the economic efficiency, environmental sustainability and 
+        social desirability of some of the potential water management strategies 
+        that Catchment Management Committees could use. Although actual processes 
+        are unfolding and developing progressively, AWARE aims at investigating 
+        situations whereby once established, CMAs and CMCs would handle the licensing 
+        processes. It is a prospective simulation-oriented tool.</p>
+      <p>The perspectives and behaviour of the Catchment Management Agency (CMA) 
+        and the individual users are represented in AWARE. These individual users 
+        include communities, irrigation boards, forestry agencies, industries 
+        and mines.</p>
+      <p>The Steelpoort sub basin in the Olifants river catchments has been selected 
+        as study area because of its complete representation of the major sectors 
+        of water use and the availability of data. Attributes of the Steelpoort 
+        sub basin such as elevation means annual run-off. Land use has been obtained 
+        from a geographic information system (GIS). The average annual run-off 
+        is used to calculate the total volume of water that is available to the 
+        CMA, and includes water available for licensing for human utilisation 
+        and water available for the preservation of essential ecosystems (ecological 
+        reserve).</p>
+      <p>Water quotas are allocated and issued by the CMA every 5 years. When 
+        licenses are to be issued, water users (urban and rural communities, irrigation 
+        boards, livestock farmers, forestry agencies, industries and mines) send 
+        an estimate of water demand to the CMA. If the demand for water for which 
+        the CMA will issue licenses is higher than the water demanded by all the 
+        users, each user will receive a quota or license for the amount of water 
+        it has requested. If the water demanded is more than the volume to be 
+        licensed, the CMA prioritises the issuing of licenses according to one 
+        of five strategies below:</p>
+      <ol>
+        <li>No prioritisation. All users receive licenses for a percentage of 
+          the amount of water that they have requested. This percentage is the 
+          same for all users and depends on the overall available resource. The 
+          ecological reserve is not used in licensing.</li>
+        <li>Social strategy. Urban and rural communities are issued with licenses 
+          first. The rest of the users share remaining unlicensed water proportionately 
+          so that all users receive licenses for an equivalent percentage of what 
+          they have requested. The ecological reserve is not used in licensing.</li>
+        <li>Rural strategy. Smallholders as well as irrigation boards are prioritised 
+          after the rural communities have received licences. After these three 
+          user categories, remaining unlicensed water is shared between the remaining 
+          users. All such users receive licenses for equivalent percentages of 
+          what they had demanded. The ecological reserve is not used in licensing.</li>
+        <li>Ecological-economic strategy. Mines and industries are prioritised 
+          for water licensing. Thereafter the rest of the users share remaining 
+          unlicensed water. All such users receive a license for an equivalent 
+          percentage of the water they have demanded. The ecological reserve is 
+          not used in licensing.</li>
+        <li>Economic strategy. Again mines and industries are prioritised for 
+          water licensing. Water licenses are allocated to the rest of the users 
+          as such that all users receive a license for an equivalent percentage 
+          of the water they have demanded. If the water licensed to these users 
+          is less than what they have requested, the ecological reserve will also 
+          be licensed by the CMA.<br>
+        </li>
+      </ol>
+      <p>Each type of user is charged a sector-dependent price per unit of water 
+        for which they receive quotas. These quotas are used to calculate the 
+        annual income for the CMA. The CMA's income is therefore independent of 
+        the actual amount of water received by the users. In order to calculate 
+        the actual annual volume of water received by the users, a periodic fluctuation 
+        around the mean annual runoff, representative of the South African climate, 
+        was used. If the annual run-off is more than or equal to the amount of 
+        water licensed by the CMA, each user receives the same volume of water 
+        as per received license. If the annual run-off is less than the volume 
+        of water licensed by the CMA, each user receives a proportionate percentage 
+        of the water it has been granted a license for. This proportion is equivalent 
+        to the percent of water licensed by the CMA that is available in runoff 
+        in that particular year. </p>
+      <p>Each user makes an annual assessment of the amount of water it receives. 
+        If the water quota is less than satisfactory, a complaint of water shortage 
+        is sent to the CMA. A users level of satisfaction depends on its sector 
+        of water use. After five years, licenses for water use are reallocated 
+        (the basic time frame for the model is a year). </p>
+      <p>AWARE is useful for investigating the economic, environmental and social 
+        consequences of strategies that the CMAs may use in issuing licenses for 
+        water allocation. The model can be used to compare different strategies 
+        in terms of economic effectiveness, environmental sustainability and social 
+        desirability. Since AWARE is individual-based, it is useful in elucidating 
+        global outcomes resulting from individual behaviours that otherwise would 
+        only have become obvious though trial-error management. </p>
+      <p>AWARE can only be applied to situations for which the model was originally 
+        constructed. In other words the model cannot be used to investigate the 
+        effectiveness of the CMA's management strategies under economic scenarios 
+        of growth or stasis or social scenarios such as the effect of HIV/Aids 
+        on water demand since these factors have not been incorporated in the 
+        model.<br>
+      </p>
+      <p> For further information visit the <a href="http://www.ceepa.co.za/cma.html">CeePA 
+        web site</a> (The Centre for Environmental Economics and Policy in Africa) 
+        or <a href="mailto:sfarolfi@postino.up.ac.za">contact the authors</a>. 
+      </p>
+      <p>&nbsp;</p> 
+   <!--#include virtual="/include/copyright_en.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

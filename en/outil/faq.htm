@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>FAQ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" --> 
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr> <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <p> 
+      <h1> Cormas Frequently Asked Questions</h1>
+      <h2>&nbsp;</h2>
+      <p>&nbsp; </p>
+      <div align="center"> 
+        <table width="100%" border="1">
+          <tr bgcolor="#FF6633"> 
+            <td width="16%"> 
+              <div align="center"><font color="#000000"><b>Object</b></font></div>
+            </td>
+            <td width="30%"> 
+              <div align="center"><font color="#000000"><b>Question</b></font></div>
+            </td>
+            <td width="54%"> 
+              <div align="center"><font color="#000000"><b>Answer</b></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td width="16%"> Cormas Installation</td>
+            <td width="30%">Some trouble to make Cormas run under Windows</td>
+            <td width="54%"> 
+              <p>1. Copy the vw30 sub-directory of the CD on your hard disk (I 
+                assume C:\).<br>
+                2. Go into C:\vw30\Cormas and verify the properties of the cormas.im 
+                and cormas.cha files (they should NOT be read-only !!! Please 
+                uncheck the read-only button if necesseray).<br>
+                3. Idem for the whole C:\vw30\Cormas\Models sub-directory (uncheck 
+                "Read-Only" for all the files there) <br>
+                4. Double-click on C:\vw30\Cormas\cormas.im. Windows then is requesting 
+                the executable file to open this kind of *.im files. Click on 
+                "Others" and browse to select the file visual.exe in the C:\vw30\bin 
+                sub-directory.<br>
+                5. Once VisualWorks is open, from the main VisualLauncher window, 
+                in the "File" Menu, select "Set VisualWorks Home". Sometimes by 
+                default it is set to C:\vw30\Cormas. It should be C:\vw30. Correct 
+                it if necessary.</p>
+              <p><a href="easyInstalOnWin.htm">Here</a> you can find an easier 
+                way to install Cormas on Win.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="16%">Model installation</td>
+            <td width="30%">Where should I save a model I have downloaded ?</td>
+            <td width="54%">Often, the model you get, is a zip file. You must 
+              unzip it into the directory VW3/cormas/Models.<br>
+              A new directory with the same name as the model is created. It contains 
+              the &quot;.st&quot; file and other subdirectories</td>
+          </tr>
+          <tr> 
+            <td width="16%">point of view problem</td>
+            <td width="30%"> 
+              <p>When trying to change the pov, I have this kind of message: 'Unhandled 
+                exception: Message not understood: #includesKey:' UndefinedObject(Object)>>doesNotUnderstand: 
+                Legend>>addLegend:location: Legend>>majLegendes: GrilleModele>>majPdv: 
+                .....</p>
+            </td>
+            <td width="54%"> 
+              <p><font color="#666666">Export and import your model...<br>
+                For new pov to be taken into account in the legends, the two files 
+                myModel.st and myModel.ev need to be analyzed, which is done when 
+                importing a model... </font></p>
+              <p>This bug has been <b>corrected</b>; see <a href="buglist.htm#legend">here</a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td width="16%">Programming points of view ?</td>
+            <td width="30%">Can I program the choice of a points of view ?</td>
+            <td width="54%"> 
+              <p>Yes. It is necessary to give new value to the "activePov" attribute 
+                of the metaclass Entity. For example, if you want to switch randomly 
+                the pov on the cells every 5 steps, you must add the following 
+                block in the step:t method of the XXX model :<br>
+                <i>t \\ 5 = 0 ifTrue: [ XXX_Cell activePov: (Cormas selectRandomlyFrom: 
+                XXX_Cell pdvDict keys).<br>
+                </i><i><font color="#0000FF">"update the text of the grid bar" 
+                </font><br>
+                self space interface updateName. <br>
+                <font color="#0000FF">"to force the display of all the cells" 
+                </font><br>
+                self theXXX_Cells do: [:c | c defineVisualState; show]]. </i></p>
+            </td>
+          </tr>
+          <tr> 
+            <td width="16%">Programming the grid size ?</td>
+            <td width="30%">Can I program the size of the grid ?</td>
+            <td width="54%"> 
+              <p>Yes, but just in the first instruction of the init method (just 
+                after having opened the grid, if not the information contained 
+                in the cells can be lost). For ex:<br>
+                <i><b>init</b><br>
+                self gridSizeCol: 50 line: 20. self initCells.</i> ... then add 
+                the following method :<br>
+                <i><b>gridSizeCol: nbOfCol line: nbOfLine</b><br>
+                self space interface colonne value: nbOfCol. <br>
+                self space interface ligne value: nbOfLine. <br>
+                self space interface actionValideDimensionGrille</i><br>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h1>&nbsp;</h1>
+      <!--#include virtual="/include/copyright_en.inc" --> </td>
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+      <div align="right" class="texte"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

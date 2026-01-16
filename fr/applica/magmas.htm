@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>MagmaS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" --> 
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr> <!--#include virtual="sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>MagmaS</h1>
+      <h2>Couplage d'un syst&egrave;me dynamique hybride et d'un syst&egrave;me 
+        multi-agent pour mod&eacute;liser la gestion des effluents d'&eacute;levage 
+        &agrave; La R&eacute;union</h2>
+      <p>Manuel Martin, Eric Piquet, Christophe Le Page, Fran&ccedil;ois Guerrin 
+        (Cirad)</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><b><i>MagmaS</i></b> est une plateforme de simulation qui 
+        vise &agrave; aider &agrave; la gestion collective des effluents d'&eacute;levage 
+        pour minimiser les impacts environnementaux des activit&eacute;s de production 
+        animale. Cette plateforme comprends deux mod&egrave;les:</p>
+      <ul>
+        <li><b><i><img src="/images/applica/magmas1fr.gif" align="right" width="589" height="422"></i></b> 
+        </li>
+        <li>Un syst&egrave;me dynamique hybride appel&eacute; <i><b>Magma</b></i> 
+          (Guerrin 2000a,b) mod&eacute;lise la dynamique interne de syst&egrave;mes 
+          d'&eacute;levages porcins (production d'effluents et &eacute;pandage 
+          au niveau de l'exploitation agricole)</li>
+      </ul>
+      <ul>
+        <li>Techniquement, le couplage est r&eacute;alis&eacute; en utilisant 
+          le protocole Windows DLL</li>
+      </ul>
+      <ul>
+        <li>Un mod&egrave;le multi-agent appel&eacute; <i><b>Mens</b></i> sert 
+          &agrave; repr&eacute;senter les n&eacute;gociations entre agriculteurs 
+          (qui sont des instances du mod&egrave;le Magma) qui cherchent &agrave; 
+          &eacute;changer de la mati&egrave;re organique (MO). Ceux qui sont plut&ocirc;t 
+          cultivateurs ont en effet des besoins de fertilisants.</li>
+      </ul>
+      <p>L'utilisation de Magma se justifie par le fait qu'un syst&egrave;me dynamique 
+        hybride est bien adapt&eacute; pour repr&eacute;senter le fonctionnement 
+        d'une exploitation agricole. De la m&ecirc;me mani&egrave;re, l'utilisation 
+        de Mens se justifie par le fait que les syst&egrave;mes multi-agent sont 
+        particuli&egrave;rement bien adapt&eacute;s pour repr&eacute;senter des 
+        entit&eacute;s en interaction. </p>
+      <p>Mens se situe au niveau collectif, puisqu'il se concentre sur la repr&eacute;sentation 
+        des &eacute;changes d'information et de MO entre exploitations. A l'oppos&eacute;, 
+        Magma se situe au niveau individuel, puisqu'il int&egrave;gre tous les 
+        aspects relatifs &agrave; la gestion de la MO au niveau d'une exploitation: 
+        production par des syst&egrave;mes d'&eacute;levage &eacute;ventuellement 
+        vari&eacute;s, &eacute;pandage sur les cultures, transformations de la 
+        MO (par exemple compostage), pollutions &eacute;ventuelles lorsque les 
+        unit&eacute;s de stockage des effluents d&eacute;bordent, ou lors de sur-&eacute;pandages. 
+      </p>
+      <p>Le couplage de Magma (implement&eacute; sous le logiciel Vensim) et Mens 
+        (implement&eacute; sous Cormas) est r&eacute;alis&eacute; au niveau de 
+        MagmaS en utilisant une fonctionnalit&eacute; de simulation de Vensim 
+        appel&eacute; &quot;gaming": pour chaque journ&eacute;e, Magma simule 
+        la dynamique interne des stocks de MO de chacune des exploitations, qui 
+        r&eacute;sulte dans des surplus ou des d&eacute;ficits (besoins des cultures 
+        en MO). Tous les 7 pas de temps de simulation (chaque semaine), Mens intervient 
+        alors pour simuler des transactions de MO entre exploitations. Ces transactions 
+        d&eacute;pendent bien s&ucirc;r des surplus et des d&eacute;ficits de 
+        chaque exploitations que Magma transmet &agrave; Mens. A l'issue de ces 
+        transactions, le flux de donn&eacute;es repart dans le sens oppos&eacute;: 
+        les bilans en terme de MO sont r&eacute;-inject&eacute;s dans le mod&egrave;le 
+        Magma. </p>
+      <p>Pour plus d'information, <a href="mailto:manuel.martin@cirad.fr">contacter 
+        l'auteur</a>.</p>
+      <h2>References</h2>
+      <p>Guerrin, F. (2000a). Simulation of actions to help animal wastes management 
+        atthe farm level. In: MCPL'2000, IFAC / IFIP / IEEE 2nd Conf. on Management 
+        and Control of Production and Logistics. Grenoble (F), 5-8 July 2000, 
+        CD Rom : Session R6, P135. </p>
+      <p>Guerrin,F. (2000b). Magma : a model to help animal manure management 
+        at the farm level. In: Agricontrol'2000, Int. Conf. On Modelling and Control 
+        in Agriculture, Horticulture and Post-Harvest Processing. Wageningen (NL), 
+        10-12 July 2000, p.159-164. </p>
+      <p>Piquet, E. et Le Page C. (2001). Couplage des logiciels VisualWorks etVensim 
+        sous Windows : DDE ou DLL ? Rapport Cirad TERA n° 18/01, June 2001, 14 
+        pages. </p>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+      <div align="right" class="texte"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

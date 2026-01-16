@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>FAQ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="../outil/haut.inc" --> 
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr> <!--#include virtual="../outil/sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <p> 
+      <h1> La Foire Aux Questions de Cormas</h1>
+      <h2>&nbsp;</h2>
+      <p>La Foire Aux Questions (ou Frequently Asked Questions) est une liste 
+        de question-r&eacute;ponses fr&eacute;quentes sur Cormas et SmallTalk. 
+      </p>
+      <div align="center"> 
+        <table width="100%" border="1">
+          <tr bgcolor="#FF6633"> 
+            <td width="16%"> 
+              <div align="center"><font color="#000000"><b>Objet</b></font></div>
+            </td>
+            <td width="36%"> 
+              <div align="center"><font color="#000000"><b>Question</b></font></div>
+            </td>
+            <td width="48%"> 
+              <div align="center"><font color="#000000"><b>R&eacute;ponse</b></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td width="16%"> Cormas Installation</td>
+            <td width="30%">Some trouble to make Cormas run under Windows</td>
+            <td width="54%"> 
+              <p>1. Copy the vw30 sub-directory of the CD on your hard disk (I 
+                assume C:\).<br>
+                2. Go into C:\vw30\Cormas and verify the properties of the cormas.im 
+                and cormas.cha files (they should NOT be read-only !!! Please 
+                uncheck the read-only button if necesseray).<br>
+                3. Idem for the whole C:\vw30\Cormas\Models sub-directory (uncheck 
+                "Read-Only" for all the files there) <br>
+                4. Double-click on C:\vw30\Cormas\cormas.im. Windows then is requesting 
+                the executable file to open this kind of *.im files. Click on 
+                "Others" and browse to select the file visual.exe in the C:\vw30\bin 
+                sub-directory.<br>
+                5. Once VisualWorks is open, from the main VisualLauncher window, 
+                in the "File" Menu, select "Set VisualWorks Home". Sometimes by 
+                default it is set to C:\vw30\Cormas. It should be C:\vw30. Correct 
+                it if necessary.</p>
+              <p><a href="easyInstalOnWin.htm">Here</a> you can find an easier 
+                way to install Cormas on Win.</p>
+            </td>
+          </tr>
+          <tr> 
+            <td width="16%">Model installation</td>
+            <td width="30%">Where should I save a model I have downloaded ?</td>
+            <td width="54%">Often, the model you get, is a zip file. You must 
+              unzip it into the directory VW3/cormas/Models.<br>
+              A new directory with the same name as the model is created. It contains 
+              the &quot;.st&quot; file and other subdirectories</td>
+          </tr>
+          <tr> 
+            <td width="16%"> point of view problem</td>
+            <td width="36%">When trying to change the pov, I have this kind of 
+              message: 'Unhandled exception: Message not understood: #includesKey:' 
+              UndefinedObject(Object)>>doesNotUnderstand: Legend>>addLegend:location: 
+              Legend>>majLegendes: GrilleModele>>majPdv: .....</td>
+            <td width="48%"> 
+              <p><font color="#666666">Export and import your model...<br>
+                For new pov to be taken into account in the legends, the two files 
+                myModel.st and myModel.ev need to be analyzed, which is done when 
+                importing a model... </font></p>
+              <p>This bug has been <b>corrected</b>; see <a href="buglist.htm#legend">here</a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td width="16%" height="167">Programmation des points de vue ?</td>
+            <td width="36%" height="167">Je souhaiterais pouvoir programmer les 
+              points de vue.</td>
+            <td width="48%" height="167"> 
+              <p>Oui. Il suffit de modifier l'attribut activePov défini au niveau 
+                de la metaclass Entity. Si on veut switcher aléatoirement le pov 
+                sur les cellules tous les 5 pas de temps, ajouter le bloc suivant 
+                dans la méthode step:t du modèle XXX:<br>
+                <i>t \\ 5 = 0 ifTrue: [ XXX_Cell activePov: (Cormas selectRandomlyFrom: 
+                XXX_Cell pdvDict keys).<br>
+                </i><i><font color="#0000FF">"maj infos dans la barre sup. de 
+                la grille spatiale" </font><br>
+                self space interface updateName. <br>
+                <font color="#0000FF">"pour forcer le réaffichage de toutes les 
+                cellules" </font><br>
+                self theXXX_Cells do: [:c | c defineVisualState; show]]. </i></p>
+            </td>
+          </tr>
+          <tr> 
+            <td width="16%" height="164">Programmation des dimensions de la grille?</td>
+            <td width="36%" height="164">Je souhaiterais pouvoir programmer les 
+              dimensions de la grille.</td>
+            <td width="48%" height="164"> 
+              <p>Oui, mais au d&eacute;but de la m&eacute;thode init (juste apr&egrave;s 
+                avoir ouvert la grille; sinon, les infos des cellules seraient 
+                perdues). Par example:<br>
+                <i><b>init</b><br>
+                self gridSizeCol: 50 line: 20. self initCells.</i> ... Ajouter 
+                alors la m&eacute;tode suivante:<br>
+                <i><b>gridSizeCol: nbOfCol line: nbOfLine</b><br>
+                self space interface colonne value: nbOfCol. <br>
+                self space interface ligne value: nbOfLine. <br>
+                self space interface actionValideDimensionGrille</i> </p>
+            </td>
+          </tr>
+          <tr> 
+            <td width="16%">&nbsp;</td>
+            <td width="36%">&nbsp;</td>
+            <td width="48%">&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+      <p>&nbsp;</p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+      <div align="right" class="texte"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

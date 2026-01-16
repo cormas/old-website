@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>Spatialized Prisoner's Dilemma</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" -->
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp;</p>
+      <h1>Spatialized Prisoner's Dilemma</h1>
+      <h2>&nbsp;</h2>
+      <img src="../../images/applica/dpsMovie.gif" width="206" height="219" align="right"> 
+      <p>A cell stands here for a player in the famous game theory &quot;Prisoner's 
+        Dilemma&quot; context. The payoff for the different configurations are 
+        such that from an individualist point of view, it's better to defect (whatever 
+        the strategy of the opponent, the best individual payoff corresponds to 
+        the &quot;defect&quot; strategy), whereas from a collective point of view, 
+        it's better to cooperate (the sum of the two individual payoffs is maximal 
+        for the configuration &quot;cooperate&quot; vs &quot;cooperate&quot;).</p>
+      <p>The payoffs matrix is the following:</p>
+      <table width="43%" border="1">
+        <tr> 
+          <td width="21%">&nbsp;</td>
+          <td width="25%"> 
+            <div align="center">Cooperation</div>
+          </td>
+          <td width="54%"> 
+            <div align="center">Defection</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="21%"> 
+            <div align="center">Cooperation</div>
+          </td>
+          <td width="25%"> 
+            <div align="center">100; 100</div>
+          </td>
+          <td width="54%"> 
+            <div align="center">0; 185</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="21%"> 
+            <div align="center">Defection</div>
+          </td>
+          <td width="25%"> 
+            <div align="center">185; 0</div>
+          </td>
+          <td width="54%"> 
+            <div align="center">0; 0</div>
+          </td>
+        </tr>
+      </table>
+      <p>With a Moore neighbourgood (8), the boundaries are &quot;periodic&quot; 
+        (toroidal spatial grid). At each time-step, the strategy of the players 
+        being set, each player perform 9 games: with its 8 neighbours and also 
+        with itself. The total payoff is then compared to the total payoffs of 
+        the 8 neighbours players If one of them is higher than the personal one, 
+        then the corresponding strategy will be adopted for the next time-step. 
+        In such a context, at the global level, does one of the two strategies 
+        invade the other ???... The movie displayed here shows the intrusion of 
+        one defector in a world of cooperators... The grid size is 101x101 and 
+        the defector is initially located in the middle of the grid. The stable 
+        defectors appear in red, or yellow for previous cooperators just turning 
+        into defectors. The stable cooperators appear in blue, or in green for 
+        previous defectors just turning into cooperators. </p>
+      <ul>
+        <li> For more details about this cellular automata, look at the following 
+          paper: Nowak, M.A. and May, R.M. 1992. Evolutionary games and spatial 
+          chaos. Nature, 359: 826-829.<br>
+        </li>
+      </ul>
+      <ul>
+        <li>Download the Cormas model (<a href="/logiciel/dps.zip">zipfile</a>, 
+          3Ko). If you have any question about it, <a href="mailto:green@cirad.fr">contact 
+          the authors</a>.</li>
+      </ul>
+      <!--#include virtual="/include/copyright_en.inc" -->
+    </td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

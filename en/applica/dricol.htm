@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Emergence of Resource-Sharing Conventions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="haut.inc" -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+  <!--#include virtual="sommair.inc" --> 
+  <td width="*" valign="top" bgcolor="#FFFFFF"> 
+ <p>&nbsp;</p>
+      <h1>Dricol</h1>
+      <h2>Emergence of Resource-Sharing Conventions</h2>
+      <p>Bruno Locatelli, Cirad ; Olivier Th&eacute;baud, Ifremer.</p>
+      <img src="/images/applica/dricol.gif" width="203" height="206" align="right" vspace="10" hspace="10" alt="Interface de Dricol"> 
+      <p>In his article entitled "Spontaneous order", Sugden (1989) analyses the 
+        conditions under which collective rules regulating access to a natural 
+        resource can evolve and maintain themselves without conscious design, 
+        and without external enforcement. The author adopts a critical perspective 
+        with respect to classical game-theoretic approaches to this issue. According 
+        to Sugden, the problem of access rules is a typical case of co-ordination 
+        games with more than one uniquely rational outcome, with the ensuing difficulties 
+        for classical game-theory in predicting which outcome may obtain: agents 
+        following a particular rule will be guided by something more than the 
+        axioms of rational choice as normally understood by economists.</p>
+      <p>As an illustration, he cites the example of a self-enforcing resource-sharing 
+        arrangement on the coast of Yorkshire, in England, where people compete 
+        for the gathering of driftwood brought to the shore by storms. The arrangement, 
+        he stresses, can be looked at from the perspective of its efficiency properties. 
+        The allocation of a stretch of the shoreline to the first who gets there 
+        avoids the allocation of too much labour to the wood collection activity; 
+        the ownership rights to properly marked wood piles avoids people having 
+        to monitor and protect their piles. In effect, the arrangement thus enhances 
+        the efficiency of driftwood collection, relatively to a free-for-all situation.</p>
+      <p>Sugden is interested in the processes leading to the emergence of such 
+        conventions in a collective, without recurring to the hypothesis of an 
+        external, over-arching, agent capable of enforcing a particular rule. 
+        He focuses his analysis on the process by which conventions evolve in 
+        a collective, raising the questions of (i) how a convention starts to 
+        evolve, i.e. significantly more people follow it than follow any other 
+        convention; and (ii) what self-reinforcing processes lead the convention 
+        to become established in the collective. Sugden analyses various factors 
+        which may help to respond to these two questions, including the prominence 
+        of certain forms of co-ordination and the role of common experience in 
+        this respect, as well as the versatility of particular conventions.</p>
+      <p>We tried to build an agent-based simulation model for the analysis of 
+        these questions. Agent-based modelling of social phenomena has developed 
+        rapidly in recent years. The approach appears particularly well-suited 
+        to the type of issues considered by Sugden. It allows to tackle explicitly 
+        questions of process and emergence in the economy, which have presented 
+        difficulties to traditional modelling in economics. In particular, it 
+        allows the explicit representation of a heterogeneous collective of agents 
+        of variable sizes, and the analysis of its evolution at both individual 
+        and collective levels.</p>
+      <p>The model has three main components: 1. a spatial grid ("the beach"); 
+        2. a passive object ("driftwood") which is distributed in the grid, any 
+        single cell having the capacity to store an unlimited number of pieces 
+        of wood; 3. social agents ("driftwood collectors") having the capacity 
+        to move over the spatial grid, and to collect driftwood.</p>
+      <p>The emphasis is on simulating various processes by which the convention 
+        regarding the property of marked wood-piles could become established in 
+        this metaphorical model. The main focus is on strategies of avoidance 
+        of wood piles, and their diffusion in the collective. For this reason, 
+        relatively little use is made here of the rules regarding collection behaviour 
+        and the resolution of conflicts, other than as a means to allocate wood 
+        where these conflicts occur (following the principles described above). 
+        In this, the analysis presented here departs from Sugden's article. A 
+        further step in the use of the model would be to grant more attention 
+        to the way in which agents decide of the strategy to adopt in case of 
+        conflict, depending on their experience of past interactions with others, 
+        an issue to which this author devotes special attention.</p>
+      <p>With our model, various scenarios were simulated and two general mechanisms 
+        were analysed, with variants in their definition: (i) peer pressure as 
+        a control on individual behaviour; (ii) imitation as a determinant of 
+        individual strategies. </p>
+      <h2 align="justify"> UML formalism</h2>
+      <p align="justify">This model has been redesigned during training sessions, 
+        using UML : </p>
+      <p align="left">Class diagram (analysis phase), <em>click to enlarge <a href="../../images/applica/Dricol/DricolClassDiag-Analysis.jpg" target="_blank"><img src="../../images/applica/Dricol/DricolClassDiag-Analysis_t.jpg" width="150" height="150" border="1" align="top"></a></em></p>
+      <p align="center">&nbsp;</p>
+      <p align="left">Class diagram (design phase), <em>click to enlarge</em> 
+        <em><a href="../../images/applica/Dricol/DricolClassDiag-Design.jpg" target="_blank"><img src="../../images/applica/Dricol/DricolClassDiag-Design_t.jpg" width="150" height="150" border="1" align="top"></a></em></p>
+      <p align="center">&nbsp;</p>
+      <p align="left">Class diagram (implementation phase), <em>click to enlarge</em> 
+        <em><a href="../../images/applica/Dricol/DricolClassDiag-Implementation.jpg" target="_blank"><img src="../../images/applica/Dricol/DricolClassDiag-Implementation_t.jpg" width="150" height="150" border="1" align="top"></a></em></p>
+      <p align="left">State-transition diagram for attitude changes :</p>
+      <p align="left"><img src="../../images/applica/Dricol/etat-transition.jpg" width="474" height="151"></p>
+      <p align="left">Activity diagram for &quot;move&quot; activity : <a href="../../images/applica/Dricol/activity.jpg" target="_blank"><img src="../../images/applica/Dricol/activity_t.jpg" width="220" height="237" border="1" align="top"></a></p>
+      <p align="left"></p>
+      <p>&nbsp;</p>
+      <h2>Reference </h2>
+   <p>Sugden, R. (1989). Spontaneous order. <i>Journal of economic perspectives</i>, 
+        3 (4): 85-97.</p>
+      <p>Read the full paper on <a href="http://jasss.soc.surrey.ac.uk/4/2/3.html">JASSS</a>.</p>
+      <p>You can download this <a href="../../logiciel/dricol.zip" target="_blank">model</a> 
+        (zip file, 4 ko) and a <a href="../../logiciel/howToRunDricol.avi" target="_blank">video</a> 
+        showing how to run the model (avi file, 15 Mo).</p>
+      <p>For more information, contact <a href="mailto:bruno.locatelli@wanadoo.fr">Bruno 
+        Locatelli</a> or <a href="mailto:Olivier.Thebaud@ifremer.fr">Olivier Th&eacute;baud</a> 
+        (or P. Bommel or C. Le Page).</p>
+   <!--#include virtual="/include/copyright_en.inc" -->
+	</td>
+  <td width="15" valign="top" bgcolor="#FFFFFF"> 
+   <div align="right" class="texte"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

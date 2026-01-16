@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<title>CatchScape</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--#include virtual="/include/script.inc" -->
+<link rel="stylesheet" href="/css/cormas.css" -->
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<!--#include virtual="/fr/applica/haut.inc" --> 
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr> <!--#include virtual="/fr/applica/sommair.inc" --> 
+    <td width="*" valign="top" bgcolor="#FFFFFF"> 
+      <p>&nbsp; 
+      <h1>CatchScape</h1>
+      <h2>La gestion de l'eau : Une problématique conflictuelle dans les bassins 
+        versants du nord Thaïlande</h2>
+      <p>Nicolas Becu (ENGREF), Pascal Perez (CIRAD), Andrew Walker (RSPAS-ANU) 
+      </p>
+      <p><img src="../../images/applica/scape1.jpg" width="291" height="190" align="right">En 
+        avril 1998, un évènement extraordinaire eut lieu dans le nord de la Thaïlande. 
+        Cinq mille paysans Thai vivant dans les plaines du district de Chom Thong 
+        manifestaient leur colère et bloquaient l'une des routes principales. 
+        Ils demandaient la délocalisation forcée de près de 20 000 villageois 
+        des tribus vivant dans le haut du bassin, les accusant d'être responsable 
+        de grands déséquilibres écologiques : déforestation, feux de forêt et 
+        assèchement des rivières durant la saison sèche. Ce conflit se retrouve 
+        à l'état latent dans de nombreux autres bassins de cette région et constitue 
+        un enjeu important pour les institutions locales (Walker et Scoccimarro, 
+        1999). CatchScape propose une représentation de ces systèmes, en se focalisant 
+        sur les aspects de gestion de l'eau. L'objectif du modèle est de servir 
+        d'outil d'aide à la négociation pour les acteurs locaux afin qu'ils puissent 
+        définir des solutions concertées. </p>
+      <p>&nbsp;</p>
+      <h2><img src="../../images/applica/scape2.jpg" width="373" height="280" align="left">Vers 
+        un modèle intégré…</h2>
+      <p>L'une des idées fortes de ce travail était de rompre avec l'approche 
+        purement physique de la représentation d'un bassin versant et de replacer 
+        les agents fermiers au centre du système. Les différents modules du système, 
+        bio-physiques, sociaux ou économiques sont donc greffés autour de l'agent 
+        central : l'exploitation agricole familiale. La démarche de modélisation 
+        a consisté à définir pour chacune des ressources gérées par les agents 
+        la dynamique de cette ressource et ses interactions avec les autres dynamiques. 
+        Quatre ressources ont été intégrées dans le modèle : l'Eau, le Travail, 
+        l'Argent et le Foncier.</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h2>Structure de CatchScape </h2>
+      <p><img src="../../images/applica/scape3.jpg" width="140" height="168" align="left">La 
+        grille du modèle est une vue aérienne du bassin versant. Chaque cellule 
+        est caractérisée par un type d'occupation du sol (forêt, zone de cultures 
+        pluviales, bas fond irrigué) et par un type géomorphologique de sol. L'espace 
+        est à géométrie variable permettant d'avoir des dimensions de cellules 
+        à l'échelle des parcelles agricoles. Les agents agriculteurs sont définis 
+        par une série d'attributs, notamment ceux définissant la quantité de chaque 
+        ressource à leur disposition. A l'initialisation, les agents reçoivent 
+        les <img src="../../images/applica/scape4.jpg" width="297" height="308" align="right">quantités 
+        de ressources correspondant à leur système de production, puis ces quantités 
+        évoluent en fonction des choix effectués. La dynamique bio-physique est 
+        constituée d'une part d'un modèle de bilan hydrique distribué, permettant 
+        de calculer l'humidité du sol sur chaque parcelle et le stress éventuel 
+        des cultures, et d'autre part d'un modèle hydraulique simulant l'écoulement 
+        de l'eau dans la rivière puis dans les canaux d'irrigations. Les canaux 
+        sont gérés par des chefs de barrage qui déterminent la quantité d'eau 
+        prélevée dans la rivière. La gestion individuelle consiste à choisir une 
+        culture en début de saison, en privilégiant le riz qui est auto- consommé, 
+        à fournir du travail (familial, entre-aide ou rémunéré) pour les activités 
+        entreprises, à gérer son portefeuille (dépenses familiales, achat d'intrants…) 
+        et occasionnellement à acheter de nouvelles terres ou d'autres améliorations 
+        foncières. La gestion de l'eau à l'échelle individuelle consiste uniquement 
+        à irriguer ses parcelles en fonction de la quantité disponible dans les 
+        canaux. Lors de la saison sèche, lorsque l'offre en eau devient insuffisante, 
+        les chefs de barrages ont la possibilité de collaborer et de négocier 
+        entre eux, afin de satisfaire leur demande. Plusieurs types d'entre aide 
+        sont possibles : des tours d'eau entre deux canaux d'un même périmètre 
+        ou bien des négociations entre deux périmètres afin de diminuer les prélèvements 
+        en amont. </p>
+      <h2>Premiers résultats … </h2>
+      <p>Les premiers essais montrent bien une dominance des parties amont quant 
+        à la gestion de l'eau et ce d'autant plus que les comportements sont individualistes 
+        et que la gestion collective est négligée. CatchScape apparaît comme une 
+        bonne base pour explorer le fonctionnement du système et améliorer le 
+        modèle selon les principes de la modélisation d'accompagnement (Bousquet 
+        et al., 1997). Différents types de scénarios peuvent être simulés tels 
+        que des fluctuations de prix, des impacts climatiques ou encore d'autres 
+        modes de gestion de l'eau. L'étape suivante de ce travail consiste à utiliser 
+        ce modèle auprès des acteurs locaux et de s'en servir, directement ou 
+        via un support de communication plus adapté, comme outil d'aide à la négociation. 
+      </p>
+      <p>Pour en savoir plus, <a href="mailto:nicolas_becu@yahoo.com">contactez 
+        les auteurs</a>. </p>
+      <h2>Références </h2>
+      <p>Bousquet, F., Barreteau, O., Mullon, C. et Weber, J., 1996. Modélisation 
+        d'Accompagnement: Systèmes Multi-Agents et Gestion des Ressources Renouvelables. 
+        Quel environnement au XXIème siècle ? Environnement, maîtrise du long 
+        terme et démocratie, Abbaye de Fontevraud. </p>
+      <p>Walker, A., Scoccimarro, M., 1999. A ressource Management Unit Approach 
+        to Catchment Analysis in Northern Thailand. iCAM Working Paper (2), Australian 
+        National University. </p>
+      <!--#include virtual="/include/copyright_fr.inc" --> </td>
+    <td width="15" valign="top" bgcolor="#FFFFFF"> 
+      <div align="right" class="texte"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
