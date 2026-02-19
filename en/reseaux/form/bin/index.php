@@ -20,13 +20,13 @@ return $ret_str;
 }
 
 // How many characters in the code
-$_SESSION['rand_value'] = rand_code(4);
+$_SESSION[rand_value] = rand_code(4);
 
 ?>
 
 <table width="500" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src="imagecode.php?<?=$_SESSION['rand_value'];?>">
+    <td><img src="imagecode.php?<?=$_SESSION[rand_value];?>">
       <form action="check.php" method="POST" name="frmImg" target="_self">
         <p> <font size="2" face="Arial">Enter the code here: </font> 
           <input name="txtcode" type="text" size="30"> </p>

@@ -38,10 +38,10 @@ echo "--------End of function ----------<br>";
   }
   else{
        echo "The verification code is not correct.";
-	   echo "<a href='http://cormas.cirad.fr/en/reseaux/form/forumCormas.php'>Back</a>.";
+	   echo "<a href=http://cormas.cirad.fr/en/reseaux/form/forumCormas.php>Back</a>.";
 	   // Register value of the fields to the session
-	   $_SESSION['emailS'] = $emailS;
-	   $_SESSION['nomS'] = $nomS;
+	   $_SESSION[emailS] = $emailS;
+	   $_SESSION[nomS] = $nomS;
 
 	   $boncode = false;
   }
@@ -85,7 +85,7 @@ session_destroy();*/
 
 
 
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
 
 <!--#include virtual="haut.inc" --> 
 

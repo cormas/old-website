@@ -1,0 +1,15 @@
+{
+  "models": [
+    {
+      "title": "CodeLlama (Ollama)",
+      "provider": "ollama",
+      "model": "codellama",
+      "apiBase": "http://localhost:11435"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "provider": "ollama",
+    "model": "codellama",
+    "apiBase": "http://localhost:11435"
+  }
+}

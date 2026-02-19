@@ -16,7 +16,7 @@
 
 </head>
 
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('http://cormas.cirad.fr/images/en/accueil_r.gif','http://cormas.cirad.fr/images/en/demarche_r.gif','http://cormas.cirad.fr/images/en/logiciel_r.gif','http://cormas.cirad.fr/images/en/applications_r.gif','http://cormas.cirad.fr/images/en/biblio_r.gif','http://cormas.cirad.fr/images/en/formation_r.gif','http://cormas.cirad.fr/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(http://cormas.cirad.fr/images/en/accueil_r.gif,http://cormas.cirad.fr/images/en/demarche_r.gif,http://cormas.cirad.fr/images/en/logiciel_r.gif,http://cormas.cirad.fr/images/en/applications_r.gif,http://cormas.cirad.fr/images/en/biblio_r.gif,http://cormas.cirad.fr/images/en/formation_r.gif,http://cormas.cirad.fr/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
 
 <!--#include virtual="haut.inc" -->
 
@@ -56,7 +56,7 @@ mail("bommel@cirad.fr, cormas-request@cirad.fr", " ", $message,
 
   	Bonjour $nomU ,". "<br>". 
 
-	"Votre adresse électronique ( $emailU ) a été enlevée de la liste cormas. </td></tr>" ;
+	"Votre adresse &eacute;lectronique ( $emailU ) a &eacute;t&eacute; enlev&eacute;e de la liste cormas. </td></tr>" ;
 
   echo "</table>";     ?>
 

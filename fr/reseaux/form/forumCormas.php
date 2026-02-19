@@ -20,7 +20,7 @@ return $ret_str;
 // End function rand_code
 
 // Our code has 4 digits.
-$_SESSION['rand_value'] = rand_code(4);
+$_SESSION[rand_value] = rand_code(4);
 ?>
 <html>
 
@@ -40,7 +40,7 @@ $_SESSION['rand_value'] = rand_code(4);
 
 </head>
 
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
 
 <?include("../haut.inc")?>
 
@@ -55,10 +55,10 @@ $_SESSION['rand_value'] = rand_code(4);
 
       <h1>Le forum Cormas</h1>
       <h2>Sujet</h2>
-      <p>Nous souhaitons que le d&eacute;veloppement de Cormas se fasse de mani&egrave;re collective. Pour partager tout type d'information &agrave; propos de la plateforme de simulation Cormas, d'un mod&egrave;le multi-agent particulier d&eacute;velopp&eacute; avec Cormas, ou encore &agrave; propos de la simulation multi-agent en g&eacute;n&eacute;ral, vous &ecirc;tes invit&eacute;s &agrave; utiliser la liste de diffusion Cormas. Les contributions peuvent avoir pour sujet : </p>
+      <p>Nous souhaitons que le d&eacute;veloppement de Cormas se fasse de mani&egrave;re collective. Pour partager tout type dinformation &agrave; propos de la plateforme de simulation Cormas, dun mod&egrave;le multi-agent particulier d&eacute;velopp&eacute; avec Cormas, ou encore &agrave; propos de la simulation multi-agent en g&eacute;n&eacute;ral, vous &ecirc;tes invit&eacute;s &agrave; utiliser la liste de diffusion Cormas. Les contributions peuvent avoir pour sujet : </p>
       <ul>
-        <li>tout aspect informatique relatif &agrave; Cormas (bugs, demandes d'explications, suggestions de modifications, contributions sous forme de m&eacute;thodes g&eacute;n&eacute;riques, etc.),</li>
-        <li>des aspects m&eacute;thodologiques (sur le processus de construction d'un mod&egrave;le),</li>
+        <li>tout aspect informatique relatif &agrave; Cormas (bugs, demandes dexplications, suggestions de modifications, contributions sous forme de m&eacute;thodes g&eacute;n&eacute;riques, etc.),</li>
+        <li>des aspects m&eacute;thodologiques (sur le processus de construction dun mod&egrave;le),</li>
         <li>des annonces de s&eacute;minaires, des appels &agrave; communication ou publication, des propositions de stages, des annonces de postes,</li>
         <li>des ressources bibliographiques int&eacute;ressantes. </li>
       </ul>
@@ -84,7 +84,7 @@ $_SESSION['rand_value'] = rand_code(4);
                 <input type="text" name="emailS" id="emailS" size="25" value="<?echo $_SESSION["emailS"]?>">
               </p>
               
-			  <p>Verification code : <img src="imagecode.php?<?=$_SESSION['rand_value'];?>"></p>
+			  <p>Verification code : <img src="imagecode.php?<?=$_SESSION[rand_value];?>"></p>
 
 			  <p> <font size="2" face="Arial">Enter the code : </font> 
               <input type="text" name="codeS" id="codeS" size="4" value=""></p>
@@ -102,7 +102,7 @@ $_SESSION['rand_value'] = rand_code(4);
                 <input name="emailU" type="text" id="emailU" size="25" value="<?echo $_SESSION["emailU"]?>">
               </p>
 			  
-			  <p>Verification code : <img src="imagecode.php?<?=$_SESSION['rand_value'];?>"></p>
+			  <p>Verification code : <img src="imagecode.php?<?=$_SESSION[rand_value];?>"></p>
 			  <p> <font size="2" face="Arial">Enter the code : </font> 
               <input type="text" name="codeU" id="codeU" size="4" value="">
 

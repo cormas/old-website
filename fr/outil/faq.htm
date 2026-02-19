@@ -7,7 +7,7 @@
 <!--#include virtual="/include/script.inc" -->
 <link rel="stylesheet" href="/css/cormas.css" -->
 </head>
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
 <!--#include virtual="../outil/haut.inc" --> 
 <table cellspacing="0" cellpadding="0" border="0" width="100%">
   <tr> <!--#include virtual="../outil/sommair.inc" --> 
@@ -66,7 +66,7 @@
           <tr> 
             <td width="16%"> point of view problem</td>
             <td width="36%">When trying to change the pov, I have this kind of 
-              message: 'Unhandled exception: Message not understood: #includesKey:' 
+              message: Unhandled exception: Message not understood: #includesKey: 
               UndefinedObject(Object)>>doesNotUnderstand: Legend>>addLegend:location: 
               Legend>>majLegendes: GrilleModele>>majPdv: .....</td>
             <td width="48%"> 
@@ -82,16 +82,16 @@
             <td width="36%" height="167">Je souhaiterais pouvoir programmer les 
               points de vue.</td>
             <td width="48%" height="167"> 
-              <p>Oui. Il suffit de modifier l'attribut activePov défini au niveau 
-                de la metaclass Entity. Si on veut switcher aléatoirement le pov 
+              <p>Oui. Il suffit de modifier lattribut activePov d&eacute;fini au niveau 
+                de la metaclass Entity. Si on veut switcher al&eacute;atoirement le pov 
                 sur les cellules tous les 5 pas de temps, ajouter le bloc suivant 
-                dans la méthode step:t du modèle XXX:<br>
+                dans la m&eacute;thode step:t du modele XXX:<br>
                 <i>t \\ 5 = 0 ifTrue: [ XXX_Cell activePov: (Cormas selectRandomlyFrom: 
                 XXX_Cell pdvDict keys).<br>
                 </i><i><font color="#0000FF">"maj infos dans la barre sup. de 
                 la grille spatiale" </font><br>
                 self space interface updateName. <br>
-                <font color="#0000FF">"pour forcer le réaffichage de toutes les 
+                <font color="#0000FF">"pour forcer le r&eacute;affichage de toutes les 
                 cellules" </font><br>
                 self theXXX_Cells do: [:c | c defineVisualState; show]]. </i></p>
             </td>

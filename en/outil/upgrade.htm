@@ -7,7 +7,7 @@
 <!--#include virtual="/include/script.inc" -->
 <link rel="stylesheet" href="/css/cormas.css" -->
 </head>
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
 <!--#include virtual="haut.inc" -->
 <table cellspacing="0" cellpadding="0" border="0" width="100%">
 <tr>
@@ -45,13 +45,13 @@
             <li>Import the model in Cormas</li>
           </ul>
         </li>
-        <li>Make a copy of your own Cormas model (let's assume it is named "<i>aaa</i>"): 
+        <li>Make a copy of your own Cormas model (lets assume it is named "<i>aaa</i>"): 
           copy the whole directory "<i>aaa</i>" located in "<i>models-old</i>" 
           into the directory "<i>models</i>". If it exists, rename "<i>cartes</i>" 
           as "maps". </li>
         <li>Check if the names of the Cormas generic entities are correct. Open 
           a SystemBrowser and have a look at the category "<i>CormasKernel-Entities</i>". 
-          You'll see the new names. Edit your <i>aaa.st</i> (the one belonging 
+          Youll see the new names. Edit your <i>aaa.st</i> (the one belonging 
           to the "<i>models</i>" subdirectory !) in any editor and look at the 
           definition of entities (Find "<i>subclass:</i>"), verify that the names 
           of the Cormas generic entities are the right names. </li>
@@ -67,10 +67,10 @@
         <li>Then, you will have to rename some protocols. </li>
         <ul>
           <li>For each of the vizualized entity of your model, you should rename 
-            the protocol previously called '<i>pdv</i>' (for "points de vue") 
-            as '<i>pov</i>' (for "points of view")... </li>
+            the protocol previously called <i>pdv</i> (for "points de vue") 
+            as <i>pov</i> (for "points of view")... </li>
           <li>For the model class (button <i>Prepare and Schedule</i>), you should 
-            rename the protocol previously called '<i>controle</i>' as '<i>control</i>' 
+            rename the protocol previously called <i>controle</i> as <i>control</i> 
           </li>
         </ul>
         <li>With the Cormas 2001 version, a unique value is automatically assigned 
@@ -111,7 +111,7 @@
           </ul>
         </li>
         <li>With the Cormas 2001 version, the charts are not defined exactly in 
-          the same way. Have a look at the Cormas User's Guide. Now you should 
+          the same way. Have a look at the Cormas Users Guide. Now you should 
           add "<i>self initCharts</i>" in the "<i>init</i>" methods of your model 
           and "<i>self updateCharts: t</i>" at the end of the "<i>control</i>" 
           methods of your model. This single instruction should replace all the 

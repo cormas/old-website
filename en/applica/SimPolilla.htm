@@ -7,7 +7,7 @@
 <!--#include virtual="/include/script.inc" -->
 <link rel="stylesheet" href="/css/cormas.css" -->
 </head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
 <!--#include virtual="haut.inc" -->
 <table cellspacing="0" cellpadding="0" border="0" width="100%">
 <tr>
@@ -33,7 +33,7 @@
         design concepts of the ODD protocol do not apply.</p>
 
 <h4>State variables and scales</h4>
-<p>The model is based on biological and ecological rules derived from field and laboratory experimental data for the three PTM species (Dangles & Carpio 2008; Dangles et al. 2008; Roux and Baumg&auml;rtner 1997). The Simiatug valley, used as a pilot region to build the model, is located in the province of Bolívar, in the central highlands of Ecuador. We focused on a study area of 20 x 20 km represented by a grid of 1,600 cells with a cell size of 0.25 km&sup2;. Each cell <i>i</i> is characterized by its quality of habitat Q<sub>i</sub> i.e. the quantity of food resources available for the moth larvae. Q<sub>i</sub> is a boolean variable which depends on the land use (ie. crops or other uses such as woods or highlands). Each cell is also characterized by a range of temperature per cell <i>i</i> and month <i>j</i> T<sub>i,j</sub> (in ºC), an average amount of precipitation per cell <i>i</i> and month <i>j</i> L<sub>i,j</sub> (in mm), and a mean elevation per cell <i>i</i> E<sub>i</sub> (in m.a.s.l.). </p>
+<p>The model is based on biological and ecological rules derived from field and laboratory experimental data for the three PTM species (Dangles & Carpio 2008; Dangles et al. 2008; Roux and Baumg&auml;rtner 1997). The Simiatug valley, used as a pilot region to build the model, is located in the province of BolÃƒÂ­var, in the central highlands of Ecuador. We focused on a study area of 20 x 20 km represented by a grid of 1,600 cells with a cell size of 0.25 km&sup2;. Each cell <i>i</i> is characterized by its quality of habitat Q<sub>i</sub> i.e. the quantity of food resources available for the moth larvae. Q<sub>i</sub> is a boolean variable which depends on the land use (ie. crops or other uses such as woods or highlands). Each cell is also characterized by a range of temperature per cell <i>i</i> and month <i>j</i> T<sub>i,j</sub> (in Ã‚ÂºC), an average amount of precipitation per cell <i>i</i> and month <i>j</i> L<sub>i,j</sub> (in mm), and a mean elevation per cell <i>i</i> E<sub>i</sub> (in m.a.s.l.). </p>
 <p><b>Table 1.</b> State and higher-level variables of SimPolilla</p>
 <table border=1>
 	<tr>
@@ -55,7 +55,7 @@
 		<td>Temperature</td>
 		<td>Average temperature per cell <i>i</i> and month <i>j</i></td>
 		<td>T<sub>i,j</sub></td>
-		<td>°C</td>
+		<td>Ã‚Â°C</td>
 	</tr>
 	<tr>
 		<td>Precipitation</td>
@@ -92,7 +92,7 @@
 	</tr>
 </table>
 
-<p>The higher-level entities are based on the number of insects of the three PTM species. Each time step represents one PTM generation based on <i>T. solanivora</i> life cycle duration (i.e. about 3 months at 15°C). An adjustment is made on the two other species so that each step corresponds to one PTM generation. The 500 per 500 m scale for cells was chosen for fitting the level of precision we have concerning PTM dispersion, based on available knowledge on moth dispersion (Cameron et al. 2002 [B]). Temperatures, precipitations and elevations have a 1 per 1 km resolution. Inside a square of four cells, these parameters have the same value. </p>
+<p>The higher-level entities are based on the number of insects of the three PTM species. Each time step represents one PTM generation based on <i>T. solanivora</i> life cycle duration (i.e. about 3 months at 15Ã‚Â°C). An adjustment is made on the two other species so that each step corresponds to one PTM generation. The 500 per 500 m scale for cells was chosen for fitting the level of precision we have concerning PTM dispersion, based on available knowledge on moth dispersion (Cameron et al. 2002 [B]). Temperatures, precipitations and elevations have a 1 per 1 km resolution. Inside a square of four cells, these parameters have the same value. </p>
 
 <h4>Process overview and scheduling</h4>
 <p>In this section, we briefly describe the processes and scheduling of our model. Details are given in the submodels section. Each process is presented according to its sequence proceeding and in the order at which state variables are updated.  Each time step is one <i>T. solanivora</i> generation.</p>
@@ -145,7 +145,7 @@
 </table>
 
 <h5>Process: state variables update</h5>
-<p>Each state variable corresponding to real data (Almanaque Electrónico de Ecuador by Alianza Jatun Sacha - CDC, digitised by DINAREN, 2003 ; Hijmans et al., 2005), is imported from individual files (one per layer), so that SimPolilla may be easily adapted to other regions.</p>
+<p>Each state variable corresponding to real data (Almanaque ElectrÃƒÂ³nico de Ecuador by Alianza Jatun Sacha - CDC, digitised by DINAREN, 2003 ; Hijmans et al., 2005), is imported from individual files (one per layer), so that SimPolilla may be easily adapted to other regions.</p>
 <h5>Process: stochastic temperature</h5>
 <p>Mean temperature is transformed according to a stochastic factor (Box & Muller 1958).</p>
 <h5>Process: stochastic rainfall</h5>
@@ -158,7 +158,7 @@
 <p>PTM populations are updated according to biological rules (mating rate, sex ratio, fecundity). A correction is made over fitness on the two other PTM species to adjust time step based on <i>T. solanivora</i> life cycle.</p>
 
 <h3>DESIGN CONCEPTS</h3>
-<p>In Simpolilla model, moths' implicit objective is to infest the considered landscape by maximizing dispersal speed. Emergent key results are level of infestation in each cell and infestation speed. Interspecific interactions are not taken into account in this model and a stochastic factor over temperature and rainfalls are included mimic actual climatic variation.</p>
+<p>In Simpolilla model, moths implicit objective is to infest the considered landscape by maximizing dispersal speed. Emergent key results are level of infestation in each cell and infestation speed. Interspecific interactions are not taken into account in this model and a stochastic factor over temperature and rainfalls are included mimic actual climatic variation.</p>
 
 <h3>DETAILS</h3>
 <h4>Initialization and input</h4>
@@ -235,7 +235,7 @@ as we assumed that wind transport should be similar between the three species. F
 we fixed e to 0.015. Concerning dispersal at short distance, comparative observations of flight 
 capabilities between <i>P. operculella</i>, <i>Symmetrischema tangolias</i> and <i>T. solanivora</i> in Ecuador 
 revealed that the latter is a much 
-worst flier than the former (Mesías and Dangles, pers. obs.) Although our model may overestimate moth neighborhood 
+worst flier than the former (MesÃƒÂ­as and Dangles, pers. obs.) Although our model may overestimate moth neighborhood 
 dispersal we preferred this to below estimation. </ul>
 
 
@@ -244,9 +244,9 @@ time and space, we could not include dispersal as a continuous variable into Sim
 step of the simulation, we calculated the probability of adult moths crossing the border of their current cell 
 (P<sub>cross</sub>). First, we assumed that moths moved inside the cell either horizontally or vertically and that 
 they flew to the closest of the four neighboring cells. Then we considered that the probability of them crossing the 
-cell depended on the distance flown and on cell's dimensions as follows:
+cell depended on the distance flown and on cells dimensions as follows:
 <p>P<sub>cross</sub>(A,C,d) = { (A - (C-2*d)&sup2;) / A } with d[0:250]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)</p>
-where A represents the cell's surface and C its length. P<sub>cross</sub> was then multiplied by the probability of 
+where A represents the cells surface and C its length. P<sub>cross</sub> was then multiplied by the probability of 
 moths emigrating (eq. 3) in order to obtain the actual probability of moths leaving a cell, which we named 
 P<sub>leaving</sub>:
 <p>P<sub>leaving</sub> = P<sub>cross</sub> * P<sub>dist</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)</p>
@@ -255,11 +255,11 @@ Finally, the number of moths dispersing to neighboring cells (N<sub>disp</sub>) 
 <p>N<sub>disp</sub> = V<sub>Mi</sub> * P<sub>leaving</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6)</p>
 Fig. 3 shows effective dispersal rate in relation to moth density and flight distance.<p></p>
 
-      <p> <img src="../../images/applica/simpolilla_fig_1.jpg" align="center" alt='Figure 1. Moth adults emigrating fraction as a function of adult density (eq.2). Carrying capacity (K) was fixed to 1000 adults per cell i.' title='Figure 1. Moth adults emigrating fraction as a function of adult density (eq.2). Carrying capacity (K) was fixed to 1000 adults per cell i.'> 
+      <p> <img src="../../images/applica/simpolilla_fig_1.jpg" align="center" alt=Figure 1. Moth adults emigrating fraction as a function of adult density (eq.2). Carrying capacity (K) was fixed to 1000 adults per cell i. title=Figure 1. Moth adults emigrating fraction as a function of adult density (eq.2). Carrying capacity (K) was fixed to 1000 adults per cell i.> 
       <p>Figure 1. Moth adults emigrating fraction as a function of adult density (eq.2). Carrying capacity (K) was fixed to 1000 adults per cell <i>i</i>.</p>
-	  <img src="../../images/applica/simpolilla_fig_2.jpg" align="center" alt='Figure 2. Moth adults emigrating fraction as a function of distance as given by equation 3. Maximum flight distance was set to 250 m.' title='Figure 2. Moth adults emigrating fraction as a function of distance as given by equation 3. Maximum flight distance was set to 250 m.'> 
+	  <img src="../../images/applica/simpolilla_fig_2.jpg" align="center" alt=Figure 2. Moth adults emigrating fraction as a function of distance as given by equation 3. Maximum flight distance was set to 250 m. title=Figure 2. Moth adults emigrating fraction as a function of distance as given by equation 3. Maximum flight distance was set to 250 m.> 
       <p>Figure 2. Moth adults emigrating fraction as a function of distance as given by equation 3. Maximum flight distance was set to 250 m.</p>
-	  <img src="../../images/applica/simpolilla_fig_3.jpg" align="center" alt='Figure 3. Effective dispersal rate considering moth density and flight distance.' title='Figure 3. Effective dispersal rate considering moth density and flight distance.'> 
+	  <img src="../../images/applica/simpolilla_fig_3.jpg" align="center" alt=Figure 3. Effective dispersal rate considering moth density and flight distance. title=Figure 3. Effective dispersal rate considering moth density and flight distance.> 
       <p>Figure 3. Effective dispersal rate considering moth density and flight distance.</p>
 <p></p>
 
@@ -272,7 +272,7 @@ Fig. 3 shows effective dispersal rate in relation to moth density and flight dis
 <p>Among PTM population, sex ratio has been studied and is 1:1 (Saour 1999). After dispersal, the remaining adult population, combined with the mating rate and the sex ratio give the gravid females population.</p>
 <h5>PTM fecundity</h5>
 <p>Although energy-partitioning models have been developed to explain the shape of insect fecundity as a function of aging (Kindlmann et al. 2001), we are not aware of any mechanistic models that describes insect fecundity as a function of temperature. Several probabilistic non-linear models to fit insect fecundity across temperature have been proposed in the literature (Roux 1993; Lactin et al. 1995; Kim and Lee 2003; Bonato et al. 2007), but none of them gave us significant results with our data (r < 0.35, F<sub>stat</sub> < 2.01). We therefore used weighted least square (WLS) regression to find the best model that fits our fecundity data across temperature. WLS regression is particularly efficient to handle regression situations in which the data points are of varying quality, i.e. the standard deviation of the random errors in the data may be not constant across all levels of the explanatory variables, which could be the case. For the three tuber moth species, the best fit was obtained with the Weibull distribution function, which has long been recognized as useful function to model insect development (Wagner et al. 1984).</p>
-<p>The effect of temperature upon fecundity was well described by the Weibull distribution functions (r&sup2; = 0.75, 0.83, and 0.91 for <i>T. solanivora</i>, <i>S. tangolias</i> and <i>P. operculella</i>, respectively). Results showed marked differences among PTM species, both in terms of total numbers of eggs laid per females and optimal fecundity temperature : the highest fecundity was found in <i>T. solanivora</i>, with about 300 eggs/female at 19°C, followed by <i>S. tangolias</i> (220 eggs/female at 15°C) and <i>P. operculella</i> (140 eggs at 23°C).</p>
+<p>The effect of temperature upon fecundity was well described by the Weibull distribution functions (r&sup2; = 0.75, 0.83, and 0.91 for <i>T. solanivora</i>, <i>S. tangolias</i> and <i>P. operculella</i>, respectively). Results showed marked differences among PTM species, both in terms of total numbers of eggs laid per females and optimal fecundity temperature : the highest fecundity was found in <i>T. solanivora</i>, with about 300 eggs/female at 19Ã‚Â°C, followed by <i>S. tangolias</i> (220 eggs/female at 15Ã‚Â°C) and <i>P. operculella</i> (140 eggs at 23Ã‚Â°C).</p>
 
 <fieldset>
 <legend>References</legend> <!-- h3 -->
@@ -299,13 +299,13 @@ Fig. 3 shows effective dispersal rate in relation to moth density and flight dis
           Phthorimaea operculella, and its influence on the design of refugia 
           to manage resistance in Bt transgenic crops. Entomologia Experimentalis 
           et Applicata, Volume 115, Issue 2, Page 323-332.</li>
-        <li>DANGLES, O. & Carpio, F C, 2008. Cuando los científicos y las comunidades 
+        <li>DANGLES, O. & Carpio, F C, 2008. Cuando los cientÃƒÂ­ficos y las comunidades 
           andinas unen sus esfuerzos para luchar en contra de una plaga invasora. 
           Nuestra Ciencia 10: 23-25</li>
         <li>DANGLES, O., Carpio, C, Barragan, A, Zeddam, J-L. and Silvain, J.-F. 
           2008. Temperature as a key driver of ecological sorting among invasive 
           pest species in the tropical Andes. Ecological Applications, in press.</li>
-        <li>EIZAGUIRRE M, López C. and Albajes R., 2004. Dispersal capacity in 
+        <li>EIZAGUIRRE M, LÃƒÂ³pez C. and Albajes R., 2004. Dispersal capacity in 
           the Mediterranean corn borer, Sesamia nonagrioides. Entomologia Experimentalis 
           et Applicata 113: 25-34.</li>
         <li>FENEMORE, P. G. 1988. Host-plant location and selection by adult potato 
@@ -320,9 +320,9 @@ Fig. 3 shows effective dispersal rate in relation to moth density and flight dis
         <li>GRIMM V and Railsback S F, 2005. Individual-based Modeling and Ecology. 
           Princeton University Press, Princeton, NJ.</li>
         <li>GRIMM V, Berger U, Bastiansen F, Eliassen S, Ginot V, Giske J, Goss-Custard 
-          J, Grand T, Heinz S K, Huse G, Huth A, Jepsen J U, Jørgensen C, Mooij 
-          W M, Müller B, Pe'er G, Piou C, Railsback S F, Robbins A M, Robbins 
-          M M, Rossmanith E, Rüger N, Strand E, Souissi S, Stillman R A, Vabø 
+          J, Grand T, Heinz S K, Huse G, Huth A, Jepsen J U, JÃƒÂ¸rgensen C, Mooij 
+          W M, MÃƒÂ¼ller B, Peer G, Piou C, Railsback S F, Robbins A M, Robbins 
+          M M, Rossmanith E, RÃƒÂ¼ger N, Strand E, Souissi S, Stillman R A, VabÃƒÂ¸ 
           R, Visser U and DeAngelis D L (2006). A standard protocol for describing 
           individual-based and agent-based models. Ecological Modelling 198 (1-2), 
           115-126.</li>
@@ -334,7 +334,7 @@ Fig. 3 shows effective dispersal rate in relation to moth density and flight dis
         <li>KIM, D-S. and J-H. Lee. 2003. Oviposition model of overwintered adult 
           Tetranychus urticae (Acarina: Tetranychidae) and mite phenology on the 
           ground cover in apple orchards. Exp. Appl. Acarol. 31: 191-208.</li>
-        <li>KINDLMANN, P., A.F.G. Dixon, and I. Dostálková. 2001. Role of ageing 
+        <li>KINDLMANN, P., A.F.G. Dixon, and I. DostÃƒÂ¡lkovÃƒÂ¡. 2001. Role of ageing 
           1091 and temperature in shaping reaction norms and fecundity functions 
           in insects. Journal of Evolutionary Biology 14:835-840. </li>
         <li>KOBORI Y, Amano H, 2003. Effect of rainfall on a population of the 
@@ -346,9 +346,9 @@ Fig. 3 shows effective dispersal rate in relation to moth density and flight dis
         <li>MAKEE H., et Saour G., 2001. Factors Influencing Mating Success, Mating 
           Frequency, and Fecundity in Phthorimaea operculella (Lepidoptera: Gelechiidae). 
           Environ. Entomol. 30(1): 31-36. </li>
-        <li>NOTZ, A. 1995. Influencia de la temperatura sobre la 1138 biología 
-          de Tecia solanivora (Povolny) criadas en tubérculos de papa Solanum 
-          tuberosum L. Boletín Entomológico Venezolano 11:49-54.</li>
+        <li>NOTZ, A. 1995. Influencia de la temperatura sobre la 1138 biologÃƒÂ­a 
+          de Tecia solanivora (Povolny) criadas en tub&eacute;rculos de papa Solanum 
+          tuberosum L. BoletÃƒÂ­n EntomolÃƒÂ³gico Venezolano 11:49-54.</li>
         <li>PALACIOS, M., G. Sotelo, and E. Saenz. 1997. La Polilla de la Papa 
           <i>Tecia solanivora</i> (Povolny). Pages 1-22 in Primer seminario taller 
           internacional sobre manejo integrado de Tecia solanivora. International 
@@ -364,13 +364,13 @@ Fig. 3 shows effective dispersal rate in relation to moth density and flight dis
         <li>REED, E. M. 1971. Factors affecting the status of a virus as a control 
           agent for the potato moth (Phthorimaea operculella (Zell.) (Lep.: Gelechiidae)). 
           Bulletin of Entomological Research 61: 207-222.</li>
-        <li>REINHARDT K., Köhler G., Webb S., and Child D., 2007. Field mating 
+        <li>REINHARDT K., KÃƒÂ¶hler G., Webb S., and Child D., 2007. Field mating 
           rate of female meadow grasshoppers, Chorthippus parallelus, estimated 
           from sperm counts. Ecological Entomology, Volume 32, Issue 6, Page 637-642.</li>
         <li>ROUX O, 1993. Population ecology of potatoes tuber moth Phthorimaea 
           operculella (Zeller) (Lepidoptera: Gelechiidae) and design of an integrated 
           pest management program in Tunisia. Thesis ETH No 10120, Zurich.</li>
-        <li>ROUX O, Baumgärtner J, 1997. Evaluation of mortality factors and risk 
+        <li>ROUX O, BaumgÃƒÂ¤rtner J, 1997. Evaluation of mortality factors and risk 
           analysis for the design of an integrated pest management system. Ecological 
           modeling 109, 61-75.</li>
         <li>SAOUR G., 1999. Susceptibility of potato plants grown from tubers 
@@ -380,7 +380,7 @@ Fig. 3 shows effective dispersal rate in relation to moth density and flight dis
         <li>SIKDER I.U. Sikder, Mal-Sarkar S, Mal T.K., 2006. Knowledge-Based 
           Risk Assessment Under Uncertainty for Species Invasion. Risk Analysis, 
           Vol. 26, No. 1.</li>
-        <li>TANHUANPÄÄ M, Ruohomaki, K., Kaitaniemi, P. 2003. Influence of adult 
+        <li>TANHUANPÃƒÂ„ÃƒÂ„ M, Ruohomaki, K., Kaitaniemi, P. 2003. Influence of adult 
           and egg predation on the reproductive success of Epirrita autumnata 
           (Lepidoptera: Geometridae). Oikos 102: 263-272. </li>
         <li>WAGNER, T.L.; WU, H-I; Sharpe, P.J.H.; Schoolfield, R.M.; Coulson, 
