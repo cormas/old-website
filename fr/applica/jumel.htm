@@ -1,208 +1,297 @@
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Echanges economiques et organisations emergentes</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
 </head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-  <td width="*" valign="top" bgcolor="#FFFFFF"> 
-   <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> 
  
       <h1>JuMel</h1>
-      <h2>Echanges &eacute;conomiques et organisations &eacute;mergentes 
+<h2>Echanges économiques et organisations émergentes 
       </h2>
-      <p>Juliette Rouchier, Manchester Metropolitan University.</p>
-  
-      <img src="/images/applica/jumel.jpg" width="245" height="169" align="right" vspace="10" hspace="10"> 
-      <p>Juliette Rouchier travaille maintenant au Centre for Policy Modelling, 
-        &agrave; la Manchester Metropolitan University. Le travail pr&eacute;sent&eacute; 
-        ici correspond au travail de th&egrave;se, dont une grande partie a &eacute;t&eacute; 
-        effectu&eacute;e en collaboration avec M&eacute;lanie Requier-Desjardins.</p>
-   <h2>Mod&eacute;liser les &eacute;changes de biens</h2>
-      <p>Dans la simulation en systemes multi-agents, le questionnement sur lequel 
-        sest principalement pench&eacute;e Juliette Rouchier est celui de la cr&eacute;ation 
-        de sens due a la r&eacute;p&eacute;tition d&eacute;changes de biens dans un groupe.</p>
-      <p>On peut, comme cest souvent le cas, consid&eacute;rer l&eacute;changes de biens comme 
+<p>Juliette Rouchier, Manchester Metropolitan University.</p>
+<img align="right" height="169" hspace="10" src="/images/applica/jumel.jpg" vspace="10" width="245"/>
+<p>Juliette Rouchier travaille maintenant au Centre for Policy Modelling, 
+        à la Manchester Metropolitan University. Le travail présenté 
+        ici correspond au travail de thèse, dont une grande partie a été 
+        effectuée en collaboration avec Mélanie Requier-Desjardins.</p>
+<h2>Modéliser les échanges de biens</h2>
+<p>Dans la simulation en systemes multi-agents, le questionnement sur lequel 
+        sest principalement penchée Juliette Rouchier est celui de la création 
+        de sens due a la répétition déchanges de biens dans un groupe.</p>
+<p>On peut, comme cest souvent le cas, considérer léchanges de biens comme 
         un simple moyen de faire circuler de la marchandise. On peut par ailleurs 
         insister sur des aspects plus symboliques, et donc sociaux et cognitifs, 
         et essayer de voir comment ces actions individuelles permettent de reconnaÃ®tre 
-        une structure dans un groupe. Pour tout &eacute;change il existe des regles sp&eacute;cifiques. 
-        Celles-ci peuvent etre respect&eacute;es par les individus qui constituent le 
-        groupe ou ne pas letre, du fait dun choix ou dune incapacit&eacute;. Chaque 
-        regle commune au groupe d&eacute;finit des attentes. De plus, les actes de chacun 
-        des agents sont observ&eacute;s par au moins une partie des autres, et sont alors 
-        interpr&eacute;t&eacute;s en fonction des attentes. En cela, un travail sur les &eacute;changes 
-        de biens semble pouvoir largement b&eacute;n&eacute;ficier de lutilisation du systeme 
-        multi-agents : la communication qui est d&eacute;finie est l&eacute;change lui-meme, 
-        chaque agent possede des regles dinterpr&eacute;tation des actions des autres 
-        li&eacute;es aux attentes d&eacute;finies, ce qui leur permet de se construire une repr&eacute;sentation 
+        une structure dans un groupe. Pour tout échange il existe des regles spécifiques. 
+        Celles-ci peuvent etre respectées par les individus qui constituent le 
+        groupe ou ne pas letre, du fait dun choix ou dune incapacité. Chaque 
+        regle commune au groupe définit des attentes. De plus, les actes de chacun 
+        des agents sont observés par au moins une partie des autres, et sont alors 
+        interprétés en fonction des attentes. En cela, un travail sur les échanges 
+        de biens semble pouvoir largement bénéficier de lutilisation du systeme 
+        multi-agents : la communication qui est définie est léchange lui-meme, 
+        chaque agent possede des regles dinterprétation des actions des autres 
+        liées aux attentes définies, ce qui leur permet de se construire une représentation 
         des autres en les observant.</p>
-      <p>Le travail de mod&eacute;lisation men&eacute; par Juliette Rouchier a donn&eacute; 
-        naissance a trois modeles distincts, qui sont bas&eacute;s sur deux formes d&eacute;changes 
-        habituellement diff&eacute;renci&eacute;es, les &eacute;changes marchands et les &eacute;changes non 
-        marchands. Les trois modeles sont ax&eacute;s sur lanalyse de structures &eacute;mergentes 
-        au sein du groupe, qui apparaissent grÃ¢ce a la r&eacute;p&eacute;tition dun grand nombre 
-        de ces &eacute;changes. Le mod&egrave;le pr&eacute;sent&eacute; ici a &eacute;t&eacute; construit 
-        en sinspirant des r&eacute;sultats du travail de terrain de M&eacute;lanie Requier-Desjardins. 
-        Dans celui-ci les &eacute;changes repr&eacute;sent&eacute;s prennent la forme d&eacute;changes marchands. 
-        Les autres mod&egrave;les sont des travaux inspir&eacute;s de donn&eacute;es purement 
-        th&eacute;oriques (voir la page <a href="potlatch.htm">Potlatch</a>).</p>
-      <p> Comme tous ces modeles ont &eacute;t&eacute; construit pendant la p&eacute;riode ou CORMAS 
-        &eacute;tait cr&eacute;&eacute;, ce logiciel na pas &eacute;t&eacute; utilis&eacute;, et les interfaces dutilisation 
-        ont &eacute;t&eacute; construites ind&eacute;pendamment. N&eacute;anmoins, lapproche utilis&eacute;e reste 
-        tres proche dune conception bas&eacute;e sur CORMAS. </p>
-      <h2>R&eacute;gularit&eacute; dans les &eacute;changes marchands au Nord-Cameroun : un exemple 
-        inspir&eacute; du terrain</h2>
-      <p>Le travail sur les &eacute;changes marchands a &eacute;t&eacute; effectu&eacute; en compl&eacute;ment dune 
-        &eacute;tude de terrain concernant les pratiques d&eacute;changes des &eacute;leveurs transhumants 
-        de lExtreme-Nord du Cameroun. Ceux-ci se d&eacute;placent chaque ann&eacute;e avec 
-        leurs betes pour pouvoir les nourrir malgr&eacute; les changements de v&eacute;g&eacute;tation 
-        locaux en fonction des saisons. M&eacute;lanie Requier-Desjardins avait not&eacute; 
-        la grande r&eacute;gularit&eacute; des parcours des transhumants, qui sinstallaient 
-        pres des memes villages chaque ann&eacute;e. En g&eacute;n&eacute;ral, faire pÃ¢turer les animaux 
-        dans une zone implique davoir &eacute;galement des possibilit&eacute;s pour &eacute;changer 
-        des biens avec les &eacute;leveurs. Dans certains cas, lacces a la terre elle-meme 
-        a un coÃ»t, car des agriculteurs font payer aux &eacute;leveurs le droit de sinstaller 
-        sur leurs champs. Il existe &eacute;galement une pratique g&eacute;n&eacute;ralement respect&eacute;e 
-        qui veut que les &eacute;leveurs fassent un don au chef pour avoir lautorisation 
-        detre sur son territoire. Dans une approche &eacute;conomique, on a voulu &eacute;valuer 
-        dans quelle mesure on pouvait consid&eacute;rer que la familiarit&eacute; cr&eacute;&eacute;e avait 
-        un int&eacute;ret en terme de coÃ»ts pour les individus qui effectue les &eacute;changes 
-        ou si cette familiarit&eacute; correspondait au respect de certaines regles sociales 
-        de r&eacute;gularit&eacute;.</p>
-      <p>Cest pour cela quun modele multi-agents a &eacute;t&eacute; construit pour repr&eacute;senter 
-        les &eacute;changes entre deux populations qui se rencontrent saisonnierement 
-        et qui &eacute;tablissent des contrats.</p>
-      <p align="center"><img src="/images/applica/jumel1.gif" width="235" height="217"></p>
-      <p align="center">Figure 1. Interface du mod&egrave;le</p>
-      <p> Dans le modeles, il existent trois populations dagents, les transhumants, 
-        les s&eacute;dentaires et les chefs. Les transhumants doivent avoir acces a leau 
-        (g&eacute;r&eacute;e par les chefs) et a la terre (g&eacute;r&eacute;e par les s&eacute;dentaires), et pour 
-        cela ils font des demandes aux chefs et s&eacute;dentaires, a qui ils donnent 
+<p>Le travail de modélisation mené par Juliette Rouchier a donné 
+        naissance a trois modeles distincts, qui sont basés sur deux formes déchanges 
+        habituellement différenciées, les échanges marchands et les échanges non 
+        marchands. Les trois modeles sont axés sur lanalyse de structures émergentes 
+        au sein du groupe, qui apparaissent grÃ¢ce a la répétition dun grand nombre 
+        de ces échanges. Le modèle présenté ici a été construit 
+        en sinspirant des résultats du travail de terrain de Mélanie Requier-Desjardins. 
+        Dans celui-ci les échanges représentés prennent la forme déchanges marchands. 
+        Les autres modèles sont des travaux inspirés de données purement 
+        théoriques (voir la page <a href="potlatch.htm">Potlatch</a>).</p>
+<p> Comme tous ces modeles ont été construit pendant la période ou CORMAS 
+        était créé, ce logiciel na pas été utilisé, et les interfaces dutilisation 
+        ont été construites indépendamment. Néanmoins, lapproche utilisée reste 
+        tres proche dune conception basée sur CORMAS. </p>
+<h2>Régularité dans les échanges marchands au Nord-Cameroun : un exemple 
+        inspiré du terrain</h2>
+<p>Le travail sur les échanges marchands a été effectué en complément dune 
+        étude de terrain concernant les pratiques déchanges des éleveurs transhumants 
+        de lExtreme-Nord du Cameroun. Ceux-ci se déplacent chaque année avec 
+        leurs betes pour pouvoir les nourrir malgré les changements de végétation 
+        locaux en fonction des saisons. Mélanie Requier-Desjardins avait noté 
+        la grande régularité des parcours des transhumants, qui sinstallaient 
+        pres des memes villages chaque année. En général, faire pÃ¢turer les animaux 
+        dans une zone implique davoir également des possibilités pour échanger 
+        des biens avec les éleveurs. Dans certains cas, lacces a la terre elle-meme 
+        a un coÃ»t, car des agriculteurs font payer aux éleveurs le droit de sinstaller 
+        sur leurs champs. Il existe également une pratique généralement respectée 
+        qui veut que les éleveurs fassent un don au chef pour avoir lautorisation 
+        detre sur son territoire. Dans une approche économique, on a voulu évaluer 
+        dans quelle mesure on pouvait considérer que la familiarité créée avait 
+        un intéret en terme de coÃ»ts pour les individus qui effectue les échanges 
+        ou si cette familiarité correspondait au respect de certaines regles sociales 
+        de régularité.</p>
+<p>Cest pour cela quun modele multi-agents a été construit pour représenter 
+        les échanges entre deux populations qui se rencontrent saisonnierement 
+        et qui établissent des contrats.</p>
+<p align="center"><img height="217" src="/images/applica/jumel1.gif" width="235"/></p>
+<p align="center">Figure 1. Interface du modèle</p>
+<p> Dans le modeles, il existent trois populations dagents, les transhumants, 
+        les sédentaires et les chefs. Les transhumants doivent avoir acces a leau 
+        (gérée par les chefs) et a la terre (gérée par les sédentaires), et pour 
+        cela ils font des demandes aux chefs et sédentaires, a qui ils donnent 
         de largent pour les acces (argent quils obtiennent en vendant des betes). 
-        Le coÃ»t des acces pour chacune des ressources est r&eacute;partie au hasard au 
-        d&eacute;part. Certaines regles permettent au chef et au s&eacute;dentaire de d&eacute;terminer 
+        Le coÃ»t des acces pour chacune des ressources est répartie au hasard au 
+        départ. Certaines regles permettent au chef et au sédentaire de déterminer 
         face a chaque demande dun transhumant, si celui-ci peut avoir acces ou 
-        non a la ressource, et quelle quantit&eacute; il recevra. On sest propos&eacute; danalyser 
+        non a la ressource, et quelle quantité il recevra. On sest proposé danalyser 
         deux formes dapprentissage des relations pour les transhumants. La premiere 
-        est valable lorsque les transhumants ne sint&eacute;ressent qua la qualit&eacute; 
-        de la relation et pr&eacute;ferent avoir des relations avec des &eacute;leveurs qui 
+        est valable lorsque les transhumants ne sintéressent qua la qualité 
+        de la relation et préferent avoir des relations avec des éleveurs qui 
         leur offre le plus dacces en en refusant le moins. La seconde repose 
         sur une notion de coÃ»t, ou les agents comparent combien chaque acces leur 
-        fera d&eacute;penser et choisissent le moins cher. Pour cette derniere m&eacute;thode, 
-        le coÃ»t que le transhumant anticipe de lacces &eacute;volue : a chaque acces 
-        accept&eacute;, le transhumant connaÃ®t le prix r&eacute;el du s&eacute;dentaire, a chaque acces 
-        refus&eacute;, il ajoute une constante au prix anticip&eacute; pr&eacute;c&eacute;demment (comme il 
-        risque de perdre des animaux sil a trop dacces refus&eacute;s, on concoit chaque 
+        fera dépenser et choisissent le moins cher. Pour cette derniere méthode, 
+        le coÃ»t que le transhumant anticipe de lacces évolue : a chaque acces 
+        accepté, le transhumant connaÃ®t le prix réel du sédentaire, a chaque acces 
+        refusé, il ajoute une constante au prix anticipé précédemment (comme il 
+        risque de perdre des animaux sil a trop dacces refusés, on concoit chaque 
         refus comme un surcoÃ»t). Il faut noter que dans le modele les transhumants 
-        choisissent dabord un village qui leur semble globalement int&eacute;ressant, 
+        choisissent dabord un village qui leur semble globalement intéressant, 
         soit parce quil a le coÃ»t dacces moyen pour leau et le pÃ¢turage le 
         plus bas, soit parce que les refus dacces et les mauvais acces a leau 
-        y ont &eacute;t&eacute; le moins nombreux en tout.</p>
-      <p align="center"><img src="/images/applica/jumel2.gif" width="290" height="218"></p>
-      <p align="center">Figure 2. Relations dun transhumant pour une simulation 
-        o&ugrave; il choisit au moindre co&ucirc;t. On lit en abscisse la date 
-        et en ordonn&eacute;e les noms des s&eacute;dentaires. Un point indique 
-        quil y a eu rencontre entre le transhumant et le s&eacute;dentaire qui 
-        porte ce nom. Les s&eacute;dentaires sont repartis par village et leurs 
-        noms sont aussi regroup&eacute;s par huit (de 1 a 8 premier village, de 
-        9 a 16 second, etc.). Ici, on voit que les relations sont soit tr&egrave;s 
-        stables soit tr&egrave;s occasionnelles et concernent peu de s&eacute;dentaires 
-        diff&eacute;rents. </p>
-      <p>Des simulations ont &eacute;t&eacute; men&eacute;es pour comparer les deux approches. Pour 
+        y ont été le moins nombreux en tout.</p>
+<p align="center"><img height="218" src="/images/applica/jumel2.gif" width="290"/></p>
+<p align="center">Figure 2. Relations dun transhumant pour une simulation 
+        où il choisit au moindre coût. On lit en abscisse la date 
+        et en ordonnée les noms des sédentaires. Un point indique 
+        quil y a eu rencontre entre le transhumant et le sédentaire qui 
+        porte ce nom. Les sédentaires sont repartis par village et leurs 
+        noms sont aussi regroupés par huit (de 1 a 8 premier village, de 
+        9 a 16 second, etc.). Ici, on voit que les relations sont soit très 
+        stables soit très occasionnelles et concernent peu de sédentaires 
+        différents. </p>
+<p>Des simulations ont été menées pour comparer les deux approches. Pour 
         observer comment le systeme se comporte, on utilise certains criteres 
-        : le nombre danimaux et leur r&eacute;partition entre les transhumants, l&eacute;tat 
-        de la ressource (d&eacute;fini par le nombre danimaux quelle peut supporter 
-        au maximum), la forme des relations pour chaque transhumant. Consid&eacute;rant 
-        le sujet d&eacute;tude choisi, cest une bonne survie des animaux et la conservation 
-        de la ressource que lon considere comme une r&eacute;ussite. Pour rester proche 
-        de ce qui est connu de la r&eacute;alit&eacute; du terrain, on cherche aussi a observer 
-        des transhumants artificiels avec des relations plutÃ´t diversifi&eacute;es.</p>
-      <p align="center"><img src="/images/applica/jumel3.gif" width="365" height="223"></p>
-      <p align="center">Figure 3. R&eacute;sultats de production dans un univers 
-        cr&eacute;&eacute; pour une simulation o&ugrave; les agents choisissent 
-        la priorit&eacute; aux co&ucirc;ts apr&egrave;s 50 pas de temps o&ugrave; 
-        ils choisissent au hasard. On lit en abscisse la date et en ordonn&eacute;e 
-        un nombre de b&ecirc;tes : en rose la qualit&eacute; de la ressource (nombre 
-        total de b&ecirc;tes qui serait supportable) et en noir le nombre de b&ecirc;tes 
-        pr&eacute;sentes. Ici, le changement de rationalit&eacute; (du hasard 
-        &agrave; la priorit&eacute; aux co&ucirc;ts) se traduit en une chute brusque 
-        du nombre de b&ecirc;tes et de la qualit&eacute;.</p>
-      <p>Les simulations effectu&eacute;es ont &eacute;t&eacute; &eacute;tudi&eacute;es par comparaison : on observait 
-        le meme type de simulation selon les memes criteres pour les diff&eacute;rentes 
-        rationnalit&eacute;s des agents. On a en particulier ajout&eacute; aux simulations ou 
+        : le nombre danimaux et leur répartition entre les transhumants, létat 
+        de la ressource (défini par le nombre danimaux quelle peut supporter 
+        au maximum), la forme des relations pour chaque transhumant. Considérant 
+        le sujet détude choisi, cest une bonne survie des animaux et la conservation 
+        de la ressource que lon considere comme une réussite. Pour rester proche 
+        de ce qui est connu de la réalité du terrain, on cherche aussi a observer 
+        des transhumants artificiels avec des relations plutÃ´t diversifiées.</p>
+<p align="center"><img height="223" src="/images/applica/jumel3.gif" width="365"/></p>
+<p align="center">Figure 3. Résultats de production dans un univers 
+        créé pour une simulation où les agents choisissent 
+        la priorité aux coûts après 50 pas de temps où 
+        ils choisissent au hasard. On lit en abscisse la date et en ordonnée 
+        un nombre de bêtes : en rose la qualité de la ressource (nombre 
+        total de bêtes qui serait supportable) et en noir le nombre de bêtes 
+        présentes. Ici, le changement de rationalité (du hasard 
+        à la priorité aux coûts) se traduit en une chute brusque 
+        du nombre de bêtes et de la qualité.</p>
+<p>Les simulations effectuées ont été étudiées par comparaison : on observait 
+        le meme type de simulation selon les memes criteres pour les différentes 
+        rationnalités des agents. On a en particulier ajouté aux simulations ou 
         les coÃ»ts sont importants et celles ou les relations sont importantes, 
         des simulations ou les choix sont faits au hasard. Ces dernieres sont 
         celles qui ont permis de comprendre un peu mieux la dynamique de la ressource 
-        : elles donnaient les meilleurs r&eacute;sultats et servaient de valeur de r&eacute;f&eacute;rence 
-        dun " bon usage de la ressource " pour chaque sc&eacute;nario.</p>
-      <p>Ce qui apparaÃ®t dans les simulations, cest que dans quelques conditions 
+        : elles donnaient les meilleurs résultats et servaient de valeur de référence 
+        dun " bon usage de la ressource " pour chaque scénario.</p>
+<p>Ce qui apparaÃ®t dans les simulations, cest que dans quelques conditions 
         que ce soit, dans les simulations ou les transhumants cherchent a renouveler 
-        leurs meilleures relations la ressource est beaucoup mieux conserv&eacute;e. 
+        leurs meilleures relations la ressource est beaucoup mieux conservée. 
         Dans les simulations ou les agents choisissent au moindre coÃ»t, des que 
-        les transhumants adoptent cette rationnalit&eacute;, la capacit&eacute; a supporter 
-        des betes d&eacute;croÃ®t en moyenne dune facon radicale pour les champs de tous 
-        les s&eacute;dentaires. Les relations que les transhumants entretiennent se r&eacute;velent 
-        tres diff&eacute;rentes selon leur m&eacute;thode de choix. Dans le cadre dune pr&eacute;f&eacute;rence 
-        aux meilleures relations, chaque agent a des liens r&eacute;guliers avec au moins 
-        une douzaine de s&eacute;dentaires qui appartiennent a au moins six villages. 
+        les transhumants adoptent cette rationnalité, la capacité a supporter 
+        des betes décroÃ®t en moyenne dune facon radicale pour les champs de tous 
+        les sédentaires. Les relations que les transhumants entretiennent se révelent 
+        tres différentes selon leur méthode de choix. Dans le cadre dune préférence 
+        aux meilleures relations, chaque agent a des liens réguliers avec au moins 
+        une douzaine de sédentaires qui appartiennent a au moins six villages. 
         Avec un choix qui mene vers le moins cher, les agents ne connaissent de 
-        facon r&eacute;guliere que moins de six s&eacute;dentaires, dans trois villages. On 
-        identifie la principale raison de limportante d&eacute;gradation quand les transhumants 
-        recherchent lacces le moins cher comme &eacute;tant une mauvaise r&eacute;partition 
+        facon réguliere que moins de six sédentaires, dans trois villages. On 
+        identifie la principale raison de limportante dégradation quand les transhumants 
+        recherchent lacces le moins cher comme étant une mauvaise répartition 
         sur les terres : tous les transhumants vont dans les memes villages pour 
-        demander aux s&eacute;dentaires qui sont " objectivement " les moins chers et 
-        ne peuvent en cons&eacute;quence pas tous avoir dacces. Pendant que ce s&eacute;dentaire, 
+        demander aux sédentaires qui sont " objectivement " les moins chers et 
+        ne peuvent en conséquence pas tous avoir dacces. Pendant que ce sédentaire, 
         et ceux du meme village que lui, recoivent un grand nombre de demandes 
-        et acceptent souvent trop de betes sur leurs terres, les s&eacute;dentaires des 
-        autres villages voient leur terre d&eacute;grad&eacute;e par manque de betes. En effet, 
+        et acceptent souvent trop de betes sur leurs terres, les sédentaires des 
+        autres villages voient leur terre dégradée par manque de betes. En effet, 
         avec cet apprentissage, les agents partagent une classification commune 
         des meilleurs acces pendant toute la simulation. Avec lautre apprentissage, 
         la vision de chacun est purement individuelle, et les transhumants nont 
         pas tendance a aller sur les memes terres ou dans les memes villages. 
         Cet apprentissage permet en outre davoir un classement beaucoup plus 
         changeant au cours du temps pour chacun des transhumants, ce qui se traduit 
-        en une grande diversit&eacute; de rencontres. </p>
-      <p>Pour rapprocher des observations de terrain, on note que la mod&eacute;lisation 
-        ou les transhumants pr&eacute;ferent renouveler les bons contacts est celle qui 
-        engendre une soci&eacute;t&eacute; artificielle ou les relations ressemblent le plus 
-        a ce qui est observable dans la r&eacute;alit&eacute;. On peut alors voir dans les r&eacute;sultats 
-        des autres simulations ce que pourraient etre les cons&eacute;quences dune politique 
-        de mon&eacute;tarisation de lacces aux ressources. Si cest par des taxes et 
-        des droits dacces principalement que lon choisit de r&eacute;glementer les 
+        en une grande diversité de rencontres. </p>
+<p>Pour rapprocher des observations de terrain, on note que la modélisation 
+        ou les transhumants préferent renouveler les bons contacts est celle qui 
+        engendre une société artificielle ou les relations ressemblent le plus 
+        a ce qui est observable dans la réalité. On peut alors voir dans les résultats 
+        des autres simulations ce que pourraient etre les conséquences dune politique 
+        de monétarisation de lacces aux ressources. Si cest par des taxes et 
+        des droits dacces principalement que lon choisit de réglementer les 
         parcours des transhumants, il se peut quil ny ait guere dalternative 
-        pour des &eacute;leveurs qui ne possedent pas beaucoup dargent, et quils doivent 
+        pour des éleveurs qui ne possedent pas beaucoup dargent, et quils doivent 
         baser leurs choix exclusivement sur les coÃ»ts. On peut supposer que chaque 
         parcours reviendrait plus ou moins cher en fonction des taxes locales 
         ou le long des parcours. On voit dans les simulations quil existe alors 
-        un risque que tous les int&eacute;ress&eacute;s essaient datteindre les memes lieux, 
-        d&eacute;laissant ceux qui sont moins int&eacute;ressants en terme mon&eacute;taire. Or la 
-        mauvaise r&eacute;partition dans le temps et lespace des troupeaux semble la 
-        principale cause de d&eacute;gradation des terres fragiles de la zone soudano-sah&eacute;lienne. 
+        un risque que tous les intéressés essaient datteindre les memes lieux, 
+        délaissant ceux qui sont moins intéressants en terme monétaire. Or la 
+        mauvaise répartition dans le temps et lespace des troupeaux semble la 
+        principale cause de dégradation des terres fragiles de la zone soudano-sahélienne. 
       </p>
-      <p>Dans le modele, il y a une corr&eacute;lation assez forte entre le nombre dagents 
-        rencontr&eacute;s au cours du temps et les bons r&eacute;sultats dans lusage de la 
+<p>Dans le modele, il y a une corrélation assez forte entre le nombre dagents 
+        rencontrés au cours du temps et les bons résultats dans lusage de la 
         ressource. Il semblerait donc plus pertinent de chercher des solutions 
-        qui laissent une large place a la possibilit&eacute; pour les &eacute;leveurs de se 
-        d&eacute;placer librement, afin quils occupent lespace de facon harmonieuse. 
+        qui laissent une large place a la possibilité pour les éleveurs de se 
+        déplacer librement, afin quils occupent lespace de facon harmonieuse. 
       </p>
-      <p>Pour en savoir plus, t&eacute;l&eacute;chargez le <a href="/pdf/thesejr.pdf">r&eacute;sum&eacute; 
-        court de th&egrave;se</a> (format Pdf, 8 ko) et le <a href="/pdf/thesejr2.pdf">r&eacute;sum&eacute; 
+<p>Pour en savoir plus, téléchargez le <a href="/pdf/thesejr.pdf">résumé 
+        court de thèse</a> (format Pdf, 8 ko) et le <a href="/pdf/thesejr2.pdf">résumé 
         long</a> (format Pdf, 814 ko) ou <a href="mailto:j.rouchier@mmu.ac.uk">contactez 
         lauteur</a>.</p>
-      <!--#include virtual="/include/copyright_fr.inc" -->
-	</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
 </html>

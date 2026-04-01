@@ -1,126 +1,215 @@
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Interactions entre une nappe d'eau et ses usagers</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
 </head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-  <td width="*" valign="top" bgcolor="#FFFFFF"> 
-   <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> 
    
       <h1> Sinuse</h1>
-      <h1>&nbsp;</h1>
-      <h2>Un outil d'exploration des interactions distribu&eacute;es entre 
+<h1> </h1>
+<h2>Un outil d'exploration des interactions distribuées entre 
        une nappe d'eau et ses usagers</h2>
-      <p>Sarah Feuillette, Ird.</p>
-    
-      <img src="/images/applica/sinuse1.jpg" width="214" height="315" align="right" vspace="10" hspace="10" alt="Un pompage en Tunisie"> 
-      <p>&nbsp;</p>
-      <p>Le mod&egrave;le Sinuse (simulation des interactions entre nappe et usages 
-        de l'eau) est destin&eacute; &agrave; explorer des voies de gestion de 
-        la demande sur une nappe d'eau surexploit&eacute;e : il doit permettre 
-        de rep&eacute;rer les moteurs de la dynamique du syst&egrave;me, et de 
-        tester l'efficacit&eacute; de plusieurs types d'intervention, en tenant 
-        compte de leur impact social, clef de leur acceptabilit&eacute; par les 
-        usagers. Il a &eacute;t&eacute; d&eacute;velopp&eacute; sur le cas d'&eacute;tude 
-        de la nappe de Kairouan, en Tunisie centrale, surexploit&eacute;e depuis 
-        une vingtaine d'ann&eacute;es, majoritairement par des puits priv&eacute;s 
+<p>Sarah Feuillette, Ird.</p>
+<img align="right" alt="Un pompage en Tunisie" height="315" hspace="10" src="/images/applica/sinuse1.jpg" vspace="10" width="214"/>
+<p> </p>
+<p>Le modèle Sinuse (simulation des interactions entre nappe et usages 
+        de l'eau) est destiné à explorer des voies de gestion de 
+        la demande sur une nappe d'eau surexploitée : il doit permettre 
+        de repérer les moteurs de la dynamique du système, et de 
+        tester l'efficacité de plusieurs types d'intervention, en tenant 
+        compte de leur impact social, clef de leur acceptabilité par les 
+        usagers. Il a été développé sur le cas d'étude 
+        de la nappe de Kairouan, en Tunisie centrale, surexploitée depuis 
+        une vingtaine d'années, majoritairement par des puits privés 
         (voir figure suivante). </p>
-   <p align="center"><img src="/images/applica/sinuse1.gif" width="240" height="118" name="NiveauNappe"></p>
-   <p> Les strat&eacute;gies individuelles et les interactions entre agriculteurs 
-    ont &eacute;t&eacute; d&eacute;termin&eacute;es sur la base d'enqu&ecirc;tes dont les r&eacute;sultats ont conduit 
-    &agrave; l'hypoth&egrave;se suivante : tous les agriculteurs de la plaine de Kairouan 
-    ont un m&ecirc;me objectif global d'acquisition ou d'extension de l'irrigation 
-    pour pallier l'aridit&eacute; du climat. Les strat&eacute;gies mises en �uvre dans ce 
-    but d&eacute;pendent de leurs conditions parcellaires, familiales, &eacute;conomiques, 
-    d'acc&egrave;s &agrave; la ressource et de voisinage : une parcelle ou un regroupement 
-    de parcelles adjacentes doit &ecirc;tre de taille suffisante pour rentabiliser 
-    le puits, la nappe &eacute;tant h&eacute;t&eacute;rog&egrave;ne sur le plan de la profondeur et de 
-    la structure, l'acc&egrave;s et le co�t d'extraction d&eacute;pendent de la localisation 
-    sur la nappe et enfin la pr&eacute;sence de puits fonctionnels dans le voisinage 
-    est un indicateur d'accessibilit&eacute; &agrave; la nappe et un stimulant social (au 
-    contraire la pr&eacute;sence de puits abandonn&eacute; est dissuasive). Ce processus 
+<p align="center"><img height="118" name="NiveauNappe" src="/images/applica/sinuse1.gif" width="240"/></p>
+<p> Les stratégies individuelles et les interactions entre agriculteurs 
+    ont été déterminées sur la base d'enquêtes dont les résultats ont conduit 
+    à l'hypothèse suivante : tous les agriculteurs de la plaine de Kairouan 
+    ont un même objectif global d'acquisition ou d'extension de l'irrigation 
+    pour pallier l'aridité du climat. Les stratégies mises en œuvre dans ce 
+    but dépendent de leurs conditions parcellaires, familiales, économiques, 
+    d'accès à la ressource et de voisinage : une parcelle ou un regroupement 
+    de parcelles adjacentes doit être de taille suffisante pour rentabiliser 
+    le puits, la nappe étant hétérogène sur le plan de la profondeur et de 
+    la structure, l'accès et le coût d'extraction dépendent de la localisation 
+    sur la nappe et enfin la présence de puits fonctionnels dans le voisinage 
+    est un indicateur d'accessibilité à la nappe et un stimulant social (au 
+    contraire la présence de puits abandonné est dissuasive). Ce processus 
     d'imitation ressort dans la dynamique spatiale d'apparition des puits.</p>
-      <p> La zone d'&eacute;tude s'&eacute;tend sur environ 25 000 hectares. Le 
-        mod&egrave;le Sinuse repr&eacute;sente un sch&eacute;ma tr&egrave;s simplifi&eacute; 
-        et r&eacute;duit du syst&egrave;me &eacute;tudi&eacute; (environ 10 % 
-        en surface du syst&egrave;me &eacute;tudi&eacute;), tout en respectant 
-        les proportions des param&egrave;tres essentiels dans la mesure du possible, 
-        afin de retrouver la coh&eacute;rence des ph&eacute;nom&egrave;nes observ&eacute;s 
-        sur le terrain et de pouvoir valider le mod&egrave;le dans une certaine 
-        mesure. Le pas de temps des interactions repr&eacute;sent&eacute;es est 
-        l'ann&eacute;e, d&eacute;coup&eacute;e en deux saisons.</p>
-      <p> Le mod&egrave;le Sinuse comporte trois types d'entit&eacute;s (voir 
+<p> La zone d'étude s'étend sur environ 25 000 hectares. Le 
+        modèle Sinuse représente un schéma très simplifié 
+        et réduit du système étudié (environ 10 % 
+        en surface du système étudié), tout en respectant 
+        les proportions des paramètres essentiels dans la mesure du possible, 
+        afin de retrouver la cohérence des phénomènes observés 
+        sur le terrain et de pouvoir valider le modèle dans une certaine 
+        mesure. Le pas de temps des interactions représentées est 
+        l'année, découpée en deux saisons.</p>
+<p> Le modèle Sinuse comporte trois types d'entités (voir 
         figure suivante) :</p>
-   <ul>
-    <li>des entit&eacute;s sociales, les exploitants, qui repr&eacute;sentent 
-     les agriculteurs du terrain, tous dou&eacute;s de r&egrave;gles d'action 
-     qui d&eacute;pendent essentiellement de leurs conditions familiales, 
-     &eacute;conomiques, parcellaires et d'acc&egrave;s &agrave; l'eau ;</li>
-    <li>des entit&eacute;s spatiales plus ou moins agr&eacute;g&eacute;es, comme des zones de nappe 
+<ul>
+<li>des entités sociales, les exploitants, qui représentent 
+     les agriculteurs du terrain, tous doués de règles d'action 
+     qui dépendent essentiellement de leurs conditions familiales, 
+     économiques, parcellaires et d'accès à l'eau ;</li>
+<li>des entités spatiales plus ou moins agrégées, comme des zones de nappe 
      qui communiquent entre elles, des parcelles dont l'assolement et l'irrigation 
-     &eacute;volue au fil des saisons, des p&eacute;rim&egrave;tres d'irrigation qui distribuent 
-     de l'eau &agrave; un tarif donn&eacute; et avec une efficience de distribution donn&eacute;e 
-     &agrave; aux parcelles qui le composent ;</li>
-    <li>des entit&eacute;s passives (et situ&eacute;es) comme les puits, qui apparaissent 
+     évolue au fil des saisons, des périmètres d'irrigation qui distribuent 
+     de l'eau à un tarif donné et avec une efficience de distribution donnée 
+     à aux parcelles qui le composent ;</li>
+<li>des entités passives (et situées) comme les puits, qui apparaissent 
      et disparaissent au cours de la simulation (construction et abandon), 
-     peuvent &ecirc;tre approfondis, fonctionnels ou non fonctionnels, peuvent 
-     irriguer plusieurs parcelles selon leur capacit&eacute;, et dont le prix de 
-     construction et d'extraction d&eacute;pend de la profondeur de l'eau. </li>
-   </ul>
-      <p>La figure suivante r&eacute;sume les interactions repr&eacute;sent&eacute;es 
-        dans le mod&egrave;le Sinuse.</p>
-      <p align="center"><img src="/images/applica/sinuse2.gif" width="471" height="163" name="Modele" alt="Interactions repr&eacute;sent&eacute;es par Sinuse"></p>
-   <p> Les exploitants proc&egrave;dent &agrave; des &eacute;changes fonciers 
-    et des d&eacute;cisions d'assolement. L'irrigation des parcelles entra�ne 
-    un pr&eacute;l&egrave;vement au niveau des points d'eau qui transmettent 
-    l'information &agrave; la zone de la nappe &agrave; laquelle ils sont 
-    rattach&eacute;s. Celle-ci r&eacute;agit en s'abaissant, et le gradient 
-    pi&eacute;zom&eacute;trique r&eacute;sultant entra�ne des transferts de 
+     peuvent être approfondis, fonctionnels ou non fonctionnels, peuvent 
+     irriguer plusieurs parcelles selon leur capacité, et dont le prix de 
+     construction et d'extraction dépend de la profondeur de l'eau. </li>
+</ul>
+<p>La figure suivante résume les interactions représentées 
+        dans le modèle Sinuse.</p>
+<p align="center"><img alt="Interactions représentées par Sinuse" height="163" name="Modele" src="/images/applica/sinuse2.gif" width="471"/></p>
+<p> Les exploitants procèdent à des échanges fonciers 
+    et des décisions d'assolement. L'irrigation des parcelles entraîne 
+    un prélèvement au niveau des points d'eau qui transmettent 
+    l'information à la zone de la nappe à laquelle ils sont 
+    rattachés. Celle-ci réagit en s'abaissant, et le gradient 
+    piézométrique résultant entraîne des transferts de 
     volume entre zones. Chaque zone de la nappe communique sa nouvelle profondeur 
-    aux parcelles ce qui peut donner lieu &agrave; un approfondissement des 
-    puits (sous r&eacute;serve de non endettement). Les r&eacute;sultats de 
-    chaque campagne agricole sont calcul&eacute;s et en fin d'ann&eacute;e, 
-    selon sa tr&eacute;sorerie, son &eacute;pargne et sa situation, l'agriculteur 
+    aux parcelles ce qui peut donner lieu à un approfondissement des 
+    puits (sous réserve de non endettement). Les résultats de 
+    chaque campagne agricole sont calculés et en fin d'année, 
+    selon sa trésorerie, son épargne et sa situation, l'agriculteur 
     peut envisager la construction d'un puits, si besoin en s'associant avec 
     un voisin, ou d'acheter ou de vendre une parcelle.</p>
-   <p>Les puits peuvent &ecirc;tre construits selon plusieurs types de proc&eacute;dure 
+<p>Les puits peuvent être construits selon plusieurs types de procédure 
     (sur une petite ou une grande parcelle, en association avec un voisin 
-    ou non...) auxquelles les exploitants ne pr&ecirc;tent pas la m&ecirc;me pr&eacute;f&eacute;rence. 
-    En cas d'&eacute;pargne tr&egrave;s d&eacute;ficitaire, un exploitant peut &ecirc;tre amen&eacute; &agrave; vendre 
+    ou non...) auxquelles les exploitants ne prêtent pas la même préférence. 
+    En cas d'épargne très déficitaire, un exploitant peut être amené à vendre 
     une parcelle.</p>
-   <p> La figure suivante montre le d&eacute;roulement simplifi&eacute; d'un pas de temps. 
-    Chaque classe est figur&eacute;e par une ligne verticale en pointill&eacute;s ; l'activation 
-    des objets de la classe est mat&eacute;rialis&eacute;e par un rectangle sur sa ligne 
-    de vie. Les objets communiquent en &eacute;changeant des messages repr&eacute;sent&eacute;s 
-    au moyen de fl&egrave;ches horizontales, orient&eacute;es de l'&eacute;metteur du message vers 
+<p> La figure suivante montre le déroulement simplifié d'un pas de temps. 
+    Chaque classe est figurée par une ligne verticale en pointillés ; l'activation 
+    des objets de la classe est matérialisée par un rectangle sur sa ligne 
+    de vie. Les objets communiquent en échangeant des messages représentés 
+    au moyen de flèches horizontales, orientées de l'émetteur du message vers 
     le destinataire. </p>
-      <p align="center"><img src="/images/applica/sinuse3.gif" width="445" height="306" alt="Sch&eacute;ma UML de Sinuse"></p>
-   <p>La visualisation de l'apparition des puits permise par l'interface graphique 
-    du mod&egrave;le (voir figure suivante).</p>
-      <p align="center"><img src="/images/applica/sinuse4.gif" width="378" height="212" alt="Interface graphique de Sinuse"></p>
-   <p> La progression des puits (nouveaux puits en rouge) se fait plus par 
-    densification de zones d&eacute;j&agrave; occup&eacute;es que par colonisation de zones pionni&egrave;res 
+<p align="center"><img alt="Schéma UML de Sinuse" height="306" src="/images/applica/sinuse3.gif" width="445"/></p>
+<p>La visualisation de l'apparition des puits permise par l'interface graphique 
+    du modèle (voir figure suivante).</p>
+<p align="center"><img alt="Interface graphique de Sinuse" height="212" src="/images/applica/sinuse4.gif" width="378"/></p>
+<p> La progression des puits (nouveaux puits en rouge) se fait plus par 
+    densification de zones déjà occupées que par colonisation de zones pionnières 
     : sur 7 pas de temps successifs la construction d'un puits en zone "vierge" 
-    n'a lieu qu'au second pas de temps. Les puits sont historiquement concentr&eacute;s 
+    n'a lieu qu'au second pas de temps. Les puits sont historiquement concentrés 
     dans les zones peu profondes (gradient croissant des profondeurs de droite 
-    &agrave; gauche). Le rythme d'apparition des puits d&eacute;cro�t avec le temps, du 
+    à gauche). Le rythme d'apparition des puits décroît avec le temps, du 
     fait des contraintes spatiales et de l'abaissement de la nappe.</p>
-   <p>Pour en savoir plus, <a href="mailto:sarah.feuillette@bondy.ird.fr">contactez 
+<p>Pour en savoir plus, <a href="mailto:sarah.feuillette@bondy.ird.fr">contactez 
     l'auteur</a>.</p>
-   <!--#include virtual="/include/copyright_fr.inc" -->
-	</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
 </html>

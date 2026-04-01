@@ -1,76 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-<title>Chasse au Cameroun</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-<!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
-<!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-<tr>
-  <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp; 
-      <h1>Djemiong</h1>
-      <h2>Chasse au Cameroun</h2>
-      <p>Christophe Le Page, Fran&ccedil;ois Bousquet (Cirad), Innoccent Bakam 
-        (Universit&eacute; de Yaounde)</p>
-      <p><img src="/images/applica/djemiong.gif" width="212" height="234" align="right" vspace="10" hspace="10" alt="Grille spatiale du mod&egrave;le Djemiong">Ce 
-        mod&egrave;le est bas&eacute; sur une &eacute;tude de terrain portant 
-        sur la chasse dans les for&ecirc;ts de lEst du Cameroun, autour dun 
-        village nomm&eacute; Djemiong. Cette &eacute;tude vise &agrave; comprendre 
-        comment lorganisation de lactivit&eacute; de chasse entre les villageois 
-        constitue un syst&egrave;me de gestion de la ressource. Lesp&egrave;ce 
-        principalement captur&eacute;e est une petite antilope, le c&eacute;phalophe 
-        bleu (Cephalophus monticola, Thunberg). Des enqu&ecirc;tes ont &eacute;t&eacute; 
-        r&eacute;alis&eacute;es afin de comprendre le comportement des chasseurs. 
-        Lactivit&eacute; de chasse se d&eacute;roule pendant les 6 mois de lann&eacute;e 
-        au cours desquels lagriculture (activit&eacute; principale) demande moins 
-        de temps. Chaque ann&eacute;e, chaque chasseur change la localisation 
-        de ses sentiers de pi&egrave;ges. Ce comportement est pr&eacute;sent&eacute; 
-        comme une mesure de gestion de la ressource par les chasseurs.</p>
-      <p>Le mod&egrave;le d&eacute;velopp&eacute; avec Cormas est utilis&eacute; 
-        pour comparer diff&eacute;rentes r&egrave;gles de positionnement des sentiers 
-        de pi&egrave;ges dans le temps et dans lespace. La partie &quot;dynamique 
-        des populations&quot; est un mod&egrave;le individus-centr&eacute;. Lagent 
-        c&eacute;phalophe a &eacute;t&eacute; d&eacute;fini &agrave; partir des 
-        valeurs, trouv&eacute;es dans la litt&eacute;rature, des param&egrave;tres 
-        biologiques et &eacute;thologiques qui caract&eacute;risent cet animal. 
-        Les r&egrave;gles comportementales des agents chasseurs ont pu &ecirc;tre 
-        mises en &eacute;vidence &agrave; partir des enqu&ecirc;tes de terrain. 
-        Le mod&egrave;le int&egrave;gre des donn&eacute;es provenant dun syst&egrave;me 
-        dinformation g&eacute;ographique (SIG). La grille spatiale repr&eacute;sente 
-        ainsi un paysage artificiel dont les contours sont ceux du territoire 
-        du village de Djemiong. Les r&eacute;sultats soulignent limportance des 
-        processus de coordination entre les chasseurs, en partie en raison de 
-        lappropriation de r&eacute;seaux de sentiers de pi&egrave;ges par des 
-        groupes familiaux. Les r&eacute;sultats des simulations sugg&egrave;rent 
-        que la localisation spatiale des pi&egrave;ges a un impact beaucoup plus 
-        fort sur la viabilit&eacute; de la population de c&eacute;phalophes que 
-        la pression de chasse globale ou la dur&eacute;e de la p&eacute;riode 
-        non chass&eacute;e. </p>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title>Chasse au Cameroun</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style=" width: 100vw;
+      background-color: #FFA500; position: relative; margin-left: 0;
+      left: 0; right: 0; z-index: 1001;">
+      <div class="header-image-container">
+        <img alt="Description de l'image" src="../../images/bandeau.jpg">
+      </div>
+    </div>
+    <div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" height="23" width="23">
+      <!--#include virtual="haut.inc" -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp; </p>
+              <h1>Djemiong</h1>
+              <h2>Chasse au Cameroun</h2>
+              <p>Christophe Le Page, François Bousquet (Cirad),
+                Innoccent Bakam (Université de Yaounde)</p>
+              <p><img alt="Grille spatiale du modèle Djemiong"
+                  src="/images/applica/djemiong.gif" height="234"
+                  vspace="10" width="212" hspace="10" align="right">Ce
+                modèle est basé sur une étude de terrain portant sur la
+                chasse dans les forêts de l'Est du Cameroun, autour d'un
+                village nommé Djemiong. Cette étude vise à comprendre
+                comment l'organisation de l'activité de chasse entre les
+                villageois constitue un système de gestion de la
+                ressource. L'espèce principalement capturée est une
+                petite antilope, le céphalophe bleu (Cephalophus
+                monticola, Thunberg). Des enquêtes ont été réalisées
+                afin de comprendre le comportement des chasseurs.
+                L'activité de chasse se déroule pendant les 6 mois de
+                l'année au cours desquels l'agriculture (activité
+                principale) demande moins de temps. Chaque année, chaque
+                chasseur change la localisation de ses sentiers de
+                pièges. Ce comportement est présenté comme une mesure de
+                gestion de la ressource par les chasseurs.</p>
+              <p>Le modèle développé avec Cormas est utilisé pour
+                comparer différentes règles de positionnement des
+                sentiers de pièges dans le temps et dans l'espace. La
+                partie "dynamique des populations" est un modèle
+                individus-centré. L'agent céphalophe a été défini à
+                partir des valeurs, trouvées dans la littérature, des
+                paramètres biologiques et éthologiques qui caractérisent
+                cet animal. Les règles comportementales des agents
+                chasseurs ont pu être mises en évidence à partir des
+                enquêtes de terrain. Le modèle intègre des données
+                provenant d'un système d'information géographique (SIG).
+                La grille spatiale représente ainsi un paysage
+                artificiel dont les contours sont ceux du territoire du
+                village de Djemiong. Les résultats soulignent
+                l'importance des processus de coordination entre les
+                chasseurs, en partie en raison de l'appropriation de
+                réseaux de sentiers de pièges par des groupes familiaux.
+                Les résultats des simulations suggèrent que la
+                localisation spatiale des pièges a un impact beaucoup
+                plus fort sur la viabilité de la population de
+                céphalophes que la pression de chasse globale ou la
+                durée de la période non chassée. </p>
+              <ul>
+                <li>Télécharger le modèle Cormas (<a
+                    href="/logiciel/Djemiong.zip">archive zip</a>,
+                  13Ko).</li>
+                <li>Télécharger un article à propos de ce modèle:
+                  <ul>
+                    <li>Bousquet, F., Le Page, C., Bakam, I. et
+                      Takforyan, A., 2001. A spatially explicit
+                      individual-based model of blue duikers population
+                      dynamics: multi-agent simulation of bushmeat
+                      hunting in an eastern cameroonian village.
+                      Ecological Modelling, 138(1-3): 331-346. <a
+                        href="/pdf/djemiong.pdf" target="_blank"><img
+                          src="/images/renvoi.gif" height="15"
+                          width="16" border="0"></a></li>
+                  </ul>
+                </li>
+                <li>Pour plus d'information, <a
+                    href="mailto:lepage@cirad.fr">contacter les auteurs</a>.</li>
+              </ul>
+              <!--#include virtual="/include/copyright_fr.inc" -->
+              <p></p>
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
+      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
+      position: fixed; z-index: 1000;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <ul>
-        <li>T&eacute;l&eacute;charger le mod&egrave;le Cormas (<a href="/logiciel/Djemiong.zip">archive 
-          zip</a>, 13Ko).</li>
-        <li>T&eacute;l&eacute;charger un article &agrave; propos de ce mod&egrave;le: 
-          <ul>
-            <li>Bousquet, F., Le Page, C., Bakam, I. et Takforyan, A., 2001. A 
-              spatially explicit individual-based model of blue duikers population 
-              dynamics: multi-agent simulation of bushmeat hunting in an eastern 
-              cameroonian village. Ecological Modelling, 138(1-3): 331-346. <a href="/pdf/djemiong.pdf" target="_blank"><img src="/images/renvoi.gif" width="16" height="15" border="0"></a></li>
-          </ul>
-        </li>
-        <li>Pour plus dinformation, <a href="mailto:lepage@cirad.fr">contacter 
-          les auteurs</a>.</li>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Cours</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
       </ul>
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
-</table>
-</body>
+    </div>
+  </body>
 </html>

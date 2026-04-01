@@ -1,133 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-
-<head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
-<title> Modeles coupl&eacute;s</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
-<!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
-</head>
-
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
-
-<!--#include virtual="haut.inc" -->
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
-<tr>
-
-  <!--#include virtual="sommair.inc" --> 
-
-  <td width="*" valign="top" bgcolor="#FFFFFF"> 
-
-   <p>&nbsp; 
-
-   
-
-      <h1>Des mod&egrave;les coupl&eacute;s</h1>
-
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title> Modeles couplés</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
     
-
-      <img src="/images/applica/couplage.gif" width="274" height="171" align="right" vspace="10" hspace="10" alt="Jeu de r&ocirc;le au Vietnam"> 
-
-      <p>&nbsp;</p>
-
-      <p>Dans certains mod&egrave;les, Cormas est associ&eacute; &agrave; dautres 
-
-        applications.</p>
-
-      <p>Ces applications peuvent &ecirc;tre des syst&egrave;mes dinformations 
-
-        g&eacute;ographiques (comme MapInfo ou ArcView), des bases de donn&eacute;es 
-
-        (comme Access) ou dautres mod&egrave;les (comme Vensim). Le lien entre 
-
-        Cormas et les autres applications peuvent &ecirc;tre de type DLL, ODBC 
-
-        ou DDE.</p>
-
-      <p>Mais la distinction entre les diff&eacute;rents mod&egrave;les r&eacute;side 
-
-        surtout dans la dynamique du couplage.</p>
-
-      <h2> Couplage simple</h2>
-
-      <p>Certains mod&egrave;les utilisent des donn&eacute;es provenant dautres 
-        applications (un Sig par exemple), pour initialiser la configuration spatiale 
-        ou les caract&eacute;ristiques des agents. Dans le cas dune configuration 
-        spatiale fournie par un Sig, Cormas travaille sur des entit&eacute;s spatiales 
-        vectorielles (des polygones). Il sagit des mod&egrave;les suivants :</p>
-      <p>[<a href="alamo.htm">Alamo</a>] Agricultural Landscape Modelling. Politiques 
-        publiques agricoles et foresti&egrave;res et transformation des paysages 
-        des Grands Causses au Sud du Massif central (<a href="mailto:Annie.Hofstetter@supagro.inra.fr">A. 
-        Hofstetter</a>, <a href="mailto:lifran@ensam.inra.fr">R. Lifran</a>).</p>
-
-      <p><a href="/fr/applica/burkina.htm">[Burkina]</a> : indicateurs de qualit&eacute; 
-
-        des terres au Burkina Faso (Serge Guillobez).</p>
-
-      <p>[WsErosion] : risque d&eacute;rosion et diversification agricole a l&eacute;chelle 
-
-        dun bassin versant au Nord de la ThaÃ¯lande (Guy Tr&eacute;buil, Christian 
-
-        Baron).</p>
-
-      <h2>Couplage dynamique</h2>
-
-      <p>Au contraire, dautres mod&egrave;les &eacute;changent pendant toute 
-
-        la simulation des donn&eacute;es avec les autres applications. Cormas 
-
-        et les autres applications interviennent &agrave; tour de r&ocirc;le dans 
-
-        des &eacute;changes dinformations.</p>
-
-      <p>[DataBase] : configuration de Cormas pour acc&eacute;der &agrave; des 
-
-        bases de donn&eacute;es Access par ODBC (Stanislas Boissau).</p>
-
-      <p>[<a href="magmas.htm">MagmaS</a>] : &eacute;changes deffluents d&eacute;levage 
-        &agrave; la R&eacute;union <font face="Georgia, Times New Roman, Times, serif">(<a href="mailto:manuel.martin@cirad.fr">Manuel 
-        Martin</a>, <a href="mailto:eric-piquet@wanadoo.fr%20">Eric Piquet</a>, 
-        <a href="mailto:manuel.martin@cirad.fr"></a><a href="mailto:lepage@cirad.fr">Christophe 
-        Le Page</a> et <a href="mailto:francois.guerrin@cirad.fr">Fran&ccedil;ois 
-        Guerrin</a>)</font>.Cormas et Vensim sont coupl&eacute;s par DLL.</p>
-
-      <p>[SaintGeorges] : p&acirc;turage et embroussaillement dune commune de 
-
-        Loz&egrave;re (Emanuel Lieurain). Cormas, Access et ArcView sont coupl&eacute;s 
-
-        par ODBC et DDE.</p>
-
-      <p>[Zambeze] : dynamiques fonci&egrave;res dans la moyenne vall&eacute;e 
-
-        du Zamb&egrave;ze (Quinton Zunga, Antoine Vagnini, Christophe Le Page). 
-
-        Cormas et ArcView sont coupl&eacute;s par DDE.</p>
-
-      <p>&nbsp;</p>
-
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-   <div align="right" class="texte"></div>
-
-  </td>
-
- </tr>
-
-</table>
-
-</body>
-
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style=" width: 100vw;
+      background-color: #FFA500; position: relative; margin-left: 0;
+      left: 0; right: 0; z-index: 1001;">
+      <div class="header-image-container">
+        <img alt="Description de l'image" src="../../images/bandeau.jpg">
+      </div>
+    </div>
+    <div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" height="23" width="23">
+      <!--#include virtual="haut.inc" -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp; </p>
+              <h1>Des modèles couplés</h1>
+              <img alt="Jeu de rôle au Vietnam"
+                src="/images/applica/couplage.gif" height="171"
+                vspace="10" width="274" hspace="10" align="right">
+              <p>&nbsp;</p>
+              <p>Dans certains modèles, Cormas est associé à d'autres
+                applications.</p>
+              <p>Ces applications peuvent être des systèmes
+                d'informations géographiques (comme MapInfo ou ArcView),
+                des bases de données (comme Access) ou d'autres modèles
+                (comme Vensim). Le lien entre Cormas et les autres
+                applications peuvent être de type DLL, ODBC ou DDE.</p>
+              <p>Mais la distinction entre les différents modèles réside
+                surtout dans la dynamique du couplage.</p>
+              <h2> Couplage simple</h2>
+              <p>Certains modèles utilisent des données provenant
+                d'autres applications (un Sig par exemple), pour
+                initialiser la configuration spatiale ou les
+                caractéristiques des agents. Dans le cas dune
+                configuration spatiale fournie par un Sig, Cormas
+                travaille sur des entités spatiales vectorielles (des
+                polygones). Il s'agit des modèles suivants :</p>
+              <p>[<a href="alamo.htm">Alamo</a>] Agricultural Landscape
+                Modelling. Politiques publiques agricoles et forestières
+                et transformation des paysages des Grands Causses au Sud
+                du Massif central (<a
+                  href="mailto:Annie.Hofstetter@supagro.inra.fr">A.
+                  Hofstetter</a>, <a href="mailto:lifran@ensam.inra.fr">R.
+                  Lifran</a>).</p>
+              <p><a href="/fr/applica/burkina.htm">[Burkina]</a> :
+                indicateurs de qualité des terres au Burkina Faso (Serge
+                Guillobez).</p>
+              <p>[WsErosion] : risque d'érosion et diversification
+                agricole à l'échelle d'un bassin versant au Nord de la
+                Thaïlande (Guy Trébuil, Christian Baron).</p>
+              <h2>Couplage dynamique</h2>
+              <p>Au contraire, d'autres modèles échangent pendant toute
+                la simulation des données avec les autres applications.
+                Cormas et les autres applications interviennent à tour
+                de rôle dans des échanges d'informations.</p>
+              <p>[DataBase] : configuration de Cormas pour accéder à des
+                bases de données Access par ODBC (Stanislas Boissau).</p>
+              <p>[<a href="magmas.htm">MagmaS</a>] : échanges
+                d'effluents d'élevage à la Réunion <font face="Georgia,
+                  Times New Roman, Times, serif">(<a
+                    href="mailto:manuel.martin@cirad.fr">Manuel Martin</a>,
+                  <a href="mailto:eric-piquet@wanadoo.fr%20">Eric Piquet</a>,
+                  <a href="mailto:manuel.martin@cirad.fr"></a><a
+                    href="mailto:lepage@cirad.fr">Christophe Le Page</a>
+                  et <a href="mailto:francois.guerrin@cirad.fr">François
+                    Guerrin</a>)</font>. Cormas et Vensim sont couplés
+                par DLL.</p>
+              <p>[SaintGeorges] : pâturage et embroussaillement d'une
+                commune de Lozère (Emanuel Lieurain). Cormas, Access et
+                ArcView sont couplés par ODBC et DDE.</p>
+              <p>[Zambeze] : dynamiques foncières dans la moyenne vallée
+                du Zambèze (Quinton Zunga, Antoine Vagnini, Christophe
+                Le Page). Cormas et ArcView sont couplés par DDE.</p>
+              <p>&nbsp;</p>
+              <!--#include virtual="/include/copyright_fr.inc" -->
+              <p></p>
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
+      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
+      position: fixed; z-index: 1000;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Cours</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+      </ul>
+    </div>
+  </body>
 </html>
-

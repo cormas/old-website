@@ -1,79 +1,144 @@
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>FloAgri</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
 </head>
-
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
-
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
 <!--#include virtual="haut.inc" -->
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-
-  <!--#include virtual="sommair.inc" --> 
-
-  <td width="*" valign="top" bgcolor="#FFFFFF"> 
-
-   <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> 
 
    
 
       <h1>FloAgri.</h1>
-      <h2>De nouvelles opportunit&eacute;s technologiques pour les petits agriculteurs dAmazonie de renforcer leur r&eacute;sistence aux risques tout en pr&eacute;servant la for&ecirc;t. </h2>
-      <h2>Exp&eacute;riences de terrain crois&eacute;es avec la mod&eacute;lisation multi-agent. </h2>
-<p><strong>Bommel, P., Sist, P., Piketty, M-G., Bendahan,  A. B. </strong>      </p>
-<p>En cherchant des alternatives techniques &agrave; lutilisation conventionnelle des terres en Amazonie, le projet Floagri (financ&eacute; par lUE) a exp&eacute;riment&eacute; plusieurs pratiques sur le terrain avec les petits agriculteurs afin de parvenir &agrave; un d&eacute;veloppement plus durable. Nous avons analys&eacute; les avantages et les contraintes de ces exp&eacute;riences sur le terrain. Deux dentre eux ont &eacute;t&eacute; formalis&eacute;s dans un mod&egrave;le multi-agent :   les plantations permanentes de  cultures annuelles (PPCA) et la gestion des for&ecirc;ts (GF) de la &quot;r&eacute;serve l&eacute;gale&quot; de la propri&eacute;t&eacute; (80%) des petits agriculteurs. Bas&eacute; sur les techniques dagriculture de conservation (semis direct sous couvert v&eacute;g&eacute;tal, SCV), la PPCA vise &agrave; r&eacute;cup&eacute;rer les p&acirc;turages d&eacute;grad&eacute;s afin d&eacute;viter la culture sur br&ucirc;lis. La GF consiste &agrave; utiliser la &quot;r&eacute;serve l&eacute;gale&quot; (80% de la superface de lexploitation) sans couper la for&ecirc;t.</p>
-      <table width="851" border="0">
-        <tr>
-          <td width="250" height="377" valign="top"><p>Notre mod&egrave;le vise &agrave; &eacute;valuer les performances &eacute;conomiques et les impacts environnementaux des &eacute;leveurs  et de tester linfluence de la PPCA et la gestion  foresti&egrave;re en tant quactivit&eacute;s suppl&eacute;mentaires. Le principe de cette analyse consiste alors &agrave; comparer les diverses activit&eacute;s de production &agrave; partir des m&ecirc;mes conditions initiales. Consid&eacute;rant que lagriculture familiale en Amazonie est principalement orient&eacute;e vers l&eacute;levage, chaque agent adopte une strat&eacute;gie &eacute;leveur et un ensemble dactivit&eacute;s sp&eacute;cifiques. Pour toutes les simulations, les agents d&eacute;butent avec une ferme identique contenant la m&ecirc;me r&eacute;partition de la couverture v&eacute;g&eacute;tale et m&ecirc;me la qualit&eacute; de sol. La main doeuvre active de chaque agent est &eacute;galement strictement identique.</p></td>
-          <td width="591"><img src="../../images/applica/floagri1.jpg" alt="Floagri: Alternativas Adaptadas" width="509" height="375" hspace="33"></td>
-        </tr>
-      </table>
-      <p>&nbsp;</p>
-      <table width="854" border="0">
-        <tr>
-          <td width="474"><img src="../../images/applica/floagri2.jpg" alt="Ro&ccedil;a permanente" width="460" height="361"></td>
-          <td width="370">Notre &eacute;tude ne compare pas uniquement les b&eacute;n&eacute;fices financiers des activit&eacute;s agricoles mises en &oelig;uvre dans le projet. Mais il cherche aussi &agrave; mieux comprendre et &agrave; &eacute;valuer la faisabilit&eacute; de chaque nouvelle activit&eacute; en termes de gestion de la main doeuvre familiale, la disponibilit&eacute; en terres fertiles et la rentabilit&eacute; &eacute;conomique.<br>
-Nos premiers r&eacute;sultats montrent que la stricte conformit&eacute; &agrave; la l&eacute;gislation (ne pas d&eacute;boiser 80% de la propri&eacute;t&eacute;) nest pas viable &eacute;conomiquement  si les agents appliquent les fa&ccedil;ons de faire conventionnelles. Or, en regardant les donn&eacute;es sur papier, les nouvelles activit&eacute;s du projet ne fournissent pas davantages &eacute;vidents par rapport &agrave; l&eacute;levage  traditionnels. Mais les simulations montrent que lorsque lon prend en compte le risque (comme la probabilit&eacute; d&ecirc;tre malade), les activit&eacute;s suppl&eacute;mentaires de FloAgri peuvent am&eacute;lior&eacute;es les revenus  en permettant aux agents de surmonter leurs difficult&eacute;s passag&egrave;res tout en pr&eacute;servant leur for&ecirc;t.<br>
-Ainsi, les exp&eacute;rimentations en grandeur r&eacute;elle de FloAgri, combin&eacute;es avec lanalyse par simulation, r&eacute;v&egrave;lent que de nouvelles pratiques agricoles peuvent accro&icirc;tre les capacit&eacute;s des petits agriculteurs de r&eacute;sister  aux dangers. Dans le m&ecirc;me temps, en pr&eacute;servant leur for&ecirc;t, ils contribuent au d&eacute;veloppement durable de la r&eacute;gion amazonienne.</td>
-        </tr>
-      </table>
-      <h3 align="left">Description d&eacute;taill&eacute;es du <a href="../../en/applica/floagriDescription.htm">mod&egrave;le</a> et principaux <a href="../../en/applica/floagriResults.htm"> r&eacute;sultats</a> (en anglais).</h3>
-      <h2 align="left">References </h2>
-      <p>Pour plus dinformation, <a href="mailto:bommel@cirad.fr">contacter les 
-        auteurs.</a></p>
-      <p>Article dactualit&eacute; du Cirad : <a href="http://www.cirad.fr/actualites/toutes-les-actualites/articles/2010/science/floagri">Quand l&rsquo;agriculture familiale pr&eacute;serve la for&ecirc;t amazonienne</a></p>
-      <p><a href="http://www.cirad.fr/ur/green/themes_et_projets_de_recherche/projets_finis/floagri">Pr&eacute;sentation de Floagri</a> sur le site de lUR Green.</p>
-
-      <!--#include virtual="/include/copyright_fr.inc" -->
-
-	</td>
-
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-   <div align="right" class="texte"></div>
-
-  </td>
-
- </tr>
-
+<h2>De nouvelles opportunités technologiques pour les petits agriculteurs dAmazonie de renforcer leur résistence aux risques tout en préservant la forêt. </h2>
+<h2>Expériences de terrain croisées avec la modélisation multi-agent. </h2>
+<p><strong>Bommel, P., Sist, P., Piketty, M-G., Bendahan,  A. B. </strong> </p>
+<p>En cherchant des alternatives techniques à lutilisation conventionnelle des terres en Amazonie, le projet Floagri (financé par lUE) a expérimenté plusieurs pratiques sur le terrain avec les petits agriculteurs afin de parvenir à un développement plus durable. Nous avons analysé les avantages et les contraintes de ces expériences sur le terrain. Deux dentre eux ont été formalisés dans un modèle multi-agent :   les plantations permanentes de  cultures annuelles (PPCA) et la gestion des forêts (GF) de la "réserve légale" de la propriété (80%) des petits agriculteurs. Basé sur les techniques dagriculture de conservation (semis direct sous couvert végétal, SCV), la PPCA vise à récupérer les pâturages dégradés afin déviter la culture sur brûlis. La GF consiste à utiliser la "réserve légale" (80% de la superface de lexploitation) sans couper la forêt.</p>
+<table border="0" width="851">
+<tr>
+<td height="377" valign="top" width="250"><p>Notre modèle vise à évaluer les performances économiques et les impacts environnementaux des éleveurs  et de tester linfluence de la PPCA et la gestion  forestière en tant quactivités supplémentaires. Le principe de cette analyse consiste alors à comparer les diverses activités de production à partir des mêmes conditions initiales. Considérant que lagriculture familiale en Amazonie est principalement orientée vers lélevage, chaque agent adopte une stratégie éleveur et un ensemble dactivités spécifiques. Pour toutes les simulations, les agents débutent avec une ferme identique contenant la même répartition de la couverture végétale et même la qualité de sol. La main doeuvre active de chaque agent est également strictement identique.</p></td>
+<td width="591"><img alt="Floagri: Alternativas Adaptadas" height="375" hspace="33" src="../../images/applica/floagri1.jpg" width="509"/></td>
+</tr>
 </table>
-
+<p> </p>
+<table border="0" width="854">
+<tr>
+<td width="474"><img alt="Roça permanente" height="361" src="../../images/applica/floagri2.jpg" width="460"/></td>
+<td width="370">Notre étude ne compare pas uniquement les bénéfices financiers des activités agricoles mises en œuvre dans le projet. Mais il cherche aussi à mieux comprendre et à évaluer la faisabilité de chaque nouvelle activité en termes de gestion de la main doeuvre familiale, la disponibilité en terres fertiles et la rentabilité économique.<br/>
+Nos premiers résultats montrent que la stricte conformité à la législation (ne pas déboiser 80% de la propriété) nest pas viable économiquement  si les agents appliquent les façons de faire conventionnelles. Or, en regardant les données sur papier, les nouvelles activités du projet ne fournissent pas davantages évidents par rapport à lélevage  traditionnels. Mais les simulations montrent que lorsque lon prend en compte le risque (comme la probabilité dêtre malade), les activités supplémentaires de FloAgri peuvent améliorées les revenus  en permettant aux agents de surmonter leurs difficultés passagères tout en préservant leur forêt.<br/>
+Ainsi, les expérimentations en grandeur réelle de FloAgri, combinées avec lanalyse par simulation, révèlent que de nouvelles pratiques agricoles peuvent accroître les capacités des petits agriculteurs de résister  aux dangers. Dans le même temps, en préservant leur forêt, ils contribuent au développement durable de la région amazonienne.</td>
+</tr>
+</table>
+<h3 align="left">Description détaillées du <a href="../../en/applica/floagriDescription.htm">modèle</a> et principaux <a href="../../en/applica/floagriResults.htm"> résultats</a> (en anglais).</h3>
+<h2 align="left">References </h2>
+<p>Pour plus dinformation, <a href="mailto:bommel@cirad.fr">contacter les 
+        auteurs.</a></p>
+<p>Article dactualité du Cirad : <a href="http://www.cirad.fr/actualites/toutes-les-actualites/articles/2010/science/floagri">Quand l’agriculture familiale préserve la forêt amazonienne</a></p>
+<p><a href="http://www.cirad.fr/ur/green/themes_et_projets_de_recherche/projets_finis/floagri">Présentation de Floagri</a> sur le site de lUR Green.</p>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
-
 </html>
-

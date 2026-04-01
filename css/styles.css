@@ -1,0 +1,77 @@
+
+/* Exemple de règles existantes */
+
+BODY {
+    margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10pt;
+ }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Centrer horizontalement */
+    justify-content: space-between; /* Distribuer l'espace entre les sections */
+    height: 100vh; /* Hauteur de la page complète */
+}
+
+.header-container {
+    background-color: #FFA500; /* Même fond que la sidebar */
+    height: 80px;
+    display: flex;
+    justify-content: center; /* Centrer l'image à l'intérieur de la barre */
+    width: 100%; /* Largeur du bandeau horizontal */
+}
+
+#content {
+    margin-top: 20px; /* Ajout d'un peu d'espace entre le bandeau et le contenu */
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#sidebar {
+    position: fixed;
+    top: 80px; /* Position de la sidebar juste en dessous du bandeau */
+    left: 0;
+    width: 150px;
+    height: calc(100% - 80px); /* Hauteur de la sidebar */
+    background-color: #FFA500; /* Même fond que le bandeau */
+    padding: 20px;
+}
+
+#content h1 {
+    margin-top: 20px; /* Ajout d'un peu d'espace entre l'image et le titre */
+    margin-left: 190px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 16pt;
+  text-align: right; 
+  font-style: normal; 
+  font-weight: bold; 
+  color: #777777;
+}
+
+h2 {
+    margin-left: 190px; /* Ajuster la marge gauche des paragraphes */
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 13pt; 
+  font-style: normal; 
+  font-weight: bold; 
+  color: #888888;
+  }
+
+#content h3 {
+    margin-left: 210px; /* Ajuster la marge gauche des paragraphes */
+}
+
+#content ul {
+    margin-left: 190px; /* Ajuster la marge gauche des paragraphes */
+}
+
+#content p {
+    margin-left: 190px; /* Ajuster la marge gauche des paragraphes */
+}
+
+/* Ajout de la règle CSS pour ajuster les marges à partir de #content */
+#content * {
+    margin-left: 190px;
+}

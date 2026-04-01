@@ -1,34 +1,107 @@
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-    <title>demo_fire</title>
-    <!--#include virtual="/include/script.inc" -->
-    <link rel="stylesheet" href="/css/cormas.css" --="">
-  </head>
-  <body border="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
-    topmargin="0"
-    marginwidth="0"
-    marginheight="0"
-    leftmargin="0"
-    bgcolor="#FFFFFF">
-    <!--#include virtual="haut.inc" -->
-    <table width="100%" cellspacing="0" cellpadding="0" border="0">
-      <tbody>
-        <tr>
-          <!--#include virtual="sommair.inc" -->
-          <td width="*" valign="top" bgcolor="#FFFFFF">
-            <p>&nbsp; </p>
-            <h1>Demo_Fire&nbsp; </h1>
-            <h2>Automate cellulaire feu de foret</h2>
-            <p>Christophe Le Page, Francois Bousquet, Pierre Bommel (Cirad)</p>
-            <h3>Objectif</h3>
-            <p>Ce modele illustre les principes des automates cellulaires
-              impl&eacute;ment&eacute;s avec Cormas. Lentit&eacute; spatiale du modele, <i>Plot</i>,
-              peut se trouver dans quatre &eacute;tats: <i>#fire</i> (rouge); <i>#forest</i>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>demo_fire</title>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
+<!--#include virtual="haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="*">
+<p>  </p>
+<h1>Demo_Fire  </h1>
+<h2>Automate cellulaire feu de foret</h2>
+<p>Christophe Le Page, Francois Bousquet, Pierre Bommel (Cirad)</p>
+<h3>Objectif</h3>
+<p>Ce modele illustre les principes des automates cellulaires
+              implémentés avec Cormas. Lentité spatiale du modele, <i>Plot</i>,
+              peut se trouver dans quatre états: <i>#fire</i> (rouge); <i>#forest</i>
               (vert); <i>#ash</i> (gris); <i>#empty</i> (blanc). Chaque
               cellule de la grille spatiale est initialement, selon une
-              probabilit&eacute; <i>p</i>, une foret, et selon une probabilit&eacute; <i>1-p</i>,
+              probabilité <i>p</i>, une foret, et selon une probabilité <i>1-p</i>,
               vide. On met le feu a une cellule et on suit la diffusion du feu
               de proche en proche a travers la grille spatiale selon la fonction
               de transition suivante: une cellule en foret prend feu au temps <i>t</i>
@@ -36,195 +109,192 @@
               feu au temps <i>t-1</i>. Les cellules en feu passeront en cendres
               au temps suivant, les cellules en cendres deviendront vides au
               temps suivant. </p>
-            <table width="75%" border="1">
-              <tbody>
-                <tr>
-                  <td align="center"><img src="/images/applica/fireautomata53.gif"
-                      alt="Animation gif du modele FireAutomata"
-                      hspace="10"
-                      height="190"
-                      width="193"
-                      vspace="10"
-                      align="bottom"></td>
-                  <td align="center"><img src="/images/applica/fireautomata58.gif"
-                      alt="Animation gif du modele FireAutomata"
-                      hspace="10"
-                      height="191"
-                      width="193"
-                      vspace="10"
-                      align="bottom"></td>
-                </tr>
-                <tr>
-                  <td align="center">p = 0.53</td>
-                  <td align="center">p = 0.58</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>La probabilit&eacute; dobserver un incendie restreint est tres grande
-              si <i>p</i> est inf&eacute;rieur a 0.55, et au contraire si <i>p</i>
-              est sup&eacute;rieur a 0.55, cest un incendie global qui a de fortes
+<table border="1" width="75%">
+<tbody>
+<tr>
+<td align="center" class="content-cell"><img align="bottom" alt="Animation gif du modele FireAutomata" height="190" hspace="10" src="/images/applica/fireautomata53.gif" vspace="10" width="193"/></td>
+<td align="center" class="content-cell"><img align="bottom" alt="Animation gif du modele FireAutomata" height="191" hspace="10" src="/images/applica/fireautomata58.gif" vspace="10" width="193"/></td>
+</tr>
+<tr>
+<td align="center" class="content-cell">p = 0.53</td>
+<td align="center" class="content-cell">p = 0.58</td>
+</tr>
+</tbody>
+</table>
+<p>La probabilité dobserver un incendie restreint est tres grande
+              si <i>p</i> est inférieur a 0.55, et au contraire si <i>p</i>
+              est supérieur a 0.55, cest un incendie global qui a de fortes
               chances de se produire. Ce seuil dit de "<b>percolation</b>"
-              caract&eacute;rise ce type dautomate cellulaire repr&eacute;sentant des
-              processus de diffusion. <br>
+              caractérise ce type dautomate cellulaire représentant des
+              processus de diffusion. <br/>
               Voir aussi (pour les amateurs !) l<a href="fireautomataMovie.htm">animation</a>
-              r&eacute;alis&eacute;e a partir dune grille de 100 x 100 cellules (p = 0.58).</p>
-            <p><br>
-            </p>
-            <p><u>Les quatre versions suivantes d&eacute;crivent quatre manieres
-                diff&eacute;rentes dimpl&eacute;menter un modele de diffusion du feu sur une
+              réalisée a partir dune grille de 100 x 100 cellules (p = 0.58).</p>
+<p><br/>
+</p>
+<p><u>Les quatre versions suivantes décrivent quatre manieres
+                différentes dimplémenter un modele de diffusion du feu sur une
                 grille. </u></p>
-            <p>Pour ces 4 versions, nous consid&eacute;rons uniquement trois &eacute;tats
+<p>Pour ces 4 versions, nous considérons uniquement trois états
               possibles : en foret, en feu, ou vide (#<i>forest</i>, #<i>fire</i>,
-              #<i>empty</i>). Le feu ne s&eacute;teind pas de lui-meme (sauf pour la
+              #<i>empty</i>). Le feu ne séteind pas de lui-meme (sauf pour la
               version 4b).</p>
-            <p><br>
-            </p>
-            <h3>Version 1 : automate cellulaire</h3>
-            <p>&nbsp;&nbsp;&nbsp; ** S&eacute;lectionner <b><u>Fire_1_CA.pcl</u></b>
+<p><br/>
+</p>
+<h3>Version 1 : automate cellulaire</h3>
+<p>    ** Sélectionner <b><u>Fire_1_CA.pcl</u></b>
               du modele <b><a href="../../logiciel/Demo_Fire.zip">Demo_Fire</a></b>
               **</p>
-            <p>Cette version propose une version classique dautomate
-              cellulaire. Ici, seule une classe est cr&eacute;&eacute;e (<b>Plot</b>), sous
-              classe de <b>SpatialEntityCell</b>. Elle contient donc d&eacute;ja deux
+<p>Cette version propose une version classique dautomate
+              cellulaire. Ici, seule une classe est créée (<b>Plot</b>), sous
+              classe de <b>SpatialEntityCell</b>. Elle contient donc déja deux
               attributs : <i>state</i> et <i>bufferState</i>. Ici, nous
-              d&eacute;clarons <i>#empty</i> comme valeur par d&eacute;faut :</p>
-            <img title="default state" alt="" src="../../images/applica/fire-defaultState.png"
-              style="width: 331px; height: 375px;"><br>
-            <br>
-            Pour cr&eacute;er lespace initial, il faut s&eacute;lectionner une des 3 m&eacute;thodes
-            dinitialisation : init_4 (qui cr&eacute;&eacute; un espace de voisinage 4),
+              déclarons <i>#empty</i> comme valeur par défaut :</p>
+<img alt="" src="../../images/applica/fire-defaultState.png" style="width: 331px; height: 375px;" title="default state"/><br/>
+<br/>
+            Pour créer lespace initial, il faut sélectionner une des 3 méthodes
+            dinitialisation : init_4 (qui créé un espace de voisinage 4),
             init_6 (voisinage de 6, ou init_8 (voisinage de Moore). Chacune de
-            ces m&eacute;thodes utilise linitialisation g&eacute;n&eacute;rale suivante : <br>
-            <br>
-            <img alt="code initialization" src="../../images/applica/fire-code.png"><br>
-            A noter que <i>xSize</i> et <i>ySize</i> ont &eacute;t&eacute; d&eacute;clar&eacute;s comme 2
-            attributs du modele (avec 50 comme valeur par d&eacute;faut).<br>
-            <br>
-            Pour la dynamique du feu, il faut red&eacute;finir la m&eacute;thode <b>#newState</b>
-            (aussi appel&eacute;e "Fonction de transition") au niveau de la classe <b>Plot</b>,
-            de la facon suivante :<br>
-            <br>
-            <img title="fire code" alt="code of fire" src="../../images/applica/fire-code2.png"><br>
-            Il est important de noter ici que l&eacute;tat de la cellule nest pas
-            modifi&eacute; mais uniquement son &eacute;tat tampon (<i>bufferState</i>). Par
+            ces méthodes utilise linitialisation générale suivante : <br/>
+<br/>
+<img alt="code initialization" src="../../images/applica/fire-code.png"/><br/>
+            A noter que <i>xSize</i> et <i>ySize</i> ont été déclarés comme 2
+            attributs du modele (avec 50 comme valeur par défaut).<br/>
+<br/>
+            Pour la dynamique du feu, il faut redéfinir la méthode <b>#newState</b>
+            (aussi appelée "Fonction de transition") au niveau de la classe <b>Plot</b>,
+            de la facon suivante :<br/>
+<br/>
+<img alt="code of fire" src="../../images/applica/fire-code2.png" title="fire code"/><br/>
+            Il est important de noter ici que létat de la cellule nest pas
+            modifié mais uniquement son état tampon (<i>bufferState</i>). Par
             exemple, dans le cas dune cellule en foret en contact avec un feu,
-            celle-ci garde son &eacute;tat foret, mais modifie juste son &eacute;tat tampon
-            (self bufferState: #fire),&nbsp; ce qui fait que cette cellule
-            continue pour ce tour detre consid&eacute;r&eacute;e par les autres cellules
-            comme &eacute;tant encore une foret.<br>
-            Et au niveau de la m&eacute;thode <i>#step: t</i> de lordonnanceur, il
-            faut faire un simple appel a :<br>
-            <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self stepSynchronouslyCA: t.</pre>
-            La m&eacute;thode <i>#stepSynchronouslyCA:</i> est d&eacute;fini au niveau de <b>
-              CormasModel</b>. Elle ex&eacute;cute 2 boucles completes de lensemble
-            des cellules. La 1ere boucle fait ex&eacute;cuter la m&eacute;thode <i>#newState</i>
-            a chaque cellule (donc sans changement effectif de l&eacute;tat), puis une
-            deuxieme boucle fait ex&eacute;cuter la m&eacute;thode <i>#updateState</i>. Cest
-            seulement a ce moment-la que l&eacute;tat des cellules est effectivement
-            modifi&eacute;.<br>
-            <br>
-            <h3>Version 2 : propagation a partir des cellules en feu </h3>
-            &nbsp;&nbsp;&nbsp; ** S&eacute;lectionner&nbsp;<b><u><b><u>Fire_2</u></b>_CAoptimized.pcl</u></b>
+            celle-ci garde son état foret, mais modifie juste son état tampon
+            (self bufferState: #fire),  ce qui fait que cette cellule
+            continue pour ce tour detre considérée par les autres cellules
+            comme étant encore une foret.<br/>
+            Et au niveau de la méthode <i>#step: t</i> de lordonnanceur, il
+            faut faire un simple appel a :<br/>
+<pre>       self stepSynchronouslyCA: t.</pre>
+            La méthode <i>#stepSynchronouslyCA:</i> est défini au niveau de <b>
+              CormasModel</b>. Elle exécute 2 boucles completes de lensemble
+            des cellules. La 1ere boucle fait exécuter la méthode <i>#newState</i>
+            a chaque cellule (donc sans changement effectif de létat), puis une
+            deuxieme boucle fait exécuter la méthode <i>#updateState</i>. Cest
+            seulement a ce moment-la que létat des cellules est effectivement
+            modifié.<br/>
+<br/>
+<h3>Version 2 : propagation a partir des cellules en feu </h3>
+                ** Sélectionner <b><u><b><u>Fire_2</u></b>_CAoptimized.pcl</u></b>
             du modele <b><a href="../../logiciel/Demo_Fire.zip">Demo_Fire</a></b>
-            **<br>
-            <br>
+            **<br/>
+<br/>
             Cette version propose une diffusion par les cellules en feu
-            uniquement. Il sagit donc a chaque pas de temps de s&eacute;lectionner les
+            uniquement. Il sagit donc a chaque pas de temps de sélectionner les
             cellules en feu, puis dactiver pour chacune la propagation du feu
-            sur les voisines. Par rapport a la version 1, deux m&eacute;thodes sont
-            ajout&eacute;es dans la classe <b>Plot</b> : <i>#ignite</i> (qui change
-            l&eacute;tat de la cellule en feu) et <i>#spreadFire</i> (qui propage le
-            feu sur les cellules forets voisines).<br>
-            Pour &eacute;viter les art&eacute;facts li&eacute;s au parcours r&eacute;gulier des cellules,
-            lordonnanceur doit s&eacute;lectionner au pr&eacute;alable les cellules en feu,
-            puis activer leur diffusion :<br>
-            <br>
-            <img title="fire code diffusion" alt="" src="../../images/applica/fire-code3.png"><br>
-            Cette version propose &eacute;galement une proc&eacute;dure plus optimis&eacute;e qui
-            &eacute;vite le parcours au pr&eacute;alable de la grille pour ne s&eacute;lectionner que
-            les cellules en feu (cf. methode <i>#step: t</i>).<br>
-            <br>
-            <h3>Version 3 : une entit&eacute; spatiale (agr&eacute;gat) se r&eacute;pand sur les
+            sur les voisines. Par rapport a la version 1, deux méthodes sont
+            ajoutées dans la classe <b>Plot</b> : <i>#ignite</i> (qui change
+            létat de la cellule en feu) et <i>#spreadFire</i> (qui propage le
+            feu sur les cellules forets voisines).<br/>
+            Pour éviter les artéfacts liés au parcours régulier des cellules,
+            lordonnanceur doit sélectionner au préalable les cellules en feu,
+            puis activer leur diffusion :<br/>
+<br/>
+<img alt="" src="../../images/applica/fire-code3.png" title="fire code diffusion"/><br/>
+            Cette version propose également une procédure plus optimisée qui
+            évite le parcours au préalable de la grille pour ne sélectionner que
+            les cellules en feu (cf. methode <i>#step: t</i>).<br/>
+<br/>
+<h3>Version 3 : une entité spatiale (agrégat) se répand sur les
               cellules en foret</h3>
-            &nbsp;&nbsp;&nbsp; ** S&eacute;lectionner&nbsp;<b><u><b><u>Fire_3_</u></b>FireAggregate.pcl</u></b>
+                ** Sélectionner <b><u><b><u>Fire_3_</u></b>FireAggregate.pcl</u></b>
             du modele <b><a href="../../logiciel/Demo_Fire.zip">Demo_Fire</a></b>
-            **<br>
-            <br>
-            Dans cette version, le feu repr&eacute;sente une &eacute;tendue spatiale qui se
-            r&eacute;pand sur les cellules en foret qui la bordent. Cette entit&eacute; est
-            appel&eacute;e <b>FireAggregate</b> ; cest une sous-classe de <b>SpatialEntityAggregate</b>.
-            Ici, seules les entit&eacute;s FireAggregates sont activ&eacute;es :<br>
-            <pre>&nbsp;&nbsp;&nbsp; self theFireAggregates do: [: f | f spread].</pre>
-            &nbsp;Chaque agr&eacute;gat ex&eacute;cute alors la m&eacute;thode <i>#spread</i> qui se
-            compose de linstruction suivante :<br>
-            <pre>&nbsp;&nbsp;&nbsp; self swellConstraint: [: p | p state = #forest].</pre>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img title="fire aggregate" alt="" src="../../images/applica/fire-aggregate.png"><i>&nbsp;
-              Une entit&eacute; fireAggregate (avec son contour)</i><br>
-            <br>
-            A noter que laffichage du contour des agr&eacute;gats ralenti la
+            **<br/>
+<br/>
+            Dans cette version, le feu représente une étendue spatiale qui se
+            répand sur les cellules en foret qui la bordent. Cette entité est
+            appelée <b>FireAggregate</b> ; cest une sous-classe de <b>SpatialEntityAggregate</b>.
+            Ici, seules les entités FireAggregates sont activées :<br/>
+<pre>    self theFireAggregates do: [: f | f spread].</pre>
+             Chaque agrégat exécute alors la méthode <i>#spread</i> qui se
+            compose de linstruction suivante :<br/>
+<pre>    self swellConstraint: [: p | p state = #forest].</pre>
+                                  
+            <img alt="" src="../../images/applica/fire-aggregate.png" title="fire aggregate"/><i> 
+              Une entité fireAggregate (avec son contour)</i><br/>
+<br/>
+            A noter que laffichage du contour des agrégats ralenti la
             simulation. Sans cet affichage (pov -&gt; FireAggregate -&gt; #nil),
-            les simulations sont aussi rapides que dans la version 2.<br>
-            <br>
-            <h3>Version 4 : des entit&eacute;s Feu se d&eacute;placent</h3>
-            &nbsp;&nbsp;&nbsp; ** S&eacute;lectionner&nbsp;<b><u><b><u>Fire_4_</u></b>FireEntity.pcl</u></b>
+            les simulations sont aussi rapides que dans la version 2.<br/>
+<br/>
+<h3>Version 4 : des entités Feu se déplacent</h3>
+                ** Sélectionner <b><u><b><u>Fire_4_</u></b>FireEntity.pcl</u></b>
             du modele <b><a href="../../logiciel/Demo_Fire.zip">Demo_Fire</a></b>
-            **<br>
-            <br>
-            Dans cette version, des entit&eacute;s Feu (<b>FireEntity</b>) sont cr&eacute;&eacute;es.
-            Ce sont les seules entit&eacute;s activ&eacute;es par lordonnanceur. Consid&eacute;r&eacute;es
-            comme des agents actifs, ces entit&eacute;s se propagent en cr&eacute;ant de
-            nouvelles entit&eacute;s feu sur les cellules voisines :<br>
-            <hr style="width: 0pt; color: #7f7f7f; margin-left: auto; margin-right: auto;"><img
-              title="fire code 4"
-              alt=""
-              src="../../images/applica/fire-code4.png"><br>
-            <br>
-            La m&eacute;thode #<i>moveTo:</i> a &eacute;t&eacute; red&eacute;finie afin dactiver lignition
-            des cellules lors dun d&eacute;placement :<br>
-            <br>
-            <img title="fire move" alt="" src="../../images/applica/fire-code5.png"><br>
-            <h3>Version 4b : des entit&eacute;s Feu se consument et s&eacute;teignent</h3>
-            &nbsp;&nbsp;&nbsp; ** S&eacute;lectionner&nbsp;<b><u><b><u>Fire_5_</u></b>FireEntityAging.pcl</u></b>
+            **<br/>
+<br/>
+            Dans cette version, des entités Feu (<b>FireEntity</b>) sont créées.
+            Ce sont les seules entités activées par lordonnanceur. Considérées
+            comme des agents actifs, ces entités se propagent en créant de
+            nouvelles entités feu sur les cellules voisines :<br/>
+<hr style="width: 0pt; color: #7f7f7f; margin-left: auto; margin-right: auto;"/><img alt="" src="../../images/applica/fire-code4.png" title="fire code 4"/><br/>
+<br/>
+            La méthode #<i>moveTo:</i> a été redéfinie afin dactiver lignition
+            des cellules lors dun déplacement :<br/>
+<br/>
+<img alt="" src="../../images/applica/fire-code5.png" title="fire move"/><br/>
+<h3>Version 4b : des entités Feu se consument et séteignent</h3>
+                ** Sélectionner <b><u><b><u>Fire_5_</u></b>FireEntityAging.pcl</u></b>
             du modele <b><a href="../../logiciel/Demo_Fire.zip">Demo_Fire</a></b>
-            ** <br>
-            <br>
-            <table style="width: 75%;" border="0">
-              <tbody>
-                <tr>
-                  <td style="vertical-align: top; background-color: white;">Cette
-                    version est une r&eacute;plication du modele <a href="http://netlogoweb.org/launch#http://netlogoweb.org/assets/modelslib/Sample%20Models/Earth%20Science/Fire.nlogo">Fire
-                      de NetLogo</a>. Apres avoir incendi&eacute; une parcelle,
-                    lentit&eacute; feu se consume et son intensit&eacute; diminue
-                    progressivement jusqua extinction (12 pas de temps).<br>
+            ** <br/>
+<br/>
+<table border="0" style="width: 75%;">
+<tbody>
+<tr>
+<td class="content-cell" style="vertical-align: top; background-color: white;">Cette
+                    version est une réplication du modele <a href="http://netlogoweb.org/launch#http://netlogoweb.org/assets/modelslib/Sample%20Models/Earth%20Science/Fire.nlogo">Fire
+                      de NetLogo</a>. Apres avoir incendié une parcelle,
+                    lentité feu se consume et son intensité diminue
+                    progressivement jusqua extinction (12 pas de temps).<br/>
                     Dans cette version, la couleur du feu en fonction de son age
-                    est support&eacute;e par <b>EntityFire</b> qui d&eacute;fini un point de
-                    vue sp&eacute;cifique (<i>#povAge</i>).<br>
-                    Comme pour les versions ant&eacute;rieures, une m&eacute;thode
-                    dinitialisation est propos&eacute;e : <i>#init_FireLine</i> qui
-                    cr&eacute;&eacute;e une grille de 100 x 100 avec un front de feu d&eacute;butant
+                    est supportée par <b>EntityFire</b> qui défini un point de
+                    vue spécifique (<i>#povAge</i>).<br/>
+                    Comme pour les versions antérieures, une méthode
+                    dinitialisation est proposée : <i>#init_FireLine</i> qui
+                    créée une grille de 100 x 100 avec un front de feu débutant
                     sur la premiere colonne de la grille. </td>
-                  <td colspan="1" rowspan="2"><img title="fire entities" src="../../images/applica/fire-entity.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td class="content-cell" colspan="1" rowspan="2"><img src="../../images/applica/fire-entity.png" title="fire entities"/>              
                     </td></tr>
-                <tr>
-                  <td style="text-align: right; vertical-align: top; background-color: white;"><i>Propagation
+<tr>
+<td class="content-cell" style="text-align: right; vertical-align: top; background-color: white;"><i>Propagation
                       du feu depuis la bordure Ouest de la grille</i></td>
-                  <td><br>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <br>
-            <ul>
-              <li><b>T&eacute;l&eacute;charger</b> le modele <b><a href="../../logiciel/Demo_Fire.zip">Demo_Fire</a></b></li>
-              <li>Pour en savoir plus, <a href="mailto:lepage@cirad.fr">contactez
+<td class="content-cell"><br/>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<ul>
+<li><b>Télécharger</b> le modele <b><a href="../../logiciel/Demo_Fire.zip">Demo_Fire</a></b></li>
+<li>Pour en savoir plus, <a href="mailto:lepage@cirad.fr">contactez
                   les auteurs</a>.</li>
-            </ul>
-            <!--#include virtual="/include/copyright_fr.inc" --> </td>
-          <td width="15" valign="top" bgcolor="#FFFFFF"> <br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+</ul>
+<!--#include virtual="/include/copyright_fr.inc" --> </td>
+<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="15"> <br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
+</body>
 </html>

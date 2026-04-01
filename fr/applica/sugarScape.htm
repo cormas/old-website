@@ -1,55 +1,145 @@
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>SugarScape</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
 </head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" bgcolor="#FFFFFF">
-<!--#include virtual="haut.inc" --> 
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-  <tr> <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp; 
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
+<!--#include virtual="haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr> <!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  
       <h1>SugarScape</h1>
-      <h2>&nbsp;</h2>
-      <p>Fran&ccedil;ois Bousquet</p>
-      <p>En 1996 Axtell et Epstein ont publi&eacute; un livre sur les soci&eacute;t&eacute;s 
+<h2> </h2>
+<p>François Bousquet</p>
+<p>En 1996 Axtell et Epstein ont publié un livre sur les sociétés 
         artificielles, <a href="http://www.brook.edu/sugarscape/">Sugarscape</a>. 
-        Les principes des mod&egrave;les pr&eacute;sent&eacute;s dans ce livre 
-        sont exactement ceux qui ont conduit le d&eacute;veloppement de Cormas: 
-        un environnement dynamique et spatialis&eacute;, des agents capables de 
-        percevoir, se d&eacute;placer, transformer leur environnement local et 
+        Les principes des modèles présentés dans ce livre 
+        sont exactement ceux qui ont conduit le développement de Cormas: 
+        un environnement dynamique et spatialisé, des agents capables de 
+        percevoir, se déplacer, transformer leur environnement local et 
         communiquer.</p>
-      <p><img src="../../images/applica/animSugar.gif" align="right">Cinq cas 
-        du livre ont &eacute;t&eacute; programm&eacute;s et peuvent &ecirc;tre 
-        t&eacute;l&eacute;charg&eacute;s pour installation sur Cormas:</p>
-      <ol>
-        <li>Simulation de base, des agents per&ccedil;oivent et se d&eacute;placent 
+<p><img align="right" src="../../images/applica/animSugar.gif"/>Cinq cas 
+        du livre ont été programmés et peuvent être 
+        téléchargés pour installation sur Cormas:</p>
+<ol>
+<li>Simulation de base, des agents perçoivent et se déplacent 
           vers les meilleurs endroits. </li>
-        <li>Ressource renouvelable et interaction avec la ressource. Les agents 
+<li>Ressource renouvelable et interaction avec la ressource. Les agents 
           consomment les ressources localement.</li>
-        <li>Dynamique des groupes. Les agents ont des caract&eacute;ristiques 
-          exprim&eacute;es sous forme de tags qui &eacute;voluent au fur et a 
+<li>Dynamique des groupes. Les agents ont des caractéristiques 
+          exprimées sous forme de tags qui évoluent au fur et a 
           mesure des rencontres.</li>
-        <li> Relations d'amiti&eacute;s. Les agents se rencontrent et comparent 
-          leur tags. Chaque agent m&eacute;morise les cinq agents dont le tag 
+<li> Relations d'amitiés. Les agents se rencontrent et comparent 
+          leur tags. Chaque agent mémorise les cinq agents dont le tag 
           est le plus similaire au leur (animation).</li>
-        <li>Echange marchand. Les agents &eacute;changent du sucre et des &eacute;pices. 
-          Des prix locaux r&eacute;sultent de ces &eacute;changes.</li>
-      </ol>
-      <p>&nbsp;</p>
-      <p>T&eacute;l&eacute;chargez le <a href="/logiciel/SugarScape.zip">zip (9 
+<li>Echange marchand. Les agents échangent du sucre et des épices. 
+          Des prix locaux résultent de ces échanges.</li>
+</ol>
+<p> </p>
+<p>Téléchargez le <a href="/logiciel/SugarScape.zip">zip (9 
         Ko)</a> ou contactez l'<a href="mailto:bousquet@cirad.fr">auteur</a></p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-      <div align="right" class="texte"></div>
-    </td>
-  </tr>
+<p> </p>
+<p> </p>
+<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
 </html>

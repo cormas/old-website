@@ -1,215 +1,305 @@
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Markets</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
 </head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-  <td width="*" valign="top" bgcolor="#FFFFFF"> 
-   <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> 
    
-      <h1>&nbsp;</h1>
-      <h1>MARKETS : March&eacute;s c&eacute;r&eacute;aliers en Afrique de lOuest</h1>
-      <h2>Evaluer la performance de diff&eacute;rentes institutions de march&eacute; 
-        &agrave; laide de simulations informatiques</h2>
-      <p>Franck Galtier, Cirad.</p>
-      <p>Les c&eacute;l&egrave;bres travaux de F. Hayek, L. Hurwicz, J. Stiglitz, 
-        et S. Grossman ont montr&eacute; que la performance des march&eacute;s 
-        d&eacute;pend de leur capacit&eacute; &agrave; assurer une diffusion dinformation 
-        entre les agents &eacute;conomiques. Comme linformation se transmet par 
-        les processus de n&eacute;gociation et d&eacute;change, la forme du r&eacute;seau 
-        d&eacute;change joue un r&ocirc;le crucial puisquelle d&eacute;termine 
+      <h1> </h1>
+<h1>MARKETS : Marchés céréaliers en Afrique de lOuest</h1>
+<h2>Evaluer la performance de différentes institutions de marché 
+        à laide de simulations informatiques</h2>
+<p>Franck Galtier, Cirad.</p>
+<p>Les célèbres travaux de F. Hayek, L. Hurwicz, J. Stiglitz, 
+        et S. Grossman ont montré que la performance des marchés 
+        dépend de leur capacité à assurer une diffusion dinformation 
+        entre les agents économiques. Comme linformation se transmet par 
+        les processus de négociation et déchange, la forme du réseau 
+        déchange joue un rôle crucial puisquelle détermine 
         larchitecture des canaux par lesquels circulent les flux dinformation. 
-        Des travaux r&eacute;cents analysent cet aspect &agrave; laide doutils 
-        math&eacute;matiques [Kirman 1983 ; Ioannides 2002] ou informatiques [Kirman 
-        et Vriend 2000 ; Kerber et Saam 2001]. Le travail pr&eacute;sent&eacute; 
-        ici se range dans la seconde cat&eacute;gorie. </p>
-      <p align="right">Magasin dun grossiste de Niono (Mali) <img src="../../images/applica/galtier3.jpg" width="356" height="257" align="bottom"></p>
-      <p>Il sagit dune analyse de la performance compar&eacute;e de deux modes 
-        dorganisation du commerce de gros tr&egrave;s r&eacute;pandus dans les 
-        fili&egrave;res agricoles des pays du sud : le commerce en r&eacute;seau 
-        et le commerce sur des places de march&eacute;. Ces deux institutions 
-        fonctionnent dune mani&egrave;re tr&egrave;s diff&eacute;rente. Dans 
-        le cas du commerce en r&eacute;seau, chaque grossiste des zones de consommation 
-        (GC) dispose de correspondants (GP) dans les diff&eacute;rentes zones 
-        de production (un par zone) et ne doit en principe sapprovisionner quaupr&egrave;s 
-        de ses correspondants. Ainsi, lorsquun GC d&eacute;sire acheter du ma&iuml;s 
-        ou du mil, il contacte ses correspondants dans diff&eacute;rentes localit&eacute;s 
-        (en g&eacute;n&eacute;ral par t&eacute;l&eacute;phone ou par des courriers 
-        remis &agrave; des routiers ou &agrave; des chauffeurs de taxi), centralise 
-        les propositions de vente formul&eacute;es par chacun deux (en terme 
-        de prix, de qualit&eacute;, de d&eacute;lai de livraison, de d&eacute;lai 
-        de paiement etc.) et r&eacute;alise la transaction avec celui qui a loffre 
-        la plus int&eacute;ressante. Tout le processus de n&eacute;gociation et 
-        d&eacute;change se d&eacute;roule donc &agrave; distance. Dans le cas 
-        du commerce sur des march&eacute;s de gros, les GC se d&eacute;placent 
-        dans les zones de production o&ugrave; ils rencontrent les GP sur des 
-        places de march&eacute; (le jour de march&eacute;). La diffusion de linformation 
-        est donc tr&egrave;s diff&eacute;rente dans les deux types dinstitutions.</p>
-      <p align="left"><img src="../../images/applica/galtier4.jpg" width="412" height="273"> 
-        March&eacute; de gros de K&eacute;tou (B&eacute;nin)</p>
-      <p>La discussion concernant les performances relatives de ces deux institutions 
+        Des travaux récents analysent cet aspect à laide doutils 
+        mathématiques [Kirman 1983 ; Ioannides 2002] ou informatiques [Kirman 
+        et Vriend 2000 ; Kerber et Saam 2001]. Le travail présenté 
+        ici se range dans la seconde catégorie. </p>
+<p align="right">Magasin dun grossiste de Niono (Mali) <img align="bottom" height="257" src="../../images/applica/galtier3.jpg" width="356"/></p>
+<p>Il sagit dune analyse de la performance comparée de deux modes 
+        dorganisation du commerce de gros très répandus dans les 
+        filières agricoles des pays du sud : le commerce en réseau 
+        et le commerce sur des places de marché. Ces deux institutions 
+        fonctionnent dune manière très différente. Dans 
+        le cas du commerce en réseau, chaque grossiste des zones de consommation 
+        (GC) dispose de correspondants (GP) dans les différentes zones 
+        de production (un par zone) et ne doit en principe sapprovisionner quauprès 
+        de ses correspondants. Ainsi, lorsquun GC désire acheter du maïs 
+        ou du mil, il contacte ses correspondants dans différentes localités 
+        (en général par téléphone ou par des courriers 
+        remis à des routiers ou à des chauffeurs de taxi), centralise 
+        les propositions de vente formulées par chacun deux (en terme 
+        de prix, de qualité, de délai de livraison, de délai 
+        de paiement etc.) et réalise la transaction avec celui qui a loffre 
+        la plus intéressante. Tout le processus de négociation et 
+        déchange se déroule donc à distance. Dans le cas 
+        du commerce sur des marchés de gros, les GC se déplacent 
+        dans les zones de production où ils rencontrent les GP sur des 
+        places de marché (le jour de marché). La diffusion de linformation 
+        est donc très différente dans les deux types dinstitutions.</p>
+<p align="left"><img height="273" src="../../images/applica/galtier4.jpg" width="412"/> 
+        Marché de gros de Kétou (Bénin)</p>
+<p>La discussion concernant les performances relatives de ces deux institutions 
         a des implications importantes pour les politiques publiques. En effet, 
-        les &eacute;tats et les agences daide ont tendance &agrave; favoriser 
-        les march&eacute;s de gros jug&eacute;s pr&eacute;f&eacute;rables pour 
-        assurer la &quot; transparence &quot; du march&eacute;. Cest cette id&eacute;e 
-        que nous avons test&eacute;e ici en analysant sil nexiste pas des situations 
-        o&ugrave; les r&eacute;seaux marchands sav&egrave;rent &ecirc;tre de 
-        meilleurs syst&egrave;mes de communication que les march&eacute;s de gros. 
+        les états et les agences daide ont tendance à favoriser 
+        les marchés de gros jugés préférables pour 
+        assurer la " transparence " du marché. Cest cette idée 
+        que nous avons testée ici en analysant sil nexiste pas des situations 
+        où les réseaux marchands savèrent être de 
+        meilleurs systèmes de communication que les marchés de gros. 
       </p>
-      <p align="left"><img src="../../images/applica/markets.jpg" width="512" height="217" align="right">Lanalyse 
-        a &eacute;t&eacute; men&eacute;e &agrave; partir de simulations informatiques 
-        r&eacute;alis&eacute;es &agrave; laide dun syst&egrave;me multi-agents 
-        (SMA). La d&eacute;marche consiste &agrave; &quot; entrer &quot; dans 
-        le mod&egrave;le un couple (environnement, institution de march&eacute;), 
-        &agrave; simuler le processus d&eacute;change induit et &agrave; mesurer 
-        lefficacit&eacute; de lallocation des ressources ainsi obtenue (en fonction 
-        dun crit&egrave;re de performance d&eacute;fini ex ante). Cette approche 
-        (repr&eacute;sent&eacute;e sur le graphique) permet de tester lefficacit&eacute; 
-        compar&eacute;e des r&eacute;seaux et des march&eacute;s de gros dans 
-        diff&eacute;rents environnements (afin de voir leur domaine de pertinence 
-        respectif). Dans les sc&eacute;narios r&eacute;alis&eacute;s, lenvironnement 
-        a &eacute;t&eacute; mod&eacute;lis&eacute; &agrave; partir de deux jeux 
-        de variables : le degr&eacute; de concentration de lactivit&eacute; au 
-        niveau des grossistes des zones de production (GP) et la variabilit&eacute; 
-        de lapprovisionnement de ces grossistes. Les institutions de march&eacute; 
-        repr&eacute;sent&eacute;es sont les r&eacute;seaux marchands et les march&eacute;s 
-        de gros mais aussi une institution fictive &quot; parfaite &quot; cest 
-        &agrave; dire permettant une transparence totale du march&eacute; et une 
-        allocation des ressources optimale. Cette derni&egrave;re institution 
-        sert de t&eacute;moin pour mesurer lefficacit&eacute; des deux autres. 
-        Enfin le crit&egrave;re de performance retenu est la minimisation du rationnement 
-        au niveau des localit&eacute;s de consommation.</p>
-      <p>Les simulations ont port&eacute; sur 150 sc&eacute;narios diff&eacute;rents 
-        (50 environnements et 3 institutions de march&eacute;s). Chacun de ces 
-        150 sc&eacute;narios a donn&eacute; lieu &agrave; des simulations sur 
-        100 pas de temps, ce qui correspond approximativement &agrave; deux campagnes 
-        agricoles si on suppose quun pas de temps du mod&egrave;le repr&eacute;sente 
-        une semaine dans la r&eacute;alit&eacute;. 1000 simulations ont &eacute;t&eacute; 
-        r&eacute;alis&eacute;es pour chaque sc&eacute;nario afin de neutraliser 
-        leffet des variables al&eacute;atoires introduites dans le mod&egrave;le. 
+<p align="left"><img align="right" height="217" src="../../images/applica/markets.jpg" width="512"/>Lanalyse 
+        a été menée à partir de simulations informatiques 
+        réalisées à laide dun système multi-agents 
+        (SMA). La démarche consiste à " entrer " dans 
+        le modèle un couple (environnement, institution de marché), 
+        à simuler le processus déchange induit et à mesurer 
+        lefficacité de lallocation des ressources ainsi obtenue (en fonction 
+        dun critère de performance défini ex ante). Cette approche 
+        (représentée sur le graphique) permet de tester lefficacité 
+        comparée des réseaux et des marchés de gros dans 
+        différents environnements (afin de voir leur domaine de pertinence 
+        respectif). Dans les scénarios réalisés, lenvironnement 
+        a été modélisé à partir de deux jeux 
+        de variables : le degré de concentration de lactivité au 
+        niveau des grossistes des zones de production (GP) et la variabilité 
+        de lapprovisionnement de ces grossistes. Les institutions de marché 
+        représentées sont les réseaux marchands et les marchés 
+        de gros mais aussi une institution fictive " parfaite " cest 
+        à dire permettant une transparence totale du marché et une 
+        allocation des ressources optimale. Cette dernière institution 
+        sert de témoin pour mesurer lefficacité des deux autres. 
+        Enfin le critère de performance retenu est la minimisation du rationnement 
+        au niveau des localités de consommation.</p>
+<p>Les simulations ont porté sur 150 scénarios différents 
+        (50 environnements et 3 institutions de marchés). Chacun de ces 
+        150 scénarios a donné lieu à des simulations sur 
+        100 pas de temps, ce qui correspond approximativement à deux campagnes 
+        agricoles si on suppose quun pas de temps du modèle représente 
+        une semaine dans la réalité. 1000 simulations ont été 
+        réalisées pour chaque scénario afin de neutraliser 
+        leffet des variables aléatoires introduites dans le modèle. 
       </p>
-      <h3>Principaux r&eacute;sultats </h3>
-      <ol>
-        <li>Les r&eacute;seaux et les march&eacute;s de gros, tout en diffusant 
-          une quantit&eacute; de bits dinformation beaucoup moins importante 
-          que linstitution t&eacute;moin parviennent &agrave; g&eacute;n&eacute;rer 
+<h3>Principaux résultats </h3>
+<ol>
+<li>Les réseaux et les marchés de gros, tout en diffusant 
+          une quantité de bits dinformation beaucoup moins importante 
+          que linstitution témoin parviennent à générer 
           une allocation des ressources presque aussi bonne (tout au moins lorsque 
-          lenvironnement est instable, ce qui est conforme &agrave; nombre de 
-          situations r&eacute;elles). Ceci est une confirmation de lintuition 
-          de F. Hayek et L. Hurwicz selon laquelle des institutions de march&eacute; 
-          relativement &eacute;conomes en mati&egrave;re de diffusion dinformation 
-          peuvent conduire &agrave; une allocation des ressources efficace. </li>
-        <li>La variable (de lenvironnement) la plus d&eacute;terminante de la 
-          performance compar&eacute;e des deux institutions est le nombre de grossistes 
-          des zones de production (GP). Lorsque lactivit&eacute; est concentr&eacute;e 
-          &agrave; leur niveau (15 GP par zone), les r&eacute;seaux marchands 
-          sont toujours plus efficaces. En revanche, lorsque lactivit&eacute; 
-          est plus atomis&eacute;e (30 GP par zone), ce sont toujours les march&eacute;s 
-          de gros qui lemportent. Ce r&eacute;sultat est en ad&eacute;quation 
-          avec la r&eacute;alit&eacute; empirique des march&eacute;s c&eacute;r&eacute;aliers 
-          du Mali et du B&eacute;nin. En effet, au Mali o&ugrave; lactivit&eacute; 
-          est tr&egrave;s concentr&eacute;e au niveau des GP, le commerce de gros 
-          est organis&eacute; en r&eacute;seau. R&eacute;ciproquement, au B&eacute;nin 
-          o&ugrave; cette activit&eacute; est atomis&eacute;e, cest le syst&egrave;me 
-          des march&eacute;s de gros qui pr&eacute;vaut. Ce r&eacute;sultat va 
-          &agrave; lencontre de lid&eacute;e re&ccedil;ue selon laquelle les 
-          march&eacute;s de gros sont de meilleurs syst&egrave;mes de communication 
-          que les r&eacute;seaux marchands. Il devrait donc conduire &agrave; 
-          une remise &agrave; plat des politiques publiques dans ce domaine (actuellement 
-          ax&eacute;es vers la promotion de march&eacute;s de gros). </li>
-      </ol>
-      <p>Ce travail confirme lint&eacute;r&ecirc;t de la mod&eacute;lisation 
+          lenvironnement est instable, ce qui est conforme à nombre de 
+          situations réelles). Ceci est une confirmation de lintuition 
+          de F. Hayek et L. Hurwicz selon laquelle des institutions de marché 
+          relativement économes en matière de diffusion dinformation 
+          peuvent conduire à une allocation des ressources efficace. </li>
+<li>La variable (de lenvironnement) la plus déterminante de la 
+          performance comparée des deux institutions est le nombre de grossistes 
+          des zones de production (GP). Lorsque lactivité est concentrée 
+          à leur niveau (15 GP par zone), les réseaux marchands 
+          sont toujours plus efficaces. En revanche, lorsque lactivité 
+          est plus atomisée (30 GP par zone), ce sont toujours les marchés 
+          de gros qui lemportent. Ce résultat est en adéquation 
+          avec la réalité empirique des marchés céréaliers 
+          du Mali et du Bénin. En effet, au Mali où lactivité 
+          est très concentrée au niveau des GP, le commerce de gros 
+          est organisé en réseau. Réciproquement, au Bénin 
+          où cette activité est atomisée, cest le système 
+          des marchés de gros qui prévaut. Ce résultat va 
+          à lencontre de lidée reçue selon laquelle les 
+          marchés de gros sont de meilleurs systèmes de communication 
+          que les réseaux marchands. Il devrait donc conduire à 
+          une remise à plat des politiques publiques dans ce domaine (actuellement 
+          axées vers la promotion de marchés de gros). </li>
+</ol>
+<p>Ce travail confirme lintérêt de la modélisation 
         informatique pour expliquer comment une allocation des ressources performante 
-        peut &eacute;merger des interactions d&eacute;centralis&eacute;es de nombreux 
-        individus entre lesquels linformation est dispers&eacute;e. Cette approche 
-        est ainsi compl&eacute;mentaire dautres outils comme la th&eacute;orie 
-        des jeux ou les exp&eacute;rimentations de march&eacute; [Smith 1982 ; 
+        peut émerger des interactions décentralisées de nombreux 
+        individus entre lesquels linformation est dispersée. Cette approche 
+        est ainsi complémentaire dautres outils comme la théorie 
+        des jeux ou les expérimentations de marché [Smith 1982 ; 
         Roth 2001]. Ses points forts sont quelle permet lanalyse de processus 
-        de march&eacute; au sein desquels les transactions se d&eacute;roulent 
-        &quot; hors &eacute;quilibre &quot; (ce qui est difficile avec la th&eacute;orie 
+        de marché au sein desquels les transactions se déroulent 
+        " hors équilibre " (ce qui est difficile avec la théorie 
         des jeux) et impliquant de nombreux acteurs et des pas de temps assez 
-        longs (ce que les exp&eacute;rimentations ne permettent pas). </p>
-      <p>Par ailleurs, ce travail ouvre un certain nombre de perspectives de recherche. 
-        Lune delles consiste &agrave; approfondir lanalyse des &quot; messages 
-        &quot; v&eacute;hicul&eacute;s par le march&eacute; &agrave; travers les 
+        longs (ce que les expérimentations ne permettent pas). </p>
+<p>Par ailleurs, ce travail ouvre un certain nombre de perspectives de recherche. 
+        Lune delles consiste à approfondir lanalyse des " messages 
+        " véhiculés par le marché à travers les 
         propositions dachat et de vente des acteurs. En effet, la composition 
-        de ces messages est r&eacute;gul&eacute;e par les r&egrave;gles qui cadrent 
-        la n&eacute;gociation des param&egrave;tres de l&eacute;change (prix, 
-        qualit&eacute;, d&eacute;lais de paiement et de livraison etc.). Ces r&egrave;gles 
-        (qui constituent le &quot; langage du march&eacute; &quot;) peuvent &eacute;galement 
-        &ecirc;tre &eacute;valu&eacute;es &agrave; laide de simulations informatiques. 
+        de ces messages est régulée par les règles qui cadrent 
+        la négociation des paramètres de léchange (prix, 
+        qualité, délais de paiement et de livraison etc.). Ces règles 
+        (qui constituent le " langage du marché ") peuvent également 
+        être évaluées à laide de simulations informatiques. 
       </p>
-      <h3>Bibliographie</h3>
-      <p>AMSELLE, J.-L. (1977). Les commer&ccedil;ants de la savane : histoire 
-        et organisation sociale des Kooroko (Mali). Paris, Anthropos.<br>
-        DEMBELE, N. et J. STAATZ (1989). Transparence des march&eacute;s c&eacute;r&eacute;aliers 
-        et r&ocirc;le de l&eacute;tat: La mise en place dun syst&egrave;me dinformation 
-        des march&eacute;s au Mali. S&eacute;minaire Europ&eacute;ens des Economistes 
-        Agricoles.<br>
-        EGG, J., F. GALTIER, et E. GREGOIRE (1996). &quot;Syst&egrave;mes dinformation 
-        formels et informels - La r&eacute;gulation des march&eacute;s c&eacute;r&eacute;aliers 
-        au Sahel.&quot; Cahiers des Sciences Humaines 32(4): 845-868.<br>
-        GALTIER, F. (2002). &quot; Eclatement et incompl&eacute;tude de la th&eacute;orie 
-        des march&eacute;s &quot; Economies et Soci&eacute;t&eacute;s (&agrave; 
-        para&icirc;tre).<br>
+<h3>Bibliographie</h3>
+<p>AMSELLE, J.-L. (1977). Les commerçants de la savane : histoire 
+        et organisation sociale des Kooroko (Mali). Paris, Anthropos.<br/>
+        DEMBELE, N. et J. STAATZ (1989). Transparence des marchés céréaliers 
+        et rôle de létat: La mise en place dun système dinformation 
+        des marchés au Mali. Séminaire Européens des Economistes 
+        Agricoles.<br/>
+        EGG, J., F. GALTIER, et E. GREGOIRE (1996). "Systèmes dinformation 
+        formels et informels - La régulation des marchés céréaliers 
+        au Sahel." Cahiers des Sciences Humaines 32(4): 845-868.<br/>
+        GALTIER, F. (2002). " Eclatement et incomplétude de la théorie 
+        des marchés " Economies et Sociétés (à 
+        paraître).<br/>
         GROSSMAN, S. (1989). The Informational Role of Prices. Cambridge, MIT 
-        Press<br>
-        HAMADOU, S. (1997). Lib&eacute;ralisation du commerce des produits vivriers 
-        au Niger et mode dorganisation des commer&ccedil;ants priv&eacute;s. 
-        Les r&eacute;seaux marchands dans le fonctionnement du syst&egrave;me 
-        de commercialisation des c&eacute;r&eacute;ales. Th&egrave;se de doctorat 
-        en &eacute;conomie, Montpellier, ENSA.M.<br>
-        HAYEK, F. (1945). &quot; The Use of Knowledge in Society &quot;, American 
-        Economic Review 35(4): 519-530.<br>
-        HURWICZ, L. (1969). &quot; Centralization and Decentralization in economic 
+        Press<br/>
+        HAMADOU, S. (1997). Libéralisation du commerce des produits vivriers 
+        au Niger et mode dorganisation des commerçants privés. 
+        Les réseaux marchands dans le fonctionnement du système 
+        de commercialisation des céréales. Thèse de doctorat 
+        en économie, Montpellier, ENSA.M.<br/>
+        HAYEK, F. (1945). " The Use of Knowledge in Society ", American 
+        Economic Review 35(4): 519-530.<br/>
+        HURWICZ, L. (1969). " Centralization and Decentralization in economic 
         systems - On the Concept and Possibility of Informational Decentralization 
-        &quot;, American Economic Review 59: 513-524.<br>
-        IOANNIDES, Y. (2002). &quot; Topologies of Social Interactions &quot;, 
-        Departement of economics, Tufts University.<br>
-        KERBER, W. and N. SAAM (2001). &quot; Competition as a Test of Hypotheses: 
-        Simulation of Knowledge-generating Market Processes &quot;, Journal of 
-        Artificial Societies and Social Simulation 4(3).<br>
-        KIRMAN, A. (1983). &quot; Communication in Markets: A Suggested Approach. 
-        &quot;, Economic Letters 12: 1-5.<br>
-        KIRMAN, A. and N. J. VRIEND (2000). &quot; Evolving Market Structure: 
-        An ACE Model of Price Dispersion and Loyalty &quot;, Journal of Economic 
-        Dynamics and Control (ACE Special Issue).<br>
-        LAMBERT, A. et J. EGG (1994). &quot;Commerce, r&eacute;seaux et march&eacute;s 
-        : lapprovisionnement en riz dans les pays de lespace s&eacute;n&eacute;gambien.&quot; 
-        Cahiers des Sciences Humaines 30: 229-254.<br>
+        ", American Economic Review 59: 513-524.<br/>
+        IOANNIDES, Y. (2002). " Topologies of Social Interactions ", 
+        Departement of economics, Tufts University.<br/>
+        KERBER, W. and N. SAAM (2001). " Competition as a Test of Hypotheses: 
+        Simulation of Knowledge-generating Market Processes ", Journal of 
+        Artificial Societies and Social Simulation 4(3).<br/>
+        KIRMAN, A. (1983). " Communication in Markets: A Suggested Approach. 
+        ", Economic Letters 12: 1-5.<br/>
+        KIRMAN, A. and N. J. VRIEND (2000). " Evolving Market Structure: 
+        An ACE Model of Price Dispersion and Loyalty ", Journal of Economic 
+        Dynamics and Control (ACE Special Issue).<br/>
+        LAMBERT, A. et J. EGG (1994). "Commerce, réseaux et marchés 
+        : lapprovisionnement en riz dans les pays de lespace sénégambien." 
+        Cahiers des Sciences Humaines 30: 229-254.<br/>
         LE PAGE, C., F. BOUSQUET, et al. (2000). CORMAS : A multiagent simulation 
         toolkit to model natural and social dynamics at multiple scales. Workshop 
-        &quot;The ecology of scales&quot;, Wageningen (Pays-Bas).<br>
-        ROTH, A. (2001). &quot; The Economist as Engineer: Game Theory, Experimentation, 
-        and Computation as Tools for Design Economics &quot; Econometrica 70(4): 
-        1341-1378.<br>
-        SMITH, V. (1982). &quot; Markets as economizers of information : experimental 
-        examination of the &quot;Hayek hypothesis&quot; &quot;, Economic Inquiry 
-        20: 165-179.<br>
-        <br>
-      </p>
-      <p>Pour en savoir plus, <a href="mailto:galtier@cirad.fr">contactez lauteur</a>. 
-        <br>
-        T&eacute;l&eacute;charger le mod&egrave;le (sous Cormas 2002): <a href="../../logiciel/Markets.zip">markets</a> 
-        ou <br>
-        larticle en fran&ccedil;ais (en soumission) : <a href="../../pdf/ModeleMarkets_VF.pdf">Les 
-        march&eacute;s comme syst&egrave;mes de communication: Une &eacute;valuation 
-        de la performance de diff&eacute;rentes institutions de march&eacute; 
-        &agrave; l&#146;aide de simulations informatiques</a></p>
-      <!--#include virtual="/include/copyright_fr.inc" -->
-	</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+        "The ecology of scales", Wageningen (Pays-Bas).<br/>
+        ROTH, A. (2001). " The Economist as Engineer: Game Theory, Experimentation, 
+        and Computation as Tools for Design Economics " Econometrica 70(4): 
+        1341-1378.<br/>
+        SMITH, V. (1982). " Markets as economizers of information : experimental 
+        examination of the "Hayek hypothesis" ", Economic Inquiry 
+        20: 165-179.<br/>
+<br/>
+</p>
+<p>Pour en savoir plus, <a href="mailto:galtier@cirad.fr">contactez lauteur</a>. 
+        <br/>
+        Télécharger le modèle (sous Cormas 2002): <a href="../../logiciel/Markets.zip">markets</a> 
+        ou <br/>
+        larticle en français (en soumission) : <a href="../../pdf/ModeleMarkets_VF.pdf">Les 
+        marchés comme systèmes de communication: Une évaluation 
+        de la performance de différentes institutions de marché 
+        à l’aide de simulations informatiques</a></p>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
 </html>

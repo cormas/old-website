@@ -1,191 +1,263 @@
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-    <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-    <title>TSE: dynamiques dagr&eacute;gation avec Cormas</title>
-    <!--#include virtual="/include/script.inc" -->
-    <link rel="stylesheet" href="/css/cormas.css" --="">
-  </head>
-  <body border="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
-    topmargin="0"
-    marginwidth="0"
-    marginheight="0"
-    leftmargin="0"
-    bgcolor="#FFFFFF">
-    <!--#include virtual="haut.inc" -->
-    <table width="100%" cellspacing="0" cellpadding="0" border="0">
-      <tbody>
-        <tr>
-          <!--#include virtual="sommair.inc" -->
-          <td width="*" valign="top" bgcolor="#FFFFFF">
-            <p>&nbsp; </p>
-            <h1>Test Spatial Entities : TSE</h1>
-            <h2>Test des entit&eacute;s spatiales agr&eacute;gatives de Cormas</h2>
-            <p>Christophe Le Page, Pierre Bommel, Cirad
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>TSE: dynamiques dagrégation avec Cormas</title>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
+<!--#include virtual="haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="*">
+<p>  </p>
+<h1>Test Spatial Entities : TSE</h1>
+<h2>Test des entités spatiales agrégatives de Cormas</h2>
+<p>Christophe Le Page, Pierre Bommel, Cirad
             </p>
-            <p>(Voir aussi la page <a href="demo_aggregates.htm">Demo_aggregates</a>)</p>
-            <p>Ce modele illustre les principes dutilisation des entit&eacute;s
-              spatiales agr&eacute;gatives de Cormas. Dans larbre dh&eacute;ritage des
-              entit&eacute;s spatiales g&eacute;n&eacute;riques de Cormas, lentit&eacute; spatiale compos&eacute;e
-              "SpatialEntity_Set" se sp&eacute;cialise en :</p>
-            <ul>
-              <li>"SpatialEntityAggregate", dont les composants respectent une
-                contrainte de contiguÃ¯t&eacute;</li>
-            </ul>
-            <ul>
-              <li>"SpatialEntityNotConnex", dont les composants peuvent etre
+<p>(Voir aussi la page <a href="demo_aggregates.htm">Demo_aggregates</a>)</p>
+<p>Ce modele illustre les principes dutilisation des entités
+              spatiales agrégatives de Cormas. Dans larbre dhéritage des
+              entités spatiales génériques de Cormas, lentité spatiale composée
+              "SpatialEntity_Set" se spécialise en :</p>
+<ul>
+<li>"SpatialEntityAggregate", dont les composants respectent une
+                contrainte de contiguÃ¯té</li>
+</ul>
+<ul>
+<li>"SpatialEntityNotConnex", dont les composants peuvent etre
                 disjoints.</li>
-            </ul>
-            <p><img src="../../images/applica/TSEclassDiag.gif" width="661" height="626"></p>
-            <p>&nbsp;</p>
-            <p>La premiere (<i><font color="#FF0000">Spreading of 3 forests: <b>initForests</b>
-                  &amp; <b>stepForests</b></font></i>) consiste a d&eacute;finir les
+</ul>
+<p><img height="626" src="../../images/applica/TSEclassDiag.gif" width="661"/></p>
+<p> </p>
+<p>La premiere (<i><font color="#FF0000">Spreading of 3 forests: <b>initForests</b>
+                  &amp; <b>stepForests</b></font></i>) consiste a définir les
               composants (Groves) comme des ensembles de cellules contigÃ¼es
               partageant une meme condition. On commence par charger une grille
               de 50*50 cellules de type "Plot" dont lattribut "tree" est un
-              boole&eacute;n. La cr&eacute;ation des entit&eacute;s spatiales compos&eacute;es "Grove" est
-              soumise a une contrainte suppl&eacute;mentaire sur le nombre minimum
-              (fix&eacute; a 25) de composants contigÃ¼s v&eacute;rifiant la condition
-              dagr&eacute;gation.</p>
-            <p>Faire co-exister dans le meme modele des entit&eacute;s spatiales
-              d&eacute;finies a diff&eacute;rents niveaux offre une grande souplesse pour
-              &eacute;crire les m&eacute;thodes de dynamique de la v&eacute;g&eacute;tation. Certains
-              processus seront plus facilement d&eacute;crits au niveau cellulaire,
-              dautres au niveau agr&eacute;g&eacute;. Ainsi, dans cet exemple th&eacute;orique
+              booleén. La création des entités spatiales composées "Grove" est
+              soumise a une contrainte supplémentaire sur le nombre minimum
+              (fixé a 25) de composants contigÃ¼s vérifiant la condition
+              dagrégation.</p>
+<p>Faire co-exister dans le meme modele des entités spatiales
+              définies a différents niveaux offre une grande souplesse pour
+              écrire les méthodes de dynamique de la végétation. Certains
+              processus seront plus facilement décrits au niveau cellulaire,
+              dautres au niveau agrégé. Ainsi, dans cet exemple théorique
               simpliste, </p>
-            <ul>
-              <li>chaque cellule a une probabilit&eacute; fix&eacute;e (tres faible) de
-                changer d&eacute;tat #trre (<i>newState</i>). </li>
-              <li>Une dynamique dexpansion par la lisiere des agr&eacute;gats (<i>expand</i>)
-                est &eacute;crite de la facon suivante: un certain nombre
+<ul>
+<li>chaque cellule a une probabilité fixée (tres faible) de
+                changer détat #trre (<i>newState</i>). </li>
+<li>Une dynamique dexpansion par la lisiere des agrégats (<i>expand</i>)
+                est écrite de la facon suivante: un certain nombre
                 (correspondant au centieme du total des cellules composants
-                lentit&eacute; forestiere) de cellules en lisiere vont etre int&eacute;gr&eacute;es
-                a la foret. Dans le but de garder une certaine compacit&eacute; aux
-                entit&eacute;s forestieres, on choisit en priorit&eacute; les cellules de la
-                lisiere qui sont entour&eacute;es du plus grand nombre de cellules d&eacute;ja
-                agr&eacute;g&eacute;es. </li>
-            </ul>
-            <p> Un deuxieme niveau dagr&eacute;gation (FragmentedEntity) est &eacute;galement
-              mod&eacute;lis&eacute;. Ces agr&eacute;gats de deuxieme ordre sont compos&eacute;s dagr&eacute;gats
+                lentité forestiere) de cellules en lisiere vont etre intégrées
+                a la foret. Dans le but de garder une certaine compacité aux
+                entités forestieres, on choisit en priorité les cellules de la
+                lisiere qui sont entourées du plus grand nombre de cellules déja
+                agrégées. </li>
+</ul>
+<p> Un deuxieme niveau dagrégation (FragmentedEntity) est également
+              modélisé. Ces agrégats de deuxieme ordre sont composés dagrégats
               de premier niveau dont la taille est superieure a 50. Nous
-              obtenons alors une hi&eacute;rarchie dagr&eacute;gation, depuis le niveau
-              &eacute;l&eacute;mentaire jusquaux agr&eacute;gats de deuxieme niveau.</p>
-            <p align="center"><img src="../../images/applica/TSEclassDiag2.gif"
-                width="579"
-                height="138"></p>
-            <table width="83%" border="0">
-              <tbody>
-                <tr>
-                  <td width="29%">
-                    <div align="center"><img src="../../images/applica/TSE-povCell.jpg"
-                        width="256"
-                        height="256"></div>
-                  </td>
-                  <td width="22%">
-                    <div align="center"><img src="../../images/applica/TSE-povForest1.jpg"
-                        width="256"
-                        height="256"></div>
-                  </td>
-                  <td width="49%">
-                    <div align="center"><img src="../../images/applica/TSE-povForest2.jpg"
-                        width="256"
-                        height="256"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td width="29%">
-                    <div align="center">First level point of view <br>
+              obtenons alors une hiérarchie dagrégation, depuis le niveau
+              élémentaire jusquaux agrégats de deuxieme niveau.</p>
+<p align="center"><img height="138" src="../../images/applica/TSEclassDiag2.gif" width="579"/></p>
+<table border="0" width="83%">
+<tbody>
+<tr>
+<td class="content-cell" width="29%">
+<div align="center"><img height="256" src="../../images/applica/TSE-povCell.jpg" width="256"/></div>
+</td>
+<td class="content-cell" width="22%">
+<div align="center"><img height="256" src="../../images/applica/TSE-povForest1.jpg" width="256"/></div>
+</td>
+<td class="content-cell" width="49%">
+<div align="center"><img height="256" src="../../images/applica/TSE-povForest2.jpg" width="256"/></div>
+</td>
+</tr>
+<tr>
+<td class="content-cell" width="29%">
+<div align="center">First level point of view <br/>
                       (Cell =&gt; povTree)</div>
-                  </td>
-                  <td width="22%">
-                    <div align="center">Second level point of view <br>
+</td>
+<td class="content-cell" width="22%">
+<div align="center">Second level point of view <br/>
                       (Aggregate =&gt; povId)</div>
-                  </td>
-                  <td width="49%">
-                    <div align="center"> Third level point of view <br>
+</td>
+<td class="content-cell" width="49%">
+<div align="center"> Third level point of view <br/>
                       (FragmentedEntity =&gt; povTree)</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <p>La seconde (<i><font color="#FF0000"><b>setSingletonAggregatesFromRandomSeeds</b>&nbsp;
+</td>
+</tr>
+</tbody>
+</table>
+<p>La seconde (<i><font color="#FF0000"><b>setSingletonAggregatesFromRandomSeeds</b> 
                   &amp; <b>swellForests</b></font></i>) consiste a partir de 30
-              cellules "graines"et a cr&eacute;er autant dagr&eacute;gats initialement
-              constitu&eacute;s dun seul composant: une graine. Le processus it&eacute;ratif
-              de construction des agr&eacute;gats repose sur lint&eacute;gration, parmi les
+              cellules "graines"et a créer autant dagrégats initialement
+              constitués dun seul composant: une graine. Le processus itératif
+              de construction des agrégats repose sur lintégration, parmi les
               cellules en lisiere, de toutes celles qui nappartiennent pas
-              encore a un autre agr&eacute;gat. Il y a deux facons de construire les
-              agr&eacute;gats a partir des "graines" :</p>
-            <ul>
-              <li>une facon progressive (init= <i><font color="#FF0000"><b>setSingletonAggregatesFromRandomSeeds</b></font></i>
+              encore a un autre agrégat. Il y a deux facons de construire les
+              agrégats a partir des "graines" :</p>
+<ul>
+<li>une facon progressive (init= <i><font color="#FF0000"><b>setSingletonAggregatesFromRandomSeeds</b></font></i>
                 and control =<i><font color="#FF0000"><b> swellForests</b></font></i>:)
-                :<br>
-                <br>
-              </li>
-              <li>
-                <table width="66%" border="0" align="center">
-                  <tbody>
-                    <tr>
-                      <td width="33%">
-                        <div align="center"><img src="../../images/applica/tseAnime.gif"
-                            width="384"
-                            height="384"></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td width="33%">
-                        <div align="center">Expansion progressive
+                :<br/>
+<br/>
+</li>
+<li>
+<table align="center" border="0" width="66%">
+<tbody>
+<tr>
+<td class="content-cell" width="33%">
+<div align="center"><img height="384" src="../../images/applica/tseAnime.gif" width="384"/></div>
+</td>
+</tr>
+<tr>
+<td class="content-cell" width="33%">
+<div align="center">Expansion progressive
                           (swellAggregates)</div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <br>
-              </li>
-              <li>et une facon rapide (la partition de lespace est complete en
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+</li>
+<li>et une facon rapide (la partition de lespace est complete en
                 un seul coup) :
                 <ul>
-                  <li>
-                    <div align="left">[init=<i><font color="#FF0000"><b>setAggregatesFromRandomSeeds</b></font></i>]
+<li>
+<div align="left">[init=<i><font color="#FF0000"><b>setAggregatesFromRandomSeeds</b></font></i>]
                       construit 30 groves faites 80 (max) plots a partir de 30
-                      graines al&eacute;atoires. La taille de chaque agr&eacute;gate doit
-                      suivre une distribution de taille (#(30 80)) =&nbsp; 30
-                      bois de taille 80 :<br>
-                      <img src="../../images/applica/setAggregatesFromRandomSeeds.png"
-                        title="30 groves"
-                        style="width: 298px; height: 321px;"><br>
-                      <br>
-                    </div>
-                  </li>
-                  <li>ou une distribution de type sizeDistribution: #(#(1 800)
-                    #(5 30) #(4 3) #(20 10)) = 1 bois de 800 cells,&nbsp; 5 de
-                    30 cells , 4 bois de 3 cells et 20 bois de 10 cells :<br>
-                    <img src="../../images/applica/AGG_grovesDistribution.png" alt=""
-                      title="GrovesDistribution"
-                      style="width: 304px; height: 326px;"></li>
-                  <li>ou [init=<i><b>setAggregatesFifthFourth</b></i>] construit
+                      graines aléatoires. La taille de chaque agrégate doit
+                      suivre une distribution de taille (#(30 80)) =  30
+                      bois de taille 80 :<br/>
+<img src="../../images/applica/setAggregatesFromRandomSeeds.png" style="width: 298px; height: 321px;" title="30 groves"/><br/>
+<br/>
+</div>
+</li>
+<li>ou une distribution de type sizeDistribution: #(#(1 800)
+                    #(5 30) #(4 3) #(20 10)) = 1 bois de 800 cells,  5 de
+                    30 cells , 4 bois de 3 cells et 20 bois de 10 cells :<br/>
+<img alt="" src="../../images/applica/AGG_grovesDistribution.png" style="width: 304px; height: 326px;" title="GrovesDistribution"/></li>
+<li>ou [init=<i><b>setAggregatesFifthFourth</b></i>] construit
                     une partition complete de lespace en segmentations
-                    r&eacute;gulieres: 4 lignes et 5 colonnes.<br>
-                    <img src="../../images/applica/tse_regul.gif" width="256" height="263">
-                    <br>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <h4><a href="../../en/applica/tse.htm#how">How to run this model...</a></h4>
-            <h5>&nbsp;</h5>
-            <ul>
-              <li>T&eacute;l&eacute;charger le modele (<a href="/logiciel/TSE.zip">zipfile</a>,
+                    régulieres: 4 lignes et 5 colonnes.<br/>
+<img height="263" src="../../images/applica/tse_regul.gif" width="256"/>
+<br/>
+</li>
+</ul>
+</li>
+</ul>
+<h4><a href="../../en/applica/tse.htm#how">How to run this model...</a></h4>
+<h5> </h5>
+<ul>
+<li>Télécharger le modele (<a href="/logiciel/TSE.zip">zipfile</a>,
                 6Ko, Cormas 2003) </li>
-              <li>Pour plus dinformation, <a href="mailto:lepage@cirad.fr">contacter
+<li>Pour plus dinformation, <a href="mailto:lepage@cirad.fr">contacter
                   lauteur</a>.</li>
-            </ul>
-            <p>&nbsp;</p>
-            <!--#include virtual="/include/copyright_fr.inc" --> </td>
-          <td width="15" valign="top" bgcolor="#FFFFFF"> <br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+</ul>
+<p> </p>
+<!--#include virtual="/include/copyright_fr.inc" --> </td>
+<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="15"> <br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
+</body>
 </html>

@@ -1,221 +1,289 @@
 <html>
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-    <title>WolfSheepPredation</title>
-    <!--#include virtual="/include/script.inc" -->
-    <link rel="stylesheet" href="/css/cormas.css" --="">
-  </head>
-  <body topmargin="0" leftmargin="0" border="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
-    bgcolor="#FFFFFF"
-    marginheight="0"
-    marginwidth="0">
-
-    <!-- Incluez le header -->
-    <?php include 'sidebar.php'; ?>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>WolfSheepPredation</title>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
     
-    <!--#include virtual="haut.inc" -->
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tbody>
-        <tr>
-          <!--#include virtual="sommair.inc" -->
-          <td bgcolor="#FFFFFF" valign="top" width="*">
-            <p>&nbsp; </p>
-            <h1>Wolf Sheep Predation&nbsp; </h1>
-            <h2>Dynamique des populations entre proies et pr&eacute;dateurs</h2>
-            <table style="width: 100%;" border="0">
-              <tbody>
-                <tr>
-                  <td>Moira Zellner (University of Illinois, <a href="mailto:mzellner@uic.edu">mzellner@uic.edu</a>),
-                    Pierre Bommel (Cirad, <a href="mailto:bommel@cirad.fr">bommel@cirad.fr</a>)&nbsp;&nbsp;
-                    <h3><br>
-                    </h3>
-                    <h3><br>
-                    </h3>
-                    <h3>Objectif</h3>
-                    Il sagit de la r&eacute;plication dans Cormas dun modele "d&eacute;mo"
-                    de la librairie de Netlogo : <a target="_blank" href="http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation%28DockedHybrid%29">http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation(DockedHybrid)</a>.
-                    <br>
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
+<!--#include virtual="haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="*">
+<p>  </p>
+<h1>Wolf Sheep Predation  </h1>
+<h2>Dynamique des populations entre proies et prédateurs</h2>
+<table border="0" style="width: 100%;">
+<tbody>
+<tr>
+<td class="content-cell">Moira Zellner (University of Illinois, <a href="mailto:mzellner@uic.edu">mzellner@uic.edu</a>),
+                    Pierre Bommel (Cirad, <a href="mailto:bommel@cirad.fr">bommel@cirad.fr</a>)  
+                    <h3><br/>
+</h3>
+<h3><br/>
+</h3>
+<h3>Objectif</h3>
+                    Il sagit de la réplication dans Cormas dun modele "démo"
+                    de la librairie de Netlogo : <a href="http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation%28DockedHybrid%29" target="_blank">http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation(DockedHybrid)</a>.
+                    <br/>
                     Selon les mots de Wilensky, U. (2005), ce modele explore la
-                    stabilit&eacute; des systemes pr&eacute;dateurs-proies. Ces systemes sont
+                    stabilité des systemes prédateurs-proies. Ces systemes sont
                     instables sils tendent a entraÃ®ner lextinction dune ou de
-                    plusieurs especes. A loppos&eacute;, un systeme stable tend a se
-                    maintenir dans le temps malgr&eacute; les fluctuations de la taille
-                    des populations.<br>
+                    plusieurs especes. A lopposé, un systeme stable tend a se
+                    maintenir dans le temps malgré les fluctuations de la taille
+                    des populations.<br/>
                     Ce modele propose deux variantes principales :</td>
-                  <td>&nbsp;<img title="grid" alt="grid" src="../../images/applica/WolfSheep-grid.png"></td>
-                </tr>
-              </tbody>
-            </table>
-            <h5>Version 1 : </h5>
+<td class="content-cell"> <img alt="grid" src="../../images/applica/WolfSheep-grid.png" title="grid"/></td>
+</tr>
+</tbody>
+</table>
+<h5>Version 1 : </h5>
             Des loups et des moutons errent au hasard dans un paysage, les loups
-            essayant dattraper des moutons. A chaque it&eacute;ration (step), un loup
-            perd de l&eacute;nergie et doit manger des moutons pour la r&eacute;cup&eacute;rer.
-            Quand ils nen ont plus, ils meurent. <br>
-            Chaque espece a une probabilit&eacute; de reproduction fixe a chaque step.<br>
+            essayant dattraper des moutons. A chaque itération (step), un loup
+            perd de lénergie et doit manger des moutons pour la récupérer.
+            Quand ils nen ont plus, ils meurent. <br/>
+            Chaque espece a une probabilité de reproduction fixe a chaque step.<br/>
             Dans cette version, lherbe nest pas un facteur limitant pour les
-            moutons. Par cons&eacute;quent, les moutons ne gaspillent pas d&eacute;nergie en
-            se d&eacute;placant, ni ne la r&eacute;cuperent en broutant. Cette version produit
-            une dynamique int&eacute;ressante mais instable. Ce modele illustre la
+            moutons. Par conséquent, les moutons ne gaspillent pas dénergie en
+            se déplacant, ni ne la récuperent en broutant. Cette version produit
+            une dynamique intéressante mais instable. Ce modele illustre la
             dynamique dun systeme riche en nutriments, comme deux souches
-            bact&eacute;riennes dans une boÃ®te de P&eacute;tri (Gause, 1934).<br>
-            <h5>Version 2 : </h5>
+            bactériennes dans une boÃ®te de Pétri (Gause, 1934).<br/>
+<h5>Version 2 : </h5>
             Le comportement des loups est le meme que dans la version 1. Par
-            contre ici les moutons mangent de lherbe pour gagner de l&eacute;nergie,
-            et en perdent lors de leur d&eacute;placement. Quand leur &eacute;nergie s&eacute;puise,
-            ils meurent. <br>
-            Une fois brout&eacute;e, lherbe se r&eacute;g&eacute;nere au bout dun certain temps. <br>
+            contre ici les moutons mangent de lherbe pour gagner de lénergie,
+            et en perdent lors de leur déplacement. Quand leur énergie sépuise,
+            ils meurent. <br/>
+            Une fois broutée, lherbe se régénere au bout dun certain temps. <br/>
             Bien que cette version soit plus complexe, elle est plus stable et
             ressemble davantage aux modeles classiques tels que celui de Lotka
-            Volterra, qui&nbsp; sous-estime la forte probabilit&eacute; dextinction
-            dans le cas de petites populations. Ici, un SMA donne des r&eacute;sultats
-            plus r&eacute;alistes. (Voir Wilensky &amp; Rand, 2015 ; chapitre 4).<br>
-            <h3>Description du modele</h3>
+            Volterra, qui  sous-estime la forte probabilité dextinction
+            dans le cas de petites populations. Ici, un SMA donne des résultats
+            plus réalistes. (Voir Wilensky &amp; Rand, 2015 ; chapitre 4).<br/>
+<h3>Description du modele</h3>
             A partir de la description succincte ci-dessus, mais aussi de
-            lanalyse du code du modele, nous avons g&eacute;n&eacute;r&eacute; plusieurs diagrammes
-            UML. <br>
-            Voici le diagramme de classe :<br>
-            <img style="width: 549px; height: 389px;" title="UML class diag" alt="UML class diag"
-              src="../../images/applica/WolfSheep-UML.png"><br>
-            <address>Diagramme de classe du modele pour la version 2.</address>
-            <h5>Version 1</h5>
-            "A chaque itération les loups perdent de l&eacute;nergie, et ils doivent
-            manger des moutons pour la r&eacute;cup&eacute;rer. <br>
-            Quand ils nen ont plus, ils meurent. Chaque loup a une probabilit&eacute;
+            lanalyse du code du modele, nous avons généré plusieurs diagrammes
+            UML. <br/>
+            Voici le diagramme de classe :<br/>
+<img alt="UML class diag" src="../../images/applica/WolfSheep-UML.png" style="width: 549px; height: 389px;" title="UML class diag"/><br/>
+<address>Diagramme de classe du modele pour la version 2.</address>
+<h5>Version 1</h5>
+            "A chaque itération les loups perdent de lénergie, et ils doivent
+            manger des moutons pour la récupérer. <br/>
+            Quand ils nen ont plus, ils meurent. Chaque loup a une probabilité
             fixe de reproduction a chaque step". Voici la traduction en
-            diagramme dactivit&eacute; : <br>
-            <img style="width: 269px; height: 419px;" title="diag Activite Wolf"
-              alt="diag Activite Wolf"
-              src="../../images/applica/WolfSheep-UML2.png">&nbsp;&nbsp;
-            <img style="width: 269px; height: 277px;" title="diag Activite Sheep 1"
-              alt="diag Activite Sheep 1"
-              src="../../images/applica/WolfSheep-UML3.png"><br>
-            <address>Diagramme dactivite du loup et du mouton (pour la version
+            diagramme dactivité : <br/>
+<img alt="diag Activite Wolf" src="../../images/applica/WolfSheep-UML2.png" style="width: 269px; height: 419px;" title="diag Activite Wolf"/>  
+            <img alt="diag Activite Sheep 1" src="../../images/applica/WolfSheep-UML3.png" style="width: 269px; height: 277px;" title="diag Activite Sheep 1"/><br/>
+<address>Diagramme dactivite du loup et du mouton (pour la version
               1)</address>
-            Diagramme de s&eacute;quence pour la version 1 :<br>
-            <img style="width: 340px; height: 247px;" title="diag seq 1" alt="diag seq 1"
-              src="../../images/applica/WolfSheep-UML4.png"><br>
-            <h5>R&eacute;sultats pour la version 1 :</h5>
-            <img style="width: 313px; height: 199px;" alt="resultNetlogo-v1" src="../../images/applica/WolfSheep-v1netlogo.png">&nbsp;
-            <img style="width: 362px; height: 188px;" title="resultCormas-v1" alt="resultCormas-v1"
-              src="../../images/applica/WolfSheep-v1cormas.png"><br>
+            Diagramme de séquence pour la version 1 :<br/>
+<img alt="diag seq 1" src="../../images/applica/WolfSheep-UML4.png" style="width: 340px; height: 247px;" title="diag seq 1"/><br/>
+<h5>Résultats pour la version 1 :</h5>
+<img alt="resultNetlogo-v1" src="../../images/applica/WolfSheep-v1netlogo.png" style="width: 313px; height: 199px;"/> 
+            <img alt="resultCormas-v1" src="../../images/applica/WolfSheep-v1cormas.png" style="width: 362px; height: 188px;" title="resultCormas-v1"/><br/>
             Comme lexplique Wilensky, cette version produit une dynamique
             instable : soit la disparition des loups et lexplosition
-            d&eacute;mogaphique des moutons (car pas de limite) : courbes de gauche
+            démogaphique des moutons (car pas de limite) : courbes de gauche
             (dans Netlogo), soit la disparition dabord des moutons, suivie par
             celle des loups qui nont plus rien a manger : courbes de droite
-            (dans Cormas).<br>
-            <h5>Version 2</h5>
-            Le diagramme de classe et les activit&eacute;s du loup sont identiques. Les
-            activit&eacute;s du mouton sont maintenant semblables a celles du loup :<br>
-            <table style="width: 100%;" border="0">
-              <tbody>
-                <tr>
-                  <td><img style="width: 269px; height: 420px;" title="diag. acti Sheep v2"
-                      alt="diag. acti Sheep v2"
-                      src="../../images/applica/WolfSheep-UML5.png">&nbsp;
+            (dans Cormas).<br/>
+<h5>Version 2</h5>
+            Le diagramme de classe et les activités du loup sont identiques. Les
+            activités du mouton sont maintenant semblables a celles du loup :<br/>
+<table border="0" style="width: 100%;">
+<tbody>
+<tr>
+<td class="content-cell"><img alt="diag. acti Sheep v2" src="../../images/applica/WolfSheep-UML5.png" style="width: 269px; height: 420px;" title="diag. acti Sheep v2"/> 
                     </td>
-                  <td style="text-align: left; vertical-align: top; background-color: white;"><br>
-                    "Les moutons se nourrissent dherbe pour gagner de l&eacute;nergie
-                    et en perdent a mesure quils bougent. Quand leur &eacute;nergie
-                    s&eacute;puise, les moutons meurent. Une fois mang&eacute;e, lherbe se
-                    r&eacute;g&eacute;nere au bout dun certain temps."<br>
-                    <br>
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img style="width: 365px; height: 179px;"
-                      title="diag. statetransition"
-                      alt="diag. statetransition"
-                      src="../../images/applica/WolfSheep-UML6.png"><br>
-                    <address>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      Diag. d&eacute;tat-transition de lherbe.<br>
-                      <br>
-                      <br>
-                      <br>
-                      Diagramme dactivit&eacute; du mouton pour la version 2.</address>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <br>
-            Diagramme de s&eacute;quence pour la version 2 :<br>
-            <img style="width: 443px; height: 251px;" title="diag seq 2" alt="diag seq 2"
-              src="../../images/applica/WolfSheep-UML7.png"><br>
-            <br>
-            <h5>R&eacute;sultats pour la version 2 : une r&eacute;plication incorrecte</h5>
-            <img style="width: 315px; height: 196px;" title="result Netlogo v2"
-              alt="result Netlogo v2"
-              src="../../images/applica/WolfSheep-v2netlogo.png">&nbsp;
-            <img style="width: 375px; height: 197px;" title="result Cormas v2" alt="result Cormas v2"
-              src="../../images/applica/WolfSheep-v2cormas.png"><br>
-            <address>R&eacute;sultats des deux impl&eacute;mentations : a gauche, version
-              originale sous Netlogo, a droite, r&eacute;plication sous Cormas.</address>
+<td class="content-cell" style="text-align: left; vertical-align: top; background-color: white;"><br/>
+                    "Les moutons se nourrissent dherbe pour gagner de lénergie
+                    et en perdent a mesure quils bougent. Quand leur énergie
+                    sépuise, les moutons meurent. Une fois mangée, lherbe se
+                    régénere au bout dun certain temps."<br/>
+<br/>
+<br/>
+<br/>
+                            <img alt="diag. statetransition" src="../../images/applica/WolfSheep-UML6.png" style="width: 365px; height: 179px;" title="diag. statetransition"/><br/>
+<address>        
+                      Diag. détat-transition de lherbe.<br/>
+<br/>
+<br/>
+<br/>
+                      Diagramme dactivité du mouton pour la version 2.</address>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+            Diagramme de séquence pour la version 2 :<br/>
+<img alt="diag seq 2" src="../../images/applica/WolfSheep-UML7.png" style="width: 443px; height: 251px;" title="diag seq 2"/><br/>
+<br/>
+<h5>Résultats pour la version 2 : une réplication incorrecte</h5>
+<img alt="result Netlogo v2" src="../../images/applica/WolfSheep-v2netlogo.png" style="width: 315px; height: 196px;" title="result Netlogo v2"/> 
+            <img alt="result Cormas v2" src="../../images/applica/WolfSheep-v2cormas.png" style="width: 375px; height: 197px;" title="result Cormas v2"/><br/>
+<address>Résultats des deux implémentations : a gauche, version
+              originale sous Netlogo, a droite, réplication sous Cormas.</address>
             Pour la version 2, on note une stabilisation des dynamiques, qui
-            fluctuent mais ou les deux populations se maintiennent.<br>
-            Par contre, les r&eacute;sultats diff&eacute;rent entre les deux plateformes :
+            fluctuent mais ou les deux populations se maintiennent.<br/>
+            Par contre, les résultats différent entre les deux plateformes :
             dans la version originale sous Netlogo (graphe de gauche), on note
             une moyenne de 150 moutons et de 75 loups. Dans la version sous
             Cormas (graphe de droite), il y a 200 moutons en moyenne pour moins
-            de 20 loups. Il &eacute;tait donc n&eacute;cessaire de comprendre dou venait
-            cette diff&eacute;rence importante.<br>
-            <h3>Analyse des diff&eacute;rentes impl&eacute;mentations</h3>
+            de 20 loups. Il était donc nécessaire de comprendre dou venait
+            cette différence importante.<br/>
+<h3>Analyse des différentes implémentations</h3>
             La description textuelle du modele et sa traduction en diagrammes de
-            classe ne permettent pas dobtenir deux impl&eacute;mentations
+            classe ne permettent pas dobtenir deux implémentations
             convergentes. Il a donc fallu comprendre dou venait cette
-            diff&eacute;rence. Apres anaylse du code de Netlogo, nous avons compris que
-            la diff&eacute;rence provenait essentiellement du mouvement al&eacute;atoire des
-            agents. Dans le cas de Cormas, la m&eacute;thode pr&eacute;d&eacute;finie dun mouvement
-            al&eacute;atoire sappelle #randomWalk : elle permet a un agent de bouger
+            différence. Apres anaylse du code de Netlogo, nous avons compris que
+            la différence provenait essentiellement du mouvement aléatoire des
+            agents. Dans le cas de Cormas, la méthode prédéfinie dun mouvement
+            aléatoire sappelle #randomWalk : elle permet a un agent de bouger
             de sa cellule vers une des 8 cellules voisines prise au hasard. Cela
             ressemble donc a un mouvement brownien. Dans le cas de
-            limpl&eacute;mentation de ce modele sous Netlogo, le mouvement s&eacute;crivait
-            de la facon suivante :<br>
-            <img title="code" alt="code" src="../../images/applica/WolfSheep-code.png"><br>
-            Ici, chaque agent (turtle) se d&eacute;place dune cellule, mais en
+            limplémentation de ce modele sous Netlogo, le mouvement sécrivait
+            de la facon suivante :<br/>
+<img alt="code" src="../../images/applica/WolfSheep-code.png" title="code"/><br/>
+            Ici, chaque agent (turtle) se déplace dune cellule, mais en
             modifiant sa direction de + ou - 50Â°. Cela entraine un mouvement
-            plus orient&eacute; quun simple mouvement brownsien. Cette proc&eacute;dure qui
-            n&eacute;tait pas d&eacute;crite dans le texte a des cons&eacute;quences importantes sur
-            la dynamique globale du systeme.<br>
-            Ce mouvement orient&eacute; a &eacute;t&eacute; r&eacute;impl&eacute;ment&eacute; dans la version sous Cormas.
-            Il a fallu rajout&eacute; un attribut "direction" aux agents qui, a
-            linitialisation, contient une valeur al&eacute;atoire entre 0Â° et 360Â°,
+            plus orienté quun simple mouvement brownsien. Cette procédure qui
+            nétait pas décrite dans le texte a des conséquences importantes sur
+            la dynamique globale du systeme.<br/>
+            Ce mouvement orienté a été réimplémenté dans la version sous Cormas.
+            Il a fallu rajouté un attribut "direction" aux agents qui, a
+            linitialisation, contient une valeur aléatoire entre 0Â° et 360Â°,
             ainsi quun attribut "maxDeviation" valant 50Â°. Avec ces
-            modifications, nous obtenons des r&eacute;sultats semblables :<br>
-            <img title="result cormas v3" alt="result cormas v3" src="../../images/applica/WolfSheep-v3cormas.png"><br>
-            Dans la meme id&eacute;e, nous avons modifi&eacute; le modele original sous
-            Netlogo afin dint&eacute;grer le mouvement brownien:<br>
-            <br>
-            <img title="code 2" alt="code 2" src="../../images/applica/WolfSheep-code2.png"><br>
-            <br>
+            modifications, nous obtenons des résultats semblables :<br/>
+<img alt="result cormas v3" src="../../images/applica/WolfSheep-v3cormas.png" title="result cormas v3"/><br/>
+            Dans la meme idée, nous avons modifié le modele original sous
+            Netlogo afin dintégrer le mouvement brownien:<br/>
+<br/>
+<img alt="code 2" src="../../images/applica/WolfSheep-code2.png" title="code 2"/><br/>
+<br/>
             Nous obtenons alors des dynamiques semblables a la 1ere
-            impl&eacute;mentation sous Cormas :<br>
-            <img title="V3 netlogo" alt="V3 netlogo" src="../../images/applica/WolfSheep-v3netlogo.png"><br>
-            <br>
+            implémentation sous Cormas :<br/>
+<img alt="V3 netlogo" src="../../images/applica/WolfSheep-v3netlogo.png" title="V3 netlogo"/><br/>
+<br/>
             Voici donc la version correcte du diagramme de classe qui prend en
-            compte les d&eacute;placements orient&eacute;s :<br>
-            <br>
-            <img title="classDiag final" alt="classDiag final" src="../../images/applica/WolfSheep-UML8.png"><br>
-            <ul>
-              <li><b>T&eacute;l&eacute;charger</b> le modele <b><a href="../../logiciel/WolfSheepPredation-cormas.zip">WolfSheepPredation</a>
-                </b>pour Cormas, ainsi que la <b><a href="../../logiciel/Wolf%20Sheep%20Predation-MZ.nlogo">version
-                    modifi&eacute;e</a> </b>pour Netlogo.<b> </b>Le <a href="../../logiciel/SheepWolf_UML.asta">fichier
-                  UML</a> sous Astah<b><br>
-                </b></li>
-              <li>Pour en savoir plus, <a href="mailto:bommel@cirad.fr">contactez
+            compte les déplacements orientés :<br/>
+<br/>
+<img alt="classDiag final" src="../../images/applica/WolfSheep-UML8.png" title="classDiag final"/><br/>
+<ul>
+<li><b>Télécharger</b> le modele <b><a href="../../logiciel/WolfSheepPredation-cormas.zip">WolfSheepPredation</a>
+</b>pour Cormas, ainsi que la <b><a href="../../logiciel/Wolf%20Sheep%20Predation-MZ.nlogo">version
+                    modifiée</a> </b>pour Netlogo.<b> </b>Le <a href="../../logiciel/SheepWolf_UML.asta">fichier
+                  UML</a> sous Astah<b><br/>
+</b></li>
+<li>Pour en savoir plus, <a href="mailto:bommel@cirad.fr">contactez
                   les auteurs</a>.</li>
               A noter que le modele sous Cormas propose 2 versions : une version
               standard (WolfSheepPredation.pst) et une version avec des
-              diagrammes dactivit&eacute; (WolfSheepPredation_ActivDiag.pst) :
+              diagrammes dactivité (WolfSheepPredation_ActivDiag.pst) :
             </ul>
-            <img title="activ Cormas" alt="activ Cormas" src="../../images/applica/WolfSheep-UML9.png">
-            <ul>
-              <br>
-            </ul>
-            <!--#include virtual="/include/copyright_fr.inc" --> </td>
-          <td bgcolor="#FFFFFF" valign="top" width="15"> <br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+<img alt="activ Cormas" src="../../images/applica/WolfSheep-UML9.png" title="activ Cormas"/>
+<ul>
+<br/>
+</ul>
+<!--#include virtual="/include/copyright_fr.inc" --> </td>
+<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="15"> <br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
+</body>
 </html>

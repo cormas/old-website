@@ -1,157 +1,222 @@
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>iLPF</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
 </head>
-
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
-
-<!--#include virtual="/fr/applica/haut.inc" --> 
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
-  <tr> <!--#include virtual="/fr/applica/sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp; 
-      <h1>Modelo iLPF: integra&ccedil;&atilde;o Lavoura-Pecu&aacute;ria-Floresta 
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
+<!--#include virtual="/fr/applica/haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr> <!--#include virtual="/fr/applica/sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  
+      <h1>Modelo iLPF: integração Lavoura-Pecuária-Floresta 
       </h1>
-      <h2>Diferentes estrat&eacute;gias de utilizacÃ£o do solo com a integracÃ£o Lavoura-PecuÃ¡ria-Floresta 
+<h2>Diferentes estratégias de utilizacÃ£o do solo com a integracÃ£o Lavoura-PecuÃ¡ria-Floresta 
         e as conseqÃ¼encias em termos de Servicos Ambientais na Amazonia.</h2>
-      <table width="79%" border="0">
-        <tr> 
-          <td> 
-            <ul>
-              <li>Pierre BOMMEL (Cirad - PUC-Rio), </li>
-              <li>Ren&eacute; POCCARD (Cirad - Embrapa CPATU), </li>
-              <li>Amaury BENDAHAN (Embrapa-Roraima),</li>
-              <li>Emilie COUDEL (Cirad - Embrapa CPATU)</li>
-            </ul>
-          </td>
-          <td>&nbsp;</td>
-          <td><b><img src="transamazon/amazonie.jpg" width="426" height="320" align="top"></b></td>
-        </tr>
-      </table>
-      <hr>
-      <p><font face="Courier New, Courier, mono"><b><font color="#FF0000">P&aacute;gina 
-        em constru&ccedil;&atilde;o</font></b></font></p>
-      <hr>
-      <h3>Objetivo do Modelo </h3>
-      <p>O modelo iLPF tem como objetivo a avaliacÃ£o de cenÃ¡rios ligados a integracÃ£o 
+<table border="0" width="79%">
+<tr>
+<td>
+<ul>
+<li>Pierre BOMMEL (Cirad - PUC-Rio), </li>
+<li>René POCCARD (Cirad - Embrapa CPATU), </li>
+<li>Amaury BENDAHAN (Embrapa-Roraima),</li>
+<li>Emilie COUDEL (Cirad - Embrapa CPATU)</li>
+</ul>
+</td>
+<td> </td>
+<td><b><img align="top" height="320" src="transamazon/amazonie.jpg" width="426"/></b></td>
+</tr>
+</table>
+<hr/>
+<p><font face="Courier New, Courier, mono"><b><font color="#FF0000">Página 
+        em construção</font></b></font></p>
+<hr/>
+<h3>Objetivo do Modelo </h3>
+<p>O modelo iLPF tem como objetivo a avaliacÃ£o de cenÃ¡rios ligados a integracÃ£o 
         Lavoura-PecuÃ¡ria-Floresta na Amazonia. Os diversos cenÃ¡rios permitirÃ£o 
-        comparar diferentes estrat&eacute;gias de utilizacÃ£o do solo e as conseqÃ¼encias 
+        comparar diferentes estratégias de utilizacÃ£o do solo e as conseqÃ¼encias 
         em termos de Servicos Ambientais. Os indicadores de comparacÃ£o devem permitir 
         avaliar: </p>
-      <ul>
-        <li>Diminuir impactos ambientais das atividades agrÃ­colas; </li>
-        <li>Preservar reservas florestais e matas ciliares; </li>
-        <li>Recuperar Ã¡reas degradadas, criando condicÃµes propÃ­cias para a producÃ£o 
+<ul>
+<li>Diminuir impactos ambientais das atividades agrÃ­colas; </li>
+<li>Preservar reservas florestais e matas ciliares; </li>
+<li>Recuperar Ã¡reas degradadas, criando condicÃµes propÃ­cias para a producÃ£o 
           e diminuindo a necessidade de desmatamentos de novas Ã¡reas; </li>
-        <li>Gerar empregos, renda e melhores condicÃµes ao produtor rural. </li>
-      </ul>
-      <h3>Quais cenÃ¡rios? </h3>
-      <p>Definimos 4 cenÃ¡rios: </p>
-      <ol>
-        <li>Business as usual </li>
-        <li>Respeitar a lei </li>
-        <li>Maximizar a prestacÃ£o de servicos ambientais</li>
-        <li>Maximizar a intensificacÃ£o da producÃ£o. </li>
-      </ol>
-      <p>Estes cenÃ¡rios sÃ£o comparados aplicando-os em 4 estrat&eacute;gias de uso do 
+<li>Gerar empregos, renda e melhores condicÃµes ao produtor rural. </li>
+</ul>
+<h3>Quais cenÃ¡rios? </h3>
+<p>Definimos 4 cenÃ¡rios: </p>
+<ol>
+<li>Business as usual </li>
+<li>Respeitar a lei </li>
+<li>Maximizar a prestacÃ£o de servicos ambientais</li>
+<li>Maximizar a intensificacÃ£o da producÃ£o. </li>
+</ol>
+<p>Estes cenÃ¡rios sÃ£o comparados aplicando-os em 4 estratégias de uso do 
         solo correspondente a quatro tipos de atores. Cada atore-tipo prefere 
         um padrÃ£o de gestÃ£o do seu estabelecimento de forma seguinte: </p>
-      <ol>
-        <li>Priorizar a pecuÃ¡ria </li>
-        <li>Priorizar as culturas perenes </li>
-        <li>Priorizar a agricultura </li>
-        <li>Priorizar a diversificacÃ£o </li>
-      </ol>
-      <p>Um cenÃ¡rio &eacute; concebido como um conjunto de mÃ³dulos inseridos nas atividades 
+<ol>
+<li>Priorizar a pecuÃ¡ria </li>
+<li>Priorizar as culturas perenes </li>
+<li>Priorizar a agricultura </li>
+<li>Priorizar a diversificacÃ£o </li>
+</ol>
+<p>Um cenÃ¡rio é concebido como um conjunto de mÃ³dulos inseridos nas atividades 
         bÃ¡sicas e assim vÃ£o alterar as prÃ¡ticas. Estes mÃ³dulos sÃ£o: </p>
-      <ol>
-        <li>A agricultura de conservacÃ£o (plantio direto) I</li>
-        <li>ntensificacÃ£o da pecuÃ¡ria (a. pasto - b. pasto e rebanho) </li>
-        <li>Manejo florestal sustentÃ¡vel </li>
-        <li>Desmatamento evitado (apesar de nÃ£o desmatar mesmo abaixo do permitido) 
+<ol>
+<li>A agricultura de conservacÃ£o (plantio direto) I</li>
+<li>ntensificacÃ£o da pecuÃ¡ria (a. pasto - b. pasto e rebanho) </li>
+<li>Manejo florestal sustentÃ¡vel </li>
+<li>Desmatamento evitado (apesar de nÃ£o desmatar mesmo abaixo do permitido) 
         </li>
-        <li>Sistema agro-florestal </li>
-        <li>Descanso em pousio (RegeneracÃ£o) </li>
-        <li>Parar o uso do fogo para limpeza do pasto. </li>
-        <li>RecuperacÃ£o acelerada do passivo ambiental </li>
-        <li>Silvopastoril </li>
-      </ol>
-      <p>Os cenÃ¡rios 0 correspondem aos cenÃ¡rios de "controlo". NÃ£o hÃ¡ restricÃ£o 
+<li>Sistema agro-florestal </li>
+<li>Descanso em pousio (RegeneracÃ£o) </li>
+<li>Parar o uso do fogo para limpeza do pasto. </li>
+<li>RecuperacÃ£o acelerada do passivo ambiental </li>
+<li>Silvopastoril </li>
+</ol>
+<p>Os cenÃ¡rios 0 correspondem aos cenÃ¡rios de "controlo". NÃ£o hÃ¡ restricÃ£o 
         legal, nem remuneracÃ£o por Servico Ambiental. </p>
-      <h5>Os cenÃ¡rios 1: "Respeitar a lei". MÃ³dulos 6 e 7 </h5>
-      <p>CÃ¡lculo do Passivo ambiental e criacÃ£o de um plano de recuperacÃ£o (30 
+<h5>Os cenÃ¡rios 1: "Respeitar a lei". MÃ³dulos 6 e 7 </h5>
+<p>CÃ¡lculo do Passivo ambiental e criacÃ£o de um plano de recuperacÃ£o (30 
         anos para recuperar o passivo) com base no mÃ³dulo 6 (descanso), se acima 
         do limite da reserva legal e das APPs. Se abaixo do limiar, o agente nÃ£o 
         exceda os 50% do desmatamento, sem derrubar nas APPs, claro. ImplementacÃ£o 
         do mÃ³dulo 7 (parar o uso do fogo no pasto), mas ele pode queimar e derrubar 
         fora da reserva legal. </p>
-      <h5>Os cenÃ¡rios 2: "Maximizar a prestacÃ£o de servicos ambientais." MÃ³dulos 
+<h5>Os cenÃ¡rios 2: "Maximizar a prestacÃ£o de servicos ambientais." MÃ³dulos 
         2, 3, 4, 5, 7 e 8</h5>
-      <p>Com base no mÃ³dulo 5 (silvicultura). Cada ano, </p>
-      <ul>
-        <li>Implantar e proteger as Ã¡rvores em AAR / 2 (Area Anual a Reflorestar) 
+<p>Com base no mÃ³dulo 5 (silvicultura). Cada ano, </p>
+<ul>
+<li>Implantar e proteger as Ã¡rvores em AAR / 2 (Area Anual a Reflorestar) 
           das APPs desmatadas e ARR / 2 pixels nÃ£o-florestais. </li>
-        <li>Desenvolver a silvicultura (MÃ³dulo 5) al&eacute;m dos 50%, com Ã¡rvores em 
+<li>Desenvolver a silvicultura (MÃ³dulo 5) além dos 50%, com Ã¡rvores em 
           pastagem </li>
-        <li>Obter o passivo ambiental em carÃ¡cter prioritÃ¡rio (mÃ³dulo 8) </li>
-        <li>Manejo Florestal SustentÃ¡vel (MÃ³dulo 3) na RL </li>
-        <li>Para o desmatamento evitado (MÃ³dulo 4) </li>
-        <li>IntensificacÃ£o do manejo das pastagens (mÃ³dulo 2a) </li>
-        <li>ImplementacÃ£o do MÃ³dulo 7 (parar o uso do fogo no pasto). </li>
-      </ul>
-      <p>Proibido de derrubar e queimar, mesmo se passivo ambiental &eacute; positivo. 
+<li>Obter o passivo ambiental em carÃ¡cter prioritÃ¡rio (mÃ³dulo 8) </li>
+<li>Manejo Florestal SustentÃ¡vel (MÃ³dulo 3) na RL </li>
+<li>Para o desmatamento evitado (MÃ³dulo 4) </li>
+<li>IntensificacÃ£o do manejo das pastagens (mÃ³dulo 2a) </li>
+<li>ImplementacÃ£o do MÃ³dulo 7 (parar o uso do fogo no pasto). </li>
+</ul>
+<p>Proibido de derrubar e queimar, mesmo se passivo ambiental é positivo. 
         Receber uma compensacÃ£o por servicos ambientais. </p>
-      <h5>Os cenÃ¡rios 3: "Maximizar a intensificacÃ£o da producÃ£o". MÃ³dulos 1, 
+<h5>Os cenÃ¡rios 3: "Maximizar a intensificacÃ£o da producÃ£o". MÃ³dulos 1, 
         2, 5 e 7 </h5>
-      <p>Intensificar a prioridade ficando dentro da lei. </p>
-      <p>IntroducÃ£o de novas prÃ¡ticas: </p>
-      <ul>
-        <li>Se a estrat&eacute;gia pecuarista, a intensificacÃ£o da producÃ£o pecuÃ¡ria 
+<p>Intensificar a prioridade ficando dentro da lei. </p>
+<p>IntroducÃ£o de novas prÃ¡ticas: </p>
+<ul>
+<li>Se a estratégia pecuarista, a intensificacÃ£o da producÃ£o pecuÃ¡ria 
           (criacÃ£o de parcelas menores e melhor mantida, silvopastoril, recuperacÃ£o 
           de pastagens degradadas pela agricultura de conservacÃ£o (plantio direto) 
           em dois anos). </li>
-        <li>Se a estrat&eacute;gia &eacute; Diversificada: - Agricultura = Agricultura de conservacÃ£o 
-          unicamente (4 anos) - PecuÃ¡ria (idem estrat&eacute;gia pecuarista) - Nenhuma 
+<li>Se a estratégia é Diversificada: - Agricultura = Agricultura de conservacÃ£o 
+          unicamente (4 anos) - PecuÃ¡ria (idem estratégia pecuarista) - Nenhuma 
           mudanca para as culturas perenes. </li>
-      </ul>
-      <p>Al&eacute;m disso, sendo que a estrutura familiar tem um papel importante na 
+</ul>
+<p>Além disso, sendo que a estrutura familiar tem um papel importante na 
         viabilidade econÃ³mica, as simulacÃµes sÃ£o repetidas a partir de inicializacÃµes 
         com uma famÃ­lia pequena e com uma famÃ­lia maior. </p>
-      <p>Finalmente, a estrutura da vegetacÃ£o do estabelecimento no inÃ­cio tamb&eacute;m 
+<p>Finalmente, a estrutura da vegetacÃ£o do estabelecimento no inÃ­cio também 
         influencia os resultados. E por isso que para uma mesma famÃ­lia, uma mesma 
-        estrat&eacute;gia e um cenÃ¡rio determinado, as simulacÃµes sÃ£o aplicadas a um 
+        estratégia e um cenÃ¡rio determinado, as simulacÃµes sÃ£o aplicadas a um 
         estabelecimento inicialmente em floresta e a um estabelecimento parcialmente 
         desmatado. </p>
-      <p>Para todas estas razÃµes, o modelo &eacute; analisado atrav&eacute;s do cruzamento de 
+<p>Para todas estas razÃµes, o modelo é analisado através do cruzamento de 
         todos os factores, tais como a figura seguinte resume: </p>
-      <p><img src="iLPF/combinacao.jpg" width="664" height="417"></p>
-      <p><font size="2"><i>Processo de analise do modelo</i></font></p>
-      <h3>DescricÃ£o do modelo</h3>
-      <p>O SMA ilPF &eacute; constituÃ­do por dois mÃ³dulos:. </p>
-      <p> - O <i><b>mÃ³dulo fundiÃ¡rio</b></i> representa a organizacÃ£o espacial. 
+<p><img height="417" src="iLPF/combinacao.jpg" width="664"/></p>
+<p><font size="2"><i>Processo de analise do modelo</i></font></p>
+<h3>DescricÃ£o do modelo</h3>
+<p>O SMA ilPF é constituÃ­do por dois mÃ³dulos:. </p>
+<p> - O <i><b>mÃ³dulo fundiÃ¡rio</b></i> representa a organizacÃ£o espacial. 
         Situado ao longo de uma estrada vicinal, o lote de colonizacÃ£o de 100 
-        ha &eacute; dividido em parcelas de 400 m2. A cada parcela atribui-se um tipo 
+        ha é dividido em parcelas de 400 m2. A cada parcela atribui-se um tipo 
         de solo, uma declividade e uma cobertura vegetal: floresta, capoeira ou 
         cultura de subsistencia, perene ou forrageira. </p>
-      <p>O rebanho &eacute; distribuÃ­do em pastos com uma carga media de uma cabeca/hÃ¡, 
-        na versÃ£o bÃ¡sica sem intensificacÃ£o. Cada cobertura possui atributos t&eacute;cnico-econÃ´micos, 
+<p>O rebanho é distribuÃ­do em pastos com uma carga media de uma cabeca/hÃ¡, 
+        na versÃ£o bÃ¡sica sem intensificacÃ£o. Cada cobertura possui atributos técnico-econÃ´micos, 
         sua prÃ³pria dinÃ¢mica, suas exigencias em termos de mÃ£o-de-obra e de insumos 
-        e uma producÃ£o. Cada estacÃ£o, ele gera uma producÃ£o, que &eacute; imediatamente 
+        e uma producÃ£o. Cada estacÃ£o, ele gera uma producÃ£o, que é imediatamente 
         convertida em dinheiro no momento da colheita. Mas sem manutencÃ£o, sua 
         produtividade diminui e ele acaba desaparecendo. Esse mÃ³dulo espacializado 
         calcula a producÃ£o de cada cobertura e faz com que evoluam naturalmente: 
@@ -160,9 +225,9 @@
         coberturas que existem no modelo e as maneiras de trocar de uma cobertura 
         para outra, a traves das transicÃµes. As transicÃµes vermelhas correspondem 
         as atividades humanas (deruba, plantio,...). </p>
-      <p><img src="iLPF/etatTransition.jpg" width="912" height="801"></p>
-      <p><i><font size="2">Diagrama de Estado-TransicÃ£o da cobertura vegetal</font></i></p>
-      <p>O segundo <i><b>mÃ³dulo</b></i> representa a <i><b>famÃ­lia</b></i>. Um 
+<p><img height="801" src="iLPF/etatTransition.jpg" width="912"/></p>
+<p><i><font size="2">Diagrama de Estado-TransicÃ£o da cobertura vegetal</font></i></p>
+<p>O segundo <i><b>mÃ³dulo</b></i> representa a <i><b>famÃ­lia</b></i>. Um 
         agente (uma famÃ­lia de n membros) dispÃµe de dois recursos: sua mÃ£o-de-obra 
         ativa, que ele utiliza para seus trabalhos ou que ele vende afora, e seu 
         dinheiro, que ele recupera no momento das colheitas ou da venda de sua 
@@ -170,87 +235,92 @@
         ligados aos trabalhos, a contratacÃ£o ocasional de forca de trabalho e 
         a compra de vacas. Sua mÃ£o-de-obra equivale a uma quantidade de jornadas 
         de trabalho disponÃ­vel que diminui com as tarefas realizadas. Essa quantidade 
-        &eacute; atualizada no inÃ­cio de cada estacÃ£o (IlustracÃ£o 5).</p>
-      <p><img src="iLPF/produtor.jpg" width="490" height="420"></p>
-      <p><font size="1"><i><font size="2">diagrama sistemico de um produtor</font></i></font></p>
-      <h3>Alguns resultados </h3>
-      <p>O modelo foi implantado na plataforma Cormas, mas todos os cenÃ¡rios ainda 
+        é atualizada no inÃ­cio de cada estacÃ£o (IlustracÃ£o 5).</p>
+<p><img height="420" src="iLPF/produtor.jpg" width="490"/></p>
+<p><font size="1"><i><font size="2">diagrama sistemico de um produtor</font></i></font></p>
+<h3>Alguns resultados </h3>
+<p>O modelo foi implantado na plataforma Cormas, mas todos os cenÃ¡rios ainda 
         nÃ£o foram finalizados. Hoje os cenÃ¡rios 0 "Business as usual" e 1 "Respeitar 
-        a lei" sÃ£o implementados e estamos elaborando os cenÃ¡rios 2 e 3. Tamb&eacute;m 
+        a lei" sÃ£o implementados e estamos elaborando os cenÃ¡rios 2 e 3. Também 
         temos que analisar os primeiros resultados para continuar verificar o 
         bom funcionamento do SMA. Um cÃ³digo de cor foi associado para cada tipo 
         de cobertura (IlustracÃ£o 9). Os resultados seguintes sÃ£o obtidos a partir 
         de simulacÃµes utilizando uma propriedade de 100 ha jÃ¡ parcialmente desmatada 
-        e com uma famÃ­lia de 5 membros cujo 3 activos. O cash inicial &eacute; de 1000 
+        e com uma famÃ­lia de 5 membros cujo 3 activos. O cash inicial é de 1000 
         R$ por pessoa. </p>
-      <p><img src="iLPF/legende.jpg" width="547" height="400"></p>
-      <h5>Resultados cen&aacute;rio 0</h5>
-      <p>Impactos sobre o desmatamento:</p>
-      <p><img src="iLPF/florestaCen0.jpg" width="561" height="294"></p>
-      <p>Exemplo de simula&ccedil;&otilde;es (pecuarista e diversificado):</p>
-      <table width="32%" border="0">
-        <tr>
-          <td width="22%"> 
-            <div align="center">Pecuarista</div>
-          </td>
-          <td width="78%">
-            <div align="center">Diversificado</div>
-          </td>
-        </tr>
-        <tr>
-          <td width="22%"><img src="iLPF/pecuarista-cen-0_complet.gif" width="130" height="615"></td>
-          <td width="78%">
-            <div align="center"><img src="iLPF/divers-cen-0_complet.gif" width="130" height="615"></div>
-          </td>
-        </tr>
-      </table>
-      <p>Din&aacute;micas das rendas:</p>
-      <p><img src="iLPF/renda-cen0.jpg" width="620" height="352"></p>
-      <h5>Resultados cen&aacute;rio 1</h5>
-      <h5></h5>
-      <p>Impactos sobre o desmatamento:</p>
-      <p><img src="iLPF/florestaCen1.jpg" width="561" height="294"></p>
-      <p>Exemplo de simula&ccedil;&otilde;es (pecuarista e diversificado):</p>
-      <table width="32%" border="0">
-        <tr> 
-          <td width="22%"> 
-            <div align="center">Pecuarista</div>
-          </td>
-          <td width="78%"> 
-            <div align="center">Diversificado</div>
-          </td>
-        </tr>
-        <tr> 
-          <td width="22%"><img src="iLPF/pecuarista-cen-1_complet.gif" width="130" height="615"></td>
-          <td width="78%"> 
-            <div align="center"><img src="iLPF/divers-cen-1_complet.gif" width="130" height="615"></div>
-          </td>
-        </tr>
-      </table>
-      <p>Din&aacute;micas das rendas:</p>
-      <p><img src="iLPF/renda-cen1.jpg" width="619" height="350"></p>
-      <p>Assim o respeito estrito da lei pode permitir a conservacÃ£o da floresta 
-        e a recuperacÃ£o do passivo ambiental, mas o custo social &eacute; uma perda extrema 
-        de renda familiar. </p>
-      <p>Para mais informa&ccedil;&atilde;o, <a href="mailto:bommel@cirad.fr">contactar 
-        os autores</a>. </p>
-      <h2>&nbsp;</h2>
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-      <div align="right" class="texte"> </div>
-
-    </td>
-
-  </tr>
-
+<p><img height="400" src="iLPF/legende.jpg" width="547"/></p>
+<h5>Resultados cenário 0</h5>
+<p>Impactos sobre o desmatamento:</p>
+<p><img height="294" src="iLPF/florestaCen0.jpg" width="561"/></p>
+<p>Exemplo de simulações (pecuarista e diversificado):</p>
+<table border="0" width="32%">
+<tr>
+<td width="22%">
+<div align="center">Pecuarista</div>
+</td>
+<td width="78%">
+<div align="center">Diversificado</div>
+</td>
+</tr>
+<tr>
+<td width="22%"><img height="615" src="iLPF/pecuarista-cen-0_complet.gif" width="130"/></td>
+<td width="78%">
+<div align="center"><img height="615" src="iLPF/divers-cen-0_complet.gif" width="130"/></div>
+</td>
+</tr>
 </table>
-
+<p>Dinámicas das rendas:</p>
+<p><img height="352" src="iLPF/renda-cen0.jpg" width="620"/></p>
+<h5>Resultados cenário 1</h5>
+<h5></h5>
+<p>Impactos sobre o desmatamento:</p>
+<p><img height="294" src="iLPF/florestaCen1.jpg" width="561"/></p>
+<p>Exemplo de simulações (pecuarista e diversificado):</p>
+<table border="0" width="32%">
+<tr>
+<td width="22%">
+<div align="center">Pecuarista</div>
+</td>
+<td width="78%">
+<div align="center">Diversificado</div>
+</td>
+</tr>
+<tr>
+<td width="22%"><img height="615" src="iLPF/pecuarista-cen-1_complet.gif" width="130"/></td>
+<td width="78%">
+<div align="center"><img height="615" src="iLPF/divers-cen-1_complet.gif" width="130"/></div>
+</td>
+</tr>
+</table>
+<p>Dinámicas das rendas:</p>
+<p><img height="350" src="iLPF/renda-cen1.jpg" width="619"/></p>
+<p>Assim o respeito estrito da lei pode permitir a conservacÃ£o da floresta 
+        e a recuperacÃ£o do passivo ambiental, mas o custo social é uma perda extrema 
+        de renda familiar. </p>
+<p>Para mais informação, <a href="mailto:bommel@cirad.fr">contactar 
+        os autores</a>. </p>
+<h2> </h2>
+<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"> </div>
+</td>
+</tr>
+</table>
 <map name="Diagramme de package">
-  <area shape="rect" coords="275,45,461,258">
+<area coords="275,45,461,258" shape="rect"/>
 </map>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
-
 </html>
-

@@ -1,142 +1,232 @@
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>Echos</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
 </head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
-<!--#include virtual="/fr/applica/haut.inc" --> 
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-  <tr> <!--#include virtual="/fr/applica/sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp; 
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
+<!--#include virtual="/fr/applica/haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr> <!--#include virtual="/fr/applica/sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  
       <h1>Echos</h1>
-      <h2>Analyse du comportement &eacute;conomique des acteurs de la fili&egrave;re 
-        &quot;effluents d&eacute;levage&quot; &agrave; La R&eacute;union</h2>
-      <p>Stefano Farolfi, Pierre Bommel, Christophe Le Page (Cirad)</p>
-      <p><img src="/images/applica/magmas1.jpg" width="240" height="162" align="right">Certaines 
-        communes des hauteurs de l&icirc;le de la R&eacute;union pr&eacute;sentent une 
-        forte densit&eacute; d&eacute;levages porcins. Les problemes de pollution provoqu&eacute;e 
-        par ce type d&eacute;levage sont abord&eacute;s par linstitution publique qui doit 
-        choisir un ensemble de mesures environnementales adapt&eacute; au cas local. 
-        Dans un souci de respect de lenvironnement, des regles ont &eacute;t&eacute; &eacute;tablies 
-        pour l&eacute;pandage de ces effluents d&eacute;levage. Dans un contexte normatif 
-        fort dynamique et toujours plus contraignant, les &eacute;leveurs se trouvent 
-        confront&eacute;s a un systeme de normes et, peut-etre bientÃ´t, dinstruments 
-        &eacute;conomiques (taxes, subventions) qui induisent de nouveaux choix de gestion 
-        de leurs effluents. Nous avons choisi d&eacute;tudier le comportement &eacute;conomique 
-        des &eacute;leveurs de Grand-Ilet, zone dans laquelle les surfaces &eacute;pandables 
-        sont insuffisantes. Dans le m&ecirc;me secteur de l&icirc;le, la zone 
-        c&ocirc;ti&egrave;re (St-Andr&eacute;) est domin&eacute;e par des exploitations 
-        de canne a sucre qui ont des besoins de mati&egrave;re organique importants. 
+<h2>Analyse du comportement économique des acteurs de la filière 
+        "effluents délevage" à La Réunion</h2>
+<p>Stefano Farolfi, Pierre Bommel, Christophe Le Page (Cirad)</p>
+<p><img align="right" height="162" src="/images/applica/magmas1.jpg" width="240"/>Certaines 
+        communes des hauteurs de lîle de la Réunion présentent une 
+        forte densité délevages porcins. Les problemes de pollution provoquée 
+        par ce type délevage sont abordés par linstitution publique qui doit 
+        choisir un ensemble de mesures environnementales adapté au cas local. 
+        Dans un souci de respect de lenvironnement, des regles ont été établies 
+        pour lépandage de ces effluents délevage. Dans un contexte normatif 
+        fort dynamique et toujours plus contraignant, les éleveurs se trouvent 
+        confrontés a un systeme de normes et, peut-etre bientÃ´t, dinstruments 
+        économiques (taxes, subventions) qui induisent de nouveaux choix de gestion 
+        de leurs effluents. Nous avons choisi détudier le comportement économique 
+        des éleveurs de Grand-Ilet, zone dans laquelle les surfaces épandables 
+        sont insuffisantes. Dans le même secteur de lîle, la zone 
+        côtière (St-André) est dominée par des exploitations 
+        de canne a sucre qui ont des besoins de matière organique importants. 
       </p>
-      <p>Lobjectif du mod&egrave;le est de simuler plusieurs scenarios de gestion 
-        des effluents d&eacute;levage &agrave; Grand-Ilet selon diff&eacute;rentes 
+<p>Lobjectif du modèle est de simuler plusieurs scenarios de gestion 
+        des effluents délevage à Grand-Ilet selon différentes 
         orientations de politique environnementale, et ceci pour tester dans quelle 
-        mesure lapplication des instruments &eacute;conomiques et r&eacute;glementaires 
-        mentionn&eacute;s ci-dessus peut modifier le comportement des &eacute;leveurs. 
+        mesure lapplication des instruments économiques et réglementaires 
+        mentionnés ci-dessus peut modifier le comportement des éleveurs. 
       </p>
-      <p>Dans le cas particulier de cette &eacute;tude, deux alternatives de gestion 
-        des effluents sont compar&eacute;es:</p>
-      <ul>
-        <li>strat&eacute;gie 1: &eacute;pandage syst&eacute;matique des effluents 
-          sur les parcelles de lexploitation d&eacute;levage,</li>
-        <li>strat&eacute;gie 2: transport des ex&eacute;dents deffluents vers 
-          les exploitations canni&egrave;res de la zone c&ocirc;ti&egrave;re.</li>
-      </ul>
-      <p>Selon un calcul pr&eacute;visionnel du coÃ»t r&eacute;latif aux deux strat&eacute;gies, l&eacute;leveur 
-        choisit chaque ann&eacute;e dadopter lann&eacute;e suivante lune des strat&eacute;gies 1 
-        ou 2. Le mod&egrave;le permet ainsi de simuler les comportements des producteurs-pollueurs, 
-        donnant lieu &agrave; des sc&eacute;narios qui illustrent les dynamques 
-        &eacute;conomiques (co&ucirc;ts individuels et co&ucirc;ts sociaux) et 
-        &eacute;cologiques (pollution azot&eacute;e).</p>
-      <p>Les quatre sc&eacute;narios que nous avons test&eacute;s sont bas&eacute;s 
+<p>Dans le cas particulier de cette étude, deux alternatives de gestion 
+        des effluents sont comparées:</p>
+<ul>
+<li>stratégie 1: épandage systématique des effluents 
+          sur les parcelles de lexploitation délevage,</li>
+<li>stratégie 2: transport des exédents deffluents vers 
+          les exploitations cannières de la zone côtière.</li>
+</ul>
+<p>Selon un calcul prévisionnel du coÃ»t rélatif aux deux stratégies, léleveur 
+        choisit chaque année dadopter lannée suivante lune des stratégies 1 
+        ou 2. Le modèle permet ainsi de simuler les comportements des producteurs-pollueurs, 
+        donnant lieu à des scénarios qui illustrent les dynamques 
+        économiques (coûts individuels et coûts sociaux) et 
+        écologiques (pollution azotée).</p>
+<p>Les quatre scénarios que nous avons testés sont basés 
         sur une modulation des instruments de politique environnementale et sur 
-        diff&eacute;rentes disponibilit&eacute;s de surface canni&egrave;re &eacute;pandable 
+        différentes disponibilités de surface cannière épandable 
         :</p>
-      <ol>
-        <li>Norme = 170 Kg.N / Ha; redevance pollution = 0; surface exploitation 
-          canni&egrave;re comprise entre 20 et 40 Ha</li>
-        <li>Norme = 170 Kg.N / Ha; redevance pollution progressive (tous les deux 
-          ans, + 2 FF pour chaque Kg.N ex&eacute;dentaire); surface exploitation 
-          canni&egrave;re comprise entre 20 et 40 Ha</li>
-        <li>Idem 2, surface exploitation canni&egrave;re comprise entre 40 et 
+<ol>
+<li>Norme = 170 Kg.N / Ha; redevance pollution = 0; surface exploitation 
+          cannière comprise entre 20 et 40 Ha</li>
+<li>Norme = 170 Kg.N / Ha; redevance pollution progressive (tous les deux 
+          ans, + 2 FF pour chaque Kg.N exédentaire); surface exploitation 
+          cannière comprise entre 20 et 40 Ha</li>
+<li>Idem 2, surface exploitation cannière comprise entre 40 et 
           80 Ha</li>
-        <li>Idem 2, Norme = 300 Kg.N / Ha</li>
-      </ol>
-      <table width="75%" border="1" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" align="center">
-        <tr> 
-          <td> 
-            <div align="center"><img src="/images/applica/echos1.gif" width="114" height="85"></div>
-          </td>
-          <td> 
-            <div align="center"></div>
-          </td>
-          <td> 
-            <div align="center"><img src="/images/applica/echos2.gif" width="115" height="86"></div>
-          </td>
-          <td> 
-            <div align="center"></div>
-          </td>
-          <td> 
-            <div align="center"><img src="/images/applica/echos3.gif" width="114" height="86"></div>
-          </td>
-          <td> 
-            <div align="center"></div>
-          </td>
-          <td> 
-            <div align="center"><img src="/images/applica/echos4.gif" width="115" height="86"></div>
-          </td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="center">Sc&eacute;nario 1</div>
-          </td>
-          <td> 
-            <div align="center"></div>
-          </td>
-          <td> 
-            <div align="center">Sc&eacute;nario 2</div>
-          </td>
-          <td> 
-            <div align="center"></div>
-          </td>
-          <td> 
-            <div align="center">Sc&eacute;nario 3</div>
-          </td>
-          <td> 
-            <div align="center"></div>
-          </td>
-          <td> 
-            <div align="center">Sc&eacute;nario 4</div>
-          </td>
-        </tr>
-      </table>
-      <p>Les figures ci-dessus repr&eacute;sentent les &eacute;tats finaux de 
-        lenvironnement simul&eacute; apr&egrave;s 10 ans. La partie gauche de 
-        la carte repr&eacute;sente les &eacute;levages de la localit&eacute; de 
-        Grand-Ilet, la partie droite repr&eacute;sente les cultures de canne-&agrave;-sucre 
-        de la zone littorale.</p>
-      <p>&nbsp;</p>
-      <p>Pour plus dinformation, <a href="mailto:stefano.farolfu@cirad.fr">contacter 
-        lauteur</a>.</p>
-      <h2>References</h2>
-      <p>Farolfi, S., Le Page, C., Tidball, M. et Bommel, P. (2001). Gestion des 
-        effluents d&eacute;levage &agrave; l&icirc;le de La R&eacute;union: 
-        analyse du comportement &eacute;conomique des acteurs selon une approche 
-        standard et par un syst&egrave;me multi-agent. S&eacute;minaire de recherche 
-        &quot;Pr&eacute;servation et valorisation de leau dans le domaine littoral&quot;, 
-        St-Denis de la R&eacute;union, 15 juin 2001.</p>
-      <p><a href="http://www.cirad.fr/presentation/programmes/espace/effluent/effluent.shtml">http://www.cirad.fr/presentation/programmes/espace/effluent/effluent.shtml</a> 
-      </p>
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-      <div align="right" class="texte"></div>
-    </td>
-  </tr>
+<li>Idem 2, Norme = 300 Kg.N / Ha</li>
+</ol>
+<table align="center" border="1" bordercolordark="#FFFFFF" bordercolorlight="#FFFFFF" width="75%">
+<tr>
+<td>
+<div align="center"><img height="85" src="/images/applica/echos1.gif" width="114"/></div>
+</td>
+<td>
+<div align="center"></div>
+</td>
+<td>
+<div align="center"><img height="86" src="/images/applica/echos2.gif" width="115"/></div>
+</td>
+<td>
+<div align="center"></div>
+</td>
+<td>
+<div align="center"><img height="86" src="/images/applica/echos3.gif" width="114"/></div>
+</td>
+<td>
+<div align="center"></div>
+</td>
+<td>
+<div align="center"><img height="86" src="/images/applica/echos4.gif" width="115"/></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center">Scénario 1</div>
+</td>
+<td>
+<div align="center"></div>
+</td>
+<td>
+<div align="center">Scénario 2</div>
+</td>
+<td>
+<div align="center"></div>
+</td>
+<td>
+<div align="center">Scénario 3</div>
+</td>
+<td>
+<div align="center"></div>
+</td>
+<td>
+<div align="center">Scénario 4</div>
+</td>
+</tr>
 </table>
+<p>Les figures ci-dessus représentent les états finaux de 
+        lenvironnement simulé après 10 ans. La partie gauche de 
+        la carte représente les élevages de la localité de 
+        Grand-Ilet, la partie droite représente les cultures de canne-à-sucre 
+        de la zone littorale.</p>
+<p> </p>
+<p>Pour plus dinformation, <a href="mailto:stefano.farolfu@cirad.fr">contacter 
+        lauteur</a>.</p>
+<h2>References</h2>
+<p>Farolfi, S., Le Page, C., Tidball, M. et Bommel, P. (2001). Gestion des 
+        effluents délevage à lîle de La Réunion: 
+        analyse du comportement économique des acteurs selon une approche 
+        standard et par un système multi-agent. Séminaire de recherche 
+        "Préservation et valorisation de leau dans le domaine littoral", 
+        St-Denis de la Réunion, 15 juin 2001.</p>
+<p><a href="http://www.cirad.fr/presentation/programmes/espace/effluent/effluent.shtml">http://www.cirad.fr/presentation/programmes/espace/effluent/effluent.shtml</a>
+</p>
+<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
 </html>
