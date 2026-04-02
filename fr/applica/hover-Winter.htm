@@ -1,11 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
-<title>Le modèle Hover-Winter</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<!--#include virtual="/include/script.inc" -->
-<link --="" href="/css/cormas.css" rel="stylesheet"/>
-<style>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title>Le modèle Hover-Winter</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
 <style>
 body, html {
     margin: 0;
@@ -77,78 +81,214 @@ tbody td.content-cell {
     padding-left: 80px;
 }
 </style>
-</head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
-<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
-<!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr>
-<!--#include virtual="sommair.inc" -->
-<td bgcolor="#FFFFFF" valign="top" width="*">
-<p>
-<h1>Hover-Winter: simulation de la dynamique hivernale <br/>
-      dun insecte  auxiliaire des cultures </h1>
-<h1><font size="3"><a href="mailto:arrignon@mad-environnement.com" target="_blank">Florent Arrignon</a>, <a href="mailto:monteil@ensat.fr" target="_blank">Claude Monteil</a>, <a href="mailto:sarthou@ensat.fr" target="_blank">Jean-Pierre   Sarthou</a>, <a href="mailto:marc.deconchat@toulouse.inra.fr" target="_blank">Marc   Deconchat</a>, <a href="mailto:balent@toulouse.inra.fr" target="_blank">Gérard Balent</a><br/>
-      (<a href="http://www.inra.fr/toulouse_dynafor" target="_blank">UMR 1201  DYNAFOR</a>, <a href="http://www.inra.fr/" target="_blank">INRA, </a><a href="http://www.ensat.fr/" target="_blank">INP/ENSAT</a> Toulouse)</font></h1>
-<h2>Objectifs</h2>
-<p><img align="right" alt="insect" height="200" src="../../images/applica/hover-Winter1.jpg" width="280"/>L’objectif du modèle est de comprendre comment une espèce d’insecte  auxiliaire des cultures (<em>Episyrphus  balteatus</em>, de Geer, 1776 - cf. photo ci-contre, extraite de la <u><a href="http://syrfid.ensat.fr/" target="_blank">BD biogéographique SYRFID</a></u> sur les   espèces de diptères syrphidés en France) utilise les ressources dun paysage pour passer  la saison hivernale, délicate pour l’espèce en termes de résistance au froid et  de disponibilité de nourriture. Une des applications du modèle est  de tester leffet de diverses structures paysagères sur la survie de la  population à la fin de l’hiver. Cette population survivante exerce en effet un impact  sur la prédation des larves de printemps sur les pucerons des céréales.</p>
-<h2>Contexte  et problématique </h2>
-<p>Une des difficultés en lutte biologique est de pouvoir contrôler les  ravageurs des cultures suffisamment tôt pour éviter leur croissance  exponentielle. Certains espèces, comme <em>E.  balteatus</em>, permettent de réaliser ce contrôle précoce car cette espèce  hiverne sous forme de femelles fécondées qui sont à même, lorsqu’elles  survivent à l’hiver, de pondre tôt au printemps dans les champs de céréales. En  effet, alors que l’adulte est floricole, la larve de cette espèce consomme les  pucerons de manière très vorace. Les modalités de lhivernation des femelles  sont cependant mal connues, notamment la détermination de limportance de la  présence de fleurs dont les insectes consomment le nectar et le pollen, et de  celle d’abris pour se protéger des températures basses.</p>
-<h2>Description du modèle </h2>
-<p>Dans le modèle  HOVER-WINTER, dont le nom dérive des termes anglais "Hoverfly" (syrphe)  et "Overwinter" (hiverner), chaque insecte est un agent autonome (classe  Insect) qui possède un ensemble de règles pour prospecter dans le paysage, se  nourrir en fleurs, s’abriter dans les lisières forestières et mourir. Chaque  individu est localisé, et se trouve à chaque instant dans une des deux  activités suivantes : se nourrir (classe Feed) ou se protéger (classe  Protect) (<a href="../../images/applica/hover-Winter2.png" target="_blank">voir diagramme de classes</a>). <br/>
-        A chaque pas de temps, chacune des deux activités peut amener  l’individu à se déplacer dans le paysage. Le choix de l’activité se fait en  fonction de la température et selon un modèle mathématique de prospection optimale  (McNamara &amp; Houston, 1985), adapté pour la première fois à l’échelle du  paysage et prenant en compte les expériences passées dans la récolte de  ressource (ratio « temps passé / quantité récoltée dans chaque pixel »,  classe Memory).<br/>
-Deux classes (Trajectory et TrajectoryElements) permettent de  sauvegarder la trajectoire de chaque individu. Un couplage avec Excel permet  une visualisation interactive des trajectoires.<br/>
-<img height="280" src="../../images/applica/hover-Winter3.gif" width="579"/><br/>
-<br/>
-      La durée de simulation est de 90 jours (hiver) avec un pas de temps de  2 heures (soit 1 080 pas). La résolution d’espace est de 20 mètres (une cellule = 400 m²). La taille totale du paysage  est comprise selon les scénarios entre 640 et 670 hectares (soit 16 000 à  17 000 cellules). 2 000 insectes sont introduits au départ de la  simulation.<br/>
-Le modèle utilise en partie des données provenant d’études réalisées  dans les coteaux de Gascogne. Les cartes d’entrées ont été obtenues à partir dun  S.I.G. de lUMR DYNAFOR documentant l’occupation du sol (prairie, culture,  lisière forestière sud, lisière forestière nord et centre de forêt).</p>
-<h2><img align="right" height="371" src="../../images/applica/hover-Winter4.png" width="468"/>Résultats</h2>
-      Les  analyses réalisées avec le modèle Hover-Winter à partir d’un paysage observé  dans les coteaux de Gascogne confirment nos observations sur le terrain, et  particulièrement, l’utilisation préférentielle des lisières forestières  orientées au sud par les insectes
-      (la figure ci-contre montre le taux de  visite moyen par individu des différents types d’occupation du sol durant un  hiver. La plupart des individus  survivants ont visité préférentiellement les lisières sud et les prairies).<br/>
-<br/>
-      L’influence  des facteurs climat et ressources dans la dynamique hivernale a été  hiérarchisée, avec notamment la prépondérance des évènements climatiques et  l’importance de leur durée. <br/>
-<br/>
-      Lintérêt de certains types d’aménagement potentiel  du paysage a été analysé par l’étude de scénarios (bandes fleuries à plus ou  moins grande distance des lisières), montrant un effet à la fois sur le taux de  survie (nette augmentation) mais aussi sur le comportement des individus (cf. figure ci-dessous). <br/>
-<p><img height="410" src="../../images/applica/hover-Winter5.png" width="585"/><br/>
-<br/>
-<br/>
-      A l’aide du module trajectoire, nous pouvons explorer les possibilités  d’analyses spatiales des trajectoires individuelles des insectes pour les  relier au modèle mathématique de prospection optimale.</p>
-<h2>Références </h2>
-<ul>
-<li>
-<p>Arrignon, F., Deconchat, M., Sarthou, J.P., Balent, G. &amp; Monteil,  C., 2007. Modelling the  overwintering strategy of a beneficial insect in a heterogeneous landscape  using a multi-agent system. <em>Ecological  Modelling</em> 205, 423-436. <a href="http://dx.doi.org/10.1016/j.ecolmodel.2007.03.006" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
-</li>
-<li>
-<p>Arrignon, F., 2006. HOVER-WINTER : un modèle  multi-agent pour simuler la dynamique hivernale dun insecte auxiliaire des  cultures (<em>Episyrphus balteatus</em>,  Diptera: Syrphidae) dans un paysage hétérogène. Thèse de doctorat de  l’Institut National Polytechnique de Toulouse, 222p. <a href="/pdf/Arrignon_2006_PhD.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
-</li>
-<li>
-<p>McNamara, J. M. and Houston,  A. I., 1985. Optimal foraging and learning. <em>Journal  of Theoretical Biology</em> 117, 231-249.</p>
-</li>
-</ul>
-<p>Pour en savoir plus, contacter les auteurs.</p>
-<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
-<td bgcolor="#FFFFFF" valign="top" width="15">
-<div align="right" class="texte"></div>
-</td>
-</tr>
-</table>
-</div>
-<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+  </head>
+  <body border="0"
+onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style=" width: 100vw;
+      background-color: #FFA500; position: relative; margin-left: 0;
+      left: 0; right: 0; z-index: 1001;">
+      <div class="header-image-container">
+        <img alt="Description de l'image" src="../../images/bandeau.jpg">
+      </div>
+    </div>
+    <div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" height="23" width="23">
+      <!--#include virtual="haut.inc" -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>
+              </p>
+              <h1>Hover-Winter: simulation de la dynamique hivernale <br>
+                dun insecte auxiliaire des cultures </h1>
+              <h1><font size="3"><a
+                    href="mailto:arrignon@mad-environnement.com"
+                    target="_blank">Florent Arrignon</a>, <a
+                    href="mailto:monteil@ensat.fr" target="_blank">Claude
+                    Monteil</a>, <a href="mailto:sarthou@ensat.fr"
+                    target="_blank">Jean-Pierre Sarthou</a>, <a
+                    href="mailto:marc.deconchat@toulouse.inra.fr"
+                    target="_blank">Marc Deconchat</a>, <a
+                    href="mailto:balent@toulouse.inra.fr"
+                    target="_blank">Gérard Balent</a><br>
+                  (<a href="http://www.inra.fr/toulouse_dynafor"
+                    target="_blank">UMR 1201 DYNAFOR</a>, <a
+                    href="http://www.inra.fr/" target="_blank">INRA, </a><a
+                    href="http://www.ensat.fr/" target="_blank">INP/ENSAT</a>
+                  Toulouse)</font></h1>
+              <h2>Objectifs</h2>
+              <p><img alt="insect"
+                  src="../../images/applica/hover-Winter1.jpg"
+                  height="200" width="280" align="right">L’objectif du
+                modèle est de comprendre comment une espèce d’insecte
+                auxiliaire des cultures (<em>Episyrphus balteatus</em>,
+                de Geer, 1776 - cf. photo ci-contre, extraite de la <u><a
+                    href="http://syrfid.ensat.fr/" target="_blank">BD
+                    biogéographique SYRFID</a></u> sur les espèces de
+                diptères syrphidés en France) utilise les ressources
+                d'un paysage pour passer la saison hivernale, délicate
+                pour l’espèce en termes de résistance au froid et de
+                disponibilité de nourriture. Une des applications du
+                modèle est de tester l'effet de diverses structures
+                paysagères sur la survie de la population à la fin de
+                l’hiver. Cette population survivante exerce en effet un
+                impact sur la prédation des larves de printemps sur les
+                pucerons des céréales.</p>
+              <h2>Contexte et problématique </h2>
+              <p>Une des difficultés en lutte biologique est de pouvoir
+                contrôler les ravageurs des cultures suffisamment tôt
+                pour éviter leur croissance exponentielle. Certains
+                espèces, comme <em>E. balteatus</em>, permettent de
+                réaliser ce contrôle précoce car cette espèce hiverne
+                sous forme de femelles fécondées qui sont à même,
+                lorsqu’elles survivent à l’hiver, de pondre tôt au
+                printemps dans les champs de céréales. En effet, alors
+                que l’adulte est floricole, la larve de cette espèce
+                consomme les pucerons de manière très vorace. Les
+                modalités de l'hivernation des femelles sont cependant
+                mal connues, notamment la détermination de l'importance
+                de la présence de fleurs dont les insectes consomment le
+                nectar et le pollen, et de celle d’abris pour se
+                protéger des températures basses.</p>
+              <h2>Description du modèle </h2>
+              <p>Dans le modèle HOVER-WINTER, dont le nom dérive des
+                termes anglais "Hoverfly" (syrphe) et "Overwinter"
+                (hiverner), chaque insecte est un agent autonome (classe
+                Insect) qui possède un ensemble de règles pour
+                prospecter dans le paysage, se nourrir en fleurs,
+                s’abriter dans les lisières forestières et mourir.
+                Chaque individu est localisé, et se trouve à chaque
+                instant dans une des deux activités suivantes&nbsp;: se
+                nourrir (classe Feed) ou se protéger (classe Protect) (<a
+                  href="../../images/applica/hover-Winter2.png"
+                  target="_blank">voir diagramme de classes</a>). <br>
+                A chaque pas de temps, chacune des deux activités peut
+                amener l’individu à se déplacer dans le paysage. Le
+                choix de l’activité se fait en fonction de la
+                température et selon un modèle mathématique de
+                prospection optimale (McNamara &amp; Houston, 1985),
+                adapté pour la première fois à l’échelle du paysage et
+                prenant en compte les expériences passées dans la
+                récolte de ressource (ratio «&nbsp;temps passé /
+                quantité récoltée dans chaque pixel&nbsp;», classe
+                Memory).<br>
+                Deux classes (Trajectory et TrajectoryElements)
+                permettent de sauvegarder la trajectoire de chaque
+                individu. Un couplage avec Excel permet une
+                visualisation interactive des trajectoires.<br>
+                <img src="../../images/applica/hover-Winter3.gif"
+                  height="280" width="579"><br>
+                <br>
+                La durée de simulation est de 90 jours (hiver) avec un
+                pas de temps de 2 heures (soit 1&nbsp;080 pas). La
+                résolution d’espace est de 20 mètres (une cellule = 400
+                m²). La taille totale du paysage est comprise selon les
+                scénarios entre 640 et 670 hectares (soit 16&nbsp;000 à
+                17&nbsp;000 cellules). 2&nbsp;000 insectes sont
+                introduits au départ de la simulation.<br>
+                Le modèle utilise en partie des données provenant
+                d’études réalisées dans les coteaux de Gascogne. Les
+                cartes d’entrées ont été obtenues à partir d'un S.I.G.
+                de l'UMR DYNAFOR documentant l’occupation du sol
+                (prairie, culture, lisière forestière sud, lisière
+                forestière nord et centre de forêt).</p>
+              <h2><img src="../../images/applica/hover-Winter4.png"
+                  height="371" width="468" align="right">Résultats</h2>
+              Les analyses réalisées avec le modèle Hover-Winter à
+              partir d’un paysage observé dans les coteaux de Gascogne
+              confirment nos observations sur le terrain, et
+              particulièrement, l’utilisation préférentielle des
+              lisières forestières orientées au sud par les insectes (la
+              figure ci-contre montre le taux de visite moyen par
+              individu des différents types d’occupation du sol durant
+              un hiver. La plupart des individus survivants ont visité
+              préférentiellement les lisières sud et les prairies).<br>
+              <br>
+              L’influence des facteurs climat et ressources dans la
+              dynamique hivernale a été hiérarchisée, avec notamment la
+              prépondérance des évènements climatiques et l’importance
+              de leur durée. <br>
+              <br>
+              Lintérêt de certains types d’aménagement potentiel du
+              paysage a été analysé par l’étude de scénarios (bandes
+              fleuries à plus ou moins grande distance des lisières),
+              montrant un effet à la fois sur le taux de survie (nette
+              augmentation) mais aussi sur le comportement des individus
+              (cf. figure ci-dessous). <br>
+              <p><img src="../../images/applica/hover-Winter5.png"
+                  height="410" width="585"><br>
+                <br>
+                <br>
+                A l’aide du module trajectoire, nous pouvons explorer
+                les possibilités d’analyses spatiales des trajectoires
+                individuelles des insectes pour les relier au modèle
+                mathématique de prospection optimale.</p>
+              <h2>Références </h2>
+              <ul>
+                <li>
+                  <p>Arrignon, F., Deconchat, M., Sarthou, J.P., Balent,
+                    G. &amp; Monteil, C., 2007. Modelling the
+                    overwintering strategy of a beneficial insect in a
+                    heterogeneous landscape using a multi-agent system.
+                    <em>Ecological Modelling</em> 205, 423-436. <a
+                      href="http://dx.doi.org/10.1016/j.ecolmodel.2007.03.006"
+                      target="_blank"><img src="/images/renvoi.gif"
+                        height="15" width="15" border="0"></a></p>
+                </li>
+                <li>
+                  <p>Arrignon, F., 2006. HOVER-WINTER : un modèle
+                    multi-agent pour simuler la dynamique hivernale dun
+                    insecte auxiliaire des cultures (<em>Episyrphus
+                      balteatus</em>, Diptera: Syrphidae) dans un
+                    paysage hétérogène. Thèse de doctorat de l’Institut
+                    National Polytechnique de Toulouse, 222p. <a
+                      href="/pdf/Arrignon_2006_PhD.pdf" target="_blank"><img
+                        src="/images/renvoi.gif" height="15" width="15"
+                        border="0"></a></p>
+                </li>
+                <li>
+                  <p>McNamara, J. M. and Houston, A. I., 1985. Optimal
+                    foraging and learning. <em>Journal of Theoretical
+                      Biology</em> 117, 231-249.</p>
+                </li>
+              </ul>
+              <p>Pour en savoir plus, contacter les auteurs.</p>
+              <!--#include virtual="/include/copyright_fr.inc" -->
+              <p></p>
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
+      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
+      position: fixed; z-index: 1000;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Cours</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+      </ul>
+    </div>
+  </body>
 </html>

@@ -1,11 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
-<title>MagmaS</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<!--#include virtual="/include/script.inc" -->
-<link --="" href="/css/cormas.css" rel="stylesheet"/>
-<style>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title>MagmaS</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
 <style>
 body, html {
     margin: 0;
@@ -77,110 +81,143 @@ tbody td.content-cell {
     padding-left: 80px;
 }
 </style>
-</head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
-<div class="header-container" style="         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td>
-<!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr> <!--#include virtual="sommair.inc" -->
-<td bgcolor="#FFFFFF" valign="top" width="*">
-<p>  
-      <h1>MagmaS</h1>
-<h2>Couplage dun système dynamique hybride et dun système 
-        multi-agent pour modéliser la gestion des effluents délevage 
-        à La Réunion</h2>
-<p>Manuel Martin, Eric Piquet, Christophe Le Page, François Guerrin 
-        (Cirad)</p>
-<p align="left"> </p>
-<p align="left"><b><i>MagmaS</i></b> est une plateforme de simulation qui 
-        vise à aider à la gestion collective des effluents délevage 
-        pour minimiser les impacts environnementaux des activités de production 
-        animale. Cette plateforme comprends deux modèles:</p>
-<ul>
-<li><b><i><img align="right" height="422" src="/images/applica/magmas1fr.gif" width="589"/></i></b>
-</li>
-<li>Un système dynamique hybride appelé <i><b>Magma</b></i> 
-          (Guerrin 2000a,b) modélise la dynamique interne de systèmes 
-          délevages porcins (production deffluents et épandage 
-          au niveau de lexploitation agricole)</li>
-</ul>
-<ul>
-<li>Techniquement, le couplage est réalisé en utilisant 
-          le protocole Windows DLL</li>
-</ul>
-<ul>
-<li>Un modèle multi-agent appelé <i><b>Mens</b></i> sert 
-          à représenter les négociations entre agriculteurs 
-          (qui sont des instances du modèle Magma) qui cherchent à 
-          échanger de la matière organique (MO). Ceux qui sont plutôt 
-          cultivateurs ont en effet des besoins de fertilisants.</li>
-</ul>
-<p>Lutilisation de Magma se justifie par le fait quun système dynamique 
-        hybride est bien adapté pour représenter le fonctionnement 
-        dune exploitation agricole. De la même manière, lutilisation 
-        de Mens se justifie par le fait que les systèmes multi-agent sont 
-        particulièrement bien adaptés pour représenter des 
-        entités en interaction. </p>
-<p>Mens se situe au niveau collectif, puisquil se concentre sur la représentation 
-        des échanges dinformation et de MO entre exploitations. A lopposé, 
-        Magma se situe au niveau individuel, puisquil intègre tous les 
-        aspects relatifs à la gestion de la MO au niveau dune exploitation: 
-        production par des systèmes délevage éventuellement 
-        variés, épandage sur les cultures, transformations de la 
-        MO (par exemple compostage), pollutions éventuelles lorsque les 
-        unités de stockage des effluents débordent, ou lors de sur-épandages. 
-      </p>
-<p>Le couplage de Magma (implementé sous le logiciel Vensim) et Mens 
-        (implementé sous Cormas) est réalisé au niveau de 
-        MagmaS en utilisant une fonctionnalité de simulation de Vensim 
-        appelé "gaming": pour chaque journée, Magma simule 
-        la dynamique interne des stocks de MO de chacune des exploitations, qui 
-        résulte dans des surplus ou des déficits (besoins des cultures 
-        en MO). Tous les 7 pas de temps de simulation (chaque semaine), Mens intervient 
-        alors pour simuler des transactions de MO entre exploitations. Ces transactions 
-        dépendent bien sûr des surplus et des déficits de 
-        chaque exploitations que Magma transmet à Mens. A lissue de ces 
-        transactions, le flux de données repart dans le sens opposé: 
-        les bilans en terme de MO sont ré-injectés dans le modèle 
-        Magma. </p>
-<p>Pour plus dinformation, <a href="mailto:manuel.martin@cirad.fr">contacter 
-        lauteur</a>.</p>
-<h2>References</h2>
-<p>Guerrin, F. (2000a). Simulation of actions to help animal wastes management 
-        atthe farm level. In: MCPL2000, IFAC / IFIP / IEEE 2nd Conf. on Management 
-        and Control of Production and Logistics. Grenoble (F), 5-8 July 2000, 
-        CD Rom : Session R6, P135. </p>
-<p>Guerrin,F. (2000b). Magma : a model to help animal manure management 
-        at the farm level. In: Agricontrol2000, Int. Conf. On Modelling and Control 
-        in Agriculture, Horticulture and Post-Harvest Processing. Wageningen (NL), 
-        10-12 July 2000, p.159-164. </p>
-<p>Piquet, E. et Le Page C. (2001). Couplage des logiciels VisualWorks etVensim 
-        sous Windows : DDE ou DLL ? Rapport Cirad TERA nÂ° 18/01, June 2001, 14 
-        pages. </p>
-<p> </p>
-<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
-<td bgcolor="#FFFFFF" valign="top" width="15">
-<div align="right" class="texte"></div>
-</td>
-</tr>
-</table>
-</div>
-<div id="sidebar" style="background-color: #FFCC99;  top: 0; left: 0; width: 180px; height: 100%; padding: 20px;  box-sizing: border-box;   position: fixed; z-index: 1000;">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+  </head>
+  <body border="0"
+onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style=" width: 100vw;
+      background-color: #FFA500; position: relative; margin-left: 0;
+      left: 0; right: 0; z-index: 1001;">
+      <div class="header-image-container">
+        <img alt="Description de l'image" src="../../images/bandeau.jpg">
+      </div>
+    </div>
+    <div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" height="23" width="23">
+      <!--#include virtual="haut.inc" -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp; </p>
+              <h1>MagmaS</h1>
+              <h2>Couplage d'un système dynamique hybride et d'un
+                système multi-agent pour modéliser la gestion des
+                effluents d'élevage à La Réunion</h2>
+              <p>Manuel Martin, Eric Piquet, Christophe Le Page,
+                François Guerrin (Cirad)</p>
+              <p align="left">&nbsp;</p>
+              <p align="left"><b><i>MagmaS</i></b> est une plateforme de
+                simulation qui vise à aider à la gestion collective des
+                effluents délevage pour minimiser les impacts
+                environnementaux des activités de production animale.
+                Cette plateforme comprends deux modèles:</p>
+              <ul>
+                <li><b><i><img src="/images/applica/magmas1fr.gif"
+                        height="422" width="589" align="right"></i></b>
+                </li>
+                <li>Un système dynamique hybride appelé <i><b>Magma</b></i>
+                  (Guerrin 2000a,b) modélise la dynamique interne de
+                  systèmes d'élevages porcins (production d'effluents et
+                  épandage au niveau de l'exploitation agricole)</li>
+              </ul>
+              <ul>
+                <li>Techniquement, le couplage est réalisé en utilisant
+                  le protocole Windows DLL</li>
+              </ul>
+              <ul>
+                <li>Un modèle multi-agent appelé <i><b>Mens</b></i>
+                  sert à représenter les négociations entre agriculteurs
+                  (qui sont des instances du modèle Magma) qui cherchent
+                  à échanger de la matière organique (MO). Ceux qui sont
+                  plutôt cultivateurs ont en effet des besoins de
+                  fertilisants.</li>
+              </ul>
+              <p>L'utilisation de Magma se justifie par le fait qu'un
+                système dynamique hybride est bien adapté pour
+                représenter le fonctionnement dune exploitation
+                agricole. De la même manière, l'utilisation de Mens se
+                justifie par le fait que les systèmes multi-agent sont
+                particulièrement bien adaptés pour représenter des
+                entités en interaction. </p>
+              <p>Mens se situe au niveau collectif, puisqu'il se
+                concentre sur la représentation des échanges
+                d'information et de MO entre exploitations. A l'opposé,
+                Magma se situe au niveau individuel, puisqu'il intègre
+                tous les aspects relatifs à la gestion de la MO au
+                niveau dune exploitation: production par des systèmes
+                d'élevage éventuellement variés, épandage sur les
+                cultures, transformations de la MO (par exemple
+                compostage), pollutions éventuelles lorsque les unités
+                de stockage des effluents débordent, ou lors de
+                sur-épandages. </p>
+              <p>Le couplage de Magma (implémenté sous le logiciel
+                Vensim) et Mens (implémenté sous Cormas) est réalisé au
+                niveau de MagmaS en utilisant une fonctionnalité de
+                simulation de Vensim appelé "gaming": pour chaque
+                journée, Magma simule la dynamique interne des stocks de
+                MO de chacune des exploitations, qui résulte dans des
+                surplus ou des déficits (besoins des cultures en MO).
+                Tous les 7 pas de temps de simulation (chaque semaine),
+                Mens intervient alors pour simuler des transactions de
+                MO entre exploitations. Ces transactions dépendent bien
+                sûr des surplus et des déficits de chaque exploitations
+                que Magma transmet à Mens. A lissue de ces transactions,
+                le flux de données repart dans le sens opposé: les
+                bilans en terme de MO sont ré-injectés dans le modèle
+                Magma. </p>
+              <p>Pour plus d'information, <a
+                  href="mailto:manuel.martin@cirad.fr">contacter
+                  l'auteur</a>.</p>
+              <h2>References</h2>
+              <p>Guerrin, F. (2000a). Simulation of actions to help
+                animal wastes management atthe farm level. In: MCPL2000,
+                IFAC / IFIP / IEEE 2nd Conf. on Management and Control
+                of Production and Logistics. Grenoble (F), 5-8 July
+                2000, CD Rom : Session R6, P135. </p>
+              <p>Guerrin,F. (2000b). Magma : a model to help animal
+                manure management at the farm level. In:
+                Agricontrol2000, Int. Conf. On Modelling and Control in
+                Agriculture, Horticulture and Post-Harvest Processing.
+                Wageningen (NL), 10-12 July 2000, p.159-164. </p>
+              <p>Piquet, E. et Le Page C. (2001). Couplage des logiciels
+                VisualWorks et Vensim sous Windows : DDE ou DLL ?
+                Rapport Cirad TERA nÂ° 18/01, June 2001, 14 pages. </p>
+              <p>&nbsp;</p>
+              <!--#include virtual="/include/copyright_fr.inc" -->
+              <p></p>
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
+      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
+      position: fixed; z-index: 1000;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Cours</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+      </ul>
+    </div>
+  </body>
 </html>

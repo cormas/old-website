@@ -1,14 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
 <html>
   <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <meta content="Cormas, Cirad, gestion des ressources naturelles,
       natural resource management, INRM, environnement, environment,
       simulation, modelisation, modelling, SMA, MAS, multi-agent,
       smalltalk, visualworks, logiciel, software" name="KeyWords">
-    <title>SimPolilla</title>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Griffeath</title>
     <!--#include virtual="/include/script.inc" -->
-    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <link href="/css/cormas.css" rel="stylesheet">
     <style>
 <style>
 body, html {
@@ -82,7 +82,7 @@ tbody td.content-cell {
 }
 </style>
   </head>
-  <body border="0"
+  <body
 onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
     topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
     bgcolor="#FFFFFF">
@@ -100,62 +100,70 @@ onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/ima
         <tbody>
           <tr>
             <!--#include virtual="sommair.inc" -->
-            <td valign="top" width="*" bgcolor="#FFFFFF">
-              <p>&nbsp; </p>
-              <h1>SimPolilla<br>
-                Modélisation de la dynamique spatiale d'un ravageur
-                invasif dans les Andes</h1>
-              <h1><font size="3">François Rebaudo, Véronica
-                  Crespo-Pérez, Olivier Dangles</font></h1>
-              <p><img src="../../images/applica/SimPolilla.jpg"
-                  height="269" width="400" align="right">SimPolilla est
-                un automate cellulaire permettant de simuler différents
-                scenarios d’invasion de la teigne de la pomme de terre <i>Tecia
-                  solanivora</i> dans la Sierra Andine d'Equateur.
-                Spécifiquement notre équipe cherche à comprendre les
-                effets des activités anthropiques sur la propagation de
-                ce ravageur (lieux de stockage des tubercules,
-                dispersion via le commerce de pomme de terre semence,
-                entre autres). Au-delà du modèle de la teigne de la
-                pomme de terre en Equateur, nous tentons d’inscrire
-                notre démarche dans le cadre plus large de la
-                modélisation des espèces invasives en incluant une
-                dimension sociale (modélisation des agro-écosystèmes).</p>
-              <h2>Le Modèle</h2>
-              <p>L'environnement est défini par un ensemble de couches
-                issues d'un Systèmes d'Information Géographique (usage
-                du sol pour la présence ou absence de cultures,
-                température, altitude, précipitations, villes et
-                villages, nombre d'habitants, lieux de stockage).<br>
-                La teigne évolue dans ce paysage en fonction des
-                contraintes locales liées à l'environnement mais aussi
-                en fonction des activités humaines. A titre d'exemple la
-                dispersion du ravageur intervient de manière diffuse par
-                le mouvement propre du ravageur mais aussi de manière
-                saltatoire par le mouvement des agriculteurs de village
-                à village.</p>
-              <p>Cet automate cellulaire a été validé par 3 ans de
-                données réalisées grâce à des pièges à phéromones. Il
-                est utilisé comme support pour des formations auprès des
-                partenaires locaux et des agriculteurs, et de support
-                pour le développement d'un modèle multi-agents étudiant
-                les dynamiques locales au sein d'une communauté
-                d'agriculteurs.</p>
-              <p>Pour plus d'informations sur cette application, <a
-                  href="mailto:francois.rebaudo@legs.cnrs-gif.fr">contacter
-                  l'auteur </a></p>
+            <td class="content-cell" height="600" valign="top" width="*"
+              bgcolor="#FFFFFF">
               <p>&nbsp;</p>
-              <!--#include virtual="/include/copyright_fr.inc" -->
-              <p></p>
-            </td>
-            <td valign="top" width="15" bgcolor="#FFFFFF">
-              <div class="texte" align="right"></div>
+              <h1>Automate cyclique de D. Griffeath</h1>
+              Il s’agit d’un automate cellulaire auto-reproducteur. Il
+              est constitué d'une grille régulière de « cellules »
+              contenant chacune un « état » choisi parmi un ensemble
+              fini (4 dans ce cas : jaune, orange clair, orange foncé,
+              rouge) :<br>
               <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <img style="width: 299px; height: 248px;" alt="cycle of
+                the CA" src="../../images/applica/Griffeath3.png"><img
+                alt="CA of Griffeath"
+                src="file:///Users/bommel/old-website/images/applica/Griffeath.png"
+                height="256" width="269" align="right"><br>
+              <br>
+              L'automate évolue au cours du temps :<br>
+              L'état dune cellule au temps <i>t+1</i> dépend de son
+              état au temps <i>t</i> et de l'état de ses voisines. A
+              chaque pas de temps, une règle (appelée Fonction de
+              transition) est appliquée simultanément a toutes les
+              cellules de la grille, produisant une nouvelle «
+              génération » de cellules dépendant entièrement de la
+              génération précédente. <br>
+              La fonction de transition est simple : une cellule passe
+              d'un état (<i>i</i>) au suivant (<i>i+1</i>) dans le cycle
+              d'états des que <i>i+1</i> est présent dans au moins 3
+              cellules voisines :<br>
+              <img style="width: 405px; height: 106px;" alt="Change
+                state" src="../../images/applica/Griffeath2.png"><br>
+              <br>
+              A partir d'un état initial aléatoire de la grille, nous
+              obtenons ce type de résultats complexes :<br>
+              <p><img title="Animated GIF"
+                  src="../../images/applica/GriffeathC.gif"> &nbsp;
+                &nbsp; </p>
+              <p>Etat de la grille au temps 2500 :</p>
+              <p><img title="Grid at step 2500" alt=""
+                  src="../../images/applica/GriffeathB2500.jpg"></p>
+              <p>&nbsp;</p>
+              <ul>
+                <li>Télécharger le modèle (<a
+                    href="/logiciel/Conway.zip">zipfile</a>, 7Ko) </li>
+                <li>Pour plus d'informations, <a
+                    href="mailto:bommel@cirad.fr">contacter l'auteur</a>.</li>
+              </ul>
+              <p><br>
+              </p>
+              <ul>
+              </ul>
+              <!--#include virtual="/include/copyright_en.inc" -->
+              <!--#include virtual="/include/copyright_fr.inc" --> </td>
+            <td class="content-cell" valign="top" width="15"
+              bgcolor="#FFFFFF"> <br>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <img src="../../images/coin_hg.gif" height="23" width="23"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -->
     <div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
       width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
       position: fixed; z-index: 1000;">
