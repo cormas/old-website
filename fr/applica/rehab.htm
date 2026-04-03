@@ -1,173 +1,155 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
 <html lang="fr">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-<meta content="Cormas, Cirad, gestion des ressources
-      naturelles, natural resource management, INRM, environnement,
-      environment, simulation, modelisation, modelling, SMA, MAS,
-      multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>ReHab</title>
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
-<style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    
-    
-    height: 80px;
-    
-    
-     /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-     /* En dessous du bandeau */
-    box-sizing: border-box;
-} position: fixed; z-index: 1000;
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0">
-<div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <div>
 <p>
 <!--#include virtual="haut.inc" --> </p>
 </div>
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tbody>
 <tr>
-<!--#include virtual="sommair.inc" --> <td bgcolor="#FFFFFF" class="content-cell" valign="top" width="*">
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
 <p> </p>
 <h1>ReHab</h1>
-<h2><img alt="Rehab.
-                Â©" src="../../images/applica/rehab.-c.jpg" title="Rehab. Â©"/></h2>
+<h2><img alt="Rehab. ©" src="../../images/applica/rehab.-c.jpg" title="Rehab. ©"/></h2>
 <h2>Re(source)Hab(itat), jeu de rôle assisté par ordinateur</h2>
-            ReHab est un jeu de rôle assisté par ordinateur qui vise a
+            ReHab est un jeu de rôle assisté par ordinateur qui vise à
             promouvoir l'importance de la communication, par le biais de
-            l'apprentissage par l'expérience, dans le contexte de la
-            gestion et de la conservation des ressources renouvelables.<br/>
+            l'apprentissage par l'expérience, dans le contexte de la gestion et
+            de la conservation des ressources renouvelables.<br/>
               <img alt="reHab boardGame" src="../../images/applica/rehab-a.jpg" style="width: 360px; height: 183px;" title="reHab boardGame"/><br/>
 <h3>Motivation pour sa création</h3>
-            Dans le domaine de la <b>gestion des ressources naturelles</b>,
-            on part souvent du principe que la communication contribue a
-            résoudre la "<b>tragédie des biens communs</b>" grâce au <b>partage
-              des connaissances</b> et a une meilleure <b>coordination</b>.
-            ReHab est un jeu de rôle, a la fois <b>coopératif et
-              compétitif</b>, qui explore le rôle de la production et de
-            la communication des connaissances pour la conservation et
-            la gestion des ressources naturelles par l'apprentissage
-            expérientiel.<br/>
+            Dans le domaine de la <b>gestion des ressources naturelles</b>, on
+            part souvent du principe que la communication contribue à résoudre
+            la "<b>tragédie des biens communs</b>" grâce au <b>partage des
+              connaissances</b> et à une meilleure <b>coordination</b>. ReHab
+            est un jeu de rôle, à la fois <b>coopératif et compétitif</b>, qui
+            explore le rôle de la production et de la communication des
+            connaissances pour la conservation et la gestion des ressources
+            naturelles par l'apprentissage expérientiel.<br/>
 <br/>
-            Dans ReHab, les joueurs endossent le rôle de <b>Récolteur</b>
-            ou de <b>Garde</b> d'un parc naturel.  Ils agissent
-            dans un paysage virtuel ou une ressource est distribuée en
-            unités discrètes de Biomasse. Le paysage est également un
-            lieu de nidification et de reproduction pour un <b>oiseau
-              migrateur protégé</b>.  La tache des Gardes est de
-            maximiser la reproduction des oiseaux en créant des zones
-            protégées, tandis que les Récolteurs doivent collecter la
-            biomasse, leur seule source de revenus. Les règles
-            concernant la régénération de la biomasse, sa répartition
-            entre les récoltants et la reproduction des oiseaux ne sont
-            pas divulguées aux joueurs. <br/>
+            Dans ReHab, les joueurs endossent le rôle de <b>Récolteur</b> ou de
+            <b>Garde</b> d'un parc naturel.  Ils agissent dans un paysage
+            virtuel où une ressource est distribuée en unités discrètes de
+            Biomasse. Le paysage est également un lieu de nidification et de
+            reproduction pour un <b>oiseau migrateur protégé</b>.  La
+            tâche des Gardes est de maximiser la reproduction des oiseaux en
+            créant des zones protégées, tandis que les Récolteurs doivent
+            collecter la biomasse, leur seule source de revenus. Les règles
+            concernant la régénération de la biomasse, sa répartition entre les
+            récoltants et la reproduction des oiseaux ne sont pas divulguées aux
+            joueurs. <br/>
 <br/>
             Une session de jeu typique comprend <b>deux scénarios</b>
-            successifs : un scénario sans communication entre les
-            joueurs, puis un scénario avec communication. Un débriefing
-            collectif final fait ressortir le niveau de compréhension
-            des règles cachées, les stratégies individuelles et
-            collectives et comment celles-ci ont influencé les résultats
-            du jeu.<br/>
+            successifs : un scénario sans communication entre les joueurs, puis
+            un scénario avec communication. Un débriefing collectif final fait
+            ressortir le niveau de compréhension des règles cachées, les
+            stratégies individuelles et collectives et comment celles-ci ont
+            influencé les résultats du jeu.<br/>
 <br/>
-            Dans la plupart des cas, la <b>communication</b> améliore
-            les résultats pour les deux rôles, Récolteurs et Gardes,
-            même si les joueurs construisent et articulent des décisions
-            rationnelles basées sur une compréhension limitée, voire
-            erronée, des règles. Cela suggère que, en l'absence de
-            mécanismes d'application, la <b>confiance</b> et la <b>communication</b>
-            l'emportent sur la connaissance et la compréhension lorsquil
-            sagit de gérer les ressources naturelles et de résoudre les
-            compromis entre conservation et développement.<br/>
-              <img alt="A
-              game session with children" src="../../images/applica/rehab-b2.jpg" style="width: 535px; height: 319px;" title="A game session with
-              children"/><br/>
+            Dans la plupart des cas, la <b>communication</b> améliore les
+            résultats pour les deux rôles, Récolteurs et Gardes, même si les
+            joueurs construisent et articulent des décisions rationnelles basées
+            sur une compréhension limitée, voire erronée, des règles. Cela
+            suggère que, en l'absence de mécanismes d'application, la <b>confiance</b>
+            et la <b>communication</b> l'emportent sur la connaissance et la
+            compréhension lorsqu'il s'agit de gérer les ressources naturelles et
+            de résoudre les compromis entre conservation et développement.<br/>
+              <img alt="A game session with children" src="../../images/applica/rehab-b2.jpg" style="width: 535px; height: 319px;" title="A game session with children"/><br/>
 <h3>Description et spécificité</h3>
-<p>Le plateau de jeu est composé de 20 cases, chacune avec
-              un niveau de biomasse compris entre 0 et 3. C'est cette
-              biomasse que les récolteurs doivent récolter pour
-              survivre.</p>
+<p>Le plateau de jeu est composé de 20 cases, chacune avec un niveau
+              de biomasse compris entre 0 et 3. C'est cette biomasse que les
+              récolteurs doivent récolter pour survivre.</p>
 <img alt="" src="../../images/applica/rehab.-d.png" style="width: 361px; height: 283px;" title="board game"/><br/>
-            Par ailleurs, ce territoire abrite une espèce d'oiseau
-            migrateur en voie de disparition. Les oiseaux s'installent
-            dans des sites de nidification a chaque saison. Les cases
-            appropriées pour la nidification doivent contenir
-            suffisamment de biomasse (niveau &gt; 1). La reproduction
-            est réussie (1 ou 2 poussins) a condition que les cases de
-            nidification (et leur voisinage) ne soient pas dérangées par
-            des récoltants.<br/>
-            La dynamique de la biomasse évolue en fonction des règles
-            suivantes :<br/>
+            Par ailleurs, ce territoire habrite une espèce d'oiseau migrateur en
+            voie de disparition. Les oiseaux s'installent dans des sites de
+            nidification à chaque saison. Les cases appropriées pour la
+            nidification doivent contenir suffisamment de biomasse (niveau &gt;
+            1). La reproduction est réussie (1 ou 2 poussins) à condition que
+            les cases de nidification (et leur voisinage) ne soient pas
+            dérangées par des récoltants.<br/>
+            La dynamique de la biomasse évolue en fonction des règles suivantes
+            :<br/>
 <img alt="State-Transition diag" src="../../images/applica/rehab-ST-fr.png" style="width: 889px; height: 407px;" title="State-Transition diag"/><br/>
 <br/>
 <br/>
@@ -177,48 +159,31 @@ tbody td.content-cell {
             Le matériel nécessaire pour organiser une session de jeu est
             disponible gratuitement :<br/>
 <ul>
-<li><b>Installez</b> le logiciel sur un ordinateur Windows
-                :</li>
+<li><b>Installez</b> le logiciel sur un ordinateur Windows :</li>
 <ul>
 <li>Télécharger et dézipper  <a href="../../logiciel/ReHab-exe.zip">ReHab-exe.zip</a> 
-
                   puis double-cliquer sur <b>ReHab.exe</b>, ou</li>
-<li>Si Cormas est déjà installé, télécharger le code <a href="../../logiciel/ReHab.zip" title="Smalltalk
-                    code">ReHab.zip</a>.</li>
+<li>Si Cormas est déjà installé, télécharger le code <a href="../../logiciel/ReHab.zip" title="Smalltalk code">ReHab.zip</a>.</li>
 </ul>
 <li>Brève introduction au jeu (briefing général): <a href="../../pdf/ReHab_presentation_en.pdf">ReHab_presentation_en.pdf</a></li>
 <li>Fiches d'information pour les joueurs: <a href="../../pdf/ReHab_info_en.pdf">ReHab_info_en.pdf</a></li>
 <li>Feuilles de décisions et de résultats des joueurs: <a href="../../pdf/ReHab_decisionSheets_en.pdf">ReHab_decisionSheets_en.pdf</a></li>
-<li>Les règles du modèle sous-jacent (a révéler a la fin
-                de la session...): <a href="../../pdf/ReHab_UML_en.pdf">ReHab_UML_en.pdf</a> 
-
+<li>Les règles du modèle sous-jacent (à révéler à la fin de la
+                session...): <a href="../../pdf/ReHab_UML_en.pdf">ReHab_UML_en.pdf</a> 
+                </li>
+<li>Pour le débriefing, pour comparer votre session (scénario avec
+                communication) à toutes les sessions précédentes (56 en octobre
+                2016) : <br/>
+<img alt="results" src="../../images/applica/ReHab-results.png" style="width: 469px; height: 238px;" title="results"/></li>
+<li>Pour plus d'informations, contactez l'<a href="mailto:christophe.le_page@cirad.fr">aut<span style="color: black;">eur</span></a>.
               </li>
-<li>Pour le débriefing, pour comparer votre session
-                (scénario avec communication) a toutes les sessions
-                précédentes (56 en octobre 2016) : <br/>
-<img alt="results" src="../../images/applica/ReHab-results.png" style="width: 469px;
-                  height: 238px;" title="results"/></li>
-<li>Pour plus d'informations, contactez l<a href="mailto:christophe.le_page@cirad.fr">'aut<span style="color: black;">eur</span></a>. </li>
 </ul>
 <p> </p>
 <!--#include virtual="/include/copyright_en.inc" --> </td>
-<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="15"> <br/>
+<td bgcolor="#FFFFFF" valign="top" width="15"> <br/>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="sidebar">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

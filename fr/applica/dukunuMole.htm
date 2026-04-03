@@ -1,221 +1,176 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
 <html>
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-<meta content="Cormas, Cirad, gestion des ressources naturelles,
-      natural resource management, INRM, environnement, environment,
-      simulation, modelisation, modelling, SMA, MAS, multi-agent,
-      smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>Dukunu</title>
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
-<style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    
-    
-    height: 80px;
-    
-    
-     /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFCC99;
-    padding: 20px;
-     /* En dessous du bandeau */
-    box-sizing: border-box;
-} position: fixed; z-index: 1000; position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFCC99;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0">
-<div class="header-container" style=" 
-        
-         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img height="23" src="../../images/coin_hg.gif" width="23"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tbody>
 <tr>
 <!--#include virtual="sommair.inc" -->
-<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="*">
+<td bgcolor="#FFFFFF" valign="top" width="*">
 <p> </p>
 <h1>Dukunú Molê</h1>
 <img alt="" src="../../images/applica/dukunuLogo.jpg" style="width: 186px; height: 111px;"/>
 <h1></h1>
-<h2>Un simulateur hybride en appui à un jeu sérieux pour
-                la planification participative du paysage a São Tomé</h2>
-<h4>Pierre Bommel, Christophe Le Page, Anne Dray, Claude
-                Garcia</h4>
-<p> Ce simulateur hybride peut être utilisé en tant que
-                support d'un jeu de rôles (JdR) appelé "Dukunú Molê".</p>
+<h2>Un simulateur hybride en appui à un jeu sérieux pour la
+              planification participative du paysage à São Tomé</h2>
+<h4>Pierre Bommel, Christophe Le Page, Anne Dray, Claude Garcia</h4>
+<p> Ce simulateur hybride peut être utilisé en tant que support d'un
+              jeu de rôles (JdR) appelé "Dukunú Molê".</p>
 <p><br/>
-                La conception du jeu a été initialement proposée par
-                l'ONG "BIRDLIFE", avec comme question de départ : </p>
-<p><i>Comment matérialiser un plan d'action qui concilie
-                  les besoins humains avec la protection des ressources
-                  naturelles dans la zone tampon de São Tomé ?</i></p>
+              La conception du jeu a été initialement proposée par l'ONG
+              "BIRDLIFE", avec comme question de départ : </p>
+<p><i>Comment matérialiser un plan d'action qui concilie les besoins
+                humains avec la protection des ressources naturelles dans la
+                zone tampon de São Tomé ?</i></p>
 <p style="text-align: center;"><img alt="Sério?" src="../../images/applica/DukunuSerio.jpg" title="Sério?"/></p>
-<p style="text-align: left;">Le jeu a été conçu et
-                développé avec des membres de Birdlife en association
-                avec la start-up <a href="https://leafic.ch">LEAF</a>,
-                l<a href="https://ecology.ethz.ch">ETH University</a> et
-                l'UMR <a href="https://umr-sens.fr/en/accueil">SENS</a>
-                du CIRAD.<br/>
+<p style="text-align: left;">Le jeu a été conçu et développé avec
+              des membres de Birdlife en association avec la start-up <a href="https://leafic.ch">LEAF</a>,
+              l'<a href="https://ecology.ethz.ch">ETH University</a> et l'UMR <a href="https://umr-sens.fr/en/accueil">SENS</a>
+              du CIRAD.<br/>
 <br/>
-                Le JdR est organisé autour d'un plateau de jeu qui
-                représente une île hypothétique (qui ressemble néanmoins
-                a São Tomé !).</p>
+              Le JdR est organisé autour d'un plateau de jeu qui représente une
+              île hypothétique (qui ressemble néanmoins à São Tomé !).</p>
 <p style="text-align: left;"> </p>
 <p> </p>
 <table border="1" style="width: 890px; height: 356px;">
 <tbody>
 <tr>
-<td align="center" class="content-cell">
-<address>The first version of the game with
-                        colleagues from Birdlife</address>
+<td align="center">
+<address>The first version of the game with colleagues from
+                      Birdlife</address>
 </td>
-<td align="center" class="content-cell">
-<address>A session of the game at the university
-                        in São Tomé</address>
+<td align="center">
+<address>A session of the game at the university in São Tomé</address>
 </td>
 </tr>
 <tr>
-<td class="content-cell"><img alt="First version of
-                        the game" src="../../images/applica/dukunu1.jpg" style="width: 408px; height: 320px;" title="First version"/></td>
-<td class="content-cell"><img alt="DukunuMolé at the
-                        university" src="../../images/applica/dukunu3.jpg" style="width: 430px; height: 321px;" title="DukunuMolé at the university"/></td>
+<td><img alt="First version of the game" src="../../images/applica/dukunu1.jpg" style="width: 408px; height: 320px;" title="First version"/></td>
+<td><img alt="DukunuMolé at the university" src="../../images/applica/dukunu3.jpg" style="width: 430px; height: 321px;" title="DukunuMolé at the university"/></td>
 </tr>
 </tbody>
 </table>
-                <br/>
+              <br/>
 <p> </p>
 <table border="1" style="width: 16cm;">
 <tbody>
 <tr>
-<td align="center" class="content-cell">
-<address>The numerical version of the game on
-                        Cormas (session at the Cultural Center of São
-                        Tomé, 25/01/2023)</address>
+<td align="center">
+<address>The numerical version of the game on Cormas
+                      (session at the Cultural Center of São Tomé, 25/01/2023)</address>
 <address> </address>
 </td>
-<td align="center" class="content-cell">
-<address>A session of the game during a ComMod
-                        workshop in Montpellier</address>
+<td align="center">
+<address>A session of the game during a ComMod workshop in
+                      Montpellier</address>
 <address> </address>
 </td>
 </tr>
 <tr>
-<td class="content-cell"><img alt="Animation of a
-                        session" src="../../images/applica/DukunuCentroCultural.gif" style="width: 426px; height: 426px;" title="Animation of a session"/><br/>
+<td><img alt="Animation of a session" src="../../images/applica/DukunuCentroCultural.gif" style="width: 426px; height: 426px;" title="Animation of a session"/><br/>
 </td>
-<td class="content-cell"><img alt="DukunuMolé at
-                        ComMod" src="../../images/applica/dukunu4.jpg" style="width: 451px; height: 337px;" title="DukunuMolé at ComMod"/></td>
+<td><img alt="DukunuMolé at ComMod" src="../../images/applica/dukunu4.jpg" style="width: 451px; height: 337px;" title="DukunuMolé at ComMod"/></td>
 </tr>
 </tbody>
 </table>
-               <br/>
-              Voir l'explication détaillée du jeu sur le site de <a href="http://www.commod.org">ComMod</a>. <br/>
-              Un <a href="https://docs.google.com/document/d/19tLY5eGpP62rpMujMD6dPV0sbLcJkiNy3zo4uOAeGAs/edit?usp=sharing">manuel
-
-                du jeu</a> est disponible en portugais. <br/>
+             <br/>
+            Voir l'explication détaillée du jeu sur le site de <a href="http://www.commod.org">ComMod</a>.
+            <br/>
+            Un <a href="https://docs.google.com/document/d/19tLY5eGpP62rpMujMD6dPV0sbLcJkiNy3zo4uOAeGAs/edit?usp=sharing">manuel
+              du jeu</a> est disponible en portugais. <br/>
 <p> </p>
 <ul>
-<li>Vous pouvez télécharger le <a href="../../logiciel/DukunuMole.zip">modele</a>
-                  (zip, 8 Mo, Cormas 2023) ou un <a href="../../logiciel/DukunuMoleEXE.zip">exécutable</a>
-                  (zip, 19 Mo). </li>
+<li>Vous pouvez télécharger le <a href="../../logiciel/DukunuMole.zip">modèle</a>
+                (zip, 8 Mo, Cormas 2023) ou un <a href="../../logiciel/DukunuMoleEXE.zip">exécutable</a>
+                (zip, 19 Mo). </li>
 <li>Pour en savoir plus, contactez <a href="mailto:bommel@cirad.fr">l'auteur</a>.</li>
 </ul>
 <p> </p>
 <p> </p>
 <p> </p>
 <!--#include virtual="/include/copyright_en.inc" --> </td>
-<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="15"> <br/>
+<td bgcolor="#FFFFFF" valign="top" width="15"> <br/>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
-      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
-        position: fixed; z-index: 1000;">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

@@ -1,249 +1,195 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
 <html lang="fr-fr">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-<meta content="Cormas, Cirad, gestion des ressources naturelles,
-      natural resource management, INRM, environnement, environment,
-      simulation, modelisation, modelling, SMA, MAS, multi-agent,
-      smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>Demo_Aggregates</title>
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
-<style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    
-    
-    height: 80px;
-    
-    
-     /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-     /* En dessous du bandeau */
-    box-sizing: border-box;
-} position: fixed; z-index: 1000;
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0">
-<div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <div>
 <p>
 <!--#include virtual="haut.inc" -->
 </p>
 </div>
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tbody>
 <tr>
 <!--#include virtual="sommair.inc" -->
-<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="*">
+<td bgcolor="#FFFFFF" valign="top" width="*">
 <p> </p>
 <h1>Demo_Aggregates</h1>
 <h2>Générer des agrégats spatiaux dans Cormas </h2>
-              Demo_Aggregates est un modèle didactique qui permet de
-              tester deux façons différentes de créer des agrégats
-              spatiaux avec Cormas. Ce modèle introduit les principes de
-              fonctionnement des entités spatiales agrégats de Cormas.
-              Dans l'arbre d'héritage des entités spatiales génériques
-              de Cormas, l'entité spatiale composée générique s'appelle
-              "<b>SpatialEntity_Set</b>". Elle est spécialisée en:<br/>
+            Demo_Aggregates est un modèle didactique qui permet de tester deux
+            façons différentes de créer des agrégats spatiaux avec Cormas. Ce
+            modèle introduit les principes de fonctionnement des entités
+            spatiales agrégats de Cormas. Dans l'arbre d'héritage des entités
+            spatiales génériques de Cormas, l'entité spatiale composée générique
+            s'appelle "<b>SpatialEntity_Set</b>". Elle est spécialisée en:<br/>
 <ul>
-<li><b>SpatialEntityAggregate</b> dont les composants
-                  doivent être contigus (les <i>Groves</i> du modèle),
-                  et</li>
-<li><b>SpatialEntityNotConnex</b> dont les composants
-                  peuvent ne pas être contigus (les <i>FragmentedForests</i>
-                  du modèle).</li>
+<li><b>SpatialEntityAggregate</b> dont les composants doivent être
+                contigus (les <i>Groves</i> du modèle), et</li>
+<li><b>SpatialEntityNotConnex</b> dont les composants peuvent ne
+                pas être contigus (les <i>FragmentedForests</i> du modèle).</li>
 </ul>
 <img alt="spatialEntitiesUML " src="../../images/spatialEntitiesUML.png"/><br/>
 <br/>
-              Les opérations d'agrégation-désagrégation reposent sur
-              l'association "est composée de" entre SpatialEntitySet et
-              SpatialEntity, qui se traduit en deux attributs : les
-              «components» (une collection d'entités spatiales de niveau
-              inférieur) et «theCSE» (l'appartenance éventuelle à des
-              entités spatiales de niveau supérieur). <br/>
-              Dans Demo_Aggregates, 3 entités sont définies : <br/>
-<ul>
-<li><b>Plot</b> (sous classe de SpatialEntityElement), </li>
-<li><b>Grove</b> (sous classe de SpatialEntityAggregate)
-                  et </li>
-<li><b>FragmentedForest</b> (sous classe de
-                  SpatialEntityNotConnex):</li>
-</ul>
+            Les opérations d'agrégation-désagrégation reposent sur l'association
+            "est composée de" entre SpatialEntitySet et SpatialEntity, qui se
+            traduit en deux attributs: les «components» (une collection
+            d'entités spatiales de niveau inférieur) et «theCSE» (l'appartenance
+            éventuelle à des entités spatiales de niveau supérieur). <br/>
+            Dans le modèle Demo_Aggregates, 3 entités sont définies: <b>Plot</b>
+            (sous classe de SpatialEntityElement), <b>Grove</b> (sous classe de
+            SpatialEntityAggregate) et <b>FragmentedForest</b> (sous classe de
+            SpatialEntityNotConnex):<br/>
 <img alt="classDiag" src="../../images/applica/aggregates2.png"/><br/>
-<font size="-1"><i>Diagramme de classes UML du modèle.
-                  L'association d'agrégation est redéfinie entre Grove
-                  et Plot (le symbole // représente cette redéfinition).</i></font><br/>
+            Diagramme de class UML du modèle. L'association d'agrégation est
+            redéfinie entre Grove et Plot (le symbole // représente cette
+            redéfinition).<br/>
 <br/>
 <h3>Premier scénario (initForests - StepForests)</h3>
-              les composants des Groves sont définis comme des ensembles
-              de plots contigus partageant une même condition (<i>tree</i>).
-              <br/>
-              L'initialisation charge une grille spatiale constituée de
-              50 * 50 cellules (instances de la classe <i>Plot</i>) à
-              partir d'un fichier (<i>3forests.env</i>). Chaque plot a
-              un attribut #tree (condition d'agrégation) ayant la valeur
-              boolean
-              <i> true</i> ou <i>false</i>. <br/>
-              L'instanciation effective de Groves
-              (SpatialEntityAggregate) se fait en sélectionnant les
-              Plots connectés étant #tree, plus une contrainte
-              supplémentaire sur un nombre minimum (fixé à 25) de plots
-              contigus vérifiant la condition d'agrégation.<br/>
-              Faire coexister dans le meme modèle plusieurs entités
-              spatiales définies à différents niveaux, offre une grande
-              flexibilité pour écrire la dynamique du modèle. Certains
-              processus sont plus faciles à décrire au niveau cellulaire
-              (<i>newState</i>), et pour d'autres, le niveau agrégé est
-              plus approprié (<i>expand</i> ou <i>swell</i>). <br/>
-<u><br/>
-                StepForest:</u> propose 2 dynamiques simultanées. Dans
-              cet exemple didactique et simple, chaque Plot a une
-              probabilité fixe (très faible) de changer son état. De
-              plus, au niveau des bosquets, un processus d'étalement à
-              partir des bords s'écrit comme suit : des cellules du bord
-              extérieur sont agrégées à la forêt (seul un nombre donné
-              de cellules sont sélectionnées, correspondant au centième
-              du nombre total de composantes de l'entité forestière).
-              Afin de garder une compacité aux entités forestières, la
-              priorité est donnée aux cellules qui sont entourées par le
-              plus grand nombre de cellules déjà agrégées.<br/>
-<br/>
+            les composants des Groves sont définis comme des ensembles de plots
+            contiguës partageant une même condition (tree). L'initialisation
+            charge une grille spatiale constituée de 50 * 50 cellules (instances
+            de la classe Plot) à partir d'un fichier (3forests.env). Chaque plot
+            a un attribut #tree (condition d'agrégation) ayant la valeur boolean
+            true ou false. L'instanciation effective de Groves
+            (SpatialEntityAggregate) se fait en sélectionnant les Plots
+            connectés étant #tree, plus une contrainte supplémentaire sur un
+            nombre minimum (fixé à 25) de plots contigus vérifiant la condition
+            d'agrégation.<br/>
+            Faire coexister dans le même modèle plusieurs entités spatiales
+            définies à différents niveaux offre une grande flexibilité pour
+            écrire la dynamique du modèle. Certains processus sont plus faciles
+            à décrire au niveau cellulaire (newState), et pour d'autres, le
+            niveau agrégé est plus approprié (expand ou swell). <br/>
+<u>StepForest:</u> propose 2 dynamiques simultannées. Dans cet
+            exemple didactique et simple, chaque Plot a une probabilité fixe
+            (très faible) de changer son état. De plus, au niveau des bosquets,
+            un processus d'étalement à partir des bords s'écrit comme suit: des
+            cellules du bord extérieur sont agrégées à la forêt (seul un nombre
+            donné de cellules sont sélectionnées, correspondant au centième du
+            nombre total de composantes de l'entité forestière). Afin de garder
+            une compacité aux entités forestières, la priorité est donnée aux
+            cellules qui sont entourées par le plus grand nombre de cellules
+            déjà agrégées.<br/>
 <img alt="gif1" src="../../images/applica/demo_Aggregates.gif"/><br/>
-                    <br/>
-<h3>Second scénario (setAggregatesFromRandomSeeds -
-                swellForests)</h3>
-              10 cellules germinales sont choisies aléatoirement dans la
-              grille spatiale de 50 * 50. 10 agrégats sont créés à
-              partir de ces graines (donc avec un seul composant
-              unique). Le processus de construction itératif des
-              agrégats repose sur l'intégration, parmi les cellules
-              appartenant au bord extérieur de chaque agrégat, de toutes
-              celles qui n'appartiennent pas encore à un autre agrégat (<i>swell</i>).<br/>
+                  <br/>
+<h3>Second scénario (setAggregatesFromRandomSeeds - swellForests)</h3>
+            10 cellules germinales sont choisies aléatoirement dans la grille
+            spatiale de 50 * 50. 10 agrégats sont créés à partir de ces graines
+            (donc avec un seul composant unique). Le processus de construction
+            itératif des agrégats repose sur l'intégration, parmi les cellules
+            appartenant au bord extérieur de chaque agrégat, de toutes celles
+            qui n'appartiennent pas encore à un autre agrégat (swell).<br/>
 <img alt="demo2" src="../../images/applica/demo_aggregates2.gif"/><br/>
 <p><br/>
 </p>
-<h3>Troisième scénario (init2AggregateLevels -
-                step2AggregateLevels)</h3>
-<p>A partir du même état initial (chargement du fichier <i>3forests.env</i>),
-                des aggrégats de bosquet (Grove) sont créés à partir des
-                cellules en foret. Puis des agrégats FragmentedForest
-                sont créés à partir des bosquets sur le critère de la
-                taille, cad qu'une instance de FragmentedForest contient
-                des bosquets de même taille. Dans cette configuration,
-                on obtient 7 FragmentedForests (1 of 128 groves of 1
-                plot,     1 of 49 groves of 2 plots,
-                    1 of 21 groves of 3
-                plots,    1 of 1 grove of 240 plots,
-                    1 of 1 grove of 80 plots,
-                    1 of 2 groves of 4
-                plots,    1 of 1 grove of 143 plots). </p>
+<h3>Troisième scénario (init2AggregateLevels - step2AggregateLevels)</h3>
+<p>A partir du même état initial (chargement du fichier
+              3forests.env), des aggrégats de bosquet (Grove) sont créés à
+              partir des cellules en forêt. Puis des agrégats FragmentedForest
+              sont créés à partir des bosquets sur le critère de la taille, cad
+              qu'une instance de FragmentedForest contient des bosquets de même
+              taille. Dans cette configuration, on obtient 7 FragmentedForests (1
+              of 128 groves of 1 plot,     1 of 49 groves of 2
+              plots,     1 of 21 groves of 3
+              plots,    1 of 1 grove of 240 plots,   
+               1 of 1 grove of 80 plots,     1 of 2 groves
+              of 4 plots,    1 of 1 grove of 143 plots). </p>
 <img alt="classDiag3" src="../../images/applica/aggregates3.png"/><br/>
-<br/>
-              Pour la dynamique (step2AggregateLevels: t), seuls
-              l'agrégat FragmentedForest composés des plus petits
-              bosquets est activé. Ses composants s'étirent alors depuis
-              leur bord extérieur (swell).<br/>
-<br/>
+            Pour la dynamique (step2AggregateLevels: t), seuls l'agrégat
+            FragmentedForest composés des plus petits bosquets est activé. Ses
+            composants s'étirent alors depuis leur bord extérieur (swell).<br/>
 <img alt="demo3" src="../../images/applica/demo_aggregates3.gif"/>
 <ul>
-<li>Vous pouvez télécharger le <a href="../../logiciel/Demo_Aggregates.zip" title="demo_Aggregates">modele</a> (zip, 32 ko,
-                  Cormas 2017).</li>
-<li>Pour en savoir plus, contactez <a href="mailto:bommel@cirad.fr">l'auteur</a>. </li>
+<li>Vous pouvez télécharger le <a href="../../logiciel/Demo_Aggregates.zip" title="demo_Aggregates">modèle</a>
+                (zip, 32 ko, Cormas 2017).</li>
+<li>Pour en savoir plus, contactez <a href="mailto:bommel@cirad.fr">l'auteur</a>.
+              </li>
 </ul>
 <p> </p>
 <p> </p>
 <p> </p>
 <!--#include virtual="/include/copyright_en.inc" --> </td>
-<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="15"> <br/>
+<td bgcolor="#FFFFFF" valign="top" width="15"> <br/>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="sidebar">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

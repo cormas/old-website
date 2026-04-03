@@ -1,111 +1,95 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
 <html>
 <head>
-<meta content="Cormas, Cirad, gestion des ressources naturelles,
-      natural resource management, INRM, environnement, environment,
-      simulation, modelisation, modelling, SMA, MAS, multi-agent,
-      smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>iLPF</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
 <style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    
-    
-    height: 80px;
-    
-    
-     /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFCC99;
-    padding: 20px;
-     /* En dessous du bandeau */
-    box-sizing: border-box;
-} position: fixed; z-index: 1000; position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFCC99;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
-<div class="header-container" style=" 
-        
-         width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001;">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img height="23" src="../../images/coin_hg.gif" width="23"/>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="/fr/applica/haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tbody>
-<tr>
-<!--#include virtual="/fr/applica/sommair.inc" -->
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr> <!--#include virtual="/fr/applica/sommair.inc" -->
 <td bgcolor="#FFFFFF" valign="top" width="*">
-<p>  </p>
-<h1>Modelo iLPF: integração Lavoura-Pecuária-Floresta </h1>
-<h2>Diferentes estratégias de utilização do solo com a
-                integração Lavoura - Pecuária - Floresta e as
-                consequenciais em termos de Serviços Ambientais na
-                Amazônia.</h2>
+<p>  
+      <h1>Modelo iLPF: integração Lavoura-Pecuária-Floresta 
+      </h1>
+<h2>Diferentes estratégias de utilização do solo com a integração Lavoura-Pecuária-Floresta 
+        e as conseqüências em termos de Serviços Ambientais na Amazonia.</h2>
 <table border="0" width="79%">
-<tbody>
 <tr>
 <td>
 <ul>
@@ -118,27 +102,23 @@ tbody td.content-cell {
 <td> </td>
 <td><b><img align="top" height="320" src="transamazon/amazonie.jpg" width="426"/></b></td>
 </tr>
-</tbody>
 </table>
 <hr/>
-<p><font face="Courier New, Courier, mono"><b><font color="#FF0000">Página em construção</font></b></font></p>
+<p><font face="Courier New, Courier, mono"><b><font color="#FF0000">Página 
+        em construção</font></b></font></p>
 <hr/>
 <h3>Objetivo do Modelo </h3>
-<p>O modelo iLPF tem como objetivo a avaliação de cenários
-                ligados a integração Lavoura-Pecuária-Floresta na
-                Amazônia. Os diversos cenários permitirão comparar
-                diferentes estratégias de utilização do solo e as
-                conseqÃ¼encias em termos de Serviços Ambientais. Os
-                indicadores de comparação devem permitir avaliar: </p>
+<p>O modelo iLPF tem como objetivo a avaliação de cenários ligados à integração 
+        Lavoura-Pecuária-Floresta na Amazonia. Os diversos cenários permitirão 
+        comparar diferentes estratégias de utilização do solo e as conseqüências 
+        em termos de Serviços Ambientais. Os indicadores de comparação devem permitir 
+        avaliar: </p>
 <ul>
-<li>Diminuir impactos ambientais das atividades
-                  agrí­colas; </li>
+<li>Diminuir impactos ambientais das atividades agrícolas; </li>
 <li>Preservar reservas florestais e matas ciliares; </li>
-<li>Recuperar áreas degradadas, criando condições
-                  propicias para a produção e diminuindo a necessidade
-                  de desmatamentos de novas áreas; </li>
-<li>Gerar empregos, renda e melhores condições ao
-                  produtor rural. </li>
+<li>Recuperar áreas degradadas, criando condições propícias para a produção 
+          e diminuindo a necessidade de desmatamentos de novas áreas; </li>
+<li>Gerar empregos, renda e melhores condições ao produtor rural. </li>
 </ul>
 <h3>Quais cenários? </h3>
 <p>Definimos 4 cenários: </p>
@@ -148,159 +128,127 @@ tbody td.content-cell {
 <li>Maximizar a prestação de serviços ambientais</li>
 <li>Maximizar a intensificação da produção. </li>
 </ol>
-<p>Estes cenários são comparados aplicando-os em 4
-                estratégias de uso do solo correspondente a quatro tipos
-                de atores. Cada ator-tipo prefere um padrão de gestão do
-                seu estabelecimento de forma seguinte: </p>
+<p>Estes cenários são comparados aplicando-os em 4 estratégias de uso do 
+        solo correspondente a quatro tipos de atores. Cada atore-tipo prefere 
+        um padrão de gestão do seu estabelecimento de forma seguinte: </p>
 <ol>
 <li>Priorizar a pecuária </li>
 <li>Priorizar as culturas perenes </li>
 <li>Priorizar a agricultura </li>
 <li>Priorizar a diversificação </li>
 </ol>
-<p>Um cenário é concebido como um conjunto de módulos
-                inseridos nas atividades básicas e assim vão alterar as
-                práticas. Estes módulos são: </p>
+<p>Um cenário é concebido como um conjunto de módulos inseridos nas atividades 
+        básicas e assim vão alterar as práticas. Estes módulos são: </p>
 <ol>
-<li>A agricultura de conservação (plantio direto) <br/>
-</li>
-<li>Intensificação da pecuária (a. pasto - b. pasto e
-                  rebanho) </li>
+<li>A agricultura de conservação (plantio direto) I</li>
+<li>ntensificação da pecuária (a. pasto - b. pasto e rebanho) </li>
 <li>Manejo florestal sustentável </li>
-<li>Desmatamento evitado (apesar de não desmatar mesmo
-                  abaixo do permitido) </li>
+<li>Desmatamento evitado (apesar de não desmatar mesmo abaixo do permitido) 
+        </li>
 <li>Sistema agro-florestal </li>
 <li>Descanso em pousio (Regeneração) </li>
 <li>Parar o uso do fogo para limpeza do pasto. </li>
 <li>Recuperação acelerada do passivo ambiental </li>
-<li>Silvo pastoril</li>
+<li>Silvopastoril </li>
 </ol>
-<p>Os cenários 0 correspondem aos cenários de "controlo".
-                Não há restrição legal, nem remuneração por Serviço
-                Ambiental. </p>
+<p>Os cenários 0 correspondem aos cenários de "controlo". Não há restrição 
+        legal, nem remuneração por Serviço Ambiental. </p>
 <h5>Os cenários 1: "Respeitar a lei". Módulos 6 e 7 </h5>
-<p>Cálculo do Passivo ambiental e criação de um plano de
-                recuperação (30 anos para recuperar o passivo) com base
-                no módulo 6 (descanso), se acima do limite da reserva
-                legal e das APPs. Se abaixo do limiar, o agente não
-                exceda os 50% do desmatamento, sem derrubar nas APPs,
-                claro. Implementação do módulo 7 (parar o uso do fogo no
-                pasto), mas ele pode queimar e derrubar fora da reserva
-                legal. </p>
-<h5>Os cenários 2: "Maximizar a prestação de serviços
-                ambientais." Módulos 2, 3, 4, 5, 7 e 8</h5>
+<p>Cálculo do Passivo ambiental e criação de um plano de recuperação (30 
+        anos para recuperar o passivo) com base no módulo 6 (descanso), se acima 
+        do limite da reserva legal e das APPs. Se abaixo do limiar, o agente não 
+        exceda os 50% do desmatamento, sem derrubar nas APPs, claro. Implementação 
+        do módulo 7 (parar o uso do fogo no pasto), mas ele pode queimar e derrubar 
+        fora da reserva legal. </p>
+<h5>Os cenários 2: "Maximizar a prestação de serviços ambientais." Módulos 
+        2, 3, 4, 5, 7 e 8</h5>
 <p>Com base no módulo 5 (silvicultura). Cada ano, </p>
 <ul>
-<li>Implantar e proteger as árvores em AAR / 2 (Área
-                  Anual a Reflorestar) das APPs desmatadas e ARR / 2
-                  pixels não-florestais. </li>
-<li>Desenvolver a silvicultura (Módulo 5) além dos 50%,
-                  com árvores em pastagem </li>
-<li>Obter o passivo ambiental em caráter prioritário
-                  (módulo 8) </li>
+<li>Implantar e proteger as árvores em AAR / 2 (Area Anual a Reflorestar) 
+          das APPs desmatadas e ARR / 2 pixels não-florestais. </li>
+<li>Desenvolver a silvicultura (Módulo 5) além dos 50%, com árvores em 
+          pastagem </li>
+<li>Obter o passivo ambiental em carácter prioritário (módulo 8) </li>
 <li>Manejo Florestal Sustentável (Módulo 3) na RL </li>
 <li>Para o desmatamento evitado (Módulo 4) </li>
 <li>Intensificação do manejo das pastagens (módulo 2a) </li>
-<li>Implementação do Módulo 7 (parar o uso do fogo no
-                  pasto). </li>
+<li>Implementação do Módulo 7 (parar o uso do fogo no pasto). </li>
 </ul>
-<p>Proibido de derrubar e queimar, mesmo se passivo
-                ambiental é positivo. Receber uma compensação por
-                serviços ambientais. </p>
-<h5>Os cenários 3: "Maximizar a intensificação da
-                produção". Módulos 1, 2, 5 e 7 </h5>
+<p>Proibido de derrubar e queimar, mesmo se passivo ambiental é positivo. 
+        Receber uma compensação por serviços ambientais. </p>
+<h5>Os cenários 3: "Maximizar a intensificação da produção". Módulos 1, 
+        2, 5 e 7 </h5>
 <p>Intensificar a prioridade ficando dentro da lei. </p>
 <p>Introdução de novas práticas: </p>
 <ul>
-<li>Se a estratégia pecuarista, a intensificação da
-                  produção pecuária (criação de parcelas menores e
-                  melhor mantida, silvo-pastoril, recuperação de
-                  pastagens degradadas pela agricultura de conservação
-                  (plantio direto) em dois anos). </li>
-<li>Se a estratégia é Diversificada: - Agricultura =
-                  Agricultura de conservação unicamente (4 anos) -
-                  Pecuária (idem estratégia pecuarista) - Nenhuma
-                  mudança para as culturas perenes. </li>
+<li>Se a estratégia pecuarista, a intensificação da produção pecuária 
+          (criação de parcelas menores e melhor mantida, silvopastoril, recuperação 
+          de pastagens degradadas pela agricultura de conservação (plantio direto) 
+          em dois anos). </li>
+<li>Se a estratégia é Diversificada: - Agricultura = Agricultura de conservação 
+          unicamente (4 anos) - Pecuária (idem estratégia pecuarista) - Nenhuma 
+          mudança para as culturas perenes. </li>
 </ul>
-<p>Além disso, sendo que a estrutura familiar tem um papel
-                importante na viabilidade econômica, as simulações são
-                repetidas a partir de inicializações com uma família
-                pequena e com uma família maior. </p>
-<p>Finalmente, a estrutura da vegetação do estabelecimento
-                no inicio também influencia os resultados. E por isso
-                que para uma mesma família, uma mesma estratégia e um
-                cenário determinado, as simulações são aplicadas a um
-                estabelecimento inicialmente em floresta e a um
-                estabelecimento parcialmente desmatado. </p>
-<p>Para todas estas razões, o modelo é analisado através
-                do cruzamento de todos os fatores, tais como a figura
-                seguinte resume: </p>
+<p>Além disso, sendo que a estrutura familiar tem um papel importante na 
+        viabilidade económica, as simulações são repetidas à partir de inicializações 
+        com uma família pequena e com uma família maior. </p>
+<p>Finalmente, a estrutura da vegetação do estabelecimento no início também 
+        influencia os resultados. É por isso que para uma mesma família, uma mesma 
+        estratégia e um cenário determinado, as simulações são aplicadas a um 
+        estabelecimento inicialmente em floresta e a um estabelecimento parcialmente 
+        desmatado. </p>
+<p>Para todas estas razões, o modelo é analisado através do cruzamento de 
+        todos os factores, tais como a figura seguinte resume: </p>
 <p><img height="417" src="iLPF/combinacao.jpg" width="664"/></p>
 <p><font size="2"><i>Processo de analise do modelo</i></font></p>
 <h3>Descrição do modelo</h3>
 <p>O SMA ilPF é constituído por dois módulos:. </p>
-<p> - O <i><b>módulo fundiário</b></i> representa a
-                organização espacial. Situado ao longo de uma estrada
-                vicinal, o lote de colonização de 100 ha é dividido em
-                parcelas de 400 m2. A cada parcela atribui-se um tipo de
-                solo, uma declividade e uma cobertura vegetal: floresta,
-                capoeira ou cultura de subsistência, perene ou
-                forrageira. </p>
-<p>O rebanho é distribui­do em pastos com uma carga media
-                de uma cabeça/há, na versão básica sem intensificação.
-                Cada cobertura possui atributos técnico-econômicos, sua
-                própria dinâmica, suas exigências em termos de
-                mão-de-obra e de insumos e uma produção. Cada estação,
-                ele gera uma produção, que é imediatamente convertida em
-                dinheiro no momento da colheita. Mas sem manutenção, sua
-                produtividade diminui e ele acaba desaparecendo. Esse
-                módulo especializado calcula a produção de cada
-                cobertura e faz com que evoluam naturalmente: sem
-                produtor, uma paisagem evolui progressivamente em
-                direção a floresta. O diagrama de estado transição
-                (ilustração 3) mostra todas diferentes coberturas que
-                existem no modelo e as maneiras de trocar de uma
-                cobertura para outra, a traves das transicões. As
-                transições vermelhas correspondem as atividades humanas
-                (derruba, plantio,...). </p>
+<p> - O <i><b>módulo fundiário</b></i> representa a organização espacial. 
+        Situado ao longo de uma estrada vicinal, o lote de colonização de 100 
+        ha é dividido em parcelas de 400 m2. A cada parcela atribui-se um tipo 
+        de solo, uma declividade e uma cobertura vegetal: floresta, capoeira ou 
+        cultura de subsistência, perene ou forrageira. </p>
+<p>O rebanho é distribuído em pastos com uma carga media de uma cabeça/há, 
+        na versão básica sem intensificação. Cada cobertura possui atributos técnico-econômicos, 
+        sua própria dinâmica, suas exigências em termos de mão-de-obra e de insumos 
+        e uma produção. Cada estação, ele gera uma produção, que é imediatamente 
+        convertida em dinheiro no momento da colheita. Mas sem manutenção, sua 
+        produtividade diminui e ele acaba desaparecendo. Esse módulo espacializado 
+        calcula a produção de cada cobertura e faz com que evoluam naturalmente: 
+        sem produtor, uma paisagem evolui progressivamente em direção à floresta. 
+        O diagrama de estado-transição (ilustração 3) mostra todas diferentes 
+        coberturas que existem no modelo e as maneiras de trocar de uma cobertura 
+        para outra, a traves das transições. As transições vermelhas correspondem 
+        às atividades humanas (deruba, plantio,...). </p>
 <p><img height="801" src="iLPF/etatTransition.jpg" width="912"/></p>
-<p><i><font size="2">Diagrama de Estado Transição da
-                    cobertura vegetal</font></i></p>
-<p>O segundo <i><b>módulo</b></i> representa a <i><b>família</b></i>.
-                Um agente (uma família de n membros) dispõe de dois
-                recursos: sua mão de obra ativa, que ele utiliza para
-                seus trabalhos ou que ele vende afora, e seu dinheiro,
-                que ele recupera no momento das colheitas ou da venda de
-                sua mão-de-obra. Ele gasta esse dinheiro para o consumo
-                da família, os custos ligados aos trabalhos, a
-                contratação ocasional de forca de trabalho e a compra de
-                vacas. Sua mão-de-obra equivale a uma quantidade de
-                jornadas de trabalho disponível que diminui com as
-                tarefas realizadas. Essa quantidade é atualizada no
-                inicio de cada estação (Ilustração 5).</p>
+<p><i><font size="2">Diagrama de Estado-Transição da cobertura vegetal</font></i></p>
+<p>O segundo <i><b>módulo</b></i> representa a <i><b>família</b></i>. Um 
+        agente (uma família de n membros) dispõe de dois recursos: sua mão-de-obra 
+        ativa, que ele utiliza para seus trabalhos ou que ele vende afora, e seu 
+        dinheiro, que ele recupera no momento das colheitas ou da venda de sua 
+        mão-de-obra. Ele gasta esse dinheiro para o consumo da família, os custos 
+        ligados aos trabalhos, a contratação ocasional de força de trabalho e 
+        a compra de vacas. Sua mão-de-obra equivale a uma quantidade de jornadas 
+        de trabalho disponível que diminui com as tarefas realizadas. Essa quantidade 
+        é atualizada no início de cada estação (Ilustração 5).</p>
 <p><img height="420" src="iLPF/produtor.jpg" width="490"/></p>
-<p><font size="1"><i><font size="2">diagrama sistêmico de
-                      um produtor</font></i></font></p>
+<p><font size="1"><i><font size="2">diagrama sistêmico de um produtor</font></i></font></p>
 <h3>Alguns resultados </h3>
-<p>O modelo foi implantado na plataforma Cormas, mas todos
-                os cenários ainda não foram finalizados. Hoje os
-                cenários 0 "Business as usual" e 1 "Respeitar a lei" são
-                implementados e estamos elaborando os cenários 2 e 3.
-                Também temos que analisar os primeiros resultados para
-                continuar verificar o bom funcionamento do SMA. Um
-                código de cor foi associado para cada tipo de cobertura
-                (Ilustração 9). Os resultados seguintes são obtidos a
-                partir de simulações utilizando uma propriedade de 100
-                ha já parcialmente desmatada e com uma família de 5
-                membros cujo 3 ativos. O cash inicial é de 1000 R$ por
-                pessoa. </p>
+<p>O modelo foi implantado na plataforma Cormas, mas todos os cenários ainda 
+        não foram finalizados. Hoje os cenários 0 "Business as usual" e 1 "Respeitar 
+        a lei" são implementados e estamos elaborando os cenários 2 e 3. Também 
+        temos que analisar os primeiros resultados para continuar verificar o 
+        bom funcionamento do SMA. Um código de cor foi associado para cada tipo 
+        de cobertura (Ilustração 9). Os resultados seguintes são obtidos a partir 
+        de simulações utilizando uma propriedade de 100 ha já parcialmente desmatada 
+        e com uma família de 5 membros cujo 3 activos. O cash inicial é de 1000 
+        R$ por pessoa. </p>
 <p><img height="400" src="iLPF/legende.jpg" width="547"/></p>
 <h5>Resultados cenário 0</h5>
 <p>Impactos sobre o desmatamento:</p>
 <p><img height="294" src="iLPF/florestaCen0.jpg" width="561"/></p>
 <p>Exemplo de simulações (pecuarista e diversificado):</p>
 <table border="0" width="32%">
-<tbody>
 <tr>
 <td width="22%">
 <div align="center">Pecuarista</div>
@@ -315,9 +263,8 @@ tbody td.content-cell {
 <div align="center"><img height="615" src="iLPF/divers-cen-0_complet.gif" width="130"/></div>
 </td>
 </tr>
-</tbody>
 </table>
-<p>Dinâmicas das rendas:</p>
+<p>Dinámicas das rendas:</p>
 <p><img height="352" src="iLPF/renda-cen0.jpg" width="620"/></p>
 <h5>Resultados cenário 1</h5>
 <h5></h5>
@@ -325,7 +272,6 @@ tbody td.content-cell {
 <p><img height="294" src="iLPF/florestaCen1.jpg" width="561"/></p>
 <p>Exemplo de simulações (pecuarista e diversificado):</p>
 <table border="0" width="32%">
-<tbody>
 <tr>
 <td width="22%">
 <div align="center">Pecuarista</div>
@@ -340,52 +286,23 @@ tbody td.content-cell {
 <div align="center"><img height="615" src="iLPF/divers-cen-1_complet.gif" width="130"/></div>
 </td>
 </tr>
-</tbody>
 </table>
-<p>Dinâmicas das rendas:</p>
+<p>Dinámicas das rendas:</p>
 <p><img height="350" src="iLPF/renda-cen1.jpg" width="619"/></p>
-<p>Assim o respeito estrito da lei pode permitir a
-                conservação da floresta e a recuperação do passivo
-                ambiental, mas o custo social é uma perda extrema de
-                renda familiar. </p>
-<p>Para mais informação, <a href="mailto:bommel@cirad.fr">contactar
-                  os autores</a>. </p>
+<p>Assim o respeito estrito da lei pode permitir a conservação da floresta 
+        e a recuperação do passivo ambiental, mas o custo social é uma perda extrema 
+        de renda familiar. </p>
+<p>Para mais informação, <a href="mailto:bommel@cirad.fr">contactar 
+        os autores</a>. </p>
 <h2> </h2>
-<!--#include virtual="/include/copyright_fr.inc" -->
-<p></p>
-</td>
+<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
 <td bgcolor="#FFFFFF" valign="top" width="15">
 <div align="right" class="texte"> </div>
-<br/>
 </td>
 </tr>
-</tbody>
 </table>
 <map name="Diagramme de package">
 <area coords="275,45,461,258" shape="rect"/>
 </map>
-</div>
-<div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
-      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
-        position: fixed; z-index: 1000;">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>
