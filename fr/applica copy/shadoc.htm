@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title> Organisation et coordination sur des périmètres</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style=" width: 100vw;
+      background-color: #FFA500; position: relative; margin-left: 0;
+      left: 0; right: 0; z-index: 1001;">
+      <div class="header-image-container">
+        <img alt="Description de l'image" src="../../images/bandeau.jpg">
+      </div>
+    </div>
+    <div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" height="23" width="23">
+      <!--#include virtual="haut.inc" -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp; </p>
+              <h1>Shadoc </h1>
+              <h2>Organisation et coordination sur des périmètres
+                irrigués</h2>
+              <p>Olivier Barreteau, Cemagref.</p>
+              <img alt="Jeu de rôle avec Shadoc"
+                src="/images/applica/shadoc1.jpg" height="174"
+                vspace="10" width="255" hspace="10" align="right">
+              <p>Ce système multi-agent a d'abord été construit dans une
+                perspective de recherche. Il s'agissait d'explorer les
+                liens entre les modes de coordination entre paysans dans
+                un système irrigué de la moyenne vallée du Fleuve
+                Sénégal et la viabilité du système. Le modèle constitue
+                ici un système irrigué virtuel à vocation de support
+                d'expérimentation afin d'éviter la pratique du "
+                learning by doing ".</p>
+              <p>Il repose sur la représentation d'un archétype de
+                système irrigué de la moyenne vallée du Sénégal ainsi
+                que sur la représentation d'un ensemble de paysans
+                structuré en plusieurs groupements, en charges
+                d'activités spécifiques tels que l'allocation de l'eau,
+                l'accès au crédit ou la gestion du réseau principal et
+                de la station de pompage. Les paysans sont décrits en
+                particulier par un lien vers une parcelle et un objectif
+                de mise en valeur de cette parcelle (voir figure 1). Les
+                règles mises en œuvre par les agents concernent
+                successivement au cours d'une campagne : l'accès et la
+                répartition du crédit, puis de l'eau et l'évaluation du
+                déroulement de la campagne et des règles qui y sont
+                menées. La simulation permet d'enchaîner plusieurs
+                campagnes.</p>
+              <p align="center"><img src="/images/applica/shadoc3.gif"
+                  height="202" width="259"></p>
+              <p align="center">Figure 1. L'interface graphique du
+                modèle</p>
+              <p>Les simulations permettent d'observer la longévité du
+                système irrigué ainsi constitué sans intervention
+                extérieure en tenant compte du taux d'utilisation. Les
+                scénarios simulés comportent des paramètres issus de
+                trois groupes : les règles collectives, les populations
+                de comportements individuels et des paramètres de
+                structure et d'environnement tel que la taille du
+                périmètre ou les pertes par infiltration.</p>
+              <p>Après une phase de tests de sensibilité, le modèle
+                ainsi obtenu est apparu pertinent pour un usage en
+                recherche, capable de discriminer des scénarios en
+                fonction de leur viabilité vue comme la durée de mise en
+                œuvre du système irrigué sans intervention extérieure.</p>
+              <p>Cependant il n'est pas aisé au premier abord pour des
+                acteurs extérieurs au processus de création du modèle
+                d'entrer dans sa logique. Que ceux-ci soient familiers
+                avec l'outil informatique ou avec le terrain représenté,
+                le modèle conserve un aspect boîte noire qui rend
+                nécessaire son explicitation. Pour ouvrir cette
+                dernière, nous nous sommes orientés vers la réalisation
+                d'un jeu de rôles. De nombreux éléments caractéristiques
+                de jeux et de SMA peuvent en effet être associés :
+                agent/joueur, règle/rôle… Ce recours au jeu revient en
+                fait à faire vivre le déroulement du modèle aux
+                personnes à qui on veut le présenter.</p>
+              <p>La traduction a impliqué plusieurs simplifications pour
+                pouvoir pratiquer le jeu. Celle-ci s'est faite en
+                plusieurs étapes avec un groupe de joueurs test
+                connaissant bien le terrain. Le jeu se joue avec 10 à 15
+                joueurs et est constitué de cartes trilingues (français,
+                pulaar, wolof) décrivant les comportements possibles
+                pour chaque joueur, de deux lieux séparés représentant
+                l'un village et l'autre le périmètre et d'un ensemble de
+                cartes " occasion " reproduisant les aspects aléatoires
+                du modèle.</p>
+              <p>Ce jeu de rôles a tout d'abord été mené dans les
+                villages même où les enquêtes ayant permis la
+                constitution du modèle ont été faites.</p>
+              <p align="center"><img src="/images/applica/shadoc2.jpg"
+                  height="157" width="352"></p>
+              <p align="center">Photo 1. Au cours du jeu de rôles</p>
+              <p>Dans un deuxième temps, un an plus tard, le jeu fut
+                présenté lors d'un atelier organisé au Sénégal prés de
+                Saint Louis, dans un contexte un peu différent (voir
+                photo 1). Cet atelier durait trois jours: le premier
+                jour, les joueurs découvraient le jeu de rôles, ce qui
+                leur permettait de faire une ou deux campagnes. Le
+                deuxième jour était consacrée à un long jeu sur cinq ou
+                six campagnes, permettant d'observer les effets à long
+                terme des décisions. Au cours du troisième jour des
+                simulations sur ordinateur ont été proposées, en
+                utilisant une nouvelle version du modèle, simplifiée,
+                correspondant exactement à la version proposée dans le
+                jeu.</p>
+              <p>Dans les deux cas, il a été bien accepté et a suscité
+                de nombreuses discussions sur les systèmes réels,
+                validant ainsi un usage en outil d'animation. Dans
+                plusieurs cas, on nous a demandé de laisser le jeu sur
+                place pour des séances supplémentaires animées
+                localement. Il a fini par être baptisé en pulaar :
+                Njobaari Ilnoowo, ce qui signifie " le nécessaire de
+                voyage de l'irrigant ".</p>
+              <p>Pour en savoir plus, consultez la page "<a
+                  href="http://www.montpellier.cemagref.fr/irrigation/them-getirri.htm">Gestion
+                  intégrée des périmètres et des bassins versants
+                  irrigués</a>" du Cemagref ou <a
+                  href="mailto:barreteau@montpellier.cemagref.fr">contactez
+                  l'auteur</a>.</p>
+              <!--#include virtual="/include/copyright_fr.inc" -->
+              <p></p>
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
+      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
+      position: fixed; z-index: 1000;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Cours</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

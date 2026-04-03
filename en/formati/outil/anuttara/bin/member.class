@@ -1,0 +1,376 @@
+<?
+//Classes
+//1. DB
+//2. Member
+
+	class DB{
+	   /*connect db class*/
+//	   var $user="guest";
+//	   var $user="cormas_s";
+	   var $user="cormas_a";	   
+//	   var $password="9iwozady";
+	   var $password="8itimeru";
+//	   var $host="localhost";
+	   var $host="195.221.173.166";
+	   var $database="cormas";
+	   var $tMember="member"; 
+
+		function connectDB(){
+			mysql_connect($this->host,$this->user,$this->password);
+			//@mysql_select_db($this->database)or die( "Unable to select database");
+		}
+		function showValue(){
+			echo ", user=".$this->user;
+			echo ", password=".$this->password;
+			echo ", database=".$this->database;
+		}
+
+	}//end class DB
+	class MyArray{
+		var $data;
+		var $leg;
+	}
+	class Report extends DB{
+
+	   var $starting_date;
+	   var $ending_date;
+	   
+	   var $from;
+	   var $to;
+
+	   var $date1;
+	   var $date2;
+	   
+	   var $month1;
+	   var $month2;
+	   
+	   var $year1;
+	   var $year2;
+	   
+	   var $title;
+	   var $type;
+	   var $sql_datasource;
+
+	   var $country_desc;
+	   var $m= array(31,28,31,30,31,30,31,31,30,31,30,31);
+
+		function showValue(){
+			echo ", Starting_date=".$this->starting_date;
+			echo ", Ending_date=".$this->ending_date;
+			echo ", Title=".$this->title;
+			echo ", Type=".$this->type;
+
+		}
+		function getMonth($m){
+			$month_en=array('','January','February','March','April','May','June','July','August','September','October','November','December');
+			return $month_en[$m+0];
+		}
+		function compareDate(){
+			$temp;
+			if($this->starting_date > $this->ending_date){
+				$temp = $this->ending_date;
+				$this->ending_date=$this->starting_date;
+				$this->starting_date=$temp;
+			}
+		}
+
+		function LookupCountry($country_id){
+			 $query_lookup = "select c.clause as country_desc "
+					."from country ct, clause c, sysDictionary s, "
+					."language l where c.clause_id=s.clause_id "
+					."and ct.country_clause_set=s.clause_set "
+					."and l.language_id=c.language_id "
+					."and l.language_id like '2' and ct.country_id like '".$country_id."' ";
+	 		 $result_lookup=mysql_query($query_lookup);
+			 $total=mysql_numrows($result_lookup);
+                         
+			 if($total!=0){
+			  $this->country_desc=mysql_result($result_lookup,0, "country_desc");
+			}
+		}
+
+		function LastDateofMonth($month,$year){
+			if ($month != 2) return $this->m[$month - 1];
+			if ($year%4 != 0) return $this->m[1];
+			if ($year%100 == 0 && $year%400 != 0) return $this->m[1];
+			return $this->m[1] + 1;
+		}
+
+	}//end class Report
+
+	class Member extends DB{
+	   var $id;
+	   var $fname;
+	   var $mname;
+	   var $lname; 
+	   var $email;
+	   var $country;
+	   var $company;
+	   var $know;
+	   var $interest;
+	   var $language;
+	   var $validate;
+	   var $userkey;
+	   var $city;
+	   var $action;
+	   var $currentUser;
+	   var $register_date;
+
+	   var $update_date;
+	   var $interest_level1;
+	   var $interest_level2;
+	   var $interest_level3;
+
+	   var $download_date;
+	   var $purpose;
+	   var $purpose_remarks;
+
+	   var $onSubscribe;
+	   var $subscribeType;
+	   var $onDownload;
+	   var $downloadType;
+
+
+		function toValidateEmail(){
+			echo "Hello";
+		}
+
+		function setName($f,$l){
+			$this->fname=$f;
+			$this->lname=$l;
+		}
+
+		function showInfo(){
+			echo "<p>Frstname=".$this->fname."<br>";
+			echo "Middlename=".$this->mname."<br>";
+			echo "Lastname=".$this->lname."<br>";
+			echo "Email=".$this->email."<br>";
+
+			echo "City=".$this->city."<br>";
+			echo "Country=".$this->country."<br>";
+
+			echo "Company=".$this->company."<br>";
+			echo "Know=".$this->know."<br>";
+			echo "Interest/Research area=".$this->interest."<br>";
+			echo "level1=".$this->interest_level1."<br>";
+			echo "level2=".$this->interest_level2."<br>";
+			echo "level3=".$this->interest_level3."<br>";
+		}
+		
+		function lookupEmail($email){
+			$query_lookup="select email, firstname as fname, middlename as mname, lastname as lname from ".$this->tMember." where email like '".$email."';";
+			$result_lookup=mysql_query($query_lookup);
+			$total=mysql_numrows($result_lookup);
+			//Current user
+			if($total!=0){
+			  //echo "<p>Hello ".mysql_result($result_lookup,0, "fname")." ".mysql_result($result_lookup,0, "mname")." ".mysql_result($result_lookup,0, "lname").",<br>";
+			  return true;
+			}
+			//New user
+			else if ($total==0){
+			  echo "<center><b>(^_^) Welcome new member.</center>";
+			  return false; 		
+			}
+		}
+
+		function lookupinSubscribe(){
+			$query_lookup="select member.member_id as id, subscribe.unsubscribe as unsubscribe, subscribe.level_interest1 as level_interest1, subscribe.level_interest2 as level_interest2, subscribe.level_interest3 as level_interest3 from subscribe, member where subscribe.member_id=member.member_id and member.member_id ='".$this->id."';";
+			//echo "<p>lookupsubscribe=".$query_lookup."<br>";
+			$result_lookup=mysql_query($query_lookup);
+			$total=mysql_numrows($result_lookup);
+			//Current user
+			if($total!=0 && mysql_result($result_lookup,0, "unsubscribe")==0){
+			  $this->retriveData();
+			  echo "<center><b><font color ='green'>You have subscribed.</font></center>";
+
+				$this->interest_level1=mysql_result($result_lookup,0, "level_interest1");
+				$this->interest_level2=mysql_result($result_lookup,0, "level_interest2");
+				$this->interest_level3=mysql_result($result_lookup,0, "level_interest3");
+
+			  return 1;
+			}
+			if($total!=0 && mysql_result($result_lookup,0, "unsubscribe")==1){
+			  $this->retriveData();
+			  echo "<center><b><font color ='red'>You have un-subscribed.</font></center>";
+			  echo "<p>Hello ".$this->fname." ".$this->mname." ".$this->lname.",<br>";
+				$this->interest_level1=mysql_result($result_lookup,0, "level_interest1");
+				$this->interest_level2=mysql_result($result_lookup,0, "level_interest2");
+				$this->interest_level3=mysql_result($result_lookup,0, "level_interest3");
+
+			  return 2;
+			}
+			//New user or the user has downloaded.
+			else if ($total==0){
+			  //To Lookup in Download
+			  //echo "<center><b>(^_^) Welcome new member.</center>";
+			  return 3; 		
+			}
+		}
+		function lookupinDownload(){
+			$query_lookup="select member.member_id, download.purpose_id as purpose, download.purpose_remarks, download.download_date as download_date from download, member where member.member_id=download.member_id and member.member_id ='".$this->id."' order by download_date DESC limit 1;";//Only the recently date
+			//echo "<p>lookupdownload=".$query_lookup."<br>";
+			$result_lookup=mysql_query($query_lookup);
+			$total=mysql_numrows($result_lookup);
+			//Current user
+			if($total!=0){
+			  $this->retriveData();
+			  echo "<center><b><font color ='green'>You have downloaded.</font></center>";
+			  //echo "<p>Hello ".$this->fname." ".$this->mname." ".$this->lname.",<br>";
+			  //echo "<p>ID=".$this->id."<br>";
+
+				$this->download_date=mysql_result($result_lookup,0, "download_date");
+				$this->purpose=mysql_result($result_lookup,0, "purpose");
+				$this->purpose_remarks=mysql_result($result_lookup,0, "purpose_remarks");
+			  return 1;
+			}
+			//New user
+			else if ($total==0){
+			  //To Lookup in Download
+			  //echo "<center><b>(^_^) Welcome new member.</center>";
+			  return 0; 		
+			}
+		}
+
+
+		function retriveData(){
+			$query_lookup="select member_id, firstname as fname, middlename as mname, lastname as lname,email, institute_company as company, company_type, city, country_id, know_id, interest_research_area, language_id, register_date, update_date, userkey from ".$this->tMember."  where email like '".$this->email."';";
+			$result_lookup=mysql_query($query_lookup);
+			$total=mysql_numrows($result_lookup);
+
+			$this->id=mysql_result($result_lookup,0, "member_id");
+			$this->fname=mysql_result($result_lookup,0, "fname");
+			$this->mname=mysql_result($result_lookup,0, "mname");
+			$this->lname=mysql_result($result_lookup,0, "lname");
+			$this->email=mysql_result($result_lookup,0, "email");
+			$this->country=mysql_result($result_lookup,0, "country_id");
+			$this->company=mysql_result($result_lookup,0, "company");
+			$this->know=mysql_result($result_lookup,0, "know_id");
+			$this->interest=mysql_result($result_lookup,0, "interest_research_area");
+			$this->language=mysql_result($result_lookup,0, "language_id");
+			$this->city=mysql_result($result_lookup,0, "city");		
+			$this->userkey=mysql_result($result_lookup,0, "userkey");		
+		}
+
+		function checkDuplicateEmail(){
+			$query_lookup="select member_id from ".$this->tMember."  where email like '".$this->email."' and member_id!='".$this->id."';";
+			//echo "----->retrieveID".$query_lookup;
+			$result_lookup=mysql_query($query_lookup);
+			$total=mysql_numrows($result_lookup);
+			if($total!=0){
+				return 1;
+			}
+			else{
+				return 0;
+			}
+		}
+
+		function retrieveMemberID(){
+			$query_lookup="select member_id from ".$this->tMember."  where email like '".$this->email."';";
+			//echo "----->retrieveID".$query_lookup;
+			$result_lookup=mysql_query($query_lookup);
+			$total=mysql_numrows($result_lookup);
+			if($total!=0){
+				$this->id=mysql_result($result_lookup,0, "member_id");
+			}
+		}
+
+		function AddNewProfile(){
+			$this->register_date=date("Y-m-d");
+
+			$str1= "insert into ".$this->tMember."(register_date, firstname, middlename, lastname, email, institute_company, city, country_id, interest_research_area, know_id, language_id) values ('".$this->register_date."', '".$this->fname."', '".$this->mname."', '".$this->lname."', '".$this->email."','".$this->company."', '". $this->city."', '". $this->country."', '". $this->interest."', '". $this->know."', '". $this->language."');";
+			//echo $str1."<br>";
+
+			$result=mysql_query($str1);
+			if($result)
+				mysql_affected_rows();
+		}
+
+		function AddNewSubscribe(){
+			$this->update_date=date("Y-m-d");
+
+			$insertInterests="insert into subscribe (member_id,level_interest1, level_interest2, level_interest3, subscribe_date) values ('".$this->id."','".$this->interest_level1."' ,'".$this->interest_level2."', '".$this->interest_level3."','".$this->update_date."');";
+
+			//echo "insertInterests=>".$insertInterests."<br>";
+
+			$result=mysql_query($insertInterests);// To update the profile.
+			if($result)
+				mysql_affected_rows();
+		}
+
+		function AddNewDownload(){
+			$this->update_date=date("Y-m-d");
+
+			$insertInterests="insert into download (member_id,download_date, purpose_id, purpose_remarks) values ('".$this->id."','".$this->update_date."' ,'".$this->purpose."', '".$this->purpose_remarks."');";
+
+			//echo "insertInterests=>".$insertInterests."<br>";
+
+			$result=mysql_query($insertInterests);// To update the profile.
+			if($result)
+				mysql_affected_rows();
+		}
+
+		function updateProfile(){
+			$this->update_date=date("Y-m-d");
+
+			$updateUserProfile="update ".$this->tMember." set firstname='".$this->fname."', middlename='".$this->mname."', lastname='".$this->lname."', email='".$this->email."', institute_company='".$this->company."', city='".$this->city."', country_id='".$this->country."', know_id='".$this->know."', interest_research_area='".$this->interest."', validated='1', update_date='".$this->update_date."' where member_id like '".$this->id."';";
+
+			//echo "updateUserProfile=>".$updateUserProfile."<br>";
+
+			$result=mysql_query($updateUserProfile);// To update the profile.
+			if($result){
+				mysql_affected_rows();
+//				echo "<br>Your information is updated. <br> Thank you :) ".$fname." ".$mname." ".$lname."<br>";
+			}
+			else{
+				echo "<br>The email address is duplicated. Please use another email address.<br>";
+				echo "<a href = 'javascript:history.back()'> Back :) </a> ";
+			}
+			//mysql_close();
+		}
+
+		function updateSubscribe(){
+			$this->update_date=date("Y-m-d");
+
+			$updateInterests="update subscribe set unsubscribe ='0', level_interest1 ='".$this->interest_level1."', level_interest2 ='".$this->interest_level2."', level_interest3 ='".$this->interest_level3."' , 'unsubscribe_date='".$this->update_date."'  where member_id like '".$this->id."';";
+
+			//echo "updateInterests=>".$updateInterests."<br>";
+
+			$result=mysql_query($updateInterests);// To update the profile.
+			if($result){
+				mysql_affected_rows();
+			}
+			//mysql_close();
+		}
+
+		function setUnSubscribe(){
+			$this->update_date=date("Y-m-d");
+
+			$updateInterests="update subscribe set unsubscribe ='1', unsubscribe_date='".$this->update_date."' where member_id like '".$this->id."';";
+
+			//echo "updateInterests=>".$updateInterests."<br>";
+
+			$result=mysql_query($updateInterests);// To update the profile.
+			if($result){
+				mysql_affected_rows();
+			}
+			//mysql_close();
+		}
+		function myCheckDNSRR($hostName, $recType = '') 
+		{ 
+		 if(!empty($hostName)) { 
+		   if( $recType == '' ) $recType = "MX"; 
+		   exec("nslookup -type=$recType $hostName", $result); 
+		   // check each line to find the one that starts with the host 
+		   // name. If it exists then the function succeeded. 
+		   foreach ($result as $line) { 
+		     if(eregi("^$hostName",$line)) { 
+		       return 1; 
+		     } 
+		   } 
+		   // otherwise there was no mail handler for the domain 
+		   return 0; 
+		 } 
+		 return 0; 
+		}		
+	}
+?>

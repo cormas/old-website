@@ -1,0 +1,350 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-874">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link rel=File-List href="./Applications_files/filelist.xml">
+<title>MAS for renewable and natural resource management- Applications</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>BOUSQUET</o:Author>
+  <o:LastAuthor>IRRI-CIRAD Project</o:LastAuthor>
+  <o:Revision>132</o:Revision>
+  <o:TotalTime>5129</o:TotalTime>
+  <o:LastPrinted>2000-07-23T15:05:12Z</o:LastPrinted>
+  <o:Created>1998-11-28T08:14:22Z</o:Created>
+  <o:LastSaved>2002-01-23T16:42:45Z</o:LastSaved>
+  <o:Words>15464</o:Words>
+  <o:PresentationFormat>On-screen Show</o:PresentationFormat>
+  <o:Company>green</o:Company>
+  <o:Bytes>14939385</o:Bytes>
+  <o:Paragraphs>3086</o:Paragraphs>
+  <o:Slides>440</o:Slides>
+  <o:Notes>50</o:Notes>
+  <o:MultimediaClips>6</o:MultimediaClips>
+  <o:Version>9.6615</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<meta http-equiv=expires content=0>
+<![if !ppt]><script><!--
+
+var END_SHOW_HREF         = "endshow.htm",
+    OUTLINE_EXPAND_HREF   = "outline_expanded.htm",
+    OUTLINE_COLLAPSE_HREF = "outline_collapsed.htm";
+    NAVBAR_HREF           = "navigation_bar.htm";
+    BLANK_NOTES_HREF	  = "blank_notes.htm";
+    NUM_VISIBLE_SLIDES    = 130;
+    SIMPLE_FRAMESET       = 0;
+    SLIDE_FRAME	        = "PPTSld";
+    NOTES_FRAME           = "PPTNts";
+    OUTLINE_FRAME         = "PPTOtl";
+    NAVBAR_FRAME          = "PPTNav";
+
+var g_currentSlide = 1, g_prevSlide = 1;
+
+var appVer = navigator.appVersion;
+var msie = appVer.indexOf( "MSIE " );
+var msieWin31 = (appVer.indexOf( "Windows 3.1" ) > 0);
+var ver = 0;
+
+if ( msie >= 0 )
+  ver = parseFloat( appVer.substring( msie+5, appVer.indexOf ( ";", msie ) ) );
+else
+  ver = parseInt( appVer );
+
+var g_supportsPPTHTML = !msieWin31 && ( ( msie >= 0 && ver >= 3.02 ) || ( msie < 0 && ver >= 3 ) );
+
+function GetCurrentSlideNum()
+{   
+  obj = GetHrefObj( g_currentSlide );
+  if ( GetHrefObj( g_currentSlide ).m_origVisibility == 1 )
+    return obj.m_slideIdx;
+  else   
+    return g_currentSlide;
+}
+
+function GetNumSlides()
+{
+  if ( GetHrefObj( g_currentSlide ).m_origVisibility == 1 )
+    return NUM_VISIBLE_SLIDES;
+  else
+    return g_docTable.length;
+}
+
+function GetHrefObj( slideIdx )
+{ return g_docTable[slideIdx - 1];
+}
+
+function GetSlideNum( slideHref )
+{
+  for (ii=0; ii<g_docTable.length; ii++) {
+    if ( g_docTable[ii].m_slideHref == slideHref )
+      return ii+1;
+  }
+  return 1;
+}
+
+function GoToNextSld()
+{   
+  targetIdx = g_currentSlide + 1;
+  if ( GetHrefObj( targetIdx-1 ).m_origVisibility == 0 ) {
+    if ( targetIdx<=g_docTable.length ) {
+      obj = GetHrefObj( targetIdx );
+      obj.m_visibility = 1;
+      GoToSld( obj.m_slideHref );
+    }
+  }
+  else {
+    obj = GetHrefObj( targetIdx );
+    while ( obj && ( obj.m_origVisibility == 0 ) && ( targetIdx<=g_docTable.length ) )
+      obj = GetHrefObj( targetIdx++ );
+    if( obj && obj.m_origVisibility )
+      GoToSld( obj.m_slideHref );
+  }
+}
+
+function GoToPrevSld()
+{
+  targetIdx = g_currentSlide - 1;
+  if ( targetIdx > 0 ) {
+    obj = GetHrefObj( targetIdx );
+    while ( ( obj.m_visibility == 0 ) && ( targetIdx>0 ) )
+      obj = GetHrefObj( targetIdx-- );
+    GoToSld( obj.m_slideHref );
+  }
+}
+
+function GoToLast()
+{
+  targetIdx = g_docTable.length;
+  if ( targetIdx != g_currentSlide )
+    GoToSld( GetHrefObj( targetIdx ).m_slideHref );
+}
+
+function GoToFirst()
+{ GoToSld( GetHrefObj(1).m_slideHref );
+}
+
+function ChangeFrame( frame, href )
+{
+  if( g_supportsPPTHTML )
+    frames[frame].location.replace( href );
+  else
+    frames[frame].location.href = href;
+}
+
+function GoToSld( slideHref )
+{
+  if ( slideHref != GetHrefObj( g_currentSlide ).m_slideHref ) {
+    g_prevSlide = g_currentSlide;
+    g_currentSlide = GetSlideNum( slideHref );
+    obj = GetHrefObj( g_currentSlide );
+    obj.m_visibility = 1;
+    if( !SIMPLE_FRAMESET )
+      ChangeFrame( NOTES_FRAME, obj.m_notesHref );
+    ChangeFrame( NAVBAR_FRAME, NAVBAR_HREF );
+    frames[SLIDE_FRAME].location.href = slideHref;
+  }
+}
+
+function PrevSldViewed()
+{ GoToSld( GetHrefObj( g_prevSlide ).m_slideHref );
+}
+
+function EndShow()
+{ frames[SLIDE_FRAME].location.href = END_SHOW_HREF;
+}
+
+function NoHref() {}
+
+function ExpandOutline( )
+{ ChangeFrame( OUTLINE_FRAME, OUTLINE_EXPAND_HREF );
+}
+
+function CollapseOutline()
+{ ChangeFrame( OUTLINE_FRAME, OUTLINE_COLLAPSE_HREF );
+}
+
+function SlideUpdated( id )
+{
+  if ( id != GetHrefObj( g_currentSlide ).m_slideHref ) {
+    g_prevSlide = g_currentSlide;
+    g_currentSlide = GetSlideNum( id );
+    obj = GetHrefObj( g_currentSlide );
+    if( !SIMPLE_FRAMESET )
+      ChangeFrame( NOTES_FRAME, obj.m_notesHref );
+    ChangeFrame( NAVBAR_FRAME, NAVBAR_HREF );
+  }
+}
+
+function hrefList( slideHref, notesHref, visible, slideIdx )
+{
+  this.m_slideHref  = slideHref;
+  this.m_notesHref  = notesHref;
+  this.m_navbarHref = NAVBAR_HREF;
+  this.m_origVisibility = visible;
+  this.m_visibility = visible;
+  this.m_slideIdx = slideIdx;
+}
+var g_docTable = new Array(
+   new hrefList("slide0878.htm", BLANK_NOTES_HREF, 1, 1 ),
+   new hrefList("slide0879.htm", BLANK_NOTES_HREF, 1, 2 ),
+   new hrefList("slide0880.htm", BLANK_NOTES_HREF, 1, 3 ),
+   new hrefList("slide0881.htm", BLANK_NOTES_HREF, 1, 4 ),
+   new hrefList("slide0882.htm", BLANK_NOTES_HREF, 1, 5 ),
+   new hrefList("slide0883.htm", BLANK_NOTES_HREF, 1, 6 ),
+   new hrefList("slide0884.htm", BLANK_NOTES_HREF, 1, 7 ),
+   new hrefList("slide0885.htm", BLANK_NOTES_HREF, 1, 8 ),
+   new hrefList("slide0886.htm", BLANK_NOTES_HREF, 1, 9 ),
+   new hrefList("slide0887.htm", BLANK_NOTES_HREF, 1, 10 ),
+   new hrefList("slide0888.htm", BLANK_NOTES_HREF, 1, 11 ),
+   new hrefList("slide0889.htm", BLANK_NOTES_HREF, 1, 12 ),
+   new hrefList("slide0890.htm", BLANK_NOTES_HREF, 1, 13 ),
+   new hrefList("slide0891.htm", BLANK_NOTES_HREF, 1, 14 ),
+   new hrefList("slide0892.htm", BLANK_NOTES_HREF, 1, 15 ),
+   new hrefList("slide0893.htm", BLANK_NOTES_HREF, 1, 16 ),
+   new hrefList("slide0894.htm", BLANK_NOTES_HREF, 1, 17 ),
+   new hrefList("slide0895.htm", BLANK_NOTES_HREF, 1, 18 ),
+   new hrefList("slide0896.htm", BLANK_NOTES_HREF, 1, 19 ),
+   new hrefList("slide0897.htm", BLANK_NOTES_HREF, 1, 20 ),
+   new hrefList("slide0898.htm", BLANK_NOTES_HREF, 1, 21 ),
+   new hrefList("slide0899.htm", BLANK_NOTES_HREF, 1, 22 ),
+   new hrefList("slide0900.htm", BLANK_NOTES_HREF, 1, 23 ),
+   new hrefList("slide0901.htm", BLANK_NOTES_HREF, 1, 24 ),
+   new hrefList("slide0902.htm", BLANK_NOTES_HREF, 1, 25 ),
+   new hrefList("slide0903.htm", BLANK_NOTES_HREF, 1, 26 ),
+   new hrefList("slide0904.htm", BLANK_NOTES_HREF, 1, 27 ),
+   new hrefList("slide0905.htm", BLANK_NOTES_HREF, 1, 28 ),
+   new hrefList("slide0906.htm", BLANK_NOTES_HREF, 1, 29 ),
+   new hrefList("slide0907.htm", BLANK_NOTES_HREF, 1, 30 ),
+   new hrefList("slide0908.htm", BLANK_NOTES_HREF, 1, 31 ),
+   new hrefList("slide0909.htm", BLANK_NOTES_HREF, 1, 32 ),
+   new hrefList("slide0910.htm", BLANK_NOTES_HREF, 1, 33 ),
+   new hrefList("slide0911.htm", BLANK_NOTES_HREF, 1, 34 ),
+   new hrefList("slide0912.htm", BLANK_NOTES_HREF, 1, 35 ),
+   new hrefList("slide0913.htm", BLANK_NOTES_HREF, 1, 36 ),
+   new hrefList("slide0914.htm", BLANK_NOTES_HREF, 1, 37 ),
+   new hrefList("slide0915.htm", BLANK_NOTES_HREF, 1, 38 ),
+   new hrefList("slide0916.htm", BLANK_NOTES_HREF, 1, 39 ),
+   new hrefList("slide0917.htm", BLANK_NOTES_HREF, 1, 40 ),
+   new hrefList("slide0918.htm", BLANK_NOTES_HREF, 1, 41 ),
+   new hrefList("slide0919.htm", BLANK_NOTES_HREF, 1, 42 ),
+   new hrefList("slide0920.htm", BLANK_NOTES_HREF, 1, 43 ),
+   new hrefList("slide0921.htm", BLANK_NOTES_HREF, 1, 44 ),
+   new hrefList("slide0922.htm", BLANK_NOTES_HREF, 1, 45 ),
+   new hrefList("slide0923.htm", BLANK_NOTES_HREF, 1, 46 ),
+   new hrefList("slide0924.htm", BLANK_NOTES_HREF, 1, 47 ),
+   new hrefList("slide0925.htm", BLANK_NOTES_HREF, 1, 48 ),
+   new hrefList("slide0926.htm", BLANK_NOTES_HREF, 1, 49 ),
+   new hrefList("slide0927.htm", BLANK_NOTES_HREF, 1, 50 ),
+   new hrefList("slide0928.htm", BLANK_NOTES_HREF, 1, 51 ),
+   new hrefList("slide0929.htm", BLANK_NOTES_HREF, 1, 52 ),
+   new hrefList("slide0930.htm", BLANK_NOTES_HREF, 1, 53 ),
+   new hrefList("slide0931.htm", BLANK_NOTES_HREF, 1, 54 ),
+   new hrefList("slide0932.htm", BLANK_NOTES_HREF, 1, 55 ),
+   new hrefList("slide0933.htm", BLANK_NOTES_HREF, 1, 56 ),
+   new hrefList("slide0934.htm", BLANK_NOTES_HREF, 1, 57 ),
+   new hrefList("slide0935.htm", BLANK_NOTES_HREF, 1, 58 ),
+   new hrefList("slide0936.htm", BLANK_NOTES_HREF, 1, 59 ),
+   new hrefList("slide0937.htm", BLANK_NOTES_HREF, 1, 60 ),
+   new hrefList("slide0938.htm", BLANK_NOTES_HREF, 1, 61 ),
+   new hrefList("slide0939.htm", BLANK_NOTES_HREF, 1, 62 ),
+   new hrefList("slide0940.htm", BLANK_NOTES_HREF, 1, 63 ),
+   new hrefList("slide0941.htm", BLANK_NOTES_HREF, 1, 64 ),
+   new hrefList("slide0942.htm", BLANK_NOTES_HREF, 1, 65 ),
+   new hrefList("slide0943.htm", BLANK_NOTES_HREF, 1, 66 ),
+   new hrefList("slide0944.htm", BLANK_NOTES_HREF, 1, 67 ),
+   new hrefList("slide0945.htm", BLANK_NOTES_HREF, 1, 68 ),
+   new hrefList("slide0946.htm", BLANK_NOTES_HREF, 1, 69 ),
+   new hrefList("slide0947.htm", BLANK_NOTES_HREF, 1, 70 ),
+   new hrefList("slide0948.htm", BLANK_NOTES_HREF, 1, 71 ),
+   new hrefList("slide0949.htm", BLANK_NOTES_HREF, 1, 72 ),
+   new hrefList("slide0950.htm", BLANK_NOTES_HREF, 1, 73 ),
+   new hrefList("slide0951.htm", BLANK_NOTES_HREF, 1, 74 ),
+   new hrefList("slide0952.htm", BLANK_NOTES_HREF, 1, 75 ),
+   new hrefList("slide0953.htm", BLANK_NOTES_HREF, 1, 76 ),
+   new hrefList("slide0954.htm", BLANK_NOTES_HREF, 1, 77 ),
+   new hrefList("slide0955.htm", BLANK_NOTES_HREF, 1, 78 ),
+   new hrefList("slide0956.htm", BLANK_NOTES_HREF, 1, 79 ),
+   new hrefList("slide0957.htm", BLANK_NOTES_HREF, 1, 80 ),
+   new hrefList("slide0958.htm", BLANK_NOTES_HREF, 1, 81 ),
+   new hrefList("slide0959.htm", BLANK_NOTES_HREF, 1, 82 ),
+   new hrefList("slide0960.htm", BLANK_NOTES_HREF, 1, 83 ),
+   new hrefList("slide0961.htm", BLANK_NOTES_HREF, 1, 84 ),
+   new hrefList("slide0962.htm", BLANK_NOTES_HREF, 1, 85 ),
+   new hrefList("slide0963.htm", BLANK_NOTES_HREF, 1, 86 ),
+   new hrefList("slide0964.htm", BLANK_NOTES_HREF, 1, 87 ),
+   new hrefList("slide0965.htm", BLANK_NOTES_HREF, 1, 88 ),
+   new hrefList("slide0966.htm", BLANK_NOTES_HREF, 1, 89 ),
+   new hrefList("slide0967.htm", BLANK_NOTES_HREF, 1, 90 ),
+   new hrefList("slide0968.htm", BLANK_NOTES_HREF, 1, 91 ),
+   new hrefList("slide0969.htm", BLANK_NOTES_HREF, 1, 92 ),
+   new hrefList("slide0970.htm", BLANK_NOTES_HREF, 1, 93 ),
+   new hrefList("slide0971.htm", BLANK_NOTES_HREF, 1, 94 ),
+   new hrefList("slide0972.htm", BLANK_NOTES_HREF, 1, 95 ),
+   new hrefList("slide0973.htm", BLANK_NOTES_HREF, 1, 96 ),
+   new hrefList("slide0974.htm", BLANK_NOTES_HREF, 1, 97 ),
+   new hrefList("slide0975.htm", BLANK_NOTES_HREF, 1, 98 ),
+   new hrefList("slide0836.htm", BLANK_NOTES_HREF, 1, 99 ),
+   new hrefList("slide0837.htm", BLANK_NOTES_HREF, 1, 100 ),
+   new hrefList("slide0838.htm", BLANK_NOTES_HREF, 1, 101 ),
+   new hrefList("slide0839.htm", BLANK_NOTES_HREF, 1, 102 ),
+   new hrefList("slide0978.htm", BLANK_NOTES_HREF, 1, 103 ),
+   new hrefList("slide0840.htm", BLANK_NOTES_HREF, 1, 104 ),
+   new hrefList("slide0841.htm", BLANK_NOTES_HREF, 1, 105 ),
+   new hrefList("slide0842.htm", BLANK_NOTES_HREF, 1, 106 ),
+   new hrefList("slide0843.htm", BLANK_NOTES_HREF, 1, 107 ),
+   new hrefList("slide0844.htm", BLANK_NOTES_HREF, 1, 108 ),
+   new hrefList("slide0845.htm", BLANK_NOTES_HREF, 1, 109 ),
+   new hrefList("slide0846.htm", BLANK_NOTES_HREF, 1, 110 ),
+   new hrefList("slide0847.htm", BLANK_NOTES_HREF, 1, 111 ),
+   new hrefList("slide0848.htm", BLANK_NOTES_HREF, 1, 112 ),
+   new hrefList("slide0849.htm", BLANK_NOTES_HREF, 1, 113 ),
+   new hrefList("slide0850.htm", BLANK_NOTES_HREF, 1, 114 ),
+   new hrefList("slide0851.htm", BLANK_NOTES_HREF, 1, 115 ),
+   new hrefList("slide0852.htm", BLANK_NOTES_HREF, 1, 116 ),
+   new hrefList("slide0853.htm", BLANK_NOTES_HREF, 1, 117 ),
+   new hrefList("slide0854.htm", BLANK_NOTES_HREF, 1, 118 ),
+   new hrefList("slide0979.htm", BLANK_NOTES_HREF, 1, 119 ),
+   new hrefList("slide0855.htm", BLANK_NOTES_HREF, 1, 120 ),
+   new hrefList("slide0856.htm", BLANK_NOTES_HREF, 1, 121 ),
+   new hrefList("slide0857.htm", BLANK_NOTES_HREF, 1, 122 ),
+   new hrefList("slide0858.htm", BLANK_NOTES_HREF, 1, 123 ),
+   new hrefList("slide0859.htm", BLANK_NOTES_HREF, 1, 124 ),
+   new hrefList("slide0860.htm", BLANK_NOTES_HREF, 1, 125 ),
+   new hrefList("slide0861.htm", BLANK_NOTES_HREF, 1, 126 ),
+   new hrefList("slide0862.htm", BLANK_NOTES_HREF, 1, 127 ),
+   new hrefList("slide0863.htm", BLANK_NOTES_HREF, 1, 128 ),
+   new hrefList("slide0864.htm", BLANK_NOTES_HREF, 1, 129 ),
+   new hrefList("slide0865.htm", BLANK_NOTES_HREF, 1, 130 )
+);
+//-->
+</script><![endif]>
+</head>
+
+<frameset rows="*,27" framespacing=1 frameborder=1>
+ <noframes>
+  <body>
+  <p>This page uses frames, but your browser doesn't support them.</p>
+  </body>
+ </noframes>
+ <frameset cols="*,495">
+  <frame src="./Applications_files/outline_collapsed.htm" name=PPTOtl noresize>
+  <frameset rows="376,*">
+   <frame src="./Applications_files/slide0878.htm" name=PPTSld marginheight=0
+   marginwidth=0>
+   <frame src="./Applications_files/blank_notes.htm" name=PPTNts
+   marginheight=0 marginwidth=0 noresize>
+  </frameset>
+ </frameset>
+ <frameset cols="*,495">
+  <frame src="./Applications_files/outline_navigation_bar.htm" name=PPTOtlNav
+  marginheight=0 marginwidth=0 scrolling=no noresize>
+  <frame src="./Applications_files/navigation_bar.htm" name=PPTNav
+  marginheight=0 marginwidth=0 scrolling=no noresize>
+ </frameset>
+</frameset>
+
+</html>

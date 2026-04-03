@@ -33,7 +33,7 @@ echo "<br>-------------------- End of Main() ------------------<br>";*/
 
 </head>
 
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(http://cormas.cirad.fr/images/en/accueil_r.gif,http://cormas.cirad.fr/images/en/demarche_r.gif,http://cormas.cirad.fr/images/en/logiciel_r.gif,http://cormas.cirad.fr/images/en/applications_r.gif,http://cormas.cirad.fr/images/en/biblio_r.gif,http://cormas.cirad.fr/images/en/formation_r.gif,http://cormas.cirad.fr/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('http://cormas.cirad.fr/images/en/accueil_r.gif','http://cormas.cirad.fr/images/en/demarche_r.gif','http://cormas.cirad.fr/images/en/logiciel_r.gif','http://cormas.cirad.fr/images/en/applications_r.gif','http://cormas.cirad.fr/images/en/biblio_r.gif','http://cormas.cirad.fr/images/en/formation_r.gif','http://cormas.cirad.fr/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
 
 <!--#include virtual="haut.inc" -->
 
@@ -69,24 +69,24 @@ echo "<br>-------------------- End of Main() ------------------<br>";*/
 			//echo "The verification code and your email address are not correct. ";
 			printNotcompletinfo("The verification code and your email address are not correct.","to unsubscribe");
 			// Register value of the fields to the session
-		   $_SESSION[nomU] = $nomU;
-           //echo "<br><a href=http://cormas.cirad.fr/en/reseaux/form/forumCormas.php>Back</a>.";
+		   $_SESSION['nomU'] = $nomU;
+           //echo "<br><a href='http://cormas.cirad.fr/en/reseaux/form/forumCormas.php'>Back</a>.";
 	  }
 	  else if ($boncode == false && $bonemail == true){
 	  	  	//echo "boncode == false && bonemail == true -->";
 			//echo "The verification code is not correct. ";
 			printNotcompletinfo("The verification code is not correct.","to unsubscribe");
 			// Register value of the fields to the session
-		   $_SESSION[nomU] = $nomU;
-            //echo "<br><a href=http://cormas.cirad.fr/en/reseaux/form/forumCormas.php>Back</a>.";
+		   $_SESSION['nomU'] = $nomU;
+            //echo "<br><a href='http://cormas.cirad.fr/en/reseaux/form/forumCormas.php'>Back</a>.";
 	  }
 	  else if ($boncode == true && $bonemail == false){
 	  	  	//echo "boncode == true && bonemail == false -->";
 			//echo "Your email address is not correct. ";
 			printNotcompletinfo("Your email address is not correct.","to unsubscribe");
 			// Register value of the fields to the session
-		   $_SESSION[nomU] = $nomU;
-            //echo "<br><a href=http://cormas.cirad.fr/en/reseaux/form/forumCormas.php>Back</a>.";
+		   $_SESSION['nomU'] = $nomU;
+            //echo "<br><a href='http://cormas.cirad.fr/en/reseaux/form/forumCormas.php'>Back</a>.";
 	  }
 	  ?>
 

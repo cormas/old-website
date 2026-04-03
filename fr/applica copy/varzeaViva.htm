@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Cormas, Cirad, gestion des ressources
+      naturelles, natural resource management, INRM, environnement,
+      environment, simulation, modelisation, modelling, SMA, MAS,
+      multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>VarzeaViva</title>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" style="background-color: white;" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
+<!--#include virtual="haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<!--#include virtual="sommair.inc" --> <td bgcolor="#FFFFFF" class="content-cell" valign="top" width="*">
+<p> </p>
+<h1>VarzeaViva</h1>
+<h2>Les conditions de vie des communautés locales dans une
+              plaine d'inondation amazonienne face aux changements
+              globaux </h2>
+<h4>D'un jeu de rôles à des simulations hybrides pour
+              impliquer les acteurs locaux dans une étude prospective
+              participative au niveau territorial</h4>
+<table border="0" style="width: 944px; height: 305px;">
+<tbody>
+<tr>
+<td class="content-cell" height="339" style="height: 308px;" valign="top" width="428"><img alt="photo of a house " src="../../images/applica/varzeaViva/photo1.png" style="width: 370px; height:
+                      310px;"/><br/>
+</td>
+<td class="content-cell" style="height: 308px;" width="506">
+<ul>
+<li>Marie-Paule Bonnet (IRD - UnB, Brasilia)</li>
+<li>Pierre BOMMEL (Cirad - UCR, Costa Rica),</li>
+<li>Emilie COUDEL (Cirad - Embrapa CPATU),</li>
+<li>Eva HAENTJENS (Cirad),</li>
+<li>Cleber Nunes KRAUS (Universidade de Brasilia -
+                        UnB,</li>
+<li>Gustavo MELO, (CIRAD - UFRj),</li>
+<li>Stephanie NASUTI (Universidade de Brasilia -
+                        UnB),</li>
+<li>Christophe Le Page, (CIRAD - UnB)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h2><strong>Objectif du projet<span style="color: #0000ee;"><span style="text-decoration: underline;"></span></span></strong></h2>
+            Grâce aux inondations saisonnières qui recyclent les
+            nutriments, les plaines d'inondation de l’Amazone sont parmi
+            les écosystèmes les plus productifs et diversifiés du monde.
+            Depuis la période pré-colombienne, les populations sy sont
+            installées et ont développé des activités agricoles et de
+            pêche. Ils ont toujours fait face variations naturelles du
+            milieu, entre les inondations et les saisons sèches.
+            Cependant, le rythme et l'amplitude de ces inondations sont
+            perturbés aujourd'hui, ce qui entraîne une grande
+            incertitude pour ces populations.<br/>
+<br/>
+            Des biologistes et des hydrologues ont uni leurs forces avec
+            des scientifiques en sciences sociales pour aider ces
+            populations a améliorer leur résilience face a de tels
+            changements.<br/>
+            Pour résoudre ce problème, nous avons d'abord recueilli les
+            préoccupations des populations locales et nous avons
+            collectivement discuté des stratégies d'adaptation possibles
+            face aux scénarios du futur. La mise en place et
+            l'utilisation d'un jeu de rôle (JdR) a d'abord servi
+            d'interface de dialogue avec les acteurs du développement.
+            Sur cette base, un modèle multi-agents (ABM) a été construit
+            progressivement. Il a ainsi fallu trouver des points
+            d’intérêt communs, et reformulé les connaissances
+            scientifiques afin quelles soient significatives aux yeux
+            des acteurs locaux.
+            <table border="0" style="width: 100%;">
+<tbody>
+<tr>
+<td class="content-cell" style="height: 269px; width: 546.1px;"><span style="font-weight: bold;"></span><img alt="jogo " src="../../images/applica/varzeaViva/jogo1.png"/></td>
+<td class="content-cell" style="height: 269px; width: 468.9px;">Une session
+                    de Jeu de Rôle avec des pêcheurs de la communauté de
+                    Piedade</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<table border="0" style="width: 900px; height: 646px;">
+<tbody>
+<tr>
+<td class="content-cell" style="text-align: left; vertical-align: top;
+                    width: 240px;"><br/>
+<br/>
+                    Cet ABM est maintenant devenu un modèle hybride
+                    permettant aux utilisateurs d'interagir avec la
+                    simulation : ils prennent des décisions saisonniers
+                    sur l'agriculture, la pêche et l'élevage, qui sont
+                    virtuellement réalisées par leurs avatars dans le
+                    modèle. Puis, en intégrant ces décisions ainsi que
+                    le niveau de la rivière (variables de forçage), la
+                    simulation calcule l'évolution annuelle du
+                    territoire et fournit des résultats de production
+                    pour chaque joueur. <br/>
+<br/>
+<br/>
+                    Passer du JdR a la simulation hybride permet des
+                    calculs et des scénarios sophistiqués sur une
+                    période plus longue. En retour, cela exige une
+                    réflexion approfondie sur les façons d'interagir
+                    avec la simulation tout en favorisant des échanges
+                    spontanés et informatifs entre les participants. Tel
+                    est l'objectif de notre recherche actuelle qui vise
+                    a mieux comprendre et discuter des impacts des
+                    pratiques actuelles sur le long terme.</td>
+<td class="content-cell" style="width: 775px;"><img alt="user interface " src="../../images/applica/varzeaViva/userInterface.png"/> </td>
+</tr>
+</tbody>
+</table>
+<br/>
+            Un exemple de simulation<br/>
+<br/>
+<img alt="animated gif " src="../../images/applica/varzeaViva/FRB.gif"/><br/>
+<p><br/>
+</p>
+<p>VarzeaViva est un ABM hybride qui a été conçu et utilisé
+              dans le projet Clim-Fabiam, financé par la <a href="http://www.fondationbiodiversite.fr" title="FRB">FRB,
+                Fondation pour la Recherche sur la Biodiversité</a>.</p>
+<hr/>
+<h3>Software</h3>
+<p>Télécharger le <a href="../../logiciel/VarzeaViva20.zip" target="_blank" title="VarzeaViva20.zip">code
+
+                source</a> du modele. Une version varzeaViva.exe est
+              également disponible.</p>
+<p>Voir également un <a href="http://agritrop.cirad.fr/579475/" title="abstract ICCB">papier</a>
+              présenté a ICCB 2015: Bommel P., Bonnet M.P., Coudel E.,
+              Haentjens E., Nunes Kraus C., Laques A.E., Melo G., Nasuti
+              S., Souza Nogueira I.(2015). <span style="font-style:
+                italic;">From scientific models to Companion Modelling:
+                engaging a dialogue with local actors in an Amazonian
+                floodplain about biodiversity management at a
+                territorial level</span>. ICCB: 27th International
+              Congress for Conservation Biology - 4th European Congress
+              for Conservation Biology. August 2-6 2015, Montpellier -
+              France</p>
+<p>Pour plus d'information, <a href="mailto:bommel@cirad.fr">contacter un des auteurs</a></p>
+<!--#include virtual="/include/copyright_fr.inc" --> </td>
+<td bgcolor="#FFFFFF" class="content-cell" valign="top" width="15"> <br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sidebar">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title>Le jeu de rôles MejanJeu</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style=" width: 100vw;
+      background-color: #FFA500; position: relative; margin-left: 0;
+      left: 0; right: 0; z-index: 1001;">
+      <div class="header-image-container">
+        <img alt="Description de l'image" src="../../images/bandeau.jpg">
+      </div>
+    </div>
+    <div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" height="23" width="23">
+      <!--#include virtual="haut.inc" -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp; </p>
+              <h1>Méjanjeu, un jeu de rôles sur le devenir du Causse
+                Méjan</h1>
+              <h1><font size="3">Michel Etienne (Inra), Christophe Le
+                  Page (Cirad)</font></h1>
+              <p>&nbsp;</p>
+              <h2>Motivation de la création </h2>
+              <p><img src="../../images/applica/mejanJeu.gif"
+                  height="225" width="288" align="right">Le jeu a été
+                créé à la suite d'une demande du Parc National des
+                Cévennes de sensibiliser les populations du Causse Méjan
+                à la "fermeture des milieux". Initialement axée sur le
+                buis, la problématique est devenue "se mobiliser face à
+                l'envahissement par les pins", processus identifié comme
+                majeur suite à des simulations issues d'un <a
+                  href="mejan.htm">modèle multi-agent</a>. Il s'agissait
+                de faire prendre conscience aux acteurs locaux de
+                l'ampleur du processus écologique d'enrésinement et de
+                faire réagir collectivement les agriculteurs, les
+                forestiers et les agents du parc national face à cette
+                dynamique spatiale. </p>
+              <h2>Description et spécificité </h2>
+              <p>Le jeu de rôle repose sur une représentation d'un
+                espace naturel suffisamment proche de la réalité pour
+                que les joueurs y retrouvent leurs repères habituels
+                mais suffisamment éloignée de cette réalité pour que le
+                jeu se déroule dans un contexte neutre, sans a priori.
+                Le jeu de rôle s'appuie sur le couplage entre un SMA
+                simplifié et un SIG permettant une sortie rapide de
+                représentations cartographiques thématiques à
+                différentes échelles. Le modèle simule la dynamique des
+                pins et des espèces végétales et animales sensibles à
+                l'enrésinement. Les participants jouant le rôle des
+                agriculteurs répartissent la charge animale en fonction
+                de leur système de production et du niveau
+                d'enrésinement de leurs parcs. Les participants jouant
+                le rôle des naturalistes définissent les parcelles
+                présentant les objectifs patrimoniaux prioritaires et
+                mettent au point une stratégie de maîtrise de
+                l'enrésinement. Les participants jouant le rôle du
+                forestier définissent les objectifs prioritaires
+                affectés aux massifs forestiers et proposent un plan de
+                gestion et d'exploitation de ces massifs. A la fin de
+                chaque tour de jeu, la négociation porte sur la
+                technique à utiliser, la localisation de la parcelle et
+                la main d'œuvre affectée aux travaux. Une représentation
+                cartographique de l'effet des pratiques mises en œuvre
+                par les joueurs sur la dynamique des ressources
+                naturelles sert de support au tour de jeu suivant. Un
+                effort particulier a été fourni pour rendre compte des
+                effets de voisinage (position relative des agriculteurs
+                dans la salle, isolement des agents du parc dans un coin
+                de la salle équipé d'un ordinateur) et pour distinguer
+                les échelles de perception de chaque acteur
+                (l'agriculteur ne voit que son exploitation agricole,
+                les agents du parc voient l'ensemble du territoire). Les
+                échelles de temps ont été démultipliées (les actions
+                d'une année sont reproduites à l'identique 5 fois) afin
+                de projeter les joueurs suffisamment longtemps dans le
+                futur (15 à 25 ans). </p>
+              <h2>Mise en oeuvre </h2>
+              <p>Le jeu a été utilisé 5 fois sur le Causse Méjan avec de
+                vrais acteurs (éleveurs, techniciens forestiers, agents
+                du PNC, techniciens de la Chambre d'Agriculture). Le jeu
+                de rôle cherche à faire réagir des agriculteurs, des
+                forestiers et des agents de parcs nationaux face à des
+                dynamiques spatiales susceptibles de se produire dans un
+                futur proche. Il repose sur une représentation d'un
+                espace naturel suffisamment proche de la réalité pour
+                que les joueurs y retrouvent leurs repères habituels
+                mais suffisamment éloignée de cette réalité pour que le
+                jeu se déroule dans un contexte neutre, sans a priori.
+                Le jeu de rôle s'appuie sur le couplage entre un SMA
+                simplifié et un SIG permettant une sortie rapide de
+                représentations cartographiques thématiques à
+                différentes échelles. </p>
+              <h2>Références</h2>
+              <ul>
+                <li>Etienne M ., Le Page C. 2002. Modéliser les
+                  dynamiques paysagères pour accompagner un projet
+                  d'aménagement du territoire : le cas du Causse Méjan.
+                  In : Gérer les paysages de montagne pour un
+                  développement concerté et durable, CEP Florac (ed). </li>
+                <li>Etienne M ., Le Page C., Cohen M. 2003. A
+                  step-by-step approach to building land management
+                  scenarios based on multiple viewpoints on multi-agent
+                  system simulations. <a
+                    href="http://jasss.soc.surrey.ac.uk/6/2/2.html">Journal
+                    of Artificial Societies &amp; Social Simulations
+                    6(2) </a></li>
+              </ul>
+              <p>Pour en savoir plus, <a
+                  href="mailto:etienne@avignon.inra.fr">contactez
+                  l'auteur</a>.</p>
+              <!--#include virtual="/include/copyright_fr.inc" -->
+              <p></p>
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
+      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
+      position: fixed; z-index: 1000;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Cours</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

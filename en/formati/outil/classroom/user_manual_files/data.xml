@@ -1,0 +1,1907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisioDocument>
+	<DocumentProperties>
+		<Title></Title>
+		<HyperlinkBase href=""></HyperlinkBase>
+	</DocumentProperties>
+	<Pages>
+		<Page ID="0" Name="Page-1" NameU="Page-1">
+			<Layer IX="0">
+				<Name>Flowchart</Name>
+				<NameUniv>Flowchart</NameUniv>
+				<Visible>1</Visible>
+			</Layer>
+			<Layer IX="1">
+				<Name>Connector</Name>
+				<NameUniv>Connector</NameUniv>
+				<Visible>1</Visible>
+			</Layer>
+			<Layer IX="2">
+				<Name>Web Site Map Shapes</Name>
+				<NameUniv>Web Site Map Shapes</NameUniv>
+				<Visible>1</Visible>
+			</Layer>
+			<Shapes>
+				<Shape ID="214" UniqueID="{1F89E9A5-A0EE-4D59-8FAE-BEF3D62F5E99}" Name="Sheet.214" NameU="Sheet.214">
+					<XForm>
+						<PinX Unit="IN_F">6.930173918270171</PinX>
+						<PinY Unit="IN_F">3.029073622321993</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="213" UniqueID="{6B22A5AF-32ED-45C9-9A36-DBB19965DEF4}" Name="Document.16" NameU="Document.16" Master="16">
+					<XForm>
+						<PinX Unit="IN_F">6.930173918270171</PinX>
+						<PinY Unit="IN_F">3.029073622321993</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="142" UniqueID="{C2733EDC-351F-4BCA-9472-2163B6B63975}" Name="FTP.142" NameU="FTP.142" Master="10">
+					<Text>FireV1</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.210493504435016</PinX>
+						<PinY Unit="IN_F">4.347856172357903</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="149" UniqueID="{A9679489-4659-4444-A1B2-BF6DF91BD0C1}" Name="FTP.149" NameU="FTP.149" Master="10">
+					<Text>Flash</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.580852814128487</PinX>
+						<PinY Unit="IN_F">3.850128340608193</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="156" UniqueID="{ABEF038A-D9B2-4BB6-B3B3-840BAAECA902}" Name="FTP.156" NameU="FTP.156" Master="10">
+					<Text>Source</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.566852755356022</PinX>
+						<PinY Unit="IN_F">2.305284234888136</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="163" UniqueID="{A37FCCA1-C2E0-4D7D-980A-8585F1D305FB}" Name="Archive" NameU="Archive" Master="12">
+					<Text>1-1-1</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.818349413289645</PinX>
+						<PinY Unit="IN_F">3.217903693221048</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="170" UniqueID="{A029E2E8-C13B-44B7-940F-60D78D5C5D38}" Name="Archive.170" NameU="Archive.170" Master="12">
+					<Text>1-1</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.818349413289645</PinX>
+						<PinY Unit="IN_F">3.461067019139180</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="177" UniqueID="{7A7511D8-FD84-4F61-9678-5BB1A11046A7}" Name="Archive.177" NameU="Archive.177" Master="12">
+					<Text>1-1-2</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.818349413289645</PinX>
+						<PinY Unit="IN_F">2.974740367302916</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="184" UniqueID="{E6047382-B0EB-41E2-9F30-8A5752B8C7D4}" Name="Archive.184" NameU="Archive.184" Master="12">
+					<Text>Cp-FireV1.zip</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.818349413289645</PinX>
+						<PinY Unit="IN_F">1.953454398446759</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="191" UniqueID="{F29FAEAA-A4DB-425C-8CF4-43BAE13D35B4}" Name="Archive.191" NameU="Archive.191" Master="12">
+					<Text>FireV1.zip</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.818349413289645</PinX>
+						<PinY Unit="IN_F">2.731577041384783</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="198" UniqueID="{50DD15C3-7075-48A8-A3BC-EBE0870ED43C}" Name="Dynamic connector.198" NameU="Dynamic connector.198" Master="13">
+					<XForm>
+						<PinX Unit="IN_F">6.297108389606262</PinX>
+						<PinY Unit="IN_F">3.235005463333763</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="199" UniqueID="{E9EF2EB5-636C-4A78-9C3B-63D6019D1177}" Name="Dynamic connector.199" NameU="Dynamic connector.199" Master="13">
+					<XForm>
+						<PinX Unit="IN_F">6.304108418992493</PinX>
+						<PinY Unit="IN_F">4.007427516193791</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="200" UniqueID="{0BBEF072-E1A8-4D39-B242-AF555800A78A}" Name="Dynamic connector.200" NameU="Dynamic connector.200" Master="13">
+					<XForm>
+						<PinX Unit="IN_F">6.650968448525439</PinX>
+						<PinY Unit="IN_F">3.564032939584429</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="201" UniqueID="{2D676569-2A27-460C-8619-F869D3840D36}" Name="Dynamic connector.201" NameU="Dynamic connector.201" Master="13">
+					<XForm>
+						<PinX Unit="IN_F">6.650968448525439</PinX>
+						<PinY Unit="IN_F">3.442451276625363</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="202" UniqueID="{4FAE04AF-8018-4DD8-9AEA-D77C6D82E451}" Name="Dynamic connector.202" NameU="Dynamic connector.202" Master="13">
+					<XForm>
+						<PinX Unit="IN_F">6.650968448525439</PinX>
+						<PinY Unit="IN_F">3.320869613666297</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="203" UniqueID="{45E3D66C-C6A4-4F1B-B0D3-C5C9356FAD12}" Name="Dynamic connector.203" NameU="Dynamic connector.203" Master="13">
+					<XForm>
+						<PinX Unit="IN_F">6.650968448525439</PinX>
+						<PinY Unit="IN_F">3.199287950707231</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="134" UniqueID="{39F03F04-2380-45E0-8635-6BC8164DB012}" Name="Dynamic connector.134" NameU="Dynamic connector.134" Master="13">
+					<XForm>
+						<PinX Unit="IN_F">6.643968419139206</PinX>
+						<PinY Unit="IN_F">2.037804576378190</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="77" UniqueID="{6C4D672B-1B9E-4708-9077-B1FECA1EB855}" Name="Process.77" NameU="Process.77" Master="3">
+					<XForm>
+						<PinX Unit="IN_F">2.437500000000000</PinX>
+						<PinY Unit="IN_F">9.226562500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="87" UniqueID="{A1CF1D23-E5AF-40CE-813B-AC59F839EA80}" Name="Process.87" NameU="Process.87" Master="3">
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">7.812500000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="79" UniqueID="{380843FA-47ED-4984-8A57-C55A77C08D46}" Name="Process.79" NameU="Process.79" Master="3">
+					<XForm>
+						<PinX Unit="IN_F">2.437500000000000</PinX>
+						<PinY Unit="IN_F">6.250000000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="78" UniqueID="{91DD209B-D4DA-43BA-9A4A-4477FEEDE691}" Name="Process.78" NameU="Process.78" Master="3">
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">2.312500000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="16" UniqueID="{AA4FAC3E-AF46-4FBA-91D7-551BF5CC4DD0}" Name="Sheet.16" NameU="Sheet.16">
+					<XForm>
+						<PinX Unit="IN_F">-5.999999999999998</PinX>
+						<PinY Unit="IN_F">8.687499999999998</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="17" UniqueID="{4374BFC3-3869-4896-80D3-D1F6FBD9A414}" Name="Dynamic connector" NameU="Dynamic connector" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">10.234375000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="2" UniqueID="{0D8C9295-0C95-4AD4-87D5-159F08829070}" Name="Terminator" NameU="Terminator" Master="2">
+					<Text>START</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">10.414062500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="18" UniqueID="{FA2B2652-4B4A-4F15-AA1D-BD99B64C3B94}" Name="Process" NameU="Process" Master="3">
+					<Text>Go to /prod/en/outil/classrrom/example</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000001</PinX>
+						<PinY Unit="IN_F">9.632812500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="1" UniqueID="{7A689947-85D3-4DAA-818B-D7B2B588CBEA}" Name="Process.1" NameU="Process.1" Master="3">
+					<Text>Browse /FireModel/FireV1/source/</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000001</PinX>
+						<PinY Unit="IN_F">9.304687500000002</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="3" UniqueID="{11A6C723-EFCE-419A-9D40-68D10E07F8AA}" Name="Process.3" NameU="Process.3" Master="3">
+					<Text>Download CP-FireV1.zip</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000001</PinX>
+						<PinY Unit="IN_F">8.968750000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="4" UniqueID="{FDDD2997-110C-44C3-AC15-20082490C65E}" Name="Process.4" NameU="Process.4" Master="3">
+					<Text>Upzip FireV1.zip</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000001</PinX>
+						<PinY Unit="IN_F">8.632812500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="5" UniqueID="{23AEA828-1E0D-4B33-A2B4-BDEE3251559C}" Name="Process.5" NameU="Process.5" Master="3">
+					<Text>Open Adobe Captivate</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">7.695312499999999</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="7" UniqueID="{DCDD7836-BA41-4D02-90AE-90B8F50D1A7B}" Name="Process.7" NameU="Process.7" Master="3">
+					<Text>Select «Record or make a new project».</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">7.281250000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="8" UniqueID="{27808512-BE03-4E6D-A676-2875C4074809}" Name="Process.8" NameU="Process.8" Master="3">
+					<Text>Select «Software Simulation» 
+and «Custom size» 800 x 600</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">6.781250000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="22" UniqueID="{579D8E03-99CB-49AA-A301-6267B9B468FD}" Name="Process.22" NameU="Process.22" Master="3">
+					<Text>Add these three slides that you can copy from other tutorials and insert into this project.
+- The front page for showing section name
+- The end of the section
+- After the end</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">3.042969465255737</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="10" UniqueID="{9E97F982-97A6-45C7-8FC3-5A16B7050123}" Name="Dynamic connector.10" NameU="Dynamic connector.10" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000001</PinX>
+						<PinY Unit="IN_F">9.476562500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="11" UniqueID="{EE72C51C-584F-49D7-A357-20A561AD56CC}" Name="Dynamic connector.11" NameU="Dynamic connector.11" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000001</PinX>
+						<PinY Unit="IN_F">9.132812500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="12" UniqueID="{3AE67764-26A9-4B6F-8AE8-F80566DE38E1}" Name="Dynamic connector.12" NameU="Dynamic connector.12" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000001</PinX>
+						<PinY Unit="IN_F">8.794921875000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="13" UniqueID="{0DCB658C-BEC5-4532-AD03-AA001544EE6E}" Name="Dynamic connector.13" NameU="Dynamic connector.13" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">8.404299736022947</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="14" UniqueID="{96702924-6F87-4000-927E-7C588F631349}" Name="Process.14" NameU="Process.14" Master="3">
+					<Text>Press «Record» to start to record screenshots.</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">6.250000000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="15" UniqueID="{43AB6C97-3817-4183-B1DD-D5485A23C37D}" Name="Decision.15" NameU="Decision.15" Master="4">
+					<Text>To stop recording the project?</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">4.953125000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="24" UniqueID="{F694786F-141F-4C5A-9183-412AA82721D4}" Name="Process.24" NameU="Process.24" Master="3">
+					<Text>Press «End» to stop recording the project.</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">3.781250000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="25" UniqueID="{4660BA48-CD7F-4437-904D-966FE275E728}" Name="Dynamic connector.25" NameU="Dynamic connector.25" Master="0">
+					<Text>YES</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.191406250000000</PinX>
+						<PinY Unit="IN_F">4.679687500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="27" UniqueID="{3EFBD489-4841-4D21-AC83-310680BE19B0}" Name="Dynamic connector.27" NameU="Dynamic connector.27" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">7.500000000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="28" UniqueID="{16B3C5FA-BF82-487B-AF1C-288483035BF9}" Name="Dynamic connector.28" NameU="Dynamic connector.28" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">7.054687500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="29" UniqueID="{F6317BC0-4D59-44B7-8766-A3AE958B6CC5}" Name="Dynamic connector.29" NameU="Dynamic connector.29" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">6.507812500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="30" UniqueID="{85AFEE11-2C42-440B-8AAA-B8A993070F0E}" Name="Dynamic connector.30" NameU="Dynamic connector.30" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">5.984375000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="31" UniqueID="{A45454A4-DFD3-46B5-AAFF-27A5A6140CC5}" Name="Dynamic connector.31" NameU="Dynamic connector.31" Master="0">
+					<Text>NO</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.183593750000000</PinX>
+						<PinY Unit="IN_F">5.320312500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="9" UniqueID="{7A865F6F-0235-4C47-AC8B-A05CD4D46CCC}" Name="Process.9" NameU="Process.9" Master="3">
+					<Text>To demonstrate the tutorial on your computer.</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">5.687500000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="26" UniqueID="{290DE189-ED18-4FF3-BF52-E4531594103C}" Name="PC" NameU="PC" Master="7">
+					<XForm>
+						<PinX Unit="IN_F">3.718750000000000</PinX>
+						<PinY Unit="IN_F">5.687500000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember></LayerMember>
+					</LayerMem>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="11" Name="NetworkName" NameU="NetworkName">
+						<Value></Value>
+						<Label>Network Name</Label>
+					</Prop>
+					<Prop ID="12" Name="IPAddress" NameU="IPAddress">
+						<Value></Value>
+						<Label>IP Address</Label>
+					</Prop>
+					<Prop ID="13" Name="SubnetMask" NameU="SubnetMask">
+						<Value></Value>
+						<Label>Subnet Mask</Label>
+					</Prop>
+					<Prop ID="14" Name="AdminInterface" NameU="AdminInterface">
+						<Value></Value>
+						<Label>Administrative Interface</Label>
+					</Prop>
+					<Prop ID="15" Name="NumberofPorts" NameU="NumberofPorts">
+						<Value></Value>
+						<Label>Number of Ports</Label>
+					</Prop>
+					<Prop ID="16" Name="CommunityString" NameU="CommunityString">
+						<Value></Value>
+						<Label>Community String</Label>
+					</Prop>
+					<Prop ID="17" Name="NetworkDescription" NameU="NetworkDescription">
+						<Value></Value>
+						<Label>Network Description</Label>
+					</Prop>
+					<Prop ID="25" Name="MACAddress" NameU="MACAddress">
+						<Value></Value>
+						<Label>MAC Address</Label>
+					</Prop>
+					<Prop ID="18" Name="CPU" NameU="CPU">
+						<Value></Value>
+						<Label>CPU</Label>
+					</Prop>
+					<Prop ID="19" Name="Memory" NameU="Memory">
+						<Value></Value>
+						<Label>Memory</Label>
+					</Prop>
+					<Prop ID="20" Name="OperatingSystem" NameU="OperatingSystem">
+						<Value></Value>
+						<Label>Operating System</Label>
+					</Prop>
+					<Prop ID="26" Name="HardDriveSize" NameU="HardDriveSize">
+						<Value></Value>
+						<Label>Hard Drive Capacity</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="56" UniqueID="{7C68E062-E958-4CF5-9CFD-2AE2B54C7BFD}" Name="Dynamic connector.56" NameU="Dynamic connector.56" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">5.375000000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="57" UniqueID="{7175C348-FDE6-4FEA-B521-65FF695A4F03}" Name="Dynamic connector.57" NameU="Dynamic connector.57" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">3.542969465255736</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="58" UniqueID="{B805876B-BDB7-4971-8B88-3651CCB9BB93}" Name="Process.58" NameU="Process.58" Master="3">
+					<Text>Save the project (such as 1-1-1.cp)</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">2.281250000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="59" UniqueID="{4413192F-D50E-4445-9867-FF0E8D5AEAD3}" Name="Process.59" NameU="Process.59" Master="3">
+					<Text>Generate flash animate from the project.</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">1.812500000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="60" UniqueID="{13C699F5-2F44-4EC2-B1CE-5F22FBC45811}" Name="Process.60" NameU="Process.60" Master="3">
+					<Text>Program would general several HTML and flash files, rename the first HTML page(1-1-1.htm) for launching the tutorial to index.htm</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">1.281250000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="61" UniqueID="{0B37EB9F-C9D1-49A6-BF41-3BC1BAA1BCB4}" Name="Dynamic connector.61" NameU="Dynamic connector.61" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">2.531249284744263</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="62" UniqueID="{588A434E-1A52-42BB-9F61-4B212956BCF3}" Name="Dynamic connector.62" NameU="Dynamic connector.62" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">2.046875000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="63" UniqueID="{748C7CC6-D894-4FD0-9AA8-AD47644A6B90}" Name="Dynamic connector.63" NameU="Dynamic connector.63" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">1.578125715255737</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="64" UniqueID="{823A54FA-1ABD-48AA-9701-0CD70C743984}" Name="Process.64" NameU="Process.64" Master="3">
+					<Text>Upload folder of the flash to /prod/en/classroom/example/FireModel/FireV1/flash/</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">0.695312500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="65" UniqueID="{E8818F74-E065-420E-8D6D-8D55588EA4E7}" Name="Process.65" NameU="Process.65" Master="3">
+					<Text>Open FireV1.cp</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">9.519531071186066</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="66" UniqueID="{D25C26FB-CF36-4BAC-A8BC-B80912084116}" Name="Process.66" NameU="Process.66" Master="3">
+					<Text>To replace the new slides of the modified section into the FireV1.cp</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">8.976562500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="67" UniqueID="{75B9F464-DFDA-4838-B025-2FD23655C3C7}" Name="Process.67" NameU="Process.67" Master="3">
+					<Text>Save the FireV1.cp</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">8.460937500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="68" UniqueID="{7B56E924-E612-4ED2-A8E6-551069D1DC4C}" Name="Process.68" NameU="Process.68" Master="3">
+					<Text>Generate flash animation :
+- Click on Publish
+- Select Flash(SWF)
+- Set Out put options : Full screen and Zip file
+- Click on Preferences
+- Set password protection project and click OK
+- Finally, click Publish</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">7.519531071186066</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="69" UniqueID="{344A1019-18F7-4186-9E96-814DA5AC020A}" Name="Process.69" NameU="Process.69" Master="3">
+					<Text>To upload 
+
+- Flash animation of FireV1.zip to /flash folder
+
+- CP Source file of cp-FireV1.zip to /source</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.437500000000000</PinX>
+						<PinY Unit="IN_F">5.734375000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="70" UniqueID="{D7100A9A-CA6D-4F51-B59F-56E0CD3761B3}" Name="Process.70" NameU="Process.70" Master="3">
+					<Text>Save the FireV1.cp and zip the source file.</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">6.582031250000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="6" UniqueID="{F41A1EA7-F67B-48A5-AFB2-36309CA6A220}" Name="Dynamic connector.6" NameU="Dynamic connector.6" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">0.976562500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="19" UniqueID="{F479331C-02EB-4145-8761-E944F4648419}" Name="On-page reference" NameU="On-page reference" Master="8">
+					<Text>1</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.720703125000000</PinX>
+						<PinY Unit="IN_F">0.220703125000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1;0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="20" UniqueID="{42176F63-A9C0-4EE8-A0FE-24F60875AA1D}" Name="Dynamic connector.20" NameU="Dynamic connector.20" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">0.500000000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="21" UniqueID="{B21321D2-FD28-44E9-A80A-280257D57A0B}" Name="On-page reference.21" NameU="On-page reference.21" Master="8">
+					<Text>1</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">10.359375000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1;0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="71" UniqueID="{017BCE47-F7D5-493B-8D25-C9F3203A3838}" Name="Process.71" NameU="Process.71" Master="3">
+					<Text>3. Edit CP source file of a section &amp; re-generate it</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">4.250000000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="72" UniqueID="{EFEDEC61-D354-4506-9330-F819C648F805}" Name="Dynamic connector.72" NameU="Dynamic connector.72" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.812500000000000</PinX>
+						<PinY Unit="IN_F">4.015625000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="73" UniqueID="{9CC70180-D577-4FEB-BCE7-510A9BF1DC33}" Name="Process.73" NameU="Process.73" Master="3">
+					<Text>1. To get CP source file.</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">10.015622138977053</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="74" UniqueID="{54FFD54D-EC6B-4EF2-93E3-2B64C2AF4C45}" Name="Dynamic connector.74" NameU="Dynamic connector.74" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000001</PinX>
+						<PinY Unit="IN_F">9.796872138977053</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="75" UniqueID="{364B0FA1-B963-4528-9210-5C6F223446CF}" Name="Process.75" NameU="Process.75" Master="3">
+					<Text>2. To edit &amp; record on Adobe Captivate.</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.468750000000000</PinX>
+						<PinY Unit="IN_F">8.117190361022947</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="76" UniqueID="{12D20147-B1C2-4F92-8A18-B52313E555B3}" Name="Dynamic connector.76" NameU="Dynamic connector.76" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">2.766601562500000</PinX>
+						<PinY Unit="IN_F">0.421875000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="80" UniqueID="{8E5BD0C3-1A1A-4114-85C7-9FD3C599408B}" Name="Process.80" NameU="Process.80" Master="3">
+					<Text>4. Edit CP source file &amp; re-generate it</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">9.976562500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="23" UniqueID="{ECCF308E-0394-40EF-A6D2-E757C86FDFC1}" Name="Dynamic connector.23" NameU="Dynamic connector.23" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">10.175781250000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="81" UniqueID="{E6E5830D-4C2A-4D6E-A0F1-6F5344AF259C}" Name="Dynamic connector.81" NameU="Dynamic connector.81" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">9.738281071186066</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="82" UniqueID="{FFF1294C-62B2-46DD-9E95-EF1910D18262}" Name="Dynamic connector.82" NameU="Dynamic connector.82" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">9.289062500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="83" UniqueID="{C0BEAF51-C452-46E1-B4A8-C20B2AF7FBBF}" Name="Dynamic connector.83" NameU="Dynamic connector.83" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">8.679687500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="84" UniqueID="{713C2113-4394-4BB0-80A3-BBA88FF8A9E5}" Name="Dynamic connector.84" NameU="Dynamic connector.84" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">8.226562500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="85" UniqueID="{56334A5A-6516-4F3F-974E-F2C41B9A0FC8}" Name="Dynamic connector.85" NameU="Dynamic connector.85" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">6.375000000000000</PinX>
+						<PinY Unit="IN_F">6.816406071186066</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="86" UniqueID="{1D02439D-3FCE-43A4-ADCE-064311682683}" Name="Dynamic connector.86" NameU="Dynamic connector.86" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">6.406250000000000</PinX>
+						<PinY Unit="IN_F">6.359375000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="88" UniqueID="{4369D793-08B9-44CD-9D70-C18F2F4BE381}" Name="Terminator.88" NameU="Terminator.88" Master="2">
+					<Text>END</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.437500000000000</PinX>
+						<PinY Unit="IN_F">4.921875000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="89" UniqueID="{9C3AB628-31C5-4A81-93BC-5C910CD66431}" Name="Dynamic connector.89" NameU="Dynamic connector.89" Master="0">
+					<XForm>
+						<PinX Unit="IN_F">6.437500000000000</PinX>
+						<PinY Unit="IN_F">5.109375000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="90" UniqueID="{C40AABCE-1CA1-4E73-8338-6CC8F2864DD9}" Name="FTP" NameU="FTP" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">3.375000000000000</PinX>
+						<PinY Unit="IN_F">10.015622138977053</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="109" UniqueID="{42BB45AC-109A-4A72-918E-47A0C05BC440}" Name="Sheet.109" NameU="Sheet.109">
+					<XForm>
+						<PinX Unit="IN_F">3.906250000000000</PinX>
+						<PinY Unit="IN_F">8.117190361022947</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="99" UniqueID="{E1E81839-F248-464F-9E8A-1CDAADFDEEEA}" Name="Program" NameU="Program" Master="11">
+					<XForm>
+						<PinX Unit="IN_F">3.824736065796886</PinX>
+						<PinY Unit="IN_F">8.117190361022947</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="110" UniqueID="{46E44141-5B12-4619-B2D2-59BC05549A01}" Name="Sheet.110" NameU="Sheet.110">
+					<XForm>
+						<PinX Unit="IN_F">4.345208928546071</PinX>
+						<PinY Unit="IN_F">4.250000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="111" UniqueID="{506EA564-B919-46C2-8094-247F56E8CD57}" Name="Program" NameU="Program" Master="11">
+					<XForm>
+						<PinX Unit="IN_F">4.263694994342957</PinX>
+						<PinY Unit="IN_F">4.250000000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="122" UniqueID="{F3B10155-EAE1-4449-A092-B898F3C21076}" Name="Sheet.122" NameU="Sheet.122">
+					<XForm>
+						<PinX Unit="IN_F">7.470208928546071</PinX>
+						<PinY Unit="IN_F">9.976562500000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="123" UniqueID="{C40DBF1F-CC6B-45BC-B702-9534FBEA44A6}" Name="Program" NameU="Program" Master="11">
+					<XForm>
+						<PinX Unit="IN_F">7.388694994342957</PinX>
+						<PinY Unit="IN_F">9.976562500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="136" UniqueID="{434EBE0D-6609-414C-A8D7-37BDE6C5B588}" Name="Archive" NameU="Archive" Master="12">
+					<XForm>
+						<PinX Unit="IN_F">5.073611111111111</PinX>
+						<PinY Unit="IN_F">0.695312500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>2</LayerMember>
+					</LayerMem>
+					<Scratch>
+						<B>
+							<SolutionXML>
+								<HLURL:Hyperlinks xmlns:HLURL="urn:schemas-microsoft-com:office:visio:dghlinkext">
+									<HLURL:Hyperlink ID="1">
+										<HLURL:Description></HLURL:Description>
+										<HLURL:Address></HLURL:Address>
+										<HLURL:SubAddress></HLURL:SubAddress>
+										<HLURL:ExtraInfo></HLURL:ExtraInfo>
+										<HLURL:Default>0</HLURL:Default>
+										<HLURL:NewWindow>0</HLURL:NewWindow>
+										<HLURL:AbsoluteURL></HLURL:AbsoluteURL>
+									</HLURL:Hyperlink>
+								</HLURL:Hyperlinks>
+							</SolutionXML>
+						</B>
+					</Scratch>
+					<Prop ID="1" Name="Title" NameU="Title">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Title</Label>
+					</Prop>
+					<Prop ID="2" Name="Error" NameU="Error">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Error</Label>
+					</Prop>
+					<Prop ID="3" Name="FileSize" NameU="FileSize">
+						<Value Unit="STR">Unknown</Value>
+						<Label>File size</Label>
+					</Prop>
+					<Prop ID="4" Name="ModDate" NameU="ModDate">
+						<Value Unit="STR">Unknown</Value>
+						<Label>Last modification date</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="206" UniqueID="{8E7CC907-8D00-4A32-A53C-6442FD92FEB8}" Name="Line-curve connector" NameU="Line-curve connector" Master="14">
+					<XForm>
+						<PinX Unit="IN_F">5.897347597016751</PinX>
+						<PinY Unit="IN_F">2.019108096610524</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="207" UniqueID="{8AC0395E-38BB-4AF6-B7D1-A0282A561C12}" Name="Line-curve connector.207" NameU="Line-curve connector.207" Master="14">
+					<XForm>
+						<PinX Unit="IN_F">7.635878658145640</PinX>
+						<PinY Unit="IN_F">4.135319770692392</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="209" UniqueID="{306AFA09-8131-42C8-B9C6-B1CEC0C7014C}" Name="Line-curve connector.209" NameU="Line-curve connector.209" Master="14">
+					<XForm>
+						<PinX Unit="IN_F">7.803319580729182</PinX>
+						<PinY Unit="IN_F">3.933758449223380</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="210" UniqueID="{FB24D154-A45D-4DCC-AC60-207498FE4E15}" Name="Sheet.210" NameU="Sheet.210">
+					<XForm>
+						<PinX Unit="IN_F">7.468750000000000</PinX>
+						<PinY Unit="IN_F">5.539062500000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="98" UniqueID="{74AE3622-6B7B-4DA2-9AF8-403A63237E20}" Name="Process.98" NameU="Process.98" Master="3">
+					<XForm>
+						<PinX Unit="IN_F">7.468750000000000</PinX>
+						<PinY Unit="IN_F">5.539062500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="208" UniqueID="{E7241157-0A96-4DAB-BCAA-805000585548}" Name="Sheet.208" NameU="Sheet.208">
+					<XForm>
+						<PinX Unit="IN_F">7.625000000000000</PinX>
+						<PinY Unit="IN_F">5.914062500000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="211" UniqueID="{DD7E24B7-2C19-48B4-A0CF-9FDF886CBEE6}" Name="Process.98" NameU="Process.98" Master="3">
+					<XForm>
+						<PinX Unit="IN_F">7.625000000000000</PinX>
+						<PinY Unit="IN_F">5.914062500000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="215" UniqueID="{9E98EA96-DF31-490A-8973-9BF1ABDC0F89}" Name="Rectangle" NameU="Rectangle" Master="19">
+					<Text>User Manual to Edit &amp; Improve CORMAS Tutorial</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.562500000000000</PinX>
+						<PinY Unit="IN_F">10.750000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="216" UniqueID="{8C67AB5C-79E8-4E25-B183-2596F2F1BA66}" Name="Rectangle.216" NameU="Rectangle.216" Master="19">
+					<Text>Note :  If you add a new section into a lesson, then you will need to add section name and create a like in the front page in FireV1.cp</Text>
+					<XForm>
+						<PinX Unit="IN_F">7.031250000000000</PinX>
+						<PinY Unit="IN_F">0.812500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="217" UniqueID="{630030F0-E442-4BA3-9A93-4849333F3AD4}" Name="Process.217" NameU="Process.217" Master="3">
+					<Text>Updated on July, 25, 2007</Text>
+					<XForm>
+						<PinX Unit="IN_F">7.375000000000000</PinX>
+						<PinY Unit="IN_F">0.220703125000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+			</Shapes>
+		</Page>
+	</Pages>
+</VisioDocument>

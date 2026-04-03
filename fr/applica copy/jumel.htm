@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title> Echanges economiques et organisations emergentes</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    
+    
+    height: 80px;
+    
+    
+     /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+} width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; width: 100vw; background-color: #FFA500; position: relative; margin-left: -180px; left: 0; z-index: 1001; width: 100vw; background-color: #FFA500; margin-left: 0;; z-index: 1001;
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFCC99;
+    padding: 20px;
+     /* En dessous du bandeau */
+    box-sizing: border-box;
+} position: fixed; z-index: 1000; position: fixed; z-index: 1000;; z-index: 1000;
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFCC99;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style=" width: 100vw;
+      background-color: #FFA500; position: relative; margin-left: 0;
+      left: 0; right: 0; z-index: 1001;">
+      <div class="header-image-container">
+        <img alt="Description de l'image" src="../../images/bandeau.jpg">
+      </div>
+    </div>
+    <div class="container"><!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" height="23" width="23">
+      <!--#include virtual="haut.inc" -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp; </p>
+              <h1>JuMel</h1>
+              <h2>Echanges économiques et organisations émergentes </h2>
+              <p>Juliette Rouchier, Manchester Metropolitan University.</p>
+              <img src="/images/applica/jumel.jpg" height="169"
+                vspace="10" width="245" hspace="10" align="right">
+              <p>Juliette Rouchier travaille maintenant au Centre for
+                Policy Modelling, à la Manchester Metropolitan
+                University. Le travail présenté ici correspond au
+                travail de thèse, dont une grande partie a été effectuée
+                en collaboration avec Mélanie Requier-Desjardins.</p>
+              <h2>Modéliser les échanges de biens</h2>
+              <p>Dans la simulation en systèmes multi-agents, le
+                questionnement sur lequel sest principalement penchée
+                Juliette Rouchier est celui de la création de sens due a
+                la répétition déchanges de biens dans un groupe.</p>
+              <p>On peut, comme c'est souvent le cas, considérer
+                l'échanges de biens comme un simple moyen de faire
+                circuler de la marchandise. On peut par ailleurs
+                insister sur des aspects plus symboliques, et donc
+                sociaux et cognitifs, et essayer de voir comment ces
+                actions individuelles permettent de reconnaître une
+                structure dans un groupe. Pour tout échange il existe
+                des règles spécifiques. Celles-ci peuvent être
+                respectées par les individus qui constituent le groupe
+                ou ne pas l’être, du fait d’un choix ou dune incapacité.
+                Chaque règle commune au groupe définit des attentes. De
+                plus, les actes de chacun des agents sont observés par
+                au moins une partie des autres, et sont alors
+                interprétés en fonction des attentes. En cela, un
+                travail sur les échanges de biens semble pouvoir
+                largement bénéficier de l’utilisation du système
+                multi-agents : la communication qui est définie est
+                l’échange lui-même, chaque agent possède des règles
+                d’interprétation des actions des autres liées aux
+                attentes définies, ce qui leur permet de se construire
+                une représentation des autres en les observant.</p>
+              <p>Le travail de modélisation mené par Juliette Rouchier a
+                donné naissance a trois modèles distincts, qui sont
+                basés sur deux formes d'échanges habituellement
+                différenciées, les échanges marchands et les échanges
+                non marchands. Les trois modèles sont axés sur l’analyse
+                de structures émergentes au sein du groupe, qui
+                apparaissent grâce à la répétition d'un grand nombre de
+                ces échanges. Le modèle présenté ici a été construit en
+                s'inspirant des résultats du travail de terrain de
+                Mélanie Requier-Desjardins. Dans celui-ci les échanges
+                représentés prennent la forme d'échanges marchands. Les
+                autres modèles sont des travaux inspirés de données
+                purement théoriques (voir la page <a
+                  href="potlatch.htm">Potlatch</a>).</p>
+              <p> Comme tous ces modèles ont été construit pendant la
+                période ou CORMAS était créé, ce logiciel na pas été
+                utilisé, et les interfaces dutilisation ont été
+                construites indépendamment. Néanmoins, l'approche
+                utilisée reste très proche d'une conception basée sur
+                CORMAS. </p>
+              <h2>Régularité dans les échanges marchands au
+                Nord-Cameroun : un exemple inspiré du terrain</h2>
+              <p>Le travail sur les échanges marchands a été effectué en
+                complément dune étude de terrain concernant les
+                pratiques d'échanges des éleveurs transhumants de
+                l'Extreme-Nord du Cameroun. Ceux-ci se déplacent chaque
+                année avec leurs bêtes pour pouvoir les nourrir malgré
+                les changements de végétation locaux en fonction des
+                saisons. Mélanie Requier-Desjardins avait noté la grande
+                régularité des parcours des transhumants, qui
+                s'installaient prés des mêmes villages chaque année. En
+                général, faire pâturer les animaux dans une zone
+                implique d'avoir également des possibilités pour
+                échanger des biens avec les éleveurs. Dans certains cas,
+                l’accès à la terre elle-même a un coût, car des
+                agriculteurs font payer aux éleveurs le droit de
+                s'installer sur leurs champs. Il existe également une
+                pratique généralement respectée qui veut que les
+                éleveurs fassent un don au chef pour avoir
+                l'autorisation d’être sur son territoire. Dans une
+                approche économique, on a voulu évaluer dans quelle
+                mesure on pouvait considérer que la familiarité créée
+                avait un intérêt en terme de coûts pour les individus
+                qui effectue les échanges ou si cette familiarité
+                correspondait au respect de certaines règles sociales de
+                régularité.</p>
+              <p>C'est pour cela qu'un modèle multi-agents a été
+                construit pour représenter les échanges entre deux
+                populations qui se rencontrent saisonnièrement et qui
+                établissent des contrats.</p>
+              <p align="center"><img src="/images/applica/jumel1.gif"
+                  height="217" width="235"></p>
+              <p align="center">Figure 1. Interface du modèle</p>
+              <p> Dans le modèles, il existent trois populations
+                d'agents, les transhumants, les sédentaires et les
+                chefs. Les transhumants doivent avoir accès à l'eau
+                (gérée par les chefs) et a la terre (gérée par les
+                sédentaires), et pour cela ils font des demandes aux
+                chefs et sédentaires, a qui ils donnent de l'argent pour
+                les accès (argent qu'ils obtiennent en vendant des
+                bêtes). Le coût des accès pour chacune des ressources
+                est répartie au hasard au départ. Certaines règles
+                permettent au chef et au sédentaire de déterminer face a
+                chaque demande d'un transhumant, si celui-ci peut avoir
+                accès ou non a la ressource, et quelle quantité il
+                recevra. On s'est proposé d'analyser deux formes
+                d'apprentissage des relations pour les transhumants. La
+                première est valable lorsque les transhumants ne
+                s'intéressent qua la qualité de la relation et préfèrent
+                avoir des relations avec des éleveurs qui leur offre le
+                plus d'acces en en refusant le moins. La seconde repose
+                sur une notion de coût, ou les agents comparent combien
+                chaque accès leur fera dépenser et choisissent le moins
+                cher. Pour cette dernière méthode, le coût que le
+                transhumant anticipe de l’accès évolue : a chaque acces
+                accepté, le transhumant connaît le prix réel du
+                sédentaire, à chaque accès refusé, il ajoute une
+                constante au prix anticipé précédemment (comme il risque
+                de perdre des animaux s'il a trop d’accès refusés, on
+                conçoit chaque refus comme un surcoût). Il faut noter
+                que dans le modèle les transhumants choisissent d'abord
+                un village qui leur semble globalement intéressant, soit
+                parce qu'il a le coût d’accès moyen pour l'eau et le
+                pâturage le plus bas, soit parce que les refus d’accès
+                et les mauvais accès à l'eau y ont été le moins nombreux
+                en tout.</p>
+              <p align="center"><img src="/images/applica/jumel2.gif"
+                  height="218" width="290"></p>
+              <p align="center">Figure 2. Relations d'un transhumant
+                pour une simulation où il choisit au moindre coût. On
+                lit en abscisse la date et en ordonnée les noms des
+                sédentaires. Un point indique qu'il y a eu rencontre
+                entre le transhumant et le sédentaire qui porte ce nom.
+                Les sédentaires sont repartis par village et leurs noms
+                sont aussi regroupés par huit (de 1 a 8 premier village,
+                de 9 a 16 second, etc.). Ici, on voit que les relations
+                sont soit très stables soit très occasionnelles et
+                concernent peu de sédentaires différents. </p>
+              <p>Des simulations ont été menées pour comparer les deux
+                approches. Pour observer comment le système se comporte,
+                on utilise certains critères : le nombre d'animaux et
+                leur répartition entre les transhumants, l'état de la
+                ressource (défini par le nombre d'animaux quelle peut
+                supporter au maximum), la forme des relations pour
+                chaque transhumant. Considérant le sujet d'étude choisi,
+                c'est une bonne survie des animaux et la conservation de
+                la ressource que l'on considère comme une réussite. Pour
+                rester proche de ce qui est connu de la réalité du
+                terrain, on cherche aussi a observer des transhumants
+                artificiels avec des relations plutôt diversifiées.</p>
+              <p align="center"><img src="/images/applica/jumel3.gif"
+                  height="223" width="365"></p>
+              <p align="center">Figure 3. Résultats de production dans
+                un univers créé pour une simulation où les agents
+                choisissent la priorité aux coûts après 50 pas de temps
+                où ils choisissent au hasard. On lit en abscisse la date
+                et en ordonnée un nombre de bêtes : en rose la qualité
+                de la ressource (nombre total de bêtes qui serait
+                supportable) et en noir le nombre de bêtes présentes.
+                Ici, le changement de rationalité (du hasard à la
+                priorité aux coûts) se traduit en une chute brusque du
+                nombre de bêtes et de la qualité.</p>
+              <p>Les simulations effectuées ont été étudiées par
+                comparaison : on observait le même type de simulation
+                selon les mêmes critères pour les différentes
+                rationalités des agents. On a en particulier ajouté aux
+                simulations ou les coûts sont importants et celles ou
+                les relations sont importantes, des simulations ou les
+                choix sont faits au hasard. Ces dernières sont celles
+                qui ont permis de comprendre un peu mieux la dynamique
+                de la ressource : elles donnaient les meilleurs
+                résultats et servaient de valeur de référence d'un " bon
+                usage de la ressource " pour chaque scénario.</p>
+              <p>Ce qui apparaît dans les simulations, c'est que dans
+                quelques conditions que ce soit, dans les simulations ou
+                les transhumants cherchent a renouveler leurs meilleures
+                relations la ressource est beaucoup mieux conservée.
+                Dans les simulations ou les agents choisissent au
+                moindre coût, des que les transhumants adoptent cette
+                rationalité, la capacité a supporter des bêtes décroît
+                en moyenne dune façon radicale pour les champs de tous
+                les sédentaires. Les relations que les transhumants
+                entretiennent se révèlent très différentes selon leur
+                méthode de choix. Dans le cadre dune préférence aux
+                meilleures relations, chaque agent a des liens réguliers
+                avec au moins une douzaine de sédentaires qui
+                appartiennent a au moins six villages. Avec un choix qui
+                mène vers le moins cher, les agents ne connaissent de
+                façon régulière que moins de six sédentaires, dans trois
+                villages. On identifie la principale raison de
+                l'importante dégradation quand les transhumants
+                recherchent l’accès le moins cher comme étant une
+                mauvaise répartition sur les terres : tous les
+                transhumants vont dans les mêmes villages pour demander
+                aux sédentaires qui sont " objectivement " les moins
+                chers et ne peuvent en conséquence pas tous avoir
+                d’accès. Pendant que ce sédentaire, et ceux du même
+                village que lui, reçoivent un grand nombre de demandes
+                et acceptent souvent trop de bêtes sur leurs terres, les
+                sédentaires des autres villages voient leur terre
+                dégradée par manque de bêtes. En effet, avec cet
+                apprentissage, les agents partagent une classification
+                commune des meilleurs accès pendant toute la simulation.
+                Avec l'autre apprentissage, la vision de chacun est
+                purement individuelle, et les transhumants n'ont pas
+                tendance a aller sur les mêmes terres ou dans les mêmes
+                villages. Cet apprentissage permet en outre d'avoir un
+                classement beaucoup plus changeant au cours du temps
+                pour chacun des transhumants, ce qui se traduit en une
+                grande diversité de rencontres. </p>
+              <p>Pour rapprocher des observations de terrain, on note
+                que la modélisation ou les transhumants préfèrent
+                renouveler les bons contacts est celle qui engendre une
+                société artificielle ou les relations ressemblent le
+                plus a ce qui est observable dans la réalité. On peut
+                alors voir dans les résultats des autres simulations ce
+                que pourraient etre les conséquences dune politique de
+                monétarisation de l’accès aux ressources. Si c'est par
+                des taxes et des droits d’accès principalement que l'on
+                choisit de réglementer les parcours des transhumants, il
+                se peut qu'il n'y ait guère d'alternative pour des
+                éleveurs qui ne possèdent pas beaucoup d'argent, et
+                qu'ils doivent baser leurs choix exclusivement sur les
+                coûts. On peut supposer que chaque parcours reviendrait
+                plus ou moins cher en fonction des taxes locales ou le
+                long des parcours. On voit dans les simulations qu'il
+                existe alors un risque que tous les intéressés essaient
+                d'atteindre les memes lieux, délaissant ceux qui sont
+                moins intéressants en terme monétaire. Or la mauvaise
+                répartition dans le temps et l'espace des troupeaux
+                semble la principale cause de dégradation des terres
+                fragiles de la zone soudano-sahélienne. </p>
+              <p>Dans le modèle, il y a une corrélation assez forte
+                entre le nombre dagents rencontrés au cours du temps et
+                les bons résultats dans l'usage de la ressource. Il
+                semblerait donc plus pertinent de chercher des solutions
+                qui laissent une large place a la possibilité pour les
+                éleveurs de se déplacer librement, afin qu'ils occupent
+                le'space de facon harmonieuse. </p>
+              <p>Pour en savoir plus, téléchargez le <a
+                  href="/pdf/thesejr.pdf">résumé court de thèse</a>
+                (format Pdf, 8 ko) et le <a href="/pdf/thesejr2.pdf">résumé
+                  long</a> (format Pdf, 814 ko) ou <a
+                  href="mailto:j.rouchier@mmu.ac.uk">contactez l'auteur</a>.</p>
+              <!--#include virtual="/include/copyright_fr.inc" -->
+              <p></p>
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; top: 0; left: 0;
+      width: 180px; height: 100%; padding: 20px; box-sizing: border-box;
+      position: fixed; z-index: 1000;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Cours</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
