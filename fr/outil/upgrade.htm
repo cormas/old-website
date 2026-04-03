@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
@@ -6,87 +7,81 @@
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
 <style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    position: relative;
-    background-color: #FFA500;
-    height: 80px;
-    width: 100vw;
-    margin-left: -180px;
-    z-index: 1001; /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-}
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-    z-index: 1000; /* En dessous du bandeau */
-    box-sizing: border-box;
-}
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</style></head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0">
-<div class="header-container">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 <!--#include virtual="sommair.inc" -->
 <td bgcolor="#FFFFFF" valign="top" width="*">
@@ -97,30 +92,30 @@ tbody td.content-cell {
       </h2>
 <ol>
 <li>Faire tourner son modèle avec la version de Cormas précédemment 
-          installée, sassurer que tout est ok, puis exporter son modèle. 
+          installée, s'assurer que tout est ok, puis exporter son modèle. 
         </li>
 <li>Renommer les sous-répertoires de Cormas "<i>kernel</i>", "<i>messages</i>" 
-          et "<i>models</i>" sils existent sur votre disque dur en "<i>kernel-old</i>", 
+          et "<i>models</i>" s'ils existent sur votre disque dur en "<i>kernel-old</i>", 
           "<i>messages-old</i>" et "<i>models-old</i>". Il est plus sûr 
-          de garder une copie de lancienne version ! Cette étape doit 
-          permettre déviter décraser lancienne version en cherchant 
+          de garder une copie de l'ancienne version ! Cette étape doit 
+          permettre d'éviter d'écraser l'ancienne version en cherchant 
           à installer la nouvelle (cf. étape 3). </li>
 <li>Télécharger la nouvelle version de Cormas: dézipper 
           les nouveaux sous-répertoires "<i>kernel</i>" et "<i>messages</i>" 
-          qui constituent larchive zip <i>cormas2001.zip</i> sous le répertoire 
+          qui constituent l'archive zip <i>cormas2001.zip</i> sous le répertoire 
           Cormas. ("<i>Use folder names</i>" doit être coché dans 
           WinZip afin que la structure des sous-répertoires soit créée 
-          au cours de lextraction). </li>
-<li> Contruire une image cormas2001 à partir dune copie du fichier 
+          au cours de l'extraction). </li>
+<li> Contruire une image cormas2001 à partir d'une copie du fichier 
           <i>visual.im</i> (qui se trouve dans le sous-répertoire <i>image</i> 
           de Vw3) que vous devez placer dans le répertoire Cormas. Suivre 
-          la procédure dinstallation de Cormas décrite dans le 
-          manuel, puis sauver limage sous le nom <i>cormas2001.im</i> </li>
+          la procédure d'installation de Cormas décrite dans le 
+          manuel, puis sauver l'image sous le nom <i>cormas2001.im</i> </li>
 <li>Tester cette nouvelle version en important le modèle "<i>Pursuit</i>". 
           <ul>
 <li>Créer, si besoin est, un sous-répertoire "<i>models</i>" 
               sous le répertoire Cormas. </li>
-<li>Télécharger larchive contenant le modèle 
+<li>Télécharger l'archive contenant le modèle 
               depuis la <a href="/fr/applica/pursuit.htm">page web décrivant 
               cette application</a>.</li>
 <li>Dézipper cette archive dans le sous-répertoire "<i>models</i>". 
@@ -128,10 +123,10 @@ tbody td.content-cell {
 <li>Importer le modèle dans Cormas et le tester.</li>
 </ul>
 </li>
-<li>Faire une copie de son modèle Cormas (supposons quil sappelle 
+<li>Faire une copie de son modèle Cormas (supposons qu'il s'appelle 
           "<i>aaa</i>"): copier tout le répertoire "<i>aaa</i>" situé 
           dans "<i>models-old</i>" dans le répertoire "<i>models</i>". 
-          Sil existe un sous-répertoire "<i>cartes</i>", le renommer "<i>maps</i>". 
+          S'il existe un sous-répertoire "<i>cartes</i>", le renommer "<i>maps</i>". 
         </li>
 <li>Vérifier que les noms des entités génériques 
           de Cormas sont à jour. Ouvrir un SystemBrowser et se positionner 
@@ -150,63 +145,63 @@ tbody td.content-cell {
 <li>Agent_Communication -&gt; AgentComm </li>
 <li>Agent_Location -&gt; AgentLocation</li>
 </ul>
-<li>Vérifier lexistence du texte "<i>self random</i>", quil 
+<li>Vérifier l'existence du texte "<i>self random</i>", qu'il 
           faut remplacer systématiquement par "<i>Cormas random</i>". Sauver 
           alors le fichier <i>aaa.st</i> </li>
-<li>Essayer dimporter votre modèle depuis Cormas. Le nom <i>aaa</i> 
+<li>Essayer d'importer votre modèle depuis Cormas. Le nom <i>aaa</i> 
           doit apparaître dans la liste des modèles susceptibles 
-          dêtre importés. </li>
+          d'être importés. </li>
 <li>Il faut ensuite renommer quelques protocoles. </li>
 <ul>
 <li>Pour chacune des entités ayant des points de vue, il faut 
-            renommer le protocole précédemment appelé <i>pdv</i> 
-            (pour "points de vue") en <i>pov</i> (pour "points of view")... 
+            renommer le protocole précédemment appelé '<i>pdv</i>' 
+            (pour "points de vue") en '<i>pov</i>' (pour "points of view")... 
           </li>
 <li>Pour la classe du modèle (accessible en cliquant sur le bouton 
             <i>Préparer et contrôler</i>), il faut renommer le protocole 
-            précédemment appelé <i>controle</i> en <i>control</i>. 
+            précédemment appelé '<i>controle</i>' en '<i>control</i>'. 
           </li>
 </ul>
 <li>Avec la version 2001 de Cormas 2001, une valeur unique est automatiquement 
-          assignée à lattribut "<i>id</i>" de chaque instance dagent 
+          assignée à l'attribut "<i>id</i>" de chaque instance d'agent 
           (entité sociale) nouvellement créée. Ce processus 
-          est basé sur une variable dinstance de classe appelée 
+          est basé sur une variable d'instance de classe appelée 
           "<i>CurrentId</i>" et sur trois méthodes regroupées dans 
           le protocole "<i>id</i>". Avec la version 2001 de Cormas, cette variable 
-          dinstance de classe et ce protocole sont automatiquement créés 
-          lors de la définition dun nouvel agent au moyen de linterface 
+          d'instance de classe et ce protocole sont automatiquement créés 
+          lors de la définition d'un nouvel agent au moyen de l'interface 
           de Cormas. Ici, pour chacun des agents de votre modèle, il va 
-          falloir les rajouter manuellement à partir dun SystemBrowser... 
+          falloir les rajouter manuellement à partir d'un SystemBrowser... 
           Prendre exemple sur "<i>Pusuit_Prey</i>" et ne pas hésiter à 
           user du <ctrl-c> <crtl-v>&lt;Ctrl-C&gt; &lt;Ctrl-V&gt;... </crtl-v></ctrl-c></li>
 <li>Dans les méthodes du protocole "<i>init</i>" de votre modèle 
           (bouton <i>Préparer et contrôler</i>), les instructions 
-          générales dinitialisation sont désormais très 
+          générales d'initialisation sont désormais très 
           simples. Les trois instructions de base sont "<i>initCells</i>", "<i>initAgents</i>" 
           et "<i>initCharts</i>". Prendre à nouveau "<i>Pursuit</i>" 
           comme exemple. 
           <ul>
 <li>"<i>initCells</i>", défini au niveau de la classe générique 
               "<i>Cormas_Model</i>", est utilisé pour récupérer 
-              la collection dentités spatiales élémentaires 
+              la collection d'entités spatiales élémentaires 
               créées à partir de la grille spatiale, stocker 
-              cette collection dans lattribut correspondant du modèle 
+              cette collection dans l'attribut correspondant du modèle 
               (<i>thePursuit_Cells</i> par exemple), et qussi pour envoyer le 
               message "<i>init</i>" à chaque de ces entités spatiales 
               élémentaires. Noter que "<i>initAndCleanSpatialGrid</i>" 
-              nest plus utilisé. </li>
+              n'est plus utilisé. </li>
 <li>"<i>initAgents</i>" est la méthode dans laquelle vous devez 
               créer vos agents. Il faut donc écrire une méthode 
               "initAgents" spécifique à votre modèle. 
               La première instruction de cette méthode doit être 
               "<i>super initAgents</i>", afin de remettre à zéro 
-              le compteur didentifiants "<i>CurrentId</i>" pour toutes les 
-              classes dagents du modèle. Lorsquune nouvelle instance 
-              dagent est créée, on doit systématiquement 
+              le compteur d'identifiants "<i>CurrentId</i>" pour toutes les 
+              classes d'agents du modèle. Lorsqu'une nouvelle instance 
+              d'agent est créée, on doit systématiquement 
               lui envoyer le message "<i>init</i>", sous peine de déclencher 
-              une erreur. Si votre classe dagent possède déjà 
-              une méthode "<i>init</i>", vous devez y rajouter linstruction 
-              "<i>super init</i>", afin de déclencher lexécution 
+              une erreur. Si votre classe d'agent possède déjà 
+              une méthode "<i>init</i>", vous devez y rajouter l'instruction 
+              "<i>super init</i>", afin de déclencher l'exécution 
               de la méthode générique "<i>initId</i>" 
               qui se charge de délivrer la valeur courante pour son identifiant. 
             </li>
@@ -218,19 +213,19 @@ tbody td.content-cell {
           exactement de la même manière. Le manuel décrit 
           les changements qui sont intervenus. Pour la mise à jour des 
           valeurs qui seront dessinées sur vos graphiques, vous devez désormais 
-          simplement ajouter linstruction "<i>self initCharts</i>" dans les méthodes 
+          simplement ajouter l'instruction "<i>self initCharts</i>" dans les méthodes 
           "<i>init</i>" de votre modèle et "<i>self updateCharts: t</i>" 
           dans les méthodes du protocole "<i>control</i>". Les instructions 
           relatives au calcul des valeurs suivies au cours du temps par les graphiques 
           sont à entrer dans une méthode propre à chaque 
           graphique. Avec la nouvelle version de Cormas, dès que le nom 
-          dun nouveau graphique est saisi, une fenêtre dédition 
-          de code apparaît, et cest à ce moment-là que lon 
-          écrit linstruction correspondante, dans une méthode dont 
+          d'un nouveau graphique est saisi, une fenêtre d'édition 
+          de code apparaît, et c'est à ce moment-là que l'on 
+          écrit l'instruction correspondante, dans une méthode dont 
           le nom est composé à partir du nom du graphique auquel 
           on accole "<i>Data</i>" (cf. par exemple "<i>nbPreys</i>" 
           et "<i>nbPreysData</i>"). Ici comme pour le point 10, vous allez devoir 
-          faire ces ajustements manuellement à partir dun SystemBrowser... 
+          faire ces ajustements manuellement à partir d'un SystemBrowser... 
         </li>
 <li>Exporter puis importer votre modèle pour forcer une initialisation 
           complète. </li>
@@ -242,18 +237,5 @@ tbody td.content-cell {
 </td>
 </tr>
 </table>
-</div>
-<div id="sidebar">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

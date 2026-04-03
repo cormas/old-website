@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
@@ -5,89 +6,82 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
-
 <style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    position: relative;
-    background-color: #FFA500;
-    height: 80px;
-    width: 100vw;
-    margin-left: -180px;
-    z-index: 1001; /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-}
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-    z-index: 1000; /* En dessous du bandeau */
-    box-sizing: border-box;
-}
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-
-</head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0">
-<div class="header-container">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 <!--#include virtual="sommair.inc" -->
 <td bgcolor="#FFFFFF" valign="top" width="*">
@@ -123,9 +117,9 @@ tbody td.content-cell {
 <h2>2005</h2>
 <p>Belem M. 2005. Couplage entre système multi-agents et programmation mathématique 
         : application à la simulation de la dynamique des ressources en carbone 
-        d’un terroir au Burkina-Faso. Mémoire de DEA 'Informatique: systèmes 
-        intelligents" de l’Université Paris Dauphine, France. <a href="/pdf/deaBelem.pdf" target="_blank"><img border="0" height="14" src="/images/renvoi.gif" width="14"/></a></p>
-<p>Dionnet, M. 2005. Pour une gestion paysanne de l’agrobiodiversité : le 
+        dun terroir au Burkina-Faso. Mémoire de DEA 'Informatique: systèmes 
+        intelligents" de lUniversité Paris Dauphine, France. <a href="/pdf/deaBelem.pdf" target="_blank"><img border="0" height="14" src="/images/renvoi.gif" width="14"/></a></p>
+<p>Dionnet, M. 2005. Pour une gestion paysanne de lagrobiodiversité : le 
         cas du sorgho au Mali. Mémoire de DESS "Espace et Milieux", 
         Université Paris 7 - Denis Diderot, France. <a href="/pdf/dessDionnet.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
 <p>Lorrillière R. 2005. Recolonisation du Héron cendré 
@@ -150,7 +144,7 @@ tbody td.content-cell {
         de l'exploitation agricole (la représentation systémique 
         et la modélisation multi-agents) à travers une liaison entre 
         les logiciels « Olympe » et « Cormas ». Mémoire de troisième année 
-        de l’école des Mines de Douai, France. <a href="/pdf/memoireIngeBonte.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
+        de lécole des Mines de Douai, France. <a href="/pdf/memoireIngeBonte.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
 <p>Bouquier, D. 2004. Intérêt du paradigme Agent-Groupe-Rôle 
         pour la modélisation: application à la formalisation des 
         réseaux d'approvisionnement. Mémoire de DEA Informatique 
@@ -176,10 +170,10 @@ tbody td.content-cell {
 <p>Fayein M., 2003. Elaboration d’un outil d’accompagnement 
         de projets d’aménagement pour la prévention des incendies 
         de forêt. Mémoire INA-PG Paris. <a href="/pdf/daaFayein.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
-<p>Lacombe, G. 2003. Compréhension des stratégies d’adaptation à la variabilité 
+<p>Lacombe, G. 2003. Compréhension des stratégies dadaptation à la variabilité 
         des pluies en riziculture inondée par la modélisation Cas du bassin versant 
         de la Lam Dom Yaï, région Nord-est de la Thaïlande. Mémoire de DEA "Sciences 
-        de l’Eau dans l’Environnement Continental". Ecole Nationale du Génie 
+        de lEau dans lEnvironnement Continental". Ecole Nationale du Génie 
         Rural, des Eaux et des Forêts - Université Montpellier II, France. <a href="/pdf/deaLacombe.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
 <p>Ruffez, P. 2003. Etude de la négociation dans le cadre d'un jeu 
         de rôles sur le sylvopastoralisme. Mémoire de DEA "Intelligence 
@@ -205,10 +199,10 @@ tbody td.content-cell {
 <p>Becu N. 2001. Modélisation de la gestion de l'eau d'irrigation 
         à l'échelle d'un bassin versant et exploration du système 
         via simulations. Une approche basée sur les Systèmes Multi-Agents. Le 
-        cas du bassin versant du Mae Uam – Nord-Thaïlande. Mémoire de DEA, Sciences 
-        de l’Eau dans l’Environnement Continental ; Ecole Nationale du Génie Rural, 
-        des Eaux et Forêts – Université Montpellier II. 128 pages + annexes. <a href="/pdf/becu.pdf"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
-<p> Boissau, S.; Hoang Lan Anh; Castella, J.C. (2001). “Report on Samba role-play in Xuat Hoa commune, Bac Kan province.” SAM Paper Series 3, Vietnam Agricultural Science Institute, Hanoi. </p> <p> Castella, J.-C.; Boissau, S.; Tran Ngoc Trung; Dang Dinh Quang (2001). "Consequences of lowland allocation process on upland agricultural dynamics in Northern Vietnam mountains: from systems analysis to multi-agent model." SAM Paper Series 4, Vietnam Agricultural Science Institute, Hanoi. </p> <p>Cohen M., 2001. Gestion sylvopastorale des pins sur le Causse Méjan: une approche multi-agents du maintien des milieux ouverts. Mémoire INA-PG Paris </p>
+        cas du bassin versant du Mae Uam  Nord-Thaïlande. Mémoire de DEA, Sciences 
+        de lEau dans lEnvironnement Continental ; Ecole Nationale du Génie Rural, 
+        des Eaux et Forêts  Université Montpellier II. 128 pages + annexes. <a href="/pdf/becu.pdf"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
+<p> Boissau, S.; Hoang Lan Anh; Castella, J.C. (2001). Report on Samba role-play in Xuat Hoa commune, Bac Kan province. SAM Paper Series 3, Vietnam Agricultural Science Institute, Hanoi. </p> <p> Castella, J.-C.; Boissau, S.; Tran Ngoc Trung; Dang Dinh Quang (2001). "Consequences of lowland allocation process on upland agricultural dynamics in Northern Vietnam mountains: from systems analysis to multi-agent model." SAM Paper Series 4, Vietnam Agricultural Science Institute, Hanoi. </p> <p>Cohen M., 2001. Gestion sylvopastorale des pins sur le Causse Méjan: une approche multi-agents du maintien des milieux ouverts. Mémoire INA-PG Paris </p>
 <p>Estival J.-B. 2001. Simulation de la dynamique de la Péri-Pneumonie Contagieuse 
         Bovine (PPCB) en Ethiopie. Rapport de stage ISIMA (2eme année). 81 pages. 
         <a href="/pdf/isimajbe.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a>
@@ -229,8 +223,8 @@ tbody td.content-cell {
         d'agents génétiques.Mémoire de DEA d'informatique, Université Cheikh 
         Anta Diop de Dakar, Sénégal. 55p.</p>
 <p>Bakam, I., Kordon, F., Le Page, C. and Bousquet, F. 2000. Formalisation 
-        de modèles multi-agents par les réseaux de Petri : Application à l’étude 
-        d’un système de gestion de la chasse à l’Est-Cameroun. 8 p. <a href="/pdf/bakampetri.pdf"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a>
+        de modèles multi-agents par les réseaux de Petri : Application à létude 
+        dun système de gestion de la chasse à lEst-Cameroun. 8 p. <a href="/pdf/bakampetri.pdf"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a>
 </p>
 <p>Valeix, M., 2000. Différentes approches en modélisation de dynamique 
         des populations. Paris, INA-PG, 28p. </p>
@@ -287,18 +281,5 @@ tbody td.content-cell {
 <!--#include virtual="/include/copyright_fr.inc" --> </td>
 <td bgcolor="#FFFFFF" valign="top" width="15">  </td>
 </tr>
-</table> </div>
-<div id="sidebar">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</table> </div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
@@ -6,87 +7,81 @@
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
 <style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    position: relative;
-    background-color: #FFA500;
-    height: 80px;
-    width: 100vw;
-    margin-left: -180px;
-    z-index: 1001; /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-}
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-    z-index: 1000; /* En dessous du bandeau */
-    box-sizing: border-box;
-}
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</style></head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
-<div class="header-container">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 <!--#include virtual="sommair.inc" -->
 <td bgcolor="#FFFFFF" valign="top" width="*">
@@ -94,52 +89,52 @@ tbody td.content-cell {
       <p>
 <h1>Présentation de la formation Cormas</h1>
 <h2>Objectifs</h2>
-<p>Lobjectif de ce stage est de fournir une initiation aux systèmes 
+<p>L'objectif de ce stage est de fournir une initiation aux systèmes 
         multi-agents appliqués aux problèmes de simulation et de 
         gestion des ressources renouvelables. Après la formation, les stagiaires 
-        connaissent un état de lart général sur la modélisation 
+        connaissent un état de l'art général sur la modélisation 
         pour la gestion des ressources renouvelables, ont un panorama des différents 
-        domaines dapplication des systèmes multi-agents et ont une connaissance 
+        domaines d'application des systèmes multi-agents et ont une connaissance 
         approfondie des méthodes de simulation multi-agents pour la gestion 
         des ressources renouvelables. Les stagiaires ont par ailleurs acquis une 
         pratique de la modélisation et ont la possibilité de poursuivre 
-        leur pratique en utilisant lenvironnement de simulation Cormas qui est 
+        leur pratique en utilisant l'environnement de simulation Cormas qui est 
         mis à leur disposition à la fin de la formation.</p>
 <p>Un des objectifs de la formation consiste en effet à rendre les 
-        stagiaires opérationnels en matière dutilisation de la 
-        plate-forme de simulation quils auront découvert lors des deux 
+        stagiaires opérationnels en matière d'utilisation de la 
+        plate-forme de simulation qu'ils auront découvert lors des deux 
         semaines : à leur retour dans leur laboratoire, ils peuvent poursuivre 
         la construction de leur prototype de simulateur multi-agents.</p>
 <h2>Public</h2>
-<p>Ce stage sadresse :</p>
+<p>Ce stage s'adresse :</p>
 <ul>
-<li>aux modélisateurs ou informaticiens désireux de souvrir 
+<li>aux modélisateurs ou informaticiens désireux de s'ouvrir 
           aux systèmes multi-agents;</li>
-<li>aux chercheurs concernés par la gestion de lenvironnement 
+<li>aux chercheurs concernés par la gestion de l'environnement 
           et sensibilisés à la modélisation.</li>
 </ul>
 <h2>Programme</h2>
-<p>Le programme du stage sarticule autour de trois axes:</p>
+<p>Le programme du stage s'articule autour de trois axes:</p>
 <ul>
 <li>des cours chaque matin, qui dans un premier temps proposent un panorama 
           des types de modélisation qui sont utilisées dans le domaine 
           de la gestion des ressources, puis dans un deuxième temps qui 
           se concentrent sur la présentation des systèmes multi-agents,</li>
-<li>des travaux pratiques dédiés à lapprentissage 
-          dun langage orienté-objet (Smalltalk) et dun environnement 
+<li>des travaux pratiques dédiés à l'apprentissage 
+          d'un langage orienté-objet (Smalltalk) et d'un environnement 
           de simulation multi-agent (Cormas) sont programmés les après-midi 
           de la première semaine,</li>
-<li>des travaux personnels pour, à partir dun cas concret, choisi 
-          par les stagiaires, concevoir un système multi-agents, et limplémenter 
-          à laide de la plate-forme de simulation Cormas (après-midi 
+<li>des travaux personnels pour, à partir d'un cas concret, choisi 
+          par les stagiaires, concevoir un système multi-agents, et l'implémenter 
+          à l'aide de la plate-forme de simulation Cormas (après-midi 
           de la seconde semaine).</li>
 </ul>
 <h2>Pédagogie</h2>
 <p>Une documentation spécialisée (support de cours et manuel 
-        dutilisation de la plate-forme Cormas) est fournie à chaque participant.</p>
+        d'utilisation de la plate-forme Cormas) est fournie à chaque participant.</p>
 <p>La deuxième semaine laisse une part importante aux travail personnel 
         : par petit groupe de deux ou trois personnes, des modèles sont 
-        conçus puis implémentés (avec laide des formateurs) 
+        conçus puis implémentés (avec l'aide des formateurs) 
         sur la plate-forme Cormas. Le stage se termine par une demi-journée 
         consacrée à la présentation de ces modèles.</p>
 <h2>Formateurs</h2>
@@ -167,18 +162,5 @@ tbody td.content-cell {
 </td>
 </tr>
 </table>
-</div>
-<div id="sidebar">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

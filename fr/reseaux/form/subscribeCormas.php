@@ -22,7 +22,7 @@ echo "<br>-------------------- End of Main() ------------------<br>";*/
 
 <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
 
-<title> Sabonnement pour le Cormas Forum</title>
+<title> S'abonnement pour le Cormas Forum</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
@@ -34,7 +34,7 @@ echo "<br>-------------------- End of Main() ------------------<br>";*/
 
 
 
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
 
 <!--#include virtual="haut.inc" --> 
 
@@ -67,26 +67,26 @@ echo "<br>-------------------- End of Main() ------------------<br>";*/
 	  else if ($boncode == false && $bonemail == false){
 	  		//echo "boncode == false && bonemail == false -->";
 			//echo "The verification code and your email address are not correct. ";
-			printNotcompletinfo("Le code de v&eacute;rification et votre adresse &eacute;lectronique ne sont pas corrects.","Sabonnement");
+			printNotcompletinfo("Le code de vérification et votre adresse électronique ne sont pas corrects.","S'abonnement");
 			// Register value of the fields to the session
-		   $_SESSION[nomS] = $nomS;
-           //echo "<br><a href=http://cormas.cirad.fr/en/reseaux/form/forumCormas.php>Back</a>.";
+		   $_SESSION['nomS'] = $nomS;
+           //echo "<br><a href='http://cormas.cirad.fr/en/reseaux/form/forumCormas.php'>Back</a>.";
 	  }
 	  else if ($boncode == false && $bonemail == true){
 	  	  	//echo "boncode == false && bonemail == true -->";
 			//echo "The verification code is not correct. ";
-			printNotcompletinfo("Le code de v&eacute;rification nest pas correcte.","Sabonnement");
+			printNotcompletinfo("Le code de vérification n'est pas correcte.","S'abonnement");
 			// Register value of the fields to the session
-		   $_SESSION[nomS] = $nomS;
-            //echo "<br><a href=http://cormas.cirad.fr/en/reseaux/form/forumCormas.php>Back</a>.";
+		   $_SESSION['nomS'] = $nomS;
+            //echo "<br><a href='http://cormas.cirad.fr/en/reseaux/form/forumCormas.php'>Back</a>.";
 	  }
 	  else if ($boncode == true && $bonemail == false){
 	  	  	//echo "boncode == true && bonemail == false -->";
 			//echo "Your email address is not correct. ";
-			printNotcompletinfo("Votre adresse &eacute;lectronique nest pas correcte.","Sabonnement");
+			printNotcompletinfo("Votre adresse électronique n'est pas correcte.","S'abonnement");
 			// Register value of the fields to the session
-		   $_SESSION[nomS] = $nomS;
-            //echo "<br><a href=http://cormas.cirad.fr/en/reseaux/form/forumCormas.php>Back</a>.";
+		   $_SESSION['nomS'] = $nomS;
+            //echo "<br><a href='http://cormas.cirad.fr/en/reseaux/form/forumCormas.php'>Back</a>.";
 	  }
 	  ?>
 

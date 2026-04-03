@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
@@ -6,87 +7,81 @@
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
 <style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    position: relative;
-    background-color: #FFA500;
-    height: 80px;
-    width: 100vw;
-    margin-left: -180px;
-    z-index: 1001; /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-}
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-    z-index: 1000; /* En dessous du bandeau */
-    box-sizing: border-box;
-}
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</style></head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/logiciel_r.gif,../../images/outil/cormas.gif)" topmargin="0">
-<div class="header-container">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/logiciel_r.gif','../../images/outil/cormas.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr> <!--#include virtual="sommair.inc" -->
 <td bgcolor="#FFFFFF" valign="top" width="*">
 <p>  
@@ -98,10 +93,10 @@ tbody td.content-cell {
         Pour les utilisateur de Windows X, il est plus simple de télécharger 
         juste ce fichier là : <a href="../../logiciel/VWNC30-Cormas.zip">installation 
         complète VW+Cormas pour Win</a> .</p>
-<h2>Dézipper ce fichier à la racine dun de vos disques durs</h2>
-<p> Ce disque sappelle soit C:\ soit D:\ ou etc. </p>
+<h2>Dézipper ce fichier à la racine d'un de vos disques durs</h2>
+<p> Ce disque s'appelle soit C:\ soit D:\ ou etc. </p>
 <p>Note : la préconfiguration est réglée sur le disque 
-        C:\ , mais vous pouvez installer VisualWorks sur nimporte quel disque.</p>
+        C:\ , mais vous pouvez installer VisualWorks sur n'importe quel disque.</p>
 <p> Vous obtenez alors une nouvelle arborescence du type : <i>"MonDisque":\vwnc30\*</i>
 <br/>
         Exemple :</p>
@@ -109,9 +104,9 @@ tbody td.content-cell {
 </p>
 <h2>Lancer Cormas2001</h2>
 <p>Aller dans <i>"MonDisque"</i>:\vwnc30\cormas\ et double-clickez 
-        sur <i>cormas2001.im</i>. Si ce type de fichier na jamais été 
+        sur <i>cormas2001.im</i>. Si ce type de fichier n'a jamais été 
         associé avec un fichier exécutable, alors une fenêtre 
-        souvre :</p>
+        s'ouvre :</p>
 <p align="center"><img height="314" src="../../images/outil/ouvrirAvec.gif" width="353"/></p>
 <p align="left">Cochez la case "Toujours utiliser ce programme pour 
         ouvrir les fichiers de ce type". </p>
@@ -120,15 +115,15 @@ tbody td.content-cell {
 <p align="center"><img height="274" src="../../images/outil/ouvrirAvec2.gif" width="428"/></p>
 <p align="left">Note: Si ce type de fichier (*.im) a déjà 
         été associé avec un fichier exécutable, alors 
-        vous pouvez changer lassociation en clickant avec le bouton droit sur 
+        vous pouvez changer l'association en clickant avec le bouton droit sur 
         <i>cormas2001.im</i> tout en maintenant la touche Shift enfoncée 
         et en sélectionnant <i>ouvrir avec...</i></p>
 <p align="center"><img height="310" src="../../images/outil/ouvrirAvec3.gif" width="174"/></p>
-<h2 align="left">Si vous navez pas installé Cormas sur le disque 
+<h2 align="left">Si vous n'avez pas installé Cormas sur le disque 
         C</h2>
 <p align="left">Dans ce cas, vous devez juste modifier le chemin de la racine 
         de VisualWorks (le classpath pour ceux qui connaissent plutôt Java 
-        !), de façon à ce quil pointe sur le répertoire 
+        !), de façon à ce qu'il pointe sur le répertoire 
         <i>vwnc30\</i>. </p>
 <p align="left">Pour cela, sélectionnez "Set VisualWorks Home" 
         du menu "File" de VisualWorks</p>
@@ -143,22 +138,22 @@ tbody td.content-cell {
         Si vous obtenez le menu suivant (find, replace, undo, copy, cut, paste, 
         do it, print it, etc.) :</p>
 <p align="center"><img height="269" src="../../images/outil/rightButtonMenu.gif" width="427"/></p>
-<p>Alors, cest parfait, vous navez plus rien à faire !<br/>
+<p>Alors, c'est parfait, vous n'avez plus rien à faire !<br/>
         Par contre, si vous obtenez le menu suivant (relabel as, refresh, move, 
         resize, etc.) :</p>
 <p align="center"><img height="182" src="../../images/outil/rightButtonMenu2.gif" width="424"/></p>
 <p>Alors il faut changer la configuration de la souris. Pour cela, dans 
         le menu de VisualWorks, sélectionner : <i>File</i> -&gt; <i>Settings</i>. 
-        Une nouvelle fenêtre apparaît. Descender jusquà longlet 
+        Une nouvelle fenêtre apparaît. Descender jusqu'à l'onglet 
         "<i>Mouse Buttons</i>"</p>
 <p align="center"><img height="372" src="../../images/outil/mouseButtonSettings.gif" width="439"/></p>
-<p align="left">Changer létat de la case de pointage (soit vide, 
+<p align="left">Changer l'état de la case de pointage (soit vide, 
         soit plointée, selon son état originale), puis "<i>Accept</i>". 
         Fermer cette fenêtre et vérifier à nouveau que le 
         menu contextuel est correct. Puis sauvez votre image de cormas2001.</p>
 <hr/>
 <p>Pour essayer Cormas, vous pouvez télécharger <a href="firstMod.htm">quelques 
-        modèles didactiques</a>. Dautre part, une bibliothèque 
+        modèles didactiques</a>. D'autre part, une bibliothèque 
         de modèles téléchargeables est disponible à 
         partir des pages <a href="/fr/applica/applica.htm">applications</a>.</p>
 <p>Nous vous invitons à vous inscrire sur le <a href="/fr/reseaux/forum.htm">forum 
@@ -171,18 +166,5 @@ tbody td.content-cell {
 </td>
 </tr>
 </table>
-</div>
-<div id="sidebar">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

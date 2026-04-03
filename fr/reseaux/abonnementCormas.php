@@ -16,7 +16,7 @@
 
 
 
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
+<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
 
 <!--#include virtual="haut.inc" --> 
 
@@ -58,7 +58,7 @@ mail("bommel@cirad.fr, cormas-request@cirad.fr", " ", $message,
 
   	Bonjour $nomS ,". "<br>". 
 
-	"Votre adresse &eacute;lectronique ( $emailS ) va etre ajout&eacute;e a la liste cormas.". "<br>". 
+	"Votre adresse électronique ( $emailS ) va être ajoutée à la liste cormas.". "<br>". 
 
 	"Vous receverez un message de confirmation bientôt.</td></tr>" ;
 
@@ -66,7 +66,7 @@ mail("bommel@cirad.fr, cormas-request@cirad.fr", " ", $message,
 
       <hr>
       <h2>Contribuer au forum cormas</h2>
-      <p>Vous venez d&ecirc;tre abonn&eacute; au forum de discussion cormas. 
+      <p>Vous venez d'&ecirc;tre abonn&eacute; au forum de discussion cormas. 
         Vous recevrez d&eacute;sormais tous les messages &eacute;chang&eacute;s 
         sur ce forum. Vos contributions personnelles sont &agrave; envoyer &agrave; 
         <a href="mailto:cormas@cirad.fr">cormas@cirad.fr</a></p>
@@ -75,7 +75,7 @@ mail("bommel@cirad.fr, cormas-request@cirad.fr", " ", $message,
       <ul>
         <li><a href="http://cormas.cirad.fr/forum/cormas/old1999_2002/index.html">De 
           1999 &agrave; juillet 2002</a></li>
-        <li><a href="http://cormas.cirad.fr/forum/cormas/archives/old2002_2003/index.html">Dao&ucirc;t 
+        <li><a href="http://cormas.cirad.fr/forum/cormas/archives/old2002_2003/index.html">D'ao&ucirc;t 
           2002 &agrave; f&eacute;vrier 2003</a></li>
         <li><a href="http://cormas.cirad.fr/forum/cormas/archives/index.html">Depuis 
           mars 2003</a></li>

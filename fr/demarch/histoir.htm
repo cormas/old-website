@@ -1,102 +1,88 @@
-
-<div id="sidebar">
-<ul>
-<li><a href="./index.htm">Accueil</a></li>
-<li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
-<li><a href="./another-page.htm">Autre Page</a></li>
-</ul>
-</div>
 <!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
 
 <html>
 <head>
 <meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
-<title> Etat de lart au Cirad</title>
+<title> Etat de l'art au Cirad</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
 <link href="/css/cormas.css" rel="stylesheet"/>
 <style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    position: relative;
-    background-color: #FFA500;
-    height: 80px;
-    width: 100vw;
-    margin-left: -180px;
-    z-index: 1001; /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-}
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-    z-index: 1000; /* En dessous du bandeau */
-    box-sizing: border-box;
-}
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</style></head>
-<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
-<div class="header-container">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 <!--#include virtual="sommair.inc" -->
 <td bgcolor="#FFFFFF" valign="top" width="*">
@@ -104,53 +90,53 @@ tbody td.content-cell {
 <h1>Nos recherches au Cirad</h1>
 <h1>  </h1>
 <p> </p>
-<p>Les recherches sur lenvironnement abordent la problématique des ressources 
-        et des externalités. Il sagit par exemple de la gestion des ressources 
+<p>Les recherches sur l'environnement abordent la problématique des ressources 
+        et des externalités. Il s'agit par exemple de la gestion des ressources 
         naturelles renouvelables, des externalités de la production (déchets, 
         pollution) et des espaces à usages multiples. Dans tous les cas, 
-        lenjeu est de mettre en place une régulation des usages collectifs. Quil 
-        sagisse de gestion de ressources, despaces ou dexternalités, les analyses 
-        doivent tenir compte a la fois des dynamiques de la nature et de celles 
-        de la société. Les <b>dynamiques naturelles</b> se caractérisent par limbrication 
-        de processus multiples impliquant des especes et des ressources variées, 
-        a des échelles spatiales et temporelles différentes. Les <b>processus 
-        sociaux</b> intéressent différents acteurs et plusieurs niveaux dorganisation, 
-        depuis les individus ou les communautés dusagers jusquaux grandes institutions 
+        l'enjeu est de mettre en place une régulation des usages collectifs. Qu'il 
+        s'agisse de gestion de ressources, d'espaces ou d'externalités, les analyses 
+        doivent tenir compte à la fois des dynamiques de la nature et de celles 
+        de la société. Les <b>dynamiques naturelles</b> se caractérisent par l'imbrication 
+        de processus multiples impliquant des espèces et des ressources variées, 
+        à des échelles spatiales et temporelles différentes. Les <b>processus 
+        sociaux</b> intéressent différents acteurs et plusieurs niveaux d'organisation, 
+        depuis les individus ou les communautés d'usagers jusqu'aux grandes institutions 
         chargées du développement. </p>
 <p>Au sein du Cirad, le<b> projet Green </b>(gestion des ressources renouvelables, 
-        environnement), créé en 1993 par Jacques Weber, sintéresse 
-        à larticulation des processus locaux et globaux de<b> gestion 
-        des ressources à usages multiples</b>. Les recherches sorientent 
-        autour de deux thèmes : les modes dappropriation et les processus 
+        environnement), créé en 1993 par Jacques Weber, s'intéresse 
+        à l'articulation des processus locaux et globaux de<b> gestion 
+        des ressources à usages multiples</b>. Les recherches s'orientent 
+        autour de deux thèmes : les modes d'appropriation et les processus 
         de décision (Weber, 1993).</p>
 <ol>
-<li>Les <b>modes dappropriation</b> regroupent les questions de représentation, 
-          daccès, dusage, de transfert et de répartition des ressources. 
-          Lanalyse des modes dappropriation débouche sur la question 
+<li>Les <b>modes d'appropriation</b> regroupent les questions de représentation, 
+          d'accès, d'usage, de transfert et de répartition des ressources. 
+          L'analyse des modes d'appropriation débouche sur la question 
           des institutions et des modes de gestion.</li>
-<li>Létude des <b>processus de décision</b> sintéresse 
+<li>L'étude des <b>processus de décision</b> s'intéresse 
           aux interactions entre des acteurs ayant différents poids et 
-          différentes représentations. Il sagit de les analyser, 
-          den comprendre la dynamique pour déboucher sur une aide à 
+          différentes représentations. Il s'agit de les analyser, 
+          d'en comprendre la dynamique pour déboucher sur une aide à 
           la négociation.</li>
 </ol>
-<p>Pour aller plus loin dans lanalyse des interactions, un domaine de recherche 
-        est privilégié : celui de la relation entre léchelle 
+<p>Pour aller plus loin dans l'analyse des interactions, un domaine de recherche 
+        est privilégié : celui de la relation entre l'échelle 
         et la viabilité des interactions. Les critères et contraintes 
         de viabilité ne sont pas les mêmes au niveau du village, 
-        de la région, ou de la planète. Il sagit de comprendre 
+        de la région, ou de la planète. Il s'agit de comprendre 
         les liens entre les outils de gestion employés et la viabilité 
         des interactions à ces différentes échelles.</p>
-<h2>Lintégration entre niveaux</h2>
+<h2>L'intégration entre niveaux</h2>
 <p>Le projet Green ne cherche pas à répondre à toutes 
         les questions posées ci-dessus. Une problématique nous paraît 
-        cependant transversale : celle de lintégration de dynamiques sur 
-        plusieurs échelles spatiales et niveaux dorganisation. <b>Deux 
-        approches</b> sopposent pour la représentation dun système 
-        : lune sintéresse aux <b>interactions locales</b> pour remonter 
-        aux organisations, lautre aux <b>dynamiques globales</b> des organisations 
+        cependant transversale : celle de l'intégration de dynamiques sur 
+        plusieurs échelles spatiales et niveaux d'organisation. <b>Deux 
+        approches</b> s'opposent pour la représentation d'un système 
+        : l'une s'intéresse aux <b>interactions locales</b> pour remonter 
+        aux organisations, l'autre aux <b>dynamiques globales</b> des organisations 
         en agrégeant les dynamiques locales. On retrouve cette dualité, 
-        dans les recherches, entre une écologie centrée sur lindividu 
+        dans les recherches, entre une écologie centrée sur l'individu 
         et une écologie du paysage, entre une gestion locale et une gestion 
         régionale des ressources naturelles, entre une gestion locale des 
         biens communs et des outils économiques ou juridiques de gestion.</p>
@@ -158,37 +144,37 @@ tbody td.content-cell {
         cette bipolarité</b> en cherchant à intégrer ces 
         différents niveaux.</p>
 <h2>Simuler des interactions pour aider la gestion collective</h2>
-<p>Cette problématique a conduit le Cirad, dune part, au <b>développement 
-        doutils </b>de modélisation qui permettent de simuler des interactions 
-        sur plusieurs échelles et, dautre part, à une <b>réflexion 
-        méthodologique</b> sur lusage de ces outils.</p>
-<p>En appui à la gestion collective, les outils daide à la 
+<p>Cette problématique a conduit le Cirad, d'une part, au <b>développement 
+        d'outils </b>de modélisation qui permettent de simuler des interactions 
+        sur plusieurs échelles et, d'autre part, à une <b>réflexion 
+        méthodologique</b> sur l'usage de ces outils.</p>
+<p>En appui à la gestion collective, les outils d'aide à la 
         décision et à la négociation représentent 
-        linterdépendance des acteurs dans les problèmes de gestion 
+        l'interdépendance des acteurs dans les problèmes de gestion 
         et leur résolution, et confrontent les différentes représentations 
         des acteurs, du producteur au gestionnaire.</p>
-<p>Ces outils sappuient sur la <b>modélisation des systèmes 
+<p>Ces outils s'appuient sur la <b>modélisation des systèmes 
         complexes</b> pour comprendre les dynamiques spatiales et sociales. Se 
-        pose la question de lintégration des approches économiques 
+        pose la question de l'intégration des approches économiques 
         et géographiques dans une modélisation pensée en 
-        termes de comportements et dinteractions. Les outils de<b> caractérisation 
-        des structures spatiales</b>, tels les Sig ou les logiciels danalyse 
+        termes de comportements et d'interactions. Les outils de<b> caractérisation 
+        des structures spatiales</b>, tels les Sig ou les logiciels d'analyse 
         spatiale sont ainsi couplés à des outils de simulation des 
         interactions, tels les automates cellulaires ou les systèmes multi-agents.</p>
 <p>La démarche se positionne en accompagnement des processus de prise 
         de décision. Montrer sur un monde artificiel la diversité 
-        des dynamiques locales et lexistence éventuelle de processus de 
+        des dynamiques locales et l'existence éventuelle de processus de 
         régulation. Présenter sur un monde artificiel les effets 
         des outils de gestion pensés à un niveau plus englobant 
         (région, nation). </p>
-<p><b>Accompagner un processus de décision</b>, cest aussi pouvoir 
+<p><b>Accompagner un processus de décision</b>, c'est aussi pouvoir 
         comparer les résultats des différents scénarios. 
-        La réflexion sur les indicateurs dinteraction, sur les méthodes 
+        La réflexion sur les indicateurs d'interaction, sur les méthodes 
         pour donner une valeur aux différents scénarios constitue 
-        un point essentiel du processus daccompagnement.</p>
+        un point essentiel du processus d'accompagnement.</p>
 <h2>Référence</h2>
 <p>Weber J., 1995. Gestion des ressources renouvelables : fondements théoriques 
-        dun programme de recherche. Paris, Cirad Green, 21 p. <a href="/pdf/green.pdf">Document 
+        d'un programme de recherche. Paris, Cirad Green, 21 p. <a href="/pdf/green.pdf">Document 
         à télécharger</a>. (format pdf, 92 ko). </p>
 <p>Weber J. 1996. Gestão de recursos renovaveis: fundamentos teoricos 
         de um programa de pesquisas, in Gestão de recursos naturais renovaveis 
@@ -198,5 +184,5 @@ tbody td.content-cell {
 <td bgcolor="#FFFFFF" valign="top" width="15">
 <div align="right"></div> </td>
 </tr>
-</table> </div></body>
+</table> </div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

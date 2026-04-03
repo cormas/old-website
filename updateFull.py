@@ -4,7 +4,7 @@ import re
 from bs4 import BeautifulSoup, Comment
 
 # Répertoire contenant les fichiers .htm
-input_dir = "/Users/bommel/old-website/fr/applica/"
+input_dir = "/Users/bommel/old-website/fr/reseaux/"
 
 def read_file_with_fallback(filepath):
     """Lit un fichier en essayant plusieurs encodages"""
@@ -243,10 +243,17 @@ def transform_file(filepath):
 
 def main():
     # Appliquer à tous les fichiers .htm du répertoire
+    #for filename in os.listdir(input_dir):
+     #   if filename.endswith('.htm') or filename.endswith('.html'):
+      #      filepath = os.path.join(input_dir, filename)
+       #     transform_file(filepath)
+
+    # Appliquer à tous les fichiers .htm et .html du répertoire
     for filename in os.listdir(input_dir):
-        if filename.endswith('.htm') or filename.endswith('.html'):
+        # Vérifier si le fichier est un fichier HTML (extension .htm ou .html)
+        if filename.lower().endswith(('.htm', '.html')):
             filepath = os.path.join(input_dir, filename)
             transform_file(filepath)
-
+            
 if __name__ == "__main__":
     main()

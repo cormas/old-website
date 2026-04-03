@@ -1,45 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-
-
-
 <head>
-
-
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
-
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>Nouvelle version de Cormas</title>
-
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
-
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
 
-
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
-<style type="text/css">
-
-<!--
-
-.style1 {
-	color: #FF0000;
-	font-weight: normal;
-}
-
--->
-
-</style>
 <script type="text/javascript">
 function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
@@ -62,133 +29,155 @@ function MM_swapImage() { //v3.0
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
 </script>
-</head>
-
-
-
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif,/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
-
-
-
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif','/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-
-
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
-
-
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<h1><br/>
 
-
-
-    <!--#include virtual="sommair.inc" -->
-
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-
-      <h1><br>
-
-        Cormas 2012 (version Beta)<br>
-
-        <br>
-
-      </h1>
-
-      <div>
-        <h2>Pr&eacute;sentation</h2>
-        <p>Il sagit encore dune version b&eacute;ta qui a &eacute;t&eacute; d&eacute;j&agrave; test&eacute;e, mais qui devra certainement &ecirc;tre encore am&eacute;lior&eacute;e avant de devenir la version officielle (pr&eacute;vue pour la prochaine &eacute;cole d&eacute;t&eacute;). Les grandes modifications portent sur le coeur de Cormas qui propose une architecture MVC (qui s&eacute;pare le Mod&egrave;le de ses Vues et de la mani&egrave;re de le Contr&ocirc;ler). Les d&eacute;veloppements que nous avons men&eacute;s, sorientent vers deux directions : 1) permettre la mise au point de simulations interactives, et 2) faciliter la conception et limpl&eacute;mentation collective de mod&egrave;les.   </p>
-        <ul>
-          <li>Pour le 1er point, il sagit dinteragir plus facilement avec les entit&eacute;s dune simulation (les d&eacute;placer manuellement, leur envoyer des messages, les pister, zoomer sur des parties de lespace,...), afin de participer, seul ou &agrave; plusieurs, sur le d&eacute;roulement dun sc&eacute;nario.   </li>
-          <li>Pour le 2i&egrave;me point, nous cherchons &agrave; faciliter limpl&eacute;mentation dun SMA. Il sagit de simplifier la mani&egrave;re de cr&eacute;er des classes, des attributs et leurs valeurs, mais aussi de permettre de dessiner des diagrammes dactivit&eacute; simples qui soient directement interpr&eacute;t&eacute;s par Cormas. Il ne sagit pas de sabstraire du codage dun mod&egrave;le, mais de pouvoir agencer graphiquement des briques daction entre elles pour produire une nouvelle r&egrave;gle de comportement dun agent. L&eacute;diteur de diagramme permet de concevoir de nouvelles activit&eacute;s directement executable par Cormas. </li>
-        </ul>
-        <p>Des progr&egrave;s restent encore &agrave; faire dans ces 2 directions. Il  sagit des premiers pas.<br>
-        Plusieurs autres modifications ont &eacute;t&eacute; faites, comme la mise au  point dun module danalyse de sensibilit&eacute; ou la cr&eacute;ation de nouvelles entit&eacute;s  (r&eacute;seaux, arcs et noeuds). N&eacute;anmoins, les mod&egrave;les con&ccedil;us sous les anciennes  versions devraient &ecirc;tre compatibles avec ce nouveau Cormas. Nous reprendrons  progressivement les didacticiels pour expliquer la mani&egrave;re de concevoir des SMA  avec Cormas.<br>
-          Donc, si vous voulez tester cette nouvelle version, vous &egrave;tes les  bienvenus !        Envoyer 
+        Cormas 2012 (version Beta)<br/>
+<br/>
+</h1>
+<div>
+<h2>Présentation</h2>
+<p>Il s'agit encore d'une version béta qui a été déjà testée, mais qui devra certainement être encore améliorée avant de devenir la version officielle (prévue pour la prochaine école d'été). Les grandes modifications portent sur le coeur de Cormas qui propose une architecture MVC (qui sépare le Modèle de ses Vues et de la manière de le Contrôler). Les développements que nous avons menés, s'orientent vers deux directions : 1) permettre la mise au point de simulations interactives, et 2) faciliter la conception et l'implémentation collective de modèles.   </p>
+<ul>
+<li>Pour le 1er point, il s'agit d'interagir plus facilement avec les entités d'une simulation (les déplacer manuellement, leur envoyer des messages, les pister, zoomer sur des parties de l'espace,...), afin de participer, seul ou à plusieurs, sur le déroulement d'un scénario.   </li>
+<li>Pour le 2ième point, nous cherchons à faciliter l'implémentation d'un SMA. Il s'agit de simplifier la manière de créer des classes, des attributs et leurs valeurs, mais aussi de permettre de dessiner des diagrammes d'activité simples qui soient directement interprétés par Cormas. Il ne s'agit pas de s'abstraire du codage d'un modèle, mais de pouvoir agencer graphiquement des briques d'action entre elles pour produire une nouvelle règle de comportement d'un agent. L'éditeur de diagramme permet de concevoir de nouvelles activités directement executable par Cormas. </li>
+</ul>
+<p>Des progrès restent encore à faire dans ces 2 directions. Il  s'agit des premiers pas.<br/>
+        Plusieurs autres modifications ont été faites, comme la mise au  point d'un module d'analyse de sensibilité ou la création de nouvelles entités  (réseaux, arcs et noeuds). Néanmoins, les modèles conçus sous les anciennes  versions devraient être compatibles avec ce nouveau Cormas. Nous reprendrons  progressivement les didacticiels pour expliquer la manière de concevoir des SMA  avec Cormas.<br/>
+          Donc, si vous voulez tester cette nouvelle version, vous ètes les  bienvenus !        Envoyer 
 
           vos retours sur le <a href="http://cormas.cirad.fr/fr/reseaux/form/forumCormas.php">forum</a> cormas@cirad.fr en indiquant dans le sujet 
 
         de votre message [beta2012]. </p>
-        <div>
-          <h2>Installation</h2>
-        </div>
-        <h3>Installer VisualWorks</h3>
-        <p>Cormas a &eacute;t&eacute; d&eacute;velopp&eacute; avec la version 
+<div>
+<h2>Installation</h2>
+</div>
+<h3>Installer VisualWorks</h3>
+<p>Cormas a été développé avec la version 
 
-          <b><span class="style1"></span></b>7.6 non-commerciale de VisualWorks&reg; 
+          <b><span class="style1"></span></b>7.6 non-commerciale de VisualWorks® 
 
-        (<em>Cincom Systems</em>), qui doit donc &ecirc;tre install&eacute;e sur 
+        (<em>Cincom Systems</em>), qui doit donc être installée sur 
 
-        votre machine. A la condition de vous engager &agrave; ne pas utiliser 
+        votre machine. A la condition de vous engager à ne pas utiliser 
 
-        Cormas &agrave; des fins commerciales, vous pouvez directement t&eacute;l&eacute;charger 
+        Cormas à des fins commerciales, vous pouvez directement télécharger 
 
-        lenvironnement de programmation <b><a href="../../../logiciel/vw7.6/vw7.6nc._PC-MAC.zip" target="_blank">vw7.6nc</a></b> 
+        l'environnement de programmation <b><a href="../../../logiciel/vw7.6/vw7.6nc._PC-MAC.zip" target="_blank">vw7.6nc</a></b> 
 
-        (version Windows + Mac OS X) depuis le site de Cormas. Il est conseill&eacute; de d&eacute;zipper larchive 
+        (version Windows + Mac OS X) depuis le site de Cormas. Il est conseillé de dézipper l'archive 
 
         directement sous la racine du disque dur principal de votre ordinateur 
 
-        pour minimiser les probl&egrave;mes de configuration r&eacute;calcitrante 
+        pour minimiser les problèmes de configuration récalcitrante 
 
-        qui peuvent survenir avec certains syst&egrave;mes dexploitation. </p>
-      </div>
-
-      <h3>Installer Cormas      </h3>
-      <div> 
-
-        <h5>Concerver lancienne version de Cormas</h5>
-        <p>Si une ancienne version de Cormas est d&eacute;j&agrave; install&eacute; sur votre 
+        qui peuvent survenir avec certains systèmes d'exploitation. </p>
+</div>
+<h3>Installer Cormas      </h3>
+<div>
+<h5>Concerver l'ancienne version de Cormas</h5>
+<p>Si une ancienne version de Cormas est déjà installé sur votre 
           
-          machine, vous pouvez garder cette version. Changez simplement le nom du r&eacute;pertoire Cormas en Cormas_Old (ou autre nom).</p>
-        <h5>Installer  Cormas2012 pour la premi&egrave;re fois    </h5>
-        <p>T&eacute;l&eacute;charger la derni&egrave;re 
+          machine, vous pouvez garder cette version. Changez simplement le nom du répertoire 'Cormas' en 'Cormas_Old' (ou autre nom).</p>
+<h5>Installer  Cormas2012 pour la première fois    </h5>
+<p>Télécharger la dernière 
           
           version de Cormas (<a href="../../../logiciel/cormas2012_Full.zip"><strong>cormas2012_Full.zip</strong></a>, 13 Mo) qui date de <span class="style1"><b>septembre 2012</b></span>. 
           
-          D&eacute;zipper larchive dans le r&eacute;pertoire VW7.6nc. Le sous-r&eacute;pertoire
+          Dézipper l'archive dans le répertoire VW7.6nc. Le sous-répertoire
           
-        cormas est cr&eacute;&eacute;. Il contient d&eacute;j&agrave; le fichier <em><strong>cormas.im</strong></em> (les instructions en anglais sont d&eacute;taill&eacute;es<a href="/lpdf/installCormas2012.pdf" target="_blank"> ici</a>). Copiez vos mod&egrave;les dans le sous-r&eacute;pertoire <span class="style1">VW7.6nc/cormas/Models/</span>.</p>
-        <h5>Mettre &agrave; jour Cormas2012</h5>
-        <p>Si Cormas2012 est d&eacute;j&agrave; install&eacute;, faire une simple une mise &agrave; jour en d&eacute;zippant  larchive <a href="../../../logiciel/cormas2012.zip"><strong>cormas2012.zip</strong></a> (1,6 Mo) dans  le r&eacute;pertoire <span class="style1">VW7.6nc/cormas/</span>. Ouvrir  <em><strong>cormas.im</strong></em> et s&eacute;lectionner le menu ? et Update Cormas.      </p>
-      </div>
-
-      <div>
-        <h3>Remerciements</h3>
-      </div>
-
-      <div>Merci aux premiers b&eacute;ta-testeurs qui ont essuy&eacute; les pl&acirc;tres  (Rapha&egrave;le, Chlo&eacute;, Herm&egrave;s, Olivier et tous ceux de la premi&egrave;re session de  l&eacute;cole d&eacute;t&eacute;) !</div>
-
-      <!--#include virtual="/include/copyright_fr.inc" -->
-
-    </td>
-
-
-
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-
-
-    <div align="right" class="texte"></div>
-
-
-
-    </td>
-
-
-
-  </tr>
-
-
-
+        'cormas' est créé. Il contient déjà le fichier <em><strong>cormas.im</strong></em> (les instructions en anglais sont détaillées<a href="/lpdf/installCormas2012.pdf" target="_blank"> ici</a>). Copiez vos modèles dans le sous-répertoire <span class="style1">VW7.6nc/cormas/Models/</span>.</p>
+<h5>Mettre à jour Cormas2012</h5>
+<p>Si Cormas2012 est déjà installé, faire une simple une mise à jour en dézippant  l'archive <a href="../../../logiciel/cormas2012.zip"><strong>cormas2012.zip</strong></a> (1,6 Mo) dans  le répertoire <span class="style1">VW7.6nc/cormas/</span>. Ouvrir  <em><strong>cormas.im</strong></em> et sélectionner le menu '?' et 'Update Cormas'.      </p>
+</div>
+<div>
+<h3>Remerciements</h3>
+</div>
+<div>Merci aux premiers béta-testeurs qui ont essuyé les plâtres  (Raphaèle, Chloé, Hermès, Olivier et tous ceux de la première session de  l'école d'été) !</div>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-
-
-
-</body>
-
-
-
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>
-
-
-

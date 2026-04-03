@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
@@ -6,94 +7,88 @@
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
 <style>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    position: relative;
-    background-color: #FFA500;
-    height: 80px;
-    width: 100vw;
-    margin-left: -180px;
-    z-index: 1001; /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-}
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-    z-index: 1000; /* En dessous du bandeau */
-    box-sizing: border-box;
-}
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-</style></head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
-<div class="header-container">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="../outil/haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 <!--#include virtual="../outil/sommair.inc" -->
 <td bgcolor="#FFFFFF" valign="top" width="*"> <p>  
       <h1>Installation complète de Cormas2004 <i><img height="31" src="../../images/outil/mac_logo2.gif" width="69"/></i><i><br/>
 </i><i>Version de<i> Décembre, 2006</i></i></h1>
 <p> </p>
-<p>Cette page explique la procédure complète dinstallation 
+<p>Cette page explique la procédure complète d'installation 
         de Cormas. Si vous avez déjà installer une version de Cormas 
         sur VW7, faite une simple <a href="upgradeCormas.htm">mise à jour 
         de votre version</a>. </p>
@@ -103,7 +98,7 @@ tbody td.content-cell {
         pas possible de fournir une version tout-en-un comprenant VW et Cormas.</p>
 <h2>Première étape: installation de VisualWorks</h2>
 <h5>Télécharger VisualWorks 7.4</h5>
-<p>Tout dabord, vous devez télécharger la version non-commercial 
+<p>Tout d'abord, vous devez télécharger la version non-commercial 
         de VisualWorks 7 sur le site web de Cincom. Vous trouverez tous ces fichiers 
         ici (légalement, nous ne pouvons les délivrer nous-mêmes): 
         <a href="http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks" target="_blank">http://www.cincom.com/scripts/smalltalk.dll//downloads/index.ssp?content=visualworks</a></p>
@@ -114,21 +109,21 @@ tbody td.content-cell {
         partir des fichiers individuels.<br/>
         Vous devez télécharger :</p>
 <ul>
-<li>le fichier correspondant à votre système dexploitatoin 
+<li>le fichier correspondant à votre système d'exploitatoin 
           : Virtual Machine for Mac OSX (step 1). Il y a 2 possibilités 
           : 
           <ul>
 <li>le fichier classique : Virtual Machine for Mac OS X (le plus facile), 
               ou</li>
 <li> le fichier "Virtual Machine based on X11" (dans ce 
-              cas vous devez avoir installé X11 auparavant. Linstallation 
+              cas vous devez avoir installé X11 auparavant. L'installation 
               est légèrement plus compliquée, mais VW tourne 
               un peu plus rapidement) <br/>
 </li>
 </ul>
 </li>
 <li>Le fichier "Base VisualWorks parcels and virtual image" 
-          du step 2 : BaseVisualWorks.tar (115.8 Mo, cest le fichier principal).<br/>
+          du step 2 : BaseVisualWorks.tar (115.8 Mo, c'est le fichier principal).<br/>
           Il est automatiquement dézippé en "BaseVisualWorks 
           Folder" <br/>
 </li>
@@ -169,13 +164,13 @@ tbody td.content-cell {
 <h2>Seconde étape: installation de Cormas2004</h2>
 <h5>Télécharger Cormas</h5>
 <ul>
-<li>Tout dabord, vous devez télécharger le fichier <a href="../../logiciel/cormas2004/installCormas.zip">installCormas.zip</a> 
+<li>Tout d'abord, vous devez télécharger le fichier <a href="../../logiciel/cormas2004/installCormas.zip">installCormas.zip</a> 
           (8 Mo),</li>
 <li>normallement, le fichier installCormas.zip est automatiquement dézippé 
           en un répertoire /cormas/ (si non, dézipper le)</li>
 <li> déplacer ce répertoire «cormas» dans Applications/VW7.4/. 
         </li>
-<li>finallement, vous devriez avoir larchitecture suivante :<br/>
+<li>finallement, vous devriez avoir l'architecture suivante :<br/>
 <br/>
 <img height="283" src="../../images/outil/MAC/finallyFolder.jpg" width="583"/>
 </li>
@@ -190,7 +185,7 @@ tbody td.content-cell {
 <br/>
 <br/>
 </li>
-<li>Naviguer alors pour choisir le fichier dassociation : Applications/VW7.4/bin/macx/<strong>visual</strong> 
+<li>Naviguer alors pour choisir le fichier d'association : Applications/VW7.4/bin/macx/<strong>visual</strong> 
           : <br/>
 <br/>
 <img height="466" src="../../images/outil/MAC/chooseAppli.jpg" width="854"/></li>
@@ -203,7 +198,7 @@ tbody td.content-cell {
           <ul>
 <li>dans la fenêtre de "VisualWorks Launcher", clicker 
               sur le 3ième bouton <img height="25" src="../../images/outil/MAC/settings.Button.gif" width="26"/> 
-              ("Edit the system options") puis sélectionner longlet 
+              ("Edit the system options") puis sélectionner l'onglet 
               "System" <br/>
 </li>
 <li>Le chemin (VisualWorks home directory) doit être : /Applications/VW7.4/<br/>
@@ -220,7 +215,7 @@ tbody td.content-cell {
 <blockquote>
 <p align="left"><i>Tools --&gt; Cormas --&gt; Cormas</i> <i>Français<br/>
 </i></p>
-<p align="left">Si, lorsque vous ouvrez un modèle, lexplorateur 
+<p align="left">Si, lorsque vous ouvrez un modèle, l'explorateur 
           de fichier ne fonctionne pas, vous devez écrire le nom du fichier 
           (et son chemin) que vous voulez ouvrir <i>:<br/>
 <img height="107" src="../../images/outil/MAC/path.gif" width="400"/>
@@ -241,7 +236,7 @@ tbody td.content-cell {
         en suivant les instructions pas à pas.</p>
 <p>Nous vous invitons à essayer les <a href="outguid.htm">didactitiels</a>
 </p>
-<p>Vous pouvez aussi tester dautres modèles comme <a href="../applica/tse.htm">TSE</a>, 
+<p>Vous pouvez aussi tester d'autres modèles comme <a href="../applica/tse.htm">TSE</a>, 
         <a href="../applica/plotsrental.htm">PlotsRental</a>, <a href="../../en/applica/jlb.htm">JLB</a> 
         ou <a href="../applica/conway.htm">Conway</a>.</p>
 <p>Un <a href="../../en/outil/buglist.htm">tableau des bugs et des ajouts</a> 
@@ -256,18 +251,5 @@ tbody td.content-cell {
 </td>
 </tr>
 </table>
-</div>
-<div id="sidebar">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>

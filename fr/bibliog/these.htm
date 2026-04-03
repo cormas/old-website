@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
@@ -5,89 +6,82 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
 <link --="" href="/css/cormas.css" rel="stylesheet"/>
-
 <style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    width: calc(100% - 180px);
-}
-.header-container {
-    position: relative;
-    background-color: #FFA500;
-    height: 80px;
-    width: 100vw;
-    margin-left: -180px;
-    z-index: 1001; /* Au-dessus de la sidebar */
-    display: flex;
-    justify-content: center;
-}
-.header-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background-color: #FFA500;
-    padding: 20px;
-    z-index: 1000; /* En dessous du bandeau */
-    box-sizing: border-box;
-}
-#sidebar ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-#sidebar ul li a {
-    display: block;
-    text-align: left;
-    color: #333;
-    background-color: #FFA500;
-    padding: 10px 0;
-}
-#sidebar ul li a:hover {
-    background-color: #C86D12;
-}
-table {
-    width: 100%;
-    margin-left: 20px;
-}
-tbody td {
-    padding-left: 30px;
-}
-tbody td.content-cell {
-    padding-left: 80px;
-}
-</style>
-
-</head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0">
-<div class="header-container">
-<div class="header-image-container">
-<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
-</div>
-</div>
-<div class="container">
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 <!--#include virtual="sommair.inc" -->
 <td bgcolor="#FFFFFF" valign="top" width="*">
@@ -147,7 +141,7 @@ tbody td.content-cell {
         Thèse de l'université de Montpellier II, sciences et techniques du Languedoc. 
         288 pages + annexes <a href="../../pdf/these-Bommel.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
 <p>Guechtouli W. 2009. Dynamique du processus de transfert de connaissances 
-        au sein d’une communauté de pratique : Une modélisation 
+        au sein dune communauté de pratique : Une modélisation 
         multi-agents. Thèse de doctorat, université Paul Cézanne, 
         Aix-Marseille III, sciences économiques. 255 pages + annexes <a href="/pdf/theseWG.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
 <p>Le Canh Dung. 2009. Environmental and socio-economic impacts of rice-shrimp farming: companion modelling case study in Bac Lieu Province, Mekong Delta, Vietnam. PhD in Agricultural Technology, faculty of Science, Chulalongkorn University, Thailand. 140 pages + annexes. <a href="/pdf/Dung_PhD_2009.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
@@ -208,7 +202,7 @@ tbody td.content-cell {
 <p>Houdart M. 2005. Organisation spatiale des activités agricoles et pollution 
         des eaux par les pesticides. Modélisation appliquée au bassin-versant 
         de la Capot, Martinique. Thèse de doctorat en Géographie 
-      de l’Université des Antilles et de la Guyane, Fort de France, Martinique. <a href="/pdf/theseHoudart.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a> </p>
+      de lUniversité des Antilles et de la Guyane, Fort de France, Martinique. <a href="/pdf/theseHoudart.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a> </p>
 <p>Roda J.-M. (2005). Réseaux d'entreprises et stratégies industrielles dans les forêts tropicales. Thèse de doctorat/ PhD, Paris, Université de Paris 7, 393 p. <a href="http://ctbg.cirad.fr/ctbg/ecompl/publi/These_Roda.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
 <p><em><strong><font color="#666666" size="4">2004</font></strong></em></p>
 <p>Abrami, G. 2004. Niveaux d'organisation dans la modélisation multi-agents 
@@ -225,8 +219,8 @@ tbody td.content-cell {
 
         Yaoundé, Cameroun <a href="/pdf/thesebakam.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a>
 </p>
-<p>Farolfi S. 2003. Système agroalimentaire et environnement : d’une approche 
-        économique néoclassique à la recherche-action pour l’aide à la décision 
+<p>Farolfi S. 2003. Système agroalimentaire et environnement : dune approche 
+        économique néoclassique à la recherche-action pour laide à la décision 
         et à la négociation. Habilitation à Diriger des Recherches, Université 
         de Montpellier I, Faculté de Sciences Economiques. 62 pp. [<a href="/pdf/hdrFarolfi.pdf">full 
         text </a>] [<a href="/pdf/hdrFarolfiResume.pdf">abstract</a>] </p>
@@ -307,18 +301,5 @@ tbody td.content-cell {
 </td>
 </tr>
 </table>
-</div>
-<div id="sidebar">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<ul>
-<li><a href="../../index.htm">Accueil</a></li>
-<li><a href="../demarch/demarch.htm">Approche</a></li>
-<li><a href="../outil/outil.htm">Cormas soft</a></li>
-<li><a href="../applica/applica.htm">Modèles</a></li>
-<li><a href="../bibliog/article.htm">Publications</a></li>
-<li><a href="../formati/formati.htm">Cours</a></li>
-<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
-</ul>
-</div>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Cours</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
 </html>
