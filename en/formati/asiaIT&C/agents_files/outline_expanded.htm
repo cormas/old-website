@@ -1,3239 +1,2904 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-874">
-<meta name=ProgId content=PowerPoint.Slide>
-<meta name=Generator content="Microsoft PowerPoint 9">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="PowerPoint.Slide" name="ProgId"/>
+<meta content="Microsoft PowerPoint 9" name="Generator"/>
 <script>
 <!--
 if( window.name != "PPTOtl" )
   parent.location.href = "../agents.htm";
 //-->
 </script>
-<meta name=Robots content=NoIndex>
-</head>
-
-<body bgcolor=white text=black link=black vlink=black alink=black>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0671.htm');">Agents and Multi Agent
+<meta content="NoIndex" name="Robots"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body alink="black" bgcolor="white" link="black" text="black" vlink="black"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0671.htm');">Agents and Multi Agent
 Systems</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0672.htm');">Content</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0672.htm');">Content</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Introduction</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Agent architectures</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Reactive MAS</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Cognitive MAS</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Formalisms for MAS</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Protocols and communication</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Introduction</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Agent architectures</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Reactive MAS</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Cognitive MAS</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Formalisms for MAS</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Protocols and communication</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0673.htm');">Introduction</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0673.htm');">Introduction</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Generalities</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>An example</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>What is an agent?</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>What is a Multi-agent System?</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>What is an environment?</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>What is emergence?</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Some applications</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Generalities</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">An example</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">What is an agent?</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">What is a Multi-agent System?</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">What is an environment?</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">What is emergence?</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Some applications</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0674.htm');">Artificial Intelligence and
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0674.htm');">Artificial Intelligence and
 Multi-agent Systems</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0802.htm');">Links with other research
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0802.htm');">Links with other research
 fields in computer sciences</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0675.htm');">From Robots to Programs:
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0675.htm');">From Robots to Programs:
 Examples</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Robots for:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Mars exploration</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>World cup</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Manufacturing</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Software entities for:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>individual based simulation</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Problem solving</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Programs to:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>explore the web (sofbots)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Solve complex problems</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Robots for:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Mars exploration</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">World cup</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Manufacturing</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Software entities for:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">individual based simulation</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Problem solving</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Programs to:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">explore the web (sofbots)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Solve complex problems</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0806.htm');">Slide 7</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0795.htm');">Example</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0806.htm');">Slide 7</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0795.htm');">Example</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>A multi agent system for the control
-  of<span style="mso-spacerun: yes">&nbsp; </span>air traffic ?</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>What are the agents?</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>What are the interactions?</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">A multi agent system for the control
+  of<span style="mso-spacerun: yes">  </span>air traffic ?</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">What are the agents?</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">What are the interactions?</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0796.htm');">Without communication</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0796.htm');">Without communication</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Planes coordinate without
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Planes coordinate without
   communication.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0797.htm');">With communication</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0798.htm');">Sectors</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0799.htm');">Centralized</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0797.htm');">With communication</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0798.htm');">Sectors</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0799.htm');">Centralized</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Several experts are able to solve the
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Several experts are able to solve the
   problem</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0800.htm');">Without communication</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0800.htm');">Without communication</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Agent structure</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Agent structure</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0801.htm');">With communication</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0677.htm');">Approaches of the MAS</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0678.htm');">Concepts</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0801.htm');">With communication</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0677.htm');">Approaches of the MAS</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0678.htm');">Concepts</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Autonomous agent</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Interactions agent-agent and
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Autonomous agent</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Interactions agent-agent and
   agent-environment =&gt; multi-agent</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Emergence of global phenomena from
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Emergence of global phenomena from
   local interactions</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Environment</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Environment</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0679.htm');">What is an agent?</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0680.htm');">Definition of an Agent</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0679.htm');">What is an agent?</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0680.htm');">Definition of an Agent</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>A physical or virtual entity</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>able to act in its environment,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>able to communicate with its
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">A physical or virtual entity</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">able to act in its environment,</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">able to communicate with its
   environment,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>has objectives and uses resources,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>able to perceive (partial)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>has competencies and offers services,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>may reproduce.</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">has objectives and uses resources,</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">able to perceive (partial)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">has competencies and offers services,</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">may reproduce.</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0681.htm');">Autonomy</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0681.htm');">Autonomy</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Capacity of adaptation in an uncertain
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Capacity of adaptation in an uncertain
   world</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Separation between the agent and its
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Separation between the agent and its
   environment</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0682.htm');">Autonomy and Computer
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0682.htm');">Autonomy and Computer
 Science</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0683.htm');"><span style="mso-spacerun:
-yes">&nbsp;</span>Agents</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0684.htm');">Structure of the agents</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0787.htm');">Slide 23</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0685.htm');">What is a multi-agent
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0683.htm');"><span style="mso-spacerun:
+yes"> </span>Agents</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0684.htm');">Structure of the agents</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0787.htm');">Slide 23</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0685.htm');">What is a multi-agent
 system?</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0686.htm');">Multi Agent System</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0686.htm');">Multi Agent System</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>A set of acting and communicating
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">A set of acting and communicating
   agents</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>An organization or coordination mode</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>An observer&nbsp;�s viewpoint.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>An environment</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Passive objects</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Agents</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>A set of relations</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Operators for perception,
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">An organization or coordination mode</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">An observer s viewpoint.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">An environment</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Passive objects</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Agents</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">A set of relations</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Operators for perception,
   communication, production, consumption, and transformation of the objects.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Operators for reaction of the world.</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Operators for reaction of the world.</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0687.htm');">Slide 26</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0688.htm');">MAS (Multi Agent Systems)</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0687.htm');">Slide 26</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0688.htm');">MAS (Multi Agent Systems)</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Research field in computer science</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>A metaphor of reality<span
-  style="mso-spacerun: yes">&nbsp; </span>(social, biological and physics), a
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Research field in computer science</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">A metaphor of reality<span style="mso-spacerun: yes">  </span>(social, biological and physics), a
   set of entities in interaction</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>A tool to simulate reality</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">A tool to simulate reality</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0689.htm');">MAS and Complexity</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0689.htm');">MAS and Complexity</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The problem of interacting entities</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Physics (spin glasses)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Chemistry (B&eacute;nard cells)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Biology, ecology (Atlan)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Social sciences (Dupuy)</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The problem of interacting entities</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Physics (spin glasses)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Chemistry (Bénard cells)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Biology, ecology (Atlan)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Social sciences (Dupuy)</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0788.htm');">Slide 29</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0690.htm');">MAS and Complexity</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0788.htm');">Slide 29</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0690.htm');">MAS and Complexity</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Bottom-up approach</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Viability of a system results from the
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Bottom-up approach</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Viability of a system results from the
   interactions</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0691.htm');">Diversity of MAS</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0691.htm');">Diversity of MAS</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Multi expert systems</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Distributed constraint solving problems</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>DAI</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Cognitive agents</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Societies of agents</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Simulation</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Artificial life</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Reactive agents</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Multi expert systems</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Distributed constraint solving problems</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">DAI</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Cognitive agents</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Societies of agents</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Simulation</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Artificial life</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Reactive agents</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0692.htm');">Classification of MAS</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0692.htm');">Classification of MAS</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Many classifications</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Reactive vs cognitive</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Intentional vs non intentional</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>�</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>It depends on</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>The memory</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>The internal control</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>The communication</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Many classifications</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Reactive vs cognitive</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Intentional vs non intentional</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2"></font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">It depends on</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">The memory</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">The internal control</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">The communication</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0693.htm');">Memory</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0693.htm');">Memory</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>No memory</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Conservation of thresholds</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Conservation of the received messages</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Conservation of the received and sent
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">No memory</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Conservation of thresholds</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Conservation of the received messages</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Conservation of the received and sent
   messages</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Conservation of large amount of
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Conservation of large amount of
   information about the context of the messages</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0694.htm');">Internal control</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0694.htm');">Internal control</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Autonomy for</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>scheduling of actions</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>interpretation of messages</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>modification of behaviour</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Internal control</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>No control or control limited to
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Autonomy for</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">scheduling of actions</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">interpretation of messages</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">modification of behaviour</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Internal control</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">No control or control limited to
   scheduling : messages are stimuli for action</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Reactive control : messages are
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Reactive control : messages are
   interpreted but there is a direct link between messages and actions</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Cognitive control : complex
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Cognitive control : complex
   interpretation of messages</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0695.htm');">Communication</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0695.htm');">Communication</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Classify the messages</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Autonomy of the sender</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Autonomy of the receiver</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Examples</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Physics : no autonomy of the receiver</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Signal : no autonomy of the sender</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Communication of cognitive agents :
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Classify the messages</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Autonomy of the sender</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Autonomy of the receiver</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Examples</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Physics : no autonomy of the receiver</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Signal : no autonomy of the sender</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Communication of cognitive agents :
   autonomy of both.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0700.htm');">What is environment?</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0701.htm');">Environment</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0700.htm');">What is environment?</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0701.htm');">Environment</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>A topological space (possibly with a
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">A topological space (possibly with a
   metrics)</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>The whole containing the agents</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>The objects and dynamics which are not
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">The whole containing the agents</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">The objects and dynamics which are not
   part of the agents</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>A resource for communication and action</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">A resource for communication and action</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0702.htm');">The role of the environment</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0702.htm');">The role of the environment</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>At the micro level</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Interaction medium</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Coordination of interactions at various
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">At the micro level</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Interaction medium</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Coordination of interactions at various
   time scales (dissipation rate)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Contraints on the agent dynamics</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>At the macro level</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Collective memory</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Global inscription medium</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Control of the micro-level</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Contraints on the agent dynamics</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">At the macro level</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Collective memory</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Global inscription medium</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Control of the micro-level</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0703.htm');">Remarks</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0703.htm');">Remarks</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>Two structuring factors of emergent
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">Two structuring factors of emergent
   phenomena:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Antagonistic behaviours</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Agression/repulsion</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>The environment structure:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Existing</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Locally modified by the agents</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Globally modified by the agents (or the
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Antagonistic behaviours</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Agression/repulsion</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">The environment structure:</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Existing</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Locally modified by the agents</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Globally modified by the agents (or the
   observer)</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0791.htm');">What is emergence?</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0792.htm');">A definition attempt</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0791.htm');">What is emergence?</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0792.htm');">A definition attempt</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>A phenomenon is emergent if and only if
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">A phenomenon is emergent if and only if
   we have:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>A system of interacting entities whose
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">A system of interacting entities whose
   states and dynamics is made using a theory D:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Micro-level, non-intentionality,
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Micro-level, non-intentionality,
   temporality</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>The production of a phenomenon
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">The production of a phenomenon
   (process, stable state, invariant) which is global relative to the previous
   system:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Macro-level, stability</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>The observation of this phenomenon by
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Macro-level, stability</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">The observation of this phenomenon by
   an observer (weak sense) or by the entities themselves (strong sense), via an
-  inscription mechanism, in another theory D�:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>novelty, interpretation</font></td>
- </tr>
+  inscription mechanism, in another theory D:</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">novelty, interpretation</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0793.htm');">Weak emergence</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0793.htm');">Weak emergence</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>An emergent phenomena is not
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">An emergent phenomena is not
   necessarily emergent on itself:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Reference to the observer</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>Example:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Entities: the ants</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Interactions:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>deposits of pheromones while moving
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Reference to the observer</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">Example:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Entities: the ants</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Interactions:</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">deposits of pheromones while moving
   food</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Attraction pheromone diffusion gradient</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Global phenomenon:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Back and forth traveling between the
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Attraction pheromone diffusion gradient</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Global phenomenon:</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Back and forth traveling between the
   nest and the food source</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Emergent phenomena:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>The (shortest) path between the nest
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Emergent phenomena:</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">The (shortest) path between the nest
   and the food source</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>Counter-example:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Temperature as average kinetic energy
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">Counter-example:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Temperature as average kinetic energy
   of molecules</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0794.htm');">Strong emergence</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0794.htm');">Strong emergence</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>What happens when the global phenomena
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">What happens when the global phenomena
   is perceived by the entities themselves?</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>The agents are acting on the basis of
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">The agents are acting on the basis of
   their perception</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>The agents will act based on the global
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">The agents will act based on the global
   effect they collectively produce</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>If the resulting phenomena stabilizes,
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">If the resulting phenomena stabilizes,
   there is strong emergence</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>How can the epiphenomenon be perceived
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">How can the epiphenomenon be perceived
   by the agent themselves?</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>By modifying the environment such that
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">By modifying the environment such that
   the trace of the global phenomenon can be in the perception field of the
   agents</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0704.htm');">The categories of
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0704.htm');">The categories of
 applications</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0705.htm');">Multi expert systems</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0705.htm');">Multi expert systems</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Solve problems or complex tasks</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Control industrial process</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Pattern recognition</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>natural language</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Solve problems or complex tasks</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Control industrial process</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Pattern recognition</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">natural language</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0706.htm');">Example: multi-expert<span
-style="mso-spacerun: yes">&nbsp; </span>systems</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0706.htm');">Example: multi-expert<span style="mso-spacerun: yes">  </span>systems</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Cognitive agents</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Control structure : task allocation</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Communication structure : blackboard</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Cognitive agents</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Control structure : task allocation</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Communication structure : blackboard</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0707.htm');">Complex system simulations</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0707.htm');">Complex system simulations</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Understand the dynamics</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Simulation of aggregative behaviour</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Simulation of task specialization</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Simulation of social phenomena</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Simulation of fluids</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Understand the dynamics</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Simulation of aggregative behaviour</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Simulation of task specialization</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Simulation of social phenomena</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Simulation of fluids</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0708.htm');">Example: Manta</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0708.htm');">Example: Manta</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Reactive agents</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Structures of communication : stimulus
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Reactive agents</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Structures of communication : stimulus
   in the environment</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Protocol: do the preferred task</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Protocol: do the preferred task</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0709.htm');">Example: Eco-resolution</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0709.htm');">Example: Eco-resolution</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Reactive agents</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Communication : look at the neighbours</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Protocol : try to reach your place,
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Reactive agents</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Communication : look at the neighbours</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Protocol : try to reach your place,
   attack, and flee</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0710.htm');">Agent architectures</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0711.htm');">Subsomption architecture
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0710.htm');">Agent architectures</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0711.htm');">Subsomption architecture
 (R.Brooks)</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Parallel tasks</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>dominant and dominated modules</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Parallel tasks</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">dominant and dominated modules</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0712.htm');">Competitive tasks (Manta)</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0713.htm');">Echo (J.Holland) -
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0712.htm');">Competitive tasks (Manta)</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0713.htm');">Echo (J.Holland) -
 Artificial life</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Resources (a,b,c...)</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Agents (tank, chromosome)</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Offense tag and defense tag</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Emergence of hierarchies, exchange
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Resources (a,b,c...)</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Agents (tank, chromosome)</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Offense tag and defense tag</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Emergence of hierarchies, exchange
   structures</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0714.htm');">Slide 54</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0715.htm');">Slide 55</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0716.htm');"><span style="mso-spacerun:
-yes">&nbsp;</span>Formalisms</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0714.htm');">Slide 54</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0715.htm');">Slide 55</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0716.htm');"><span style="mso-spacerun:
+yes"> </span>Formalisms</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Objective : to formalise the behaviour
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Objective : to formalise the behaviour
   of an agent</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Two formalisms to represent action as a
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Two formalisms to represent action as a
   computerised process</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Automata</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Petri nets</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Automata</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Petri nets</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0717.htm');">Agents as computer systems</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0718.htm');"><span style="mso-spacerun:
-yes">&nbsp;</span>Finite-state Automata</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0717.htm');">Agents as computer systems</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0718.htm');"><span style="mso-spacerun:
+yes"> </span>Finite-state Automata</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Describe the behaviour of an agent able
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Describe the behaviour of an agent able
   to memorise its state</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Theory</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Algorithmics</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Computer architecture</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Theory</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Algorithmics</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Computer architecture</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0719.htm');">Example of the coffee
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0719.htm');">Example of the coffee
 machine</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0720.htm');">A conversation</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0721.htm');">Drawback</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0720.htm');">A conversation</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0721.htm');">Drawback</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Ok for simple logic systems</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Limitations:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Complexity. Remember a sequence of
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Ok for simple logic systems</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Limitations:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Complexity. Remember a sequence of
   events of arbitrary length. Memorization</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Only sequential processes.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Only sequential processes.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0722.htm');">Petri net definition</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0722.htm');">Petri net definition</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Petri nets: graphs with two kinds od
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Petri nets: graphs with two kinds od
   nodes: places and transitions</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>The arc of the graph can only link
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">The arc of the graph can only link
   places to transitions or transitions to places.</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>A marking is a distribution of token on
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">A marking is a distribution of token on
   the places.</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Petri nets are a modelling tool of
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Petri nets are a modelling tool of
   distributed systems from a mathematical and graphical formalism.</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>They allow modelling, checking and
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">They allow modelling, checking and
   validation of behavior of distributed systems.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0723.htm');">Graphical representation</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0724.htm');">Firing rules for transition
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0723.htm');">Graphical representation</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0724.htm');">Firing rules for transition
 crossing</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0725.htm');">Producer/consumer
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0725.htm');">Producer/consumer
 interactions</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0726.htm');">Example</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0727.htm');">BDI Architectures (Rao and
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0726.htm');">Example</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0727.htm');">BDI Architectures (Rao and
 Georgeff, Cohen and Levesque)</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>BDI: Belief, Desire, Intention</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">BDI: Belief, Desire, Intention</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0728.htm');">Belief</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0728.htm');">Belief</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Object</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Symbols</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Logic</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Object</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Symbols</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Logic</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0729.htm');">Object oriented
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0729.htm');">Object oriented
 representations</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The agents maintain in their memory a
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The agents maintain in their memory a
   network of objects that is a partial reproduction of its environment. It
   evaluates</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>the modification of the universe</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>the satisfaction of its goals</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>An example is a world of nomad agents
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">the modification of the universe</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">the satisfaction of its goals</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">An example is a world of nomad agents
   moving to a territory. Each agent maintains a list of places and other agents
   encountered.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0730.htm');">Desire</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0730.htm');">Desire</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Vision of a future world,</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Consistent goals and objectives</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Plans (Rao and Georgeff)</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Vision of a future world,</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Consistent goals and objectives</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Plans (Rao and Georgeff)</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0731.htm');">Slide 71</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0732.htm');">From goals to intentions
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0731.htm');">Slide 71</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0732.htm');">From goals to intentions
 (commitment)</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Blinded : Until the agent believes it
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Blinded : Until the agent believes it
   has accomplished its intention</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Single-minded : As long as it thinks it
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Single-minded : As long as it thinks it
   is possible</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Open minded : As soon as it has the
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Open minded : As soon as it has the
   goal</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0733.htm');">Internal control</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0733.htm');">Internal control</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>BDI interpreter</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Initialise-state()</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Repeat</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>options := option-generator
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">BDI interpreter</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Initialise-state()</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Repeat</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">options := option-generator
   (event-queue)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>selected-options := deliberate
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">selected-options := deliberate
   (options)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>update-intentions(selected-options)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>execute</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>drop-successful-attitudes()</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>drop-impossible-attitudes()</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>end repeat</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">update-intentions(selected-options)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">execute</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">drop-successful-attitudes()</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">drop-impossible-attitudes()</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">end repeat</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0734.htm');">Recursive architecture :
-agents as<span style="mso-spacerun: yes">&nbsp; </span>multi-agents.</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0734.htm');">Recursive architecture :
+agents as<span style="mso-spacerun: yes">  </span>multi-agents.</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>In the internal world there is<span
-  style="mso-spacerun: yes">&nbsp; </span>cooperation between</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>an agent managing the time</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>agents managing interfaces and memory</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>agents in charge of the control</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>a set of agents in charge of executions</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>This is the idea of &laquo;&nbsp;the society
-  of mind&nbsp;&raquo; M. Minski</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">In the internal world there is<span style="mso-spacerun: yes">  </span>cooperation between</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">an agent managing the time</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">agents managing interfaces and memory</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">agents in charge of the control</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">a set of agents in charge of executions</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">This is the idea of « the society
+  of mind » M. Minski</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0735.htm');">Reactive MAS</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0736.htm');">Example : Manta</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0737.htm');">Three main issues <br>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0735.htm');">Reactive MAS</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0736.htm');">Example : Manta</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0737.htm');">Three main issues <br/>
 for reactive agents</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Representation of space and environment</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Actions and perceptions</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Interactions via the environment</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Representation of space and environment</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Actions and perceptions</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Interactions via the environment</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0738.htm');">Biological inspiration</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0738.htm');">Biological inspiration</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Behavioural approaches:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Flee &amp; attack behaviours</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Pattern approaches:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Behaviours structured by the
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Behavioural approaches:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Flee &amp; attack behaviours</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Pattern approaches:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Behaviours structured by the
   environment</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Marking approaches:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Modification of the environment</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Stygmergic approaches:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Coordinated modification of the
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Marking approaches:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Modification of the environment</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Stygmergic approaches:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Coordinated modification of the
   environment</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0739.htm');">Environment</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0739.htm');">Environment</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>A space as a medium for interactions</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>The perception of an agent is the
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">A space as a medium for interactions</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">The perception of an agent is the
   result of the actions of other agents (externalities)</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0740.htm');">Interactions</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0740.htm');">Interactions</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Interactions through a field of forces</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Interactions through the use of marks</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Interactions through actions with
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Interactions through a field of forces</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Interactions through the use of marks</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Interactions through actions with
   neighbours</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0741.htm');">A field of forces</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0741.htm');">A field of forces</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Reynolds Boids</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Fish shoal<span style="mso-spacerun:
-  yes">&nbsp; </span>(Mesle)</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Planes (Zeghal)</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Reynolds Boids</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Fish shoal<span style="mso-spacerun:
+  yes">  </span>(Mesle)</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Planes (Zeghal)</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0789.htm');">Slide 82</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0790.htm');">Slide 83</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0742.htm');">The use of marks</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0789.htm');">Slide 82</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0790.htm');">Slide 83</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0742.htm');">The use of marks</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The relation with environment is linked
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The relation with environment is linked
   to the perception of marks,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The action is the use of marks</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Examples</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Foraging robots</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Foraging ants</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The action is the use of marks</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Examples</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Foraging robots</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Foraging ants</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0743.htm');">Foraging robots</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0744.htm');">Without cooperation</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0743.htm');">Foraging robots</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0744.htm');">Without cooperation</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Explore : randomly</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Find : if I perceive a mine, then I
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Explore : randomly</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Find : if I perceive a mine, then I
   take</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Carry: go back to the base</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Base : drop what I am carrying</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Carry: go back to the base</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Base : drop what I am carrying</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0745.htm');">With marks</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0745.htm');">With marks</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Robots use marks</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Follow Mark : If not carrying and
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Robots use marks</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Follow Mark : If not carrying and
   perceive mark then follow marks</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0746.htm');">Result</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0747.htm');">With explicit cooperation</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0746.htm');">Result</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0747.htm');">With explicit cooperation</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Help: if perceive agent carrying then
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Help: if perceive agent carrying then
   propose help</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Exchange : If help proposed then give
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Exchange : If help proposed then give
   the resource</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0748.htm');">Action on the neighbours</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0748.htm');">Action on the neighbours</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Assess the state of the neighbours and
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Assess the state of the neighbours and
   the pressure</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Analyze the state and pressure and
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Analyze the state and pressure and
   choose the best action</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Move and put pressure on the neighbours</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Move and put pressure on the neighbours</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0749.htm');">Neighbours + Pattern: PACO
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0749.htm');">Neighbours + Pattern: PACO
 (I)</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>Each agent has:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>A variable perception radius</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Little to see:		augment</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Much to see:		diminish</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>A variable acquaintance radius</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Few agents :		augment</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Many agents:		diminish</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>The movement results from:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>A force computed from local perception</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>A force resulting from the
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">Each agent has:</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">A variable perception radius</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Little to see:		augment</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Much to see:		diminish</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">A variable acquaintance radius</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Few agents :		augment</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Many agents:		diminish</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">The movement results from:</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">A force computed from local perception</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">A force resulting from the
   acquaintances</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>A friction</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>Coordination by the environment</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">A friction</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">Coordination by the environment</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0750.htm');">Neighbours+Pattern : PACO
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0750.htm');">Neighbours+Pattern : PACO
 (II)</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>Application to vision</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Local perception:	image intensity
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">Application to vision</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Local perception:	image intensity
   gradient</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Acquaintances:	2-3 agents maximum</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Forces:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Increasing gradient</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>The other agents pull</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>Friction</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>Result:</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>The agents produce chains along
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Acquaintances:	2-3 agents maximum</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Forces:</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Increasing gradient</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">The other agents pull</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">Friction</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">Result:</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">The agents produce chains along
   contrast lines</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1><font face=Arial size=2>These chains follow changes of the
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font face="Arial" size="2">These chains follow changes of the
   image</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0751.htm');">Cognitive MAS</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0752.htm');">Cognitive agents</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0751.htm');">Cognitive MAS</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0752.htm');">Cognitive agents</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>A cognitive agent</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>has<span style="mso-spacerun:
-  yes">&nbsp; </span>memory</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2><span style="mso-spacerun:
-  yes">&nbsp;</span>has beliefs and skills</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>has goals</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2><font face=Arial size=2>can communicate</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=3><font face=Arial size=2>Some parts of knowledge are facts.
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">A cognitive agent</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">has<span style="mso-spacerun:
+  yes">  </span>memory</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2"><span style="mso-spacerun:
+  yes"> </span>has beliefs and skills</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">has goals</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font face="Arial" size="2">can communicate</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font face="Arial" size="2">Some parts of knowledge are facts.
   Other parts are models of the world.</font></td>
- </tr>
- <tr>
-  <td colspan=3></td>
-  <td colspan=1></td>
- </tr>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0753.htm');">SimDelta</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0754.htm');">Three main questions
-<br>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0753.htm');">SimDelta</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0754.htm');">Three main questions
+<br/>
 for a cognitive MAS</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Decision			=&gt; agent architecture</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Organization		=&gt; agent coordination</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Communication	=&gt; agent interaction</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Decision			=&gt; agent architecture</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Organization		=&gt; agent coordination</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Communication	=&gt; agent interaction</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0755.htm');">Decision</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0755.htm');">Decision</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Choices</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Knowledge and beliefs</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Objectives</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Computation</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>What are the formalisms?</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Choices</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Knowledge and beliefs</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Objectives</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Computation</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">What are the formalisms?</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0756.htm');">BDI Architectures</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0756.htm');">BDI Architectures</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Using logical languages</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Using logical languages</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0757.htm');">Organization</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0757.htm');">Organization</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Who can do the task ?</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Who has access to resources ?</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>Who can communicate ?</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Who can do the task ?</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Who has access to resources ?</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">Who can communicate ?</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0758.htm');">Three main organization
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0758.htm');">Three main organization
 dynamics</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>When a task can be achieved by a single
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">When a task can be achieved by a single
   agent:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Task decomposition and allocation</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>When a task must be achieved by a set
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Task decomposition and allocation</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">When a task must be achieved by a set
   of agents:</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Coalition formation</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Role allocation inside organizations</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Coalition formation</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Role allocation inside organizations</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0759.htm');">Communication</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0759.htm');">Communication</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Agents communicate</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>to inform themselves</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>to distribute the tasks</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>to resolve the conflicts</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>to learn</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The problem of languages</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Agents communicate</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">to inform themselves</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">to distribute the tasks</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">to resolve the conflicts</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">to learn</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The problem of languages</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0760.htm');">Languages</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0760.htm');">Languages</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>to present themselves and<span
-  style="mso-spacerun: yes">&nbsp; </span>select another agent</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>to provide and receive information</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>to present their competencies</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>to ask for help for a contract</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>to accept a task, a contract</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>to propose a plan</font></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">to present themselves and<span style="mso-spacerun: yes">  </span>select another agent</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">to provide and receive information</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">to present their competencies</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">to ask for help for a contract</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">to accept a task, a contract</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">to propose a plan</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0761.htm');">Conversations</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0761.htm');">Conversations</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Conversations are represented by linked
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Conversations are represented by linked
   sentences.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The protocols organize the links.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Examples</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>question/answer</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>contract</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>negotiation</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The protocols organize the links.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Examples</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">question/answer</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">contract</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">negotiation</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0769.htm');">Protocols and communications</a></b></font></p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0770.htm');">Various modes of
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0769.htm');">Protocols and communications</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0770.htm');">Various modes of
 communication</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Direct</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>A special program manages the sending
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Direct</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">A special program manages the sending
   of the message</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Propagation</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>A signal in the environment.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Blackboard</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>A common object for the information.</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Propagation</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">A signal in the environment.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Blackboard</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">A common object for the information.</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0771.htm');">Speech acts theory</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0771.htm');">Speech acts theory</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Austin: How to do things with words</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>to note (the sweat is red) has a truth
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Austin: How to do things with words</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">to note (the sweat is red) has a truth
   value, to perform (I ask you to do)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The illocutionary component relates to
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The illocutionary component relates to
   the realisation of the act (to order, to ask) and the satisfaction depends on
   this realisation. The perlocutionary component relates to the state of the
   receiver (to convince).</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Example : &laquo;&nbsp;The dish is not salty&nbsp;&raquo;</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Example : « The dish is not salty »</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0772.htm');">Modelling conversations</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0772.htm');">Modelling conversations</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Knowledge Query and Manipulation
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Knowledge Query and Manipulation
   Language (KQML)</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Rich but miss some acts for commitment.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>AGL (Agent Language) of FIPA</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Other languages such that COOL
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Rich but miss some acts for commitment.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">AGL (Agent Language) of FIPA</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Other languages such that COOL
   (Coordination language) adds acts like</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Propose</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Counter-propose</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Accept, reject</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Cancel, Satisfy, Fail</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Propose</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Counter-propose</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Accept, reject</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Cancel, Satisfy, Fail</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0773.htm');">&quot;Protocols aims at
-reducing the...&quot;</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0773.htm');">"Protocols aims at
+reducing the..."</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Protocols aims at reducing the set of
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Protocols aims at reducing the set of
   possible reactions to a given message. Protocols are often described by state
   graphs. For cognitive agents, protocols are defined according to context</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>contract net,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>new agents presentation,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>negotiations</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Protocols may use a central agent, may
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">contract net,</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">new agents presentation,</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">negotiations</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Protocols may use a central agent, may
   be distributed, or may be evolutive.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>(Contract Net) is centralised,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Sian protocol organizes a distributed
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">(Contract Net) is centralised,</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Sian protocol organizes a distributed
   negotiation,</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>hierarchical protocol (Durfee) solves
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">hierarchical protocol (Durfee) solves
   conflicts by comparing plans.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0774.htm');">Contract net (Task
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0774.htm');">Contract net (Task
 allocation)</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>a client makes an offer</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>suppliers make propositions</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>the client chooses and a contract is
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">a client makes an offer</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">suppliers make propositions</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">the client chooses and a contract is
   made.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Knowledge of other skills is not given</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Knowledge of other skills is not given</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0775.htm');">Evolution of contract net</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0775.htm');">Evolution of contract net</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>One or many clients</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>With or without delegation</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1><font face=Arial size=2>With or without possibilities of
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">One or many clients</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">With or without delegation</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font face="Arial" size="2">With or without possibilities of
   coalition.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0776.htm');">Hierarchic protocol (Durfee)</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0776.htm');">Hierarchic protocol (Durfee)</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>An agent with a set of tasks to
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">An agent with a set of tasks to
   accomplish, build a hierarchy of behaviours. It associates the tasks with six
   dimensions (who, what, where, when, how, why), and describes each of these
   dimensions more precisely.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>It may communicate these information</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Example : two robots</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">It may communicate these information</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Example : two robots</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0777.htm');">SIAN protocol</a></b></font>
-
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0777.htm');">SIAN protocol</a></b></font>
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Three phases :</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Initial hypothesis by an agent.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Conversation until an agreed version of
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Three phases :</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Initial hypothesis by an agent.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Conversation until an agreed version of
   this hypothesis is reached</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Various agents memorise the information</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Example : Negotiations in Pumani
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Various agents memorise the information</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Example : Negotiations in Pumani
   community (Franchesquin)</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0778.htm');">SIAN protocol: Evaluation of
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0778.htm');">SIAN protocol: Evaluation of
 hypothesis</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=1></td>
- </tr>
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0779.htm');">Primitives for negotiation
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0779.htm');">Primitives for negotiation
 language (Muller)</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Initiators : Propose, Request of
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Initiators : Propose, Request of
   Resources, Inform, Command.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Reactors : Answer, Refine, Modify,
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Reactors : Answer, Refine, Modify,
   Change, Send, Reply, Refuse</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Completors : Confirm, Promise, Commit,
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Completors : Confirm, Promise, Commit,
   Accept, Reject, Grant, Agree.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0780.htm');">Some strategies for
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0780.htm');">Some strategies for
 negotiation</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Always concede</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Be competitive</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Be cooperative : look for a mutually
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Always concede</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Be competitive</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Be cooperative : look for a mutually
   acceptable solution</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Inaction</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Break</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Inaction</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Break</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0781.htm');">From individual to
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0781.htm');">From individual to
 collective with cognitive agents</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Reactive agents often coordinate
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Reactive agents often coordinate
   through the environment</font></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Two approaches for cognitive agents</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>define mutual beliefs, joint desires
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Two approaches for cognitive agents</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">define mutual beliefs, joint desires
   and joint intentions</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>define norms and conventions.</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">define norms and conventions.</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0782.htm');">Rao and Georgeff : social
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0782.htm');">Rao and Georgeff : social
 agent</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>They define social agents who have
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">They define social agents who have
   mutual beliefs, joint goals and joint intentions.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>They use social plans.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>There are some library of plans.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The plan specifies how it will be
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">They use social plans.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">There are some library of plans.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The plan specifies how it will be
   conducted.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>The agents choose a common goal, select
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">The agents choose a common goal, select
   a social plan, and then have a common commitment.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0783.htm');">Woolridge and Jennings :
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0783.htm');">Woolridge and Jennings :
 commitment and conventions.</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Many steps :</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>An agent identifies a potential
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Many steps :</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">An agent identifies a potential
   cooperation.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Team building : the agents asks for
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Team building : the agents asks for
   help.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>The team negotiates for a common plan.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1><font face=Arial size=2>Execution : the agents play their role.</font></td>
- </tr>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">The team negotiates for a common plan.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font face="Arial" size="2">Execution : the agents play their role.</font></td>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0784.htm');">Woolridge and Jennings :
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0784.htm');">Woolridge and Jennings :
 commitment and conventions</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Conventions describe under which
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Conventions describe under which
   conditions an agent evaluates its commitment</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Social conventions describe how an
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Social conventions describe how an
   agent informs the other agents if the commitment is broken.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Coordination = Commitment + conventions
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Coordination = Commitment + conventions
   + social conventions + local reasoning.</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-<p><font face=Arial size=2><b><a
-href="javascript:parent.GoToSld('slide0785.htm');">Conte and Castelfranchi :
-<br>
+<p><font face="Arial" size="2"><b><a href="javascript:parent.GoToSld('slide0785.htm');">Conte and Castelfranchi :
+<br/>
 social dependance</a></b></font>
-
 <table>
- <tr>
-  <td width=5 nowrap></td>
-  <td width=20 nowrap></td>
-  <td width="100%"></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>A depends on B to realize p if p is the
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">A depends on B to realize p if p is the
   goal of A, A is not able to realize it, B is able to realize it.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>Social relations exist before
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">Social relations exist before
   commitment. Socially situated agents in a network are not dependent on the
   questions.</font></td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td colspan=1></td>
- </tr>
- <tr>
-  <td colspan=1></td>
-  <td colspan=2><font face=Arial size=2>There is no need to think of a global
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font face="Arial" size="2">There is no need to think of a global
   plan . The questions are : Who depends on me? Whom do I depend on?</font></td>
- </tr>
+</tr>
 </table>
-
 </p>
-
-</body>
-
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

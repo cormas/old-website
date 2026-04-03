@@ -1,25 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>AtollGame Role-Playing Game</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp; 
-      <h1>AtollGame, a computer-assisted role playing game <br>
-        supporting equitable groundwater management <br>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  
+      <h1>AtollGame, a computer-assisted role playing game <br/>
+        supporting equitable groundwater management <br/>
         in Tarawa atoll (Republic of Kiribati) </h1>
-      <h1><font size="3">A. Dray, P. Perez, P. DAquino</font></h1>
-      <h2>Objectives</h2>
-      <p><img src="../../images/applica/atollGame.jpg" width="252" height="191" align="right">AtollGame 
+<h1><font size="3">A. Dray, P. Perez, P. DAquino</font></h1>
+<h2>Objectives</h2>
+<p><img align="right" height="191" src="../../images/applica/atollGame.jpg" width="252"/>AtollGame 
         was designed and implemented within the framework of the Companion Modelling 
         Approach (ComMod). The game aims at providing information about the complexity 
         of interactions at stake dealing with groundwater management in a small 
@@ -31,8 +104,8 @@
         willingness of the different parties to explore new management scenarios 
         to reach a collective agreement on equitable management of groundwater 
         on Tarawa and to secure the long-term sustainability.</p>
-      <h2>Description of the game</h2>
-      <p>The set of the game is composed of two identical virtual islands with 
+<h2>Description of the game</h2>
+<p>The set of the game is composed of two identical virtual islands with 
         simplified shapes and dimensions. One island is sparsely populated with 
         freshwater available, the other one is overcrowded with already polluted 
         groundwater. Information available on the boards is: the land tenure, 
@@ -40,41 +113,41 @@
         (ABM) of the game taking charge of biophysical processes is run during 
         the playing sessions. It provides indicators dealing with climatic hazard, 
         lens salinity and lens pollution.</p>
-      <p>8 players are allocated on each island and take the role of landowner 
+<p>8 players are allocated on each island and take the role of landowner 
         and head of family. Players profile includes job, number of members in 
         his household, water needs and equipments. Players objective is to provide 
         enough drinking water (quality and quantity) to his family by investing 
         into new water equipments according to their income. Players also have 
         to accommodate new relatives on their land. </p>
-      <p>The game is divided into 2 sets of 3 rounds. Each round represents a 
+<p>The game is divided into 2 sets of 3 rounds. Each round represents a 
         one-year period. The first set is dedicated to individual strategies, 
         the second set to collective rules. An important debriefing stage is then 
         dedicated to collective analysis of the situation and proposals for new 
         scenarios. The game being flexing enough, emerging individual strategies 
         (loan bargaining, importing high quality filters) demonstrated the ability 
         of the players to innovate and interact during the game.</p>
-      <h2>Use of the game</h2>
-      <p>The game has been played once during a 2-day workshop involving 18 participants 
+<h2>Use of the game</h2>
+<p>The game has been played once during a 2-day workshop involving 18 participants 
         and gathering representatives from Government agencies and local communities. 
         Although game sessions delivered successful outcomes, the final stage 
         of the project is characterised by the upheaval of contradictory Government 
         stands that undermine the whole process.</p>
-      <h2>Software</h2>
-      <p>You can <a href="/logiciels/atoll.zip">download</a> the Cormas model 
+<h2>Software</h2>
+<p>You can <a href="/logiciels/atoll.zip">download</a> the Cormas model 
         source code and the model documentation (as a set of UML diagrams). </p>
-      <h2>References </h2>
-      <p> Dray A., Perez P., Jones N., Le Page C., DAquino P., White I. and Auatabu 
+<h2>References </h2>
+<p> Dray A., Perez P., Jones N., Le Page C., DAquino P., White I. and Auatabu 
         T. 2006. The AtollGame experience: from Knowledge Engineering to a Computer-assisted 
         Role Playing Game. Journal of Artificial Societies and Social Simulation, 
-        9(1). <a href="http://jasss.soc.surrey.ac.uk/9/1/6.html" target="_blank"><img src="/images/renvoi.gif" width="15" height="15" border="0"></a></p>
-      <p>For more information, <a href="mailto:anne_dray@yahoo.fr">contact the 
+        9(1). <a href="http://jasss.soc.surrey.ac.uk/9/1/6.html" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
+<p>For more information, <a href="mailto:anne_dray@yahoo.fr">contact the 
         corresponding author</a></p>
-      <p>&nbsp;</p>
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<p> </p>
+<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

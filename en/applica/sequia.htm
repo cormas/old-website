@@ -1,140 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-  <head>
-    <meta content="text/html; charset=iso-8859-1" http-equiv="content-type">
-    <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-    <title>SequiaBasalto - Uruguay</title>
-    <!--#include virtual="/include/script.inc" -->
-    <link rel="stylesheet" href="/css/cormas.css" --="">
-    <style type="text/css">
-div.MsoNormal {mso-style-parent:"";
-	margin:0cm;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";}
-li.MsoNormal {mso-style-parent:"";
-	margin:0cm;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";}
-p.MsoNormal {mso-style-parent:"";
-	margin:0cm;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";}
-</style>
-  </head>
-  <body topmargin="0" leftmargin="0" border="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
-    bgcolor="#FFFFFF"
-    marginheight="0"
-    marginwidth="0">
-    <!--#include virtual="haut.inc" -->
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tbody>
-        <tr>
-          <!--#include virtual="sommair.inc" -->
-          <td bgcolor="#FFFFFF" valign="baseline" width="*">
-            <p>&nbsp; </p>
-            <h1>Sequia basalto </h1>
-            <h2>Understanding the drought phenomena in Uruguay and developing a
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>SequiaBasalto - Uruguay</title>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<!--#include virtual="haut.inc" -->
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="baseline" width="*">
+<p>  </p>
+<h1>Sequia basalto </h1>
+<h2>Understanding the drought phenomena in Uruguay and developing a
               participatory methodology to improve the resilience of livestock
               farmers of the Basalt region</h2>
-            <h3><span style="mso-ansi-language:PT-BR" lang="PT-BR">Participants:
-                <o:p></o:p> </span><span style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                <o:p></o:p> </span></h3>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">&nbsp;</span></p>
-            <p class="MsoNormal">Danilo Bartaburu<span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES"> - Instituto Plan Agropecuario,
+<h3><span lang="PT-BR" style="mso-ansi-language:PT-BR">Participants:
+                <o:p></o:p> </span><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></h3>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"> </span></p>
+<p class="MsoNormal">Danilo Bartaburu<span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"> - Instituto Plan Agropecuario,
                 Salto, Uruguay. </span><a href="mailto:dbartaburu@planagropecurio.org.uy">dbartaburu@planagropecurio.org.uy</a>
-            </p>
-            <p>Francisco Dieguez<span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES"> - Instituto Plan Agropecuario,
+</p>
+<p>Francisco Dieguez<span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"> - Instituto Plan Agropecuario,
                 Montevideo, Uruguay. </span><a href="mailto:fdieguez@planagropecuario.org.uy">fdieguez@planagropecuario.org.uy</a></p>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">Jorge Corral -&nbsp; Facultad de
-                IngenierÃ­a, Montevideo, Uruguay. </span><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES"><a href="mailto:jcorral@adinet.com.uy">jcorral@adinet.com.uy</a>
-                <u1:p></u1:p> </span><span style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                <o:p></o:p> </span></p>
-            <p class="MsoNormal">&nbsp;</p>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">Hermes Morales - Instituto Plan
-                Agropecuario, Salto, Uruguay. </span><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES"><a href="mailto:paisanohermes@hotmail.com">paisanohermes@hotmail.com</a>
-                <u1:p></u1:p> </span><span style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                <o:p></o:p> </span></p>
-            <p class="MsoNormal">&nbsp;</p>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">Emilio Duarte - Instituto Plan
-                Agropecuario, Salto, Uruguay. </span><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES"><a href="mailto:eduarte@planagropecuario.org.uy">eduarte@planagropecuario.org.uy</a>
-                <u1:p></u1:p> </span><span style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                <o:p></o:p> </span></p>
-            <p class="MsoNormal">&nbsp;</p>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">Esteban Montes - Instituto Plan
-                Agropecuario, Salto, Uruguay. </span><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES"><a href="mailto:emontes@planagropecuario.org.uy">emontes@planagropecuario.org.uy
-                  <u1:p></u1:p> </a></span><a href="mailto:emontes@planagropecuario.org.uy"><span
-                  style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                  <o:p></o:p> </span></a><span style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                <o:p></o:p> </span></p>
-            <p class="MsoNormal">&nbsp;</p>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">Marcelo Pereira - Instituto Plan
-                Agropecuario, Salto, Uruguay. </span><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES"><a href="mailto:pmsacra@adinet.com.uy">pmsacra@adinet.com.uy
-                  <u1:p></u1:p> </a></span><a href="mailto:pmsacra@adinet.com.uy"><span
-                  style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                  <o:p></o:p> </span></a><span style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                <o:p></o:p> </span></p>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">&nbsp;</span><span style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
-  color:blue;mso-ansi-language:PT-BR" lang="PT-BR"> <o:p></o:p> </span><span style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                <o:p></o:p> </span><span style="color:blue;mso-ansi-language:PT-BR"
-                lang="PT-BR">&nbsp;</span><span
-                style="font-family:&quot;Arial Unicode MS&quot;;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;color:blue;mso-ansi-language:PT-BR" lang="PT-BR">
-                <o:p></o:p> </span></p>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">Pedro De Hegedus - Faculdad de
-                AgronomÃ­a, Udelar, Montevideo, Uruguay. </span><a href="mailto:phegedus@adinet.com.uy">phegedus@adinet.com.uy</a><span
-                style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES"> </span></p>
-            <p class="MsoNormal">&nbsp;</p>
-            <p class="MsoNormal"><span style="font-size:10.0pt;font-family:Arial;
-  color:black;mso-ansi-language:ES" lang="ES">Pierre Bommel - CIRAD and PUC
-                University of Rio de Janeiro, France and Brasil. </span><a href="mailto:bommel@cirad.fr"><span
-                  style="font-size:10.0pt;font-family:Arial;mso-ansi-language:PT-BR"
-                  lang="PT-BR">bommel@cirad.fr</span></a><span
-                style="mso-ansi-language:PT-BR"
-                lang="PT-BR">
-                <o:p></o:p> <o:p></o:p> </span></p>
-            <p>&nbsp;</p>
-            <p> The <a href="http://www.inia.org.uy/busqueda/proy_detalle.phtml?id=186&amp;origen=1"><b><i>Sequia</i></b></a>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES">Jorge Corral -  Facultad de
+                IngenierÃ­a, Montevideo, Uruguay. </span><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"><a href="mailto:jcorral@adinet.com.uy">jcorral@adinet.com.uy</a>
+<u1:p></u1:p> </span><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES">Hermes Morales - Instituto Plan
+                Agropecuario, Salto, Uruguay. </span><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"><a href="mailto:paisanohermes@hotmail.com">paisanohermes@hotmail.com</a>
+<u1:p></u1:p> </span><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES">Emilio Duarte - Instituto Plan
+                Agropecuario, Salto, Uruguay. </span><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"><a href="mailto:eduarte@planagropecuario.org.uy">eduarte@planagropecuario.org.uy</a>
+<u1:p></u1:p> </span><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES">Esteban Montes - Instituto Plan
+                Agropecuario, Salto, Uruguay. </span><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"><a href="mailto:emontes@planagropecuario.org.uy">emontes@planagropecuario.org.uy
+                  <u1:p></u1:p> </a></span><a href="mailto:emontes@planagropecuario.org.uy"><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></a><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES">Marcelo Pereira - Instituto Plan
+                Agropecuario, Salto, Uruguay. </span><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"><a href="mailto:pmsacra@adinet.com.uy">pmsacra@adinet.com.uy
+                  <u1:p></u1:p> </a></span><a href="mailto:pmsacra@adinet.com.uy"><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></a><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></p>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"> </span><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+  color:blue;mso-ansi-language:PT-BR'> <o:p></o:p> </span><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span><span lang="PT-BR" style="color:blue;mso-ansi-language:PT-BR"> </span><span lang="PT-BR" style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Times New Roman";color:blue;mso-ansi-language:PT-BR'>
+<o:p></o:p> </span></p>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES">Pedro De Hegedus - Faculdad de
+                AgronomÃ­a, Udelar, Montevideo, Uruguay. </span><a href="mailto:phegedus@adinet.com.uy">phegedus@adinet.com.uy</a><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES"> </span></p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+  color:black;mso-ansi-language:ES">Pierre Bommel - CIRAD and PUC
+                University of Rio de Janeiro, France and Brasil. </span><a href="mailto:bommel@cirad.fr"><span lang="PT-BR" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:PT-BR">bommel@cirad.fr</span></a><span lang="PT-BR" style="mso-ansi-language:PT-BR">
+<o:p></o:p> <o:p></o:p> </span></p>
+<p> </p>
+<p> The <a href="http://www.inia.org.uy/busqueda/proy_detalle.phtml?id=186&amp;origen=1"><b><i>Sequia</i></b></a>
               project is funded by <a href="http://www.inia.org.uy/online/site/">INIA</a>,
               since May 2009.</p>
-            <p> <a href="http://www.inia.org.uy/online/site/"><img src="sequia/inia.jpg"
-                  alt=""
-                  border="0"
-                  height="86"
-                  width="331"></a></p>
-            <p>Drought is one of the major events that causes negative effects
+<p> <a href="http://www.inia.org.uy/online/site/"><img alt="" border="0" height="86" src="sequia/inia.jpg" width="331"/></a></p>
+<p>Drought is one of the major events that causes negative effects
               on livestock breeders in the basalt region. Most livestock farms
               in the region are settled on basaltic shallow soils. These soils
               have very limited capacity to store water in their profile and are
@@ -145,30 +180,29 @@ p.MsoNormal {mso-style-parent:"";
               This led to a weakened beef production sector causing numerous
               bankruptcies. Additionally, the drought events may occur more
               frequently in the future as a result of climate change.</p>
-            <p>To evaluate the efficiency of different management strategies, we
+<p>To evaluate the efficiency of different management strategies, we
               built an ABM to simulate the evolution of farmers using different
               drought strategies. The purpose of the ABM was to build
               prospective scenarios under the assumption that future conditions
               (climate, prices) will be similar to previous ones during the
               2000-2009 decade. </p>
-            <h3>Model purpose</h3>
-            <p>The simulation model is designed to explore the impact of
+<h3>Model purpose</h3>
+<p>The simulation model is designed to explore the impact of
               different strategies on the trajectory of livestock farms,
               especially taking into account the impact of droughts. The first
               model is a standard ABM for which no interactive simulation was
               planned. In that version, agents are strong simplifications of
-              farmers&#8217; behaviors. Two kinds of producers were considered
+              farmers’ behaviors. Two kinds of producers were considered
               depending on their corresponding drought strategies: </p>
-            <ol>
-              <li>a &#8220;<strong><em>CC</em></strong>&#8221; Producer who focuses on
+<ol>
+<li>a “<strong><em>CC</em></strong>” Producer who focuses on
                 cattle health or on the Corporal Condition score and </li>
-              <li>a &#8220;<strong><em>Pasto</em></strong>&#8221; Producer who makes
+<li>a “<strong><em>Pasto</em></strong>” Producer who makes
                 drought-related decisions by assessing grass availability and
                 climate.</li>
-            </ol>
-            <p><img src="sequia/systemic.GIF" alt="systemic diagram" height="475"
-                width="634"></p>
-            <p>Whatever his strategy, a producer owns a 500 ha farm composed of
+</ol>
+<p><img alt="systemic diagram" height="475" src="sequia/systemic.GIF" width="634"/></p>
+<p>Whatever his strategy, a producer owns a 500 ha farm composed of
               one single pasture (of a non-defined spatial dimension). The grass
               grows according to the logistic equation which parameters change
               according to seasonal and climatic conditions. Two herds are
@@ -176,22 +210,20 @@ p.MsoNormal {mso-style-parent:"";
               are able to survive even in extreme conditions) and for which the
               dynamics is very simple, and cattle, which are impacted by grass
               height and which lifecycle is more finely modeled. The model
-              consists of three submodels:<br>
+              consists of three submodels:<br/>
               - The "Grazing "sub-model represents the grass growth depending on
-              the season and weather.<br>
+              the season and weather.<br/>
               - The "wild" sub-model adds the herd that feeds on grass and
-              grows.<br>
+              grows.<br/>
               - The "management" sub-model adds a rancher who manages his herd.
             </p>
-            <p><a href="sequia/couplage.GIF"><img src="sequia/couplage.GIF" alt="couplage"
-                  height="425"
-                  width="704"></a></p>
-            <h3>Model description</h3>
-            <h5>Model structure</h5>
-            <p>The following class diagram presents the main classes of the
+<p><a href="sequia/couplage.GIF"><img alt="couplage" height="425" src="sequia/couplage.GIF" width="704"/></a></p>
+<h3>Model description</h3>
+<h5>Model structure</h5>
+<p>The following class diagram presents the main classes of the
               model: </p>
-            <p><img src="sequia/classDiag.EN.jpg" alt="" height="473" width="1077"></p>
-            <p>Whatever his strategy ("CC" or "Pasto"), a producer owns a 500 ha
+<p><img alt="" height="473" src="sequia/classDiag.EN.jpg" width="1077"/></p>
+<p>Whatever his strategy ("CC" or "Pasto"), a producer owns a 500 ha
               farm composed of one single pasture (of a non-defined spatial
               dimension). The grass grows according to the logistic equation
               which parameters change according to seasonal and climatic
@@ -211,24 +243,24 @@ p.MsoNormal {mso-style-parent:"";
               attribute (num, inherited by <em>Herd</em> class) and even if its
               dynamics is very simple, it grazes. Thus it has an effect on the
               grass height: each sheep eats 2% of its weight per day. So the
-              sheep herd is a competitor to the cattle for grazing. <em><br>
-              </em>The model is deterministic but some input parameters (climate
+              sheep herd is a competitor to the cattle for grazing. <em><br/>
+</em>The model is deterministic but some input parameters (climate
               data, meat prices, availability and prices of extra farmland
-              leasing of Environment class) have been added as &#8220;forcing
-              variables&#8221;. These time series gathered during the 2000-2009 decade
+              leasing of Environment class) have been added as “forcing
+              variables”. These time series gathered during the 2000-2009 decade
               influence the simulations: they play the role of one climatic and
-              market scenario for which various farmers&#8217; management strategies
+              market scenario for which various farmers’ management strategies
               will be examined. </p>
-            <h5>Time step</h5>
-            <p>As the farmers have distinct seasonal activities, the time-step
+<h5>Time step</h5>
+<p>As the farmers have distinct seasonal activities, the time-step
               for the simulations corresponds to one season. But a one-day
               sub-step is needed to more accurately represent the interactions
               between grass growth and herds grazing (cattle and sheep). The
               task scheduling order (i.e. order in which the behaviors of agents
               and resources are called upon at every time step) is shown on
               following sequence diagram: </p>
-            <p><img src="sequia/sequence1.png" alt="sequencia" height="266" width="763"></p>
-            <p>By testing alternative strategies with the executable editor, the
+<p><img alt="sequencia" height="266" src="sequia/sequence1.png" width="763"/></p>
+<p>By testing alternative strategies with the executable editor, the
               participants identified some model biases: they realized that in
               drought conditions, the agents always reacted too late. For
               instance, in case of poor health of the herd or in case of lack of
@@ -239,70 +271,61 @@ p.MsoNormal {mso-style-parent:"";
               consequence being that we intend to correct the model by repeating
               the seasonal activities of the agents every week rather than only
               once a season:</p>
-            <p><img src="sequia/sequence2.png" alt="sequence diag version 2" height="318"
-                width="876"></p>
-            <p>&nbsp;</p>
-            <h4>The states of a cohort</h4>
-            <p>The following state-transition shows the life cycle of a cohort
+<p><img alt="sequence diag version 2" height="318" src="sequia/sequence2.png" width="876"/></p>
+<p> </p>
+<h4>The states of a cohort</h4>
+<p>The following state-transition shows the life cycle of a cohort
               of wild cattle with sub-states.</p>
-            <p><img src="sequia/StateTransition-naturalCycle.jpg" alt="" height="371"
-                width="725"></p>
-            <p>From this wild cattle model, 2 state-transition diagrams are
+<p><img alt="" height="371" src="sequia/StateTransition-naturalCycle.jpg" width="725"/></p>
+<p>From this wild cattle model, 2 state-transition diagrams are
               derived, showing the management events of the producers. These
               human events are shown as red transitions.</p>
-            <p>State-transition diagram of the "CC" producer, adapted from
+<p>State-transition diagram of the "CC" producer, adapted from
               previous diagram: </p>
-            <p><img src="sequia/StateTransition-reactivCycle.jpg" alt="" height="422"
-                width="737"></p>
-            <p>State-transition diagram of the "Pasto" producer:</p>
-            <p><img src="sequia/StateTransition-proactivCycle.jpg" alt="pasto producer ST diagram"
-                height="422"
-                width="583"></p>
-            <h5>Producer activities</h5>
-            <p>In the first version of the model, the activities have been
+<p><img alt="" height="422" src="sequia/StateTransition-reactivCycle.jpg" width="737"/></p>
+<p>State-transition diagram of the "Pasto" producer:</p>
+<p><img alt="pasto producer ST diagram" height="422" src="sequia/StateTransition-proactivCycle.jpg" width="583"/></p>
+<h5>Producer activities</h5>
+<p>In the first version of the model, the activities have been
               described as UML activity diagram: one diagram per season and per
               agents strategy. The following diagram presents the spring
-              activities of a &#8220;Pasto&#8221; Producer (green) and a &#8220;CC&#8221; Producer
+              activities of a “Pasto” Producer (green) and a “CC” Producer
               (orange).</p>
-            <p>These activities consist mainly in managing the farm and the
+<p>These activities consist mainly in managing the farm and the
               herds. Even if, for a given season, the strategies are roughly
               similar, differences exist on the decision points for each one:
-              while the &#8220;CC&#8221; producer surveys the physical condition of his
-              cattle to guide his managing choices, the &#8220;Pasto&#8221; producer chooses
+              while the “CC” producer surveys the physical condition of his
+              cattle to guide his managing choices, the “Pasto” producer chooses
               his activities according to the grass height and by trying to stay
               under a low stock threshold. The following animated figure
-              describes the behavior of both producers (&#8220;Pasto&#8221; Producer: green
-              and a &#8220;CC&#8221; Producer: orange) during the spring season: even if
+              describes the behavior of both producers (“Pasto” Producer: green
+              and a “CC” Producer: orange) during the spring season: even if
               they behave in the same way, the guards (squared brackets) of the
               main decision points concern the priority of each agent.<a name="activityDiag1"></a></p>
-            <p><img src="sequia/animatedActivity.gif" alt="" height="440" width="960"></p>
-            <h3>Some results</h3>
-            <p>The following simulation curves show the evolution of the pasture
+<p><img alt="" height="440" src="sequia/animatedActivity.gif" width="960"/></p>
+<h3>Some results</h3>
+<p>The following simulation curves show the evolution of the pasture
               without grazing cattle, according to seasons and climate:</p>
-            <p><span style="mso-ansi-language:EN-US" lang="EN-US"> <o:p></o:p>
-              </span><img src="sequia/result-1.png" alt="result pasture alone" height="581"
-                width="873"></p>
-            <p>Result Pasture and wild cattle:</p>
-            <p><img src="sequia/result-2.png" alt="result pasture and wild cattle"
-                height="688"
-                width="850"></p>
-            <p><span style="mso-ansi-language:EN-US" lang="EN-US"> <o:p>Some
-                  result with producer management:<br>
-                  <img src="sequia/result-3.png" alt="result full" height="598"
-                    width="763"><br>
+<p><span lang="EN-US" style="mso-ansi-language:EN-US"> <o:p></o:p>
+</span><img alt="result pasture alone" height="581" src="sequia/result-1.png" width="873"/></p>
+<p>Result Pasture and wild cattle:</p>
+<p><img alt="result pasture and wild cattle" height="688" src="sequia/result-2.png" width="850"/></p>
+<p><span lang="EN-US" style="mso-ansi-language:EN-US"> <o:p>Some
+                  result with producer management:<br/>
+<img alt="result full" height="598" src="sequia/result-3.png" width="763"/><br/>
                   A more detailed description of the model will be available
                   soon.</o:p> </span></p>
-            <h3>The interactive model</h3>
-            <p>To facilitate the collective design of the model, it was
+<h3>The interactive model</h3>
+<p>To facilitate the collective design of the model, it was
               necessary to immediately assess the consequences of changes. For
               that purpose, we created a new tool that enables the drawing of
               simple activity diagrams and to execute them without any need for
               translation into code. Indeed, this editor allows the creation of
               new activity diagrams (or re-opening formers) that are interpreted
-              &#8220;on the fly&#8221; by Cormas. Then it is possible to modify the
+              “on the fly” by Cormas. Then it is possible to modify the
               simulator while it is running, without stopping or restarting the
               simulation.</p>
-            <p>For simplicity sake and user friendliness, the elements available
+<p>For simplicity sake and user friendliness, the elements available
               on the diagram editor are restricted to initial and final nodes,
               decision points, simple activity nodes (without parameters nor
               ability to handle an activity output) and transitions (Fig. 6).
@@ -313,27 +336,27 @@ p.MsoNormal {mso-style-parent:"";
               spring strategy for a collectively designed Producer. Note that
               this diagram is equivalent to the one presented in the <a href="#activityDiag1">previous
                 figure</a>. </p>
-            <p><img src="sequia/editor.png" alt="editor" height="552" width="732"></p>
-            <p>By selecting an activity node or a decision point on the tool
+<p><img alt="editor" height="552" src="sequia/editor.png" width="732"/></p>
+<p>By selecting an activity node or a decision point on the tool
               bar, the user can add a new element on the diagram. Thereafter, he
               can choose the operation to be performed by this element. Each
               element proposes a drop-down menu to display an activity setter
               from which the user may choose the method that will be associated
               with the selected node </p>
-            <p><img src="sequia/actSetter.png" alt="setter" height="422" width="631"></p>
-            <p>The activity setter displays a list of methods belonging to the
+<p><img alt="setter" height="422" src="sequia/actSetter.png" width="631"/></p>
+<p>The activity setter displays a list of methods belonging to the
               target class (i.e. Producer). This list is set up automatically by
               Cormas that inspects all the simple methods (without argument)
               defined within the class and its super-classes. By clicking on a
               name, the purpose of the associated method is displayed. It is
-              also possible inspect the method&#8217;s code by right clicking on it.<strong></strong>
+              also possible inspect the method’s code by right clicking on it.<strong></strong>
               The design is incremental: saving a new diagram generates a new
               method of the agent that is immediately available and can be
               called in turn (i.e. future activity setter will display this new
               method name). A right-click on an activity or a decision point
               opens either a code editor targeting the selected operation, or
               another diagram editor displaying the previously saved activities.</p>
-            <p>Therefore, the user can draw a transition from the given node to
+<p>Therefore, the user can draw a transition from the given node to
               another. When starting from a decision point, he will create two
               transitions: one for which the answer of the test is <em>true</em>
               (green) and one for <em>false</em> (red). When saving the new
@@ -342,38 +365,33 @@ p.MsoNormal {mso-style-parent:"";
               one to execute it. Thus, from basic operations already defined by
               the modeler, anyone may generate new upper level behavior without
               any programming skills.</p>
-            <p>To edit the diagrams or choose which activities will be used
+<p>To edit the diagrams or choose which activities will be used
               during the simulation, the user selects the names of the methods
               that will be implemented at each station:
             </p>
-            <p><img src="sequia/estaciones.JPG" alt="" height="400" width="501"></p>
-            <hr>
-            <ul type="disc">
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo5;tab-stops:list 36.0pt"><span style="mso-ansi-language:EN-US"
-                  lang="EN-US">Download
-                  the model (</span><a href="sequia/SequiaBasalto.zip"><span style="mso-ansi-language:
-       EN-US" lang="EN-US">zipfile</span></a><span style="mso-ansi-language:EN-US"
-                  lang="EN-US">,
+<p><img alt="" height="400" src="sequia/estaciones.JPG" width="501"/></p>
+<hr/>
+<ul type="disc">
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l0 level1 lfo5;tab-stops:list 36.0pt"><span lang="EN-US" style="mso-ansi-language:EN-US">Download
+                  the model (</span><a href="sequia/SequiaBasalto.zip"><span lang="EN-US" style="mso-ansi-language:
+       EN-US">zipfile</span></a><span lang="EN-US" style="mso-ansi-language:EN-US">,
                   91Ko. Cormas2-2012) <o:p></o:p> </span></li>
-              <li class="MsoNormal">Download a <a href="sequia/essa2011_submission_77.pdf">paper</a>
-                presented at ESSA 2011, or the article published on <a title="Jasss paper"
-                  href="http://jasss.soc.surrey.ac.uk/17/1/6.html">JASSS</a>..</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo5;tab-stops:list 36.0pt"><span style="mso-ansi-language:EN-US"
-                  lang="EN-US">For
-                  more information, </span><a href="mailto:bommel@cirad.fr"><span
-                    style="mso-ansi-language:
-       EN-US" lang="EN-US">contact the authors</span></a><span style="mso-ansi-language:
-       EN-US" lang="EN-US">. <o:p></o:p> </span></li>
-            </ul>
-            <p><span style="mso-ansi-language:EN-US" lang="EN-US">&nbsp; <o:p></o:p>
-              </span></p>
-            <!--#include virtual="/include/copyright_fr.inc" --> </td>
-          <td bgcolor="#FFFFFF" valign="top" width="15"> <br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+<li class="MsoNormal">Download a <a href="sequia/essa2011_submission_77.pdf">paper</a>
+                presented at ESSA 2011, or the article published on <a href="http://jasss.soc.surrey.ac.uk/17/1/6.html" title="Jasss paper">JASSS</a>..</li>
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l0 level1 lfo5;tab-stops:list 36.0pt"><span lang="EN-US" style="mso-ansi-language:EN-US">For
+                  more information, </span><a href="mailto:bommel@cirad.fr"><span lang="EN-US" style="mso-ansi-language:
+       EN-US">contact the authors</span></a><span lang="EN-US" style="mso-ansi-language:
+       EN-US">. <o:p></o:p> </span></li>
+</ul>
+<p><span lang="EN-US" style="mso-ansi-language:EN-US">  <o:p></o:p>
+</span></p>
+<!--#include virtual="/include/copyright_fr.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15"> <br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

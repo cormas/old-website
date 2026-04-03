@@ -1,136 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>Cormas Online Learning Center : StupidModel - version 3</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-<style type="text/css">
-<!--
-.style1 {color: #FFFFFF}
-.style5 {color: #FF0000}
-.style6 {color: #006699}
-.style17 {color: #FF6600}
--->
-</style>
-</head>
-
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="../../../haut.inc" -->
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-
-  <!--#include virtual="../lmenu.inc" --> 
-
-  <td width="0" height="600" valign="top" bgcolor="#FFFFFF"> 
-
-   <p>&nbsp;</p>
-
-    
-
-      <h1>StupidModel : <span class="style5">version <FONT FACE="WingDings 2" SIZE=+3>w</FONT><FONT FACE="WingDings 2" SIZE=+3></FONT></span> <img src="../../../images/bug.gif" width="78" height="50"> <br>
-      </h1>
-
-      <p>&nbsp;</p>
-
-      <p><strong>Habitat cells that grow food. Bug growth equal to the food consumed from the cell.</strong><br>
-To download this tutorial <span class="style17 style17"><FONT FACE="WingDings" SIZE=+3><a href="flash/SMv3Cormas.zip">=</a></FONT></span>. </p>
-      <center><table width="618" border="0" cellpadding="0" cellspacing="1">
-        <tr valign="top">
-          <td colspan="2" valign="middle" bgcolor="#006699" class="storyLeft"><div align="center"><span class="style1"><strong>StupidModel - version 3 </strong></span></div>            
-            <div align="center"></div></td>
-        </tr>
-        <tr valign="top">
-          <td width="44" bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/1/3-1/index.htm" target="_blank">3.1</a></div></td>
-          <td width="571" bgcolor="#c6ffff" class="storyLeft"><a href="flash/1/3-1/index.htm" target="_blank" class="style6">Modify the Cell class </a></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft style6">&nbsp;</td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
-            <p><a href="flash/1/3-1-1/index.htm" target="_blank">3.1.1 Add an attribute(instance variable) named &laquo;food&raquo;</a></p>
-          </blockquote>            </td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft style6">&nbsp;</td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
-            <p><a href="flash/1/3-1-2/index.htm" target="_blank">3.1.2 Create accessing method for the &laquo;food&raquo; (default value : Cormas random) </a></p>
-          </blockquote></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft style6">&nbsp;</td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
-            <p><a href="flash/1/3-1-3/index.htm" target="_blank">3.1.3 Notify to redisplay when attribute  &laquo;food&raquo; is changed</a></p>
-          </blockquote></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft style6">&nbsp;</td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
-            <p><a href="flash/1/3-1-4/index.htm" target="_blank">3.1.4 Write a   &laquo;growFood&raquo; method </a></p>
-          </blockquote></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/2/3-2/index.htm" target="_blank">3.2</a></div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><a href="flash/2/3-2/index.htm" target="_blank" class="style6">Modify the Bug class</a> </td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft style6">&nbsp;</td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
-              <p><a href="flash/2/3-2-1/index.htm" target="_blank">3.2.1 Add an attribute(instance variable) named &laquo;intakeRate&raquo;</a></p>
-          </blockquote>            </td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft style6">&nbsp;</td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
-              <p><a href="flash/2/3-2-2/index.htm" target="_blank">3.2.2 Create accessing method for the &laquo;intakeRate&raquo; (default value : 0.5)</a> </p>
-          </blockquote></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft style6">&nbsp;</td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
-              <p><a href="flash/2/3-2-3/index.htm" target="_blank">3.2.3 Write a   &laquo;consumeFood&raquo; method</a> </p>
-          </blockquote></td>
-        </tr>
-        
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/3/index.htm" target="_blank">3.3</a></div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><a href="flash/3/index.htm" target="_blank" class="style6">Adjust the scheduling of Stupid Model</a></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/4/index.htm" target="_blank">3.4</a></div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><a href="flash/4/index.htm" target="_blank" class="style6">Write a specific &laquo;povFood&raquo; method for the Cell class</a> </td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/5/index.htm" target="_blank">3.5</a></div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><a href="flash/5/index.htm" target="_blank" class="style6">Run version 3 of Stupid Model</a></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#006699" class="storyLeft"><div align="center" class="style6">&nbsp;</div></td>
-          <td bgcolor="#006699" class="storyLeft style6">&nbsp;</td>
-        </tr>
-      </table>
-      </center>
-      <p>&nbsp;</p>
-      <!--#include virtual="/include/copyright_en.inc" --> </td>
-
-  <td width="0" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-   <div align="right" class="texte"></div>  </td>
- </tr>
+<!--#include virtual="../lmenu.inc" -->
+<td bgcolor="#FFFFFF" height="600" valign="top" width="0">
+<p> </p>
+<h1>StupidModel : <span class="style5">version <font face="WingDings 2" size="+3">w</font><font face="WingDings 2" size="+3"></font></span> <img height="50" src="../../../images/bug.gif" width="78"/> <br/>
+</h1>
+<p> </p>
+<p><strong>Habitat cells that grow food. Bug growth equal to the food consumed from the cell.</strong><br/>
+To download this tutorial <span class="style17 style17"><font face="WingDings" size="+3"><a href="flash/SMv3Cormas.zip">=</a></font></span>. </p>
+<center><table border="0" cellpadding="0" cellspacing="1" width="618">
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2" valign="middle"><div align="center"><span class="style1"><strong>StupidModel - version 3 </strong></span></div>
+<div align="center"></div></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft" width="44"><div align="center" class="style6"><a href="flash/1/3-1/index.htm" target="_blank">3.1</a></div></td>
+<td bgcolor="#c6ffff" class="storyLeft" width="571"><a class="style6" href="flash/1/3-1/index.htm" target="_blank">Modify the Cell class </a></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft style6"> </td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
+<p><a href="flash/1/3-1-1/index.htm" target="_blank">3.1.1 Add an attribute(instance variable) named «food»</a></p>
+</blockquote> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft style6"> </td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
+<p><a href="flash/1/3-1-2/index.htm" target="_blank">3.1.2 Create accessing method for the «food» (default value : Cormas random) </a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft style6"> </td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
+<p><a href="flash/1/3-1-3/index.htm" target="_blank">3.1.3 Notify to redisplay when attribute  «food» is changed</a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft style6"> </td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
+<p><a href="flash/1/3-1-4/index.htm" target="_blank">3.1.4 Write a   «growFood» method </a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/2/3-2/index.htm" target="_blank">3.2</a></div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><a class="style6" href="flash/2/3-2/index.htm" target="_blank">Modify the Bug class</a> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft style6"> </td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
+<p><a href="flash/2/3-2-1/index.htm" target="_blank">3.2.1 Add an attribute(instance variable) named «intakeRate»</a></p>
+</blockquote> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft style6"> </td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
+<p><a href="flash/2/3-2-2/index.htm" target="_blank">3.2.2 Create accessing method for the «intakeRate» (default value : 0.5)</a> </p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft style6"> </td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style6">
+<p><a href="flash/2/3-2-3/index.htm" target="_blank">3.2.3 Write a   «consumeFood» method</a> </p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/3/index.htm" target="_blank">3.3</a></div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><a class="style6" href="flash/3/index.htm" target="_blank">Adjust the scheduling of Stupid Model</a></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/4/index.htm" target="_blank">3.4</a></div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><a class="style6" href="flash/4/index.htm" target="_blank">Write a specific «povFood» method for the Cell class</a> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style6"><a href="flash/5/index.htm" target="_blank">3.5</a></div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><a class="style6" href="flash/5/index.htm" target="_blank">Run version 3 of Stupid Model</a></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft"><div align="center" class="style6"> </div></td>
+<td bgcolor="#006699" class="storyLeft style6"> </td>
+</tr>
 </table>
-
-</body>
-
+</center>
+<p> </p>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="0"> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div> </td>
+</tr>
+</table>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>
-

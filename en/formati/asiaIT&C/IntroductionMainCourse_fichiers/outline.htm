@@ -1,13 +1,14 @@
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
+<html>
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=PowerPoint.Slide>
-<meta name=Generator content="Microsoft PowerPoint 9">
-<link id=Main-File rel=Main-File href="../Introduction.htm">
-<link rel=Preview href=preview.wmf>
-<meta name=Robots content=NoIndex>
-<script src=script.js></script><script><!--
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="PowerPoint.Slide" name="ProgId"/>
+<meta content="Microsoft PowerPoint 9" name="Generator"/>
+<link href="../Introduction.htm" id="Main-File" rel="Main-File"/>
+<link href="preview.wmf" rel="Preview"/>
+<meta content="NoIndex" name="Robots"/>
+<script src="script.js"></script><script><!--
 
 if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
 {
@@ -127,7 +128,7 @@ function UpdNav()
 	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
 		txt += "Diapositive " + parent.GetCurSldNum() + " sur " + parent.GetNumSlds()
 	else
-		txt += "Diapositive masquée"
+		txt += "Diapositive masquÃ©e"
 	txt += "</center>";
 	nav_text.innerHTML = txt;
 
@@ -162,815 +163,788 @@ function UpdOtlNav()
 //-->
 </script>
 <style>
-<!--.PTxt
-	{position:relative;
-	width:100%;
-	margin-top:5px;
-	padding-left:5px;
-	font-weight:bold;}
-.CTxt
-	{position:relative;
-	width:100%;
-	padding-left:10px;}
-.CBorder
-	{position:relative;
-	width:100%;
-	border-style:solid;
-	border-width:1px;
-	border-color:white;
-	padding-bottom:5px;}
-a
-	{color:black;
-	text-decoration:none;}
-.button
-	{position:absolute;
-	width:32px;
-	height:20px;
-	border-style:solid;
-	border-width:1px;
-	border-color:threedface;}
--->
-</style>
-</head>
-
-<body onload="Load()">
-
-<div id=NavObj onload="Load()" onmouseover="BtnOnOver()"
-onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
-onkeypress="_KPH()" style='display:none;visibility:hidden'>
-
-<table style='position:absolute;width:70px;visibility:hidden' align=left
- cellpadding=0 cellspacing=0>
- <td nowrap>
- <div id="nb_ntsElem" align=center style='position:relative;padding:3px;
- font-family:Arial;color:buttontext;font-size:9pt'><img src="notes_flag.gif"
- border=0 id="notes_flag" style='display:none'><span style="mso-spacerun:
- yes">  </span>Commentaires</div>
- <div title="Afficher/Masquer les commentaires" id="nb_nts" style='position:
- absolute;top:0%;left:0%;width:100%;height:100%'></div>
- </td>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body onload="Load()"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<div id="NavObj" onkeypress="_KPH()" onload="Load()" onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseover="BtnOnOver()" onmouseup="BtnOnUp()" style="display:none;visibility:hidden">
+<table align="left" cellpadding="0" cellspacing="0" style="position:absolute;width:70px;visibility:hidden">
+<td nowrap="">
+<div align="center" id="nb_ntsElem" style="position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt"><img border="0" id="notes_flag" src="notes_flag.gif" style="display:none"/><span style="mso-spacerun:
+ yes">Â  </span>Commentaires</div>
+<div id="nb_nts" style="position:
+ absolute;top:0%;left:0%;width:100%;height:100%" title="Afficher/Masquer les commentaires"></div>
+</td>
 </table>
-
-<table style='position:relative' align=right cellpadding=0 cellspacing=0>
- <td>
- <div id="nb_sldshwBorder" style='position:absolute;left:-20px;width:20px;
- height:20px'>
- <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
- src=buttons.gif id="nb_sldshw" title="Diaporama plein écran" style='position:
- relative;left:-254px'></div>
- </div>
- </td>
- <td>
- <div id="nb_voiceBorder" style='display:none;position:absolute;left:-40px;
- width:20px;height:20px'>
- <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
- src=buttons.gif id="nb_voice" title="Suspendre/Lire la narration"
- style='position:relative;left:-290px'></div>
- </div>
- </td>
-</table>
-
-<table style='position:relative' align=center cellpadding=0 cellspacing=0>
- <td nowrap>
- <div id="nb_prevBorder" class=button style='left:-30px'>
- <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
- src=buttons.gif id="nb_prev" title="Diapositive précédente" style='position:
- relative;left:0px'></div>
- </div>
- <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
- Arial;color:buttontext;font-size:9pt'></span>
- <div id="nb_nextBorder" class=button>
- <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
- src=buttons.gif id="nb_next" title="Diapositive suivante" style='position:
- relative;left:-90px'></div>
- </div>
- </td>
-</table>
-
+<table align="right" cellpadding="0" cellspacing="0" style="position:relative">
+<td>
+<div id="nb_sldshwBorder" style="position:absolute;left:-20px;width:20px;
+ height:20px">
+<div style="position:absolute;clip:rect(0px, 18px, 18px, 0px)"><img id="nb_sldshw" src="buttons.gif" style="position:
+ relative;left:-254px" title="Diaporama plein Ã©cran"/></div>
 </div>
-
-<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver()"
-onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
-onkeypress="_KPH()" style='display:none;visibility:hidden'>
-
-<table style='position:relative;width:70px' align=left cellpadding=0
- cellspacing=0>
- <td nowrap>
- <div id="nb_otlElem" align=center style='position:relative;padding:3px;
- font-family:Arial;color:buttontext;font-size:9pt'>Plan</div>
- <div title="Afficher/Masquer le plan" id="nb_otl" style='position:absolute;
- top:0%;left:0%;width:100%;height:100%'></div>
- </td>
-</table>
-
-<table style='position:relative' align=center cellpadding=0 cellspacing=0>
- <td>
- <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
- solid;border-width:1px;border-color:threedface' id="nb_otlTxtBorder">
- <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
- src=buttons.gif id="nb_otlTxt" title="Développer/Réduire le plan"
- style='position:relative;left:-157px'></div>
- </div>
- </td>
-</table>
-
+</td>
+<td>
+<div id="nb_voiceBorder" style="display:none;position:absolute;left:-40px;
+ width:20px;height:20px">
+<div style="position:absolute;clip:rect(0px, 18px, 18px, 0px)"><img id="nb_voice" src="buttons.gif" style="position:relative;left:-290px" title="Suspendre/Lire la narration"/></div>
 </div>
-
-<div id=OtlObj style='display:none;visibility:hidden'>
-
-<table width="100%" style='font-family:Arial;font-size:9pt'>
- <tr>
-  <td>
-  <div id=PPTP1 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0001.htm');" onmouseover="Over(this)"
-  id=PPTL1 onmouseout="Out(this)">Multi Agent Systems <br>
+</td>
+</table>
+<table align="center" cellpadding="0" cellspacing="0" style="position:relative">
+<td nowrap="">
+<div class="button" id="nb_prevBorder" style="left:-30px">
+<div style="position:absolute;clip:rect(0px, 30px, 18px, 0px)"><img id="nb_prev" src="buttons.gif" style="position:
+ relative;left:0px" title="Diapositive prÃ©cÃ©dente"/></div>
+</div>
+<span id="nav_text" style="position:relative;top:3px;width:100px;font-family:
+ Arial;color:buttontext;font-size:9pt"></span>
+<div class="button" id="nb_nextBorder">
+<div style="position:absolute;clip:rect(0px, 30px, 18px, 0px)"><img id="nb_next" src="buttons.gif" style="position:
+ relative;left:-90px" title="Diapositive suivante"/></div>
+</div>
+</td>
+</table>
+</div>
+<div id="OtlNavObj" onkeypress="_KPH()" onload="Load()" onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseover="BtnOnOver()" onmouseup="BtnOnUp()" style="display:none;visibility:hidden">
+<table align="left" cellpadding="0" cellspacing="0" style="position:relative;width:70px">
+<td nowrap="">
+<div align="center" id="nb_otlElem" style="position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt">Plan</div>
+<div id="nb_otl" style="position:absolute;
+ top:0%;left:0%;width:100%;height:100%" title="Afficher/Masquer le plan"></div>
+</td>
+</table>
+<table align="center" cellpadding="0" cellspacing="0" style="position:relative">
+<td>
+<div id="nb_otlTxtBorder" style="position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface">
+<div style="position:absolute;clip:rect(0px, 22px, 18px, 0px)"><img id="nb_otlTxt" src="buttons.gif" style="position:relative;left:-157px" title="DÃ©velopper/RÃ©duire le plan"/></div>
+</div>
+</td>
+</table>
+</div>
+<div id="OtlObj" style="display:none;visibility:hidden">
+<table style="font-family:Arial;font-size:9pt" width="100%">
+<tr>
+<td>
+<div class="PTxt" id="PPTP1"><font size="2"><a href="javascript:GoToSld('slide0001.htm');" id="PPTL1" onmouseout="Out(this)" onmouseover="Over(this)">Multi Agent Systems <br/>
   for natural resources management</a></font></div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP2 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0822.htm');" onmouseover="Over(this)"
-  id=PPTL2 onmouseout="Out(this)">Content</a></font></div>
-  <div id=PPTC2 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB2 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=3><font size=2>Some information on the training course (slides
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP2"><font size="2"><a href="javascript:GoToSld('slide0822.htm');" id="PPTL2" onmouseout="Out(this)" onmouseover="Over(this)">Content</a></font></div>
+<div class="CTxt" id="PPTC2" style="display:none">
+<table class="CBorder" id="PPTB2" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font size="2">Some information on the training course (slides
     5-10)</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=3><font size=2>Introduction to models and complexity (11-75)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=2><font size=2>General introduction &#9;&#9;&#9;(11-20)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=2><font size=2>Discrete dynamics systems &#9;&#9;(21-44)</font></td>
-   </tr>
-   <tr>
-    <td colspan=3></td>
-    <td colspan=1><font size=2>The concepts of attractor and control</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=2><font size=2>Game Theory &#9;&#9;&#9;&#9;(45-59)</font></td>
-   </tr>
-   <tr>
-    <td colspan=3></td>
-    <td colspan=1><font size=2>Modelling strategic interactions</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=2><font size=2>Cellular Automata and network of automata</font></td>
-   </tr>
-   <tr>
-    <td colspan=3></td>
-    <td colspan=1><font size=2>Modelling the multiple interactions &#9;(60-75)</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=3></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP3 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0823.htm');" onmouseover="Over(this)"
-  id=PPTL3 onmouseout="Out(this)">Content</a></font></div>
-  <div id=PPTC3 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB3 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Multi-Agents Systems &#9;(76-195)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Introduction&#9;&#9;&#9;(76-125)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Agent architectures&#9;&#9;(126-150)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Reactive MAS&#9;&#9;&#9;(150-167)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Cognitive MAS&#9;&#9;&#9;(168-195)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP4 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0824.htm');" onmouseover="Over(this)"
-  id=PPTL4 onmouseout="Out(this)">Content</a></font></div>
-  <div id=PPTC4 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB4 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Applications</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>MAS and population biology &#9;(196-218)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>MAS and artificial landscapes (219-257)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Mas and social sciences &#9;(255-310)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>MAS and INRM&#9;&#9;&#9;(311-440)</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP5 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0803.htm');" onmouseover="Over(this)"
-  id=PPTL5 onmouseout="Out(this)">Some information on the training course</a></font></div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP6 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0644.htm');" onmouseover="Over(this)"
-  id=PPTL6 onmouseout="Out(this)">The origins</a></font></div>
-  <div id=PPTC6 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB6 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>89-94 Multi-agent systems for environmental and
-    ecological research.</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>94-2001 Cirad team : renewable resource
-    management and environment.</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>2001 IRRI-Cirad</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Training programme :</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Resource management</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>MAS : 12 sessions since 96.</font></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP7 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0645.htm');" onmouseover="Over(this)"
-  id=PPTL7 onmouseout="Out(this)">Resource management and environment</a></font></div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP8 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0646.htm');" onmouseover="Over(this)"
-  id=PPTL8 onmouseout="Out(this)">Multi-agent applications</a></font></div>
-  <div id=PPTC8 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB8 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Sim-Delta : Small-scale fisheries (Bousquet)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>SeaLab : Fish reproductive strategies(Le Page)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Shadoc :Irrigated scheme in Senegal (Barreteau),</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Pasteur, JuMel : Rangeland in sahelian area
-    (Bah, Rouchier)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Djemiong : Wildlife in Cameroon (Bakam)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Kayanza : Fuel wood in Burundi (Guizol)</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Samba : Land use and agricultural practices
-    (Vietnam)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Ungoing models on water allocation in Java, in
-    Tunisia, in France, on erosion/diversification in Thailand.</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>And many theoretical models</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP9 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0647.htm');" onmouseover="Over(this)"
-  id=PPTL9 onmouseout="Out(this)">Course framework</a></font></div>
-  <div id=PPTC9 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB9 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Lectures in the morning</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>General concepts in resource modelling</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Introduction on Game Theory, Cellular Automata</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Multi-Agents</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Applications : how to use MAS for natural
-    resources management</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Practical exercises<span style="mso-spacerun:
-    yes">  </span>in the afternoon</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Smalltalk language (2 days),</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Cormas platform (3 days)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Personal projects</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Presentation of the projects, training
-    evaluation</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP10 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0648.htm');" onmouseover="Over(this)"
-  id=PPTL10 onmouseout="Out(this)">Different outputs and follow-up</a></font></div>
-  <div id=PPTC10 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB10 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>About 150 participants (very heterogeneous
-    attendance).</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>General knowledge on approaches to complexity
-    and MAS methodology (60%)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Development of a joint project (30%)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Keep on developing in Cormas (10%)</font></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP11 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0804.htm');" onmouseover="Over(this)"
-  id=PPTL11 onmouseout="Out(this)">Introduction to models and complexity</a></font></div>
-  <div id=PPTC11 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB11 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP12 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0805.htm');" onmouseover="Over(this)"
-  id=PPTL12 onmouseout="Out(this)">Content</a></font></div>
-  <div id=PPTC12 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB12 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>General introduction</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Discrete dynamics systems</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>The concepts of attractor and control</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Game Theory</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Modelling strategic interactions</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Cellular Automata and network of automata</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Modelling the multiple interactions</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP13 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0003.htm');" onmouseover="Over(this)"
-  id=PPTL13 onmouseout="Out(this)">Complexity</a></font></div>
-  <div id=PPTC13 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB13 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Interactions and points of views</font></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP14 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0005.htm');" onmouseover="Over(this)"
-  id=PPTL14 onmouseout="Out(this)">Complexity and management of resources</a></font></div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP15 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0004.htm');" onmouseover="Over(this)"
-  id=PPTL15 onmouseout="Out(this)">Concepts</a></font></div>
-  <div id=PPTC15 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB15 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Equilibrium</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Control</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Decision and strategy</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Cooperation and evolution</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Emergence</font></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP16 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0011.htm');" onmouseover="Over(this)"
-  id=PPTL16 onmouseout="Out(this)">Related domains</a></font></div>
-  <div id=PPTC16 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB16 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Mathematics : systems dynamics</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Physics : networks of automata</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Biology : interaction evolution</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=1><font size=2>Social sciences : representations and exchanges</font></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP17 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0006.htm');" onmouseover="Over(this)"
-  id=PPTL17 onmouseout="Out(this)">Modelling process</a></font></div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP18 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0321.htm');" onmouseover="Over(this)"
-  id=PPTL18 onmouseout="Out(this)">Modelling = Formalization</a></font></div>
-  <div id=PPTC18 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB18 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Create virtual worlds</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Examples</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Population dynamics (Lotka-Volterra)</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Game theory</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP19 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0322.htm');" onmouseover="Over(this)"
-  id=PPTL19 onmouseout="Out(this)">Modelling = observation</a></font></div>
-  <div id=PPTC19 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB19 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Description of the reality</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Examples</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Statistics</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Maps</font></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
- <tr>
-  <td>
-  <div id=PPTP20 class=PTxt><font size=2><a
-  href="javascript:GoToSld('slide0323.htm');" onmouseover="Over(this)"
-  id=PPTL20 onmouseout="Out(this)">Models and action</a></font></div>
-  <div id=PPTC20 class=CTxt style='display:none'>
-  <table style='color:black' id=PPTB20 class=CBorder>
-   <tr>
-    <td width=5 nowrap></td>
-    <td width=20 nowrap></td>
-    <td width="100%"></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Models help to control</font></td>
-   </tr>
-   <tr>
-    <td colspan=1></td>
-    <td colspan=2><font size=2>Examples :</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Models of bridges, boats, etc...</font></td>
-   </tr>
-   <tr>
-    <td colspan=2></td>
-    <td colspan=1><font size=2>Software</font></td>
-   </tr>
-  </table>
-  </div>
-  </td>
- </tr>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"><font size="2">Introduction to models and complexity (11-75)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font size="2">General introduction 			(11-20)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font size="2">Discrete dynamics systems 		(21-44)</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font size="2">The concepts of attractor and control</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font size="2">Game Theory 				(45-59)</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font size="2">Modelling strategic interactions</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><font size="2">Cellular Automata and network of automata</font></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="1"><font size="2">Modelling the multiple interactions 	(60-75)</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="3"></td>
+</tr>
 </table>
-
 </div>
-
-</body>
-
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP3"><font size="2"><a href="javascript:GoToSld('slide0823.htm');" id="PPTL3" onmouseout="Out(this)" onmouseover="Over(this)">Content</a></font></div>
+<div class="CTxt" id="PPTC3" style="display:none">
+<table class="CBorder" id="PPTB3" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Multi-Agents Systems 	(76-195)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Introduction			(76-125)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Agent architectures		(126-150)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Reactive MAS			(150-167)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Cognitive MAS			(168-195)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP4"><font size="2"><a href="javascript:GoToSld('slide0824.htm');" id="PPTL4" onmouseout="Out(this)" onmouseover="Over(this)">Content</a></font></div>
+<div class="CTxt" id="PPTC4" style="display:none">
+<table class="CBorder" id="PPTB4" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Applications</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">MAS and population biology 	(196-218)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">MAS and artificial landscapes (219-257)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Mas and social sciences 	(255-310)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">MAS and INRM			(311-440)</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP5"><font size="2"><a href="javascript:GoToSld('slide0803.htm');" id="PPTL5" onmouseout="Out(this)" onmouseover="Over(this)">Some information on the training course</a></font></div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP6"><font size="2"><a href="javascript:GoToSld('slide0644.htm');" id="PPTL6" onmouseout="Out(this)" onmouseover="Over(this)">The origins</a></font></div>
+<div class="CTxt" id="PPTC6" style="display:none">
+<table class="CBorder" id="PPTB6" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">89-94 Multi-agent systems for environmental and
+    ecological research.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">94-2001 Cirad team : renewable resource
+    management and environment.</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">2001 IRRI-Cirad</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Training programme :</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Resource management</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">MAS : 12 sessions since 96.</font></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP7"><font size="2"><a href="javascript:GoToSld('slide0645.htm');" id="PPTL7" onmouseout="Out(this)" onmouseover="Over(this)">Resource management and environment</a></font></div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP8"><font size="2"><a href="javascript:GoToSld('slide0646.htm');" id="PPTL8" onmouseout="Out(this)" onmouseover="Over(this)">Multi-agent applications</a></font></div>
+<div class="CTxt" id="PPTC8" style="display:none">
+<table class="CBorder" id="PPTB8" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Sim-Delta : Small-scale fisheries (Bousquet)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">SeaLab : Fish reproductive strategies(Le Page)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Shadoc :Irrigated scheme in Senegal (Barreteau),</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Pasteur, JuMel : Rangeland in sahelian area
+    (Bah, Rouchier)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Djemiong : Wildlife in Cameroon (Bakam)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Kayanza : Fuel wood in Burundi (Guizol)</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Samba : Land use and agricultural practices
+    (Vietnam)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Ungoing models on water allocation in Java, in
+    Tunisia, in France, on erosion/diversification in Thailand.</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">And many theoretical models</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP9"><font size="2"><a href="javascript:GoToSld('slide0647.htm');" id="PPTL9" onmouseout="Out(this)" onmouseover="Over(this)">Course framework</a></font></div>
+<div class="CTxt" id="PPTC9" style="display:none">
+<table class="CBorder" id="PPTB9" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Lectures in the morning</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">General concepts in resource modelling</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Introduction on Game Theory, Cellular Automata</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Multi-Agents</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Applications : how to use MAS for natural
+    resources management</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Practical exercises<span style="mso-spacerun:
+    yes">Â  </span>in the afternoon</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Smalltalk language (2 days),</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Cormas platform (3 days)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Personal projects</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Presentation of the projects, training
+    evaluation</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP10"><font size="2"><a href="javascript:GoToSld('slide0648.htm');" id="PPTL10" onmouseout="Out(this)" onmouseover="Over(this)">Different outputs and follow-up</a></font></div>
+<div class="CTxt" id="PPTC10" style="display:none">
+<table class="CBorder" id="PPTB10" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">About 150 participants (very heterogeneous
+    attendance).</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">General knowledge on approaches to complexity
+    and MAS methodology (60%)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Development of a joint project (30%)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Keep on developing in Cormas (10%)</font></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP11"><font size="2"><a href="javascript:GoToSld('slide0804.htm');" id="PPTL11" onmouseout="Out(this)" onmouseover="Over(this)">Introduction to models and complexity</a></font></div>
+<div class="CTxt" id="PPTC11" style="display:none">
+<table class="CBorder" id="PPTB11" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP12"><font size="2"><a href="javascript:GoToSld('slide0805.htm');" id="PPTL12" onmouseout="Out(this)" onmouseover="Over(this)">Content</a></font></div>
+<div class="CTxt" id="PPTC12" style="display:none">
+<table class="CBorder" id="PPTB12" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">General introduction</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Discrete dynamics systems</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">The concepts of attractor and control</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Game Theory</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Modelling strategic interactions</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Cellular Automata and network of automata</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Modelling the multiple interactions</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP13"><font size="2"><a href="javascript:GoToSld('slide0003.htm');" id="PPTL13" onmouseout="Out(this)" onmouseover="Over(this)">Complexity</a></font></div>
+<div class="CTxt" id="PPTC13" style="display:none">
+<table class="CBorder" id="PPTB13" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Interactions and points of views</font></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP14"><font size="2"><a href="javascript:GoToSld('slide0005.htm');" id="PPTL14" onmouseout="Out(this)" onmouseover="Over(this)">Complexity and management of resources</a></font></div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP15"><font size="2"><a href="javascript:GoToSld('slide0004.htm');" id="PPTL15" onmouseout="Out(this)" onmouseover="Over(this)">Concepts</a></font></div>
+<div class="CTxt" id="PPTC15" style="display:none">
+<table class="CBorder" id="PPTB15" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Equilibrium</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Control</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Decision and strategy</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Cooperation and evolution</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Emergence</font></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP16"><font size="2"><a href="javascript:GoToSld('slide0011.htm');" id="PPTL16" onmouseout="Out(this)" onmouseover="Over(this)">Related domains</a></font></div>
+<div class="CTxt" id="PPTC16" style="display:none">
+<table class="CBorder" id="PPTB16" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Mathematics : systems dynamics</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Physics : networks of automata</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Biology : interaction evolution</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"><font size="2">Social sciences : representations and exchanges</font></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP17"><font size="2"><a href="javascript:GoToSld('slide0006.htm');" id="PPTL17" onmouseout="Out(this)" onmouseover="Over(this)">Modelling process</a></font></div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP18"><font size="2"><a href="javascript:GoToSld('slide0321.htm');" id="PPTL18" onmouseout="Out(this)" onmouseover="Over(this)">Modelling = Formalization</a></font></div>
+<div class="CTxt" id="PPTC18" style="display:none">
+<table class="CBorder" id="PPTB18" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Create virtual worlds</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Examples</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Population dynamics (Lotka-Volterra)</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Game theory</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP19"><font size="2"><a href="javascript:GoToSld('slide0322.htm');" id="PPTL19" onmouseout="Out(this)" onmouseover="Over(this)">Modelling = observation</a></font></div>
+<div class="CTxt" id="PPTC19" style="display:none">
+<table class="CBorder" id="PPTB19" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Description of the reality</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Examples</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Statistics</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Maps</font></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="PTxt" id="PPTP20"><font size="2"><a href="javascript:GoToSld('slide0323.htm');" id="PPTL20" onmouseout="Out(this)" onmouseover="Over(this)">Models and action</a></font></div>
+<div class="CTxt" id="PPTC20" style="display:none">
+<table class="CBorder" id="PPTB20" style="color:black">
+<tr>
+<td nowrap="" width="5"></td>
+<td nowrap="" width="20"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Models help to control</font></td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="2"><font size="2">Examples :</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Models of bridges, boats, etc...</font></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="1"><font size="2">Software</font></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

@@ -1,81 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Sylvopast et Mejan, negociations autour de plans de gestion</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-  <td width="*" valign="top" bgcolor="#FFFFFF"> 
- <p>&nbsp;</p><p>&nbsp;</p><p>THIS PAGE WILL BE SOON AVAILABLE IN ENGLISH</p> 
-   <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p><p> </p><p>THIS PAGE WILL BE SOON AVAILABLE IN ENGLISH</p>
+<p> 
    
-      <h1>Sylvopast et Mejan (mod&egrave;les)</h1>
-      <h2>Dynamique de paysages m&eacute;diterrann&eacute;ens</h2>
-      <p>Michel Etienne, Inra</p>
- 
-      <p>Les mod&egrave;les Sylvopast et Mejan simulent la dynamique de paysages 
-        m&eacute;diterrann&eacute;ens. Ils ont deux vocations: il peuvent &ecirc;tre 
-        utilis&eacute;s pour repr&eacute;senter l&eacute;volution du paysage 
-        ou pour faire n&eacute;gocier des acteurs r&eacute;els autour dun jeu 
-        de r&ocirc;le. Lutilisation en tant que jeu de r&ocirc;le est d&eacute;crite 
+      <h1>Sylvopast et Mejan (modèles)</h1>
+<h2>Dynamique de paysages méditerrannéens</h2>
+<p>Michel Etienne, Inra</p>
+<p>Les modèles Sylvopast et Mejan simulent la dynamique de paysages 
+        méditerrannéens. Ils ont deux vocations: il peuvent être 
+        utilisés pour représenter lévolution du paysage 
+        ou pour faire négocier des acteurs réels autour dun jeu 
+        de rôle. Lutilisation en tant que jeu de rôle est décrite 
         dans une <a href="etiennejeux.htm">autre page</a>.</p>
-      <p>Dans les deux mod&egrave;les, des acteurs agissent sur un espace et suivent 
-        des strat&eacute;gies contrast&eacute;es. La dynamique de lespace est 
-        observ&eacute;e &agrave; travers deux crit&egrave;res que sont les feux 
-        dans les for&ecirc;ts m&eacute;diterran&eacute;ennes (Sylvopast) ou le 
-        d&eacute;veloppement du pin dans des &eacute;cosyst&egrave;mes &agrave; 
-        forte biodiversit&eacute; (Mejan).</p>
-      <p>Sylvopast est construit autour dun paysage forestier virtuel et de r&egrave;gles 
+<p>Dans les deux modèles, des acteurs agissent sur un espace et suivent 
+        des stratégies contrastées. La dynamique de lespace est 
+        observée à travers deux critères que sont les feux 
+        dans les forêts méditerranéennes (Sylvopast) ou le 
+        développement du pin dans des écosystèmes à 
+        forte biodiversité (Mejan).</p>
+<p>Sylvopast est construit autour dun paysage forestier virtuel et de règles 
         de gestion de deux types dagents: un berger et un forestier. Pour Mejan, 
-        il sagit dun paysage agricole r&eacute;el avec un troisi&egrave;me type 
+        il sagit dun paysage agricole réel avec un troisième type 
         dagent (un parc national). </p>
-   <p>Les agents partagent le m&ecirc;me milieu, donc le m&ecirc;me risque de feu 
-    ou le m&ecirc;me processus biologique de d&eacute;veloppement du pin. 
-    Mais leurs objectifs sont diff&eacute;rents (production animale, protection du 
-    paysage, production de bois, biodiversit&eacute;, conservation de la nature).</p>
-   <p>Les ressources naturelles sont d&eacute;finies par des combinaisons al&eacute;atoires 
-    de couches de v&eacute;g&eacute;tation (arbres, buissons, herbes, cultures). Leur dynamique 
-    d&eacute;pend de r&egrave;gles biologiques et de la gestion, ainsi que des feux ou du 
-    d&eacute;veloppement du pin. La dynamique des feux et du d&eacute;veloppement 
-    du pin d&eacute;pend de facteurs naturels et (topographie,vents dominants, 
-    &acirc;ge des peuplements, etc.) et de facteurs de gestion.</p>
-   <h2>Sylvopast</h2>
-      <p>Dans Sylvopast, les strat&eacute;gies de gestion pastorales sont bas&eacute;es 
-        sur la disponibilit&eacute; en fourrage, elle-m&ecirc;me fonction du climat 
-        et de la v&eacute;g&eacute;tation. Les strat&eacute;gies de pr&eacute;vention 
-        des feux sont bas&eacute;es sur les directions des vents dominants, sur 
-        la valeur des for&ecirc;ts et les ressources financi&egrave;res disponibles.</p>
-      <p>Le but principal est de d&eacute;terminer quelle r&eacute;partition de la 
-        v&eacute;g&eacute;tation est la plus efficace au regard des objectifs 
-        du plan de gestion et des strat&eacute;gies de n&eacute;gociation des 
+<p>Les agents partagent le même milieu, donc le même risque de feu 
+    ou le même processus biologique de développement du pin. 
+    Mais leurs objectifs sont différents (production animale, protection du 
+    paysage, production de bois, biodiversité, conservation de la nature).</p>
+<p>Les ressources naturelles sont définies par des combinaisons aléatoires 
+    de couches de végétation (arbres, buissons, herbes, cultures). Leur dynamique 
+    dépend de règles biologiques et de la gestion, ainsi que des feux ou du 
+    développement du pin. La dynamique des feux et du développement 
+    du pin dépend de facteurs naturels et (topographie,vents dominants, 
+    âge des peuplements, etc.) et de facteurs de gestion.</p>
+<h2>Sylvopast</h2>
+<p>Dans Sylvopast, les stratégies de gestion pastorales sont basées 
+        sur la disponibilité en fourrage, elle-même fonction du climat 
+        et de la végétation. Les stratégies de prévention 
+        des feux sont basées sur les directions des vents dominants, sur 
+        la valeur des forêts et les ressources financières disponibles.</p>
+<p>Le but principal est de déterminer quelle répartition de la 
+        végétation est la plus efficace au regard des objectifs 
+        du plan de gestion et des stratégies de négociation des 
         deux agents.</p>
-   <h2>Mejan</h2>
-      <p>Dans Mejan, Les strat&eacute;gies agropastorales d&eacute;pendent du 
+<h2>Mejan</h2>
+<p>Dans Mejan, Les stratégies agropastorales dépendent du 
         rapport entre cultures et pÃ¢turages, la pression de pÃ¢ture, la position 
-        de la bergerie et le niveau de conscience &eacute;cologique de lagriculteur. 
-        Les strat&eacute;gies de gestion foresti&egrave;res d&eacute;pendent du 
-        statut de propri&eacute;t&eacute; et des lois foresti&egrave;res. Le parc 
-        national essaye de faire disparaÃ®tre le pin, pour conserver la biodiversit&eacute; 
+        de la bergerie et le niveau de conscience écologique de lagriculteur. 
+        Les stratégies de gestion forestières dépendent du 
+        statut de propriété et des lois forestières. Le parc 
+        national essaye de faire disparaÃ®tre le pin, pour conserver la biodiversité 
         et les espaces ouverts.</p>
-   <p> Les deux objectifs principaux sont de comparer des sc&eacute;narios de gestion 
-    et de permettre aux agents d&eacute;changer leur perception sur les processus 
-    de d&eacute;veloppement du pin. Ceci peut conduire au d&eacute;veloppement de strat&eacute;gies 
+<p> Les deux objectifs principaux sont de comparer des scénarios de gestion 
+    et de permettre aux agents déchanger leur perception sur les processus 
+    de développement du pin. Ceci peut conduire au développement de stratégies 
     communes.</p>
-      <p>Pour en savoir plus, <a href="mailto:etienne@avignon.inra.fr">contactez 
+<p>Pour en savoir plus, <a href="mailto:etienne@avignon.inra.fr">contactez 
         lauteur</a>.</p>
-   <!--#include virtual="/include/copyright_en.inc" -->
-	</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<!--#include virtual="/include/copyright_en.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

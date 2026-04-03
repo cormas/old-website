@@ -1,59 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Ecological Approaches</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
-</head>
-
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-
-    <!--#include virtual="sommair.inc" --> 
-
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-
- <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> 
 
       <h1>Ecological Approaches</h1>
-
-      <p>&nbsp;
+<p> 
 
       <h2>Ecology and natural resources dynamics</h2>
-
-      <p>The scientific approach to natural resource dynamics involves the characterization 
+<p>The scientific approach to natural resource dynamics involves the characterization 
         of how the environment influences the abundance and availability of a 
         given resource. From the ecological point of view, the environment is 
         a collection of natural factors (physical, chemical, and biological) capable 
         of affecting living organisms. Therefore, any factor that can be consumed 
         or used by an organism is defined as a natural resource (Begon et al, 
         1990). </p>
-      <p>The "individual - environment - population" system (Barbault, 1992), 
+<p>The "individual - environment - population" system (Barbault, 1992), 
         which is at the heart of ecological thought, presents a multitude of intertwined 
         interactions that can be grouped into one of two categories: interactions 
         between organisms (competition, predation, mutualism, etc.), and interactions 
         between organisms and their physical environment (the environmental "conditions"). 
       </p>
-      <p>In essence, ecology deals with the study of complex systems. A complex 
-        entity (Fogelman Souli�, 1991; Gell-Mann, 1994) is composed of different 
+<p>In essence, ecology deals with the study of complex systems. A complex 
+        entity (Fogelman Soulié, 1991; Gell-Mann, 1994) is composed of different 
         elements that interact and combine in a way that may not be obvious at 
         first: the system's complexity is in the eye of the observer. </p>
-      <p>The idea that the concept of complexity is inseparable from perception 
+<p>The idea that the concept of complexity is inseparable from perception 
         is not neutral but depends on the scale of observation of the system under 
         study. In ecology, there is no scale for observing all phenomena. Conventionally, 
         the hierarchy of scales (Allen and Starr, 1982) refers to organizational 
@@ -62,14 +118,12 @@
         take into account the multiplicity of scales of study so that each of 
         the phenomena studied at their specific levels can be integrated during 
         a phase called "scale transfer". </p>
-
-      <h2 align="left" >Interactions between scales and disciplines</h2>
-
-      <p align="left" >The research community is divided between those who are 
+<h2 align="left">Interactions between scales and disciplines</h2>
+<p align="left">The research community is divided between those who are 
         working on ethology and individual behaviour and those working on the 
         ecology of the landscape and the structure or organization of space. Significant 
         advances in ecology have been limited as a result. </p>
-      <p align="left" >Let us consider, for example, one of the common and relevant 
+<p align="left">Let us consider, for example, one of the common and relevant 
         problems that occurs in managing renewable natural resources: estimating 
         the risk of extinction of a species as a function of space fragmentation. 
         In order to make an estimation, we need to know the global indicators 
@@ -78,7 +132,7 @@
         for example. These mechanisms can explain how the system functions. They 
         should be taken into account in any model that seeks to give meaning to 
         the indicators defined at a higher level. </p>
-      <p align="left" >Interdisciplinary combinations, which are essential for 
+<p align="left">Interdisciplinary combinations, which are essential for 
         environmental sciences, are generally manifest on a global level. Landscape 
         ecology (Forman and Gordon, 1986; Kareiva and Wennergren, 1995) is where 
         geography and ecology come together. It is based on the principle that 
@@ -86,53 +140,34 @@
         one or other subject and that their solutions require not only an understanding 
         of the physical and ecological aspects of the ecosystems but also of the 
         way they interact with political, economic, and social factors. </p>
-      <h2>References</h2>
-
-    <p>Allen T.F.H. et Starr T.B. 1982. Hierarchy: Perspectives for Ecological 
+<h2>References</h2>
+<p>Allen T.F.H. et Starr T.B. 1982. Hierarchy: Perspectives for Ecological 
 
       Complexity. University of Chicago Press, Chicago.</p>
-
-    <p>Barbault R. 1992. Ecologie des peuplements. Structure, dynamique et &eacute;volution. 
+<p>Barbault R. 1992. Ecologie des peuplements. Structure, dynamique et évolution. 
 
       Masson, Paris.</p>
-
-    <p>Begon M., Harper J.L. et Townsend C.R. 1990. Ecology. Individuals, Populations 
+<p>Begon M., Harper J.L. et Townsend C.R. 1990. Ecology. Individuals, Populations 
 
       and Communities. Blackwell, Cambridge.</p>
-
-    <p>Fogelman Souli&eacute; F. 1991. Les th&eacute;ories de la complexit&eacute; autour de l'�uvre 
+<p>Fogelman Soulié F. 1991. Les théories de la complexité autour de l'uvre 
 
       d'Henri Atlan. Seuil, Paris.</p>
-
-    <p>Forman R.T.T. et Gordon M. 1986. Landscape Ecology. John Wiley & Sons, 
+<p>Forman R.T.T. et Gordon M. 1986. Landscape Ecology. John Wiley &amp; Sons, 
 
       New York.</p>
-
-    <p>Gell-Mann M. 1994. Le quark et le jaguar. Voyage au c�ur du simple et 
+<p>Gell-Mann M. 1994. Le quark et le jaguar. Voyage au cur du simple et 
 
       du complexe. Albin Michel Sciences, Paris.</p>
-
-    <p>Kareiva P. et Wennergren U. 1995. Connecting landscape patterns to ecosystem 
+<p>Kareiva P. et Wennergren U. 1995. Connecting landscape patterns to ecosystem 
 
       and population processes. Nature, 373: 299-302. </p>
-
-    
-
-    <!--#include virtual="/include/copyright_en.inc" -->
-
-	</td>
-
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-    <div align="right" ></div>
-
-    </td>
-
-  </tr>
-
+<!--#include virtual="/include/copyright_en.inc" -->
+</p></p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right"></div>
+</td>
+</tr>
 </table>
-
-</body>
-
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>
-

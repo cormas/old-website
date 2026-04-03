@@ -1,24 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Markets</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" -->
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp;</p>
-      <h1>MARKETS : Markets as communication systems </h1>
-      <h2>Assessing the performance of different market institutions using computer 
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<h1>MARKETS : Markets as communication systems </h1>
+<h2>Assessing the performance of different market institutions using computer 
         simulations</h2>
-      <p>Franck Galtier, Cirad.</p>
-      <p>The famous work by F. Hayek, L. Hurwicz, J. Stiglitz, and S. Grossman 
+<p>Franck Galtier, Cirad.</p>
+<p>The famous work by F. Hayek, L. Hurwicz, J. Stiglitz, and S. Grossman 
         showed that market performance depends on an ability to ensure the dissemination 
         of information between economic stakeholders. As information is passed 
         on by the processes of negotiation and trade, the type of trading network 
@@ -27,11 +100,11 @@
         using mathematical tools (Kirman 1983; Ioannides 2002) or computer tools 
         (Kirman and Vriend 2000; Kerber and Saam 2001). The work described here 
         falls into the second category.</p>
-      <p>It involved a comparative analysis of the performance of two modes of 
+<p>It involved a comparative analysis of the performance of two modes of 
         wholesale trade organization widely used in agricultural commodity chains 
         of the developing countries: network trading and marketplace trading.</p>
-      <p align="right">Store of a wholesaler in Niono (Mali) <img src="../../images/applica/galtier3.jpg" width="356" height="257" align="bottom"></p>
-      <p>These two institutions function very differently. In the case of a trading 
+<p align="right">Store of a wholesaler in Niono (Mali) <img align="bottom" height="257" src="../../images/applica/galtier3.jpg" width="356"/></p>
+<p>These two institutions function very differently. In the case of a trading 
         network, each wholesaler in a consumer zone (CW) has correspondents (PW) 
         in the different production zones (one per zone) and, in principle, should 
         only procure supplies from his correspondents. Thus, when a CW wishes 
@@ -44,50 +117,50 @@
         CWs circulate in the production zones, where they meet PWs in the marketplaces 
         (on market day). The dissemination of information is therefore very different 
         in the two types of institution.</p>
-      <p align="left"><img src="../../images/applica/galtier4.jpg" width="412" height="273"> 
-        Wholesale markets in K&eacute;tou (B&eacute;nin)</p>
-      <p>Discussion on the relative performances of these two institutions has 
+<p align="left"><img height="273" src="../../images/applica/galtier4.jpg" width="412"/> 
+        Wholesale markets in Kétou (Bénin)</p>
+<p>Discussion on the relative performances of these two institutions has 
         major repercussions for public policies. Indeed, States and funding agencies 
         tend to favour wholesale markets, which are judged to be preferable for 
-        ensuring market &quot;transparency&quot;. It is this idea that we have 
+        ensuring market "transparency". It is this idea that we have 
         attempted to test here, by analysing whether any situations exist where 
         trading networks prove to be better communication systems than wholesale 
         markets.</p>
-      <p align="left"><img src="../../images/applica/markets-EN.jpg" width="479" height="204" align="right">The 
+<p align="left"><img align="right" height="204" src="../../images/applica/markets-EN.jpg" width="479"/>The 
         analysis was based on computer simulations using a multi-agent system 
-        (MAS). The approach consisted in &quot;entering&quot; an (environment, 
+        (MAS). The approach consisted in "entering" an (environment, 
         market institution) pair in the model, simulating the induced exchange 
         processes and measuring the efficacy of the resource allocation obtained 
         in that way (in accordance with a previously defined performance criterion). 
         This approach (shown in the following graph) makes it possible to test 
         the comparative efficacy of wholesale trading networks and wholesale markets 
-        in different environments (to see their respective scope of relevance).<br>
+        in different environments (to see their respective scope of relevance).<br/>
         In the scenarios performed, the <i>environment</i> was modelled from two 
         sets of variables: the degree to which the activity was concentrated on 
         the level of production zone wholesalers (PWs) and the variability in 
         supplies to those wholesalers. The <i>market institutions</i> represented 
-        were trading networks and wholesale markets, along with an imaginary &quot;perfect&quot; 
+        were trading networks and wholesale markets, along with an imaginary "perfect" 
         institution, i.e. one which enabled total market transparency and optimum 
         allocation of resources. This last institution was used as a control to 
         measure the efficiency of the other two. Lastly, the <i>performance criterion</i> 
         adopted was the minimization of rationing in consumption localities. </p>
-      <p>The simulations involved 150 different scenarios (50 environments and 
+<p>The simulations involved 150 different scenarios (50 environments and 
         3 market institutions). Each of the 150 scenarios was simulated over 100 
         time periods, approximately corresponding to two farming seasons, taking 
         a model time period to be a week in reality (numerous marketplaces operate 
         on a weekly basis). A thousand simulations were carried out for each scenario, 
         in order to neutralize the effect of the random variables introduced into 
         the model. </p>
-      <h3>The main results were as follows :</h3>
-      <ol>
-        <li>Whilst networks and wholesale markets disseminate far fewer bits of 
+<h3>The main results were as follows :</h3>
+<ol>
+<li>Whilst networks and wholesale markets disseminate far fewer bits of 
           information than the control institution, they manage to generate an 
           allocation of resources that is almost as good (at least when the environment 
           is unstable, which tallies with numerous true situations). This is confirmation 
           of the intuition of F. Hayek and L. Hurwicz whereby market institutions 
           that are relatively economical in terms of disseminating information 
           can lead to an efficient allocation of resources.</li>
-        <li>The most decisive (environment) variable for the comparative performance 
+<li>The most decisive (environment) variable for the comparative performance 
           of the two institutions was the number of production zone wholesalers 
           (PWs). In fact, when there are 15 PWs, networks always prove to be more 
           efficient than wholesale markets, whereas the opposite is the case with 
@@ -99,87 +172,87 @@
           is actually in Mali (where the PWs are larger scale and fewer in number) 
           that trading networks are found and in Benin (where PW activity is far 
           more scattered) that wholesale markets are found.</li>
-      </ol>
-      <p>This result is contrary to the preconception whereby wholesale markets 
+</ol>
+<p>This result is contrary to the preconception whereby wholesale markets 
         are better communication systems than trading networks. This should logically 
         lead to a total rethink of public policies in this field (which are currently 
         geared towards promoting wholesale markets).</p>
-      <p>Computer modelling of market processes proved to be relevant in explaining 
+<p>Computer modelling of market processes proved to be relevant in explaining 
         how an efficient allocation of resources can result from the decentralized 
         interactions of numerous individuals among whom the information is dispersed. 
         This approach thus complements other tools such as the games theory or 
         market experimentation [Smith 1982; Roth 2001]. Its strong points are 
         that it enables an analysis of market processes within which transactions 
-        take place &quot;out of balance&quot; (which is difficult with the games 
+        take place "out of balance" (which is difficult with the games 
         theory), and involves numerous stakeholders and quite long time periods 
         (which experiments do not allow). </p>
-      <p>This work also opens up a certain number of research prospects. One of 
-        them consists in including elements related to the &quot;language&quot; 
+<p>This work also opens up a certain number of research prospects. One of 
+        them consists in including elements related to the "language" 
         of the market institutions. Indeed, The messages (embodied in the purchase 
         and sale proposals of the players) are expressed according to rules that 
         define how the different trading parameters should be qualified (price, 
         quantity, quality, payment and delivery deadlines, and delivery site) 
-        and how they should be negotiated. These rules (which constitute the &quot;market 
-        language&quot;) can also be assessed using computer simulations.</p>
-      <h3>Bibliography</h3>
-      <p>AMSELLE, J.-L. (1977). Les commer&ccedil;ants de la savane : histoire 
-        et organisation sociale des Kooroko (Mali). Paris, Anthropos.<br>
-        DEMBELE, N. et J. STAATZ (1989). Transparence des march&eacute;s c&eacute;r&eacute;aliers 
-        et r&ocirc;le de l&eacute;tat: La mise en place dun syst&egrave;me dinformation 
-        des march&eacute;s au Mali. S&eacute;minaire European Seminar of Agricultural 
-        Economists.<br>
-        EGG, J., F. GALTIER, et E. GREGOIRE (1996). &quot;Syst&egrave;mes dinformation 
-        formels et informels - La r&eacute;gulation des march&eacute;s c&eacute;r&eacute;aliers 
-        au Sahel.&quot; Cahiers des Sciences Humaines 32(4): 845-868.<br>
-        GALTIER, F. (2002). &quot;Eclatement et incompl&eacute;tude de la th&eacute;orie 
-        des march&eacute;s&quot; Economies et Soci&eacute;t&eacute;s (in press).<br>
+        and how they should be negotiated. These rules (which constitute the "market 
+        language") can also be assessed using computer simulations.</p>
+<h3>Bibliography</h3>
+<p>AMSELLE, J.-L. (1977). Les commerçants de la savane : histoire 
+        et organisation sociale des Kooroko (Mali). Paris, Anthropos.<br/>
+        DEMBELE, N. et J. STAATZ (1989). Transparence des marchés céréaliers 
+        et rôle de létat: La mise en place dun système dinformation 
+        des marchés au Mali. Séminaire European Seminar of Agricultural 
+        Economists.<br/>
+        EGG, J., F. GALTIER, et E. GREGOIRE (1996). "Systèmes dinformation 
+        formels et informels - La régulation des marchés céréaliers 
+        au Sahel." Cahiers des Sciences Humaines 32(4): 845-868.<br/>
+        GALTIER, F. (2002). "Eclatement et incomplétude de la théorie 
+        des marchés" Economies et Sociétés (in press).<br/>
         GROSSMAN, S. (1989). The Informational Role of Prices. Cambridge, MIT 
-        Press<br>
-        HAMADOU, S. (1997). Lib&eacute;ralisation du commerce des produits vivriers 
-        au Niger et mode dorganisation des commer&ccedil;ants priv&eacute;s. 
-        Les r&eacute;seaux marchands dans le fonctionnement du syst&egrave;me 
-        de commercialisation des c&eacute;r&eacute;ales. Economics PhD thesis, 
-        Montpellier, ENSA.M.<br>
-        HAYEK, F. (1945). &quot;The Use of Knowledge in Society&quot;, American 
-        Economic Review 35(4): 519-530.<br>
-        HURWICZ, L. (1969). &quot;Centralization and Decentralization in economic 
-        systems - On the Concept and Possibility of Informational Decentralization&quot;, 
-        American Economic Review 59: 513-524.<br>
-        IOANNIDES, Y. (2002). &quot;Topologies of Social Interactions&quot;, Departement 
-        of economics, Tufts University.<br>
-        KERBER, W. and N. SAAM (2001).&quot;Competition as a Test of Hypotheses: 
-        Simulation of Knowledge-generating Market Processes&quot;, Journal of 
-        Artificial Societies and Social Simulation 4(3).<br>
-        KIRMAN, A. (1983). &quot;Communication in Markets: A Suggested Approach&quot;, 
-        Economic Letters 12: 1-5.<br>
-        KIRMAN, A. and N. J. VRIEND (2000). &quot;Evolving Market Structure: An 
-        ACE Model of Price Dispersion and Loyalty&quot;, Journal of Economic Dynamics 
-        and Control (ACE Special Issue).<br>
-        LAMBERT, A. et J. EGG (1994). &quot;Commerce, r&eacute;seaux et march&eacute;s 
-        : lapprovisionnement en riz dans les pays de lespace s&eacute;n&eacute;gambien.&quot; 
-        Cahiers des Sciences Humaines 30: 229-254.<br>
+        Press<br/>
+        HAMADOU, S. (1997). Libéralisation du commerce des produits vivriers 
+        au Niger et mode dorganisation des commerçants privés. 
+        Les réseaux marchands dans le fonctionnement du système 
+        de commercialisation des céréales. Economics PhD thesis, 
+        Montpellier, ENSA.M.<br/>
+        HAYEK, F. (1945). "The Use of Knowledge in Society", American 
+        Economic Review 35(4): 519-530.<br/>
+        HURWICZ, L. (1969). "Centralization and Decentralization in economic 
+        systems - On the Concept and Possibility of Informational Decentralization", 
+        American Economic Review 59: 513-524.<br/>
+        IOANNIDES, Y. (2002). "Topologies of Social Interactions", Departement 
+        of economics, Tufts University.<br/>
+        KERBER, W. and N. SAAM (2001)."Competition as a Test of Hypotheses: 
+        Simulation of Knowledge-generating Market Processes", Journal of 
+        Artificial Societies and Social Simulation 4(3).<br/>
+        KIRMAN, A. (1983). "Communication in Markets: A Suggested Approach", 
+        Economic Letters 12: 1-5.<br/>
+        KIRMAN, A. and N. J. VRIEND (2000). "Evolving Market Structure: An 
+        ACE Model of Price Dispersion and Loyalty", Journal of Economic Dynamics 
+        and Control (ACE Special Issue).<br/>
+        LAMBERT, A. et J. EGG (1994). "Commerce, réseaux et marchés 
+        : lapprovisionnement en riz dans les pays de lespace sénégambien." 
+        Cahiers des Sciences Humaines 30: 229-254.<br/>
         LE PAGE, C., F. BOUSQUET, et al. (2000). CORMAS: A multiagent simulation 
         toolkit to model natural and social dynamics at multiple scales. Workshop 
-        &quot;The ecology of scales&quot;, Wageningen (Netherlands).<br>
-        ROTH, A. (2001). &quot;The Economist as Engineer: Game Theory, Experimentation, 
-        and Computation as Tools for Design Economics&quot; Econometrica 70(4): 
-        1341-1378.<br>
-        SMITH, V. (1982). &quot;Markets as economizers of information: experimental 
-        examination of the &quot;Hayek hypothesis&quot;, Economic Inquiry 20: 
-        165-179.<br>
-        <br>
+        "The ecology of scales", Wageningen (Netherlands).<br/>
+        ROTH, A. (2001). "The Economist as Engineer: Game Theory, Experimentation, 
+        and Computation as Tools for Design Economics" Econometrica 70(4): 
+        1341-1378.<br/>
+        SMITH, V. (1982). "Markets as economizers of information: experimental 
+        examination of the "Hayek hypothesis", Economic Inquiry 20: 
+        165-179.<br/>
+<br/>
         For further information, <a href="mailto:galtier@cirad.fr">contact the 
-        author</a> or download the model (Cormas2003): <a href="../../logiciel/Markets.zip">markets</a> 
-      </p>
-      <h2>References</h2>
-      <p>...soon !</p>
-      <p>&nbsp;</p>
-      <!--#include virtual="/include/copyright_en.inc" -->
-    </td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+        author</a> or download the model (Cormas2003): <a href="../../logiciel/Markets.zip">markets</a>
+</p>
+<h2>References</h2>
+<p>...soon !</p>
+<p> </p>
+<!--#include virtual="/include/copyright_en.inc" -->
+</td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

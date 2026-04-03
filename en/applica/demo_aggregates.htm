@@ -1,60 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html lang="fr-fr">
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-    <title>Demo_Aggregates</title>
-    <!--#include virtual="/include/script.inc" -->
-    <link rel="stylesheet" href="/css/cormas.css" --="">
-  </head>
-  <body topmargin="0" leftmargin="0" border="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)"
-    bgcolor="#FFFFFF"
-    marginheight="0"
-    marginwidth="0">
-    <div>
-      <p>
-        <!--#include virtual="haut.inc" -->
-      </p>
-    </div>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tbody>
-        <tr>
-          <!--#include virtual="sommair.inc" -->
-          <td bgcolor="#FFFFFF" valign="top" width="*">
-            <p>&nbsp;</p>
-            <h1>Demo_Aggregates</h1>
-            <h2>Generating spatial aggregates in Cormas&nbsp; </h2>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>Demo_Aggregates</title>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<div>
+<p>
+<!--#include virtual="haut.inc" -->
+</p>
+</div>
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<h1>Demo_Aggregates</h1>
+<h2>Generating spatial aggregates in Cormas  </h2>
             Demo_Aggregates is a didactic model that allows you to test two
             different ways to create spatial aggregates with Cormas. This model
             introduces the operating principles of the aggregate spatial
             entities. In the inheritance tree of generic spatial entities, the
             generic compound spatial entity is called "<b>SpatialEntity_Set</b>".
-            It specializes in:<br>
-            <ul>
-              <li><b>SpatialEntityAggregate</b> whose components must be
+            It specializes in:<br/>
+<ul>
+<li><b>SpatialEntityAggregate</b> whose components must be
                 contiguous (the Groves of the model), and</li>
-              <li><b>SpatialEntityNotConnex</b> whose components may not be
+<li><b>SpatialEntityNotConnex</b> whose components may not be
                 contiguous (the <i>FragmentedForests</i> of the model).</li>
-            </ul>
-            <img alt="spatialEntitiesUML " src="../../images/spatialEntitiesUML.png"><br>
-            <br>
-            Les op&eacute;rations dagr&eacute;gation-d&eacute;sagr&eacute;gation reposent sur lassociation
-            "est compos&eacute;e de" entre SpatialEntitySet et SpatialEntity, qui se
+</ul>
+<img alt="spatialEntitiesUML " src="../../images/spatialEntitiesUML.png"/><br/>
+<br/>
+            Les opérations dagrégation-désagrégation reposent sur lassociation
+            "est composée de" entre SpatialEntitySet et SpatialEntity, qui se
             traduit en deux attributs: les Â«componentsÂ» (une collection
-            dentit&eacute;s spatiales de niveau inf&eacute;rieur) et Â«theCSEÂ» (lappartenance
-            &eacute;ventuelle a des entit&eacute;s spatiales de niveau sup&eacute;rieur). <br>
+            dentités spatiales de niveau inférieur) et Â«theCSEÂ» (lappartenance
+            éventuelle a des entités spatiales de niveau supérieur). <br/>
             The aggregation-disaggregation operations are based on the
             association "is made of" between SpatialEntitySet and SpatialEntity,
             which is translated in two attributes: "components" (a collection of
             lower-level spatial entities) and "theCSE" (the possibly belonging
-            to higher level spatial entities).<br>
+            to higher level spatial entities).<br/>
             In Demo_Aggregates, 3 entities are defined: <b>Plot</b> (subclass
             of SpatialEntityElement), <b>Grove</b> (subclass of
             SpatialEntityAggregate) and <b>FragmentedForest</b> (subclass of
-            SpatialEntityNotConnex):<br>
-            <img alt="classDiag" src="../../images/applica/aggregates2.png"><br>
+            SpatialEntityNotConnex):<br/>
+<img alt="classDiag" src="../../images/applica/aggregates2.png"/><br/>
             UML class diag of Demo_Aggregates. The aggregation association is
-            redefined between Grove and Plot ( // stands for this redefinition).<br>
-            <h3>First scenario (initForests - StepForests)</h3>
+            redefined between Grove and Plot ( // stands for this redefinition).<br/>
+<h3>First scenario (initForests - StepForests)</h3>
             Grove components are defined as sets of contiguous Plots sharing the
             same condition (tree). The initialization loads a spatial grid
             consisting of 50 * 50 cells (instances of the Plot class) from a
@@ -62,13 +133,13 @@
             or false). The actual instantiation of Grove
             (SpatialEntityAggregate) is done by selecting the contiguous Plots
             being #tree, plus an additional constraint on a minimum (fixed to
-            25) number of contiguous cells satisfying the aggregation condition.<br>
+            25) number of contiguous cells satisfying the aggregation condition.<br/>
             Making several spatial entities defined at different levels coexist
             in the same model offers a great flexibility to write the dynamics
             of the model. Some processes are more easily described at the
             cellular level (newState), when for others, the aggregate level is
-            more appropriate (expand or swell).<br>
-            <u>StepForest:&nbsp;</u> offers 2 simultaneous dynamics. In this
+            more appropriate (expand or swell).<br/>
+<u>StepForest: </u> offers 2 simultaneous dynamics. In this
             simple and didactic example, each Plot has a fixed (very low)
             probability of changing its state. Moreover, at the level of the
             groves, a spreading process from the edges is written as follows:
@@ -77,48 +148,48 @@
             of the total number of cells components of the forestry entity). In
             order to keep the forest entities compact, priority is given to
             cells that are surrounded by the highest number of cells already
-            aggregated.<br>
-            <img alt="gif1" src="../../images/applica/demo_Aggregates.gif"><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-            <h3>Second scenario (setAggregatesFromRandomSeeds - swellForests)</h3>
+            aggregated.<br/>
+<img alt="gif1" src="../../images/applica/demo_Aggregates.gif"/><br/>
+                  <br/>
+<h3>Second scenario (setAggregatesFromRandomSeeds - swellForests)</h3>
             10 seed cells are randomly chosen in the 50*50 spatial grid. 10
             aggregates are intialized with one of these seeds as a single
             component. The iterative building process of the aggregates relies
             on the integration, among the cells belonging to the outside edge of
             each aggregate, of all the one that do not yet belong to another
-            aggregate (swell).<br>
-            <img alt="demo2" src="../../images/applica/demo_aggregates2.gif"><br>
-            <p><br>
-            </p>
-            <h3>Third scenario (init2AggregateLevels - step2AggregateLevels)</h3>
-            <p>From the same initial state (loading the 3forests.env file),
+            aggregate (swell).<br/>
+<img alt="demo2" src="../../images/applica/demo_aggregates2.gif"/><br/>
+<p><br/>
+</p>
+<h3>Third scenario (init2AggregateLevels - step2AggregateLevels)</h3>
+<p>From the same initial state (loading the 3forests.env file),
               grove aggregates are created from the plots in forest. Then
               FragmentedForest aggregates are created from the groves on the
               size criterion, ie an instance of FragmentedForest contains groves
               of the same size. In this configuration, we get 7
-              FragmentedForests (1 of 128 groves of 1 plot, &nbsp;&nbsp; &nbsp;1
-              of 49 groves of 2 plots, &nbsp;&nbsp; &nbsp;1 of 21 groves of 3
-              plots,&nbsp;&nbsp;&nbsp; 1 of 1 grove of 240 plots, &nbsp;&nbsp;
-              &nbsp;1 of 1 grove of 80 plots, &nbsp;&nbsp; &nbsp;1 of 2 groves
-              of 4 plots,&nbsp;&nbsp;&nbsp; 1 of 1 grove of 143 plots). </p>
-            <img alt="classDiag3" src="../../images/applica/aggregates3.png"><br>
+              FragmentedForests (1 of 128 groves of 1 plot,     1
+              of 49 groves of 2 plots,     1 of 21 groves of 3
+              plots,    1 of 1 grove of 240 plots,   
+               1 of 1 grove of 80 plots,     1 of 2 groves
+              of 4 plots,    1 of 1 grove of 143 plots). </p>
+<img alt="classDiag3" src="../../images/applica/aggregates3.png"/><br/>
             For dynamic (step2AggregateLevels: t), only the FragmentedForest
             aggregate composed of the smallest groves is activated. Its
-            components then swell from their outer edge.<br>
-            <img alt="demo3" src="../../images/applica/demo_aggregates3.gif">
-            <ul>
-              <li>You can download the <a title="demo_Aggregates" href="../../logiciel/Demo_Aggregates.zip">model</a>
+            components then swell from their outer edge.<br/>
+<img alt="demo3" src="../../images/applica/demo_aggregates3.gif"/>
+<ul>
+<li>You can download the <a href="../../logiciel/Demo_Aggregates.zip" title="demo_Aggregates">model</a>
                 (zip, 32 ko, Cormas 2017).</li>
-              <li>Contact <a href="mailto:bommel@cirad.fr">the autor</a>. </li>
-            </ul>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <!--#include virtual="/include/copyright_en.inc" --> </td>
-          <td bgcolor="#FFFFFF" valign="top" width="15"> <br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+<li>Contact <a href="mailto:bommel@cirad.fr">the autor</a>. </li>
+</ul>
+<p> </p>
+<p> </p>
+<p> </p>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15"> <br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

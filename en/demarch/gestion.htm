@@ -1,21 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Two Approaches for Managing Resources</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-    <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
- <p>&nbsp;</p>
-      <h1>Two Approaches for Managing Resources</h1>
-      <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<h1>Two Approaches for Managing Resources</h1>
+<p> 
       <p>Several scientists are working on natural resource management. Here, 
         we mention two groups that are linked to two research associations, the 
         International Society of Ecological Economics (ISEE) and the International 
@@ -23,14 +96,14 @@
         conducts research with a view to integrating ecological systems within 
         economic frameworks. The latter is involved in the management of common 
         property, particularly renewable natural resources.</p>
-      <h2>Economic approach</h2>
-      <p>The economics of natural resources and the environment provides a set 
+<h2>Economic approach</h2>
+<p>The economics of natural resources and the environment provides a set 
         of theories and conceptual tools to monitor, analyse, evaluate, and regulate 
         (Dales, 1968; Arrow and Fisher, 1974; Bromley, 1991). In particular, economics 
         provides a model for the sustainable use of renewable natural resources 
         in the form of management tools, such as taxes, quotas, grants, subsidies, 
         standards, licences, permits, property rights, and market rights. </p>
-      <p>In addition, environmental economics relies on a representation of the 
+<p>In addition, environmental economics relies on a representation of the 
         circular interaction between humans and nature. The environment provides 
         services to society which can be quantified. In return, Man transforms 
         the environment-this action constitutes an externality-and by so doing, 
@@ -39,20 +112,20 @@
         are used efficiently and to compensate for the externalities. Economic 
         methods of monetary evaluation can be applied to both services and externalities. 
       </p>
-      <p>Thus, different possible uses of an ecosystem or a landscape can be compared. 
+<p>Thus, different possible uses of an ecosystem or a landscape can be compared. 
         Economic methods of evaluation-based on the capacity to clarify representations-can 
         be applied to several types of problems. They are presented as negotiation 
         methods for stakeholders. </p>
-      <p>One of the weaknesses of the economic approach is its failure to account 
+<p>One of the weaknesses of the economic approach is its failure to account 
         for the temporal dimension when it comes to finding a balance between 
         resources and society. </p>
-      <p><b>Ecological economics</b> has improved on this by adding the concept 
+<p><b>Ecological economics</b> has improved on this by adding the concept 
         of the co-adaptation between the natural and social worlds. In addition, 
         the dynamics differ from a series of balanced situations. Systemic models 
         that represent the dynamics using stocks-flux relationships are often 
         used (Clark, 1990). </p>
-      <h2>Common pool resources</h2>
-      <p>An international association for the study of common property (IASCP) 
+<h2>Common pool resources</h2>
+<p>An international association for the study of common property (IASCP) 
         was set up in the late 1980s. However, its origins date back to the publication 
         in 1968 of G. Hardin's theory of the failure of the commons. In fact, 
         the author expressed the view that a common resource exploited by rational 
@@ -61,17 +134,17 @@
         or the establishment of a central authority responsible for managing the 
         access to resources, i.e. to control it by using economic or administrative 
         management tools. </p>
-      <p>The most outspoken critics of Hardin's article have demonstrated that 
+<p>The most outspoken critics of Hardin's article have demonstrated that 
         the failure is not due to the common nature of the resources but to the 
         fact that there is free access. There are numerous examples to show that 
         a community can manage a common resource sustainably. </p>
-      <p>Several authors, such as Ostrom (1990; 1999), Berkes et al (1989), and 
+<p>Several authors, such as Ostrom (1990; 1999), Berkes et al (1989), and 
         Stevenson (1991) disagree with Hardin's view that successful collective 
         action is impossible. They present the principles of an institutional 
         approach based on formal or informal regulatory mechanisms that govern 
         the viability of ecosystems. This governance makes reference to stakeholder 
         representations and is based on the principle of negotiation. </p>
-      <p>Local approaches tend to be ineffective because of interference from 
+<p>Local approaches tend to be ineffective because of interference from 
         external actors or constraints beyond the locality (at different scales). 
         Research is now focusing on the concept of co-management (McCay and Jones, 
         1997). If co-management can be applied when different stakeholders use 
@@ -79,33 +152,32 @@
         of an association of catchment areas), then the issue now is to extend 
         it to resources with multiple uses. This requires other forms of arbitration 
         and collective decisions. </p>
-      <h2>References</h2>
-      <p>Arrow K.J. et Fisher A. 1974. Environmental Preservation, Uncertainty, 
+<h2>References</h2>
+<p>Arrow K.J. et Fisher A. 1974. Environmental Preservation, Uncertainty, 
       and Irresversibility. Quaterly Journal of Economics, 88: 312-319.</p>
-    <p>Berkes F., Feeny D., McCay B.J. et Acheson J.M. 1989. The benefits of 
+<p>Berkes F., Feeny D., McCay B.J. et Acheson J.M. 1989. The benefits of 
       the commons. Nature, 340: 91-93</p>
-    <p>Bromley D.W. 1991. Environment and Economy, Property Rights and Public 
+<p>Bromley D.W. 1991. Environment and Economy, Property Rights and Public 
       Policy. Blackwell, Cambridge.</p>
-      <p>Clark C.W. 1990. Mathematical Bioeconomics; The Optimal Management of Renewable 
-        Resources. John Wiley & Sons Inc., New York..</p>
-      <p>Dales J.H. 1968. Pollution, Property and Prices, An Essay in Policy Making 
+<p>Clark C.W. 1990. Mathematical Bioeconomics; The Optimal Management of Renewable 
+        Resources. John Wiley &amp; Sons Inc., New York..</p>
+<p>Dales J.H. 1968. Pollution, Property and Prices, An Essay in Policy Making 
         and Economics. University of Toronto Press, Toronto.</p>
-      <p>Hardin G. 1968. The tragedy of the commons. Science 162: 1243-1248.</p>
-    <p>McCay B.J. et Jones B. 1997. Proceedings of the Workshop on Future Directions 
+<p>Hardin G. 1968. The tragedy of the commons. Science 162: 1243-1248.</p>
+<p>McCay B.J. et Jones B. 1997. Proceedings of the Workshop on Future Directions 
       for Common Property Theory and Research. Ecopolicy Center for Agricultural, 
       Environmental and Resource Issues, New Jersey.</p>
-      <p>Ostrom E. 1990. Governing the Commons. Cambridge University Press, Cambridge.</p>
-      <p>Ostrom, E. 1999. Coping with tragedies of the commons. American Review 
+<p>Ostrom E. 1990. Governing the Commons. Cambridge University Press, Cambridge.</p>
+<p>Ostrom, E. 1999. Coping with tragedies of the commons. American Review 
         of Political Science, 2: 493-535. </p>
-    <p>Stevenson G.G. 1991. Common Property Economics. A General Theory and 
+<p>Stevenson G.G. 1991. Common Property Economics. A General Theory and 
       Land Use Applications. Cambridge University Press, Cambridge </p>
-    
-    <!--#include virtual="/include/copyright_en.inc" -->
-	</td>
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-    <div align="right" ></div>
-    </td>
-  </tr>
+<!--#include virtual="/include/copyright_en.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

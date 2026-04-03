@@ -1,80 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-<title>Le jeu de r&ocirc;les SylvoPast</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>Le jeu de rôles SylvoPast</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp; 
-      <h1>SylvoPast, un jeu de r&ocirc;les sur le sylvopastoralisme <br>
-        et la la pr&eacute;vention des incendies en r&eacute;gion m&eacute;diterran&eacute;enne</h1>
-      <h1><font size="3">Michel Etienne (Inra)</font></h1>
-      <h2>Motivation de la cr&eacute;ation </h2>
-      <p><img src="../../images/applica/sylvoPast.jpg" width="276" height="207" align="right">Le 
-        jeu a &eacute;t&eacute; cr&eacute;&eacute; dans un but p&eacute;dagogique afin de rendre plus interactives 
-        des formations sur le sylvopastoralisme pr&eacute;vues pour des agents de lONF. 
-        Il sagissait de leur faire comprendre la diversit&eacute; des points de vue 
-        des usagers sur la foret et de les aider dans la n&eacute;gociation avec ces 
-        usagers lors de la mise en place dam&eacute;nagements sylvopastoraux dans le 
-        cadre de la pr&eacute;vention des incendies en foret m&eacute;diterran&eacute;enne. </p>
-      <h2>Description et sp&eacute;cificit&eacute; </h2>
-      <p>La foret est repr&eacute;sent&eacute;e par une grille spatiale de 100 parcelles d&eacute;crivant 
-        la structure de la v&eacute;g&eacute;tation selon 3 strates (arbre, arbuste, herbe). 
-        Le ou les participants jouant le rÃ´le de l&eacute;leveur d&eacute;finissent le circuit 
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  
+      <h1>SylvoPast, un jeu de rôles sur le sylvopastoralisme <br/>
+        et la la prévention des incendies en région méditerranéenne</h1>
+<h1><font size="3">Michel Etienne (Inra)</font></h1>
+<h2>Motivation de la création </h2>
+<p><img align="right" height="207" src="../../images/applica/sylvoPast.jpg" width="276"/>Le 
+        jeu a été créé dans un but pédagogique afin de rendre plus interactives 
+        des formations sur le sylvopastoralisme prévues pour des agents de lONF. 
+        Il sagissait de leur faire comprendre la diversité des points de vue 
+        des usagers sur la foret et de les aider dans la négociation avec ces 
+        usagers lors de la mise en place daménagements sylvopastoraux dans le 
+        cadre de la prévention des incendies en foret méditerranéenne. </p>
+<h2>Description et spécificité </h2>
+<p>La foret est représentée par une grille spatiale de 100 parcelles décrivant 
+        la structure de la végétation selon 3 strates (arbre, arbuste, herbe). 
+        Le ou les participants jouant le rÃ´le de léleveur définissent le circuit 
         et le calendrier de pÃ¢turage de leur troupeau afin de satisfaire au mieux 
         ses besoins. Ils peuvent en augmenter leffectif et sont redevables dun 
         droit de pÃ¢turage. Le ou les participants jouant le rÃ´le du forestier 
-        d&eacute;finissent les objectifs prioritaires affect&eacute;s au massif forestier (r&eacute;duction 
-        du risque dincendie, diversit&eacute; du paysage, surface en foret productive). 
+        définissent les objectifs prioritaires affectés au massif forestier (réduction 
+        du risque dincendie, diversité du paysage, surface en foret productive). 
         Le ou les participants jouant le rÃ´le des chasseurs (de perdrix et/ou 
-        de sangliers) choisissent lintensit&eacute; de pr&eacute;levement et les lieux de chasse. 
-        Ensuite, les joueurs doivent d&eacute;cider ensemble de comment am&eacute;nager la foret 
-        afin quelle remplisse au mieux les objectifs fix&eacute;s en intervenant sur 
-        les parcelles les plus strat&eacute;giques. A la fin de chaque tour de jeu, la 
-        n&eacute;gociation porte sur lintervention a r&eacute;aliser (semer, d&eacute;broussailler, 
+        de sangliers) choisissent lintensité de prélevement et les lieux de chasse. 
+        Ensuite, les joueurs doivent décider ensemble de comment aménager la foret 
+        afin quelle remplisse au mieux les objectifs fixés en intervenant sur 
+        les parcelles les plus stratégiques. A la fin de chaque tour de jeu, la 
+        négociation porte sur lintervention a réaliser (semer, débroussailler, 
         reboiser, exploiter), la localisation de la parcelle et le financement 
-        des travaux. Au bout dun certain nombre de tours, un incendie est allum&eacute; 
-        au hasard dans une parcelle embroussaill&eacute;e et ses cons&eacute;quences sont simul&eacute;es. 
+        des travaux. Au bout dun certain nombre de tours, un incendie est allumé 
+        au hasard dans une parcelle embroussaillée et ses conséquences sont simulées. 
         Le jeu combine a la fois des pas de temps saisonniers (chasse, pÃ¢turage) 
-        et un pas de temps annuel (am&eacute;nagement). Ce dernier correspond obligatoirement 
-        a une phase collective dont la dur&eacute;e est impos&eacute;e. Le jeu est bas&eacute; sur 
+        et un pas de temps annuel (aménagement). Ce dernier correspond obligatoirement 
+        a une phase collective dont la durée est imposée. Le jeu est basé sur 
         un modele informatique qui simule les dynamiques dembroussaillement et 
-        de propagation du feu et met laccent sur la possibilit&eacute; de disposer dun 
-        &eacute;ventail de "points de vue" sur les ressources. Un effort particulier 
-        a &eacute;t&eacute; fourni afin de disposer de fonctionnalit&eacute;s permettant un d&eacute;briefing 
+        de propagation du feu et met laccent sur la possibilité de disposer dun 
+        éventail de "points de vue" sur les ressources. Un effort particulier 
+        a été fourni afin de disposer de fonctionnalités permettant un débriefing 
         a chaud particulierement riche (dynamique des indicateurs quantitatifs, 
-        enregistrement automatique des actes techniques, simulation en acc&eacute;l&eacute;r&eacute; 
-        des parties jou&eacute;es). </p>
-      <h2>Mise en oeuvre </h2>
-      <p>Le jeu a &eacute;t&eacute; utilis&eacute; depuis janvier 2001 avec de vrais acteurs dans la 
-        version &eacute;leveur-forestier au cours de 32 parties, compl&eacute;t&eacute;es par 75 parties 
-        r&eacute;alis&eacute;es avec des &eacute;tudiants agronome, forestiers, zootechniciens, &eacute;cologues 
-        ou g&eacute;ographes. Depuis septembre 2003, la version &eacute;leveur-forestier-chasseurs 
-        est op&eacute;rationnelle et a &eacute;t&eacute; utilis&eacute;e 30 fois avec des &eacute;tudiants. </p>
-      <h2>R&eacute;f&eacute;rences</h2>
-      <ul>
-        <li>Etienne M. 2003. SYLVOPAST a multiple target role-playing game to 
+        enregistrement automatique des actes techniques, simulation en accéléré 
+        des parties jouées). </p>
+<h2>Mise en oeuvre </h2>
+<p>Le jeu a été utilisé depuis janvier 2001 avec de vrais acteurs dans la 
+        version éleveur-forestier au cours de 32 parties, complétées par 75 parties 
+        réalisées avec des étudiants agronome, forestiers, zootechniciens, écologues 
+        ou géographes. Depuis septembre 2003, la version éleveur-forestier-chasseurs 
+        est opérationnelle et a été utilisée 30 fois avec des étudiants. </p>
+<h2>Références</h2>
+<ul>
+<li>Etienne M. 2003. SYLVOPAST a multiple target role-playing game to 
           assess negotiation processes in sylvopastoral management planning. <a href="http://jasss.soc.surrey.ac.uk/6/2/5.html">Journal 
-          of Artificial Societies & Social Simulations 6(2) </a></li>
-        <li>Etienne M. 2005. Mod&eacute;lisation daccompagnement et am&eacute;nagement forestier. 
+          of Artificial Societies &amp; Social Simulations 6(2) </a></li>
+<li>Etienne M. 2005. Modélisation daccompagnement et aménagement forestier. 
           In : Approches participatives de la gestion forestiere, Chauvin C. (ed), 
           Cemagref, Paris </li>
-      </ul>
-      <p>Pour en savoir plus, <a href="mailto:etienne@avignon.inra.fr">contactez 
+</ul>
+<p>Pour en savoir plus, <a href="mailto:etienne@avignon.inra.fr">contactez 
         lauteur</a>.</p>
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

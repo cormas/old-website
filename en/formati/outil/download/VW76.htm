@@ -1,50 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-
-
-
 <head>
-
-
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
-
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>VW7.6nc</title>
-
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
-
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
-<style type="text/css">
-
-<!--
-
-.style1 {
-	color: #FF0000;
-	font-weight: normal;
-}
-.style11 {
-	color: #FF0000;
-
-	font-weight: bold;
-}
-
--->
-
-</style>
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
 <script type="text/javascript">
 function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
@@ -52,40 +14,95 @@ function MM_preloadImages() { //v3.0
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
 </script>
-</head>
-
-
-
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
-
-
-
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-
-
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
-
-
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<h1><br/>
 
-
-
-    <!--#include virtual="sommair.inc" -->
-
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-
-      <h1><br>
-
-        VW 7.6nc<br>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbT98Is3PKjBckoofK8ccda3g9xgidounRRibcfhkfwIMtsH4l" data-height="88" data-width="168" id="rg_hi" alt="" height="88" width="168"><br>
-      </h1>
-      <div>
-        <div>
-          <h2>Download VisualWorks</h2>
-        </div>
-        <p>Cormas has been developped with the non-commercial version of <a href="http://www.cincomsmalltalk.com/main/developer-community/trying-cincom-smalltalk/try-cincom-smalltalk/" target="_new">VisualWorks</a>&reg; 
+        VW 7.6nc<br/>
+<img alt="" data-height="88" data-width="168" height="88" id="rg_hi" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbT98Is3PKjBckoofK8ccda3g9xgidounRRibcfhkfwIMtsH4l" width="168"/><br/>
+</h1>
+<div>
+<div>
+<h2>Download VisualWorks</h2>
+</div>
+<p>Cormas has been developped with the non-commercial version of <a href="http://www.cincomsmalltalk.com/main/developer-community/trying-cincom-smalltalk/try-cincom-smalltalk/" target="_new">VisualWorks</a>® 
 
           from <em>Cincom Systems, </em>which is therefore needed to be installed 
 
@@ -93,64 +110,38 @@ function MM_preloadImages() { //v3.0
 <p>If you commit not using Cormas for commercial 
 
         purposes, you can download <b>VW7.6nc</b> directly from Cormas website. </p>
-        <table border="0">
-          <tr>
-            <td width="179" height="68">Version for Windows:</td>
-            <td width="220"><b><a href="../../../logiciel/vw7.6/vw7.6nc_Windows_com.zip" target="_blank">vw7.6nc</a></b><a href="../../../logiciel/vw7.6/vw7.6nc_Windows_com.zip"> (version Windows)</a></td>
-            <td width="231"><img src="../../../images/outil/logo-windows.gif" alt="windows" width="160" height="40"></td>
-          </tr>
-          <tr>
-            <td height="67">Version for Mac OSX:</td>
-            <td><b><a href="../../../logiciel/vw7.6/vw7.6nc_MacLinux.zip" target="_blank">vw7.6nc</a></b><a href="../../../logiciel/vw7.6/vw7.6nc_MacLinux.zip"> (version  Mac OS X) </a></td>
-            <td><i><img src="../../../images/outil/mac_logo2.gif" alt="" width="69" height="31"></i></td>
-          </tr>
-          <tr>
-            <td>Version for Linux:</td>
-            <td><b><a href="../../../logiciel/vw7.6/vw7.6nc_MacLinux.zip" target="_blank">vw7.6nc</a></b><a href="../../../logiciel/vw7.6/vw7.6nc_MacLinux.zip"> (version Linux)</a></td>
-            <td><img data-height="232" data-width="200" src="../../../images/outil/linux-logo" id="rg_hi2" alt="" height="75" width="69"></td>
-          </tr>
-        </table>
-        <p>You can unzip the file
+<table border="0">
+<tr>
+<td height="68" width="179">Version for Windows:</td>
+<td width="220"><b><a href="../../../logiciel/vw7.6/vw7.6nc_Windows_com.zip" target="_blank">vw7.6nc</a></b><a href="../../../logiciel/vw7.6/vw7.6nc_Windows_com.zip"> (version Windows)</a></td>
+<td width="231"><img alt="windows" height="40" src="../../../images/outil/logo-windows.gif" width="160"/></td>
+</tr>
+<tr>
+<td height="67">Version for Mac OSX:</td>
+<td><b><a href="../../../logiciel/vw7.6/vw7.6nc_MacLinux.zip" target="_blank">vw7.6nc</a></b><a href="../../../logiciel/vw7.6/vw7.6nc_MacLinux.zip"> (version  Mac OS X) </a></td>
+<td><i><img alt="" height="31" src="../../../images/outil/mac_logo2.gif" width="69"/></i></td>
+</tr>
+<tr>
+<td>Version for Linux:</td>
+<td><b><a href="../../../logiciel/vw7.6/vw7.6nc_MacLinux.zip" target="_blank">vw7.6nc</a></b><a href="../../../logiciel/vw7.6/vw7.6nc_MacLinux.zip"> (version Linux)</a></td>
+<td><img alt="" data-height="232" data-width="200" height="75" id="rg_hi2" src="../../../images/outil/linux-logo" width="69"/></td>
+</tr>
+</table>
+<p>You can unzip the file
           
           directlyon the root of your hard drive. </p>
-        <p>Alternatively, download the <a href="../../../logiciel/vw7.6/CST08NC_mar08.1.iso"> iso CD of  7.6nc</a>.</p>
-<p>&nbsp;</p>
+<p>Alternatively, download the <a href="../../../logiciel/vw7.6/CST08NC_mar08.1.iso"> iso CD of  7.6nc</a>.</p>
+<p> </p>
 <p>To snap the grid or make movies (only available on Windows), it is necessary to install  <a href="http://www.apple.com/fr/quicktime/download/" target="_blank">QuickTime. </a>Then you need to download the DLL file (<a href="../../logiciel/cormas2004/JunWinQT.dll">JunWinQT.dll</a>) on Disk:\VW7.6\bin\win</p>
-      </div>
-      <h3>Instal Cormas </h3>
-      <div> Go back to the <a href="install.htm">Cormas installation page</a></div>
-
-      <!--#include virtual="/include/copyright_fr.inc" -->
-
-    </td>
-
-
-
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-
-
-    <div align="right" class="texte"></div>
-
-
-
-    </td>
-
-
-
-  </tr>
-
-
-
+</div>
+<h3>Instal Cormas </h3>
+<div> Go back to the <a href="install.htm">Cormas installation page</a></div>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-
-
-
-</body>
-
-
-
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>
-
-
-

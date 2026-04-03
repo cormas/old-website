@@ -1,91 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-    <title>contamiCuenca</title>
-    <!--#include virtual="/include/script.inc" -->
-    <link rel="stylesheet" href="/css/cormas.css" --="">
-  </head>
-  <body topmargin="0" leftmargin="0" border="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)"
-    style="background-color: white;"
-    marginheight="0"
-    marginwidth="0">
-    <!--#include virtual="haut.inc" -->
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tbody>
-        <tr>
-          <!--#include virtual="sommair.inc" -->
-          <td bgcolor="#FFFFFF" valign="top" width="*">
-            <p>&nbsp;</p>
-            <h1>ContaMiCuenca </h1>
-            <h2>Involve water stakeholders in educational awareness and
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>contamiCuenca</title>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" style="background-color: white;" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<!--#include virtual="haut.inc" -->
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<h1>ContaMiCuenca </h1>
+<h2>Involve water stakeholders in educational awareness and
               decision-making in Guanacaste, Costa Rica</h2>
-            <h3>Quantity and quality of water in the Potrero-Camital basin
-              (Guanacaste, Costa Rica)&nbsp;</h3>
-            <p><font size="3">Gr&eacute;goire Leclerc (<a href="mailto:gregoire.leclerc@cirad.fr">gregoire.leclerc@cirad.fr</a>),
+<h3>Quantity and quality of water in the Potrero-Camital basin
+              (Guanacaste, Costa Rica) </h3>
+<p><font size="3">Grégoire Leclerc (<a href="mailto:gregoire.leclerc@cirad.fr">gregoire.leclerc@cirad.fr</a>),
                 Pierre Bommel, Pavel Bautista, Camille Belmin, Melissa Gillet,
                 Ricardo Morataya, Marie-Paule Bonnet, David Crookall.</font></p>
-            <table style="width: 100%;" border="0">
-              <tbody>
-                <tr>
-                  <td style="width: 435.933px;"><img style="width: 399px; height: 224px;"
-                      alt="Paisaje "
-                      src="../../images/applica/contaMiCuenca/paisaje.png"><br>
-                    &nbsp;</td>
-                  <td style="width: 45.033px;">&nbsp;&nbsp; </td>
-                  <td style="vertical-align: top; background-color: white; width: 408.533px;">
-                    <b>Download </b>the juego full <a title="exe" href="../../logiciel/ContamiCuencaEXE.zip"><span
-                        style="color: black;"></span><b>Executable
-                        game <img alt="zip " src="../../images/zip.gif"></b></a>
-                    <br>
-                    (Version for Windows, 22 Mo)<br>
-                    <img src="../../images/applica/contaMiCuenca/gridSmall.png"><br>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <br>
-            <address><font size="3">&nbsp;Â© Fotos &amp; video: </font>RamÃ³n
+<table border="0" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 435.933px;"><img alt="Paisaje " src="../../images/applica/contaMiCuenca/paisaje.png" style="width: 399px; height: 224px;"/><br/>
+                     </td>
+<td style="width: 45.033px;">   </td>
+<td style="vertical-align: top; background-color: white; width: 408.533px;">
+<b>Download </b>the juego full <a href="../../logiciel/ContamiCuencaEXE.zip" title="exe"><span style="color: black;"></span><b>Executable
+                        game <img alt="zip " src="../../images/zip.gif"/></b></a>
+<br/>
+                    (Version for Windows, 22 Mo)<br/>
+<img src="../../images/applica/contaMiCuenca/gridSmall.png"/><br/>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<address><font size="3"> Â© Fotos &amp; video: </font>RamÃ³n
               Mogarriba</address>
-            <iframe src="https://www.youtube.com/embed/H978WOlGTK0?ecver=1" allow="autoplay; encrypted-media"
-              allowfullscreen=""
-              frameborder="0"
-              height="360"
-              width="640"></iframe>
-            <p>This hybrid model was developed within the framework of the <span
-                style="color: #0000ee;"></span>
-              <a href="http://futuragua.ca/ubc/inicio/">FuturAgua</a> project:
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/H978WOlGTK0?ecver=1" width="640"></iframe>
+<p>This hybrid model was developed within the framework of the <span style="color: #0000ee;"></span>
+<a href="http://futuragua.ca/ubc/inicio/">FuturAgua</a> project:
               an action-research project funded by the Belmont Forum and ANR.</p>
-            <h2>Motivation</h2>
-            <table style="width: 100%;" border="0">
-              <tbody>
-                <tr>
-                  <td style="width: 140.35px;"><img style="width: 58px; height: 153px;"
-                      alt="logo"
-                      src="../../images/applica/contaMiCuenca/logo.png"><br>
-                  </td>
-                  <td style="width: 874.65px;">The <span style="color: #0000ee;"></span>
-                    <a href="http://futuragua.ca/ubc/inicio/">FuturAgua</a>
+<h2>Motivation</h2>
+<table border="0" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 140.35px;"><img alt="logo" src="../../images/applica/contaMiCuenca/logo.png" style="width: 58px; height: 153px;"/><br/>
+</td>
+<td style="width: 874.65px;">The <span style="color: #0000ee;"></span>
+<a href="http://futuragua.ca/ubc/inicio/">FuturAgua</a>
                     project was implemented in Guanacaste, Costa Rica, between
                     September 2013 and November 2017, with the aim of helping to
                     make better water use decisions so that communities are
                     prepared for periods of water scarcity in this drought-prone
-                    region.<br>
+                    region.<br/>
                     FuturAguas focus was on generating information on the
                     current and future status of water in the region, and on
                     developing tools to support local governments and
                     communities in making decisions about water use and
                     management. In other words, it sought to build and generate
-                    useful information to improve water security in Guanacaste.<br>
-                    <br>
-                    The ContaMiCuenca model was developed for the <a target="_parent"
-                      href="http://www.senara.or.cr/acerca_del_senara/direcciones/direccion_de_investigacion_y_gestion_hidrica/mapas_de_vulnerabilidad/Vulnerabilidad%20Acuifero%20Potrero%20Caimital.pdf">Potrero-Caimital,
+                    useful information to improve water security in Guanacaste.<br/>
+<br/>
+                    The ContaMiCuenca model was developed for the <a href="http://www.senara.or.cr/acerca_del_senara/direcciones/direccion_de_investigacion_y_gestion_hidrica/mapas_de_vulnerabilidad/Vulnerabilidad%20Acuifero%20Potrero%20Caimital.pdf" target="_parent">Potrero-Caimital,
                       Nicoya - Guanacaste basin</a>.</td>
-                  <td>&nbsp;<img style="width: 284px; height: 329px;" alt="prensa"
-                      src="../../images/applica/contaMiCuenca/prensa.png"></td>
-                </tr>
-              </tbody>
-            </table>
+<td> <img alt="prensa" src="../../images/applica/contaMiCuenca/prensa.png" style="width: 284px; height: 329px;"/></td>
+</tr>
+</tbody>
+</table>
             In order to involve community stakeholders to improve drought
             resilience and reduce water disputes in the Potrero-Caimital Basin
             in Nicoya, as well as to raise public awareness of water management,
@@ -96,41 +155,36 @@
             meaning: "Tell me about my basin"; "Pollution of the basin"; and
             "Count on me in the basin [co-management]". Its name reinforces the
             use of the model as a frontier tool for communication and
-            understanding of the hydrological complexity of the basin.<br>
-            <br>
+            understanding of the hydrological complexity of the basin.<br/>
+<br/>
             Local stakeholders defined that ContaMiCuenca should address two
             main issues: (i) the risk of groundwater contamination with
             agrochemicals; and (ii) the reduction of water availability, for
             basic human needs and agricultural production.
-            <table style="width: 100%;" border="0">
-              <tbody>
-                <tr>
-                  <td style="width: 363.65px;"><img style="width: 356px; height: 200px;"
-                      alt="ardi"
-                      src="../../images/applica/contaMiCuenca/ardi.png"></td>
-                  <td style="width: 752.35px; vertical-align: bottom; background-color: white;"><img
-                      style="width: 276px; height: 201px;"
-                      alt="juego escuela"
-                      src="../../images/applica/contaMiCuenca/juegoEscuela.png"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <address>Photo: a collective design session of the model
+            <table border="0" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 363.65px;"><img alt="ardi" src="../../images/applica/contaMiCuenca/ardi.png" style="width: 356px; height: 200px;"/></td>
+<td style="width: 752.35px; vertical-align: bottom; background-color: white;"><img alt="juego escuela" src="../../images/applica/contaMiCuenca/juegoEscuela.png" style="width: 276px; height: 201px;"/></td>
+</tr>
+<tr>
+<td>
+<address>Photo: a collective design session of the model
                       (using the ARDI method)</address>
-                  </td>
-                  <td style="vertical-align: top; background-color: white;">
-                    <address>A role-play session with students from Curimes
+</td>
+<td style="vertical-align: top; background-color: white;">
+<address>A role-play session with students from Curimes
                       school.</address>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <h3>Description and characteristics of the model</h3>
-            <h5>Hydrographic network of the Potrero-Caimital basin<br>
-            </h5>
-            <p style="margin-top:.1pt;margin-right:0cm;margin-bottom:.1pt;margin-left:0cm">The
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Description and characteristics of the model</h3>
+<h5>Hydrographic network of the Potrero-Caimital basin<br/>
+</h5>
+<p style="margin-top:.1pt;margin-right:0cm;margin-bottom:.1pt;margin-left:0cm">The
               Potrero basin is divided into <b>plots</b> of 2.25 ha (150 x 150
-              m<sup>2</sup>) and also into areas of activity.&nbsp; Depending on
+              m<sup>2</sup>) and also into areas of activity.  Depending on
               the altitude of each plot, a <b>hydrographic network </b>receives
               rainwater and drains it to the outlet. But some of the water seeps
               into the soil (depending on the type of cover) and flows into the
@@ -138,110 +192,103 @@
               In addition, the model takes into account not only the quantities
               of water, but also the quality by considering the concentrations
               of chemical and organic <b>contaminants</b>.</p>
-            <p style="margin-top:.1pt;margin-right:0cm;margin-bottom:.1pt;margin-left:0cm"><br>
-              <img style="width: 532px; height: 408px;" alt="diagrama del acuifero"
-                src="../../images/applica/contaMiCuenca/blocDiag3-ES.png"><br>
-              <span style="mso-ansi-language:ES-TRAD" lang="ES-TRAD"></span></p>
-            <br>
-            <h5> The agents</h5>
-            <p>The model includes 6 agents divided into 4 types: 2 managers of
+<p style="margin-top:.1pt;margin-right:0cm;margin-bottom:.1pt;margin-left:0cm"><br/>
+<img alt="diagrama del acuifero" src="../../images/applica/contaMiCuenca/blocDiag3-ES.png" style="width: 532px; height: 408px;"/><br/>
+<span lang="ES-TRAD" style="mso-ansi-language:ES-TRAD"></span></p>
+<br/>
+<h5> The agents</h5>
+<p>The model includes 6 agents divided into 4 types: 2 managers of
               an agricultural industry; the village president; 2 livestock
               farmers; and the city inspector (as the city is not located in the
               watershed, it is not displayed in the simulation interface). Each
               agent is in charge of a specific area: an area of activity
-              composed of plots.<br>
-              <br>
-              <i>ContaMiCuenca</i> is a <b>hybrid model</b> in the sense that
+              composed of plots.<br/>
+<br/>
+<i>ContaMiCuenca</i> is a <b>hybrid model</b> in the sense that
               it allows users to interact with the simulation. Thus, at any
               time, a player can open his <b>decision interface</b>. You can
               define his strategy for the coming months. For example, a farmer
               may decide to open new pastures, sell or buy cows and drill new
               wells. Next, he must define where his decisions will be located in
               his area of activity.</p>
-            <img alt="espacio y interfaz de decisiones" src="../../images/applica/contaMiCuenca/gridYinterface.png"><br>
-            <h6>Structure of the model</h6>
+<img alt="espacio y interfaz de decisiones" src="../../images/applica/contaMiCuenca/gridYinterface.png"/><br/>
+<h6>Structure of the model</h6>
             The following UML class diagram presents the general structure of
-            the model:<br>
-            <a target="_parent" title="UML Class Diag" href="../../images/applica/contaMiCuenca/uml.png"><img
-                alt="uml"
-                src="../../images/applica/contaMiCuenca/uml%20small.png"></a><br>
-            <h1> </h1>
-            <p> </p>
-            <h5> Temporal dynamics</h5>
+            the model:<br/>
+<a href="../../images/applica/contaMiCuenca/uml.png" target="_parent" title="UML Class Diag"><img alt="uml" src="../../images/applica/contaMiCuenca/uml%20small.png"/></a><br/>
+<h1> </h1>
+<p> </p>
+<h5> Temporal dynamics</h5>
             The water dynamics are as follows: each month, the watershed
             receives a certain amount of rainwater (according to 10 years of
             rainfall data from the study area). Each plot increases its volume
             of surface water by this rainwater, then loses an amount of water by
             evapotranspiration and by direct consumption by the vegetation
             cover. Part of the remaining water is sent to the aquifer
-            (infiltration) and the other part to the river (runoff).<br>
+            (infiltration) and the other part to the river (runoff).<br/>
             Each month, the vegetation grows, depending on the amount of water
             available in the soil. Crops can receive fertilizers (farmers
             decision) that can increase yields to a greater or lesser extent.
             Every semester, the crops are harvested and sold. When consuming
             grass, cows also have a dynamic of reproduction, but also of
             decrease if there is a lack of water or if the pastures are
-            degraded.<br>
+            degraded.<br/>
             The farm sows rice at the beginning of the rainy season and melons
             at the beginning of the dry season. Each player can also open new
-            plots to plant grass or teak.<br>
-            <h3>Implementation</h3>
+            plots to plant grass or teak.<br/>
+<h3>Implementation</h3>
             The multi-agent model, developed on the CORMAS platform, can
             simulate the short and long term effects of water management, based
-            on a monthly time step. <br>
-            <p> </p>
-            <h2>Using the model</h2>
-            <p>At the beginning of a simulation, a map of the Potrero basin is
+            on a monthly time step. <br/>
+<p> </p>
+<h2>Using the model</h2>
+<p>At the beginning of a simulation, a map of the Potrero basin is
               automatically opened. Shows the spatial distribution of the
               vegetation as well as the location of each players activity
               areas. The hydrographic system is also visible. Depending on
               rainfall and aquifer level, river flows can fluctuate, which is
               perceived by the size of the rivers. </p>
-            <img alt="animated Gif" src="../../images/applica/contaMiCuenca/contamiCuencaC.gif"><br>
-            The user is asked to choose a name and an agent-avatar.<br>
+<img alt="animated Gif" src="../../images/applica/contaMiCuenca/contamiCuencaC.gif"/><br/>
+            The user is asked to choose a name and an agent-avatar.<br/>
             At any time, a player can know his status by opening his decision
             interface where indicator probes are displayed (money, water
-            consumed, yields, etc.). <br>
-            <h2> </h2>
-            <table style="width: 100%;" border="0">
-              <tbody>
-                <tr style="vertical-align: top; background-color: white;">
-                  <td><img style="width: 112px; height: 333px;" alt="clickar para ... "
-                      src="../../images/applica/contaMiCuenca/clickar.png"><br>
-                  </td>
-                  <td><img style="width: 273px; height: 235px;" alt="interfaz empresa "
-                      src="../../images/applica/contaMiCuenca/interfaceEmpresa.png"><br>
-                  </td>
-                  <td><img style="width: 444px; height: 235px;" alt="interfaz inspector "
-                      src="../../images/applica/contaMiCuenca/interfaceInspector.png"><br>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <br>
+            consumed, yields, etc.). <br/>
+<h2> </h2>
+<table border="0" style="width: 100%;">
+<tbody>
+<tr style="vertical-align: top; background-color: white;">
+<td><img alt="clickar para ... " src="../../images/applica/contaMiCuenca/clickar.png" style="width: 112px; height: 333px;"/><br/>
+</td>
+<td><img alt="interfaz empresa " src="../../images/applica/contaMiCuenca/interfaceEmpresa.png" style="width: 273px; height: 235px;"/><br/>
+</td>
+<td><img alt="interfaz inspector " src="../../images/applica/contaMiCuenca/interfaceInspector.png" style="width: 444px; height: 235px;"/><br/>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
             At any time, players can know the expected costs, needs and benefits
-            of each activity:<br>
-            <img style="width: 465px; height: 309px;" alt="interface parametros "
-              src="../../images/applica/contaMiCuenca/parametros.png">
-            <br>
-            <br>
-            <p>For more information, see <a href="http://futuragua.ca/ubc/inicio/">http://futuragua.ca</a>,
-              or watch a video on YouTube: <a href="https://www.youtube.com/watch?v=H978WOlGTK0&amp;feature=youtu.be">https://www.youtube.com/watch?v=H978WOlGTK0&amp;feature=youtu.be</a><br>
-              <br>
+            of each activity:<br/>
+<img alt="interface parametros " src="../../images/applica/contaMiCuenca/parametros.png" style="width: 465px; height: 309px;"/>
+<br/>
+<br/>
+<p>For more information, see <a href="http://futuragua.ca/ubc/inicio/">http://futuragua.ca</a>,
+              or watch a video on YouTube: <a href="https://www.youtube.com/watch?v=H978WOlGTK0&amp;feature=youtu.be">https://www.youtube.com/watch?v=H978WOlGTK0&amp;feature=youtu.be</a><br/>
+<br/>
               You can contact the<a href="mailto:gregoire.leclerc@cirad.fr">
                 author</a>. </p>
-            <p>Download the Cormas version of the <a title="model parcel" href="../../logiciel/ContamiCuenca.zip">model</a>,
-              or the complet <a title="exe" href="../../logiciel/ContamiCuencaEXE.zip">Executable</a>
+<p>Download the Cormas version of the <a href="../../logiciel/ContamiCuenca.zip" title="model parcel">model</a>,
+              or the complet <a href="../../logiciel/ContamiCuencaEXE.zip" title="exe">Executable</a>
               (Windows, 22 Mo).</p>
-            <p><br>
-            </p>
-            <img style="width: 618px; height: 250px;" alt="fin " src="../../images/applica/contaMiCuenca/authors.png">
-            <!--#include virtual="/include/copyright_en.inc" --> </td>
-          <td bgcolor="#FFFFFF" valign="top" width="15"> <br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div style="left: 899px; top: 129.933px; height: 210px;"></div>
-  </body>
+<p><br/>
+</p>
+<img alt="fin " src="../../images/applica/contaMiCuenca/authors.png" style="width: 618px; height: 250px;"/>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15"> <br/>
+</td>
+</tr>
+</tbody>
+</table>
+<div style="left: 899px; top: 129.933px; height: 210px;"></div>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

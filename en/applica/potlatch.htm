@@ -1,51 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Echanges economiques et organisations emergentes</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-  <td width="*" valign="top" bgcolor="#FFFFFF"> 
- <p>&nbsp;</p><p>&nbsp;</p><p>THIS PAGE WILL BE SOON AVAILABLE IN ENGLISH</p> 
-   <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p><p> </p><p>THIS PAGE WILL BE SOON AVAILABLE IN ENGLISH</p>
+<p> 
  
       <h1>Potlatch</h1>
-      <h2>Echanges &eacute;conomiques et organisations &eacute;mergentes 
+<h2>Echanges économiques et organisations émergentes 
       </h2>
-      <p>Juliette Rouchier, Manchester Metropolitan University.</p>
-  
-      <img src="/images/applica/jumel.jpg" width="245" height="169" align="right" vspace="10" hspace="10"> 
-      <p>Juliette Rouchier travaille maintenant au Centre for Policy Modelling, 
-        &agrave; la Manchester Metropolitan University. Le travail pr&eacute;sent&eacute; 
+<p>Juliette Rouchier, Manchester Metropolitan University.</p>
+<img align="right" height="169" hspace="10" src="/images/applica/jumel.jpg" vspace="10" width="245"/>
+<p>Juliette Rouchier travaille maintenant au Centre for Policy Modelling, 
+        à la Manchester Metropolitan University. Le travail présenté 
         ici correspond au travail de DEA.</p>
-   <h2>Mod&eacute;liser les &eacute;changes de biens</h2>
-      <p>Les trois mod&egrave;les d&eacute;velopp&eacute;s par Juliette Rouchier 
-        sont ax&eacute;s principalement sur lanalyse de structures &eacute;mergentes 
-        au sein du groupe, qui apparaissent grÃ¢ce &agrave; la r&eacute;p&eacute;tition 
-        dun grand nombre d&eacute;changes de biens.</p>
-      <p>Le mod&egrave;le JuMel a &eacute;t&eacute; construit en sinspirant des 
-        r&eacute;sultats du travail de terrain de M&eacute;lanie Requier-Desjardins. 
-        Il est d&eacute;crit dans une autre <a href="jumel.htm">page</a>. Les 
-        deux autres sont des travaux inspir&eacute;s de donn&eacute;es purement 
-        th&eacute;oriques. Un des mod&egrave;les a &eacute;t&eacute; construit 
-        avec Martin OConnor de lUniversit&eacute; de Saint Quentin en Yvelines. 
-        Les interactions repr&eacute;sent&eacute;es prennent une forme inspir&eacute;e 
-        des &eacute;changes de dons et contre-dons, cest lexemple du <b>potlatch</b>.</p>
-      <p>Bient&ocirc;t vous en saurez plus.</p>
-      <p> Vous pouvez <a href="mailto:j.rouchier@mmu.ac.uk">contacter lauteur</a>.</p>
-   <!--#include virtual="/include/copyright_en.inc" -->
-	</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<h2>Modéliser les échanges de biens</h2>
+<p>Les trois modèles développés par Juliette Rouchier 
+        sont axés principalement sur lanalyse de structures émergentes 
+        au sein du groupe, qui apparaissent grÃ¢ce à la répétition 
+        dun grand nombre déchanges de biens.</p>
+<p>Le modèle JuMel a été construit en sinspirant des 
+        résultats du travail de terrain de Mélanie Requier-Desjardins. 
+        Il est décrit dans une autre <a href="jumel.htm">page</a>. Les 
+        deux autres sont des travaux inspirés de données purement 
+        théoriques. Un des modèles a été construit 
+        avec Martin OConnor de lUniversité de Saint Quentin en Yvelines. 
+        Les interactions représentées prennent une forme inspirée 
+        des échanges de dons et contre-dons, cest lexemple du <b>potlatch</b>.</p>
+<p>Bientôt vous en saurez plus.</p>
+<p> Vous pouvez <a href="mailto:j.rouchier@mmu.ac.uk">contacter lauteur</a>.</p>
+<!--#include virtual="/include/copyright_en.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

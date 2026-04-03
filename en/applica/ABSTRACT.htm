@@ -1,79 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>ABSTRACT</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp; 
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  
       <h1>ABSTRACT (Agent Based Simulation Tool for Resource Allocation in a CatchmenT)</h1>
-      <h1><font size="3">P. van Oel</font></h1>
-      <p><img src="../../images/applica/ABSTRACT-map.jpg" width="593" height="343" align="right">With 
+<h1><font size="3">P. van Oel</font></h1>
+<p><img align="right" height="343" src="../../images/applica/ABSTRACT-map.jpg" width="593"/>With 
         the ABSTRACT model the effect of rainfall patterns and water management 
         interventions on spatiotemporal distribution of water resources availability 
         and use in a catchment can be evaluated. The model is designed for basins 
         with dams for water storage that serve a large irrigation sector. The 
         model may be used to explore possibilities of multi-annual water allocation. 
       </p>
-      <p>Freshwater in a river basin is a common-pool resource (CPR) which is, 
+<p>Freshwater in a river basin is a common-pool resource (CPR) which is, 
         because of the nature of a river basin, asymmetric (Van Oel et al., 2009). 
         For a river basin which contains many water reservoirs one cannot speak 
         of a single resource stock, as is the case for an irrigation scheme with 
         one central reservoir. A river basin with multiple reservoirs is therefore 
         fundamentally different from a canal-irrigation system and should rather 
         be regarded as a system of nested or connected CPRs. Conflicts of interest 
-        may exist at and between different levels on the river basin scale: <br>
-        &quot; the local level (e.g. conflicts between individual water users 
-        around a local resource)<br>
-        &quot; the sub basin level (e.g. conflicts between groups of users using 
-        different local water sources)<br>
-        &quot; the basin level (e.g. conflicts between equitability and efficiency)</p>
-      <p>A first application of the model has been implemented using survey data 
+        may exist at and between different levels on the river basin scale: <br/>
+        " the local level (e.g. conflicts between individual water users 
+        around a local resource)<br/>
+        " the sub basin level (e.g. conflicts between groups of users using 
+        different local water sources)<br/>
+        " the basin level (e.g. conflicts between equitability and efficiency)</p>
+<p>A first application of the model has been implemented using survey data 
         on farmers preferred land use in case of different water availability 
         situations at the sub basin level of the Jaguaribe basin in Brazil (<a href="../../images/applica/ABSTRACT-1.jpg" target="_blank">figure 
         1</a>; <a href="../../images/applica/ABSTRACT-2.jpg" target="_blank">figure 
         2</a>; Van Oel, 2009; Van Oel et al., 2010). Currently we are working 
         on modifying the model for studying basin closure and the effects of decentralization 
         of water allocation management at the basin level.</p>
-      <p>Model output includes water availability and water use at levels ranging 
+<p>Model output includes water availability and water use at levels ranging 
         from local to the (sub) basin level. Model validation was partly done 
         using land use classifications from remotely-sensed data (<a href="../../images/applica/ABSTRACT-3.jpg" target="_blank">figure 
-        3</a>) and is described in detail in Van Oel et al. (2010).<br>
-      </p>
-      <h2>Software</h2>
-      <p>You can <a href="/logiciels/ABSTRACT.zip" target="_blank">download</a> 
+        3</a>) and is described in detail in Van Oel et al. (2010).<br/>
+</p>
+<h2>Software</h2>
+<p>You can <a href="/logiciels/ABSTRACT.zip" target="_blank">download</a> 
         the Cormas model source code. </p>
-      <h2>References </h2>
-      <p> Van Oel, P.R. 2009. Water-Scarcity Patterns: spatiotemporal interdependencies 
+<h2>References </h2>
+<p> Van Oel, P.R. 2009. Water-Scarcity Patterns: spatiotemporal interdependencies 
         between water use and water availability in a semi-arid river basin. PhD 
-        Thesis, University of Twente, Enschede, The Netherlands.<br>
-        <br>
+        Thesis, University of Twente, Enschede, The Netherlands.<br/>
+<br/>
         Van Oel, P.R., Krol, M.S. and Hoekstra, A.Y. 2009. A river basin as a 
         common-pool resource: a case study for the Jaguaribe basin in the semi-arid 
         Northeast of Brazil. International Journal of River Basin Management, 
-        7(4): 345-353.<br>
-        <br>
+        7(4): 345-353.<br/>
+<br/>
         Van Oel, P.R., Krol, M.S., Hoekstra, A.Y. and Taddei, R.R. 2010. Feedback 
         mechanisms between water availability and water use in a semi-arid river 
         basin: A spatially explicit multi-agent simulation approach. Environmental 
-        Modelling &amp; Software, 25(4): 433.<br>
-      </p>
-      <p>For more information, <a href="mailto:P.R.vanOel@ctw.utwente.nl">contact 
+        Modelling &amp; Software, 25(4): 433.<br/>
+</p>
+<p>For more information, <a href="mailto:P.R.vanOel@ctw.utwente.nl">contact 
         the corresponding author</a></p>
-      <p>&nbsp;</p>
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<p> </p>
+<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

@@ -1,456 +1,499 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>Cormas Online Learning Center : Fire Agent Model, Module 2</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-<style type="text/css">
-<!--
-.style1 {color: #FFFFFF}
--->
-</style>
-</head>
-
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="../../haut.inc" -->
-
-<table cellspacing="0" cellpadding="0" border="0" width="98%">
-
+<table border="0" cellpadding="0" cellspacing="0" width="98%">
 <tr>
-
-  <!--#include virtual="../lmenu.inc" --> 
-
-  <td width="0" height="600" valign="top" bgcolor="#FFFFFF"> 
-
-   <p>&nbsp;</p>
-
-    
-
-      <h1>Fire Agent Model<img src="../../images/fireman.gif" width="78" height="50">  <br>
-      </h1>
-
-      <p><img src="/en/outil/classroom/images/fire.gif" width="156" height="142" align="right" vspace="10" hspace="10" alt="Une interface de Cormas">      </p>
-
-      <p>In this example you will build a simple model:&quot;Fire&quot;. The aim of this model is to simulate fire diffusion in a forest and firemen try to extinguish the fire. </p>
-
-      <p>Note : If you have not installed CORMAS on your computer, please click here to download CORMAS. To learn how to install CORMAS, please click here. </p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <table width="768" border="0" cellpadding="0" cellspacing="1">
-        <tr valign="top">
-          <td colspan="2" rowspan="2" valign="middle" bgcolor="#006699" class="storyLeft"><div align="center" class="style1"><strong>Fire Agent Model </strong></div></td>
-          <td colspan="3" bgcolor="#006699" class="storyLeft"><div align="center"><span class="style1"><strong>Download tutorials </strong></span></div></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#006699" class="style1 storyLeft">&nbsp;</td>
-          <td bgcolor="#006699" class="style1 storyLeft">&nbsp;</td>
-          <td bgcolor="#006699" class="style1 storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Create a new model </strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">1</div></td>
-          <td class="storyLeft"><a href="FireModel/index.htm" target="_blank">Introduction ot Fire Agent Model</a> </td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/index.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td width="443" class="storyLeft"><a href="FireModel/1/1.htm" target="_blank">Create a new model - Fire</a></td>
-          <td width="140" class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/1- create a new model Fire.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td width="144" class="storyLeft">&nbsp;</td>
-          <td width="94" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Defining a new Spatial entity, Cell - Part I ('init' method) </strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">2</div></td>
-          <td class="storyLeft"><a href="FireModel/2/2.htm" target="_blank">Defining a new Spatial entity - Cell </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/2- create a new Spatial entity - Cell.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">3</div></td>
-          <td class="storyLeft"><a href="FireModel/3/3.htm" target="_blank">Defining a new 'init' method for Cell - initRandom50 </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/3 - create a new method - initRandom50.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">4</div></td>
-          <td class="storyLeft"><a href="FireModel/4/4.htm" target="_blank">Defining a point of view for the cells </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/4 - define Point of View for the cells.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">5</div></td>
-          <td class="storyLeft"><a href="FireModel/5/5.htm" target="_blank">How the 'initRandom50' method works </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/5 - to see init method initRandom50.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Defining Spaitial entity dynamic </strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">6</div></td>
-          <td class="storyLeft"><a href="FireModel/6-1/6-1.htm" target="_blank">Add a 'control' protocol - control </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/6-1 - add new Protocal - control.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td class="storyLeft"><a href="FireModel/6-3/6-3.htm" target="_blank">Defining a method for the control protocol - newStateRandom </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/6-2 - create a metod in control protocal - newStateRandom.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td class="storyLeft"><a href="FireModel/6-2/6-2.htm" target="_blank">Defining a method for the control protocol- newState </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/6-3 - create a metod in control protocal - newState.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Schedulling of the model </strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">7</div></td>
-          <td class="storyLeft"><a href="FireModel/7/7.htm" target="_blank">Defining 'step' method of Fire model </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/7 - modify method - Step - Synchronously.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Defining a new Spatial entity, Cell - Part II ('control' method) </strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">8</div></td>
-          <td class="storyLeft"><a href="FireModel/8/8.htm" target="_blank">Defining a new 'control' method for Cell - newStateDiffusion </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/8 - create a new control method of Cell - newStateDiffusion.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Defining a Chart</strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">9</div></td>
-          <td class="storyLeft"><a href="FireModel/9/9.htm" target="_blank">Defining a chart for a symbol 'tree' of Cell - trees </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/9 - Defining a chart for tree.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Defining a new AgentCommLocation entity - Part I </strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">10</div></td>
-          <td class="storyLeft"><a href="FireModel/10/11.htm" target="_blank">Defining a new AgentCommLocation - Fireman </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/10 - create a new AgentCommLocation - Fireman.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/10/11.htm" target="_blank">Defining a new 'control' method - step </a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Initalisation and Schedulling of the model </strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">11</div></td>
-          <td class="storyLeft"><a href="FireModel/11/11.htm" target="_blank">Initialising number of firemen in 'instance-creation' method - initAgents </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/11 - Initalisation and scheduling of the model.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/11/11.htm" target="_blank">Defining 'init' method for calling initCells and initAgents </a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/11/11.htm" target="_blank">Defining 'control' method - step </a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Defining a new AgentCommLocation entity - Part II</strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">12</div></td>
-          <td class="storyLeft"><a href="FireModel/12/12.htm" target="_blank">Defining a point of view for the firemen</a> </td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/12 - defining a point of view for the firemen.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">13</div></td>
-          <td class="storyLeft"><a href="FireModel/13-1/13-1.htm" target="_blank">Defining version 2 of the step method - step2 </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/13-1 - Defining new agents dynamics - Step2.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/13-1/13-1.htm" target="_blank">Defining a new 'control' method - extinctFire </a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td class="storyLeft"><a href="FireModel/13-2/13-2.htm" target="_blank">Redefining the 'control' methods - step to step1 </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/13-2 - Defining new agents dynamics - to rename step1 step2.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td class="storyLeft"><a href="FireModel/13-3/13-3.htm" target="_blank">Running simulate - how steps works </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/13-3 - Run simulation to observe how step2 works - firemen put out fire.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">14</div></td>
-          <td class="storyLeft"><a href="FireModel/14/14.htm" target="_blank">Defining version 3 of step method - step3</a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/14 - Defining version 3 of step - step3.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">15</div></td>
-          <td class="storyLeft"><a href="FireModel/15/15.htm" target="_blank">Defining version 4 of step method - step4</a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/15 - to group - move and step 4.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Defining a new Message entity - Part I </strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">16</div></td>
-          <td class="storyLeft"><a href="FireModel/16/16.htm" target="_blank">Defing a new Message entity </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/16 - create a new message - MessageClass.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="storyLeft"><span class="style1"><strong>Defining a new AgentCommLocation entity - Part III</strong></span></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">17</div></td>
-          <td class="storyLeft"><a href="FireModel/17/17.htm" target="_blank">Connecting the Fireman to its acquaintance </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/17 - Connecting the Fireman to its acquaintances.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">18</div></td>
-          <td class="storyLeft"><a href="FireModel/18/18.htm" target="_blank">Allowing the Firemen to send and read message </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/18 - allowing the Fireman to send and read Message.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">19</div></td>
-          <td class="storyLeft"><a href="FireModel/19/19.htm" target="_blank">Observing message window </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/19 - to view message window.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="style1 storyLeft"><strong>Defining a new subclass for the Spatial entity Cell - Aggregate </strong></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">20</div></td>
-          <td class="storyLeft"><a href="FireModel/20/20.htm" target="_blank">Defining a new subclass - Aggregate </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/20 - create a spatial entity - Aggregate and pov.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/20/20.htm" target="_blank">Defining a point of view - pov </a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">21</div></td>
-          <td class="storyLeft"><a href="FireModel/21/21.htm" target="_blank">Defining a new 'control' method - alarmCallingAggregates</a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/21-1 - modifying Fireman perception.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td class="storyLeft"><a href="FireModel/22/22.htm" target="_blank">Redefining step method </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/21-2 -  the dynamics of the Aggregates.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="style1 storyLeft"><strong>Defining a Probes </strong></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">22</div></td>
-          <td class="storyLeft"><a href="FireModel/23/23.htm" target="_blank">dominance</a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/22 - Lanscape indices.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/23/23.htm" target="_blank">edgeDensity</a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/23/23.htm" target="_blank">fractalDimension</a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/23/23.htm" target="_blank">meanCompactness</a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/23/23.htm" target="_blank">meanNearestNeigh</a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center"></div></td>
-          <td colspan="4" class="storyLeft"><a href="FireModel/23/23.htm" target="_blank">nClasses</a></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft">&nbsp;</td>
-          <td colspan="4" class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" bgcolor="#006699" class="style1 storyLeft"><strong>Running simulation of Fire model </strong></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
-          <td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
-        </tr>
-        <tr valign="top">
-          <td class="storyLeft"><div align="center">23</div></td>
-          <td class="storyLeft"><a href="FireModel/24/24.htm" target="_blank">Running simulation </a></td>
-          <td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/23 - Simulation.zip"><img src="../../../../../images/zip.gif" width="37" height="38" border="0"></a></div></td>
-          <td class="storyLeft">&nbsp;</td>
-          <td class="storyLeft">&nbsp;</td>
-        </tr>
-        <tr>
-          <td width="93">&nbsp;</td>
-          <td colspan="4">&nbsp;</td>
-        </tr>
-      </table>
-      <p>&nbsp;</p>
-      <!--#include virtual="/include/copyright_en.inc" --> </td>
-
-  <td width="0" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-   </td>
- </tr>
+<!--#include virtual="../lmenu.inc" -->
+<td bgcolor="#FFFFFF" height="600" valign="top" width="0">
+<p> </p>
+<h1>Fire Agent Model<img height="50" src="../../images/fireman.gif" width="78"/> <br/>
+</h1>
+<p><img align="right" alt="Une interface de Cormas" height="142" hspace="10" src="/en/outil/classroom/images/fire.gif" vspace="10" width="156"/> </p>
+<p>In this example you will build a simple model:"Fire". The aim of this model is to simulate fire diffusion in a forest and firemen try to extinguish the fire. </p>
+<p>Note : If you have not installed CORMAS on your computer, please click here to download CORMAS. To learn how to install CORMAS, please click here. </p>
+<p> </p>
+<p> </p>
+<table border="0" cellpadding="0" cellspacing="1" width="768">
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2" rowspan="2" valign="middle"><div align="center" class="style1"><strong>Fire Agent Model </strong></div></td>
+<td bgcolor="#006699" class="storyLeft" colspan="3"><div align="center"><span class="style1"><strong>Download tutorials </strong></span></div></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="style1 storyLeft"> </td>
+<td bgcolor="#006699" class="style1 storyLeft"> </td>
+<td bgcolor="#006699" class="style1 storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Create a new model </strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">1</div></td>
+<td class="storyLeft"><a href="FireModel/index.htm" target="_blank">Introduction ot Fire Agent Model</a> </td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/index.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" width="443"><a href="FireModel/1/1.htm" target="_blank">Create a new model - Fire</a></td>
+<td class="storyLeft" width="140"><div align="center"><a href="../../download/tutorial/FireAgentModel/1- create a new model Fire.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft" width="144"> </td>
+<td class="storyLeft" width="94"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Defining a new Spatial entity, Cell - Part I ('init' method) </strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">2</div></td>
+<td class="storyLeft"><a href="FireModel/2/2.htm" target="_blank">Defining a new Spatial entity - Cell </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/2- create a new Spatial entity - Cell.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">3</div></td>
+<td class="storyLeft"><a href="FireModel/3/3.htm" target="_blank">Defining a new 'init' method for Cell - initRandom50 </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/3 - create a new method - initRandom50.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">4</div></td>
+<td class="storyLeft"><a href="FireModel/4/4.htm" target="_blank">Defining a point of view for the cells </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/4 - define Point of View for the cells.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">5</div></td>
+<td class="storyLeft"><a href="FireModel/5/5.htm" target="_blank">How the 'initRandom50' method works </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/5 - to see init method initRandom50.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Defining Spaitial entity dynamic </strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">6</div></td>
+<td class="storyLeft"><a href="FireModel/6-1/6-1.htm" target="_blank">Add a 'control' protocol - control </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/6-1 - add new Protocal - control.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft"><a href="FireModel/6-3/6-3.htm" target="_blank">Defining a method for the control protocol - newStateRandom </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/6-2 - create a metod in control protocal - newStateRandom.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft"><a href="FireModel/6-2/6-2.htm" target="_blank">Defining a method for the control protocol- newState </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/6-3 - create a metod in control protocal - newState.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Schedulling of the model </strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">7</div></td>
+<td class="storyLeft"><a href="FireModel/7/7.htm" target="_blank">Defining 'step' method of Fire model </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/7 - modify method - Step - Synchronously.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Defining a new Spatial entity, Cell - Part II ('control' method) </strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">8</div></td>
+<td class="storyLeft"><a href="FireModel/8/8.htm" target="_blank">Defining a new 'control' method for Cell - newStateDiffusion </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/8 - create a new control method of Cell - newStateDiffusion.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Defining a Chart</strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">9</div></td>
+<td class="storyLeft"><a href="FireModel/9/9.htm" target="_blank">Defining a chart for a symbol 'tree' of Cell - trees </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/9 - Defining a chart for tree.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Defining a new AgentCommLocation entity - Part I </strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">10</div></td>
+<td class="storyLeft"><a href="FireModel/10/11.htm" target="_blank">Defining a new AgentCommLocation - Fireman </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/10 - create a new AgentCommLocation - Fireman.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/10/11.htm" target="_blank">Defining a new 'control' method - step </a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Initalisation and Schedulling of the model </strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">11</div></td>
+<td class="storyLeft"><a href="FireModel/11/11.htm" target="_blank">Initialising number of firemen in 'instance-creation' method - initAgents </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/11 - Initalisation and scheduling of the model.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/11/11.htm" target="_blank">Defining 'init' method for calling initCells and initAgents </a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/11/11.htm" target="_blank">Defining 'control' method - step </a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Defining a new AgentCommLocation entity - Part II</strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">12</div></td>
+<td class="storyLeft"><a href="FireModel/12/12.htm" target="_blank">Defining a point of view for the firemen</a> </td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/12 - defining a point of view for the firemen.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">13</div></td>
+<td class="storyLeft"><a href="FireModel/13-1/13-1.htm" target="_blank">Defining version 2 of the step method - step2 </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/13-1 - Defining new agents dynamics - Step2.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/13-1/13-1.htm" target="_blank">Defining a new 'control' method - extinctFire </a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft"><a href="FireModel/13-2/13-2.htm" target="_blank">Redefining the 'control' methods - step to step1 </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/13-2 - Defining new agents dynamics - to rename step1 step2.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft"><a href="FireModel/13-3/13-3.htm" target="_blank">Running simulate - how steps works </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/13-3 - Run simulation to observe how step2 works - firemen put out fire.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">14</div></td>
+<td class="storyLeft"><a href="FireModel/14/14.htm" target="_blank">Defining version 3 of step method - step3</a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/14 - Defining version 3 of step - step3.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">15</div></td>
+<td class="storyLeft"><a href="FireModel/15/15.htm" target="_blank">Defining version 4 of step method - step4</a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/15 - to group - move and step 4.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Defining a new Message entity - Part I </strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">16</div></td>
+<td class="storyLeft"><a href="FireModel/16/16.htm" target="_blank">Defing a new Message entity </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/16 - create a new message - MessageClass.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2"><span class="style1"><strong>Defining a new AgentCommLocation entity - Part III</strong></span></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">17</div></td>
+<td class="storyLeft"><a href="FireModel/17/17.htm" target="_blank">Connecting the Fireman to its acquaintance </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/17 - Connecting the Fireman to its acquaintances.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">18</div></td>
+<td class="storyLeft"><a href="FireModel/18/18.htm" target="_blank">Allowing the Firemen to send and read message </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/18 - allowing the Fireman to send and read Message.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">19</div></td>
+<td class="storyLeft"><a href="FireModel/19/19.htm" target="_blank">Observing message window </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/19 - to view message window.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="style1 storyLeft" colspan="2"><strong>Defining a new subclass for the Spatial entity Cell - Aggregate </strong></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">20</div></td>
+<td class="storyLeft"><a href="FireModel/20/20.htm" target="_blank">Defining a new subclass - Aggregate </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/20 - create a spatial entity - Aggregate and pov.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/20/20.htm" target="_blank">Defining a point of view - pov </a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">21</div></td>
+<td class="storyLeft"><a href="FireModel/21/21.htm" target="_blank">Defining a new 'control' method - alarmCallingAggregates</a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/21-1 - modifying Fireman perception.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft"><a href="FireModel/22/22.htm" target="_blank">Redefining step method </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/21-2 -  the dynamics of the Aggregates.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="style1 storyLeft" colspan="2"><strong>Defining a Probes </strong></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">22</div></td>
+<td class="storyLeft"><a href="FireModel/23/23.htm" target="_blank">dominance</a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/22 - Lanscape indices.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/23/23.htm" target="_blank">edgeDensity</a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/23/23.htm" target="_blank">fractalDimension</a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/23/23.htm" target="_blank">meanCompactness</a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/23/23.htm" target="_blank">meanNearestNeigh</a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center"></div></td>
+<td class="storyLeft" colspan="4"><a href="FireModel/23/23.htm" target="_blank">nClasses</a></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"> </td>
+<td class="storyLeft" colspan="4"> </td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="style1 storyLeft" colspan="2"><strong>Running simulation of Fire model </strong></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Windows</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Unix</strong></div></td>
+<td bgcolor="#006699" class="style1 storyLeft"><div align="center"><strong>Macintosh</strong></div></td>
+</tr>
+<tr valign="top">
+<td class="storyLeft"><div align="center">23</div></td>
+<td class="storyLeft"><a href="FireModel/24/24.htm" target="_blank">Running simulation </a></td>
+<td class="storyLeft"><div align="center"><a href="../../download/tutorial/FireAgentModel/23 - Simulation.zip"><img border="0" height="38" src="../../../../../images/zip.gif" width="37"/></a></div></td>
+<td class="storyLeft"> </td>
+<td class="storyLeft"> </td>
+</tr>
+<tr>
+<td width="93"> </td>
+<td colspan="4"> </td>
+</tr>
 </table>
-
-</body>
-
+<p> </p>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="0"> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+</td>
+</tr>
+</table>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>
-

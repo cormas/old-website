@@ -1,72 +1,139 @@
 <!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
-<HTML> 
-  <HEAD>
-	 <META NAME="KeyWords"
-	  CONTENT="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-	 
-	 <TITLE> Informations legales</TITLE>
-	 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
 
+<html>
+<head>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title> Informations legales</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-	 <LINK REL="stylesheet" HREF="/css/cormas.css"> 
-  </HEAD> 
-  <BODY MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0"
-	ONLOAD="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')"
-	BGCOLOR="#FFFFFF">
+<link href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-	 <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%"> 
-		<TR>
-    <!--#include virtual="sommair.inc" -->
-		  <TD WIDTH="*" VALIGN="top" BGCOLOR="#FFFFFF" ALIGN="LEFT"> 
-			 <P>&nbsp; </P> 
-			 
-      <P> </P>
-      <H1>Legal information</H1>
-      <P ALIGN="right"> Last update: March 21st, 2007</P>
-      <P ALIGN="center"><B>Director of publication</B> : Patrick Caron, Director 
-        of Department Environnements et Soci&eacute;t&eacute;s, CIRAD<BR>
-        <B>Responsible of scientific content </B> : Christophe Le Page, Green Research Unit, Department Environnements et Soci&eacute;t&eacute;s, CIRAD <BR>
-        <B>Conception</B> : CIRAD-DIST and Bruno Locatelli<BR>
-        <B>Webmaster</B> : Pierre Bommel, Green Research Unit, Department Environnements et Soci&eacute;t&eacute;s, CIRAD</P>
-      <P ALIGN="left"></P>
-      <P ALIGN="left"></P>
-      <P ALIGN="left"></P>
-      <H2>Droits et devoirs des utilisateurs</H2>
-      <P> Le contenu de ce site est prot&eacute;g&eacute; par la propri&eacute;t&eacute; 
-        litt&eacute;raire et artistique, la convention de Berne, la directive 
-        96/9/CE et le code de la propri&eacute;t&eacute; intellectuelle, livre 
-        I. Toute reproduction, autrement que par l'usage priv&eacute; du visiteur 
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td align="LEFT" bgcolor="#FFFFFF" valign="top" width="*">
+<p>  </p>
+<p> </p>
+<h1>Legal information</h1>
+<p align="right"> Last update: March 21st, 2007</p>
+<p align="center"><b>Director of publication</b> : Patrick Caron, Director 
+        of Department Environnements et Sociétés, CIRAD<br/>
+<b>Responsible of scientific content </b> : Christophe Le Page, Green Research Unit, Department Environnements et Sociétés, CIRAD <br/>
+<b>Conception</b> : CIRAD-DIST and Bruno Locatelli<br/>
+<b>Webmaster</b> : Pierre Bommel, Green Research Unit, Department Environnements et Sociétés, CIRAD</p>
+<p align="left"></p>
+<p align="left"></p>
+<p align="left"></p>
+<h2>Droits et devoirs des utilisateurs</h2>
+<p> Le contenu de ce site est protégé par la propriété 
+        littéraire et artistique, la convention de Berne, la directive 
+        96/9/CE et le code de la propriété intellectuelle, livre 
+        I. Toute reproduction, autrement que par l'usage privé du visiteur 
         du site, en vue notamment d'une diffusion publique par n'importe quel 
-        moyen, est strictement interdite sans l'autorisation &eacute;crite du 
-        Cirad.</P>
-      <P>Les visiteurs sont responsables de l'interpr&eacute;tation et de l'utilisation 
-        des donn&eacute;es consult&eacute;es, ainsi que des informations qu'ils 
-        soumettent dans les formulaires. Il leur appartient de respecter les r&eacute;glementations 
-        en vigueur.</P>
-      <P>Pour des informations nominatives, les visiteurs devront respecter les 
-        recommandations de la Commission nationale de l'informatique et des libert&eacute;s 
-        (Cnil). </P>
-      <P>En particulier, il est interdit de copier les informations de ce site 
-        et de les utiliser &agrave; des fins commerciales ou publicitaires.</P>
-      <H2>Le Cirad</H2>
-      <P>Organisme scientifique fran&ccedil;ais sp&eacute;cialis&eacute; en recherche 
-        agronomique appliqu&eacute;e aux r&eacute;gions chaudes, le Cirad a pour 
-        mission de contribuer au d&eacute;veloppement rural des pays tropicaux 
-        et subtropicaux par des recherches, des r&eacute;alisations exp&eacute;rimentales, 
+        moyen, est strictement interdite sans l'autorisation écrite du 
+        Cirad.</p>
+<p>Les visiteurs sont responsables de l'interprétation et de l'utilisation 
+        des données consultées, ainsi que des informations qu'ils 
+        soumettent dans les formulaires. Il leur appartient de respecter les réglementations 
+        en vigueur.</p>
+<p>Pour des informations nominatives, les visiteurs devront respecter les 
+        recommandations de la Commission nationale de l'informatique et des libertés 
+        (Cnil). </p>
+<p>En particulier, il est interdit de copier les informations de ce site 
+        et de les utiliser à des fins commerciales ou publicitaires.</p>
+<h2>Le Cirad</h2>
+<p>Organisme scientifique français spécialisé en recherche 
+        agronomique appliquée aux régions chaudes, le Cirad a pour 
+        mission de contribuer au développement rural des pays tropicaux 
+        et subtropicaux par des recherches, des réalisations expérimentales, 
         des actions de formation et par l'information scientifique et technique, 
-        en France et &agrave; l'&eacute;tranger, Ses activit&eacute;s recouvrent 
-        les domaines des sciences agronomiques, v&eacute;t&eacute;rinaires, foresti&egrave;res 
-        et agroalimentaires.</P>
-      <P><I>CIRAD, Si&egrave;ge social <BR>
-        42, rue Scheffer, <BR>
-        75116 Paris, France</I> </P>
-      <P><I>CIRAD, D&eacute;partement Environnements et Soci&eacute;t&eacute;s <BR>
-TA C-DIR / B<BR>
+        en France et à l'étranger, Ses activités recouvrent 
+        les domaines des sciences agronomiques, vétérinaires, forestières 
+        et agroalimentaires.</p>
+<p><i>CIRAD, Siège social <br/>
+        42, rue Scheffer, <br/>
+        75116 Paris, France</i> </p>
+<p><i>CIRAD, Département Environnements et Sociétés <br/>
+TA C-DIR / B<br/>
 34398
-			Montpellier Cedex 5, France</I></P>
-      <!--#include virtual="/include/copyright_en.inc" --> </TD> 
-		  <TD WIDTH="15" VALIGN="top" BGCOLOR="#FFFFFF"> 
-			 <DIV ALIGN="right" CLASS="texte"></DIV> </TD> 
-		</TR> 
-	 </TABLE> </BODY>
-</HTML>
+			Montpellier Cedex 5, France</i></p>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div> </td>
+</tr>
+</table> </div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
+</html>

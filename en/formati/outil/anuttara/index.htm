@@ -1,17 +1,89 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>CORMAS members</title>
-</head>
-
-<frameset rows="94,*" cols="*" frameborder="no" border="0" framespacing="0">
-  <frame src="1-top_menu.htm" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
-  <frameset rows="*" cols="200,*" framespacing="0" frameborder="no" border="0" bordercolor="#000000">
-    <frame src="1-menu.htm" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
-    <frame src="http://www.ecole-commod.sc.chula.ac.th/www2/anuttara/index.php" name="mainFrame" id="mainFrame" title="mainFrame" />
-  </frameset>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<frameset border="0" cols="*" frameborder="no" framespacing="0" rows="94,*">
+<frame id="topFrame" name="topFrame" noresize="noresize" scrolling="No" src="1-top_menu.htm" title="topFrame"/>
+<frameset border="0" bordercolor="#000000" cols="200,*" frameborder="no" framespacing="0" rows="*">
+<frame id="leftFrame" name="leftFrame" noresize="noresize" scrolling="No" src="1-menu.htm" title="leftFrame"/>
+<frame id="mainFrame" name="mainFrame" src="http://www.ecole-commod.sc.chula.ac.th/www2/anuttara/index.php" title="mainFrame"/>
 </frameset>
-<noframes><body>
-</body>
+</frameset>
+<noframes><body><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </noframes></html>

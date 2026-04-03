@@ -1,27 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<link rel="stylesheet" type="text/css" href="visio.css"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="visio.css" rel="stylesheet" type="text/css"/>
 <title>
 follow chart
 </title>
-<script type="text/javascript" language="javascript">
+<script language="javascript" type="text/javascript">
 function UpdateTooltip(){};
 function OnShapeClick(){};
 </script>
-
-<script src="gif_1.js" type="text/jscript" language="jscript"></script>
-
-<script type="text/jscript" language="jscript">
+<script language="jscript" src="gif_1.js" type="text/jscript"></script>
+<script language="jscript" type="text/jscript">
 	if(parent.isUpLevel)
 	{
 		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
 	}
 </script>
-
-
-
-<script type="text/jscript" language="jscript">
+<script language="jscript" type="text/jscript">
 
 var pageID = 0;
 
@@ -100,81 +97,141 @@ window.onunload = unload;
 document.onclick = clickMenu;
 
 </script>
-</head>
-
-<body class="pageView" bgcolor="#FFFFFF">
-
-<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" class="pageView"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
 </div>
-
-<div id="menu1" onclick="clickMenu()" class="hlMenu">
+<div class="hlMenu" id="menu1" onclick="clickMenu()">
 </div>
-
-<DIV id=RasterDiv>
-
-
+<div id="RasterDiv">
 <center>
-  <IMG id="ConvertedImage" SRC="gif_1.gif" ALT="Page-1" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+<img alt="Page-1" border="0" id="ConvertedImage" name="RasterImage" src="gif_1.gif" usemap="#visImageMap"/>
 </center>
-
-<MAP NAME="visImageMap">
-  <AREA shape="POLYGON" tabindex="1" ALT="Updated on July, 25, 2007" origTitle="Updated on July, 25, 2007" TITLE="Updated on July, 25, 2007"  target="_top" COORDS=" 337,601 455,601 455,587 337,587 337,601" onmouseover="UpdateTooltip(this,0,217)" onfocus="UpdateTooltip(this,0,217)" onclick="return OnShapeClick(0,217);" onkeyup="OnShapeKey(0,217);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 401,289 419,289 419,266 401,266 401,289" onmouseover="UpdateTooltip(this,0,211)" onfocus="UpdateTooltip(this,0,211)" onclick="return OnShapeClick(0,211);" onkeyup="OnShapeKey(0,211);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 392,310 410,310 410,287 392,287 392,310" onmouseover="UpdateTooltip(this,0,98)" onfocus="UpdateTooltip(this,0,98)" onclick="return OnShapeClick(0,98);" onkeyup="OnShapeKey(0,98);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 261,575 275,575 275,561 261,561 261,575" onmouseover="UpdateTooltip(this,0,136)" onfocus="UpdateTooltip(this,0,136)" onclick="return OnShapeClick(0,136);" onkeyup="OnShapeKey(0,136);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 386,63 408,63 408,41 386,41 386,63" onmouseover="UpdateTooltip(this,0,123)" onfocus="UpdateTooltip(this,0,123)" onclick="return OnShapeClick(0,123);" onkeyup="OnShapeKey(0,123);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 212,381 234,381 234,359 212,359 212,381" onmouseover="UpdateTooltip(this,0,111)" onfocus="UpdateTooltip(this,0,111)" onclick="return OnShapeClick(0,111);" onkeyup="OnShapeKey(0,111);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 188,166 210,166 210,144 188,144 188,166" onmouseover="UpdateTooltip(this,0,99)" onfocus="UpdateTooltip(this,0,99)" onclick="return OnShapeClick(0,99);" onkeyup="OnShapeKey(0,99);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 167,57 181,57 181,43 167,43 167,57" onmouseover="UpdateTooltip(this,0,90)" onfocus="UpdateTooltip(this,0,90)" onclick="return OnShapeClick(0,90);" onkeyup="OnShapeKey(0,90);">
-  <AREA shape="POLYGON" tabindex="1" ALT="END" origTitle="END" TITLE="END"  target="_top" COORDS=" 323,339 365,339 365,339 365,339 366,339 366,339 366,339 366,339 367,339 367,338 367,338 367,338 368,338 368,338 368,338 368,338 369,337 369,337 369,337 369,337 369,337 370,336 370,336 370,336 370,336 370,335 370,335 370,335 370,335 371,334 371,334 371,334 371,334 371,333 371,333 371,333 371,332 371,332 371,332 371,332 371,331 371,331 370,331 370,331 370,330 370,330 370,330 370,330 370,329 370,329 369,329 369,329 369,328 369,328 369,328 368,328 368,328 368,328 368,327 367,327 367,327 367,327 367,327 366,327 366,327 366,327 366,327 365,327 365,327 365,327 323,327 323,327 322,327 322,327 322,327 322,327 321,327 321,327 321,327 321,327 320,327 320,327 320,328 320,328 319,328 319,328 319,328 319,328 319,329 318,329 318,329 318,329 318,330 318,330 318,330 317,330 317,331 317,331 317,331 317,331 317,332 317,332 317,332 317,332 317,333 317,333 317,333 317,334 317,334 317,334 317,334 317,335 317,335 317,335 318,335 318,336 318,336 318,336 318,336 318,337 319,337 319,337 319,337 319,337 319,338 320,338 320,338 320,338 320,338 321,338 321,338 321,339 321,339 322,339 322,339 322,339 322,339 323,339 323,339" onmouseover="UpdateTooltip(this,0,88)" onfocus="UpdateTooltip(this,0,88)" onclick="return OnShapeClick(0,88);" onkeyup="OnShapeKey(0,88);">
-  <AREA shape="POLYGON" tabindex="1" ALT="4. Edit CP source file &#38; re-generate it" origTitle="4. Edit CP source file &#38; re-generate it" TITLE="4. Edit CP source file &#38; re-generate it"  target="_top" COORDS=" 250,60 431,60 431,43 250,43 250,60" onmouseover="UpdateTooltip(this,0,80)" onfocus="UpdateTooltip(this,0,80)" onclick="return OnShapeClick(0,80);" onkeyup="OnShapeKey(0,80);">
-  <AREA shape="POLYGON" tabindex="1" ALT="2. To edit &#38; record on Adobe Captivate." origTitle="2. To edit &#38; record on Adobe Captivate." TITLE="2. To edit &#38; record on Adobe Captivate."  target="_top" COORDS=" 42,163 205,163 205,147 42,147 42,163" onmouseover="UpdateTooltip(this,0,75)" onfocus="UpdateTooltip(this,0,75)" onclick="return OnShapeClick(0,75);" onkeyup="OnShapeKey(0,75);">
-  <AREA shape="POLYGON" tabindex="1" ALT="1. To get CP source file." origTitle="1. To get CP source file." TITLE="1. To get CP source file."  target="_top" COORDS=" 44,58 202,58 202,41 44,41 44,58" onmouseover="UpdateTooltip(this,0,73)" onfocus="UpdateTooltip(this,0,73)" onclick="return OnShapeClick(0,73);" onkeyup="OnShapeKey(0,73);">
-  <AREA shape="POLYGON" tabindex="1" ALT="3. Edit CP source file of a section &#38; re-generate it" origTitle="3. Edit CP source file of a section &#38; re-generate it" TITLE="3. Edit CP source file of a section &#38; re-generate it"  target="_top" COORDS=" 37,379 248,379 248,361 37,361 37,379" onmouseover="UpdateTooltip(this,0,71)" onfocus="UpdateTooltip(this,0,71)" onclick="return OnShapeClick(0,71);" onkeyup="OnShapeKey(0,71);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Save the FireV1.cp and zip the source file." origTitle="Save the FireV1.cp and zip the source file." TITLE="Save the FireV1.cp and zip the source file."  target="_top" COORDS=" 264,248 417,248 417,232 264,232 264,248" onmouseover="UpdateTooltip(this,0,70)" onfocus="UpdateTooltip(this,0,70)" onclick="return OnShapeClick(0,70);" onkeyup="OnShapeKey(0,70);">
-  <AREA shape="POLYGON" tabindex="1" ALT="To upload   - Flash animation of FireV1.zip to /flash folder  -..." origTitle="To upload   - Flash animation of FireV1.zip to /flash folder  -..." TITLE="To upload   - Flash animation of FireV1.zip to /flash folder  -..."  target="_top" COORDS=" 250,318 438,318 438,257 250,257 250,318" onmouseover="UpdateTooltip(this,0,69)" onfocus="UpdateTooltip(this,0,69)" onclick="return OnShapeClick(0,69);" onkeyup="OnShapeKey(0,69);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Generate flash animation : - Click on Publish - Select..." origTitle="Generate flash animation : - Click on Publish - Select..." TITLE="Generate flash animation : - Click on Publish - Select..."  target="_top" COORDS=" 264,222 417,222 417,154 264,154 264,222" onmouseover="UpdateTooltip(this,0,68)" onfocus="UpdateTooltip(this,0,68)" onclick="return OnShapeClick(0,68);" onkeyup="OnShapeKey(0,68);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Save the FireV1.cp" origTitle="Save the FireV1.cp" TITLE="Save the FireV1.cp"  target="_top" COORDS=" 264,144 417,144 417,128 264,128 264,144" onmouseover="UpdateTooltip(this,0,67)" onfocus="UpdateTooltip(this,0,67)" onclick="return OnShapeClick(0,67);" onkeyup="OnShapeKey(0,67);">
-  <AREA shape="POLYGON" tabindex="1" ALT="To replace the new slides of the modified section into the..." origTitle="To replace the new slides of the modified section into the..." TITLE="To replace the new slides of the modified section into the..."  target="_top" COORDS=" 264,120 417,120 417,95 264,95 264,120" onmouseover="UpdateTooltip(this,0,66)" onfocus="UpdateTooltip(this,0,66)" onclick="return OnShapeClick(0,66);" onkeyup="OnShapeKey(0,66);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Open FireV1.cp" origTitle="Open FireV1.cp" TITLE="Open FireV1.cp"  target="_top" COORDS=" 264,85 417,85 417,70 264,70 264,85" onmouseover="UpdateTooltip(this,0,65)" onfocus="UpdateTooltip(this,0,65)" onclick="return OnShapeClick(0,65);" onkeyup="OnShapeKey(0,65);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Upload folder of the flash to..." origTitle="Upload folder of the flash to..." TITLE="Upload folder of the flash to..."  target="_top" COORDS=" 7,579 278,579 278,557 7,557 7,579" onmouseover="UpdateTooltip(this,0,64)" onfocus="UpdateTooltip(this,0,64)" onclick="return OnShapeClick(0,64);" onkeyup="OnShapeKey(0,64);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Program would general several HTML and flash files, rename the..." origTitle="Program would general several HTML and flash files, rename the..." TITLE="Program would general several HTML and flash files, rename the..."  target="_top" COORDS=" 18,547 267,547 267,523 18,523 18,547" onmouseover="UpdateTooltip(this,0,60)" onfocus="UpdateTooltip(this,0,60)" onclick="return OnShapeClick(0,60);" onkeyup="OnShapeKey(0,60);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Generate flash animate from the project." origTitle="Generate flash animate from the project." TITLE="Generate flash animate from the project."  target="_top" COORDS=" 18,514 267,514 267,497 18,497 18,514" onmouseover="UpdateTooltip(this,0,59)" onfocus="UpdateTooltip(this,0,59)" onclick="return OnShapeClick(0,59);" onkeyup="OnShapeKey(0,59);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Save the project (such as 1-1-1.cp)" origTitle="Save the project (such as 1-1-1.cp)" TITLE="Save the project (such as 1-1-1.cp)"  target="_top" COORDS=" 18,488 267,488 267,471 18,471 18,488" onmouseover="UpdateTooltip(this,0,58)" onfocus="UpdateTooltip(this,0,58)" onclick="return OnShapeClick(0,58);" onkeyup="OnShapeKey(0,58);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 182,295 182,296 190,301 190,301 190,301 193,301 193,301 193,301 193,301 193,300 194,300 194,300 194,300 194,300 194,300 195,300 195,300 195,300 195,299 195,299 195,299 195,299 195,299 195,299 195,299 195,299 195,299 195,298 195,298 195,298 195,298 195,298 195,298 195,298 195,298 194,298 194,298 194,298 194,298 194,297 186,293 182,295" onmouseover="UpdateTooltip(this,0,26)" onfocus="UpdateTooltip(this,0,26)" onclick="return OnShapeClick(0,26);" onkeyup="OnShapeKey(0,26);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 201,287 201,283 196,280 193,281 192,280 190,281 190,288 188,289 188,292 188,292 189,293 189,293 189,293 190,293 190,294 191,294 191,294 191,295 192,295 192,295 193,295 193,295 194,296 194,296 195,296 195,296 195,296 196,296 199,297 199,297 199,297 199,299 202,299 202,296 202,296 203,296 203,296 203,296 204,296 204,295 204,295 204,295 205,295 205,295 205,295 205,294 205,294 205,294 205,294 205,294 205,293 205,293 205,293 205,293 205,293 205,293 205,292 205,292 205,292 205,292 205,292 205,291 205,291 205,291 204,291 204,291 204,291 204,291 204,291 204,291 203,290 203,290 203,290 203,289 202,288 202,287 201,287" onmouseover="UpdateTooltip(this,0,26)" onfocus="UpdateTooltip(this,0,26)" onclick="return OnShapeClick(0,26);" onkeyup="OnShapeKey(0,26);">
-  <AREA shape="POLYGON" tabindex="1" ALT="To demonstrate the tutorial on your computer." origTitle="To demonstrate the tutorial on your computer." TITLE="To demonstrate the tutorial on your computer."  target="_top" COORDS=" 42,302 205,302 205,278 42,278 42,302" onmouseover="UpdateTooltip(this,0,9)" onfocus="UpdateTooltip(this,0,9)" onclick="return OnShapeClick(0,9);" onkeyup="OnShapeKey(0,9);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Press «End» to stop recording the project." origTitle="Press «End» to stop recording the project." TITLE="Press «End» to stop recording the project."  target="_top" COORDS=" 18,405 267,405 267,387 18,387 18,405" onmouseover="UpdateTooltip(this,0,24)" onfocus="UpdateTooltip(this,0,24)" onclick="return OnShapeClick(0,24);" onkeyup="OnShapeKey(0,24);">
-  <AREA shape="POLYGON" tabindex="1" ALT="To stop recording the project?" origTitle="To stop recording the project?" TITLE="To stop recording the project?"  target="_top" COORDS=" 76,335 123,349 185,331 123,313 80,326 74,326 74,328 62,331 74,335 74,335 76,335" onmouseover="UpdateTooltip(this,0,15)" onfocus="UpdateTooltip(this,0,15)" onclick="return OnShapeClick(0,15);" onkeyup="OnShapeKey(0,15);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Press «Record» to start to record screenshots." origTitle="Press «Record» to start to record screenshots." TITLE="Press «Record» to start to record screenshots."  target="_top" COORDS=" 42,269 205,269 205,248 42,248 42,269" onmouseover="UpdateTooltip(this,0,14)" onfocus="UpdateTooltip(this,0,14)" onclick="return OnShapeClick(0,14);" onkeyup="OnShapeKey(0,14);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Add these three slides that you can copy from other tutorials..." origTitle="Add these three slides that you can copy from other tutorials..." TITLE="Add these three slides that you can copy from other tutorials..."  target="_top" COORDS=" 18,460 267,460 267,414 18,414 18,460" onmouseover="UpdateTooltip(this,0,22)" onfocus="UpdateTooltip(this,0,22)" onclick="return OnShapeClick(0,22);" onkeyup="OnShapeKey(0,22);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Select «Software Simulation»  and «Custom size» 800 x 600" origTitle="Select «Software Simulation»  and «Custom size» 800 x 600" TITLE="Select «Software Simulation»  and «Custom size» 800 x 600"  target="_top" COORDS=" 42,241 205,241 205,218 42,218 42,241" onmouseover="UpdateTooltip(this,0,8)" onfocus="UpdateTooltip(this,0,8)" onclick="return OnShapeClick(0,8);" onkeyup="OnShapeKey(0,8);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Select «Record or make a new project»." origTitle="Select «Record or make a new project»." TITLE="Select «Record or make a new project»."  target="_top" COORDS=" 42,210 205,210 205,193 42,193 42,210" onmouseover="UpdateTooltip(this,0,7)" onfocus="UpdateTooltip(this,0,7)" onclick="return OnShapeClick(0,7);" onkeyup="OnShapeKey(0,7);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Open Adobe Captivate" origTitle="Open Adobe Captivate" TITLE="Open Adobe Captivate"  target="_top" COORDS=" 42,186 205,186 205,171 42,171 42,186" onmouseover="UpdateTooltip(this,0,5)" onfocus="UpdateTooltip(this,0,5)" onclick="return OnShapeClick(0,5);" onkeyup="OnShapeKey(0,5);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Upzip FireV1.zip" origTitle="Upzip FireV1.zip" TITLE="Upzip FireV1.zip"  target="_top" COORDS=" 140,121 138,121 134,121 98,121 98,121 43,121 43,131 204,131 204,121 149,121 149,121 140,121" onmouseover="UpdateTooltip(this,0,4)" onfocus="UpdateTooltip(this,0,4)" onclick="return OnShapeClick(0,4);" onkeyup="OnShapeKey(0,4);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Download CP-FireV1.zip" origTitle="Download CP-FireV1.zip" TITLE="Download CP-FireV1.zip"  target="_top" COORDS=" 44,113 203,113 203,102 44,102 44,113" onmouseover="UpdateTooltip(this,0,3)" onfocus="UpdateTooltip(this,0,3)" onclick="return OnShapeClick(0,3);" onkeyup="OnShapeKey(0,3);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Browse /FireModel/FireV1/source/" origTitle="Browse /FireModel/FireV1/source/" TITLE="Browse /FireModel/FireV1/source/"  target="_top" COORDS=" 44,95 203,95 203,83 44,83 44,95" onmouseover="UpdateTooltip(this,0,1)" onfocus="UpdateTooltip(this,0,1)" onclick="return OnShapeClick(0,1);" onkeyup="OnShapeKey(0,1);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Go to /prod/en/outil/classrrom/example" origTitle="Go to /prod/en/outil/classrrom/example" TITLE="Go to /prod/en/outil/classrrom/example"  target="_top" COORDS=" 157,66 155,66 125,66 123,66 110,66 108,66 100,66 98,66 85,66 83,66 64,66 64,66 44,66 44,76 203,76 203,66 183,66 183,66 157,66" onmouseover="UpdateTooltip(this,0,18)" onfocus="UpdateTooltip(this,0,18)" onclick="return OnShapeClick(0,18);" onkeyup="OnShapeKey(0,18);">
-  <AREA shape="POLYGON" tabindex="1" ALT="START" origTitle="START" TITLE="START"  target="_top" COORDS=" 103,34 144,34 144,34 145,34 145,33 145,33 146,33 146,33 146,33 146,33 147,33 147,33 147,33 147,33 148,32 148,32 148,32 148,32 149,32 149,32 149,31 149,31 149,31 149,31 150,30 150,30 150,30 150,30 150,29 150,29 150,29 150,29 150,28 150,28 150,28 150,27 150,27 150,27 150,27 150,26 150,26 150,26 150,26 150,25 150,25 150,25 150,24 149,24 149,24 149,24 149,24 149,23 149,23 148,23 148,23 148,23 148,22 147,22 147,22 147,22 147,22 146,22 146,22 146,22 146,22 145,21 145,21 145,21 144,21 144,21 103,21 102,21 102,21 102,21 101,21 101,22 101,22 101,22 100,22 100,22 100,22 100,22 99,22 99,22 99,23 99,23 98,23 98,23 98,23 98,24 98,24 98,24 97,24 97,24 97,25 97,25 97,25 97,26 97,26 97,26 97,26 97,27 96,27 96,27 96,27 96,28 96,28 97,28 97,29 97,29 97,29 97,29 97,30 97,30 97,30 97,30 97,31 98,31 98,31 98,31 98,32 98,32 98,32 99,32 99,32 99,32 99,33 100,33 100,33 100,33 100,33 101,33 101,33 101,33 101,33 102,33 102,34 102,34 103,34" onmouseover="UpdateTooltip(this,0,2)" onfocus="UpdateTooltip(this,0,2)" onclick="return OnShapeClick(0,2);" onkeyup="OnShapeKey(0,2);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 0,585 285,585 285,370 0,370 0,585" onmouseover="UpdateTooltip(this,0,78)" onfocus="UpdateTooltip(this,0,78)" onclick="return OnShapeClick(0,78);" onkeyup="OnShapeKey(0,78);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 21,363 222,363 222,155 21,155 21,363" onmouseover="UpdateTooltip(this,0,79)" onfocus="UpdateTooltip(this,0,79)" onclick="return OnShapeClick(0,79);" onkeyup="OnShapeKey(0,79);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 240,294 441,294 441,50 240,50 240,294" onmouseover="UpdateTooltip(this,0,87)" onfocus="UpdateTooltip(this,0,87)" onclick="return OnShapeClick(0,87);" onkeyup="OnShapeKey(0,87);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 21,139 222,139 222,48 21,48 21,139" onmouseover="UpdateTooltip(this,0,77)" onfocus="UpdateTooltip(this,0,77)" onclick="return OnShapeClick(0,77);" onkeyup="OnShapeKey(0,77);">
-  <AREA shape="POLYGON" tabindex="1" ALT="FireV1.zip" origTitle="FireV1.zip" TITLE="FireV1.zip"  target="_top" COORDS=" 399,449 397,449 393,449 377,449 377,450 370,450 370,449 360,449 360,460 370,460 370,459 411,459 411,450 408,450 408,449 399,449" onmouseover="UpdateTooltip(this,0,191)" onfocus="UpdateTooltip(this,0,191)" onclick="return OnShapeClick(0,191);" onkeyup="OnShapeKey(0,191);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Cp-FireV1.zip" origTitle="Cp-FireV1.zip" TITLE="Cp-FireV1.zip"  target="_top" COORDS=" 410,493 408,493 404,493 387,493 385,493 376,493 376,493 370,493 370,492 360,492 360,503 370,503 370,503 421,503 421,493 419,493 419,493 410,493" onmouseover="UpdateTooltip(this,0,184)" onfocus="UpdateTooltip(this,0,184)" onclick="return OnShapeClick(0,184);" onkeyup="OnShapeKey(0,184);">
-  <AREA shape="POLYGON" tabindex="1" ALT="1-1-2" origTitle="1-1-2" TITLE="1-1-2"  target="_top" COORDS=" 390,436 388,436 384,436 382,436 378,436 378,436 370,436 370,436 360,436 360,446 370,446 370,446 398,446 398,436 394,436 394,436 390,436" onmouseover="UpdateTooltip(this,0,177)" onfocus="UpdateTooltip(this,0,177)" onclick="return OnShapeClick(0,177);" onkeyup="OnShapeKey(0,177);">
-  <AREA shape="POLYGON" tabindex="1" ALT="1-1" origTitle="1-1" TITLE="1-1"  target="_top" COORDS=" 387,409 385,409 381,409 381,409 370,409 370,409 360,409 360,419 370,419 370,419 398,419 398,409 391,409 391,409 387,409" onmouseover="UpdateTooltip(this,0,170)" onfocus="UpdateTooltip(this,0,170)" onclick="return OnShapeClick(0,170);" onkeyup="OnShapeKey(0,170);">
-  <AREA shape="POLYGON" tabindex="1" ALT="1-1-1" origTitle="1-1-1" TITLE="1-1-1"  target="_top" COORDS=" 390,422 388,422 384,422 382,422 378,422 378,423 370,423 370,422 360,422 360,433 370,433 370,432 398,432 398,423 394,423 394,422 390,422" onmouseover="UpdateTooltip(this,0,163)" onfocus="UpdateTooltip(this,0,163)" onclick="return OnShapeClick(0,163);" onkeyup="OnShapeKey(0,163);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Source" origTitle="Source" TITLE="Source"  target="_top" COORDS=" 372,473 361,473 361,468 341,468 341,488 361,488 361,483 398,483 398,473 394,473 394,473 372,473 372,473" onmouseover="UpdateTooltip(this,0,156)" onfocus="UpdateTooltip(this,0,156)" onclick="return OnShapeClick(0,156);" onkeyup="OnShapeKey(0,156);">
-  <AREA shape="POLYGON" tabindex="1" ALT="Flash" origTitle="Flash" TITLE="Flash"  target="_top" COORDS=" 375,387 362,387 362,382 342,382 342,402 362,402 362,397 399,397 399,387 392,387 392,387 375,387 375,387" onmouseover="UpdateTooltip(this,0,149)" onfocus="UpdateTooltip(this,0,149)" onclick="return OnShapeClick(0,149);" onkeyup="OnShapeKey(0,149);">
-  <AREA shape="POLYGON" tabindex="1" ALT="FireV1" origTitle="FireV1" TITLE="FireV1"  target="_top" COORDS=" 369,359 353,359 353,360 341,360 341,354 321,354 321,375 341,375 341,370 379,370 379,360 373,360 373,359 369,359" onmouseover="UpdateTooltip(this,0,142)" onfocus="UpdateTooltip(this,0,142)" onclick="return OnShapeClick(0,142);" onkeyup="OnShapeKey(0,142);">
-  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 305,516 306,517 306,517 307,518 308,518 308,519 309,519 310,520 311,520 311,521 312,521 313,521 314,522 314,522 315,523 316,523 317,523 318,524 318,524 319,524 320,524 321,525 322,525 322,525 323,525 324,526 325,526 326,526 327,526 327,526 328,527 329,527 330,527 331,527 332,527 332,527 333,527 334,527 335,527 336,527 337,527 338,527 338,527 339,527 340,527 341,527 342,527 343,527 344,527 344,527 345,527 346,527 347,527 348,527 349,526 350,526 350,526 351,526 352,526 353,525 354,525 355,525 355,525 356,524 357,524 358,524 359,524 359,523 360,523 361,523 362,522 362,522 363,521 364,521 365,521 366,520 366,520 367,519 368,519 368,518 369,518 370,517 371,517 371,516 372,516 373,515 373,515 374,514 375,514 376,514 376,513 377,513 378,512 378,512 379,511 380,511 381,511 382,510 382,510 383,510 384,509 385,509 386,509 386,508 387,508 388,508 389,508 390,507 390,507 391,507 392,507 393,507 394,506 395,506 395,506 396,506 397,506 398,506 399,506 400,506 401,505 401,505 402,505 403,505 404,505 405,505 406,505 407,505 407,505 408,505 409,506 410,506 411,506 412,506 413,506 413,506 414,506 415,506 416,507 417,507 418,507 418,507 419,507 420,508 421,508 422,508 423,508 423,509 424,509 425,509 426,510 427,510 427,510 428,511 429,511 430,511 430,512 431,512 432,513 433,513 433,514 434,514 435,514 436,515 436,515 437,516 438,516 438,348 305,348 305,516" onmouseover="UpdateTooltip(this,0,213)" onfocus="UpdateTooltip(this,0,213)" onclick="return OnShapeClick(0,213);" onkeyup="OnShapeKey(0,213);">
-</MAP>
-
-
-
-</DIV>
-
-</body>
+<map name="visImageMap">
+<area alt="Updated on July, 25, 2007" coords=" 337,601 455,601 455,587 337,587 337,601" onclick="return OnShapeClick(0,217);" onfocus="UpdateTooltip(this,0,217)" onkeyup="OnShapeKey(0,217);" onmouseover="UpdateTooltip(this,0,217)" origtitle="Updated on July, 25, 2007" shape="POLYGON" tabindex="1" target="_top" title="Updated on July, 25, 2007"/>
+<area alt="" coords=" 401,289 419,289 419,266 401,266 401,289" onclick="return OnShapeClick(0,211);" onfocus="UpdateTooltip(this,0,211)" onkeyup="OnShapeKey(0,211);" onmouseover="UpdateTooltip(this,0,211)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 392,310 410,310 410,287 392,287 392,310" onclick="return OnShapeClick(0,98);" onfocus="UpdateTooltip(this,0,98)" onkeyup="OnShapeKey(0,98);" onmouseover="UpdateTooltip(this,0,98)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 261,575 275,575 275,561 261,561 261,575" onclick="return OnShapeClick(0,136);" onfocus="UpdateTooltip(this,0,136)" onkeyup="OnShapeKey(0,136);" onmouseover="UpdateTooltip(this,0,136)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 386,63 408,63 408,41 386,41 386,63" onclick="return OnShapeClick(0,123);" onfocus="UpdateTooltip(this,0,123)" onkeyup="OnShapeKey(0,123);" onmouseover="UpdateTooltip(this,0,123)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 212,381 234,381 234,359 212,359 212,381" onclick="return OnShapeClick(0,111);" onfocus="UpdateTooltip(this,0,111)" onkeyup="OnShapeKey(0,111);" onmouseover="UpdateTooltip(this,0,111)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 188,166 210,166 210,144 188,144 188,166" onclick="return OnShapeClick(0,99);" onfocus="UpdateTooltip(this,0,99)" onkeyup="OnShapeKey(0,99);" onmouseover="UpdateTooltip(this,0,99)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 167,57 181,57 181,43 167,43 167,57" onclick="return OnShapeClick(0,90);" onfocus="UpdateTooltip(this,0,90)" onkeyup="OnShapeKey(0,90);" onmouseover="UpdateTooltip(this,0,90)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="END" coords=" 323,339 365,339 365,339 365,339 366,339 366,339 366,339 366,339 367,339 367,338 367,338 367,338 368,338 368,338 368,338 368,338 369,337 369,337 369,337 369,337 369,337 370,336 370,336 370,336 370,336 370,335 370,335 370,335 370,335 371,334 371,334 371,334 371,334 371,333 371,333 371,333 371,332 371,332 371,332 371,332 371,331 371,331 370,331 370,331 370,330 370,330 370,330 370,330 370,329 370,329 369,329 369,329 369,328 369,328 369,328 368,328 368,328 368,328 368,327 367,327 367,327 367,327 367,327 366,327 366,327 366,327 366,327 365,327 365,327 365,327 323,327 323,327 322,327 322,327 322,327 322,327 321,327 321,327 321,327 321,327 320,327 320,327 320,328 320,328 319,328 319,328 319,328 319,328 319,329 318,329 318,329 318,329 318,330 318,330 318,330 317,330 317,331 317,331 317,331 317,331 317,332 317,332 317,332 317,332 317,333 317,333 317,333 317,334 317,334 317,334 317,334 317,335 317,335 317,335 318,335 318,336 318,336 318,336 318,336 318,337 319,337 319,337 319,337 319,337 319,338 320,338 320,338 320,338 320,338 321,338 321,338 321,339 321,339 322,339 322,339 322,339 322,339 323,339 323,339" onclick="return OnShapeClick(0,88);" onfocus="UpdateTooltip(this,0,88)" onkeyup="OnShapeKey(0,88);" onmouseover="UpdateTooltip(this,0,88)" origtitle="END" shape="POLYGON" tabindex="1" target="_top" title="END"/>
+<area alt="4. Edit CP source file &amp; re-generate it" coords=" 250,60 431,60 431,43 250,43 250,60" onclick="return OnShapeClick(0,80);" onfocus="UpdateTooltip(this,0,80)" onkeyup="OnShapeKey(0,80);" onmouseover="UpdateTooltip(this,0,80)" origtitle="4. Edit CP source file &amp; re-generate it" shape="POLYGON" tabindex="1" target="_top" title="4. Edit CP source file &amp; re-generate it"/>
+<area alt="2. To edit &amp; record on Adobe Captivate." coords=" 42,163 205,163 205,147 42,147 42,163" onclick="return OnShapeClick(0,75);" onfocus="UpdateTooltip(this,0,75)" onkeyup="OnShapeKey(0,75);" onmouseover="UpdateTooltip(this,0,75)" origtitle="2. To edit &amp; record on Adobe Captivate." shape="POLYGON" tabindex="1" target="_top" title="2. To edit &amp; record on Adobe Captivate."/>
+<area alt="1. To get CP source file." coords=" 44,58 202,58 202,41 44,41 44,58" onclick="return OnShapeClick(0,73);" onfocus="UpdateTooltip(this,0,73)" onkeyup="OnShapeKey(0,73);" onmouseover="UpdateTooltip(this,0,73)" origtitle="1. To get CP source file." shape="POLYGON" tabindex="1" target="_top" title="1. To get CP source file."/>
+<area alt="3. Edit CP source file of a section &amp; re-generate it" coords=" 37,379 248,379 248,361 37,361 37,379" onclick="return OnShapeClick(0,71);" onfocus="UpdateTooltip(this,0,71)" onkeyup="OnShapeKey(0,71);" onmouseover="UpdateTooltip(this,0,71)" origtitle="3. Edit CP source file of a section &amp; re-generate it" shape="POLYGON" tabindex="1" target="_top" title="3. Edit CP source file of a section &amp; re-generate it"/>
+<area alt="Save the FireV1.cp and zip the source file." coords=" 264,248 417,248 417,232 264,232 264,248" onclick="return OnShapeClick(0,70);" onfocus="UpdateTooltip(this,0,70)" onkeyup="OnShapeKey(0,70);" onmouseover="UpdateTooltip(this,0,70)" origtitle="Save the FireV1.cp and zip the source file." shape="POLYGON" tabindex="1" target="_top" title="Save the FireV1.cp and zip the source file."/>
+<area alt="To upload   - Flash animation of FireV1.zip to /flash folder  -..." coords=" 250,318 438,318 438,257 250,257 250,318" onclick="return OnShapeClick(0,69);" onfocus="UpdateTooltip(this,0,69)" onkeyup="OnShapeKey(0,69);" onmouseover="UpdateTooltip(this,0,69)" origtitle="To upload   - Flash animation of FireV1.zip to /flash folder  -..." shape="POLYGON" tabindex="1" target="_top" title="To upload   - Flash animation of FireV1.zip to /flash folder  -..."/>
+<area alt="Generate flash animation : - Click on Publish - Select..." coords=" 264,222 417,222 417,154 264,154 264,222" onclick="return OnShapeClick(0,68);" onfocus="UpdateTooltip(this,0,68)" onkeyup="OnShapeKey(0,68);" onmouseover="UpdateTooltip(this,0,68)" origtitle="Generate flash animation : - Click on Publish - Select..." shape="POLYGON" tabindex="1" target="_top" title="Generate flash animation : - Click on Publish - Select..."/>
+<area alt="Save the FireV1.cp" coords=" 264,144 417,144 417,128 264,128 264,144" onclick="return OnShapeClick(0,67);" onfocus="UpdateTooltip(this,0,67)" onkeyup="OnShapeKey(0,67);" onmouseover="UpdateTooltip(this,0,67)" origtitle="Save the FireV1.cp" shape="POLYGON" tabindex="1" target="_top" title="Save the FireV1.cp"/>
+<area alt="To replace the new slides of the modified section into the..." coords=" 264,120 417,120 417,95 264,95 264,120" onclick="return OnShapeClick(0,66);" onfocus="UpdateTooltip(this,0,66)" onkeyup="OnShapeKey(0,66);" onmouseover="UpdateTooltip(this,0,66)" origtitle="To replace the new slides of the modified section into the..." shape="POLYGON" tabindex="1" target="_top" title="To replace the new slides of the modified section into the..."/>
+<area alt="Open FireV1.cp" coords=" 264,85 417,85 417,70 264,70 264,85" onclick="return OnShapeClick(0,65);" onfocus="UpdateTooltip(this,0,65)" onkeyup="OnShapeKey(0,65);" onmouseover="UpdateTooltip(this,0,65)" origtitle="Open FireV1.cp" shape="POLYGON" tabindex="1" target="_top" title="Open FireV1.cp"/>
+<area alt="Upload folder of the flash to..." coords=" 7,579 278,579 278,557 7,557 7,579" onclick="return OnShapeClick(0,64);" onfocus="UpdateTooltip(this,0,64)" onkeyup="OnShapeKey(0,64);" onmouseover="UpdateTooltip(this,0,64)" origtitle="Upload folder of the flash to..." shape="POLYGON" tabindex="1" target="_top" title="Upload folder of the flash to..."/>
+<area alt="Program would general several HTML and flash files, rename the..." coords=" 18,547 267,547 267,523 18,523 18,547" onclick="return OnShapeClick(0,60);" onfocus="UpdateTooltip(this,0,60)" onkeyup="OnShapeKey(0,60);" onmouseover="UpdateTooltip(this,0,60)" origtitle="Program would general several HTML and flash files, rename the..." shape="POLYGON" tabindex="1" target="_top" title="Program would general several HTML and flash files, rename the..."/>
+<area alt="Generate flash animate from the project." coords=" 18,514 267,514 267,497 18,497 18,514" onclick="return OnShapeClick(0,59);" onfocus="UpdateTooltip(this,0,59)" onkeyup="OnShapeKey(0,59);" onmouseover="UpdateTooltip(this,0,59)" origtitle="Generate flash animate from the project." shape="POLYGON" tabindex="1" target="_top" title="Generate flash animate from the project."/>
+<area alt="Save the project (such as 1-1-1.cp)" coords=" 18,488 267,488 267,471 18,471 18,488" onclick="return OnShapeClick(0,58);" onfocus="UpdateTooltip(this,0,58)" onkeyup="OnShapeKey(0,58);" onmouseover="UpdateTooltip(this,0,58)" origtitle="Save the project (such as 1-1-1.cp)" shape="POLYGON" tabindex="1" target="_top" title="Save the project (such as 1-1-1.cp)"/>
+<area alt="" coords=" 182,295 182,296 190,301 190,301 190,301 193,301 193,301 193,301 193,301 193,300 194,300 194,300 194,300 194,300 194,300 195,300 195,300 195,300 195,299 195,299 195,299 195,299 195,299 195,299 195,299 195,299 195,299 195,298 195,298 195,298 195,298 195,298 195,298 195,298 195,298 194,298 194,298 194,298 194,298 194,297 186,293 182,295" onclick="return OnShapeClick(0,26);" onfocus="UpdateTooltip(this,0,26)" onkeyup="OnShapeKey(0,26);" onmouseover="UpdateTooltip(this,0,26)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 201,287 201,283 196,280 193,281 192,280 190,281 190,288 188,289 188,292 188,292 189,293 189,293 189,293 190,293 190,294 191,294 191,294 191,295 192,295 192,295 193,295 193,295 194,296 194,296 195,296 195,296 195,296 196,296 199,297 199,297 199,297 199,299 202,299 202,296 202,296 203,296 203,296 203,296 204,296 204,295 204,295 204,295 205,295 205,295 205,295 205,294 205,294 205,294 205,294 205,294 205,293 205,293 205,293 205,293 205,293 205,293 205,292 205,292 205,292 205,292 205,292 205,291 205,291 205,291 204,291 204,291 204,291 204,291 204,291 204,291 203,290 203,290 203,290 203,289 202,288 202,287 201,287" onclick="return OnShapeClick(0,26);" onfocus="UpdateTooltip(this,0,26)" onkeyup="OnShapeKey(0,26);" onmouseover="UpdateTooltip(this,0,26)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="To demonstrate the tutorial on your computer." coords=" 42,302 205,302 205,278 42,278 42,302" onclick="return OnShapeClick(0,9);" onfocus="UpdateTooltip(this,0,9)" onkeyup="OnShapeKey(0,9);" onmouseover="UpdateTooltip(this,0,9)" origtitle="To demonstrate the tutorial on your computer." shape="POLYGON" tabindex="1" target="_top" title="To demonstrate the tutorial on your computer."/>
+<area alt="Press «End» to stop recording the project." coords=" 18,405 267,405 267,387 18,387 18,405" onclick="return OnShapeClick(0,24);" onfocus="UpdateTooltip(this,0,24)" onkeyup="OnShapeKey(0,24);" onmouseover="UpdateTooltip(this,0,24)" origtitle="Press «End» to stop recording the project." shape="POLYGON" tabindex="1" target="_top" title="Press «End» to stop recording the project."/>
+<area alt="To stop recording the project?" coords=" 76,335 123,349 185,331 123,313 80,326 74,326 74,328 62,331 74,335 74,335 76,335" onclick="return OnShapeClick(0,15);" onfocus="UpdateTooltip(this,0,15)" onkeyup="OnShapeKey(0,15);" onmouseover="UpdateTooltip(this,0,15)" origtitle="To stop recording the project?" shape="POLYGON" tabindex="1" target="_top" title="To stop recording the project?"/>
+<area alt="Press «Record» to start to record screenshots." coords=" 42,269 205,269 205,248 42,248 42,269" onclick="return OnShapeClick(0,14);" onfocus="UpdateTooltip(this,0,14)" onkeyup="OnShapeKey(0,14);" onmouseover="UpdateTooltip(this,0,14)" origtitle="Press «Record» to start to record screenshots." shape="POLYGON" tabindex="1" target="_top" title="Press «Record» to start to record screenshots."/>
+<area alt="Add these three slides that you can copy from other tutorials..." coords=" 18,460 267,460 267,414 18,414 18,460" onclick="return OnShapeClick(0,22);" onfocus="UpdateTooltip(this,0,22)" onkeyup="OnShapeKey(0,22);" onmouseover="UpdateTooltip(this,0,22)" origtitle="Add these three slides that you can copy from other tutorials..." shape="POLYGON" tabindex="1" target="_top" title="Add these three slides that you can copy from other tutorials..."/>
+<area alt="Select «Software Simulation»  and «Custom size» 800 x 600" coords=" 42,241 205,241 205,218 42,218 42,241" onclick="return OnShapeClick(0,8);" onfocus="UpdateTooltip(this,0,8)" onkeyup="OnShapeKey(0,8);" onmouseover="UpdateTooltip(this,0,8)" origtitle="Select «Software Simulation»  and «Custom size» 800 x 600" shape="POLYGON" tabindex="1" target="_top" title="Select «Software Simulation»  and «Custom size» 800 x 600"/>
+<area alt="Select «Record or make a new project»." coords=" 42,210 205,210 205,193 42,193 42,210" onclick="return OnShapeClick(0,7);" onfocus="UpdateTooltip(this,0,7)" onkeyup="OnShapeKey(0,7);" onmouseover="UpdateTooltip(this,0,7)" origtitle="Select «Record or make a new project»." shape="POLYGON" tabindex="1" target="_top" title="Select «Record or make a new project»."/>
+<area alt="Open Adobe Captivate" coords=" 42,186 205,186 205,171 42,171 42,186" onclick="return OnShapeClick(0,5);" onfocus="UpdateTooltip(this,0,5)" onkeyup="OnShapeKey(0,5);" onmouseover="UpdateTooltip(this,0,5)" origtitle="Open Adobe Captivate" shape="POLYGON" tabindex="1" target="_top" title="Open Adobe Captivate"/>
+<area alt="Upzip FireV1.zip" coords=" 140,121 138,121 134,121 98,121 98,121 43,121 43,131 204,131 204,121 149,121 149,121 140,121" onclick="return OnShapeClick(0,4);" onfocus="UpdateTooltip(this,0,4)" onkeyup="OnShapeKey(0,4);" onmouseover="UpdateTooltip(this,0,4)" origtitle="Upzip FireV1.zip" shape="POLYGON" tabindex="1" target="_top" title="Upzip FireV1.zip"/>
+<area alt="Download CP-FireV1.zip" coords=" 44,113 203,113 203,102 44,102 44,113" onclick="return OnShapeClick(0,3);" onfocus="UpdateTooltip(this,0,3)" onkeyup="OnShapeKey(0,3);" onmouseover="UpdateTooltip(this,0,3)" origtitle="Download CP-FireV1.zip" shape="POLYGON" tabindex="1" target="_top" title="Download CP-FireV1.zip"/>
+<area alt="Browse /FireModel/FireV1/source/" coords=" 44,95 203,95 203,83 44,83 44,95" onclick="return OnShapeClick(0,1);" onfocus="UpdateTooltip(this,0,1)" onkeyup="OnShapeKey(0,1);" onmouseover="UpdateTooltip(this,0,1)" origtitle="Browse /FireModel/FireV1/source/" shape="POLYGON" tabindex="1" target="_top" title="Browse /FireModel/FireV1/source/"/>
+<area alt="Go to /prod/en/outil/classrrom/example" coords=" 157,66 155,66 125,66 123,66 110,66 108,66 100,66 98,66 85,66 83,66 64,66 64,66 44,66 44,76 203,76 203,66 183,66 183,66 157,66" onclick="return OnShapeClick(0,18);" onfocus="UpdateTooltip(this,0,18)" onkeyup="OnShapeKey(0,18);" onmouseover="UpdateTooltip(this,0,18)" origtitle="Go to /prod/en/outil/classrrom/example" shape="POLYGON" tabindex="1" target="_top" title="Go to /prod/en/outil/classrrom/example"/>
+<area alt="START" coords=" 103,34 144,34 144,34 145,34 145,33 145,33 146,33 146,33 146,33 146,33 147,33 147,33 147,33 147,33 148,32 148,32 148,32 148,32 149,32 149,32 149,31 149,31 149,31 149,31 150,30 150,30 150,30 150,30 150,29 150,29 150,29 150,29 150,28 150,28 150,28 150,27 150,27 150,27 150,27 150,26 150,26 150,26 150,26 150,25 150,25 150,25 150,24 149,24 149,24 149,24 149,24 149,23 149,23 148,23 148,23 148,23 148,22 147,22 147,22 147,22 147,22 146,22 146,22 146,22 146,22 145,21 145,21 145,21 144,21 144,21 103,21 102,21 102,21 102,21 101,21 101,22 101,22 101,22 100,22 100,22 100,22 100,22 99,22 99,22 99,23 99,23 98,23 98,23 98,23 98,24 98,24 98,24 97,24 97,24 97,25 97,25 97,25 97,26 97,26 97,26 97,26 97,27 96,27 96,27 96,27 96,28 96,28 97,28 97,29 97,29 97,29 97,29 97,30 97,30 97,30 97,30 97,31 98,31 98,31 98,31 98,32 98,32 98,32 99,32 99,32 99,32 99,33 100,33 100,33 100,33 100,33 101,33 101,33 101,33 101,33 102,33 102,34 102,34 103,34" onclick="return OnShapeClick(0,2);" onfocus="UpdateTooltip(this,0,2)" onkeyup="OnShapeKey(0,2);" onmouseover="UpdateTooltip(this,0,2)" origtitle="START" shape="POLYGON" tabindex="1" target="_top" title="START"/>
+<area alt="" coords=" 0,585 285,585 285,370 0,370 0,585" onclick="return OnShapeClick(0,78);" onfocus="UpdateTooltip(this,0,78)" onkeyup="OnShapeKey(0,78);" onmouseover="UpdateTooltip(this,0,78)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 21,363 222,363 222,155 21,155 21,363" onclick="return OnShapeClick(0,79);" onfocus="UpdateTooltip(this,0,79)" onkeyup="OnShapeKey(0,79);" onmouseover="UpdateTooltip(this,0,79)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 240,294 441,294 441,50 240,50 240,294" onclick="return OnShapeClick(0,87);" onfocus="UpdateTooltip(this,0,87)" onkeyup="OnShapeKey(0,87);" onmouseover="UpdateTooltip(this,0,87)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="" coords=" 21,139 222,139 222,48 21,48 21,139" onclick="return OnShapeClick(0,77);" onfocus="UpdateTooltip(this,0,77)" onkeyup="OnShapeKey(0,77);" onmouseover="UpdateTooltip(this,0,77)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+<area alt="FireV1.zip" coords=" 399,449 397,449 393,449 377,449 377,450 370,450 370,449 360,449 360,460 370,460 370,459 411,459 411,450 408,450 408,449 399,449" onclick="return OnShapeClick(0,191);" onfocus="UpdateTooltip(this,0,191)" onkeyup="OnShapeKey(0,191);" onmouseover="UpdateTooltip(this,0,191)" origtitle="FireV1.zip" shape="POLYGON" tabindex="1" target="_top" title="FireV1.zip"/>
+<area alt="Cp-FireV1.zip" coords=" 410,493 408,493 404,493 387,493 385,493 376,493 376,493 370,493 370,492 360,492 360,503 370,503 370,503 421,503 421,493 419,493 419,493 410,493" onclick="return OnShapeClick(0,184);" onfocus="UpdateTooltip(this,0,184)" onkeyup="OnShapeKey(0,184);" onmouseover="UpdateTooltip(this,0,184)" origtitle="Cp-FireV1.zip" shape="POLYGON" tabindex="1" target="_top" title="Cp-FireV1.zip"/>
+<area alt="1-1-2" coords=" 390,436 388,436 384,436 382,436 378,436 378,436 370,436 370,436 360,436 360,446 370,446 370,446 398,446 398,436 394,436 394,436 390,436" onclick="return OnShapeClick(0,177);" onfocus="UpdateTooltip(this,0,177)" onkeyup="OnShapeKey(0,177);" onmouseover="UpdateTooltip(this,0,177)" origtitle="1-1-2" shape="POLYGON" tabindex="1" target="_top" title="1-1-2"/>
+<area alt="1-1" coords=" 387,409 385,409 381,409 381,409 370,409 370,409 360,409 360,419 370,419 370,419 398,419 398,409 391,409 391,409 387,409" onclick="return OnShapeClick(0,170);" onfocus="UpdateTooltip(this,0,170)" onkeyup="OnShapeKey(0,170);" onmouseover="UpdateTooltip(this,0,170)" origtitle="1-1" shape="POLYGON" tabindex="1" target="_top" title="1-1"/>
+<area alt="1-1-1" coords=" 390,422 388,422 384,422 382,422 378,422 378,423 370,423 370,422 360,422 360,433 370,433 370,432 398,432 398,423 394,423 394,422 390,422" onclick="return OnShapeClick(0,163);" onfocus="UpdateTooltip(this,0,163)" onkeyup="OnShapeKey(0,163);" onmouseover="UpdateTooltip(this,0,163)" origtitle="1-1-1" shape="POLYGON" tabindex="1" target="_top" title="1-1-1"/>
+<area alt="Source" coords=" 372,473 361,473 361,468 341,468 341,488 361,488 361,483 398,483 398,473 394,473 394,473 372,473 372,473" onclick="return OnShapeClick(0,156);" onfocus="UpdateTooltip(this,0,156)" onkeyup="OnShapeKey(0,156);" onmouseover="UpdateTooltip(this,0,156)" origtitle="Source" shape="POLYGON" tabindex="1" target="_top" title="Source"/>
+<area alt="Flash" coords=" 375,387 362,387 362,382 342,382 342,402 362,402 362,397 399,397 399,387 392,387 392,387 375,387 375,387" onclick="return OnShapeClick(0,149);" onfocus="UpdateTooltip(this,0,149)" onkeyup="OnShapeKey(0,149);" onmouseover="UpdateTooltip(this,0,149)" origtitle="Flash" shape="POLYGON" tabindex="1" target="_top" title="Flash"/>
+<area alt="FireV1" coords=" 369,359 353,359 353,360 341,360 341,354 321,354 321,375 341,375 341,370 379,370 379,360 373,360 373,359 369,359" onclick="return OnShapeClick(0,142);" onfocus="UpdateTooltip(this,0,142)" onkeyup="OnShapeKey(0,142);" onmouseover="UpdateTooltip(this,0,142)" origtitle="FireV1" shape="POLYGON" tabindex="1" target="_top" title="FireV1"/>
+<area alt="" coords=" 305,516 306,517 306,517 307,518 308,518 308,519 309,519 310,520 311,520 311,521 312,521 313,521 314,522 314,522 315,523 316,523 317,523 318,524 318,524 319,524 320,524 321,525 322,525 322,525 323,525 324,526 325,526 326,526 327,526 327,526 328,527 329,527 330,527 331,527 332,527 332,527 333,527 334,527 335,527 336,527 337,527 338,527 338,527 339,527 340,527 341,527 342,527 343,527 344,527 344,527 345,527 346,527 347,527 348,527 349,526 350,526 350,526 351,526 352,526 353,525 354,525 355,525 355,525 356,524 357,524 358,524 359,524 359,523 360,523 361,523 362,522 362,522 363,521 364,521 365,521 366,520 366,520 367,519 368,519 368,518 369,518 370,517 371,517 371,516 372,516 373,515 373,515 374,514 375,514 376,514 376,513 377,513 378,512 378,512 379,511 380,511 381,511 382,510 382,510 383,510 384,509 385,509 386,509 386,508 387,508 388,508 389,508 390,507 390,507 391,507 392,507 393,507 394,506 395,506 395,506 396,506 397,506 398,506 399,506 400,506 401,505 401,505 402,505 403,505 404,505 405,505 406,505 407,505 407,505 408,505 409,506 410,506 411,506 412,506 413,506 413,506 414,506 415,506 416,507 417,507 418,507 418,507 419,507 420,508 421,508 422,508 423,508 423,509 424,509 425,509 426,510 427,510 427,510 428,511 429,511 430,511 430,512 431,512 432,513 433,513 433,514 434,514 435,514 436,515 436,515 437,516 438,516 438,348 305,348 305,516" onclick="return OnShapeClick(0,213);" onfocus="UpdateTooltip(this,0,213)" onkeyup="OnShapeKey(0,213);" onmouseover="UpdateTooltip(this,0,213)" origtitle="" shape="POLYGON" tabindex="1" target="_top" title=""/>
+</map>
+</div>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>
-

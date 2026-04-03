@@ -1,161 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>ORIZI</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
-</head>
-
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<p>THIS PAGE WILL BE SOON AVAILABLE IN ENGLISH</p>
+<h1>Orizi </h1>
+<h1>Small irrigation systems under free management</h1>
+<p>Nicolas Becu (ENGREF), Pascal Perez (CIRAD)</p>
+<h2>Importance du facteur social dans la gestion collective de leau : Cas 
 
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        du périmètre irrigué rizicole de Keji, Java Centre, 
 
-  <tr> 
+        Indonésie</h2>
+<p>Nicolas Becu (ENREF), Pascal Perez (CIRAD)</p>
+<p><img align="left" height="161" src="../../images/applica/orizi-0.gif" width="243"/>La 
 
-    <!--#include virtual="sommair.inc" -->
+        gestion de leau en Indonésie devient de plus en plus problématique. 
 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-
-      <p>&nbsp;</p>
-
-      <p>THIS PAGE WILL BE SOON AVAILABLE IN ENGLISH</p>
-
-      <h1>Orizi </h1>
-
-      <h1>Small irrigation systems under free management</h1>
-
-      <p>Nicolas Becu (ENGREF), Pascal Perez (CIRAD)</p>
-
-      <h2>Importance du facteur social dans la gestion collective de leau : Cas 
-
-        du p&eacute;rim&egrave;tre irrigu&eacute; rizicole de Keji, Java Centre, 
-
-        Indon&eacute;sie</h2>
-
-      <p>Nicolas Becu (ENREF), Pascal Perez (CIRAD)</p>
-
-      <p><img src="../../images/applica/orizi-0.gif" width="243" height="161" align="left">La 
-
-        gestion de leau en Indon&eacute;sie devient de plus en plus probl&eacute;matique. 
-
-        En effet au niveau des p&eacute;rim&egrave;tres amont des bassins versant, 
+        En effet au niveau des périmètres amont des bassins versant, 
 
         les institutions gouvernementales se retirent et les agriculteurs se retrouvent 
 
-        en quelque sorte livr&eacute;s &agrave; eux m&ecirc;me. Or au niveau des 
+        en quelque sorte livrés à eux même. Or au niveau des 
 
         zones amont de ces bassins versants, certains agriculteurs se plaignent 
 
-        de ne pas avoir assez deau durant la saison s&egrave;che. Il nous a apparut 
+        de ne pas avoir assez deau durant la saison sèche. Il nous a apparut 
 
-        important de tester limportance du facteur social au niveau de zone &agrave; 
+        important de tester limportance du facteur social au niveau de zone à 
 
-        conflit car cest dans ce genre de cas o&ugrave; il sexprime le mieux. 
+        conflit car cest dans ce genre de cas où il sexprime le mieux. 
 
-        Le mod&egrave;le Orizi se place tout &agrave; lamont du BV l&agrave; 
+        Le modèle Orizi se place tout à lamont du BV là 
 
-        o&ugrave; le manque deau d&eacute;bute.</p>
+        où le manque deau débute.</p>
+<p> </p>
+<p>Lobjectif du modèle est dobserver linfluence de différent 
 
-      <p>&nbsp;</p>
+        type de comportement de gestion sur le débit en aval du périmètre 
 
-      <p>Lobjectif du mod&egrave;le est dobserver linfluence de diff&eacute;rent 
+        et sur la viabilité du périmètre lui même.</p>
+<h4>Structure dOrizi</h4>
+<p>La dynamique bio-physique du modèle consiste à chaque pas 
 
-        type de comportement de gestion sur le d&eacute;bit en aval du p&eacute;rim&egrave;tre 
-
-        et sur la viabilit&eacute; du p&eacute;rim&egrave;tre lui m&ecirc;me.</p>
-
-      <h4>Structure dOrizi</h4>
-
-      <p>La dynamique bio-physique du mod&egrave;le consiste &agrave; chaque pas 
-
-        de temps &agrave; distribuer leau provenant de la rivi&egrave;re et des 
+        de temps à distribuer leau provenant de la rivière et des 
 
         sources tout dabord dans les canaux puis dans les parcelles. Les agents 
 
         agissent sur louverture ou la fermeture des parcelles et ce sont ces 
 
-        deux actions qui seront le lieu privil&eacute;gi&eacute; des interactions 
+        deux actions qui seront le lieu privilégié des interactions 
 
-        du syst&egrave;me ; Lautre aspect de la dynamique biophysique est la 
+        du système ; Lautre aspect de la dynamique biophysique est la 
 
-        croissance du riz et son evapotranspiration mais ces aspects ont &eacute;t&eacute; 
+        croissance du riz et son evapotranspiration mais ces aspects ont été 
 
-        simplifi&eacute;s au maximum car ils ne sont pas dun int&eacute;r&ecirc;t 
+        simplifiés au maximum car ils ne sont pas dun intérêt 
 
-        primordial pour la question de d&eacute;part.</p>
+        primordial pour la question de départ.</p>
+<p><img align="right" height="307" src="../../images/applica/orizi-3.gif" width="259"/>Dans 
 
-      <p><img src="../../images/applica/orizi-3.gif" width="259" height="307" align="right">Dans 
-
-        le mod&egrave;le, un agent riziculteur est d&eacute;finit par quatre attributs 
+        le modèle, un agent riziculteur est définit par quatre attributs 
 
         principaux :</p>
+<ul>
+<li>sa stratégie dirrigation,</li>
+<li>le temps disponible pour la riziculture,</li>
+<li>sa motivation pour la riziculture dépendante de limportance 
 
-      <ul>
-
-        <li>sa strat&eacute;gie dirrigation,</li>
-
-        <li>le temps disponible pour la riziculture,</li>
-
-        <li>sa motivation pour la riziculture d&eacute;pendante de limportance 
-
-          qu&agrave; la culture de riz dans son syst&egrave;me dexploitation</li>
-
-        <li>son caract&egrave;re (individualiste, coop&eacute;ratif ou soumis).</li>
-
-      </ul>
-
-      <p>Chacun de ces attributs va guider ces choix et son comportement vis a 
+          quà la culture de riz dans son système dexploitation</li>
+<li>son caractère (individualiste, coopératif ou soumis).</li>
+</ul>
+<p>Chacun de ces attributs va guider ces choix et son comportement vis a 
 
         vis de la gestion individuelle de sa parcelle et de ces interactions avec 
 
         les autres riziculteurs.</p>
+<p>En jouant sur les caractéristiques de comportement de la population, 
 
-      <p>En jouant sur les caract&eacute;ristiques de comportement de la population, 
-
-        le simulateur permet de tester diff&eacute;rents sc&eacute;narios et de 
+        le simulateur permet de tester différents scénarios et de 
 
         mettre en avant leur importance dans un processus collectif.</p>
-
-      <p>&nbsp;</p>
-
-      <h2 align="left">References </h2>
-
-      <ul>
-        <li>For more information, contact the authors <font face="Georgia, Times New Roman, Times, serif">(<a href="mailto:pascal.perez@cirad.fr">Pascal 
+<p> </p>
+<h2 align="left">References </h2>
+<ul>
+<li>For more information, contact the authors <font face="Georgia, Times New Roman, Times, serif">(<a href="mailto:pascal.perez@cirad.fr">Pascal 
           Perez</a> et <a href="mailto:nicolas_becu@yahoo.com">Nicolas Becu</a>)</font>.</li>
-        <li>Download the model (<a href="/logiciel/Orizi.zip">zip file</a>, 95 Ko) </li>
-      </ul>
-      <p>&nbsp;</p>
-
-      <h1>&nbsp;</h1>
-
-      <!--#include virtual="/include/copyright_en.inc" -->
-
-    </td>
-
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-      <div align="right" class="texte"></div>
-
-    </td>
-
-  </tr>
-
+<li>Download the model (<a href="/logiciel/Orizi.zip">zip file</a>, 95 Ko) </li>
+</ul>
+<p> </p>
+<h1> </h1>
+<!--#include virtual="/include/copyright_en.inc" -->
+</td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-
-</body>
-
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>
-

@@ -1,53 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>FloAgri</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-  <td width="*" align="left" valign="middle" bgcolor="#FFFFFF"> 
-   <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td align="left" bgcolor="#FFFFFF" valign="middle" width="*">
+<p> 
    
       <h1>FloAgri.</h1>
-      <h2>New opportunities for small farmers of the  Amazon to strengthen hazards resilience while preserving their forest. <br>
+<h2>New opportunities for small farmers of the  Amazon to strengthen hazards resilience while preserving their forest. <br/>
 Field experiments combined with Agent-Based  Modeling</h2>
-      <p><strong>Bommel, P., Sist, P., Piketty, M-G., Bendahan,  A. B. </strong></p>
- 
-      <p>By seeking for alternative land uses in the  Amazon, the Floagri project (UE) has experimented several  practices on the field with small-scale farmers in order to reach a more  sustainable development. We have analyzed the benefits and the constraints of  this field experiments. Two of them have been formalized into an Agent-Based  Model (ABM): the permanent field of annual crop (PFAC) and the forest management (FM) of the legal reserve of the small-scaled  farmers property. Based on conservation tillage technics (also called Conservation  Agriculture),  PFAC aims at recovering degraded pastures to avoid slash and  burn practices and FM consists in using the &ldquo;legal reserve&rdquo; (80% of the farm  area) without cutting the forest. </p>
-      <table width="851" border="0">
-        <tr>
-          <td width="250" valign="top">Our model aims at assessing economic performances and environmental  impacts of family breeders and testing the influences of PFAC and forest  management as additional activities. The principle of  this analysis is to compare various production activities starting from the  same initial conditions. Considering that the small-scaled farmers in the  Amazon are mainly focused on livestock, each agent adopts a breeder strategy  and a set of specific activities. Then each one begins with a fixed size farm,  containing the same land cover and the same soil quality. His labor force is  also strictly identical. </td>
-          <td width="591"><img src="../../images/applica/floagri1.jpg" alt="Floagri: Alternativas Adaptadas" width="509" height="375" hspace="33"></td>
-        </tr>
-      </table>
-      <p>&nbsp;</p>
-      <table width="854" border="0">
-        <tr>
-          <td width="474"><img src="../../images/applica/floagri2.jpg" alt="Ro&ccedil;a permanente" width="460" height="361"></td>
-          <td width="370">Our study does not compare solely  the financial profits of the agricultural activities implemented in the  project. But it seeks to better understand and assess the feasibility of each  new activity in terms of family labor management, availability of land and  economic profitability. <br>
-Our first findings conclude that a strict compliance with the law (do not deforest  80% of property) is  not economically sustainable if the agents apply their standard strategy. By just looking at the  static economic returns, the new  activities do not provide obvious  economic advantages compared to traditional breeding. But the simulations  show that when one  takes into account the hazard  (like desease probability), these extra activities can be  profitable by allowing the agents to overcome their  difficulties while preserving their forest.<br>
+<p><strong>Bommel, P., Sist, P., Piketty, M-G., Bendahan,  A. B. </strong></p>
+<p>By seeking for alternative land uses in the  Amazon, the Floagri project (UE) has experimented several  practices on the field with small-scale farmers in order to reach a more  sustainable development. We have analyzed the benefits and the constraints of  this field experiments. Two of them have been formalized into an Agent-Based  Model (ABM): the permanent field of annual crop (PFAC) and the forest management (FM) of the legal reserve of the small-scaled  farmers property. Based on conservation tillage technics (also called Conservation  Agriculture),  PFAC aims at recovering degraded pastures to avoid slash and  burn practices and FM consists in using the “legal reserve” (80% of the farm  area) without cutting the forest. </p>
+<table border="0" width="851">
+<tr>
+<td valign="top" width="250">Our model aims at assessing economic performances and environmental  impacts of family breeders and testing the influences of PFAC and forest  management as additional activities. The principle of  this analysis is to compare various production activities starting from the  same initial conditions. Considering that the small-scaled farmers in the  Amazon are mainly focused on livestock, each agent adopts a breeder strategy  and a set of specific activities. Then each one begins with a fixed size farm,  containing the same land cover and the same soil quality. His labor force is  also strictly identical. </td>
+<td width="591"><img alt="Floagri: Alternativas Adaptadas" height="375" hspace="33" src="../../images/applica/floagri1.jpg" width="509"/></td>
+</tr>
+</table>
+<p> </p>
+<table border="0" width="854">
+<tr>
+<td width="474"><img alt="Roça permanente" height="361" src="../../images/applica/floagri2.jpg" width="460"/></td>
+<td width="370">Our study does not compare solely  the financial profits of the agricultural activities implemented in the  project. But it seeks to better understand and assess the feasibility of each  new activity in terms of family labor management, availability of land and  economic profitability. <br/>
+Our first findings conclude that a strict compliance with the law (do not deforest  80% of property) is  not economically sustainable if the agents apply their standard strategy. By just looking at the  static economic returns, the new  activities do not provide obvious  economic advantages compared to traditional breeding. But the simulations  show that when one  takes into account the hazard  (like desease probability), these extra activities can be  profitable by allowing the agents to overcome their  difficulties while preserving their forest.<br/>
 Thus, the Floagri experiments combined with  simulation analysis reveal that new agricultural practices can increase the  small farmers capacities such that resilience against hazards. In the same  time, by preserving their forest, they contribute to the sustainable development  of the Amazon region.</td>
-        </tr>
-      </table>
-      <h3>See more details on the <a href="floagriDescription.htm">model description</a> and on <a href="floagriResults.htm">main results</a>.</h3>
-      <h2 align="left">References      </h2>
+</tr>
+</table>
+<h3>See more details on the <a href="floagriDescription.htm">model description</a> and on <a href="floagriResults.htm">main results</a>.</h3>
+<h2 align="left">References      </h2>
 <p>For more information, <a href="mailto:bommel@cirad.fr">contact the 
         author.</a></p>
-      <p>Paper on  Cirad web site (in french) : <a href="http://www.cirad.fr/actualites/toutes-les-actualites/articles/2010/science/floagri">Quand l&rsquo;agriculture familiale pr&eacute;serve la for&ecirc;t amazonienne</a></p>
+<p>Paper on  Cirad web site (in french) : <a href="http://www.cirad.fr/actualites/toutes-les-actualites/articles/2010/science/floagri">Quand l’agriculture familiale préserve la forêt amazonienne</a></p>
 <p><a href="http://www.cirad.fr/ur/green/themes_et_projets_de_recherche/projets_finis/floagri">Presentation of Floagri project</a> on the Green research unit.</p>
-      <!--#include virtual="/include/copyright_fr.inc" -->
-	</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

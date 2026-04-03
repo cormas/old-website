@@ -1,1 +1,169 @@
-<html>  <head>    <meta content="text/html; charset=iso-8859-1" http-equiv="content-type">    <meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">    <title>Cormas previous version</title>    <!--#include virtual="/include/script.inc" -->    <link rel="stylesheet" href="/css/cormas.css" --="">    <style type="text/css"><!--.style1 {	color: #FF0000;	font-weight: bold;}--></style>  </head>  <body topmargin="0" leftmargin="0" border="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')"    bgcolor="#FFFFFF"    marginheight="0"    marginwidth="0">    <!--#include virtual="haut.inc" -->    <table border="0" cellpadding="0" cellspacing="0" width="100%">      <tbody>        <tr>          <!--#include virtual="sommair.inc" -->          <td bgcolor="#FFFFFF" valign="top" width="*">            <p><br>            </p>            <p> </p>            <h1>Previous Cormas Versions</h1>            <br>            <br>            <div>              <div>                <hr>                <p><span id="result_box2" lang="en"> The new version of Cormas                    is available. <a href="install.htm" target="_self">Download</a>                    Cormas2014</span>. </p>                <p> * Click <a href="version_vw" target="_blank">here</a> to                  know how to check the version of VisualWorks that is currently                  installed on your computer.<br>                  ** Click <a href="version_cormas" target="_blank">here</a> to                  know how to check the version of Cormas that is currently                  installed on your computer. </p>                <hr>                <p>Install the Cormas version of&nbsp;<span class="style1">                    September 2013</span>.                </p>                <p> </p>                <p>&nbsp;&nbsp;&nbsp; Get the version of <a href="../../../logiciel/cormas2013.zip">Cormas2013.zip</a>.</p>                <p>The major changes concern the Cormas kernel, based on a MVC                  architecture (Model independent of his Views and of the way to                  Control it). The design has been oriented in two directions:                  1) to enable the development of interactive simulations, and                  2) to facilitate the collective design and implementation of                  models. </p>                <ul>                  <li>For the first point, the goal is to interact more easily                    with the entities of a simulation (to move them manually,                    send them messages, track them, "zoom in" on parts of space,                    ...) in order to participate, alone or with others,                    on&nbsp;the run of a scenario.</li>                  <li>For the 2nd point, we seek to facilitate the                    implementation of an ABM. This is to simplify how to create                    new classes and to specify attributes and their values. But                    it is also possible to draw simple activitiy diagrams that                    are directly interpreted by Cormas.&nbsp;The goal is not to                    avoid coding a model, but to organize plug-and-play activity                    nodes (software blocks that were previously coded by the                    modeler) in order to graphically design the behavior's rule                    of an agent. This diagram editor allows the creation of new                    activities that are interpreted &#8220;on the fly&#8221; by Cormas. </li>                </ul>                <p>Some progress are still needed in both directions. These are                  the first steps.</p>                Several other changes were done, such as the development of a                sensitivity analysis module or the creation of new entities                (networks, nodes and arcs).                <p>                </p>                <hr>                <p>Install the Cormas version of&nbsp;<span class="style1">                    September 2010<span style="color: black;"></span></span>. </p>                <p> </p>                <p>&nbsp;&nbsp;&nbsp; Get the version of <a href="../../../logiciel/cormas2010.zip">Cormas2010.zip</a>.</p>                <hr>                <p>Install the Cormas version of&nbsp;<span class="style1"> </span><span                    class="style1"><b>Mars                      2008</b></span>. <br>                </p>                <p>&nbsp;&nbsp;&nbsp; Get the version of <a href="../../../logiciel/cormas2008.zip">Cormas2008.zip</a>.                </p>                <hr>                <p>Cormas on <span class="style1"><b>VW3</b></span>. <br>                </p>                <p>&nbsp;&nbsp;&nbsp; Get this very old version: <a href="../../../logiciel/vw3/VWNC30-Cormas.zip">Cormas</a><a                    target="_blank">.zip</a>.</p>              </div>              <p>&nbsp;</p>            </div>            <!--#include virtual="/include/copyright_en.inc" --> </td>          <td bgcolor="#FFFFFF" valign="top" width="15"> <br>          </td>        </tr>      </tbody>    </table>  </body></html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>Cormas previous version</title>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<!--#include virtual="haut.inc" -->
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p><br/>
+</p>
+<p> </p>
+<h1>Previous Cormas Versions</h1>
+<br/>
+<br/>
+<div>
+<div>
+<hr/>
+<p><span id="result_box2" lang="en"> The new version of Cormas
+                    is available. <a href="install.htm" target="_self">Download</a>
+                    Cormas2014</span>. </p>
+<p> * Click <a href="version_vw" target="_blank">here</a> to
+                  know how to check the version of VisualWorks that is currently
+                  installed on your computer.<br/>
+                  ** Click <a href="version_cormas" target="_blank">here</a> to
+                  know how to check the version of Cormas that is currently
+                  installed on your computer. </p>
+<hr/>
+<p>Install the Cormas version of <span class="style1">
+                    September 2013</span>.
+                </p>
+<p> </p>
+<p>    Get the version of <a href="../../../logiciel/cormas2013.zip">Cormas2013.zip</a>.</p>
+<p>The major changes concern the Cormas kernel, based on a MVC
+                  architecture (Model independent of his Views and of the way to
+                  Control it). The design has been oriented in two directions:
+                  1) to enable the development of interactive simulations, and
+                  2) to facilitate the collective design and implementation of
+                  models. </p>
+<ul>
+<li>For the first point, the goal is to interact more easily
+                    with the entities of a simulation (to move them manually,
+                    send them messages, track them, "zoom in" on parts of space,
+                    ...) in order to participate, alone or with others,
+                    on the run of a scenario.</li>
+<li>For the 2nd point, we seek to facilitate the
+                    implementation of an ABM. This is to simplify how to create
+                    new classes and to specify attributes and their values. But
+                    it is also possible to draw simple activitiy diagrams that
+                    are directly interpreted by Cormas. The goal is not to
+                    avoid coding a model, but to organize plug-and-play activity
+                    nodes (software blocks that were previously coded by the
+                    modeler) in order to graphically design the behavior's rule
+                    of an agent. This diagram editor allows the creation of new
+                    activities that are interpreted “on the fly” by Cormas. </li>
+</ul>
+<p>Some progress are still needed in both directions. These are
+                  the first steps.</p>
+                Several other changes were done, such as the development of a
+                sensitivity analysis module or the creation of new entities
+                (networks, nodes and arcs).
+                <p>
+</p>
+<hr/>
+<p>Install the Cormas version of <span class="style1">
+                    September 2010<span style="color: black;"></span></span>. </p>
+<p> </p>
+<p>    Get the version of <a href="../../../logiciel/cormas2010.zip">Cormas2010.zip</a>.</p>
+<hr/>
+<p>Install the Cormas version of <span class="style1"> </span><span class="style1"><b>Mars
+                      2008</b></span>. <br/>
+</p>
+<p>    Get the version of <a href="../../../logiciel/cormas2008.zip">Cormas2008.zip</a>.
+                </p>
+<hr/>
+<p>Cormas on <span class="style1"><b>VW3</b></span>. <br/>
+</p>
+<p>    Get this very old version: <a href="../../../logiciel/vw3/VWNC30-Cormas.zip">Cormas</a><a target="_blank">.zip</a>.</p>
+</div>
+<p> </p>
+</div>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15"> <br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
+</html>

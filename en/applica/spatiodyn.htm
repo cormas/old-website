@@ -1,139 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> SpatioDyn</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-  <!--#include virtual="sommair.inc" --> 
-  <td width="*" valign="top" bgcolor="#FFFFFF"> 
- <p>&nbsp;</p><p>&nbsp;</p><p>THIS PAGE WILL BE SOON AVAILABLE IN ENGLISH</p> 
-   <p>&nbsp;
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p><p> </p><p>THIS PAGE WILL BE SOON AVAILABLE IN ENGLISH</p>
+<p> 
   
       <h1>SpatioDyn </h1>
-      <h2>Mod&eacute;lisation des dynamiques spatiales par SIG et SMA</h2>
-      <p>Muriel Bonin, Umr espace-Cirad tera</p>
-  
-      <img src="/images/applica/spatiodyn1.gif" width="231" height="187" align="right" vspace="10" hspace="10" alt="Interface de SpatioDyn"> 
-      <p>Notre travail porte sur la mod&eacute;lisation des dynamiques spatiales 
-        et est appliqu&eacute; au Massif du Tanargue (Monts dArd&egrave;che, 
-        France). Il se situe dans la continuit&eacute; de travaux ant&eacute;rieurs 
+<h2>Modélisation des dynamiques spatiales par SIG et SMA</h2>
+<p>Muriel Bonin, Umr espace-Cirad tera</p>
+<img align="right" alt="Interface de SpatioDyn" height="187" hspace="10" src="/images/applica/spatiodyn1.gif" vspace="10" width="231"/>
+<p>Notre travail porte sur la modélisation des dynamiques spatiales 
+        et est appliqué au Massif du Tanargue (Monts dArdèche, 
+        France). Il se situe dans la continuité de travaux antérieurs 
         qui envisagent lespace dans les SMA, non pas comme une grille de cellules, 
-        mais comme un ensemble dentit&eacute;s spatiales en interaction (voir 
+        mais comme un ensemble dentités spatiales en interaction (voir 
         l<a href="http://www.cybergeo.presse.fr/modelis/bousquet/bousquet.htm" target="_blank">article 
-        de Bousquet et Gautier</a>, &quot;Comparaison de deux approches de modelisation 
+        de Bousquet et Gautier</a>, "Comparaison de deux approches de modelisation 
         des dynamiques spatiales par simulation multi-agents: les approches spatiale 
-        et acteurs &quot;).</p>
-   <p>Afin dint&eacute;grer lorganisation de lespace dans la mod&eacute;lisation, 
-    nous utilisons un mod&egrave;le graphique dont les composants &eacute;l&eacute;mentaires 
-    sont les entit&eacute;s spatiales du SMA et sont dot&eacute;s de propri&eacute;t&eacute;s 
+        et acteurs ").</p>
+<p>Afin dintégrer lorganisation de lespace dans la modélisation, 
+    nous utilisons un modèle graphique dont les composants élémentaires 
+    sont les entités spatiales du SMA et sont dotés de propriétés 
     dagents.</p>
-   <h2>D&eacute;prise agricole et usages de lespace</h2>
-   <p>La probl&eacute;matique de recherche porte sur les recompositions agricoles 
-    et les conflits ou compl&eacute;mentarit&eacute;s avec les autres usages 
+<h2>Déprise agricole et usages de lespace</h2>
+<p>La problématique de recherche porte sur les recompositions agricoles 
+    et les conflits ou complémentarités avec les autres usages 
     de lespace (tourisme, sylviculture, chasse, observation-protection du 
-    milieu naturel, usage r&eacute;sidentiel). Par rapport &agrave; cette 
-    question g&eacute;n&eacute;rale, la mod&eacute;lisation permet de guider 
-    le g&eacute;ographe dans lanalyse des donn&eacute;es et la formalisation. 
+    milieu naturel, usage résidentiel). Par rapport à cette 
+    question générale, la modélisation permet de guider 
+    le géographe dans lanalyse des données et la formalisation. 
     La simulation implique un raisonnement sur les fonctionnements et les 
-    dynamiques du syst&egrave;me spatial.</p>
-   <p>La question sp&eacute;cifique porte sur la mise en place dun sch&eacute;ma 
-    de gestion de lespace afin denrayer les impacts de la d&eacute;prise 
-    agricole et de rendre compatibles diff&eacute;rents usages de lespace. 
-    Lobjectif de la mod&eacute;lisation et de la simulation est de construire 
-    un support de discussion avec les acteurs &agrave; propos du fonctionnement, 
-    des &eacute;volutions souhait&eacute;es du syst&egrave;me et de limpact 
+    dynamiques du système spatial.</p>
+<p>La question spécifique porte sur la mise en place dun schéma 
+    de gestion de lespace afin denrayer les impacts de la déprise 
+    agricole et de rendre compatibles différents usages de lespace. 
+    Lobjectif de la modélisation et de la simulation est de construire 
+    un support de discussion avec les acteurs à propos du fonctionnement, 
+    des évolutions souhaitées du système et de limpact 
     spatial dactions. </p>
-   <h2>Du terrain au mod&egrave;le graphique</h2>
-   <p>Deux types de donn&eacute;es de terrain sont utilis&eacute;s.</p>
-   <p>Les donn&eacute;es du " pÃ´le froid " sont recueillies selon un protocole 
-    dobservation des dynamiques doccupation du sol (s&eacute;rie de couches 
-    doccupation du sol, 1950-1969-1979-1991, construites &agrave; partir 
-    de photographies a&eacute;riennes &agrave; laide de SIG). Elles fournissent 
+<h2>Du terrain au modèle graphique</h2>
+<p>Deux types de données de terrain sont utilisés.</p>
+<p>Les données du " pÃ´le froid " sont recueillies selon un protocole 
+    dobservation des dynamiques doccupation du sol (série de couches 
+    doccupation du sol, 1950-1969-1979-1991, construites à partir 
+    de photographies aériennes à laide de SIG). Elles fournissent 
     des informations fiables et quantifiables.</p>
-   <p>Les donn&eacute;es du " pÃ´le chaud " sont des donn&eacute;es plus subjectives 
+<p>Les données du " pÃ´le chaud " sont des données plus subjectives 
     concernant les souhaits des acteurs locaux sur le devenir de leur territoire. 
-    Elles ont &eacute;t&eacute; recueillies dans le cadre de la mise en place 
-    du Sch&eacute;ma dAm&eacute;nagement du Massif du Tanargue. Elles permettent 
-    de s&eacute;lectionner les actions dont on simulera limpact spatial et 
-    de caract&eacute;riser les &eacute;tats souhait&eacute;s du territoire.</p>
-   <p>La formalisation sest faite &agrave; laide dun mod&egrave;le graphique 
+    Elles ont été recueillies dans le cadre de la mise en place 
+    du Schéma dAménagement du Massif du Tanargue. Elles permettent 
+    de sélectionner les actions dont on simulera limpact spatial et 
+    de caractériser les états souhaités du territoire.</p>
+<p>La formalisation sest faite à laide dun modèle graphique 
     (voir figure suivante).</p>
-      <p align="center"><img src="/images/applica/spatiodyn.gif" width="417" height="303" alt="Le mod&egrave;le grahpique et ses entit&eacute;s &eacute;l&eacute;mentaires"></p>
-      <p align="center">Figure 1. Le mod&egrave;le graphique et ses entit&eacute;s 
-        &eacute;l&eacute;mentaires. Chacun des noms indiqu&eacute;s renvoie &agrave; 
-        un composant &eacute;l&eacute;mentaire qui correspond &agrave; une entit&eacute; 
+<p align="center"><img alt="Le modèle grahpique et ses entités élémentaires" height="303" src="/images/applica/spatiodyn.gif" width="417"/></p>
+<p align="center">Figure 1. Le modèle graphique et ses entités 
+        élémentaires. Chacun des noms indiqués renvoie à 
+        un composant élémentaire qui correspond à une entité 
         spatiale du SMA.</p>
-   <p>Chacun des composants du mod&egrave;le graphique est caract&eacute;ris&eacute; 
-    par un &eacute;tat, par une dynamique et par les actions envisag&eacute;es 
-    et les &eacute;tats souhait&eacute;s par les acteurs. Chacun est impl&eacute;ment&eacute; 
-    dans Cormas en tant quentit&eacute; spatiale dot&eacute;e dattributs 
-    et m&eacute;thodes d&eacute;volution.</p>
-   <h2>Quelles simulations ?</h2>
-   <p>Dans un premier temps, le passage entre deux cas extr&ecirc;mes est mod&eacute;lis&eacute;. 
-    L&eacute;tat initial (EI) est l&eacute;tat du mod&egrave;le au moment 
-    du " boom d&eacute;mographique ", ou lutilisation de lespace est maximale. 
-    L&eacute;tat final pessimiste (EFP) correspond &agrave; l&eacute;tat 
-    obtenu sous lhypoth&egrave;se dun abandon total de lespace (voir figure 
+<p>Chacun des composants du modèle graphique est caractérisé 
+    par un état, par une dynamique et par les actions envisagées 
+    et les états souhaités par les acteurs. Chacun est implémenté 
+    dans Cormas en tant quentité spatiale dotée dattributs 
+    et méthodes dévolution.</p>
+<h2>Quelles simulations ?</h2>
+<p>Dans un premier temps, le passage entre deux cas extrêmes est modélisé. 
+    Létat initial (EI) est létat du modèle au moment 
+    du " boom démographique ", ou lutilisation de lespace est maximale. 
+    Létat final pessimiste (EFP) correspond à létat 
+    obtenu sous lhypothèse dun abandon total de lespace (voir figure 
     suivante). Au cours du passage de EI vers EFP, les dynamiques naturelles 
     lemportent sur limpact des actions humaines: par colonisation de la 
-    v&eacute;g&eacute;tation naturelle, les feuillus gagnent sur les landes 
-    et les landes ouvertes deviennent des landes ferm&eacute;es.</p>
-      <p align="center"><img src="/images/applica/spatiodyn2.gif" width="297" height="149" alt="Etat initial et &eacute;tat final pessimiste"></p>
-   <p align="center">Figure 2. Etat initial et &eacute;tat final pessimiste.</p>
-   <p>Ensuite, nous d&eacute;finissons un ensemble de r&eacute;f&eacute;rentiels 
-    qui repr&eacute;sentent limpact de processus &eacute;l&eacute;mentaires 
-    &agrave; partir de l&eacute;tat actuel (EA). EA est construit grÃ¢ce aux 
-    structures spatiales identifi&eacute;es par photo-interpr&eacute;tation 
-    sur la base dune matrice cadastrale avec la photographie la plus r&eacute;cente 
-    et le diagnostic de territoire &eacute;labor&eacute; par les gestionnaires 
-    de lespace et les acteurs locaux. La liste des processus identifi&eacute;s 
-    par le th&eacute;maticien, concernant les dynamiques naturelles et les 
-    infl&eacute;chissements li&eacute;s aux actions humaines, permet de d&eacute;finir 
-    ces r&eacute;f&eacute;rentiels (voir figure suivante).</p>
-      <div align="center"><img src="/images/applica/spatiodyn4.gif" width="504" height="452" alt="Trois types de simulations"> 
-      </div>
-      <p align="center">Figure 3. Les trois types de simulations</p>
-   <p>&nbsp;</p>
-   <p>Par exemple, une multiplication de r&eacute;sidences secondaires sans 
-    r&egrave;glement durbanisme se traduit par un mitage de lespace: lentit&eacute; 
-    spatiale " r&eacute;sidence secondaire " se multiplie et simplante al&eacute;atoirement 
-    sur les diff&eacute;rentes entit&eacute;s spatiales du versant. Dans un 
-    autre exemple, la fermeture du milieu est li&eacute;e &agrave; la baisse 
+    végétation naturelle, les feuillus gagnent sur les landes 
+    et les landes ouvertes deviennent des landes fermées.</p>
+<p align="center"><img alt="Etat initial et état final pessimiste" height="149" src="/images/applica/spatiodyn2.gif" width="297"/></p>
+<p align="center">Figure 2. Etat initial et état final pessimiste.</p>
+<p>Ensuite, nous définissons un ensemble de référentiels 
+    qui représentent limpact de processus élémentaires 
+    à partir de létat actuel (EA). EA est construit grÃ¢ce aux 
+    structures spatiales identifiées par photo-interprétation 
+    sur la base dune matrice cadastrale avec la photographie la plus récente 
+    et le diagnostic de territoire élaboré par les gestionnaires 
+    de lespace et les acteurs locaux. La liste des processus identifiés 
+    par le thématicien, concernant les dynamiques naturelles et les 
+    infléchissements liés aux actions humaines, permet de définir 
+    ces référentiels (voir figure suivante).</p>
+<div align="center"><img alt="Trois types de simulations" height="452" src="/images/applica/spatiodyn4.gif" width="504"/>
+</div>
+<p align="center">Figure 3. Les trois types de simulations</p>
+<p> </p>
+<p>Par exemple, une multiplication de résidences secondaires sans 
+    règlement durbanisme se traduit par un mitage de lespace: lentité 
+    spatiale " résidence secondaire " se multiplie et simplante aléatoirement 
+    sur les différentes entités spatiales du versant. Dans un 
+    autre exemple, la fermeture du milieu est liée à la baisse 
     de la pression pastorale (linstance "UnFeuillus" du versant se dilate 
-    alors que linstance de "UneLande" se r&eacute;tracte, "UneLande" passe 
-    de l&eacute;tat lande ouverte &agrave; lande ferm&eacute;e et change 
+    alors que linstance de "UneLande" se rétracte, "UneLande" passe 
+    de létat lande ouverte à lande fermée et change 
     de couleur). Les impacts de la mise en place dactions concernent par 
-    exemple le frein au d&eacute;veloppement des r&eacute;sineux par une r&eacute;glementation 
-    de boisement, le frein au mitage de lespace par d&eacute;limitation des 
-    zones urbanisables dans un Plan dOccupation des Sols, la r&eacute;-ouverture 
-    du milieu grÃ¢ce au soutien &agrave; l&eacute;levage, lentretien des 
-    terrasses et des anciens canaux dirrigation suite &agrave; lattribution 
+    exemple le frein au développement des résineux par une réglementation 
+    de boisement, le frein au mitage de lespace par délimitation des 
+    zones urbanisables dans un Plan dOccupation des Sols, la ré-ouverture 
+    du milieu grÃ¢ce au soutien à lélevage, lentretien des 
+    terrasses et des anciens canaux dirrigation suite à lattribution 
     de primes, etc.</p>
-   <p>Ces r&eacute;f&eacute;rentiels sont impl&eacute;ment&eacute;s dans le 
-    SMA. Ils sont combin&eacute;s afin daboutir &agrave; limpl&eacute;mentation 
-    du passage de EA &agrave; ES (&eacute;tat souhait&eacute;). ES est la 
-    traduction informatique des objectifs fix&eacute;s par les animateurs 
-    suite aux r&eacute;unions communales et th&eacute;matiques aupr&egrave;s 
-    des acteurs locaux. Les m&eacute;thodes de passage de EA &agrave; ES sont 
-    des combinaisons entre les dynamiques naturelles et les actions engag&eacute;es 
+<p>Ces référentiels sont implémentés dans le 
+    SMA. Ils sont combinés afin daboutir à limplémentation 
+    du passage de EA à ES (état souhaité). ES est la 
+    traduction informatique des objectifs fixés par les animateurs 
+    suite aux réunions communales et thématiques auprès 
+    des acteurs locaux. Les méthodes de passage de EA à ES sont 
+    des combinaisons entre les dynamiques naturelles et les actions engagées 
     par les gestionnaires de lespace (voir figure 3).</p>
-   <p>Lobjectif de la simulation est de r&eacute;pondre &agrave; la question 
-   : quelles actions mettre en place pour passer de EA &agrave; ES ?</p>
-   <p>Pour en savoir plus, <a href="mailto:muriel.bonin@cirad.fr">contactez 
+<p>Lobjectif de la simulation est de répondre à la question 
+   : quelles actions mettre en place pour passer de EA à ES ?</p>
+<p>Pour en savoir plus, <a href="mailto:muriel.bonin@cirad.fr">contactez 
     lauteur</a>.</p>
-   <!--#include virtual="/include/copyright_en.inc" -->
-	</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-   <div align="right" class="texte"></div>
-  </td>
- </tr>
+<!--#include virtual="/include/copyright_en.inc" -->
+</p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-</body>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

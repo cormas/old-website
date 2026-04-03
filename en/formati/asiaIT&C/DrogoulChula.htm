@@ -1,131 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Description of the Training Course</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
-<!--#include virtual="../haut.inc" --> 
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-  <tr> <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp;</p>
-      <h1><img src="../../../images/formati/asia-itc-logo-100.jpg" width="100" height="121"></h1>
-      <h2><font size="5">MAS in the field of computer sciences</font></h2>
-      <h2><font size="5">22-26 April 2002</font></h2>
-      <h2 align="right">Multi-Agent Systems (MAS),</h2>
-      <h2 align="right"> Social Sciences and </h2>
-      <h2 align="right">Integrated Natural Resource Management (INRM)</h2>
-      <h3>Trainer</h3>
-      <h2><a href="http://www-poleia.lip6.fr/%7Edrogoul/">Dr. A.Drogoul</a>, University 
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<!--#include virtual="../haut.inc" -->
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr> <!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<h1><img height="121" src="../../../images/formati/asia-itc-logo-100.jpg" width="100"/></h1>
+<h2><font size="5">MAS in the field of computer sciences</font></h2>
+<h2><font size="5">22-26 April 2002</font></h2>
+<h2 align="right">Multi-Agent Systems (MAS),</h2>
+<h2 align="right"> Social Sciences and </h2>
+<h2 align="right">Integrated Natural Resource Management (INRM)</h2>
+<h3>Trainer</h3>
+<h2><a href="http://www-poleia.lip6.fr/%7Edrogoul/">Dr. A.Drogoul</a>, University 
         of Paris 6, France</h2>
-      <a href="mailto:%20bousquet@cirad.fr">Report</a> on the training is available 
+<a href="mailto:%20bousquet@cirad.fr">Report</a> on the training is available 
       <h3>Organizers</h3>
-      <ol>
-        <li>Dr. S. Jesdapipat ( University of Chulalongkorn Bangkok, <a href="http://www.kku.ac.th/eng/fac1.htm">Center 
+<ol>
+<li>Dr. S. Jesdapipat ( University of Chulalongkorn Bangkok, <a href="http://www.kku.ac.th/eng/fac1.htm">Center 
           of Ecological Economics</a>)</li>
-        <li>F. Bousquet (CIRAD-IRRI)</li>
-      </ol>
-      <h3><img src="../../../images/formati/CUTraining.JPG" width="640" height="480"></h3>
-      <h3>&nbsp;</h3>
-      <h3>Course Objectives</h3>
-      <p>To improve the level of understanding and mastering on MAS methodology 
+<li>F. Bousquet (CIRAD-IRRI)</li>
+</ol>
+<h3><img height="480" src="../../../images/formati/CUTraining.JPG" width="640"/></h3>
+<h3> </h3>
+<h3>Course Objectives</h3>
+<p>To improve the level of understanding and mastering on MAS methodology 
         and its application in simulation. Applications to collective robotics 
         and collective intelligence.</p>
-      <h3>Training </h3>
-      <table width="96%" border="1">
-        <tr bgcolor="#FFCC99"> 
-          <td width="13%"><i>Day</i></td>
-          <td width="18%"><i>8h30-10h</i></td>
-          <td width="25%"><i>10h30-12h</i></td>
-          <td width="14%"><i>13h30-15h</i></td>
-          <td width="30%"><i>15h30-17h</i></td>
-        </tr>
-        <tr> 
-          <td width="13%" rowspan="2">Monday 22</td>
-          <td width="18%" rowspan="2">Opening Ceremony</td>
-          <td colspan="3"> 
-            <div align="center"><b>Introduction to Multi-Agent Systems</b></div>
-          </td>
-        </tr>
-        <tr> 
-          <td width="25%">Introduction to MAS</td>
-          <td width="14%">Introduction to NetLogo</td>
-          <td width="30%">Introduction to MAS</td>
-        </tr>
-        <tr> 
-          <td width="13%" rowspan="2"> 
-            <p>Tuesday 23</p>
-          </td>
-          <td colspan="2"> 
-            <div align="center"><b>Simulation</b></div>
-          </td>
-          <td colspan="2"> 
-            <div align="center"><b>Simulation</b></div>
-          </td>
-        </tr>
-        <tr> 
-          <td width="18%">Application to simulation<br>
-          </td>
-          <td width="25%">Examples of simple simulations on NetLogo<br>
-          </td>
-          <td width="14%">Key problematics of multi-agent simulation</td>
-          <td width="30%">Design and implementation of a simple social simulation 
-            in NetLogo<br>
-          </td>
-        </tr>
-        <tr> 
-          <td width="13%" rowspan="2">Wednesday 24</td>
-          <td colspan="4"> 
-            <div align="center"><b>Problem solving</b></div>
-          </td>
-        </tr>
-        <tr> 
-          <td width="18%">Multi-agent collective problem solving</td>
-          <td width="25%">Demonstration and exercises</td>
-          <td width="14%">Group work, presentation of on-going project</td>
-          <td width="30%">Group work, presentation of on-going project</td>
-        </tr>
-        <tr> 
-          <td width="13%"> 
-            <p>Thursday 25</p>
-          </td>
-          <td width="18%"> 
-            <div align="center"></div>
-            Agent Architectures / Incremental design<br>
-          </td>
-          <td width="25%">Design and implementation of the collective sorting 
-            problem in<br>
+<h3>Training </h3>
+<table border="1" width="96%">
+<tr bgcolor="#FFCC99">
+<td width="13%"><i>Day</i></td>
+<td width="18%"><i>8h30-10h</i></td>
+<td width="25%"><i>10h30-12h</i></td>
+<td width="14%"><i>13h30-15h</i></td>
+<td width="30%"><i>15h30-17h</i></td>
+</tr>
+<tr>
+<td rowspan="2" width="13%">Monday 22</td>
+<td rowspan="2" width="18%">Opening Ceremony</td>
+<td colspan="3">
+<div align="center"><b>Introduction to Multi-Agent Systems</b></div>
+</td>
+</tr>
+<tr>
+<td width="25%">Introduction to MAS</td>
+<td width="14%">Introduction to NetLogo</td>
+<td width="30%">Introduction to MAS</td>
+</tr>
+<tr>
+<td rowspan="2" width="13%">
+<p>Tuesday 23</p>
+</td>
+<td colspan="2">
+<div align="center"><b>Simulation</b></div>
+</td>
+<td colspan="2">
+<div align="center"><b>Simulation</b></div>
+</td>
+</tr>
+<tr>
+<td width="18%">Application to simulation<br/>
+</td>
+<td width="25%">Examples of simple simulations on NetLogo<br/>
+</td>
+<td width="14%">Key problematics of multi-agent simulation</td>
+<td width="30%">Design and implementation of a simple social simulation 
+            in NetLogo<br/>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="13%">Wednesday 24</td>
+<td colspan="4">
+<div align="center"><b>Problem solving</b></div>
+</td>
+</tr>
+<tr>
+<td width="18%">Multi-agent collective problem solving</td>
+<td width="25%">Demonstration and exercises</td>
+<td width="14%">Group work, presentation of on-going project</td>
+<td width="30%">Group work, presentation of on-going project</td>
+</tr>
+<tr>
+<td width="13%">
+<p>Thursday 25</p>
+</td>
+<td width="18%">
+<div align="center"></div>
+            Agent Architectures / Incremental design<br/>
+</td>
+<td width="25%">Design and implementation of the collective sorting 
+            problem in<br/>
             NetLogo</td>
-          <td width="14%">Social robots / Collective robotics</td>
-          <td width="30%">Group work, presentation of on-going project</td>
-        </tr>
-        <tr> 
-          <td width="13%">Friday 26</td>
-          <td width="18%"> 
-            <div align="center"></div>
+<td width="14%">Social robots / Collective robotics</td>
+<td width="30%">Group work, presentation of on-going project</td>
+</tr>
+<tr>
+<td width="13%">Friday 26</td>
+<td width="18%">
+<div align="center"></div>
             Multi-agent learning methods</td>
-          <td width="25%">Presentation of on-going projects</td>
-          <td width="14%">Presentation of on-going projects</td>
-          <td width="30%">Closing ceremony</td>
-        </tr>
-      </table>
-      <h3> 
-        <map name="figAsia"> 
-          <area shape="rect" coords="1,229,87,263" href="#KhonKaenCourse1">
-          <area shape="rect" coords="55,456,67,469" href="#http://www.kku.ac.th/eng/fac1.htm">
-          <area shape="rect" coords="54,480,67,492" href="#http://www.thai.net/cee2000/staff.htm%20">
-          <area shape="rect" coords="55,510,67,523" href="#http://www.chiangmai.ac.th/fac_mcc.html%20">
-        </map>
-      </h3>
-      <!--#include virtual="/include/copyright_en.inc" --> </td>
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-      <div align="right" class="texte"></div>
-    </td>
-  </tr>
+<td width="25%">Presentation of on-going projects</td>
+<td width="14%">Presentation of on-going projects</td>
+<td width="30%">Closing ceremony</td>
+</tr>
 </table>
-</body>
+<h3>
+<map name="figAsia">
+<area coords="1,229,87,263" href="#KhonKaenCourse1" shape="rect"/>
+<area coords="55,456,67,469" href="#http://www.kku.ac.th/eng/fac1.htm" shape="rect"/>
+<area coords="54,480,67,492" href="#http://www.thai.net/cee2000/staff.htm%20" shape="rect"/>
+<area coords="55,510,67,523" href="#http://www.chiangmai.ac.th/fac_mcc.html%20" shape="rect"/>
+</map>
+</h3>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
+</table>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>

@@ -1,139 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>Cormas Online Learning Center : Fire Agent Model, version 8</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-<style type="text/css">
-<!--
-.style1 {color: #FFFFFF}
-.style3 {color: #336699}
-.style9 {color: #CCCC99}
-.style10 {color: #006699}
-.style11 {color: #3399CC}
-.style12 {color: #FF0000}
-.style17 {color: #FF6600}
--->
-</style>
-</head>
-
-<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" bgcolor="#FFFFFF">
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
 <!--#include virtual="../../../haut.inc" -->
-
-<table cellspacing="0" cellpadding="0" border="0" width="98%">
-
+<table border="0" cellpadding="0" cellspacing="0" width="98%">
 <tr>
-
-  <!--#include virtual="../lmenu.inc" --> 
-
-  <td width="0" height="600" valign="top" bgcolor="#FFFFFF"> 
-
-   <p>&nbsp;</p>
-
-    
-
-      <h1>Fire Agent Model - <span class="style9"><span class="style10"><span class="style11"><span class="style12">version <FONT FACE="WingDings 2" SIZE=+3>|</FONT></span></span></span></span><img src="../../../images/fireman.gif" width="78" height="50">  <br>
-      </h1>
-
-      <p>&nbsp;</p>
-      <p><strong>Landscape indices. Cormas provide some pre-computed landscapes indexes. Thus it is possible to observe the dynamics of these indexes.</strong><br>
-      To download this tutorial <span class="style17 style17"><FONT FACE="WingDings" SIZE=+3><a href="flash/FireV7.zip">=</a></FONT></span>. </p>
-      <center>
-        <table width="571" border="0" cellpadding="0" cellspacing="1">
-        <tr valign="top">
-          <td colspan="2" valign="middle" bgcolor="#006699" class="storyLeft"><div align="center" class="style1"><strong>Fire Agent Model - Version 8 </strong></div></td>
-        </tr>
-        
-        <tr valign="top">
-          <td width="45" bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style10">8.1 </div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><span class="style10">Defining charts</span></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
-            <div align="center"><span class="style10"></span></div>
-          </div></td>
-          <td width="720" bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
-            <p><a href="flash/1/8-1-1/index.htm" target="_blank">8.1.1 dominance</a></p>
-          </blockquote></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
-              <div align="center"><span class="style10"></span></div>
-          </div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
-              <p><a href="flash/1/8-1-2/index.htm" target="_blank">8.1.2 edgeDensity</a></p>
-          </blockquote></td>
-        </tr>
-		<tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
-              <div align="center"><span class="style10"></span></div>
-          </div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
-              <p><a href="flash/1/8-1-3/index.htm" target="_blank">8.1.3 fractalDimension</a></p>
-          </blockquote></td>
-        </tr>
-		<tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
-              <div align="center"><span class="style10"></span></div>
-          </div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
-              <p><a href="flash/1/8-1-4/index.htm" target="_blank">8.1.4 meanCompactness</a></p>
-          </blockquote></td>
-        </tr>
-		<tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
-              <div align="center"><span class="style10"></span></div>
-          </div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
-              <p><a href="flash/1/8-1-5/index.htm" target="_blank">8.1.5 meanNearestNeigh</a></p>
-          </blockquote></td>
-        </tr>
-		<tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
-              <div align="center"><span class="style10"></span></div>
-          </div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
-              <p><a href="flash/1/8-1-6/index.htm" target="_blank">8.1.6 meanPatchSize</a></p>
-          </blockquote></td>
-        </tr>
-		<tr valign="top">
-          <td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
-              <div align="center"><span class="style10"></span></div>
-          </div></td>
-          <td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
-              <p><a href="flash/1/8-1-7/index.htm" target="_blank">8.1.7 nClasses</a></p>
-          </blockquote></td>
-        </tr>
-        <tr valign="top">
-          <td bgcolor="#c6ffff" class="style1 storyLeft"><div align="center" class="style10"><a href="flash/2/index.htm" target="_blank">8.2</a></div></td>
-          <td bgcolor="#c6ffff" class="style1 storyLeft"><p class="style10"><a href="flash/2/index.htm" target="_blank">Run version 8 of Fire Model & view charts</a></p></td>
-        </tr>
-        <tr valign="top">
-          <td colspan="2" valign="middle" bgcolor="#006699" class="storyLeft"><div align="center" class="style1">&nbsp; </div></td>
-        </tr>
-      </table>
-      </center>
-      <p>&nbsp;</p>
-      <!--#include virtual="/include/copyright_en.inc" --> </td>
-
-  <td width="0" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-  <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-   </td>
- </tr>
+<!--#include virtual="../lmenu.inc" -->
+<td bgcolor="#FFFFFF" height="600" valign="top" width="0">
+<p> </p>
+<h1>Fire Agent Model - <span class="style9"><span class="style10"><span class="style11"><span class="style12">version <font face="WingDings 2" size="+3">|</font></span></span></span></span><img height="50" src="../../../images/fireman.gif" width="78"/> <br/>
+</h1>
+<p> </p>
+<p><strong>Landscape indices. Cormas provide some pre-computed landscapes indexes. Thus it is possible to observe the dynamics of these indexes.</strong><br/>
+      To download this tutorial <span class="style17 style17"><font face="WingDings" size="+3"><a href="flash/FireV7.zip">=</a></font></span>. </p>
+<center>
+<table border="0" cellpadding="0" cellspacing="1" width="571">
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2" valign="middle"><div align="center" class="style1"><strong>Fire Agent Model - Version 8 </strong></div></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft" width="45"><div align="center" class="style10">8.1 </div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><span class="style10">Defining charts</span></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
+<div align="center"><span class="style10"></span></div>
+</div></td>
+<td bgcolor="#c6ffff" class="storyLeft" width="720"><blockquote class="style10">
+<p><a href="flash/1/8-1-1/index.htm" target="_blank">8.1.1 dominance</a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
+<div align="center"><span class="style10"></span></div>
+</div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
+<p><a href="flash/1/8-1-2/index.htm" target="_blank">8.1.2 edgeDensity</a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
+<div align="center"><span class="style10"></span></div>
+</div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
+<p><a href="flash/1/8-1-3/index.htm" target="_blank">8.1.3 fractalDimension</a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
+<div align="center"><span class="style10"></span></div>
+</div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
+<p><a href="flash/1/8-1-4/index.htm" target="_blank">8.1.4 meanCompactness</a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
+<div align="center"><span class="style10"></span></div>
+</div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
+<p><a href="flash/1/8-1-5/index.htm" target="_blank">8.1.5 meanNearestNeigh</a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
+<div align="center"><span class="style10"></span></div>
+</div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
+<p><a href="flash/1/8-1-6/index.htm" target="_blank">8.1.6 meanPatchSize</a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="storyLeft"><div align="center" class="style3">
+<div align="center"><span class="style10"></span></div>
+</div></td>
+<td bgcolor="#c6ffff" class="storyLeft"><blockquote class="style10">
+<p><a href="flash/1/8-1-7/index.htm" target="_blank">8.1.7 nClasses</a></p>
+</blockquote></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#c6ffff" class="style1 storyLeft"><div align="center" class="style10"><a href="flash/2/index.htm" target="_blank">8.2</a></div></td>
+<td bgcolor="#c6ffff" class="style1 storyLeft"><p class="style10"><a href="flash/2/index.htm" target="_blank">Run version 8 of Fire Model &amp; view charts</a></p></td>
+</tr>
+<tr valign="top">
+<td bgcolor="#006699" class="storyLeft" colspan="2" valign="middle"><div align="center" class="style1">  </div></td>
+</tr>
 </table>
-
-</body>
-
+</center>
+<p> </p>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="0"> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+</td>
+</tr>
+</table>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>
-

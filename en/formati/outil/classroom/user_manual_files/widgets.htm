@@ -1,12 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>follow chart</title>
-<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
-<link href="visio.css" rel="stylesheet">
-<script src="keys.js" type="text/jscript" language="jscript"></script>
-<script src="find.js" type="text/jscript" language="jscript"></script>
-<script type="text/jscript" language="jscript">
+<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema"/>
+<link href="visio.css" rel="stylesheet"/>
+<script language="jscript" src="keys.js" type="text/jscript"></script>
+<script language="jscript" src="find.js" type="text/jscript"></script>
+<script language="jscript" type="text/jscript">
 	
 	var imgMin = new Image();
 	imgMin.src = "minimize.gif";
@@ -164,70 +166,134 @@
 	var widgets = new Widgets();
 
 </script>
-
-</head>
-<body onLoad="load();" onUnload="unload();">
-<div id="divOpenNav" class="nav">
-
-	<table id="tabToc" width="100%" class="navTocColor" style="margin-bottom:1px;" cellspacing="0" cellpadding="0" border="0" height="20">
-	<tr>
-	<td width="2"><a href="javascript:ToggleNav();" title="Collapse navigation frame" id="linkNavOpen"><img src="toc.gif" alt="Collapse navigation frame" width="22" height="17" border="0"></a></td>
-	<td align="left"><p class="p1"><a href="javascript:ToggleNav();" title="Collapse navigation frame" class="a1">Hide</a></p></td>
-	<td align="right"><p class="p1"><a href="javascript:widgets.ToggleAll()" id="textExp" class="a1">Collapse all</a></p></td>
-	<td width="2">
-		<div style="padding:2pt,1.5pt,0pt,0pt"><a href="javascript:widgets.ToggleAll()" title="Collapse all" id="expparent00"><img id="exp00" alt="Collapse all" src="minimize.gif" width="15" height="15" border="0"></a></div>
-	</td>
-	</tr>
-	</table>
-	
-	
-
-	
-	<div id="divPNZ" class="holder">
-		<table width="100%" cellspacing="0" cellpadding="0" border="0" class="holderTable">
-		<tr><td>
-			<div class="fillcolor">
-				<table width="100%" cellspacing="0" cellpadding="1" border="0" class="fillcolor">
-				<tr>
-				<td><a id="exp41" title="Collapse Pan and Zoom" href="javascript:widgets.ToggleWidget(hidePNZ);"><p class="label">Pan and Zoom</p></a></td>
-				<td width="15"><a id="exp42" title="Collapse Pan and Zoom" href="javascript:widgets.ToggleWidget(hidePNZ);"><img id="exp4" alt="Collapse Pan and Zoom" src="minimize.gif" width="15" height="15" border="0"></a></td>
-				</tr>
-				</table>
-			</div>
-		</td></tr>
-		<tr><td>
-			<div id="hidePNZ" style="text-align:right;" img="exp4" class="hiderScroll" openAlt="Collapse Pan and Zoom" closedAlt="Expand Pan and Zoom">
-				<table width="220" border="0" cellpadding="0" cellspacing="0">
-				<tr>
-				<td align="center" valign="middle">
-					<iframe title="Pan and Zoom window" longdesc="Pan and Zoom window" id="ifrmPNZ" src="zoom.htm" width="170" height="170" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="border: #cccccc 1px solid;"></iframe>
-				</td>
-					
-				<td>
-					<table id="tabScale" width="17" cellspacing="0" cellpadding="0" border="0">
-						<tr><td><a href="javascript:tickSelect(100);" title="Zoom page to 100%"><img src="fullpage.gif" alt="Zoom page to 100%" border="0"></a></td></tr>
-						<tr><td><a href="javascript:ZoomUpDown(1);" title="Zoom in"><img src="panplus.gif" alt="Zoom in" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(500);" title="Zoom to 500%"><img id="t500" src="tick-off.gif" alt="Zoom to 500%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(450);" title="Zoom to 450%"><img id="t450" src="tick-off.gif" alt="Zoom to 450%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(400);" title="Zoom to 400%"><img id="t400" src="tick-off.gif" alt="Zoom to 400%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(350);" title="Zoom to 350%"><img id="t350" src="tick-off.gif" alt="Zoom to 350%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(300);" title="Zoom to 300%"><img id="t300" src="tick-off.gif" alt="Zoom to 300%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(250);" title="Zoom to 250%"><img id="t250" src="tick-off.gif" alt="Zoom to 250%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(200);" title="Zoom to 200%"><img id="t200" src="tick-off.gif" alt="Zoom to 200%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(150);" title="Zoom to 150%"><img id="t150" src="tick-off.gif" alt="Zoom to 150%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(100);" title="Zoom to 100%" id="a100"><img id="t100" src="tick-on.gif" alt="Zoom to 100%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(50);" title="Zoom to 50%"><img id="t50" src="tick-off.gif" alt="Zoom to 50%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:tickSelect(10);" title="Zoom to 10%"><img id="t10" src="tick-off.gif" alt="Zoom to 10%" width="17" height="11" border="0"></a></td></tr>
-						<tr><td><a href="javascript:ZoomUpDown(-1);" title="Zoom out"><img src="panminus.gif" alt="Zoom out" border="0"></a></td></tr>
-					</table>
-				</td>
-				</tr>
-				</table>
-			</div>			
-		</td></tr>
-		</table>
-		
-		<script type="text/jscript" language="jscript">
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body onload="load();" onunload="unload();"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<div class="nav" id="divOpenNav">
+<table border="0" cellpadding="0" cellspacing="0" class="navTocColor" height="20" id="tabToc" style="margin-bottom:1px;" width="100%">
+<tr>
+<td width="2"><a href="javascript:ToggleNav();" id="linkNavOpen" title="Collapse navigation frame"><img alt="Collapse navigation frame" border="0" height="17" src="toc.gif" width="22"/></a></td>
+<td align="left"><p class="p1"><a class="a1" href="javascript:ToggleNav();" title="Collapse navigation frame">Hide</a></p></td>
+<td align="right"><p class="p1"><a class="a1" href="javascript:widgets.ToggleAll()" id="textExp">Collapse all</a></p></td>
+<td width="2">
+<div style="padding:2pt,1.5pt,0pt,0pt"><a href="javascript:widgets.ToggleAll()" id="expparent00" title="Collapse all"><img alt="Collapse all" border="0" height="15" id="exp00" src="minimize.gif" width="15"/></a></div>
+</td>
+</tr>
+</table>
+<div class="holder" id="divPNZ">
+<table border="0" cellpadding="0" cellspacing="0" class="holderTable" width="100%">
+<tr><td>
+<div class="fillcolor">
+<table border="0" cellpadding="1" cellspacing="0" class="fillcolor" width="100%">
+<tr>
+<td><a href="javascript:widgets.ToggleWidget(hidePNZ);" id="exp41" title="Collapse Pan and Zoom"><p class="label">Pan and Zoom</p></a></td>
+<td width="15"><a href="javascript:widgets.ToggleWidget(hidePNZ);" id="exp42" title="Collapse Pan and Zoom"><img alt="Collapse Pan and Zoom" border="0" height="15" id="exp4" src="minimize.gif" width="15"/></a></td>
+</tr>
+</table>
+</div>
+</td></tr>
+<tr><td>
+<div class="hiderScroll" closedalt="Expand Pan and Zoom" id="hidePNZ" img="exp4" openalt="Collapse Pan and Zoom" style="text-align:right;">
+<table border="0" cellpadding="0" cellspacing="0" width="220">
+<tr>
+<td align="center" valign="middle">
+<iframe frameborder="0" height="170" id="ifrmPNZ" longdesc="Pan and Zoom window" marginheight="0" marginwidth="0" scrolling="no" src="zoom.htm" style="border: #cccccc 1px solid;" title="Pan and Zoom window" width="170"></iframe>
+</td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" id="tabScale" width="17">
+<tr><td><a href="javascript:tickSelect(100);" title="Zoom page to 100%"><img alt="Zoom page to 100%" border="0" src="fullpage.gif"/></a></td></tr>
+<tr><td><a href="javascript:ZoomUpDown(1);" title="Zoom in"><img alt="Zoom in" border="0" src="panplus.gif"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(500);" title="Zoom to 500%"><img alt="Zoom to 500%" border="0" height="11" id="t500" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(450);" title="Zoom to 450%"><img alt="Zoom to 450%" border="0" height="11" id="t450" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(400);" title="Zoom to 400%"><img alt="Zoom to 400%" border="0" height="11" id="t400" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(350);" title="Zoom to 350%"><img alt="Zoom to 350%" border="0" height="11" id="t350" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(300);" title="Zoom to 300%"><img alt="Zoom to 300%" border="0" height="11" id="t300" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(250);" title="Zoom to 250%"><img alt="Zoom to 250%" border="0" height="11" id="t250" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(200);" title="Zoom to 200%"><img alt="Zoom to 200%" border="0" height="11" id="t200" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(150);" title="Zoom to 150%"><img alt="Zoom to 150%" border="0" height="11" id="t150" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(100);" id="a100" title="Zoom to 100%"><img alt="Zoom to 100%" border="0" height="11" id="t100" src="tick-on.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(50);" title="Zoom to 50%"><img alt="Zoom to 50%" border="0" height="11" id="t50" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:tickSelect(10);" title="Zoom to 10%"><img alt="Zoom to 10%" border="0" height="11" id="t10" src="tick-off.gif" width="17"/></a></td></tr>
+<tr><td><a href="javascript:ZoomUpDown(-1);" title="Zoom out"><img alt="Zoom out" border="0" src="panminus.gif"/></a></td></tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td></tr>
+</table>
+<script language="jscript" type="text/jscript">
 			widgets.Add(hidePNZ, "PNZ");
 
 			var zoomLevels = new Array(10, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500);
@@ -331,15 +397,10 @@
 				elemScale.onmouseout = tickBlur;
 			}
 		</script>
-	</div>
-
 </div>
-
-<div id="divCollapsedNav" class="navTocColor" style="display:none;width:100%;height:100%;">
-	<a href="javascript:ToggleNav();" title="Expand navigation frame" id="linkNavClosed"><img src="toc2.gif" alt="Expand navigation frame" border="0"></a>
-</div>	
-
-
-</body>
+</div>
+<div class="navTocColor" id="divCollapsedNav" style="display:none;width:100%;height:100%;">
+<a href="javascript:ToggleNav();" id="linkNavClosed" title="Expand navigation frame"><img alt="Expand navigation frame" border="0" src="toc2.gif"/></a>
+</div>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
 </html>
-
