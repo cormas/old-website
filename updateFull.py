@@ -219,7 +219,7 @@ def transform_file(filepath):
                 ("Cormas soft", "../outil/outil.htm"),
                 ("Modèles", "../applica/applica.htm"),
                 ("Publications", "../bibliog/article.htm"),
-                ("Cours", "../formati/formati.htm"),
+                ("Formations", "../formati/formati.htm"),
                 ("Réseaux", "../reseaux/reseaux.htm")
             ]
 
