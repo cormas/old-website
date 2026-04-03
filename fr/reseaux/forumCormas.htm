@@ -1,106 +1,171 @@
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title> Cormas Forum</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
-</head>
-
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
 <!--#include virtual="haut.inc" -->
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-
-    <!--#include virtual="sommair.inc" -->
-
-    <td width="771" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp;</p>
-
-      <h1>Le forum Cormas</h1>
-
-      <h2>Sujet</h2>
-      <p>Nous souhaitons que le d&eacute;veloppement de Cormas se fasse de mani&egrave;re 
-        collective. Pour partager tout type dinformation &agrave; propos de la 
-        plateforme de simulation Cormas, dun mod&egrave;le multi-agent particulier 
-        d&eacute;velopp&eacute; avec Cormas, ou encore &agrave; propos de la simulation 
-        multi-agent en g&eacute;n&eacute;ral, vous &ecirc;tes invit&eacute;s &agrave; 
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="771">
+<p> </p>
+<h1>Le forum Cormas</h1>
+<h2>Sujet</h2>
+<p>Nous souhaitons que le développement de Cormas se fasse de manière 
+        collective. Pour partager tout type dinformation à propos de la 
+        plateforme de simulation Cormas, dun modèle multi-agent particulier 
+        développé avec Cormas, ou encore à propos de la simulation 
+        multi-agent en général, vous êtes invités à 
         utiliser la liste de diffusion Cormas. Les contributions peuvent avoir 
         pour sujet : </p>
-      <ul>
-        <li>tout aspect informatique relatif &agrave; Cormas (bugs, demandes dexplications, 
-          suggestions de modifications, contributions sous forme de m&eacute;thodes 
-          g&eacute;n&eacute;riques, etc.),</li>
-        <li>des aspects m&eacute;thodologiques (sur le processus de construction 
-          dun mod&egrave;le),</li>
-        <li>des annonces de s&eacute;minaires, des appels &agrave; communication 
+<ul>
+<li>tout aspect informatique relatif à Cormas (bugs, demandes dexplications, 
+          suggestions de modifications, contributions sous forme de méthodes 
+          génériques, etc.),</li>
+<li>des aspects méthodologiques (sur le processus de construction 
+          dun modèle),</li>
+<li>des annonces de séminaires, des appels à communication 
           ou publication, des propositions de stages, des annonces de postes,</li>
-        <li>des ressources bibliographiques int&eacute;ressantes. </li>
-      </ul>
-      <h2>Archives</h2>
-      <p>Tous les messages re&ccedil;us depuis la cr&eacute;ation de ce forum 
-        sont archiv&eacute;s dans cet <a href="/forum/cormas/archives/index.html"> 
-        <b>historique</b></a>. </p>
-      <h2>Rejoindre / quitter le forum</h2>
-      <table width="591" border="1">
-        <tr> 
-          <td width="47%"><div align="center">Pour vous abonner au forum Cormas</div></td>
-          <td width="53%"><div align="center">Pour vous d&eacute;sabonner du forum 
+<li>des ressources bibliographiques intéressantes. </li>
+</ul>
+<h2>Archives</h2>
+<p>Tous les messages reçus depuis la création de ce forum 
+        sont archivés dans cet <a href="/forum/cormas/archives/index.html">
+<b>historique</b></a>. </p>
+<h2>Rejoindre / quitter le forum</h2>
+<table border="1" width="591">
+<tr>
+<td width="47%"><div align="center">Pour vous abonner au forum Cormas</div></td>
+<td width="53%"><div align="center">Pour vous désabonner du forum 
               Cormas</div></td>
-        </tr>
-        <tr> 
-          <td><form action="abonnementCormas.php" method="post" name="sub" id="sub">
-              <p> Nom: 
-                <input name="nomS" type="text" id="nomS" size="25">
-              </p>
-              <p> E-mail : 
-                <input name="emailS" type="text" id="emailS" size="25">
-              </p>
-              <p align="center"> 
-                <input name="SubmitS" type="submit" id="SubmitS" value="Sabonner">
-              </p>
-            </form></td>
-          <td><form action="desabonnementCormas.php" method="post" name="unsub" id="unsub">
-              <p> Nom: 
-                <input name="nomU" type="text" id="nomU" size="25">
-              </p>
-              <p> E-mail : 
-                <input name="emailU" type="text" id="emailU" size="25">
-              </p>
-              <p align="center"> 
-                <input name="SubmitU" type="submit" id="SubmitU" value="Se d&eacute;sabonner">
-              </p>
-            </form></td>
-        </tr>
-      </table>
-      <p>&nbsp;</p>
-
-      <!--#include virtual="/include/copyright_en.inc" -->
-
-    </td>
-
-    <td width="22" valign="top" bgcolor="#FFFFFF"> 
-      <div align="right" class="texte"></div>
-
-    </td>
-
-  </tr>
-
+</tr>
+<tr>
+<td><form action="abonnementCormas.php" id="sub" method="post" name="sub">
+<p> Nom: 
+                <input id="nomS" name="nomS" size="25" type="text"/>
+</p>
+<p> E-mail : 
+                <input id="emailS" name="emailS" size="25" type="text"/>
+</p>
+<p align="center">
+<input id="SubmitS" name="SubmitS" type="submit" value="Sabonner"/>
+</p>
+</form></td>
+<td><form action="desabonnementCormas.php" id="unsub" method="post" name="unsub">
+<p> Nom: 
+                <input id="nomU" name="nomU" size="25" type="text"/>
+</p>
+<p> E-mail : 
+                <input id="emailU" name="emailU" size="25" type="text"/>
+</p>
+<p align="center">
+<input id="SubmitU" name="SubmitU" type="submit" value="Se désabonner"/>
+</p>
+</form></td>
+</tr>
 </table>
-
+<p> </p>
+<!--#include virtual="/include/copyright_en.inc" -->
+</td>
+<td bgcolor="#FFFFFF" valign="top" width="22">
+<div align="right" class="texte"></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="sidebar">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
-
 </html>
-

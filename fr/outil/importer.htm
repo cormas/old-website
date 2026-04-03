@@ -1,54 +1,144 @@
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-<title>Importer un mod&egrave;le dans Cormas</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>Importer un modèle dans Cormas</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
-<!--#include virtual="haut.inc" --> 
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-  <tr> <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp; 
-      <p> 
-      <h1> Importer des mod&egrave;les dans Cormas</h1>
-      <p>La d&eacute;marche &agrave; suivre pour installer des mod&egrave;les 
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
+<!--#include virtual="haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr> <!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  
+      <p>
+<h1> Importer des modèles dans Cormas</h1>
+<p>La démarche à suivre pour installer des modèles 
         dans Cormas est simple :</p>
-      <ul>
-        <li>Cr&eacute;ez un sous-r&eacute;pertoire de Cormas et nommez-le <i>Models. 
-          </i>Exemple :<i><br>
-          <br>
-          </i>C:\vwnc30\cormas\Models<br>
-          <br>
-        </li>
-        <li> D&eacute;zipper les archives t&eacute;l&eacute;charg&eacute;es (file.zip) 
-          dans ce r&eacute;pertoire. </li>
-        <li>Dans le menu de Cormas, cliquez sur <i>Importer</i>. <br>
-          <img src="../../images/outil/importer.jpg" width="405" height="443"><br>
-          <br>
-        </li>
-        <li>Une fen&ecirc;tre souvre alors. Double-cliquez sur le mod&egrave;le 
-          qui vous int&eacute;resse.<br>
-          <img src="../../images/outil/which_Model.jpg" width="172" height="233"><br>
-          <br>
-        </li>
-        <li>Le mod&egrave;le est charg&eacute; ! Par la suite, vous naurez plus 
-          qu&agrave; le r&eacute;ouvrir.</li>
-      </ul>
-      <!--#include virtual="/include/copyright_fr.inc" --> </td>
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-      <div align="right" class="texte"></div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="185" height="600" valign="top" bgcolor="#FFCC99">&nbsp;</td>
-    <td width="25" height="600" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-    <td width="*" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-    <td width="15" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-  </tr>
+<ul>
+<li>Créez un sous-répertoire de Cormas et nommez-le <i>Models. 
+          </i>Exemple :<i><br/>
+<br/>
+</i>C:\vwnc30\cormas\Models<br/>
+<br/>
+</li>
+<li> Dézipper les archives téléchargées (file.zip) 
+          dans ce répertoire. </li>
+<li>Dans le menu de Cormas, cliquez sur <i>Importer</i>. <br/>
+<img height="443" src="../../images/outil/importer.jpg" width="405"/><br/>
+<br/>
+</li>
+<li>Une fenêtre souvre alors. Double-cliquez sur le modèle 
+          qui vous intéresse.<br/>
+<img height="233" src="../../images/outil/which_Model.jpg" width="172"/><br/>
+<br/>
+</li>
+<li>Le modèle est chargé ! Par la suite, vous naurez plus 
+          quà le réouvrir.</li>
+</ul>
+<!--#include virtual="/include/copyright_fr.inc" --> </p></p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFCC99" height="600" valign="top" width="185"> </td>
+<td bgcolor="#FFFFFF" height="600" valign="top" width="25"> </td>
+<td bgcolor="#FFFFFF" valign="top" width="*"> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15"> </td>
+</tr>
 </table>
+</div>
+<div id="sidebar">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
 </html>

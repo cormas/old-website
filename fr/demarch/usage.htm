@@ -1,98 +1,170 @@
 
 <div id="sidebar">
-    <ul>
-        <li><a href="./index.htm">Accueil</a></li>
-        <li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
-        <li><a href="./another-page.htm">Autre Page</a></li>
-    </ul>
+<ul>
+<li><a href="./index.htm">Accueil</a></li>
+<li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
+<li><a href="./another-page.htm">Autre Page</a></li>
+</ul>
 </div>
 <!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
-<HTML> 
-  <HEAD>
-	 <META NAME="KeyWords"
-	  CONTENT="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-	 
-	 <TITLE>Usage de la mod&eacute;lisation</TITLE>
-	 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
 
+<html>
+<head>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>Usage de la modélisation</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-	 <LINK REL="stylesheet" HREF="/css/cormas.css"> 
-  </HEAD> 
-  <BODY MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0"
-  ONLOAD="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
-  BGCOLOR="#FFFFFF">
+<link href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
 <!--#include virtual="haut.inc" -->
-	 <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%"> 
-		<TR>
-    <!--#include virtual="sommair.inc" -->
-		  <TD WIDTH="*" VALIGN="top" BGCOLOR="#FFFFFF"> 
-			 <P>&nbsp;</P>
-			 <P> </P>
-			 
-      <H1> Usage de la mod&eacute;lisation</H1>
-      <P>&nbsp;</P>
-      <P>Lun des usages classiques de la simulation r&eacute;side dans la pr&eacute;diction 
-        : telle nest pas loption que nous choisissons. Le tr&eacute;s long terme nest 
-        pas pr&eacute;visible dans le champ &eacute;conomique et social ; il est par contre 
-        partiellement d&eacute;cidable. Cest lhypothese sur laquelle repose la "d&eacute;marche 
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<p> </p>
+<h1> Usage de la modélisation</h1>
+<p> </p>
+<p>Lun des usages classiques de la simulation réside dans la prédiction 
+        : telle nest pas loption que nous choisissons. Le trés long terme nest 
+        pas prévisible dans le champ économique et social ; il est par contre 
+        partiellement décidable. Cest lhypothese sur laquelle repose la "démarche 
         patrimoniale " (Ollagnon, 1989; De Montgolfier et Natali 1988). "<i>Parce 
-        quil se situe hors de port&eacute;e de toute pr&eacute;vision, prendre en compte le 
+        quil se situe hors de portée de toute prévision, prendre en compte le 
         tres long terme dans lanalyse des problemes denvironnement implique 
         de se donner des reperes ou des objectifs de tres long terme par rapport 
-        auxquels les chemins d&eacute;volution , possibles ou impossibles seraient envisag&eacute;s. 
-        Lapproche du long terme ne peut guere relever que du sc&eacute;nario</i>". (Weber 
-        et Bailly, 1993). Parce que les regles r&eacute;sultent de linteraction entre 
-        acteurs, elles se trouvent l&eacute;gitim&eacute;es aux yeux de lensemble des acteurs 
-        et elles integrent les perceptions particulieres. </P>
-      <p>Cest a partir dune conception partag&eacute;e sur l&eacute;volution de la situation 
-        pr&eacute;sente que les acteurs peuvent "d&eacute;cider" des objectifs de tr&egrave;s 
-        long terme, sur la base desquels les sc&eacute;narios qui permettraient de les 
-        atteindre pourront etre discut&eacute;s. Lensemble de la d&eacute;marche de m&eacute;diation 
-        suppose l&eacute;tablissement dune situation initiale dans laquelle les acteurs 
-        sont clairement inform&eacute;s de ce qui les oppose aux autres et de leur commune 
-        d&eacute;pendance dune solution au probleme qui se trouve a lorigine de leur 
-        m&eacute;diation. </p>
-      <p>Lenjeu de la phase dinitialisation est de permettre aux acteurs dexprimer 
-        leurs perceptions de la situation pr&eacute;sente et de son &eacute;volution. Lorsque 
-        "une carte des perceptions", &eacute;galement l&eacute;gitimes et &eacute;galement subjectives, 
-        a pu etre &eacute;tablie et discut&eacute;e, il est demand&eacute; aux acteurs de d&eacute;battre 
-        de lacceptabilit&eacute; dune prolongation des tendances actuelles. Comment 
+        auxquels les chemins dévolution , possibles ou impossibles seraient envisagés. 
+        Lapproche du long terme ne peut guere relever que du scénario</i>". (Weber 
+        et Bailly, 1993). Parce que les regles résultent de linteraction entre 
+        acteurs, elles se trouvent légitimées aux yeux de lensemble des acteurs 
+        et elles integrent les perceptions particulieres. </p>
+<p>Cest a partir dune conception partagée sur lévolution de la situation 
+        présente que les acteurs peuvent "décider" des objectifs de très 
+        long terme, sur la base desquels les scénarios qui permettraient de les 
+        atteindre pourront etre discutés. Lensemble de la démarche de médiation 
+        suppose létablissement dune situation initiale dans laquelle les acteurs 
+        sont clairement informés de ce qui les oppose aux autres et de leur commune 
+        dépendance dune solution au probleme qui se trouve a lorigine de leur 
+        médiation. </p>
+<p>Lenjeu de la phase dinitialisation est de permettre aux acteurs dexprimer 
+        leurs perceptions de la situation présente et de son évolution. Lorsque 
+        "une carte des perceptions", également légitimes et également subjectives, 
+        a pu etre établie et discutée, il est demandé aux acteurs de débattre 
+        de lacceptabilité dune prolongation des tendances actuelles. Comment 
         les simulations peuvent elles prendre part a ce processus, cest a dire 
-        aider les acteurs a gouverner ? Nous tentons de d&eacute;velopper lid&eacute;e de mod&eacute;lisation 
-        daccompagnement a laide des systemes multi-agents. Notre r&eacute;flexion constitue 
-        une d&eacute;marche qui est en cours de mise en oeuvre mais que nous navons 
-        pour linstant que partiellement test&eacute;e. Si elle est sans doute originale 
-        dans le domaine de lutilisation de modeles multi-agents, cest une d&eacute;marche 
-        qui a d&eacute;ja &eacute;t&eacute; utilis&eacute;e par plusieurs chercheurs sur les travaux desquels 
+        aider les acteurs a gouverner ? Nous tentons de développer lidée de modélisation 
+        daccompagnement a laide des systemes multi-agents. Notre réflexion constitue 
+        une démarche qui est en cours de mise en oeuvre mais que nous navons 
+        pour linstant que partiellement testée. Si elle est sans doute originale 
+        dans le domaine de lutilisation de modeles multi-agents, cest une démarche 
+        qui a déja été utilisée par plusieurs chercheurs sur les travaux desquels 
         nous nous appuyons. Il sagit des travaux dOstrom (1990) et de Burton 
         (1994). Pour la relation entre approche patrimoniale et la mise en situation 
-        exp&eacute;rimentale par jeu de rÃ´le, beaucoup a &eacute;t&eacute; fait par Mermet (1992) et 
-        Piveteau (1994). Nous nous placons dans un cadre de pens&eacute;e proche de ces 
-        auteurs et proposons dy inclure la d&eacute;marche de mod&eacute;lisation avec des 
+        expérimentale par jeu de rÃ´le, beaucoup a été fait par Mermet (1992) et 
+        Piveteau (1994). Nous nous placons dans un cadre de pensée proche de ces 
+        auteurs et proposons dy inclure la démarche de modélisation avec des 
         univers multi-agents. </p>
-      <H2>R&eacute;f&eacute;rences</H2> 
-			 
-      <P>Burton, M. 1994. The irrigation management game: a role playing exercise 
-        for training in irrigation management. Irrigat. Drainage Syst. 7: 305-348.</P>
-      <p>Mermet, L. 1992. Strat&eacute;gies pour la gestion de lenvironnement. LHarmattan. 
+<h2>Références</h2>
+<p>Burton, M. 1994. The irrigation management game: a role playing exercise 
+        for training in irrigation management. Irrigat. Drainage Syst. 7: 305-348.</p>
+<p>Mermet, L. 1992. Stratégies pour la gestion de lenvironnement. LHarmattan. 
         255 p.</p>
-      <p>de Montgolfier, et Natali, J.M. 1988. Le patrimoine du futur, Economica. 
+<p>de Montgolfier, et Natali, J.M. 1988. Le patrimoine du futur, Economica. 
         248 p.</p>
-      <p>Ollagnon, H., 1989. Une approche patrimoniale de la qualit&eacute; du milieu 
-        naturel. Pages 258-268 in: Mathieu N. et Jollivet M. (eds). &quot;Du rural 
-        a lenvironnement, la question de la Nature aujourdhui&quot;. LHarmattan, 
+<p>Ollagnon, H., 1989. Une approche patrimoniale de la qualité du milieu 
+        naturel. Pages 258-268 in: Mathieu N. et Jollivet M. (eds). "Du rural 
+        a lenvironnement, la question de la Nature aujourdhui". LHarmattan, 
         Paris. </p>
-      <p>Ostrom, E. 1990. Governing the commons. The evolution of Institutions 
+<p>Ostrom, E. 1990. Governing the commons. The evolution of Institutions 
         for collective action. Cambridge University Press, 280 p.</p>
-      <p>Piveteau, V. 1994. Lavenir a long terme des zones rurales fragiles, 
-        approche par le jeu prospectif dune quetsion complexe. These de lUniversit&eacute; 
+<p>Piveteau, V. 1994. Lavenir a long terme des zones rurales fragiles, 
+        approche par le jeu prospectif dune quetsion complexe. These de lUniversité 
         Paris 1. </p>
-      <p>Weber, J., et Bailly, D. 1993. Pr&eacute;voir cest gouverner. Nat. Sci. 
+<p>Weber, J., et Bailly, D. 1993. Prévoir cest gouverner. Nat. Sci. 
         Soc. 1(1): 59-64.</p>
-      <!--#include virtual="/include/copyright_fr.inc" -->
-		  </TD> 
-		  <TD WIDTH="15" VALIGN="top" BGCOLOR="#FFFFFF"> 
-			 <DIV ALIGN="right"></DIV> </TD> 
-		</TR> 
-	 </TABLE> </BODY>
-</HTML>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right"></div> </td>
+</tr>
+</table> </div></body>
+</html>

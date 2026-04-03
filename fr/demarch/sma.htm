@@ -1,213 +1,287 @@
 
 <div id="sidebar">
-    <ul>
-        <li><a href="./index.htm">Accueil</a></li>
-        <li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
-        <li><a href="./another-page.htm">Autre Page</a></li>
-    </ul>
+<ul>
+<li><a href="./index.htm">Accueil</a></li>
+<li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
+<li><a href="./another-page.htm">Autre Page</a></li>
+</ul>
 </div>
 <!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
-<HTML> 
-  <HEAD>
-	 <META NAME="KeyWords"
-	  CONTENT="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-	 
-	 <TITLE>Les Syst&egrave;mes Multi-Agents</TITLE>
-	 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
 
+<html>
+<head>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>Les Systèmes Multi-Agents</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-	 <LINK REL="stylesheet" HREF="/css/cormas.css"> 
-  </HEAD> 
-  <BODY MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0"
-	ONLOAD="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
-	BGCOLOR="#FFFFFF">
+<link href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
 <!--#include virtual="haut.inc" -->
-	 <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%"> 
-		<TR> <!--#include virtual="sommair.inc" -->
-		  <TD WIDTH="*" VALIGN="top" BGCOLOR="#FFFFFF"> 
-			 <P>&nbsp; </P>
-			 <P> </P>
-			 <H1> Les syst&egrave;mes multi-agents</H1> 
-			 <H2>Pr&eacute;sentation g&eacute;n&eacute;rale</H2> 
-			 <P ALIGN="left"><B>Les syst&egrave;mes multi-agents cherchent
-				&agrave; appr&eacute;hender la coordination de processus autonomes.</B> </P> 
-			 <P ALIGN="left">Pour Weiss (1999), un <B>agent</B> est une
-				"entit&eacute; computationnelle", comme un programme informatique ou un robot,
-				qui peut &ecirc;tre vue comme percevant et agissant de fa&ccedil;on autonome
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr> <!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  </p>
+<p> </p>
+<h1> Les systèmes multi-agents</h1>
+<h2>Présentation générale</h2>
+<p align="left"><b>Les systèmes multi-agents cherchent
+				à appréhender la coordination de processus autonomes.</b> </p>
+<p align="left">Pour Weiss (1999), un <b>agent</b> est une
+				"entité computationnelle", comme un programme informatique ou un robot,
+				qui peut être vue comme percevant et agissant de façon autonome
 				sur son environnement. On peut parler dautonomie parce que son comportement
-				d&eacute;pend au moins partiellement de son exp&eacute;rience. Un
-				syst&egrave;me multi-agents (Sma) est constitu&eacute; dun ensemble de
-				processus informatiques se d&eacute;roulant en m&ecirc;me temps, donc de
-				plusieurs agents vivant aum&ecirc;me moment, partageant des ressources communes
-				et communicant entre eux. Le point cl&eacute; des syst&egrave;mes multi-agents
-				r&eacute;side dans la formalisation de la <B>coordination</B> entre les agents.
-				La recherche sur les agents est ainsi une recherche sur :</P> 
-			 <OL> 
-				<LI><B>la d&eacute;cision</B> -quels sont les m&eacute;canismes de
-				  la d&eacute;cision de lagent? Quelle est la relation entre les perceptions,
-				  les repr&eacute;sentations et les actions des agents ? Comment
-				  d&eacute;composent-ils leurs buts et t&acirc;ches ? Comment construisent-ils
-				  leurs repr&eacute;sentations ?</LI> 
-				<LI><B>le contr&ocirc;le</B> - quelles sont les relations entre les
-				  agents?, Comment sont-ils coordonn&eacute;s ? Cette coordination peut
-				  &ecirc;tre d&eacute;crite comme une coop&eacute;ration pour accomplir une
-				  t&acirc;che commune ou comme une n&eacute;gociation entre des agents ayant des
-				  int&eacute;r&ecirc;ts diff&eacute;rents.</LI> 
-				<LI><B>la communication</B> - quels types de message
-				  senvoient-ils? &agrave; quelle syntaxe ob&eacute;issent ces messages?
-				  Diff&eacute;rents protocoles sont propos&eacute;s en fonction du type de
-				  coordination entre les agents.</LI> 
-			 </OL> 
-			 <P>Les syst&egrave;mes multi-agents ont des applications dans le
-				domaine de lintelligence artificielle o&ugrave; ils permettent de
-				r&eacute;duire la complexit&eacute; de la r&eacute;solution dun
-				probl&egrave;me en divisant le savoir n&eacute;cessaire en sous-ensembles, en
-				associant un agent intelligent ind&eacute;pendant &agrave; chacun de ces
-				sous-ensembles et en coordonnant lactivit&eacute; de ces agents (Ferber,
-				1995). On parle ainsi dintelligence artificielle distribu&eacute;e. </P> 
-			 <P>Cette m&eacute;thode sapplique, par exemple, pour la surveillance
-				dun processus industriel o&ugrave; elle met en oeuvre la solution de bon sens
-				qui consiste &agrave; coordonner plusieurs surveillants
-				sp&eacute;cialis&eacute;s, plut&ocirc;t qu&agrave; envisager un seul
-				surveillant omniscient.</P> 
-			 <P> Les recherches fondamentales concernent la repr&eacute;sentation
-				de la d&eacute;cision des agents, ou les protocoles de communication. Elles
-				sappliquent principalement aux t&eacute;l&eacute;communications, &agrave;
-				lIntemet avec le commerce &eacute;lectronique, &agrave; des agents physiques
-				tels les robots, &agrave; loptimisation des syst&egrave;mes de transports et
-				&agrave; la gestion de fili&egrave;res. Il existe une communaut&eacute; de
-				chercheurs qui sint&eacute;ressent aux simulations de soci&eacute;t&eacute;s
-				dagents, en &eacute;cologie ou en sciences sociales.</P> 
-			 <H2>Evolution de la recherche sur les syst&egrave;mes
-				multi-agents</H2> 
-			 <P>En Europe, et en France en particulier, la communaut&eacute; Sma
+				dépend au moins partiellement de son expérience. Un
+				système multi-agents (Sma) est constitué dun ensemble de
+				processus informatiques se déroulant en même temps, donc de
+				plusieurs agents vivant aumême moment, partageant des ressources communes
+				et communicant entre eux. Le point clé des systèmes multi-agents
+				réside dans la formalisation de la <b>coordination</b> entre les agents.
+				La recherche sur les agents est ainsi une recherche sur :</p>
+<ol>
+<li><b>la décision</b> -quels sont les mécanismes de
+				  la décision de lagent? Quelle est la relation entre les perceptions,
+				  les représentations et les actions des agents ? Comment
+				  décomposent-ils leurs buts et tâches ? Comment construisent-ils
+				  leurs représentations ?</li>
+<li><b>le contrôle</b> - quelles sont les relations entre les
+				  agents?, Comment sont-ils coordonnés ? Cette coordination peut
+				  être décrite comme une coopération pour accomplir une
+				  tâche commune ou comme une négociation entre des agents ayant des
+				  intérêts différents.</li>
+<li><b>la communication</b> - quels types de message
+				  senvoient-ils? à quelle syntaxe obéissent ces messages?
+				  Différents protocoles sont proposés en fonction du type de
+				  coordination entre les agents.</li>
+</ol>
+<p>Les systèmes multi-agents ont des applications dans le
+				domaine de lintelligence artificielle où ils permettent de
+				réduire la complexité de la résolution dun
+				problème en divisant le savoir nécessaire en sous-ensembles, en
+				associant un agent intelligent indépendant à chacun de ces
+				sous-ensembles et en coordonnant lactivité de ces agents (Ferber,
+				1995). On parle ainsi dintelligence artificielle distribuée. </p>
+<p>Cette méthode sapplique, par exemple, pour la surveillance
+				dun processus industriel où elle met en oeuvre la solution de bon sens
+				qui consiste à coordonner plusieurs surveillants
+				spécialisés, plutôt quà envisager un seul
+				surveillant omniscient.</p>
+<p> Les recherches fondamentales concernent la représentation
+				de la décision des agents, ou les protocoles de communication. Elles
+				sappliquent principalement aux télécommunications, à
+				lIntemet avec le commerce électronique, à des agents physiques
+				tels les robots, à loptimisation des systèmes de transports et
+				à la gestion de filières. Il existe une communauté de
+				chercheurs qui sintéressent aux simulations de sociétés
+				dagents, en écologie ou en sciences sociales.</p>
+<h2>Evolution de la recherche sur les systèmes
+				multi-agents</h2>
+<p>En Europe, et en France en particulier, la communauté Sma
 				est issue de la rencontre de chercheurs de plusieurs disciplines, contrairement
-				aux Etats-Inis o&ugrave; lintelligence artificielle distribu&eacute;e sest
-				d&eacute;velopp&eacute;e sous l&eacute;gide des informaticiens,
-				s&eacute;par&eacute;ment du domaine de la vie artificielle initi&eacute; par
-				les physiciens. Dans le cadre g&eacute;n&eacute;ral des sciences de la
-				complexit&eacute;, qui proposent les interactions entre des entit&eacute;s
-				&eacute;l&eacute;mentaires et leurs organisations dans une d&eacute;marche
+				aux Etats-Inis où lintelligence artificielle distribuée sest
+				développée sous légide des informaticiens,
+				séparément du domaine de la vie artificielle initié par
+				les physiciens. Dans le cadre général des sciences de la
+				complexité, qui proposent les interactions entre des entités
+				élémentaires et leurs organisations dans une démarche
 				ascendante, les Sma vont amoncer un double mouvement. Dune part ils
 				catalyseront la reformulation de certaines questions en sciences sociales ou en
-				sciences de la nature, dautre part ils aideront &agrave; pr&eacute;ciser les
-				questions et &agrave; proposer de nouveaux concepts informatiques. </P> 
-			 <P>Cest ainsi, par exemple, que les Sma pos&egrave;rent dans un
-				premier temps la question de la <B>d&eacute;cision</B> chez les agents, sen
-				allant interroger la psychologie cognitive et la th&eacute;orie des jeux avant
-				daborder, dans un second temps, la question de <B>linteraction</B> entre les
-				agents pour construire des soci&eacute;t&eacute;s artificielles, convoquant
+				sciences de la nature, dautre part ils aideront à préciser les
+				questions et à proposer de nouveaux concepts informatiques. </p>
+<p>Cest ainsi, par exemple, que les Sma posèrent dans un
+				premier temps la question de la <b>décision</b> chez les agents, sen
+				allant interroger la psychologie cognitive et la théorie des jeux avant
+				daborder, dans un second temps, la question de <b>linteraction</b> entre les
+				agents pour construire des sociétés artificielles, convoquant
 				alors les sociologues ou bien les linguistes. Une des questions actuelles est
-				celle de <B>lenvironnement</B> des agents.</P> 
-			 <H2>Syst&egrave;mes multi-agents et simulation de
-				soci&eacute;t&eacute;</H2> 
-			 <P>G&eacute;n&eacute;ralement lapplication des syst&egrave;mes
-				multi-agents &agrave; la simulation de ph&eacute;nom&egrave;nes sociaux est
-				associ&eacute;e au courant sociologique dit de lindividualisme qui
-				consid&egrave;re lindividu singulier comme lunit&eacute;
-				&eacute;l&eacute;mentaire, comme latome de la soci&eacute;t&eacute;. </P> 
-			 <P> Cependant, lassimilation entre individus dune
-				soci&eacute;t&eacute; et agents dun univers multi-agents peut &ecirc;tre
-				trompeuse : il est tout &agrave; fait possible de consid&eacute;rer comme
-				agents des groupes sociaux ou des institutions donn&eacute;es, avec leurs
-				r&egrave;gles de fonctionnement, leurs normes. Les agents sont conduits par des
-				contraintes, des r&egrave;gles exprim&eacute;es au niveau du groupe: ils ne
-				sont plus que des entit&eacute;s agissantes, que lon place dans un
-				environnement dynamique. Cette simple remarque, naturelle d&egrave;s que lon
-				envisage une mod&eacute;lisation par un syst&egrave;me multi-agent indique
-				comment la dualit&eacute; simple entre lindividualisme et le holisme peut
-				&ecirc;tre remise en cause, ce qui est une pr&eacute;occupation majeure des
-				chercheurs qui &eacute;tudient la gestion des ressources renouvelables et des
-				chercheurs sur les syst&egrave;mes multi-agents:</P> 
-			 <UL TYPE="square"> 
-				<LI>les <B>individus</B>, produits dune histoire sont mus par des
-				  valeurs et des r&egrave;gles collectives, </LI> 
-				<LI>les <B>valeurs et r&egrave;gles collectives</B> &eacute;voluent
-				  par interaction entre individus, mais aussi entre groupes, </LI> 
-				<LI>les individus ne sont ni semblables ni &eacute;gaux, mais
-				  porteurs de <B>r&ocirc;les et statuts sociaux</B>. </LI> 
-			 </UL> 
-			 <P>Comment les individus construisent ils ce collectif ? Comment se
-				cr&eacute;e une institution ? En retour lindividu ne peut &ecirc;tre
-				consid&eacute;r&eacute; comme une entit&eacute; autonome ind&eacute;pendante de
+				celle de <b>lenvironnement</b> des agents.</p>
+<h2>Systèmes multi-agents et simulation de
+				société</h2>
+<p>Généralement lapplication des systèmes
+				multi-agents à la simulation de phénomènes sociaux est
+				associée au courant sociologique dit de lindividualisme qui
+				considère lindividu singulier comme lunité
+				élémentaire, comme latome de la société. </p>
+<p> Cependant, lassimilation entre individus dune
+				société et agents dun univers multi-agents peut être
+				trompeuse : il est tout à fait possible de considérer comme
+				agents des groupes sociaux ou des institutions données, avec leurs
+				règles de fonctionnement, leurs normes. Les agents sont conduits par des
+				contraintes, des règles exprimées au niveau du groupe: ils ne
+				sont plus que des entités agissantes, que lon place dans un
+				environnement dynamique. Cette simple remarque, naturelle dès que lon
+				envisage une modélisation par un système multi-agent indique
+				comment la dualité simple entre lindividualisme et le holisme peut
+				être remise en cause, ce qui est une préoccupation majeure des
+				chercheurs qui étudient la gestion des ressources renouvelables et des
+				chercheurs sur les systèmes multi-agents:</p>
+<ul type="square">
+<li>les <b>individus</b>, produits dune histoire sont mus par des
+				  valeurs et des règles collectives, </li>
+<li>les <b>valeurs et règles collectives</b> évoluent
+				  par interaction entre individus, mais aussi entre groupes, </li>
+<li>les individus ne sont ni semblables ni égaux, mais
+				  porteurs de <b>rôles et statuts sociaux</b>. </li>
+</ul>
+<p>Comment les individus construisent ils ce collectif ? Comment se
+				crée une institution ? En retour lindividu ne peut être
+				considéré comme une entité autonome indépendante de
 				son environnement social. Comment les individus sont-ils contraints par les
-				structures collectives quils se sont donn&eacute;es et comment les font-ils
-				&eacute;voluer ? Quels sont les degr&eacute;s de libert&eacute; &agrave;
-				lint&eacute;rieur desquels se meuvent les pratiques individuelles ? Voici,
+				structures collectives quils se sont données et comment les font-ils
+				évoluer ? Quels sont les degrés de liberté à
+				lintérieur desquels se meuvent les pratiques individuelles ? Voici,
 				entre autres, des questions que les Sma permettent dexplorer, dans les termes
-				suivants : "Comment se cr&eacute;ent et fonctionnent des structures collectives
-				&agrave; partir dagents qui ont de plus ou moins grandes capacit&eacute;s de
-				repr&eacute;sentations, qui &eacute;changent entre autres des informations, des
-				services ou des biens, qui &eacute;laborent des contrats et qui sont
-				plong&eacute;s dans un environnement dynamique qui r&eacute;agit &agrave; leurs
-				actions ? ". </P> 
-			 <H2>Syst&egrave;mes multi-agents et simulation de la gestion des
-				ressources</H2> 
-			 <P>La simulation de la gestion de ressources communes pose le
-				probl&egrave;me de linteraction entre des ensembles dagents et des ressources
-				dynamiques. </P> 
-			 <UL> 
-				<LI TYPE="square">Une premi&egrave;re fa&ccedil;on daborder la
-				  mod&eacute;lisation de ces interactions met laccent sur les processus qui
-				  d&eacute;terminent linteraction entre agents et ressources. Ces processus
-				  peuvent &ecirc;tre cognitifs (chacun des agents se fait une
-				  repr&eacute;sentation de la ressource) ou r&eacute;actifs. Limportant est que
-				  chaque agent agit sur la ressource en cons&eacute;quence de ses r&egrave;gles
-				  ou d&eacute;cisions. Ce faisant, il transforme cette ressource pour les autres.
-				  Cette mod&eacute;lisation se rapproche de ce que les &eacute;conomistes
-				  appellent externalit&eacute;s. On &eacute;tudie un probl&egrave;me de gestion
+				suivants : "Comment se créent et fonctionnent des structures collectives
+				à partir dagents qui ont de plus ou moins grandes capacités de
+				représentations, qui échangent entre autres des informations, des
+				services ou des biens, qui élaborent des contrats et qui sont
+				plongés dans un environnement dynamique qui réagit à leurs
+				actions ? ". </p>
+<h2>Systèmes multi-agents et simulation de la gestion des
+				ressources</h2>
+<p>La simulation de la gestion de ressources communes pose le
+				problème de linteraction entre des ensembles dagents et des ressources
+				dynamiques. </p>
+<ul>
+<li type="square">Une première façon daborder la
+				  modélisation de ces interactions met laccent sur les processus qui
+				  déterminent linteraction entre agents et ressources. Ces processus
+				  peuvent être cognitifs (chacun des agents se fait une
+				  représentation de la ressource) ou réactifs. Limportant est que
+				  chaque agent agit sur la ressource en conséquence de ses règles
+				  ou décisions. Ce faisant, il transforme cette ressource pour les autres.
+				  Cette modélisation se rapproche de ce que les économistes
+				  appellent externalités. On étudie un problème de gestion
 				  des ressources renouvelables communes en confrontant des
-				  repr&eacute;sentations, donc des actions diff&eacute;rentes, qui peuvent donner
-				  lieu &agrave; un usage satisfaisant ou non, pour lensemble des agents. On peut
-				  parler de <B>coordination par lenvironnement</B>. </LI> 
-				<LI>Le deuxi&egrave;me mode consiste &agrave; consid&eacute;rer que
-				  les relations entre les hommes et les ressources doivent plut&ocirc;t
-				  &ecirc;tre formul&eacute;es comme <B>les relations entre les hommes &agrave;
-				  propos des ressources</B>. Les univers multi-agents permettent de simuler des
-				  agents qui s&eacute;changent des messages au sein de r&eacute;seaux, dits
-				  r&eacute;seaux daccointances. Il est ainsi possible de simuler des
-				  &eacute;changes dinformations, des &eacute;changes de services, des contrats,
-				  des agr&eacute;ments entre les agents. </LI> 
-				<LI>Enfin, nous proposons denvisager un troisi&egrave;me mode de
-				  mod&eacute;lisation des interactions entre les groupes dagents et les
+				  représentations, donc des actions différentes, qui peuvent donner
+				  lieu à un usage satisfaisant ou non, pour lensemble des agents. On peut
+				  parler de <b>coordination par lenvironnement</b>. </li>
+<li>Le deuxième mode consiste à considérer que
+				  les relations entre les hommes et les ressources doivent plutôt
+				  être formulées comme <b>les relations entre les hommes à
+				  propos des ressources</b>. Les univers multi-agents permettent de simuler des
+				  agents qui séchangent des messages au sein de réseaux, dits
+				  réseaux daccointances. Il est ainsi possible de simuler des
+				  échanges dinformations, des échanges de services, des contrats,
+				  des agréments entre les agents. </li>
+<li>Enfin, nous proposons denvisager un troisième mode de
+				  modélisation des interactions entre les groupes dagents et les
 				  ressources communes. Nous proposons, pour aller plus loin dans la
-				  caract&eacute;risation de la boucle individu-soci&eacute;t&eacute;, de passer
-				  par la repr&eacute;sentation dobjets "m&eacute;diateurs " ou de
-				  <B>"r&eacute;f&eacute;rents communs"</B>. Il sagit des objets dont la
-				  repr&eacute;sentation est &agrave; la fois individuelle et partag&eacute;e, qui
-				  tendent &agrave; la fois &agrave; cr&eacute;er le groupe social et &agrave;
-				  &ecirc;tre lexpression de son existence. M&eacute;moire collective, mythes,
-				  march&eacute;s, divinit&eacute;s, lieux ou biens symboliques : autant dobjets
+				  caractérisation de la boucle individu-société, de passer
+				  par la représentation dobjets "médiateurs " ou de
+				  <b>"référents communs"</b>. Il sagit des objets dont la
+				  représentation est à la fois individuelle et partagée, qui
+				  tendent à la fois à créer le groupe social et à
+				  être lexpression de son existence. Mémoire collective, mythes,
+				  marchés, divinités, lieux ou biens symboliques : autant dobjets
 				  que les hommes construisent en permanence, autant de perceptions qui orientent
 				  ou contraignent les pratiques des hommes. A travers la perception de ces objets
-				  chaque agent se per&ccedil;oit comme membre du tout et contribue ainsi &agrave;
-				  la cr&eacute;ation ou au maintien de ce tout. Il y a r&eacute;ification, non
+				  chaque agent se perçoit comme membre du tout et contribue ainsi à
+				  la création ou au maintien de ce tout. Il y a réification, non
 				  pas du collectif, comme le voudrait un point de vue holiste, mais des objets
-				  qui sont le signe du collectif. Plus pr&eacute;cis&eacute;ment on pourra
-				  limiter, dans un premier temps, le concept dobjet m&eacute;diateur &agrave; la
-				  repr&eacute;sentation dinstitutions. </LI> 
-			 </UL> 
-			 <P>En r&eacute;sum&eacute;, il nous semble que les syst&egrave;mes
-				multi-agents peuvent prendre en compte plusieurs mod&egrave;les de
-				pens&eacute;es sur la gestion collective de ressources renouvelables communes.
-				Offrant la possibilit&eacute; de mod&eacute;liser des repr&eacute;sentations,
-				des modes de communication au sein de r&eacute;seaux, des contr&ocirc;les
-				individuels ou sociaux, donn&eacute;s ou construits, des interactions, les
-				syst&egrave;mes multi-agents sont ad&eacute;quats &agrave; la simulation de
-				formes de coordination observables sur le terrain. </P> 
-			 <H2>R&eacute;f&eacute;rences</H2> 
-			 <P>Bousquet, F. 2001. Mod&eacute;lisation daccompagnement.
+				  qui sont le signe du collectif. Plus précisément on pourra
+				  limiter, dans un premier temps, le concept dobjet médiateur à la
+				  représentation dinstitutions. </li>
+</ul>
+<p>En résumé, il nous semble que les systèmes
+				multi-agents peuvent prendre en compte plusieurs modèles de
+				pensées sur la gestion collective de ressources renouvelables communes.
+				Offrant la possibilité de modéliser des représentations,
+				des modes de communication au sein de réseaux, des contrôles
+				individuels ou sociaux, donnés ou construits, des interactions, les
+				systèmes multi-agents sont adéquats à la simulation de
+				formes de coordination observables sur le terrain. </p>
+<h2>Références</h2>
+<p>Bousquet, F. 2001. Modélisation daccompagnement.
 				Simulations multi-agents et gestion des ressources naturelles et renouvelables.
-				M&eacute;moire dhabilitation &agrave; diriger des recherches,
-				Universit&eacute; de Lyon 1.</P> 
-			 <P>Ferber, J. 1995. Les syst&egrave;mes multi-agents. Vers une
-				intelligence collective. InterEditions, Paris.</P> 
-			 <P>Weiss, G., (Ed.), 1999. Multiagent Systems. A Modern Approach to
+				Mémoire dhabilitation à diriger des recherches,
+				Université de Lyon 1.</p>
+<p>Ferber, J. 1995. Les systèmes multi-agents. Vers une
+				intelligence collective. InterEditions, Paris.</p>
+<p>Weiss, G., (Ed.), 1999. Multiagent Systems. A Modern Approach to
 				Distributed Artificial Intelligence, The MIT Press, Cambridge,
-				Massachusetts.</P>
-      <!--#include virtual="/include/copyright_fr.inc" --> </TD> 
-		  <TD WIDTH="15" VALIGN="top" BGCOLOR="#FFFFFF"> 
-			 <DIV ALIGN="right"></DIV> </TD> 
-		</TR> 
-	 </TABLE> </BODY>
-</HTML>
+				Massachusetts.</p>
+<!--#include virtual="/include/copyright_fr.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right"></div> </td>
+</tr>
+</table> </div></body>
+</html>

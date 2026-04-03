@@ -1,128 +1,202 @@
 
 <div id="sidebar">
-    <ul>
-        <li><a href="./index.htm">Accueil</a></li>
-        <li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
-        <li><a href="./another-page.htm">Autre Page</a></li>
-    </ul>
+<ul>
+<li><a href="./index.htm">Accueil</a></li>
+<li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
+<li><a href="./another-page.htm">Autre Page</a></li>
+</ul>
 </div>
 <!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
-<HTML> 
-  <HEAD>
-	 <META NAME="KeyWords"
-	  CONTENT="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-	 
-	 <TITLE> Etat de lart au Cirad</TITLE>
-	 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
 
+<html>
+<head>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title> Etat de lart au Cirad</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-	 <LINK REL="stylesheet" HREF="/css/cormas.css"> 
-  </HEAD> 
-  <BODY MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0"
-  ONLOAD="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
-  BGCOLOR="#FFFFFF">
+<link href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
 <!--#include virtual="haut.inc" -->
-	 <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%"> 
-		<TR>
-    <!--#include virtual="sommair.inc" --> 
-    <TD WIDTH="*" VALIGN="top" BGCOLOR="#FFFFFF"> 
-      <P>&nbsp; </P>
-      <H1>Nos recherches au Cirad</H1>
-      <H1>&nbsp; </H1>
-      <P>&nbsp;</P>
-      <P>Les recherches sur lenvironnement abordent la probl&eacute;matique des ressources 
-        et des externalit&eacute;s. Il sagit par exemple de la gestion des ressources 
-        naturelles renouvelables, des externalit&eacute;s de la production (d&eacute;chets, 
-        pollution) et des espaces &agrave; usages multiples. Dans tous les cas, 
-        lenjeu est de mettre en place une r&eacute;gulation des usages collectifs. Quil 
-        sagisse de gestion de ressources, despaces ou dexternalit&eacute;s, les analyses 
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p>  </p>
+<h1>Nos recherches au Cirad</h1>
+<h1>  </h1>
+<p> </p>
+<p>Les recherches sur lenvironnement abordent la problématique des ressources 
+        et des externalités. Il sagit par exemple de la gestion des ressources 
+        naturelles renouvelables, des externalités de la production (déchets, 
+        pollution) et des espaces à usages multiples. Dans tous les cas, 
+        lenjeu est de mettre en place une régulation des usages collectifs. Quil 
+        sagisse de gestion de ressources, despaces ou dexternalités, les analyses 
         doivent tenir compte a la fois des dynamiques de la nature et de celles 
-        de la soci&eacute;t&eacute;. Les <b>dynamiques naturelles</b> se caract&eacute;risent par limbrication 
-        de processus multiples impliquant des especes et des ressources vari&eacute;es, 
-        a des &eacute;chelles spatiales et temporelles diff&eacute;rentes. Les <b>processus 
-        sociaux</b> int&eacute;ressent diff&eacute;rents acteurs et plusieurs niveaux dorganisation, 
-        depuis les individus ou les communaut&eacute;s dusagers jusquaux grandes institutions 
-        charg&eacute;es du d&eacute;veloppement. </P>
-      <P>Au sein du Cirad, le<B> projet Green </B>(gestion des ressources renouvelables, 
-        environnement), cr&eacute;&eacute; en 1993 par Jacques Weber, sint&eacute;resse 
-        &agrave; larticulation des processus locaux et globaux de<B> gestion 
-        des ressources &agrave; usages multiples</B>. Les recherches sorientent 
-        autour de deux th&egrave;mes : les modes dappropriation et les processus 
-        de d&eacute;cision (Weber, 1993).</P>
-      <ol>
-        <li>Les <B>modes dappropriation</B> regroupent les questions de repr&eacute;sentation, 
-          dacc&egrave;s, dusage, de transfert et de r&eacute;partition des ressources. 
-          Lanalyse des modes dappropriation d&eacute;bouche sur la question 
+        de la société. Les <b>dynamiques naturelles</b> se caractérisent par limbrication 
+        de processus multiples impliquant des especes et des ressources variées, 
+        a des échelles spatiales et temporelles différentes. Les <b>processus 
+        sociaux</b> intéressent différents acteurs et plusieurs niveaux dorganisation, 
+        depuis les individus ou les communautés dusagers jusquaux grandes institutions 
+        chargées du développement. </p>
+<p>Au sein du Cirad, le<b> projet Green </b>(gestion des ressources renouvelables, 
+        environnement), créé en 1993 par Jacques Weber, sintéresse 
+        à larticulation des processus locaux et globaux de<b> gestion 
+        des ressources à usages multiples</b>. Les recherches sorientent 
+        autour de deux thèmes : les modes dappropriation et les processus 
+        de décision (Weber, 1993).</p>
+<ol>
+<li>Les <b>modes dappropriation</b> regroupent les questions de représentation, 
+          daccès, dusage, de transfert et de répartition des ressources. 
+          Lanalyse des modes dappropriation débouche sur la question 
           des institutions et des modes de gestion.</li>
-        <li>L&eacute;tude des <B>processus de d&eacute;cision</B> sint&eacute;resse 
-          aux interactions entre des acteurs ayant diff&eacute;rents poids et 
-          diff&eacute;rentes repr&eacute;sentations. Il sagit de les analyser, 
-          den comprendre la dynamique pour d&eacute;boucher sur une aide &agrave; 
-          la n&eacute;gociation.</li>
-      </ol>
-      <P>Pour aller plus loin dans lanalyse des interactions, un domaine de recherche 
-        est privil&eacute;gi&eacute; : celui de la relation entre l&eacute;chelle 
-        et la viabilit&eacute; des interactions. Les crit&egrave;res et contraintes 
-        de viabilit&eacute; ne sont pas les m&ecirc;mes au niveau du village, 
-        de la r&eacute;gion, ou de la plan&egrave;te. Il sagit de comprendre 
-        les liens entre les outils de gestion employ&eacute;s et la viabilit&eacute; 
-        des interactions &agrave; ces diff&eacute;rentes &eacute;chelles.</P>
-      <H2>Lint&eacute;gration entre niveaux</H2>
-      <P>Le projet Green ne cherche pas &agrave; r&eacute;pondre &agrave; toutes 
-        les questions pos&eacute;es ci-dessus. Une probl&eacute;matique nous para&icirc;t 
-        cependant transversale : celle de lint&eacute;gration de dynamiques sur 
-        plusieurs &eacute;chelles spatiales et niveaux dorganisation. <B>Deux 
-        approches</B> sopposent pour la repr&eacute;sentation dun syst&egrave;me 
-        : lune sint&eacute;resse aux <B>interactions locales</B> pour remonter 
-        aux organisations, lautre aux <B>dynamiques globales</B> des organisations 
-        en agr&eacute;geant les dynamiques locales. On retrouve cette dualit&eacute;, 
-        dans les recherches, entre une &eacute;cologie centr&eacute;e sur lindividu 
-        et une &eacute;cologie du paysage, entre une gestion locale et une gestion 
-        r&eacute;gionale des ressources naturelles, entre une gestion locale des 
-        biens communs et des outils &eacute;conomiques ou juridiques de gestion.</P>
-      <P>Pour la gestion des ressources, il semble n&eacute;cessaire de <B>d&eacute;passer 
-        cette bipolarit&eacute;</B> en cherchant &agrave; int&eacute;grer ces 
-        diff&eacute;rents niveaux.</P>
-      <H2>Simuler des interactions pour aider la gestion collective</H2>
-      <P>Cette probl&eacute;matique a conduit le Cirad, dune part, au <B>d&eacute;veloppement 
-        doutils </B>de mod&eacute;lisation qui permettent de simuler des interactions 
-        sur plusieurs &eacute;chelles et, dautre part, &agrave; une <B>r&eacute;flexion 
-        m&eacute;thodologique</B> sur lusage de ces outils.</P>
-      <P>En appui &agrave; la gestion collective, les outils daide &agrave; la 
-        d&eacute;cision et &agrave; la n&eacute;gociation repr&eacute;sentent 
-        linterd&eacute;pendance des acteurs dans les probl&egrave;mes de gestion 
-        et leur r&eacute;solution, et confrontent les diff&eacute;rentes repr&eacute;sentations 
-        des acteurs, du producteur au gestionnaire.</P>
-      <P>Ces outils sappuient sur la <B>mod&eacute;lisation des syst&egrave;mes 
-        complexes</B> pour comprendre les dynamiques spatiales et sociales. Se 
-        pose la question de lint&eacute;gration des approches &eacute;conomiques 
-        et g&eacute;ographiques dans une mod&eacute;lisation pens&eacute;e en 
-        termes de comportements et dinteractions. Les outils de<B> caract&eacute;risation 
-        des structures spatiales</B>, tels les Sig ou les logiciels danalyse 
-        spatiale sont ainsi coupl&eacute;s &agrave; des outils de simulation des 
-        interactions, tels les automates cellulaires ou les syst&egrave;mes multi-agents.</P>
-      <P>La d&eacute;marche se positionne en accompagnement des processus de prise 
-        de d&eacute;cision. Montrer sur un monde artificiel la diversit&eacute; 
-        des dynamiques locales et lexistence &eacute;ventuelle de processus de 
-        r&eacute;gulation. Pr&eacute;senter sur un monde artificiel les effets 
-        des outils de gestion pens&eacute;s &agrave; un niveau plus englobant 
-        (r&eacute;gion, nation). </P>
-      <P><B>Accompagner un processus de d&eacute;cision</B>, cest aussi pouvoir 
-        comparer les r&eacute;sultats des diff&eacute;rents sc&eacute;narios. 
-        La r&eacute;flexion sur les indicateurs dinteraction, sur les m&eacute;thodes 
-        pour donner une valeur aux diff&eacute;rents sc&eacute;narios constitue 
-        un point essentiel du processus daccompagnement.</P>
-      <H2>R&eacute;f&eacute;rence</H2>
-      <P>Weber J., 1995. Gestion des ressources renouvelables : fondements th&eacute;oriques 
-        dun programme de recherche. Paris, Cirad Green, 21 p. <A HREF="/pdf/green.pdf">Document 
-        &agrave; t&eacute;l&eacute;charger</A>. (format pdf, 92 ko). </P>
-      <P>Weber J. 1996. Gest&atilde;o de recursos renovaveis: fundamentos teoricos 
-        de um programa de pesquisas, in Gest&atilde;o de recursos naturais renovaveis 
+<li>Létude des <b>processus de décision</b> sintéresse 
+          aux interactions entre des acteurs ayant différents poids et 
+          différentes représentations. Il sagit de les analyser, 
+          den comprendre la dynamique pour déboucher sur une aide à 
+          la négociation.</li>
+</ol>
+<p>Pour aller plus loin dans lanalyse des interactions, un domaine de recherche 
+        est privilégié : celui de la relation entre léchelle 
+        et la viabilité des interactions. Les critères et contraintes 
+        de viabilité ne sont pas les mêmes au niveau du village, 
+        de la région, ou de la planète. Il sagit de comprendre 
+        les liens entre les outils de gestion employés et la viabilité 
+        des interactions à ces différentes échelles.</p>
+<h2>Lintégration entre niveaux</h2>
+<p>Le projet Green ne cherche pas à répondre à toutes 
+        les questions posées ci-dessus. Une problématique nous paraît 
+        cependant transversale : celle de lintégration de dynamiques sur 
+        plusieurs échelles spatiales et niveaux dorganisation. <b>Deux 
+        approches</b> sopposent pour la représentation dun système 
+        : lune sintéresse aux <b>interactions locales</b> pour remonter 
+        aux organisations, lautre aux <b>dynamiques globales</b> des organisations 
+        en agrégeant les dynamiques locales. On retrouve cette dualité, 
+        dans les recherches, entre une écologie centrée sur lindividu 
+        et une écologie du paysage, entre une gestion locale et une gestion 
+        régionale des ressources naturelles, entre une gestion locale des 
+        biens communs et des outils économiques ou juridiques de gestion.</p>
+<p>Pour la gestion des ressources, il semble nécessaire de <b>dépasser 
+        cette bipolarité</b> en cherchant à intégrer ces 
+        différents niveaux.</p>
+<h2>Simuler des interactions pour aider la gestion collective</h2>
+<p>Cette problématique a conduit le Cirad, dune part, au <b>développement 
+        doutils </b>de modélisation qui permettent de simuler des interactions 
+        sur plusieurs échelles et, dautre part, à une <b>réflexion 
+        méthodologique</b> sur lusage de ces outils.</p>
+<p>En appui à la gestion collective, les outils daide à la 
+        décision et à la négociation représentent 
+        linterdépendance des acteurs dans les problèmes de gestion 
+        et leur résolution, et confrontent les différentes représentations 
+        des acteurs, du producteur au gestionnaire.</p>
+<p>Ces outils sappuient sur la <b>modélisation des systèmes 
+        complexes</b> pour comprendre les dynamiques spatiales et sociales. Se 
+        pose la question de lintégration des approches économiques 
+        et géographiques dans une modélisation pensée en 
+        termes de comportements et dinteractions. Les outils de<b> caractérisation 
+        des structures spatiales</b>, tels les Sig ou les logiciels danalyse 
+        spatiale sont ainsi couplés à des outils de simulation des 
+        interactions, tels les automates cellulaires ou les systèmes multi-agents.</p>
+<p>La démarche se positionne en accompagnement des processus de prise 
+        de décision. Montrer sur un monde artificiel la diversité 
+        des dynamiques locales et lexistence éventuelle de processus de 
+        régulation. Présenter sur un monde artificiel les effets 
+        des outils de gestion pensés à un niveau plus englobant 
+        (région, nation). </p>
+<p><b>Accompagner un processus de décision</b>, cest aussi pouvoir 
+        comparer les résultats des différents scénarios. 
+        La réflexion sur les indicateurs dinteraction, sur les méthodes 
+        pour donner une valeur aux différents scénarios constitue 
+        un point essentiel du processus daccompagnement.</p>
+<h2>Référence</h2>
+<p>Weber J., 1995. Gestion des ressources renouvelables : fondements théoriques 
+        dun programme de recherche. Paris, Cirad Green, 21 p. <a href="/pdf/green.pdf">Document 
+        à télécharger</a>. (format pdf, 92 ko). </p>
+<p>Weber J. 1996. Gestão de recursos renovaveis: fundamentos teoricos 
+        de um programa de pesquisas, in Gestão de recursos naturais renovaveis 
         e desenvolvimento, Paulo Freire Vieira e Jacques Weber (orgs.), Cortez 
-        Editora, S&atilde;o Paulo.</P>
-      <!--#include virtual="/include/copyright_fr.inc" --> </TD> 
-		  <TD WIDTH="15" VALIGN="top" BGCOLOR="#FFFFFF"> 
-			 <DIV ALIGN="right"></DIV> </TD> 
-		</TR> 
-	 </TABLE> </BODY>
-</HTML>
+        Editora, São Paulo.</p>
+<!--#include virtual="/include/copyright_fr.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right"></div> </td>
+</tr>
+</table> </div></body>
+</html>

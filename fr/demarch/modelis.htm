@@ -1,80 +1,149 @@
 
 <div id="sidebar">
-    <ul>
-        <li><a href="./index.htm">Accueil</a></li>
-        <li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
-        <li><a href="./another-page.htm">Autre Page</a></li>
-    </ul>
+<ul>
+<li><a href="./index.htm">Accueil</a></li>
+<li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
+<li><a href="./another-page.htm">Autre Page</a></li>
+</ul>
 </div>
 <!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
-<HTML> 
-  <HEAD>
-	 <META NAME="KeyWords"
-	  CONTENT="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-	 
-	 <TITLE> Les diff&eacute;rents types de mod&egrave;les</TITLE>
-	 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
 
+<html>
+<head>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title> Les différents types de modèles</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-	 <LINK REL="stylesheet" HREF="/css/cormas.css"> 
-  </HEAD> 
-  <BODY MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0"
-  ONLOAD="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)"
-  BGCOLOR="#FFFFFF">
+<link href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
 <!--#include virtual="haut.inc" -->
-	 <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%"> 
-		<TR>
-    <!--#include virtual="sommair.inc" -->
-		  <TD WIDTH="*" VALIGN="top" BGCOLOR="#FFFFFF"> 
-			 <P>&nbsp;</P>
-			 <P> </P>
-			 
-      <H1> Les diff&eacute;rents types de modeles</H1> 
-			 
-      <P>&nbsp;</P>
-      <P>La plupart des recherches sur les ressources naturelles utilisent la 
-        mod&eacute;lisation et la simulation. Les finalit&eacute;s sont diverses 
-        : le mod&egrave;le peut &ecirc;tre utilis&eacute; &agrave; des fins de 
-        contr&ocirc;le et de pr&eacute;diction ou &agrave; des fins de compr&eacute;hension 
-        et de confrontation de points de vue.</P> 
-			 <P>Les recherches sur les biens communs sint&eacute;ressent le plus
-				souvent &agrave; la <B>th&eacute;orie des jeux</B>, qui permet de
-				repr&eacute;senter des individus, des comportements et des interactions. De
-				leur c&ocirc;t&eacute;, les outils &eacute;conomiques de gestion sappuient le
-				plus souvent sur une mod&eacute;lisation de type <B>syst&egrave;mes
-				dynamiques</B> pour repr&eacute;senter les flux de mati&egrave;re
-				d&eacute;nergie, dinformation ou de monnaie. Enfin lapproche
-				r&eacute;gionale fait des <B>syst&egrave;mes dinformation
-				g&eacute;ographique</B> (Sig) son outil central de mod&eacute;lisation.</P> 
-			 <P>La vocation de ces communaut&eacute;s de chercheurs est de mettre
-				laccent sur<B> linteraction et lint&eacute;gration </B>(entre les
-				disciplines scientifiques, entre les &eacute;chelles, entre les niveaux
-				dint&eacute;gration, entre les dynamiques naturelles et sociales, entre des
-				pas de temps). Le but est de mieux comprendre et de mieux agir.</P> 
-			 <P>Cette d&eacute;marche fait appel aux <B>sciences de la
-				complexit&eacute;</B> (Lewin, 1994 ; Gell-Mann, 1994). De nombreuses recherches
-				utilisent les m&eacute;thodes de mod&eacute;lisation d&eacute;velopp&eacute;es
-				dans les sciences de la complexit&eacute;. Il sagit de mod&eacute;lisations de
-				la dynamique des interactions, comme les <B>syst&egrave;mes multi-agents</B> ou
-				les <B>automates cellulaires</B>.</P> 
-			 
-      <P>Des instituts comme le World Resource Institute, le Macaulay Land Use 
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<p> </p>
+<h1> Les différents types de modeles</h1>
+<p> </p>
+<p>La plupart des recherches sur les ressources naturelles utilisent la 
+        modélisation et la simulation. Les finalités sont diverses 
+        : le modèle peut être utilisé à des fins de 
+        contrôle et de prédiction ou à des fins de compréhension 
+        et de confrontation de points de vue.</p>
+<p>Les recherches sur les biens communs sintéressent le plus
+				souvent à la <b>théorie des jeux</b>, qui permet de
+				représenter des individus, des comportements et des interactions. De
+				leur côté, les outils économiques de gestion sappuient le
+				plus souvent sur une modélisation de type <b>systèmes
+				dynamiques</b> pour représenter les flux de matière
+				dénergie, dinformation ou de monnaie. Enfin lapproche
+				régionale fait des <b>systèmes dinformation
+				géographique</b> (Sig) son outil central de modélisation.</p>
+<p>La vocation de ces communautés de chercheurs est de mettre
+				laccent sur<b> linteraction et lintégration </b>(entre les
+				disciplines scientifiques, entre les échelles, entre les niveaux
+				dintégration, entre les dynamiques naturelles et sociales, entre des
+				pas de temps). Le but est de mieux comprendre et de mieux agir.</p>
+<p>Cette démarche fait appel aux <b>sciences de la
+				complexité</b> (Lewin, 1994 ; Gell-Mann, 1994). De nombreuses recherches
+				utilisent les méthodes de modélisation développées
+				dans les sciences de la complexité. Il sagit de modélisations de
+				la dynamique des interactions, comme les <b>systèmes multi-agents</b> ou
+				les <b>automates cellulaires</b>.</p>
+<p>Des instituts comme le World Resource Institute, le Macaulay Land Use 
         Research Institute, lUnesco, lIee (International Institute for Ecological 
-        Economics) d&eacute;veloppent des outils de mod&eacute;lisation de la 
+        Economics) développent des outils de modélisation de la 
         dynamique des interactions. En France, des instituts comme le Cemagref, 
-        lInra, lIrd, le Cnrs et, bien s&ucirc;r, le Cirad se sont aussi engag&eacute;s 
-        dans cette voie. </P> 
-			 
-      <H2>R&eacute;f&eacute;rences</H2> 
-			 <P>Gell-Mann M. 1994. Le quark et le jaguar. Voyage au c&#156;ur du
-				simple et du complexe. Albin Michel Sciences, Paris.</P> 
-			 <P>Lewin R. 1994. La complexit&eacute;. Une th&eacute;orie de la vie
-				au bord du chaos. InterEditions, Paris</P>
-   
-    <!--#include virtual="/include/copyright_fr.inc" -->
-		  </TD> 
-		  <TD WIDTH="15" VALIGN="top" BGCOLOR="#FFFFFF"> 
-			 <DIV ALIGN="right"></DIV> </TD> 
-		</TR> 
-	 </TABLE> </BODY>
-</HTML>
+        lInra, lIrd, le Cnrs et, bien sûr, le Cirad se sont aussi engagés 
+        dans cette voie. </p>
+<h2>Références</h2>
+<p>Gell-Mann M. 1994. Le quark et le jaguar. Voyage au cœur du
+				simple et du complexe. Albin Michel Sciences, Paris.</p>
+<p>Lewin R. 1994. La complexité. Une théorie de la vie
+				au bord du chaos. InterEditions, Paris</p>
+<!--#include virtual="/include/copyright_fr.inc" -->
+</td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right"></div> </td>
+</tr>
+</table> </div></body>
+</html>

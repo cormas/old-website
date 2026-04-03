@@ -1,76 +1,141 @@
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
 <title>Journal articles</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
 
-<link rel="stylesheet" href="/css/cormas.css" -->
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
 
 </head>
-
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
-
-<!--#include virtual="haut.inc" --> 
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
-  <tr> <!--#include virtual="sommair.inc" --> 
-
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-
-      <p>&nbsp;</p>
-
-      <h1>Publications ext&eacute;rieures </h1>
-
-      <h2>&nbsp; </h2>
-
-      <p>Elliston, L., Hinde, R. and Yainshet, A. 2004. Plant disease incursion 
-        management. in MAMABS 2004, New York, USA. <a href="http://www.agents.cs.nott.ac.uk/events/mamabs04/Papers/11-Elliston.pdf" target="_blank"><img src="/images/renvoi.gif" width="15" height="15" border="0"></a></p>
-      <p>Torii, D., Ishida, T., Bonneaud, S. and Drogoul, A. 2004. Layering social 
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
+<!--#include virtual="haut.inc" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr> <!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<h1>Publications extérieures </h1>
+<h2>  </h2>
+<p>Elliston, L., Hinde, R. and Yainshet, A. 2004. Plant disease incursion 
+        management. in MAMABS 2004, New York, USA. <a href="http://www.agents.cs.nott.ac.uk/events/mamabs04/Papers/11-Elliston.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a></p>
+<p>Torii, D., Ishida, T., Bonneaud, S. and Drogoul, A. 2004. Layering social 
         interaction scenarios on environmental simulations. in MAMABS 2004, New 
-        York, USA. <a href="http://www.agents.cs.nott.ac.uk/events/mamabs04/Papers/23-Torii.pdf" target="_blank"><img src="/images/renvoi.gif" width="15" height="15" border="0"></a> 
-      </p>
-      <p>Marietto, M., David, N., Sichman, J. and Coelho, H. 2003. Requirement 
+        York, USA. <a href="http://www.agents.cs.nott.ac.uk/events/mamabs04/Papers/23-Torii.pdf" target="_blank"><img border="0" height="15" src="/images/renvoi.gif" width="15"/></a>
+</p>
+<p>Marietto, M., David, N., Sichman, J. and Coelho, H. 2003. Requirement 
         analysis of agent-based simulation platforms: State of the art and new 
         prospects. Lecture Notes in Artificial Intelligence:125-141.</p>
-      <p>Janssen, M.A., J.M. Anderies, M. Stafford Smith and B.H. Walker (2002), 
+<p>Janssen, M.A., J.M. Anderies, M. Stafford Smith and B.H. Walker (2002), 
         Implications of spatial heterogeneity of grazing pressure on the resilience 
         of rangelands, in Janssen, M.A. (ed.) Complexity and Ecosystem Management: 
         The Theory and Practice of Multi-agent Systems, Edward Elgar Publishers, 
         Cheltenham UK/ Northampton, MA, USA. pp. 103-124.</p>
-      <p></p>
-      <p>Parker, D., Berger, T. and Manson, S., editors. 2002. Agent-based models 
+<p></p>
+<p>Parker, D., Berger, T. and Manson, S., editors. 2002. Agent-based models 
         of land-use and land-cover change. LUCC Report Series, 6, Indiana University.</p>
-      <p>Petit, O. 2001. Combining mas with gis: Another way to &quot;pixelise&quot; 
+<p>Petit, O. 2001. Combining mas with gis: Another way to "pixelise" 
         the commons? The Common Property Resource Digest. Quaterly Publication 
         of the international association for the study of common property:9-11.</p>
-      <p>R&ouml;ling, N. 1999. Modelling the soft side of the land: The potential 
+<p>Röling, N. 1999. Modelling the soft side of the land: The potential 
         of multi-agent systems. Pages 73-97 in C. Leeuwis, editor. Integral design: 
         Innovation in agriculture and resource management. Mansholt Institute, 
         Wageningen. </p>
-      <p>&nbsp;</p>
-
-      <!--#include virtual="/include/copyright_en.inc" --> </td>
-
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-      <div align="right" class="texte"></div>
-
-    </td>
-
-  </tr>
-
+<p> </p>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-
+</div>
+<div id="sidebar">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
-
 </html>
-

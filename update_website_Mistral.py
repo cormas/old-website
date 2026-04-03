@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import chardet  # Pour détecter l'encodage des fichiers
 
 # Répertoire contenant les fichiers .htm
-input_dir = "/Users/bommel/old-website/fr/applica/"
+input_dir = "/Users/bommel/old-website/fr/reseaux/"
 
 # Modèle de sidebar et bandeau à insérer
 template_sidebar = """
@@ -171,14 +171,15 @@ def update_file(filepath):
         print(f"❌ Erreur lors du traitement du fichier {filepath} : {str(e)}")
 
 def main():
-    filename = "cienaga.htm"
-    filepath = os.path.join(input_dir, filename)
-    update_file(filepath)
+   # filename = "varzeaViva.htm"
+    #filepath = os.path.join(input_dir, filename)
+    #update_file(filepath)
+    
     # Appliquer à tous les fichiers .htm du répertoire
-    #for filename in os.listdir(input_dir):
-     #   if filename.endswith('.htm'):
-      #      filepath = os.path.join(input_dir, filename)
-       #     update_file(filepath)
+    for filename in os.listdir(input_dir):
+        if filename.endswith('.htm'):
+            filepath = os.path.join(input_dir, filename)
+            update_file(filepath)
 
 if __name__ == "__main__":
     main()

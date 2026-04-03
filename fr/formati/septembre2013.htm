@@ -1,90 +1,159 @@
 <html>
-
 <head>
-
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-
-<title>Ecole d&eacute;t&eacute; &quot;impl&eacute;mentation de mod&egrave;les multi-agents d&eacute;di&eacute;s &agrave; la gestion des ressources renouvelables&quot; - Septembre 2013 Montpellier</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title>Ecole dété "implémentation de modèles multi-agents dédiés à la gestion des ressources renouvelables" - Septembre 2013 Montpellier</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-
-<link rel="stylesheet" href="/css/cormas.css" -->
-
-</head>
-
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" bgcolor="#FFFFFF">
-
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
 <!--#include virtual="haut.inc" -->
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-
-    <!--#include virtual="sommair.inc" --> 
-    <td width="*" valign="top" bgcolor="#FFFFFF"> 
-      <p>&nbsp;</p>
-      <h1>Ecole d&eacute;t&eacute; internationale &quot;Designing, Implementing 
-        and Running Agent-Based Models for Renewable Resources Management&quot;<br>
-      </h1>
-      <h2 align="right">Montpellier, Agropolis International, du 23 septembre 
-        au 4 octobre 2013<br>
-      </h2>
-      <h2>Contenu</h2>
-      <p>Les sessions du matin prendront la forme de s&eacute;ances collectives 
-        au cours desquelles les principes de la conception, de limpl&eacute;mentation 
-        et de la simulation de mod&egrave;les multi-agents seront enseign&eacute;s. 
-        Des points sp&eacute;cifiques seront approfondis selon les attentes et 
-        demandes des participants. Les sessions de lapr&egrave;s-midi seront 
-        consacr&eacute;es &agrave; des travaux personnels: les participants recevront 
-        un appui de la part des formateurs dans le d&eacute;veloppement et la 
-        mise au point de leur propre mod&egrave;le multi-agent.</p>
-      <h2>Outils</h2>
-      <p>Des temps sp&eacute;cifiques dapprentissage du langage graphique <a href="http://www.uml.org/" target="_blank">UML</a> 
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> </p>
+<h1>Ecole dété internationale "Designing, Implementing 
+        and Running Agent-Based Models for Renewable Resources Management"<br/>
+</h1>
+<h2 align="right">Montpellier, Agropolis International, du 23 septembre 
+        au 4 octobre 2013<br/>
+</h2>
+<h2>Contenu</h2>
+<p>Les sessions du matin prendront la forme de séances collectives 
+        au cours desquelles les principes de la conception, de limplémentation 
+        et de la simulation de modèles multi-agents seront enseignés. 
+        Des points spécifiques seront approfondis selon les attentes et 
+        demandes des participants. Les sessions de laprès-midi seront 
+        consacrées à des travaux personnels: les participants recevront 
+        un appui de la part des formateurs dans le développement et la 
+        mise au point de leur propre modèle multi-agent.</p>
+<h2>Outils</h2>
+<p>Des temps spécifiques dapprentissage du langage graphique <a href="http://www.uml.org/" target="_blank">UML</a> 
         ainsi que dintroduction aux plateformes <a href="http://cormas.cirad.fr/fr/outil/presentation/" target="_blank">Cormas</a>, 
         <a href="http://gama-platform.googlecode.com" target="_blank">Gama</a> 
         et <a href="http://ccl.northwestern.edu/netlogo/" target="_blank">NetLogo</a> 
-        (sur la base dune d&eacute;monstration dun m&ecirc;me mod&egrave;le) 
-        seront propos&eacute;s. Il est demand&eacute; aux participants dindiquer 
+        (sur la base dune démonstration dun même modèle) 
+        seront proposés. Il est demandé aux participants dindiquer 
         dans la fiche dinscription (cf. ci-dessous) laquelle de ces trois plateformes 
-        ils se destinent &agrave; utiliser lors des s&eacute;ances de travail 
-        sur les projets personnels, afin de faciliter lorganisation de ces s&eacute;ances 
-        dappui personalis&eacute;.</p>
-      <h2>Formateurs</h2>
-      <p>G&eacute;raldine Abrami (Irstea), Pierre Bommel, Fran&ccedil;ois Bousquet, 
-        Christophe Le Page (CIRAD), Patrick Taillandier (Univ. Rouen), Beno&icirc;t 
+        ils se destinent à utiliser lors des séances de travail 
+        sur les projets personnels, afin de faciliter lorganisation de ces séances 
+        dappui personalisé.</p>
+<h2>Formateurs</h2>
+<p>Géraldine Abrami (Irstea), Pierre Bommel, François Bousquet, 
+        Christophe Le Page (CIRAD), Patrick Taillandier (Univ. Rouen), Benoît 
         Gaudou (Univ. Toulouse).</p>
-      <h2>Inscription</h2>
-      <p>Compl&eacute;ter et renvoyer la fiche <a href="ABMS-SS_2013_RegForm.doc" target="_blank"><img src="../../images/doc.jpg" width="16" height="16" border="0"></a> 
-        &agrave; <a href="mailto:le_page@cirad.fr" target="_blank">christophe.le_page@cirad.fr</a> 
-        avant le 28 juin 2013. La s&eacute;lection des participants sera annonc&eacute;e 
+<h2>Inscription</h2>
+<p>Compléter et renvoyer la fiche <a href="ABMS-SS_2013_RegForm.doc" target="_blank"><img border="0" height="16" src="../../images/doc.jpg" width="16"/></a> 
+        à <a href="mailto:le_page@cirad.fr" target="_blank">christophe.le_page@cirad.fr</a> 
+        avant le 28 juin 2013. La sélection des participants sera annoncée 
         le 12 juillet 2013.</p>
-      <h2>Frais p&eacute;dagogiques</h2>
-      <h2></h2>
-      <ul>
-        <li>Etudiants: 500 &euro;</li>
-        <li>Chercheurs: 1000 &euro;</li>
-      </ul>
-      <p>Ces frais dinscriptions incluent les pauses caf&eacute;/th&eacute; ainsi 
-        quun repas de gala. Les frais dh&eacute;bergement, de repas et de transport 
-        sont &agrave; la charge des participants.</p>
-      <p>Pour toute demande dinformation suppl&eacute;mentaire, contacter <a href="mailto:le_page@cirad.fr" target="_blank">christophe.le_page@cirad.fr</a></p>
-      <!--#include virtual="/include/copyright_en.inc" --> </td>
-
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-
-    <div align="right" class="texte"></div>
-
-    </td>
-
-  </tr>
-
+<h2>Frais pédagogiques</h2>
+<h2></h2>
+<ul>
+<li>Etudiants: 500 €</li>
+<li>Chercheurs: 1000 €</li>
+</ul>
+<p>Ces frais dinscriptions incluent les pauses café/thé ainsi 
+        quun repas de gala. Les frais dhébergement, de repas et de transport 
+        sont à la charge des participants.</p>
+<p>Pour toute demande dinformation supplémentaire, contacter <a href="mailto:le_page@cirad.fr" target="_blank">christophe.le_page@cirad.fr</a></p>
+<!--#include virtual="/include/copyright_en.inc" --> </td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
 </table>
-
+</div>
+<div id="sidebar">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+<li><a href="../../index.htm">Accueil</a></li>
+<li><a href="../demarch/demarch.htm">Approche</a></li>
+<li><a href="../outil/outil.htm">Cormas soft</a></li>
+<li><a href="../applica/applica.htm">Modèles</a></li>
+<li><a href="../bibliog/article.htm">Publications</a></li>
+<li><a href="../formati/formati.htm">Cours</a></li>
+<li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+</ul>
+</div>
 </body>
-
 </html>
-

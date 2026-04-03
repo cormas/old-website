@@ -1,66 +1,140 @@
 
 <div id="sidebar">
-    <ul>
-        <li><a href="./index.htm">Accueil</a></li>
-        <li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
-        <li><a href="./another-page.htm">Autre Page</a></li>
-    </ul>
+<ul>
+<li><a href="./index.htm">Accueil</a></li>
+<li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
+<li><a href="./another-page.htm">Autre Page</a></li>
+</ul>
 </div>
 <html>
 <head>
-<meta name="KeyWords" content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software">
-<title> Ressources et soci&eacute;t&eacute;s</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title> Ressources et sociétés</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!--#include virtual="/include/script.inc" -->
-<link rel="stylesheet" href="/css/cormas.css" -->
-</head>
-<body  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" border="0" onLoad="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" bgcolor="#FFFFFF">
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+.header-container {
+    position: relative;
+    background-color: #FFA500;
+    height: 80px;
+    width: 100vw;
+    margin-left: -180px;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    display: flex;
+    justify-content: center;
+}
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #FFA500;
+    padding: 20px;
+    z-index: 1000; /* En dessous du bandeau */
+    box-sizing: border-box;
+}
+#sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+#sidebar ul li a {
+    display: block;
+    text-align: left;
+    color: #333;
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+#sidebar ul li a:hover {
+    background-color: #C86D12;
+}
+table {
+    width: 100%;
+    margin-left: 20px;
+}
+tbody td {
+    padding-left: 30px;
+}
+tbody td.content-cell {
+    padding-left: 80px;
+}
+</style>
+</style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/fr/accueil_r.gif,/images/fr/demarche_r.gif,/images/fr/logiciel_r.gif,/images/fr/applications_r.gif,/images/fr/biblio_r.gif,/images/fr/formation_r.gif,/images/fr/reseaux_r.gif)" topmargin="0">
+<div class="header-container">
+<div class="header-image-container">
+<img alt="Description de l'image" src="../../images/bandeau.jpg"/>
+</div>
+</div>
+<div class="container">
 <!--#include virtual="haut.inc" -->
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-    <!--#include virtual="sommair.inc" --> 
-    <td width="*" height="50" valign="top" bgcolor="#FFFFFF"> 
-    <p>&nbsp;<p>
-      <h1>Ressources et soci&eacute;t&eacute;s</h1>
-   
-      <p>&nbsp;</p>
-      <p>Les recherches sur lenvironnement abordent la probl&eacute;matique des ressources 
-        et des externalit&eacute;s. Il sagit par exemple de la gestion des ressources 
-        naturelles renouvelables, des externalit&eacute;s de la production (d&eacute;chets, 
-        pollution) et des espaces &agrave; usages multiples. Dans tous les cas, 
-        lenjeu est de mettre en place une r&eacute;gulation des usages collectifs. </p>
-      <p>Quil sagisse de gestion de ressources, despaces ou dexternalit&eacute;s, les analyses doivent tenir compte a la fois des
-  dynamiques de la nature et de celles de la soci&eacute;t&eacute;. 
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" height="50" valign="top" width="*">
+<p> <p>
+<h1>Ressources et sociétés</h1>
+<p> </p>
+<p>Les recherches sur lenvironnement abordent la problématique des ressources 
+        et des externalités. Il sagit par exemple de la gestion des ressources 
+        naturelles renouvelables, des externalités de la production (déchets, 
+        pollution) et des espaces à usages multiples. Dans tous les cas, 
+        lenjeu est de mettre en place une régulation des usages collectifs. </p>
+<p>Quil sagisse de gestion de ressources, despaces ou dexternalités, les analyses doivent tenir compte a la fois des
+  dynamiques de la nature et de celles de la société. 
 
-      <p>Les <b>dynamiques naturelles</b> se caract&eacute;risent par limbrication de processus 
-        multiples impliquant des especes et des ressources vari&eacute;es, a des &eacute;chelles 
-        spatiales et temporelles diff&eacute;rentes.
-      <p> Les <b>processus sociaux</b> int&eacute;ressent diff&eacute;rents acteurs et plusieurs 
-        niveaux dorganisation, depuis les individus ou les communaut&eacute;s dusagers 
-        jusquaux grandes institutions charg&eacute;es du d&eacute;veloppement. 
+      <p>Les <b>dynamiques naturelles</b> se caractérisent par limbrication de processus 
+        multiples impliquant des especes et des ressources variées, a des échelles 
+        spatiales et temporelles différentes.
+      <p> Les <b>processus sociaux</b> intéressent différents acteurs et plusieurs 
+        niveaux dorganisation, depuis les individus ou les communautés dusagers 
+        jusquaux grandes institutions chargées du développement. 
       <p><!--#include virtual="/include/copyright_fr.inc" -->
-	</td>
-    <td width="15" valign="top" bgcolor="#FFFFFF"> 
-    <div align="right" ></div>
-    </td>
-  </tr>
+</p></p></p></p></p></p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right"></div>
+</td>
+</tr>
 </table>
-
 <div id="sidebar">
-    <ul>
-        <li><a href="./index.htm">Accueil</a></li>
-        <li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
-        <li><a href="./another-page.htm">Autre Page</a></li>
-    </ul>
+<ul>
+<li><a href="./index.htm">Accueil</a></li>
+<li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
+<li><a href="./another-page.htm">Autre Page</a></li>
+</ul>
 </div>
-
 <div id="sidebar">
-    <ul>
-        <li><a href="./index.htm">Accueil</a></li>
-        <li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
-        <li><a href="./another-page.htm">Autre Page</a></li>
-    </ul>
+<ul>
+<li><a href="./index.htm">Accueil</a></li>
+<li><a href="./WolfSheepPredation.htm">Wolf Sheep Predation</a></li>
+<li><a href="./another-page.htm">Autre Page</a></li>
+</ul>
 </div>
-</body>
+</div></body>
 </html>
