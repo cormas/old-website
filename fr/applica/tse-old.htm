@@ -1,13 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
-<title>Test Spatial Entities: dynamiques d'agrégation avec Cormas</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<!--#include virtual="/include/script.inc" -->
-<link --="" href="/css/cormas.css" rel="stylesheet"/>
-<style>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title>Test Spatial Entities: dynamiques d'agrégation avec Cormas</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
         body, html {
             margin: 0;
             padding: 0;
@@ -79,80 +81,129 @@
         tbody td.content-cell {
             padding-left: 80px;
         }
-        </style></head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
-<!--#include virtual="haut.inc" -->
-<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr>
-<!--#include virtual="sommair.inc" -->
-<td bgcolor="#FFFFFF" valign="top" width="*">
-<p>  
-      <h1 align="right"><font color="#777777">TSE</font><br/></h1>
-<h2>Test des entités spatiales agrégatives de Cormas</h2>
-<p>Christophe Le Page, Cirad</p>
-<img align="right" alt="Interface de ForPast" height="304" hspace="10" src="/images/applica/csefr.gif" vspace="10" width="316"/>
-<p>Ce modèle illustre les principes d'utilisation des entités 
-        spatiales agrégatives de Cormas. Dans l'arbre d'héritage 
-        des entités spatiales génériques de Cormas, l'entité 
-        spatiale composée "SpatialEntity_Set" se spécialise 
-        en :</p>
-<ul>
-<li>"SpatialEntity_Aggregate", dont les composants respectent 
-          une contrainte de contiguïté</li>
-</ul>
-<ul>
-<li>"SpatialEntity_Set_notConnex", dont les composants peuvent 
-          être disjoints.</li>
-</ul>
-<p>Les opérations d'agrégation-désagrégation 
-        sont réalisées à partir des deux attributs "components" 
-        (une collection d'entités spatiales de niveau hiérarchique 
-        inférieur) et "theCSE" (un registre d'appartenance à 
-        des entités spatiales de niveaux supérieurs). </p>
-<p>Le modèle TSE permet de tester deux façons de créer 
-        des agrégats avec Cormas. </p>
-<p>La première consiste à définir les composantes comme 
-        des ensembles de cellules contigües partageant une même condition. 
-        On commence par charger une grille de 50*50 cellules de type "TSE_Cell" 
-        dont l'attribut "context" est soit #forest (condition d'agrégation), 
-        soit #empty. La création des entités spatiales composées 
-        "TSE_Aggregate" est soumise à une contrainte supplémentaire 
-        sur le nombre minimum (fixé à 25) de composants contigüs 
-        vérifiant la condition d'agrégation. Faire co-exister dans 
-        le même modèle des entités spatiales définies 
-        à différents niveaux offre une grande souplesse pour écrire 
-        les méthodes de dynamique de la végétation. Certains 
-        processus seront plus facilement décrits au niveau cellulaire, 
-        d'autres au niveau agrégé. Ainsi, dans cet exemple théorique 
-        simpliste, chaque cellule a une probabilité fixée (très 
-        faible) de changer de contexte. Une dynamique d'expansion par la lisière 
-        est écrite (au niveau agrégé) de la façon 
-        suivante: un certain nombre (correspondant au centième du total 
-        des cellules composants l'entité forestière) de cellules 
-        en lisière vont être intégrées à la 
-        forêt. Dans le but de garder une certaine compacité aux entités 
-        forestières, on choisit en priorité les cellules de la lisière 
-        qui sont entourées du plus grand nombre de cellules déjà 
-        agrégées. </p>
-<p>La seconde consiste à partir de 10 cellules "graines", 
-        et à créer autant d'agrégats initialement constitués 
-        d'un seul composant: une graine. Le processus itératif de construction 
-        des agrégats repose sur l'intégration, parmi les cellules 
-        en lisière, de toutes celles qui n'appartiennent pas encore à 
-        un autre agrégat. </p>
-<p> </p>
-<ul>
-<li>Télécharger le modèle (<a href="/logiciel/TSE.zip">zipfile</a>, 
-          6Ko) </li>
-<li>Pour plus d'information, <a href="mailto:lepage@cirad.fr">contacter 
-          l'auteur</a>.</li>
-</ul>
-<p> </p>
-<!--#include virtual="/include/copyright_fr.inc" --> </p></td>
-<td bgcolor="#FFFFFF" valign="top" width="15">
-<div align="right" class="texte"></div>
-</td>
-</tr>
-</table>
-</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Formations</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
+        </style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages('/images/fr/accueil_r.gif','/images/fr/demarche_r.gif','/images/fr/logiciel_r.gif','/images/fr/applications_r.gif','/images/fr/biblio_r.gif','/images/fr/formation_r.gif','/images/fr/reseaux_r.gif')"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style="width: 100vw; background-color:
+      #FFA500; position: relative; margin-left: 0; left: 0; right: 0;
+      z-index: 1001; height: 80px; display: flex; justify-content:
+      center;">
+      <div class="header-image-container" style="display: flex;
+        justify-content: center; align-items: center; height: 100%;"><img
+          alt="Description de l'image" src="../../images/bandeau.jpg"
+          style="max-width: 100%; max-height: 100%; object-fit:
+          contain;"></div>
+    </div>
+    <div class="container">
+      <!--#include virtual="haut.inc" -->
+      <!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" height="23" width="23">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp; </p>
+              <h1 align="right"><font color="#777777">TSE</font><br>
+              </h1>
+              <h2>Test des entités spatiales agrégatives de Cormas</h2>
+              <p>Christophe Le Page, Cirad</p>
+              <img alt="Interface de ForPast"
+                src="../../images/applica/csefr.gif" height="304"
+                vspace="10" width="316" hspace="10" align="right">
+              <p>Ce modèle illustre les principes d'utilisation des
+                entités spatiales agrégatives de Cormas. Dans l'arbre
+                d'héritage des entités spatiales génériques de Cormas,
+                l'entité spatiale composée "SpatialEntity_Set" se
+                spécialise en :</p>
+              <ul>
+                <li>"SpatialEntity_Aggregate", dont les composants
+                  respectent une contrainte de contiguïté</li>
+              </ul>
+              <ul>
+                <li>"SpatialEntity_Set_notConnex", dont les composants
+                  peuvent être disjoints.</li>
+              </ul>
+              <p>Les opérations d'agrégation-désagrégation sont
+                réalisées à partir des deux attributs "components" (une
+                collection d'entités spatiales de niveau hiérarchique
+                inférieur) et "theCSE" (un registre d'appartenance à des
+                entités spatiales de niveaux supérieurs). </p>
+              <p>Le modèle TSE permet de tester deux façons de créer des
+                agrégats avec Cormas. </p>
+              <p>La première consiste à définir les composantes comme
+                des ensembles de cellules contigües partageant une même
+                condition. On commence par charger une grille de 50*50
+                cellules de type "TSE_Cell" dont l'attribut "context"
+                est soit #forest (condition d'agrégation), soit #empty.
+                La création des entités spatiales composées
+                "TSE_Aggregate" est soumise à une contrainte
+                supplémentaire sur le nombre minimum (fixé à 25) de
+                composants contigüs vérifiant la condition d'agrégation.
+                Faire co-exister dans le même modèle des entités
+                spatiales définies à différents niveaux offre une grande
+                souplesse pour écrire les méthodes de dynamique de la
+                végétation. Certains processus seront plus facilement
+                décrits au niveau cellulaire, d'autres au niveau agrégé.
+                Ainsi, dans cet exemple théorique simpliste, chaque
+                cellule a une probabilité fixée (très faible) de changer
+                de contexte. Une dynamique d'expansion par la lisière
+                est écrite (au niveau agrégé) de la façon suivante: un
+                certain nombre (correspondant au centième du total des
+                cellules composants l'entité forestière) de cellules en
+                lisière vont être intégrées à la forêt. Dans le but de
+                garder une certaine compacité aux entités forestières,
+                on choisit en priorité les cellules de la lisière qui
+                sont entourées du plus grand nombre de cellules déjà
+                agrégées. </p>
+              <p>La seconde consiste à partir de 10 cellules "graines",
+                et à créer autant d'agrégats initialement constitués
+                d'un seul composant: une graine. Le processus itératif
+                de construction des agrégats repose sur l'intégration,
+                parmi les cellules en lisière, de toutes celles qui
+                n'appartiennent pas encore à un autre agrégat. </p>
+              <p>&nbsp;</p>
+              <ul>
+                <li>Télécharger le modèle (<a href="/logiciel/TSE.zip">zipfile</a>,
+                  6Ko) </li>
+                <li>Pour plus d'information, <a
+                    href="mailto:lepage@cirad.fr">contacter l'auteur</a>.</li>
+              </ul>
+              <p>&nbsp;</p>
+              <!--#include virtual="/include/copyright_fr.inc" -->
+              <p></p>
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; position: fixed;
+      top: 0; left: 0; width: 180px; height: 100%; padding: 20px;
+      z-index: 1000; box-sizing: border-box;"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Formations</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+      </ul>
+    </div>
+  </body>
 </html>
