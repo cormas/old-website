@@ -3,9 +3,9 @@ import os
 from bs4 import BeautifulSoup
 
 # Répertoire de base
-base_dir = "/Users/bommel/old-website/en"
+base_dir = "/Users/bommel/old-website/fr"
 
-def update_index_link(filepath):
+def update_h1_tags(filepath):
     try:
         # Lire le fichier avec gestion des encodages
         try:
@@ -17,37 +17,35 @@ def update_index_link(filepath):
 
         soup = BeautifulSoup(content, 'html.parser')
 
-        # Trouver la sidebar
-        sidebar = soup.find('div', id='sidebar')
-        if sidebar:
-            # Trouver la liste ul dans la sidebar
-            ul = sidebar.find('ul')
-            if ul:
-                # Trouver le lien "Home"
-                for li in ul.find_all('li'):
-                    a = li.find('a')
-                    if a and a.string and 'Home' in a.string and a.get('href') == '../../index.htm':
-                        a['href'] = '../../indexeng.htm'
-                        print(f"✅ Lien modifié dans : {filepath}")
-
-                        # Sauvegarder les modifications
-                        with open(filepath, 'w', encoding='utf-8') as f:
-                            f.write(str(soup))
-                        return
-
-        # Si on n'a pas trouvé dans la sidebar, chercher dans tout le document
+        # Trouver toutes les balises h1
+        h1_tags = soup.find_all('h1')
         modified = False
-        for a in soup.find_all('a', href="../../index.htm"):
-            if a.string and 'Home' in a.string:
-                a['href'] = '../../indexeng.htm'
-                modified = True
+
+        for h1 in h1_tags:
+            # Créer une nouvelle balise h1 avec les attributs demandés
+            new_h1 = soup.new_tag('h1', align="right")
+
+            # Créer la balise font
+            font_tag = soup.new_tag('font', color="#777777")
+
+            # Déplacer tout le contenu original dans la balise font
+            for child in h1.children:
+                font_tag.append(child)
+
+            # Ajouter la balise font et le br à la nouvelle h1
+            new_h1.append(font_tag)
+            new_h1.append(soup.new_tag('br'))
+
+            # Remplacer l'ancienne h1 par la nouvelle
+            h1.replace_with(new_h1)
+            modified = True
 
         if modified:
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(str(soup))
-            print(f"✅ Lien modifié dans : {filepath}")
+            print(f"✅ Fichier modifié avec succès : {filepath}")
         else:
-            print(f"ℹ️ Aucun lien Home→index.htm trouvé dans : {filepath}")
+            print(f"ℹ️ Aucun H1 trouvé dans : {filepath}")
 
     except Exception as e:
         print(f"❌ Erreur lors du traitement du fichier {filepath} : {str(e)}")
@@ -59,7 +57,7 @@ def main():
             # Vérifier si le fichier est un fichier HTML
             if filename.lower().endswith(('.htm', '.html')):
                 filepath = os.path.join(root, filename)
-                update_index_link(filepath)
+                update_h1_tags(filepath)
 
 if __name__ == "__main__":
     main()
