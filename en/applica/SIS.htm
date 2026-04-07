@@ -1,12 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
-<title>SIS</title>
-<!--#include virtual="/include/script.inc" -->
-<link --="" href="/css/cormas.css" rel="stylesheet"/>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title>SIS</title>
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <style>
         body, html {
             margin: 0;
             padding: 0;
@@ -78,221 +82,382 @@
         tbody td.content-cell {
             padding-left: 80px;
         }
-        </style></head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
-<!--#include virtual="haut.inc" -->
-<table border="0" cellpadding="0" cellspacing="0" style="width: 1014px; height: 357px;">
-<tbody>
-<tr>
-<!--#include virtual="sommair.inc" -->
-<td bgcolor="#FFFFFF" valign="top" width="*">
-<p> </p>
-<h1>SIS: Epidemiology system of Susceptible - Infectious</h1>
-            B. Bonté, P. Bommel<br/>
-<br/>
-            A simple SIS (Susceptible - Infected System) model, which allows the
-            users to compare 3 types of paradigms on the same simple model in
-            epidemiology: continuous differential equations, discrete model and
-            several implementations in an ABM.<br/>
-<h2>Objective</h2>
-            This is the replication of a standard epidemiological model which
-            simulates the spread of an epidemic in a society: healthy people
-            (also called <span style="color: #0433ff;">Susceptibles</span>) can
-            become sick (<span style="color: #ff2600;">Infected</span>) when
-            they come into contact with other people already carrying the
-            disease. In turn, they contribute to spreading the disease when they
-            meet other people.<br/>
-            In this model, the disease is not dangerous. After a while, infected
-            people become susceptible again.<br/>
-            A simulation must therefore monitor the number of infected and
-            healthy people over time.<br/>
-<br/>
-            This model presents two main versions:<br/>
-<h2>Version 1: global level (differential equations)</h2>
-            In the first variation, the "global" version, the individuals are
-            not represented, but only the populations of <span style="color: #0433ff;">Susceptibles</span>
-            and <span style="color: #ff2600;">Infected</span> :<br/>
-<br/>
-                 <img alt="SIS flow model" src="../../images/applica/SIS-1.png" style="width: 456px; height: 118px;" title="SIS flow model"/><br/>
-<b id="docs-internal-guid-9b08e3aa-7fff-d0a3-428f-7ba9a59815e5" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: normal;">
-</b><b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: normal;">
-<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(51, 102, 255); background-color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">S</span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: number of </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 255); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">susceptibles</span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> individuals. </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(255, 0, 0); background-color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">I</span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: number of </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(255, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">infected</span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> individuals.</span></p>
-<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">β: Infection rate (0.3). γ: recovery rate (0.1)</span></p>
-</b><b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: normal;">
-</b><br class="Apple-interchange-newline" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"/>
-            This can be translated as a system of 2 differential equations
-            (continuous model):<br/>
-<img alt="eq. 1" src="../../images/applica/SIS-2.png" style="width: 131px; height: 91px;" title="eq. 1"/>
-<br/>
-            This continuous model can be discretized by transforming <i>dt</i>
-            to <i>deltaT</i> :<br class="Apple-interchange-newline"/>
-<img alt="discrete eq." src="../../images/applica/SIS-3.png" style="width: 347px; height: 82px;" title="discrete eq."/><br/>
-<br/>
-            Here is a view of the stock &amp; flow model with <a href="https://vensim.com/free-download/" target="_blank">Vensim</a>:<br/>
-<br/>
-<img alt="Stock &amp; flow" src="../../images/applica/SIS-6.png" style="width: 274px; height: 175px;" title="Stock &amp; flow"/><br/>
-<br/>
-            The following picture is a simulation with <a href="https://vensim.com/free-download/" target="_blank">Vensim</a>
-            from 3 different initial states :<br/>
-<img alt="sim Vensim" src="../../images/applica/SIS-4.png" style="width: 431px; height: 261px;" title="sim Vensim"/><br/>
-            Note that, at equilibrium: <br/>
-<img alt="SIS at equilibrium" src="../../images/applica/SIS-equilibre.png" style="width: 161px; height: 92px;" title="SIS at equilibrium"/>
-                  After a while, S and I are stable and there
-            level depends solely on <b id="docs-internal-guid-9b08e3aa-7fff-d0a3-428f-7ba9a59815e5" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: normal;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">β and γ<span style="font-family: serif;">: S*=1/3 and I*=2/3 </span></span></b>
-<h2>Version 2: ABM</h2>
-            The second variation, the "ABM" version explicitly represents the
-            individuals of the system. <br/>
-<br/>
-            The previous infectious rate (<b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: normal;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">β = 0,3) </span></b>is
-            now a probability for each agent to become infected when in contact
-            with another infected agent (30%). The recovery rate must also be
-            adapted at the individual level. For example, it can be transformed
-            in an Infectious Period of 10 days. After this period, the sick
-            agent recovers. In other words, <b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: normal;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">γ </span></b>(10%,
-            defined at population level) is translated as a recovery period of
-            10 days, defined at individual level.<br/>
-<img alt="SIS Class Diag" src="../../images/applica/SIS-ClassDiag.png" style="width: 461px; height: 235px;" title="SIS Class Diag"/><br/>
-<!--EndFragment--><br/>
-<br/>
-            When moving on the landscape, the agents may meet randomly. In order
-            to have a meeting probability equivalents to the one of the global
-            model, the size of the space must be calculated according to the
-            size of the population.<br/>
-            The parameter ß (Infection rate: 0.3) can be expressed as :<br/>
-                        ß
-            = -k log(1 - c) , where    <br/>
-                * k is the average number of contacts between two
-            individuals per unit of time, and<br/>
-                * is the probability that contact between a
-            susceptible individual and an infectious individual will result in
-            an infection. So c equals infectiousRate (=0.3).<br/>
-            By setting c to 0.3, we calculate k = -ß / log(1 - c) = -0.3 / log
-            (0.7) = -0.3 / (0.7 log) = 1.93671 <br/>
-            There are 1.93671 contacts between two individuals per step.<br/>
-<br/>
-            Thus, for a neighborhood of 8 (Moore), 1 agent has a 1/8 chance of
-            going to the cell of a neighboring agent.<br/>
-            If X.Y is the size of the grid, then<br/>
-               popSize = k * X.Y/ 8  &lt;=&gt;  X.Y =
-            popSize * 8 /k<br/>
-<br/>
-<br/>
-            In Cormas, this implementation shows the following spatial grid:<br/>
-<img alt="spatial grid" src="../../images/applica/SIS-5.png" style="width: 341px; height: 398px;" title="spatial grid"/><br/>
-<br/>
-            But this transformation from the global model (differential eq.) to
-            the ABM corresponds to one way of doing (the No Spatial, Infectious
-            Period scenario). It can be set differently, as presented now:
-            <h3>Implementions and comparison of the following scenarios</h3>
-<p>By using SIS in Cormas, you can select one among 7 scenarios:</p>
-<img alt="SIS in Cormas" src="../../images/applica/SIS-cormas.png" style="width: 440px; height: 296px;" title="SIS in Cormas"/><br/>
-<br/>
-            For each scenario, the results of the discrete equation model
-            (global model) and the agent model (local model) can be compared
-            (aggregINFECTED vs indivINFECTED).<br/>
-            It is initialized with at least 1000 hosts.<br/>
-            All the parameters are presented in this table:<br/>
-<img alt="SIS parameters" src="../../images/applica/SIS-Parameters.png" style="width: 382px; height: 239px;" title="SIS parameters"/><br/>
-<h4>a) macro</h4>
-            Here, the agents do nothing: there state is changed by an outside
-            operator: the result of the global model. <br/>
-            In this version (a_macro_deltaT1), the model calculates the number
-            of infected and susceptible agents according to the discrete
-            equation with delta T = 1. It is compared with the discrete global
-            model with deltaT set to 0.01:<br/>
-<img alt="SIS-a" src="../../images/applica/SIS-a.png" style="width: 402px; height: 207px;" title="SIS-a"/><br/>
-            Here the curves for both scenario (aggregated and individual) are
-            quite similar, which makes sense. The small difference is due to the
-            resolution time: deltaT = 1 in the case of the ABM and deltaT = 0.01
-            for the global model.<br/>
-<h4>b) No Spatial, No Memory</h4>
-            The agents are not situated. They meet randomly, ie. each infected
-            host can infect one of the agent randomly pick in the population. If
-            this agent is susceptible, he can become infected with a probability
-            (infectionProbability = 0.3).<br/>
-            When infected, an agent has a probability of 10% to recover each
-            day..<br/>
-<img alt="SIS b" src="../../images/applica/SIS-b.png" style="width: 406px; height: 210px;" title="SIS b"/><br/>
-            For the ABM, the evolution of the disease is a little slower and the
-            rate of infection stabilizes around 0.6 (instead of 0.666).<br/>
-<h4>c) No Spatial, Infectious Period</h4>
-            The agents are not situated. They meet randomly, ie. each infected
-            agent can infect one of the agent of the population. <br/>
-            When infected, an agent is infectious during 10 days.<br/>
-<img alt="SIS c" src="../../images/applica/SIS-c.png" style="width: 409px; height: 213px;" title="SIS c"/><br/>
-            For the ABM, the evolution of the disease is faster but the rate of
-            infection stabilizes around 0.666 (like for the global model).<br/>
-<h4>d) NoMemory</h4>
-            The agents are situated on the grid (for 1000 agents, the space
-            dimension is set to 65x64 cells = 4160 cells). They can meet each
-            other when moving randomly. <br/>
-            When infected, an agent has a probability of 10% to recover each
-            day.<br/>
-            The step (and the following) is divided in 3 phases: <br/>
-               1) all the agents move,<br/>
-               2) the infected hosts may infect their neighbours
-            (located on the same cell, with infectionProbability),<br/>
-               3) the infected hosts fight the virus (10% probability
-            to recover)<br/>
-<img alt="SIS d" src="../../images/applica/SIS-d.png" style="width: 455px; height: 232px;" title="SIS d"/>
-<br/>
-            (the simulation is run for 150 steps, in order to verify that the
-            curves are finally aligned with the equilibrium state). For the ABM,
-            the evolution of the disease is a much slower and the rate of
-            infection stabilizes around 0.6 (instead of 0.666).
-            <h4>e) Infectious Period</h4>
-            The agents are situated and move randomly. When infected, an agent
-            is infectious during 10 days.<br/>
-<img alt="SIS e" src="../../images/applica/SIS-e.png" style="width: 417px; height: 215px;" title="SIS e"/><br/>
-<h4>f) Jump NoMemory</h4>
-            The agents are situated and jump to a random plot. When infected, an
-            agent has a probability of 10% to recover each day.<br/>
-<img alt="SIS g" src="../../images/applica/SIS-g.png" style="width: 418px; height: 214px;" title="SIS g"/>
-<h4>g) Jump, Infectious Period</h4>
-            The agents are situated and jump randomly. When infected, an agent
-            is infectious during 10 days.<br/>
-<img alt="SIS f" src="../../images/applica/SIS-f.png" style="width: 421px; height: 218px;" title="SIS f"/><br/>
-<br/>
-            Finally, the following chart enables to compare a similar model
-            designed according to 3 types of paradigms: the continuous
-            differential equation (thick lines), the discrete differential
-            equation (thin lines) and the ABM-e (dotted lines):<br/>
-<br/>
-<br/>
-<img alt="3 scenarios" src="../../images/applica/SIS-results.png" style="width: 705px; height: 349px;" title="3 scenarios"/><br/>
-<br/>
-<h2>Conclusion</h2>
-            Even for a very simple model, there are several ways to formalize
-            it, which often leads to similar but not identical simulations. For
-            the two "global" models (continuous and discrete differential
-            equations), we already notice small differences when delta T = 1
-            (cf. previous figure). <br/>
-            The translation of this model into ABM requires adjustments (to go
-            from global to local) with consequences on the simulation results. <br/>
-<br/>
-            In the context of Covid-19, similar initiatives have been done, with
-            Gama (<a href="https://gama-platform.github.io/covid19" target="_blank">https://gama-platform.github.io/covid19</a>)
-            and with Netlogo (<a href="https://covprehension.org/" target="_blank">https://covprehension.org/</a>,
-            in french)<br/>
-<br/>
-<br/>
-<br/>
-<ul>
-<li>Download the Cormas model (<a href="/logiciel/sis.zip">zipfile</a>,
-                3Ko). If you have any question about it, <a href="mailto:bommel@cirad.fr">contact
-                  the authors</a>.</li>
-</ul>
-<!--#include virtual="/include/copyright_en.inc" --> </td>
-<td bgcolor="#FFFFFF" valign="top" width="15"> <br/>
-</td>
-</tr>
-<tr>
-<td><br/>
-</td>
-<td><br/>
-</td>
-</tr>
-</tbody>
-</table>
-</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
+        </style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')"
+    topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style="width: 100vw; background-color:
+      #FFA500; position: relative; margin-left: 0; left: 0; right: 0;
+      z-index: 1001; height: 80px; display: flex; justify-content:
+      center;">
+      <div class="header-image-container" style="display: flex;
+        justify-content: center; align-items: center; height: 100%;"><img
+          alt="Description de l'image" src="../../images/bandeau.jpg"
+          style="max-width: 100%; max-height: 100%; object-fit:
+          contain;"></div>
+    </div>
+    <div class="container">
+      <!--#include virtual="haut.inc" -->
+      <table style="width: 1014px; height: 357px;" cellspacing="0"
+        cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp;</p>
+              <h1>SIS: Epidemiology system of Susceptible - Infectious</h1>
+              <div align="right"><font color="#999999"><b>B. Bonté, P.
+                    Bommel</b></font><br>
+              </div>
+              <br>
+              A simple SIS (Susceptible - Infected System) model, which
+              allows the users to compare 3 types of paradigms on the
+              same simple model in epidemiology: continuous differential
+              equations, discrete model and several implementations in
+              an ABM.<br>
+              <br>
+              <h2>Objective</h2>
+              This is the replication of a standard epidemiological
+              model which simulates the spread of an epidemic in a
+              society: healthy people (also called <span style="color:
+                #0433ff;">Susceptibles</span>) can become sick (<span
+                style="color: #ff2600;">Infected</span>) when they come
+              into contact with other people already carrying the
+              disease. In turn, they contribute to spreading the disease
+              when they meet other people.<br>
+              In this model, the disease is not dangerous. After a
+              while, infected people become susceptible again.<br>
+              A simulation must therefore monitor the number of infected
+              and healthy people over time.<br>
+              <br>
+              This model presents two main versions:<br>
+              <br>
+              <h2>Version 1: global level (differential equations)</h2>
+              In the first variation, the "global" version, the
+              individuals are not represented, but only the populations
+              of <span style="color: #0433ff;">Susceptibles</span> and
+              <span style="color: #ff2600;">Infected</span> :<br>
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp; <img alt="SIS flow model"
+                src="../../images/applica/SIS-1.png" style="width:
+                456px; height: 118px;" title="SIS flow model"><br>
+              <b
+                id="docs-internal-guid-9b08e3aa-7fff-d0a3-428f-7ba9a59815e5"
+                style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                font-family: -webkit-standard; font-style: normal;
+                font-variant-caps: normal; letter-spacing: normal;
+                orphans: auto; text-align: start; text-indent: 0px;
+                text-transform: none; white-space: normal; widows: auto;
+                word-spacing: 0px; -webkit-text-size-adjust: auto;
+                -webkit-text-stroke-width: 0px; text-decoration: none;
+                font-weight: normal;">
+              </b><b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+                0); font-family: -webkit-standard; font-style: normal;
+                font-variant-caps: normal; letter-spacing: normal;
+                orphans: auto; text-align: start; text-indent: 0px;
+                text-transform: none; white-space: normal; widows: auto;
+                word-spacing: 0px; -webkit-text-size-adjust: auto;
+                -webkit-text-stroke-width: 0px; text-decoration: none;
+                font-weight: normal;">
+                <p dir="ltr" style="line-height: 1.38; margin-top: 0pt;
+                  margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(51, 102, 255); background-color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">S</span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: number of </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 255); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">susceptibles</span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> individuals. </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(255, 0, 0); background-color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">I</span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: number of </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(255, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">infected</span><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> individuals.</span></p>
+                <p dir="ltr" style="line-height: 1.38; margin-top: 0pt;
+                  margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">β: Infection rate (0.3). γ: recovery rate (0.1)</span></p>
+              </b><b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+                0); font-family: -webkit-standard; font-style: normal;
+                font-variant-caps: normal; letter-spacing: normal;
+                orphans: auto; text-align: start; text-indent: 0px;
+                text-transform: none; white-space: normal; widows: auto;
+                word-spacing: 0px; -webkit-text-size-adjust: auto;
+                -webkit-text-stroke-width: 0px; text-decoration: none;
+                font-weight: normal;">
+              </b><br class="Apple-interchange-newline"
+                style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                font-family: -webkit-standard; font-style: normal;
+                font-variant-caps: normal; font-weight: normal;
+                letter-spacing: normal; orphans: auto; text-align:
+                start; text-indent: 0px; text-transform: none;
+                white-space: normal; widows: auto; word-spacing: 0px;
+                -webkit-text-size-adjust: auto;
+                -webkit-text-stroke-width: 0px; text-decoration: none;">
+              This can be translated as a system of 2 differential
+              equations (continuous model):<br>
+              <img alt="eq. 1" src="../../images/applica/SIS-2.png"
+                style="width: 131px; height: 91px;" title="eq. 1">
+              <br>
+              This continuous model can be discretized by transforming <i>dt</i>
+              to <i>deltaT</i> :<br class="Apple-interchange-newline">
+              <img alt="discrete eq."
+                src="../../images/applica/SIS-3.png" style="width:
+                347px; height: 82px;" title="discrete eq."><br>
+              <br>
+              Here is a view of the stock &amp; flow model with <a
+                href="https://vensim.com/free-download/" target="_blank">Vensim</a>:<br>
+              <br>
+              <img alt="Stock &amp; flow"
+                src="../../images/applica/SIS-6.png" style="width:
+                274px; height: 175px;" title="Stock &amp; flow"><br>
+              <br>
+              The following picture is a simulation with <a
+                href="https://vensim.com/free-download/" target="_blank">Vensim</a>
+              from 3 different initial states :<br>
+              <img alt="sim Vensim" src="../../images/applica/SIS-4.png"
+                style="width: 431px; height: 261px;" title="sim Vensim"><br>
+              Note that, at equilibrium: <br>
+              <img alt="SIS at equilibrium"
+                src="../../images/applica/SIS-equilibre.png"
+                style="width: 161px; height: 92px;" title="SIS at
+                equilibrium"> &nbsp; &nbsp; &nbsp; After a while, S and
+              I are stable and there level depends solely on <b
+                id="docs-internal-guid-9b08e3aa-7fff-d0a3-428f-7ba9a59815e5"
+                style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                font-family: -webkit-standard; font-style: normal;
+                font-variant-caps: normal; letter-spacing: normal;
+                orphans: auto; text-align: start; text-indent: 0px;
+                text-transform: none; white-space: normal; widows: auto;
+                word-spacing: 0px; -webkit-text-size-adjust: auto;
+                -webkit-text-stroke-width: 0px; text-decoration: none;
+                font-weight: normal;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">β and γ<span style="font-family: serif;">: S*=1/3 and I*=2/3 <br><br></span></span></b>&nbsp;
+              <h2>Version 2: ABM</h2>
+              The second variation, the "ABM" version explicitly
+              represents the individuals of the system. <br>
+              <br>
+              The previous infectious rate (<b style="caret-color:
+                rgb(0, 0, 0); color: rgb(0, 0, 0); font-family:
+                -webkit-standard; font-style: normal; font-variant-caps:
+                normal; letter-spacing: normal; orphans: auto;
+                text-align: start; text-indent: 0px; text-transform:
+                none; white-space: normal; widows: auto; word-spacing:
+                0px; -webkit-text-size-adjust: auto;
+                -webkit-text-stroke-width: 0px; text-decoration: none;
+                font-weight: normal;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">β = 0,3) </span></b>is
+
+              now a probability for each agent to become infected when
+              in contact with another infected agent (30%). The recovery
+              rate must also be adapted at the individual level. For
+              example, it can be transformed in an Infectious Period of
+              10 days. After this period, the sick agent recovers. In
+              other words, <b style="caret-color: rgb(0, 0, 0); color:
+                rgb(0, 0, 0); font-family: -webkit-standard; font-style:
+                normal; font-variant-caps: normal; letter-spacing:
+                normal; orphans: auto; text-align: start; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                auto; word-spacing: 0px; -webkit-text-size-adjust: auto;
+                -webkit-text-stroke-width: 0px; text-decoration: none;
+                font-weight: normal;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">γ </span></b>(10%,
+
+              defined at population level) is translated as a recovery
+              period of 10 days, defined at individual level.<br>
+              <img alt="SIS Class Diag"
+                src="../../images/applica/SIS-ClassDiag.png"
+                style="width: 461px; height: 235px;" title="SIS Class
+                Diag"><br>
+              <!--EndFragment--><br>
+              <br>
+              When moving on the landscape, the agents may meet
+              randomly. In order to have a meeting probability
+              equivalents to the one of the global model, the size of
+              the space must be calculated according to the size of the
+              population.<br>
+              The parameter ß (Infection rate: 0.3) can be expressed as
+              :<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ß = -k log(1 - c) , where&nbsp;&nbsp;&nbsp; <br>
+              &nbsp;&nbsp;&nbsp; * k is the average number of contacts
+              between two individuals per unit of time, and<br>
+              &nbsp;&nbsp;&nbsp; * is the probability that contact
+              between a susceptible individual and an infectious
+              individual will result in an infection. So c equals
+              infectiousRate (=0.3).<br>
+              By setting c to 0.3, we calculate k = -ß / log(1 - c) =
+              -0.3 / log (0.7) = -0.3 / (0.7 log) = 1.93671 <br>
+              There are 1.93671 contacts between two individuals per
+              step.<br>
+              <br>
+              Thus, for a neighborhood of 8 (Moore), 1 agent has a 1/8
+              chance of going to the cell of a neighboring agent.<br>
+              If X.Y is the size of the grid, then<br>
+              &nbsp;&nbsp; popSize = k * X.Y/ 8&nbsp; &lt;=&gt;&nbsp;
+              X.Y = popSize * 8 /k<br>
+              <br>
+              <br>
+              In Cormas, this implementation shows the following spatial
+              grid:<br>
+              <img alt="spatial grid"
+                src="../../images/applica/SIS-5.png" style="width:
+                341px; height: 398px;" title="spatial grid"><br>
+              <br>
+              But this transformation from the global model
+              (differential eq.) to the ABM corresponds to one way of
+              doing (the No Spatial, Infectious Period scenario). It
+              can be set differently, as presented now:
+              <h3>Implementions and comparison of the following
+                scenarios</h3>
+              <p>By using SIS in Cormas, you can select one among 7
+                scenarios:</p>
+              <img alt="SIS in Cormas"
+                src="../../images/applica/SIS-cormas.png" style="width:
+                440px; height: 296px;" title="SIS in Cormas"><br>
+              <br>
+              For each scenario, the results of the discrete equation
+              model (global model) and the agent model (local model) can
+              be compared (aggregINFECTED vs indivINFECTED).<br>
+              It is initialized with at least 1000 hosts.<br>
+              All the parameters are presented in this table:<br>
+              <img alt="SIS parameters"
+                src="../../images/applica/SIS-Parameters.png"
+                style="width: 382px; height: 239px;" title="SIS
+                parameters"><br>
+              <h4>a) macro</h4>
+              Here, the agents do nothing: there state is changed by an
+              outside operator: the result of the global model. <br>
+              In this version (a_macro_deltaT1), the model calculates
+              the number of infected and susceptible agents according to
+              the discrete equation with delta T = 1. It is compared
+              with the discrete global model with deltaT set to 0.01:<br>
+              <img alt="SIS-a" src="../../images/applica/SIS-a.png"
+                style="width: 402px; height: 207px;" title="SIS-a"><br>
+              Here the curves for both scenario (aggregated and
+              individual) are quite similar, which makes sense. The
+              small difference is due to the resolution time: deltaT = 1
+              in the case of the ABM and deltaT = 0.01 for the global
+              model.<br>
+              <h4>b) No Spatial, No Memory </h4>
+              The agents are not situated. They meet randomly, ie. each
+              infected host can infect one of the agent randomly pick in
+              the population. If this agent is susceptible, he can
+              become infected with a probability (infectionProbability =
+              0.3).<br>
+              When infected, an agent has a probability of 10% to
+              recover each day..<br>
+              <img alt="SIS b" src="../../images/applica/SIS-b.png"
+                style="width: 406px; height: 210px;" title="SIS b"><br>
+              For the ABM, the evolution of the disease is a little
+              slower and the rate of infection stabilizes around 0.6
+              (instead of 0.666).<br>
+              <h4>c) No Spatial, Infectious Period</h4>
+              The agents are not situated. They meet randomly, ie. each
+              infected agent can infect one of the agent of the
+              population. <br>
+              When infected, an agent is infectious during 10 days.<br>
+              <img alt="SIS c" src="../../images/applica/SIS-c.png"
+                style="width: 409px; height: 213px;" title="SIS c"><br>
+              For the ABM, the evolution of the disease is faster but
+              the rate of infection stabilizes around 0.666 (like for
+              the global model).<br>
+              <h4>d) NoMemory</h4>
+              The agents are situated on the grid (for 1000 agents, the
+              space dimension is set to 65x64 cells = 4160 cells). They
+              can meet each other when moving randomly. <br>
+              When infected, an agent has a probability of 10% to
+              recover each day.<br>
+              The step (and the following) is divided in 3 phases: <br>
+              &nbsp;&nbsp; 1) all the agents move,<br>
+              &nbsp;&nbsp; 2) the infected hosts may infect their
+              neighbours (located on the same cell, with
+              infectionProbability),<br>
+              &nbsp;&nbsp; 3) the infected hosts fight the virus (10%
+              probability to recover)<br>
+              <img alt="SIS d" src="../../images/applica/SIS-d.png"
+                style="width: 455px; height: 232px;" title="SIS d">
+              <br>
+              (the simulation is run for 150 steps, in order to verify
+              that the curves are finally aligned with the equilibrium
+              state). For the ABM, the evolution of the disease is a
+              much slower and the rate of infection stabilizes around
+              0.6 (instead of 0.666).
+              <h4>e) Infectious Period</h4>
+              The agents are situated and move randomly. When infected,
+              an agent is infectious during 10 days.<br>
+              <img alt="SIS e" src="../../images/applica/SIS-e.png"
+                style="width: 417px; height: 215px;" title="SIS e"><br>
+              <h4>f) Jump NoMemory</h4>
+              The agents are situated and jump to a random plot. When
+              infected, an agent has a probability of 10% to recover
+              each day.<br>
+              <img alt="SIS g" src="../../images/applica/SIS-g.png"
+                style="width: 418px; height: 214px;" title="SIS g">
+              <h4>g) Jump, Infectious Period</h4>
+              The agents are situated and jump randomly. When infected,
+              an agent is infectious during 10 days.<br>
+              <img alt="SIS f" src="../../images/applica/SIS-f.png"
+                style="width: 421px; height: 218px;" title="SIS f"><br>
+              <br>
+              Finally, the following chart enables to compare a similar
+              model designed according to 3 types of paradigms: the
+              continuous differential equation (thick lines), the
+              discrete differential equation (thin lines) and the ABM-e
+              (dotted lines):<br>
+              <br>
+              <br>
+              <img alt="3 scenarios"
+                src="../../images/applica/SIS-results.png" style="width:
+                705px; height: 349px;" title="3 scenarios"><br>
+              <br>
+              <h2><br>
+              </h2>
+              <h2>Conclusion</h2>
+              Even for a very simple model, there are several ways to
+              formalize it, which often leads to similar but not
+              identical simulations. For the two "global" models
+              (continuous and discrete differential equations), we
+              already notice small differences when delta T = 1 (cf.
+              previous figure). <br>
+              The translation of this model into ABM requires
+              adjustments (to go from global to local) with consequences
+              on the simulation results. <br>
+              <br>
+              In the context of Covid-19, similar initiatives have been
+              done, with Gama (<a
+                href="https://gama-platform.github.io/covid19"
+                target="_blank">https://gama-platform.github.io/covid19</a>)
+              and with Netlogo (<a href="https://covprehension.org/"
+                target="_blank">https://covprehension.org/</a>, in
+              french)<br>
+              <br>
+              <br>
+              <br>
+              <ul>
+                <li>Download the Cormas model (<a
+                    href="/logiciel/sis.zip">zipfile</a>, 3Ko). If you
+                  have any question about it, <a
+                    href="mailto:bommel@cirad.fr">contact the authors</a>.</li>
+              </ul>
+              <!--#include virtual="/include/copyright_en.inc" --> </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF"> <br>
+            </td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; position: fixed;
+      top: 0; left: 0; width: 180px; height: 100%; padding: 20px;
+      z-index: 1000; box-sizing: border-box;"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../indexeng.htm">Home</a></li>
+        <li><a href="../demarch/demarch.htm">Approach</a></li>
+        <li><a href="../outil/outil.htm">Cormas software</a></li>
+        <li><a href="../applica/applica.htm">Models</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Trainings</a></li>
+        <li><a href="../reseaux/reseaux.htm">Networks</a></li>
+      </ul>
+    </div>
+  </body>
 </html>
