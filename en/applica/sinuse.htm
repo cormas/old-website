@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
+<title> Sinuse model</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<!--#include virtual="/include/script.inc" -->
+<link --="" href="/css/cormas.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .header-container {
+            height: 80px;
+            width: 100vw;
+            background-color: #FFA500;
+            position: relative;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .header-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #FFCC99;
+            padding: 20px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #sidebar ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            display: block;
+            text-align: left;
+            color: #333;
+            background-color: #FFCC99;
+            padding: 10px 0;
+        }
+        #sidebar ul li a:hover {
+            background-color: #C86D12;
+        }
+        table {
+            width: 100%;
+            margin-left: 20px;
+        }
+        tbody td {
+            padding-left: 30px;
+        }
+        tbody td.content-cell {
+            padding-left: 80px;
+        }
+        </style></head>
+<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
+<!--#include virtual="haut.inc" -->
+<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<!--#include virtual="sommair.inc" -->
+<td bgcolor="#FFFFFF" valign="top" width="*">
+<p> 
+      <p>
+<h1>Sinuse</h1>
+<p> </p>
+<h2>A tool to explore distributed interactions between a water table and 
+        its users</h2>
+<p>Sarah Feuillette, Ird.<img align="right" alt="Un pompage en Tunisie" height="330" hspace="10" src="/images/applica/sinuse1.jpg" vspace="10" width="236"/></p>
+<p>The Sinuse model (Simulation of interactions between water table and 
+        water users) is designed to explore the ways of managing the demands made 
+        on an over-exploited water table: it should allow the definition of engines 
+        of system dynamics and of testing the effectiveness of different types 
+        of interventions, all while taking into account their social impact, key 
+        to their ultimate acceptance by the users. Sinuse has been developed for 
+        the case study of the Kairouan water table in Central Tunisia, over-exploited 
+        for the past twenty years, mainly by private wells (see following figure, 
+        showing evolution of the average water table level between years 1969 
+        and 1999).</p>
+<p align="center"><img height="118" name="NiveauNappe" src="/images/applica/sinuse1.gif" width="240"/></p>
+<p>Individual strategies and interactions between agriculturists have been 
+        determined on the basis of surveys whose results have led us to the following 
+        hypothesis: all the agriculturists of the Kairouan plain have the same 
+        overall aim of acquiring or extending irrigation to alleviate their climate's 
+        aridity. The strategies used towards this aim depend on their plots, families, 
+        economics, access to resources, and neighbors' situations: a plot or group 
+        of neighboring plots should be large enough to make the well cost-effective. 
+        Since the water table is homogenous as to depth and structure, the access 
+        and extraction cost depend on the location over the water table and, finally, 
+        the presence of working wells in the neighborhood is an indicator of the 
+        accessibility of the water table and a social stimulant (whereas a disused 
+        well acts as a disincentive). This imitation process is reflected in the 
+        spatial dynamics of the appearance of wells.</p>
+<p>The zone under study extends to about 25,000 hectares. The Sinuse model 
+        represents a simplified and reduced plan of the system under study (approximately 
+        10% of the system under study) while respecting, as far as possible, the 
+        proportions of the main parameters. It attempts to find a coherence between 
+        phenomena observed on the field and to be able to validate the model to 
+        some extent. The time step of interactions is the year, divided into two 
+        seasons.</p>
+<p>The Sinuse model consists of three types of entities (see the following 
+        figure): ·</p>
+<ul>
+<li>Social entities, the Users, who represent the farmers of the area, 
+          all endowed with rules of action that mainly depend on their family, 
+          economic, plot, and water-access situations. </li>
+<li>Spatial entities more or less aggregated, such as the zones of the 
+          water table that communicate between themselves, the plots whose cropping 
+          system and irrigation changes with the seasons, the irrigation perimeters 
+          that distribute water at a fixed tariff and with a given distribution 
+          efficiency to the plots that form part of it. </li>
+<li>Passive (and fixed) entities such as wells, which appear and disappear 
+          during the simulation (construction and abandoning), can be deepened, 
+          be functional or non-functional, can irrigate several plots depending 
+          on their capacity, and whose construction and extraction price depends 
+          on the depth of water. </li>
+</ul>
+<p>The following figure shows the interactions represented by the Sinuse 
+        model..</p>
+<p align="center"><img alt="Interactions représentées par Sinuse" height="163" name="Modele" src="/images/applica/sinuse2.gif" width="471"/></p>
+<p>The users make basic exchanges and crop-planting and harvesting decisions. 
+        The irrigation of plots results in a sampling at the level of water points 
+        which transmit information to the water-table zone they belong to. These 
+        react by lowering themselves and the resulting piezometric gradient leads 
+        to transfers of volume between zones. Each Zone of the water table communicates 
+        its new depth to plots which may lead to deepening of wells (on the condition 
+        of non-indebtedness). The results of each agricultural season is calculated 
+        and, at year end, depending on his budget, his savings, and his situation, 
+        the agriculturist can consider construction of a well, if necessary in 
+        association with a neighbor, or by buying or selling a plot.</p>
+<p>Wells can also be constructed according to several types of procedures 
+        (on a small or large plot, in association with a neighbor or not,) to 
+        which the users do not assign the same preference. In case of poverty, 
+        a user could be forced to sell a plot.</p>
+<p>The following figure shows the simplified running of a time step. Each 
+        class is shown by a dotted vertical line; the activation of objects of 
+        the class is shown by a rectangle on the life line. The objects communicate 
+        by exchanging messages represented by horizontal arrows, pointing from 
+        transmitter to the receiver.</p>
+<p align="center"><img alt="Schéma UML de Sinuse" height="306" src="/images/applica/sinuse3.gif" width="445"/></p>
+<p>The display of the appearance of wells is made possible by the graphical 
+        interface of the model (see following figure).</p>
+<p align="center"><img alt="Interface graphique de Sinuse" height="212" src="/images/applica/sinuse4.gif" width="378"/></p>
+<p>The progression of wells (new wells in red) takes place more by densification 
+        of zones that are already occupied rather than by new ones in "pioneering" 
+        zones: in 7 successive time steps, the construction of wells in the virgin 
+        zone took place only in the second time step. Wells are historically concentrated 
+        in zones that are not deep (growing depth gradient from right to left). 
+        The rate of appearance of wells decreases with time because of spatial 
+        constraints and the lowering of the water table.</p>
+<p>For more information, <a href="mailto:sarah.feuillette@bondy.ird.fr">contact 
+        the author</a>. </p>
+<!--#include virtual="/include/copyright_en.inc" --> </p></p></td>
+<td bgcolor="#FFFFFF" valign="top" width="15">
+<div align="right" class="texte"></div>
+</td>
+</tr>
+</table>
+</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
+</html>
