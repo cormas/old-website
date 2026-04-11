@@ -222,11 +222,42 @@ href="https://github.com/pergamino/project/blob/881dcd4837c54f16040bd459fdb57b52
               <h3>Installation</h3>
               La version actuelle du modèle se compose de deux modules
               indépendants : un sous-modèle sur la dynamique de la
-              rouille (MiRoya) et un sous-modèle sur la croissance du
-              caféier (DynaCof).<br>
-              DynaCof est un modèle implémenté dans le langage R. Pour
-              utiliser DynaCof, R doit donc être installé sur votre
+              rouille (<i><b>MiRoya</b></i>) et un sous-modèle sur la
+              croissance du caféier (<i><b>DynaCof</b></i>).<br>
+              <a href="https://github.com/VEZY/DynACof/tree/master/R">DynaCof</a>
+              est un modèle implémenté dans le langage R par Rémi Vezy.
+              Pour utiliser DynaCof, R doit donc être installé sur votre
               ordinateur. <br>
+              <br>
+              Dynacof gère la croissance des feuilles et MiRoya gère le
+              cycle de vie de la rouille et ses effets sur la chute des
+              feuilles.<br>
+              Le pas temporel de Dynacof - MiRoya est le jour. Mais
+              comme les échanges entre les deux modèles sont lents, les
+              interactions ont lieu chaque semaine. Comme le décrit la
+              figure suivante, un cycle complet d'une semaine comprend 6
+              étapes :<br>
+              <ol>
+                <li>R exécute 7 jours de DynACof qui calcule (entre
+                  autres) la croissance foliaire,</li>
+                <li>R appelle Cormas avec une nouvelle valeur de LAI
+                  (indice de surface foliaire)</li>
+                <li>MiRoya adapte le nombre de feuilles en fonction du
+                  LAI</li>
+                <li>Cormas exécute 7 jours de MiRoya : cycle de vie des
+                  champignons,</li>
+                <li>MiRoya détermine les pertes de feuilles dues à la
+                  rouille</li>
+                <li>Cormas renvoie une valeur de LAI à DynACof. La masse
+                  de carbone (CM_leaf = masse de carbone foliaire, en
+                  g/m²/j) est modifiée en calculant la différence de LAI
+                  entre le temps t et le temps t - 7 : </li>
+              </ol>
+              CM_leaf(t) ← CM_leaf(t) . [LAI(t) - LAI(t-7) / LAI(t-7)] <br>
+              <br>
+              <img src="../../images/applica/miroya_5.png" alt="couplage
+                Dynacof-MiRoya" width="636" height="232"><br>
+              <br>
               <br>
               Comment installer MiRoya (<a
 href="https://github.com/pergamino/project/blob/881dcd4837c54f16040bd459fdb57b5212993cba/Modulo-MiRoya/Instalacion%20de%20MiRoya-DynaCof.pdf">en

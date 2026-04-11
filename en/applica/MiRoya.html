@@ -191,6 +191,7 @@ onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/ima
 href="https://github.com/pergamino/project/blob/881dcd4837c54f16040bd459fdb57b5212993cba/Modulo-MiRoya/DescripcionMiRoya.pdf">in
 
 
+
                 Spanish</a>.<br>
               <br>
               The following UML class diagram illustrates the structure
@@ -235,13 +236,43 @@ href="https://github.com/pergamino/project/blob/881dcd4837c54f16040bd459fdb57b52
                 href="https://www.redpergamino.net/app-miroya">Pergamino</a>.<br>
               <h3>Installation</h3>
               The current version of the model consists of two
-              independent modules: a rust dynamics sub-model (MiRoya)
-              and a coffee tree growth sub-model (DynaCof).<br>
-              DynaCof is a model implemented in the R language. To use
-              DynaCof, R must therefore be installed on your computer. <br>
+              independent modules: a rust dynamics sub-model (<i><b>MiRoya</b></i>)
+              and a coffee tree growth sub-model (<i><b>DynaCof</b></i>).<br>
+              <a href="https://github.com/VEZY/DynACof/tree/master/R">DynaCof</a>
+              is a model implemented in the R language by Rémi Vezy. To
+              use DynaCof, R must therefore be installed on your
+              computer. <br>
+              <br>
+              Dynacof manages leaf growth, whilst MiRoya manages the
+              rust life cycle and its effects on leaf fall.<br>
+              The time step for Dynacof and MiRoya is one day. However,
+              as data exchange between the two models is slow,
+              interactions take place on a weekly basis. As shown in
+              Figure 11, a complete one-week cycle comprises six steps:<br>
+              <br>
+              <ol>
+                <li>R runs DynACof for seven days, which calculates
+                  (among other things) leaf growth,</li>
+                <li>R calls Cormas with a new LAI value (leaf area
+                  index)</li>
+                <li>MiRoya adjusts the number of leaves according to the
+                  LAI</li>
+                <li>Cormas runs 7 days of MiRoya: fungal life cycle,</li>
+                <li>MiRoya determines leaf loss due to rust</li>
+                <li>Cormas returns an LAI value to DynACof. The carbon
+                  mass (CM_leaf = leaf carbon mass, in g/m²/day) is
+                  modified by calculating the difference in LAI between
+                  time t and time - 7: </li>
+              </ol>
+              CM_leaf(t) ← CM_leaf(t) . [LAI(t) - LAI(t-7) / LAI(t-7)] <br>
+              <br>
+              <img src="../../images/applica/miroya_5.png" alt="couplage
+                Dynacof-MiRoya" width="636" height="232"><br>
+              <br>
               <br>
               MiRoya How to install MiRoya (<a
 href="https://github.com/pergamino/project/blob/881dcd4837c54f16040bd459fdb57b5212993cba/Modulo-MiRoya/Instalacion%20de%20MiRoya-DynaCof.pdf">in
+
 
 
                 Spanish</a>).<br>
@@ -258,6 +289,7 @@ href="https://github.com/pergamino/project/blob/881dcd4837c54f16040bd459fdb57b52
               <br>
               You can download the <a
 href="https://github.com/pergamino/project/blob/881dcd4837c54f16040bd459fdb57b5212993cba/Modulo-MiRoya/R-MiRoya_DynaCof.zip">model
+
 
 
                 on GitHub</a><!--#include virtual="/include/copyright_en.inc" -->
