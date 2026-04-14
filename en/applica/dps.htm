@@ -1,13 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
-<title>Spatialized Prisoners Dilemma</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<!--#include virtual="/include/script.inc" -->
-<link --="" href="/css/cormas.css" rel="stylesheet"/>
-<style>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title>Spatialized Prisoners Dilemma</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
         body, html {
             margin: 0;
             padding: 0;
@@ -79,88 +81,140 @@
         tbody td.content-cell {
             padding-left: 80px;
         }
-        </style></head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
-<!--#include virtual="haut.inc" -->
-<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr>
-<!--#include virtual="sommair.inc" -->
-<td bgcolor="#FFFFFF" valign="top" width="*">
-<p> </p>
-<h1 align="right"><font color="#777777">Spatialized Prisoners Dilemma</font><br/></h1>
-<h2> </h2>
-<img align="right" height="219" src="../../images/applica/dpsMovie.gif" width="206"/>
-<p>A cell stands here for a player in the famous game theory "Prisoners 
-        Dilemma" context. The payoff for the different configurations are 
-        such that from an individualist point of view, its better to defect (whatever 
-        the strategy of the opponent, the best individual payoff corresponds to 
-        the "defect" strategy), whereas from a collective point of view, 
-        its better to cooperate (the sum of the two individual payoffs is maximal 
-        for the configuration "cooperate" vs "cooperate").</p>
-<p>The payoffs matrix is the following:</p>
-<table border="1" width="43%">
-<tr>
-<td width="21%"> </td>
-<td width="25%">
-<div align="center">Cooperation</div>
-</td>
-<td width="54%">
-<div align="center">Defection</div>
-</td>
-</tr>
-<tr>
-<td width="21%">
-<div align="center">Cooperation</div>
-</td>
-<td width="25%">
-<div align="center">100; 100</div>
-</td>
-<td width="54%">
-<div align="center">0; 185</div>
-</td>
-</tr>
-<tr>
-<td width="21%">
-<div align="center">Defection</div>
-</td>
-<td width="25%">
-<div align="center">185; 0</div>
-</td>
-<td width="54%">
-<div align="center">0; 0</div>
-</td>
-</tr>
-</table>
-<p>With a Moore neighbourgood (8), the boundaries are "periodic" 
-        (toroidal spatial grid). At each time-step, the strategy of the players 
-        being set, each player perform 9 games: with its 8 neighbours and also 
-        with itself. The total payoff is then compared to the total payoffs of 
-        the 8 neighbours players If one of them is higher than the personal one, 
-        then the corresponding strategy will be adopted for the next time-step. 
-        In such a context, at the global level, does one of the two strategies 
-        invade the other ???... The movie displayed here shows the intrusion of 
-        one defector in a world of cooperators... The grid size is 101x101 and 
-        the defector is initially located in the middle of the grid. The stable 
-        defectors appear in red, or yellow for previous cooperators just turning 
-        into defectors. The stable cooperators appear in blue, or in green for 
-        previous defectors just turning into cooperators. </p>
-<ul>
-<li> For more details about this cellular automata, look at the following 
-          paper: Nowak, M.A. and May, R.M. 1992. Evolutionary games and spatial 
-          chaos. Nature, 359: 826-829.<br/>
-</li>
-</ul>
-<ul>
-<li>Download the Cormas model (<a href="/logiciel/dps.zip">zipfile</a>, 
-          3Ko). If you have any question about it, <a href="mailto:green@cirad.fr">contact 
-          the authors</a>.</li>
-</ul>
-<!--#include virtual="/include/copyright_en.inc" -->
-</td>
-<td bgcolor="#FFFFFF" valign="top" width="15">
-<div align="right" class="texte"></div>
-</td>
-</tr>
-</table>
-</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../indexeng.htm">Home</a></li><li><a href="../demarch/demarch.htm">Approach</a></li><li><a href="../outil/outil.htm">Cormas software</a></li><li><a href="../applica/applica.htm">Models</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Trainings</a></li><li><a href="../reseaux/reseaux.htm">Networks</a></li></ul></div></body>
+        </style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages(/images/en/accueil_r.gif,/images/en/demarche_r.gif,/images/en/logiciel_r.gif,/images/en/applications_r.gif,/images/en/biblio_r.gif,/images/en/formation_r.gif,/images/en/reseaux_r.gif)"
+    topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"
+    bgcolor="#FFFFFF">
+    <br>
+    <div class="container">
+      <!--#include virtual="haut.inc" -->
+      <!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" width="23" height="23">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp;</p>
+              <h1 align="right"><font color="#777777">Spatialized
+                  Prisoners Dilemma</font><br>
+              </h1>
+              <h2>&nbsp;</h2>
+              <br>
+              <p>A cell stands here for a player in the famous game
+                theory "Prisoners Dilemma" context. The payoff for the
+                different configurations are such that from an
+                individualist point of view, its better to defect
+                (whatever the strategy of the opponent, the best
+                individual payoff corresponds to the "defect" strategy),
+                whereas from a collective point of view, its better to
+                cooperate (the sum of the two individual payoffs is
+                maximal for the configuration "cooperate" vs
+                "cooperate").</p>
+              <p>The payoffs matrix is the following:<br>
+              </p>
+              <br>
+              <table width="100%" cellspacing="2" cellpadding="2"
+                border="0">
+                <tbody>
+                  <tr>
+                    <td valign="top" width="330">
+                      <table width="100%" cellspacing="2"
+                        cellpadding="2" border="1">
+                        <tbody>
+                          <tr>
+                            <td valign="top"><br>
+                            </td>
+                            <td valign="top">Cooperation</td>
+                            <td valign="top">Defection</td>
+                          </tr>
+                          <tr>
+                            <td valign="top">Cooperation</td>
+                            <td valign="top">100; 100</td>
+                            <td valign="top">0; 185</td>
+                          </tr>
+                          <tr>
+                            <td valign="top">Defection</td>
+                            <td valign="top">185; 0</td>
+                            <td valign="top">0; 0</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <br>
+                    </td>
+                    <td valign="top"><br>
+                    </td>
+                    <td valign="top"><img
+                        src="../../images/applica/dpsMovie.gif"
+                        alt="tapis" width="356" align="right"
+                        height="378"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>With a Moore neighbourgood (8), the boundaries are
+                "periodic" (toroidal spatial grid). At each time-step,
+                the strategy of the players being set, each player
+                perform 9 games: with its 8 neighbours and also with
+                itself. The total payoff is then compared to the total
+                payoffs of the 8 neighbours players If one of them is
+                higher than the personal one, then the corresponding
+                strategy will be adopted for the next time-step. In such
+                a context, at the global level, does one of the two
+                strategies invade the other ???... The movie displayed
+                here shows the intrusion of one defector in a world of
+                cooperators... The grid size is 101x101 and the defector
+                is initially located in the middle of the grid. The
+                stable defectors appear in red, or yellow for previous
+                cooperators just turning into defectors. The stable
+                cooperators appear in blue, or in green for previous
+                defectors just turning into cooperators. </p>
+              <ul>
+                <li> For more details about this cellular automata, look
+                  at the following paper: Nowak, M.A. and May, R.M.
+                  1992. Evolutionary games and spatial chaos. Nature,
+                  359: 826-829.<br>
+                </li>
+              </ul>
+              <ul>
+                <li>Download the Cormas model (<a
+                    href="/logiciel/dps.zip">zipfile</a>, 3Ko). If you
+                  have any question about it, <a
+                    href="mailto:green@cirad.fr">contact the authors</a>.</li>
+              </ul>
+              <!--#include virtual="/include/copyright_en.inc" -->
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+              <br>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; position: fixed;
+      top: 0; left: 0; width: 180px; height: 100%; padding: 20px;
+      z-index: 1000; box-sizing: border-box;"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../indexeng.htm">Home</a></li>
+        <li><a href="../demarch/demarch.htm">Approach</a></li>
+        <li><a href="../outil/outil.htm">Cormas software</a></li>
+        <li><a href="../applica/applica.htm">Models</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Trainings</a></li>
+        <li><a href="../reseaux/reseaux.htm">Networks</a></li>
+      </ul>
+    </div>
+  </body>
 </html>

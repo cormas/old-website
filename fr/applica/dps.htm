@@ -1,13 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<meta content="Cormas, Cirad, gestion des ressources naturelles, natural resource management, INRM, environnement, environment, simulation, modelisation, modelling, SMA, MAS, multi-agent, smalltalk, visualworks, logiciel, software" name="KeyWords"/>
-<title>Dilemme du Prisonnier Spatialisé</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<!--#include virtual="/include/script.inc" -->
-<link --="" href="/css/cormas.css" rel="stylesheet"/>
-<style>
+  <head>
+    <meta content="Cormas, Cirad, gestion des ressources naturelles,
+      natural resource management, INRM, environnement, environment,
+      simulation, modelisation, modelling, SMA, MAS, multi-agent,
+      smalltalk, visualworks, logiciel, software" name="KeyWords">
+    <title>Dilemme du Prisonnier Spatialisé</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--#include virtual="/include/script.inc" -->
+    <link --="" href="/css/cormas.css" rel="stylesheet">
+    <style>
         body, html {
             margin: 0;
             padding: 0;
@@ -79,96 +81,152 @@
         tbody td.content-cell {
             padding-left: 80px;
         }
-        </style></head>
-<body bgcolor="#FFFFFF" border="0" leftmargin="0" marginheight="0" marginwidth="0" onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')" topmargin="0"><div class="header-container" style="width: 100vw; background-color: #FFA500; position: relative; margin-left: 0; left: 0; right: 0; z-index: 1001; height: 80px; display: flex; justify-content: center;"><div class="header-image-container" style="display: flex; justify-content: center; align-items: center; height: 100%;"><img alt="Description de l'image" src="../../images/bandeau.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;"/></div></div><div class="container">
-<!--#include virtual="haut.inc" -->
-<!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><td bgcolor="#FFFFFF" valign="top" width="25"><img height="23" src="../../images/coin_hg.gif" width="23"/></td><table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr>
-<!--#include virtual="sommair.inc" -->
-<td bgcolor="#FFFFFF" valign="top" width="*">
-<p> </p>
-<h1 align="right"><font color="#777777">Dilemme du Prisonnier spatialisé</font><br/></h1>
-<h2> </h2>
-<img align="right" height="219" src="../../images/applica/dpsMovie.gif" width="206"/>
-<p>Une cellule représente un joueur en situation de "dilemme 
-        du prisonnier", qui est une des situations les plus connues de la 
-        théorie des jeux. Les gains des différentes situations possibles 
-        sont tels que d'un point de vue individualiste, il vaut mieux trahir (quelle 
-        que soit la stratégie de l'opposant, le meilleur gain individuel 
-        correspond à la stratégie "trahir"), alors que 
-        d'un point de vue collectif, il vaut mieux coopérer (la somme des 
-        deux gains individuels est maximale pour le couple de stratégie 
-        "coopérer" vs "coopérer").</p>
-<p></p>
-<p>La matrice des gains est très exactement la suivante</p>
-<table border="1" width="57%">
-<tr>
-<td width="32%"> </td>
-<td width="35%">
-<div align="center">Coopération</div>
-</td>
-<td width="33%">
-<div align="center">Trahison</div>
-</td>
-</tr>
-<tr>
-<td width="32%">
-<div align="center">Coopération</div>
-</td>
-<td width="35%">
-<div align="center">100; 100</div>
-</td>
-<td width="33%">
-<div align="center">0; 185</div>
-</td>
-</tr>
-<tr>
-<td width="32%">
-<div align="center">Trahison</div>
-</td>
-<td width="35%">
-<div align="center">185; 0</div>
-</td>
-<td width="33%">
-<div align="center">0; 0</div>
-</td>
-</tr>
-</table>
-<p>Le voisinage est de type Moore (8 voisins) et les frontières sont 
-        "ouvertes" (espace toroïdal). A chaque pas de temps, la 
-        stratégie des joueurs étant donnée, chaque joueur 
-        exécute 9 parties: avec ses 8 voisins et également avec 
-        lui-même. Il obtient alors un gain total qu'il compare aux gains 
-        totaux des joueurs avec lesquels il a interagit. Si l'un d'entre eux a 
-        obtenu un meilleur résultat global, alors la stratégie de 
-        celui-ci est adoptée pour le pas de temps suivant. Dans un tel 
-        contexte, laquelle des deux stratégies va l'emporter ???... L'animation 
-        ci-contre représente l'intrusion d'un traître dans un monde 
-        de coopérants... La grille est de dimension 101x101 et le traître 
-        est initialement positionné au centre de la grille. Les traitres 
-        stables apparaissent en rouge, ou en jaune pour d'anciens coopérants 
-        qui viennent de se mette à trahir. Les coopérants stables 
-        apparaissent en bleu, ou en vert pour d'anciens traîtres qui viennent 
-        de se mettre à coopérer. <br/>
-</p>
-<ul>
-<li> Pour plus de détails à propos de cet automate, se reporter 
-          à l'article suivant: Nowak, M.A. et May, R.M. 1992. Evolutionary 
-          games and spatial chaos. Nature, 359: 826-829.<br/>
-<br/>
-</li>
-</ul>
-<ul>
-<li>Télécharger le modèle Cormas (<a href="/logiciel/dps.zip">zipfile</a>, 
-          3Ko). Pour toute question à ce sujet, <a href="mailto:green@cirad.fr">contacter 
-          les auteurs</a>.</li>
-</ul>
-<!--#include virtual="/include/copyright_en.inc" -->
-</td>
-<td bgcolor="#FFFFFF" valign="top" width="15">
-<div align="right" class="texte"></div>
-</td>
-</tr>
-</table>
-</div><div id="sidebar" style="background-color: #FFCC99; position: fixed; top: 0; left: 0; width: 180px; height: 100%; padding: 20px; z-index: 1000; box-sizing: border-box;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li><a href="../../index.htm">Accueil</a></li><li><a href="../demarch/demarch.htm">Approche</a></li><li><a href="../outil/outil.htm">Cormas soft</a></li><li><a href="../applica/applica.htm">Modèles</a></li><li><a href="../bibliog/article.htm">Publications</a></li><li><a href="../formati/formati.htm">Formations</a></li><li><a href="../reseaux/reseaux.htm">Réseaux</a></li></ul></div></body>
+        </style>
+  </head>
+  <body border="0"
+onload="MM_preloadImages('/images/en/accueil_r.gif','/images/en/demarche_r.gif','/images/en/logiciel_r.gif','/images/en/applications_r.gif','/images/en/biblio_r.gif','/images/en/formation_r.gif','/images/en/reseaux_r.gif')"
+    topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"
+    bgcolor="#FFFFFF">
+    <div class="header-container" style="width: 100vw; background-color:
+      #FFA500; position: relative; margin-left: 0; left: 0; right: 0;
+      z-index: 1001; height: 80px; display: flex; justify-content:
+      center;">
+      <div class="header-image-container" style="display: flex;
+        justify-content: center; align-items: center; height: 100%;"><img
+          alt="Description de l'image" src="../../images/bandeau.jpg"
+          style="max-width: 100%; max-height: 100%; object-fit:
+          contain;"></div>
+    </div>
+    <div class="container">
+      <!--#include virtual="haut.inc" -->
+      <!-- -- -- -- -- -- -- -- Corner -- -- -- -- -- -- -- -- -- -- -- --><img
+        src="../../images/coin_hg.gif" width="23" height="23">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <!--#include virtual="sommair.inc" -->
+            <td valign="top" width="*" bgcolor="#FFFFFF">
+              <p>&nbsp;</p>
+              <h1 align="right"><font color="#777777">Dilemme du
+                  Prisonnier spatialisé</font><br>
+              </h1>
+              <h2>&nbsp;</h2>
+              <br>
+              <p>Une cellule représente un joueur en situation de
+                "dilemme du prisonnier", qui est une des situations les
+                plus connues de la théorie des jeux. Les gains des
+                différentes situations possibles sont tels que d'un
+                point de vue individualiste, il vaut mieux trahir
+                (quelle que soit la stratégie de l'opposant, le meilleur
+                gain individuel correspond à la stratégie "trahir"),
+                alors que d'un point de vue collectif, il vaut mieux
+                coopérer (la somme des deux gains individuels est
+                maximale pour le couple de stratégie "coopérer" vs
+                "coopérer").</p>
+              <p></p>
+              <p>La matrice des gains est très exactement la suivante</p>
+              <br>
+              <table width="100%" cellspacing="2" cellpadding="2"
+                border="0">
+                <tbody>
+                  <tr>
+                    <td valign="top" width="300">
+                      <table width="100%" cellspacing="2"
+                        cellpadding="2" border="1">
+                        <tbody>
+                          <tr>
+                            <td valign="top"><br>
+                            </td>
+                            <td valign="top">Coopération</td>
+                            <td valign="top">Trahison</td>
+                          </tr>
+                          <tr>
+                            <td valign="top">Coopération</td>
+                            <td valign="top">100; 100</td>
+                            <td valign="top">0; 185</td>
+                          </tr>
+                          <tr>
+                            <td valign="top" width="300">Trahison</td>
+                            <td valign="top">185; 0</td>
+                            <td valign="top">0; 0</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <br>
+                    </td>
+                    <td valign="top"><br>
+                    </td>
+                    <td valign="top" align="left"><img
+                        src="../../images/applica/dpsMovie.gif"
+                        alt="tapis" width="315" align="right"
+                        height="334"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Le voisinage est de type Moore (8 voisins) et les
+                frontières sont "ouvertes" (espace toroïdal). A chaque
+                pas de temps, la stratégie des joueurs étant donnée,
+                chaque joueur exécute 9 parties: avec ses 8 voisins et
+                également avec lui-même. Il obtient alors un gain total
+                qu'il compare aux gains totaux des joueurs avec lesquels
+                il a interagit. Si l'un d'entre eux a obtenu un meilleur
+                résultat global, alors la stratégie de celui-ci est
+                adoptée pour le pas de temps suivant. Dans un tel
+                contexte, laquelle des deux stratégies va l'emporter
+                ???... L'animation ci-contre représente l'intrusion d'un
+                traître dans un monde de coopérants... La grille est de
+                dimension 101x101 et le traître est initialement
+                positionné au centre de la grille. Les traitres stables
+                apparaissent en rouge, ou en jaune pour d'anciens
+                coopérants qui viennent de se mette à trahir. Les
+                coopérants stables apparaissent en bleu, ou en vert pour
+                d'anciens traîtres qui viennent de se mettre à coopérer.
+                <br>
+              </p>
+              <ul>
+                <li> Pour plus de détails à propos de cet automate, se
+                  reporter à l'article suivant: Nowak, M.A. et May, R.M.
+                  1992. Evolutionary games and spatial chaos. Nature,
+                  359: 826-829.<br>
+                  <br>
+                </li>
+              </ul>
+              <ul>
+                <li>Télécharger le modèle Cormas (<a
+                    href="/logiciel/dps.zip">zipfile</a>, 3Ko). Pour
+                  toute question à ce sujet, <a
+                    href="mailto:green@cirad.fr">contacter les auteurs</a>.</li>
+              </ul>
+              <!--#include virtual="/include/copyright_en.inc" -->
+            </td>
+            <td valign="top" width="15" bgcolor="#FFFFFF">
+              <div class="texte" align="right"></div>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sidebar" style="background-color: #FFCC99; position: fixed;
+      top: 0; left: 0; width: 180px; height: 100%; padding: 20px;
+      z-index: 1000; box-sizing: border-box;"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li><a href="../../index.htm">Accueil</a></li>
+        <li><a href="../demarch/demarch.htm">Approche</a></li>
+        <li><a href="../outil/outil.htm">Cormas soft</a></li>
+        <li><a href="../applica/applica.htm">Modèles</a></li>
+        <li><a href="../bibliog/article.htm">Publications</a></li>
+        <li><a href="../formati/formati.htm">Formations</a></li>
+        <li><a href="../reseaux/reseaux.htm">Réseaux</a></li>
+      </ul>
+    </div>
+  </body>
 </html>
